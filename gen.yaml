@@ -1,0 +1,14 @@
+configVersion: 1.0.0
+generation:
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
+  baseServerURL: ""
+  sdkClassName: Unified-to
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
+php:
+  version: 0.0.1
+  maxMethodParams: 0
+  namespace: Unified\Unified_to
+  packageName: unified/unified-to
