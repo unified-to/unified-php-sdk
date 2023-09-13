@@ -1,0 +1,24 @@
+# CrmDeal
+
+A deal represents an opportunity with companies and/or contacts
+
+
+## Fields
+
+| Field                                                            | Type                                                             | Required                                                         | Description                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `amount`                                                         | *?float*                                                         | :heavy_minus_sign:                                               | N/A                                                              |
+| `closedAt`                                                       | [\DateTime](https://www.php.net/manual/en/class.datetime.php)    | :heavy_minus_sign:                                               | N/A                                                              |
+| `createdAt`                                                      | [\DateTime](https://www.php.net/manual/en/class.datetime.php)    | :heavy_minus_sign:                                               | N/A                                                              |
+| `currency`                                                       | *?string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
+| `id`                                                             | *?string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
+| `lostReason`                                                     | *?string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
+| `name`                                                           | *?string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
+| `pipeline`                                                       | *?string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
+| `probability`                                                    | *?float*                                                         | :heavy_minus_sign:                                               | N/A                                                              |
+| `raw`                                                            | [?PropertyCrmDealRaw](../../models/shared/PropertyCrmDealRaw.md) | :heavy_minus_sign:                                               | The raw data returned by the integration for this deal           |
+| `source`                                                         | *?string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
+| `stage`                                                          | *?string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
+| `tags`                                                           | array<*string*>                                                  | :heavy_minus_sign:                                               | N/A                                                              |
+| `updatedAt`                                                      | [\DateTime](https://www.php.net/manual/en/class.datetime.php)    | :heavy_minus_sign:                                               | N/A                                                              |
+| `wonReason`                                                      | *?string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
