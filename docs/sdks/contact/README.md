@@ -252,7 +252,7 @@ try {
     $request->order = 'commodi';
     $request->query = 'atque';
     $request->sort = 'totam';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-08-24');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-24T06:30:41.014Z');
 
     $requestSecurity = new GetCrmConnectionIdContactSecurity();
     $requestSecurity->jwt = '';
@@ -358,7 +358,7 @@ try {
     $request->order = 'laborum';
     $request->query = 'perspiciatis';
     $request->sort = 'voluptates';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-11-27');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-27T06:43:06.518Z');
 
     $requestSecurity = new GetUcConnectionIdContactSecurity();
     $requestSecurity->jwt = '';
@@ -478,7 +478,7 @@ try {
     $request->crmContact->companyIds = [
         'totam',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-01-07');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-07T05:33:50.538Z');
     $request->crmContact->dealIds = [
         'est',
     ];
@@ -492,7 +492,7 @@ try {
         new CrmTelephone(),
     ];
     $request->crmContact->title = 'Dr.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-02-12');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-12T20:55:34.483Z');
     $request->connectionId = 'enim';
     $request->id = '5906d126-3d48-4e93-9c2c-9e81f30be3e4';
 
@@ -653,7 +653,7 @@ try {
     $request = new PatchUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
     $request->ucContact->company = 'Goodwin - Hilpert';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-30');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-30T20:03:45.488Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
@@ -664,7 +664,7 @@ try {
         new UcTelephone(),
     ];
     $request->ucContact->title = 'Miss';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-11-29');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-29T22:29:42.962Z');
     $request->connectionId = 'voluptates';
     $request->id = 'f51fcb4c-593e-4c12-8daa-d0ec7afedbd8';
 
@@ -736,7 +736,7 @@ try {
     $request->crmContact->companyIds = [
         'quas',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-02-15');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-15T21:16:58.297Z');
     $request->crmContact->dealIds = [
         'fuga',
     ];
@@ -750,7 +750,7 @@ try {
         new CrmTelephone(),
     ];
     $request->crmContact->title = 'Ms.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-02-22');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-22T23:57:29.960Z');
     $request->connectionId = 'enim';
 
     $requestSecurity = new PostCrmConnectionIdContactSecurity();
@@ -808,7 +808,7 @@ try {
     $request = new PostUcConnectionIdContactRequest();
     $request->ucContact = new UcContact();
     $request->ucContact->company = 'Langworth - Gleason';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-02-13');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-13T00:18:26.818Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
@@ -819,7 +819,7 @@ try {
         new UcTelephone(),
     ];
     $request->ucContact->title = 'Ms.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-04');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-04T17:39:35.177Z');
     $request->connectionId = 'reprehenderit';
 
     $requestSecurity = new PostUcConnectionIdContactSecurity();
@@ -890,7 +890,7 @@ try {
     $request->crmContact->companyIds = [
         'voluptate',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-10-16');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-16T11:52:47.366Z');
     $request->crmContact->dealIds = [
         'eaque',
     ];
@@ -904,7 +904,7 @@ try {
         new CrmTelephone(),
     ];
     $request->crmContact->title = 'Dr.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-06');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-06T20:17:01.887Z');
     $request->connectionId = 'voluptatem';
     $request->id = '26d541a4-d190-4feb-a178-0bccc0dbbddb';
 
@@ -1065,7 +1065,7 @@ try {
     $request = new PutUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
     $request->ucContact->company = 'Senger and Sons';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-19');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-19T12:07:32.819Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
@@ -1076,7 +1076,7 @@ try {
         new UcTelephone(),
     ];
     $request->ucContact->title = 'Ms.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-09-14');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-14T19:22:57.784Z');
     $request->connectionId = 'repellat';
     $request->id = '8493825f-dc42-4c87-ac2c-2dfb4cfc1c76';
 

@@ -86,7 +86,7 @@ try {
     $request->order = 'reiciendis';
     $request->query = 'ab';
     $request->sort = 'modi';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-12-27');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-27T01:39:48.546Z');
 
     $requestSecurity = new GetAtsConnectionIdCandidateSecurity();
     $requestSecurity->jwt = '';
@@ -203,7 +203,7 @@ try {
     $request->atsCandidate->address->region = 'modi';
     $request->atsCandidate->address->regionCode = 'optio';
     $request->atsCandidate->companyName = 'voluptatibus';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d', '2021-09-21');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-21T04:36:43.651Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
@@ -219,7 +219,7 @@ try {
         new AtsTelephone(),
     ];
     $request->atsCandidate->title = 'Miss';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-13');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-13T08:38:01.413Z');
     $request->connectionId = 'ullam';
     $request->id = '44ec42de-fcce-48f1-9777-73e63562a7b4';
 
@@ -288,7 +288,7 @@ try {
     $request->atsCandidate->address->region = 'est';
     $request->atsCandidate->address->regionCode = 'delectus';
     $request->atsCandidate->companyName = 'velit';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d', '2022-10-19');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-19T14:23:55.205Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
@@ -304,7 +304,7 @@ try {
         new AtsTelephone(),
     ];
     $request->atsCandidate->title = 'Mrs.';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-26');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-26T18:16:01.869Z');
     $request->connectionId = 'aliquid';
 
     $requestSecurity = new PostAtsConnectionIdCandidateSecurity();
@@ -372,7 +372,7 @@ try {
     $request->atsCandidate->address->region = 'quod';
     $request->atsCandidate->address->regionCode = 'itaque';
     $request->atsCandidate->companyName = 'a';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d', '2022-01-19');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-19T09:03:37.544Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
@@ -388,7 +388,7 @@ try {
         new AtsTelephone(),
     ];
     $request->atsCandidate->title = 'Mrs.';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-22');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-22T10:47:23.716Z');
     $request->connectionId = 'perspiciatis';
     $request->id = 'fb2bb4ec-ae6c-43d5-9b3a-debd5daea4c5';
 

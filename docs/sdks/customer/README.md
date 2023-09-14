@@ -86,7 +86,7 @@ try {
     $request->order = 'pariatur';
     $request->query = 'quo';
     $request->sort = 'sequi';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2020-03-27');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-03-27T17:05:52.755Z');
 
     $requestSecurity = new GetTicketingConnectionIdCustomerSecurity();
     $requestSecurity->jwt = '';
@@ -192,7 +192,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchTicketingConnectionIdCustomerIdRequest();
     $request->ticketingCustomer = new TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d', '2022-08-21');
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-21T17:15:44.328Z');
     $request->ticketingCustomer->emails = [
         new TicketingEmail(),
     ];
@@ -205,7 +205,7 @@ try {
     $request->ticketingCustomer->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-26');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-26T18:27:27.131Z');
     $request->connectionId = 'voluptatum';
     $request->id = 'd53213f3-f658-4752-9b76-4c59f0a56ceb';
 
@@ -263,7 +263,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostTicketingConnectionIdCustomerRequest();
     $request->ticketingCustomer = new TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d', '2021-02-07');
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-07T09:03:37.324Z');
     $request->ticketingCustomer->emails = [
         new TicketingEmail(),
     ];
@@ -276,7 +276,7 @@ try {
     $request->ticketingCustomer->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-12-04');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-04T16:24:48.409Z');
     $request->connectionId = 'fugit';
 
     $requestSecurity = new PostTicketingConnectionIdCustomerSecurity();
@@ -333,7 +333,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutTicketingConnectionIdCustomerIdRequest();
     $request->ticketingCustomer = new TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d', '2021-07-16');
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-16T00:05:46.073Z');
     $request->ticketingCustomer->emails = [
         new TicketingEmail(),
     ];
@@ -346,7 +346,7 @@ try {
     $request->ticketingCustomer->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-11-07');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-07T17:05:48.482Z');
     $request->connectionId = 'incidunt';
     $request->id = 'd20ec90e-a41d-41f4-a5e8-5156fff73fdf';
 

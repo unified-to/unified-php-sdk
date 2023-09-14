@@ -27,7 +27,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetUnifiedApicallRequest();
     $request->connectionId = 'quibusdam';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d', '2022-02-04');
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-04T19:17:08.641Z');
     $request->env = 'pariatur';
     $request->error = false;
     $request->externalXref = 'accusantium';
@@ -36,7 +36,7 @@ try {
     $request->offset = 6155.6;
     $request->order = 'magni';
     $request->sort = 'sunt';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2020-06-16');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-16T10:20:37.479Z');
 
     $requestSecurity = new GetUnifiedApicallSecurity();
     $requestSecurity->jwt = '';

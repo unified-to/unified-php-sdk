@@ -73,7 +73,7 @@ class PropertyConnectionAuth
     public ?float $expiresIn = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('expiry_date')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $expiryDate = null;
     

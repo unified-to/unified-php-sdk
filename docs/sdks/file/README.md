@@ -89,7 +89,7 @@ try {
     $request->order = 'porro';
     $request->query = 'ducimus';
     $request->sort = 'ad';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-10-09');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-09T19:41:02.147Z');
 
     $requestSecurity = new GetCrmConnectionIdFileSecurity();
     $requestSecurity->jwt = '';
@@ -195,7 +195,7 @@ try {
     $request->crmFile->activityId = 'iure';
     $request->crmFile->companyId = 'libero';
     $request->crmFile->contactId = 'cum';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d', '2022-03-20');
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-20T06:35:22.978Z');
     $request->crmFile->dealId = 'vel';
     $request->crmFile->description = 'omnis';
     $request->crmFile->fileName = 'recusandae';
@@ -205,7 +205,7 @@ try {
     $request->crmFile->id = 'db1344ba-9f78-4a5c-8ed7-aab62e97261f';
     $request->crmFile->leadId = 'cum';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-03-14');
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-14T09:21:38.792Z');
     $request->crmFile->userId = 'veniam';
     $request->connectionId = 'corrupti';
     $request->id = 'd27b5199-6b5b-44b5-8eef-712b7a7ab034';
@@ -264,7 +264,7 @@ try {
     $request->crmFile->activityId = 'modi';
     $request->crmFile->companyId = 'soluta';
     $request->crmFile->contactId = 'inventore';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d', '2022-11-20');
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-20T13:22:34.695Z');
     $request->crmFile->dealId = 'sit';
     $request->crmFile->description = 'autem';
     $request->crmFile->fileName = 'rem';
@@ -274,7 +274,7 @@ try {
     $request->crmFile->id = 'ebef897f-3dd0-4ccd-b3f1-1b3e4e080aa1';
     $request->crmFile->leadId = 'ipsa';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-11-25');
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-25T00:50:44.199Z');
     $request->crmFile->userId = 'deleniti';
     $request->connectionId = 'eum';
 
@@ -332,7 +332,7 @@ try {
     $request->crmFile->activityId = 'accusamus';
     $request->crmFile->companyId = 'optio';
     $request->crmFile->contactId = 'odio';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-29');
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-29T15:52:32.469Z');
     $request->crmFile->dealId = 'officiis';
     $request->crmFile->description = 'ipsa';
     $request->crmFile->fileName = 'eos';
@@ -342,7 +342,7 @@ try {
     $request->crmFile->id = '02c5c8e2-d30e-4ad3-904f-a44707bf375b';
     $request->crmFile->leadId = 'ut';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-11-06');
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-06T09:14:44.032Z');
     $request->crmFile->userId = 'quas';
     $request->connectionId = 'aspernatur';
     $request->id = '821fdb2f-69e5-4926-bc71-cc8d3cd4258d';

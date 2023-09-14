@@ -89,7 +89,7 @@ try {
     $request->order = 'hic';
     $request->query = 'placeat';
     $request->sort = 'repudiandae';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-12-09');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-09T01:19:23.288Z');
 
     $requestSecurity = new GetUcConnectionIdAgentSecurity();
     $requestSecurity->jwt = '';
@@ -146,7 +146,7 @@ try {
     $request->order = 'repellat';
     $request->query = 'iste';
     $request->sort = 'libero';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-01-20');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-20T16:41:07.268Z');
 
     $requestSecurity = new GetUcConnectionIdCallSecurity();
     $requestSecurity->jwt = '';
@@ -202,7 +202,7 @@ try {
     $request->order = 'earum';
     $request->query = 'a';
     $request->sort = 'repudiandae';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-05-24');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-24T06:40:21.262Z');
 
     $requestSecurity = new GetUcConnectionIdContactSecurity();
     $requestSecurity->jwt = '';
@@ -309,7 +309,7 @@ try {
     $request = new PatchUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
     $request->ucContact->company = 'Frami, Luettgen and Harris';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-02-20');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-20T00:36:01.768Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
@@ -320,7 +320,7 @@ try {
         new UcTelephone(),
     ];
     $request->ucContact->title = 'Mrs.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-03-13');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-03-13T17:02:39.583Z');
     $request->connectionId = 'similique';
     $request->id = 'e5fd4b39-f8a1-4490-a78f-13c686d839fc';
 
@@ -379,7 +379,7 @@ try {
     $request = new PostUcConnectionIdContactRequest();
     $request->ucContact = new UcContact();
     $request->ucContact->company = 'Ullrich - Blanda';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-09-08');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-08T11:49:59.077Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
@@ -390,7 +390,7 @@ try {
         new UcTelephone(),
     ];
     $request->ucContact->title = 'Dr.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-08-07');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-07T20:33:26.550Z');
     $request->connectionId = 'dignissimos';
 
     $requestSecurity = new PostUcConnectionIdContactSecurity();
@@ -448,7 +448,7 @@ try {
     $request = new PutUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
     $request->ucContact->company = 'Berge - Walsh';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d', '2022-11-16');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-16T04:50:25.790Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
@@ -459,7 +459,7 @@ try {
         new UcTelephone(),
     ];
     $request->ucContact->title = 'Dr.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-03-17');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-17T10:55:24.768Z');
     $request->connectionId = 'odio';
     $request->id = '5af8a60a-7ae3-446e-8979-e5afe60acaca';
 

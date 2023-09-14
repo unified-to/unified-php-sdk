@@ -251,7 +251,7 @@ try {
     $request->order = 'quo';
     $request->query = 'enim';
     $request->sort = 'reiciendis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-08-06');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-06T07:09:27.517Z');
 
     $requestSecurity = new GetCrmConnectionIdEventSecurity();
     $requestSecurity->jwt = '';
@@ -368,7 +368,7 @@ try {
     $request->crmEvent->contactIds = [
         'enim',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-24');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-24T13:12:02.932Z');
     $request->crmEvent->dealIds = [
         'beatae',
     ];
@@ -385,8 +385,8 @@ try {
     $request->crmEvent->id = 'a735ac26-ae33-4bef-971a-8f46bca1106f';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'officiis';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d', '2022-03-09');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d', '2022-04-04');
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-09T06:52:15.061Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-04T13:47:46.436Z');
     $request->crmEvent->meeting->title = 'Ms.';
     $request->crmEvent->note = new PropertyCrmEventNote();
     $request->crmEvent->note->description = 'vitae';
@@ -396,7 +396,7 @@ try {
     $request->crmEvent->task->name = 'Donald Kuvalis';
     $request->crmEvent->task->status = 'deleniti';
     $request->crmEvent->type = CrmEventType::Task;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-09-10');
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-09-10T16:44:56.500Z');
     $request->connectionId = 'iste';
     $request->id = 'f7b99a55-0a65-46ed-b33b-b0ce8aa65432';
 
@@ -618,7 +618,7 @@ try {
     $request->crmEvent->contactIds = [
         'ad',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d', '2022-11-13');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-13T13:21:45.209Z');
     $request->crmEvent->dealIds = [
         'iste',
     ];
@@ -635,8 +635,8 @@ try {
     $request->crmEvent->id = 'a8031229-2cc6-41c2-a702-bb97ee102da2';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'fugiat';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d', '2022-05-17');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d', '2022-01-19');
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-17T18:23:41.476Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-19T20:14:56.276Z');
     $request->crmEvent->meeting->title = 'Ms.';
     $request->crmEvent->note = new PropertyCrmEventNote();
     $request->crmEvent->note->description = 'officiis';
@@ -646,7 +646,7 @@ try {
     $request->crmEvent->task->name = 'Pam West';
     $request->crmEvent->task->status = 'voluptates';
     $request->crmEvent->type = CrmEventType::Meeting;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-08-11');
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-11T15:33:40.711Z');
     $request->connectionId = 'ut';
 
     $requestSecurity = new PostCrmConnectionIdEventSecurity();
@@ -714,7 +714,7 @@ try {
     $request->crmEvent->contactIds = [
         'dolores',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d', '2021-05-25');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-25T15:13:43.378Z');
     $request->crmEvent->dealIds = [
         'sunt',
     ];
@@ -731,8 +731,8 @@ try {
     $request->crmEvent->id = '1cc9fc61-aae5-4eb5-b0c4-92b5744d08a2';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'odit';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d', '2022-07-17');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d', '2021-09-01');
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-17T08:06:42.257Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-01T06:27:37.419Z');
     $request->crmEvent->meeting->title = 'Dr.';
     $request->crmEvent->note = new PropertyCrmEventNote();
     $request->crmEvent->note->description = 'debitis';
@@ -742,7 +742,7 @@ try {
     $request->crmEvent->task->name = 'Phil Emmerich';
     $request->crmEvent->task->status = 'illo';
     $request->crmEvent->type = CrmEventType::Meeting;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-01');
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-01T03:03:18.465Z');
     $request->connectionId = 'et';
     $request->id = 'becb83d2-378a-4e3b-bc23-d9450a986a49';
 

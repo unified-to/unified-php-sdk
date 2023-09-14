@@ -86,7 +86,7 @@ try {
     $request->order = 'quod';
     $request->query = 'expedita';
     $request->sort = 'sapiente';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-07-11');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-11T04:24:36.536Z');
 
     $requestSecurity = new GetHrisConnectionIdEmployeeSecurity();
     $requestSecurity->jwt = '';
@@ -206,8 +206,8 @@ try {
     $request->hrisEmployee->address->postalCode = '72142-4205';
     $request->hrisEmployee->address->region = 'odit';
     $request->hrisEmployee->address->regionCode = 'libero';
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-11');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d', '2022-06-16');
+    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-11T12:16:56.379Z');
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-16T11:08:23.366Z');
     $request->hrisEmployee->department = 'mollitia';
     $request->hrisEmployee->division = 'distinctio';
     $request->hrisEmployee->emails = [
@@ -217,7 +217,7 @@ try {
     $request->hrisEmployee->employmentStatus = HrisEmployeeEmploymentStatus::Inactive;
     $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Freelance;
     $request->hrisEmployee->gender = HrisEmployeeGender::Female;
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d', '2022-07-08');
+    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-08T14:22:55.798Z');
     $request->hrisEmployee->id = '1e9c3263-50a4-4671-8378-9ce0e991594d';
     $request->hrisEmployee->location = 'omnis';
     $request->hrisEmployee->managerId = 'amet';
@@ -227,9 +227,9 @@ try {
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-17');
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-17T14:13:12.964Z');
     $request->hrisEmployee->title = 'Dr.';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-04-22');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-22T10:53:42.970Z');
     $request->connectionId = 'quaerat';
     $request->id = 'b4db8b77-8ebb-46e1-92cf-502bafb2cbc4';
 
@@ -301,8 +301,8 @@ try {
     $request->hrisEmployee->address->postalCode = '86015';
     $request->hrisEmployee->address->region = 'quisquam';
     $request->hrisEmployee->address->regionCode = 'dolor';
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d', '2021-04-12');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d', '2022-11-30');
+    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-12T20:25:25.525Z');
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-30T12:42:25.087Z');
     $request->hrisEmployee->department = 'mollitia';
     $request->hrisEmployee->division = 'veritatis';
     $request->hrisEmployee->emails = [
@@ -312,7 +312,7 @@ try {
     $request->hrisEmployee->employmentStatus = HrisEmployeeEmploymentStatus::Active;
     $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::FullTime;
     $request->hrisEmployee->gender = HrisEmployeeGender::NonBinary;
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d', '2021-01-23');
+    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-23T19:36:22.207Z');
     $request->hrisEmployee->id = '966489d7-b786-473e-93a1-2a6b99249459';
     $request->hrisEmployee->location = 'numquam';
     $request->hrisEmployee->managerId = 'tempora';
@@ -322,9 +322,9 @@ try {
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-09');
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-09T06:46:19.392Z');
     $request->hrisEmployee->title = 'Ms.';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-08-05');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-05T18:49:17.602Z');
     $request->connectionId = 'tempore';
 
     $requestSecurity = new PostHrisConnectionIdEmployeeSecurity();
@@ -395,8 +395,8 @@ try {
     $request->hrisEmployee->address->postalCode = '21370';
     $request->hrisEmployee->address->region = 'incidunt';
     $request->hrisEmployee->address->regionCode = 'magnam';
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d', '2021-02-12');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d', '2021-05-02');
+    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-12T13:15:25.082Z');
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-02T14:50:24.175Z');
     $request->hrisEmployee->department = 'delectus';
     $request->hrisEmployee->division = 'dicta';
     $request->hrisEmployee->emails = [
@@ -406,7 +406,7 @@ try {
     $request->hrisEmployee->employmentStatus = HrisEmployeeEmploymentStatus::Inactive;
     $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Contractor;
     $request->hrisEmployee->gender = HrisEmployeeGender::NonBinary;
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d', '2020-06-05');
+    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-05T09:17:49.203Z');
     $request->hrisEmployee->id = 'be78bf60-6825-4894-aa76-3d5c72795b78';
     $request->hrisEmployee->location = 'exercitationem';
     $request->hrisEmployee->managerId = 'vitae';
@@ -416,9 +416,9 @@ try {
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-02');
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-02T08:59:17.795Z');
     $request->hrisEmployee->title = 'Dr.';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-07-30');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-30T08:43:57.932Z');
     $request->connectionId = 'consectetur';
     $request->id = '5b33bc0f-970c-442f-89f4-844225e75b79';
 

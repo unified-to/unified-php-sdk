@@ -135,7 +135,7 @@ try {
     $request->order = 'molestias';
     $request->query = 'ea';
     $request->sort = 'odio';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-10-02');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-02T07:59:57.149Z');
 
     $requestSecurity = new GetCrmConnectionIdUserSecurity();
     $requestSecurity->jwt = '';
@@ -340,7 +340,7 @@ try {
     $request->crmUser->address->postalCode = '14141';
     $request->crmUser->address->region = 'quos';
     $request->crmUser->address->regionCode = 'doloribus';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d', '2022-04-18');
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-18T22:44:44.080Z');
     $request->crmUser->currency = 'ipsa';
     $request->crmUser->department = 'ratione';
     $request->crmUser->division = 'natus';
@@ -357,7 +357,7 @@ try {
     ];
     $request->crmUser->timezone = 'nam';
     $request->crmUser->title = 'Mrs.';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-11-29');
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-29T10:12:08.777Z');
     $request->connectionId = 'officia';
     $request->id = '7def168b-6ccb-4282-ab4a-9850ed2f4a1e';
 
@@ -409,13 +409,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d', '2021-06-26');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-06-26T19:05:17.063Z');
     $request->email = 'Markus.Von@gmail.com';
     $request->environment = 'inventore';
     $request->id = '40e75726-e003-4c2f-8294-192518cee41c';
     $request->meta = new PropertyUserMeta();
     $request->name = 'Marshall Mraz';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-05-31');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-31T04:37:26.610Z');
     $request->workspaceId = 'delectus';
     $request->workspaceIds = [
         'eum',
@@ -486,7 +486,7 @@ try {
     $request->crmUser->address->postalCode = '01173-4693';
     $request->crmUser->address->region = 'harum';
     $request->crmUser->address->regionCode = 'commodi';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d', '2022-08-07');
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-07T23:47:24.516Z');
     $request->crmUser->currency = 'voluptatem';
     $request->crmUser->department = 'ab';
     $request->crmUser->division = 'sunt';
@@ -503,7 +503,7 @@ try {
     ];
     $request->crmUser->timezone = 'nobis';
     $request->crmUser->title = 'Ms.';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-09-20');
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-09-20T15:00:31.441Z');
     $request->connectionId = 'consequatur';
 
     $requestSecurity = new PostCrmConnectionIdUserSecurity();
@@ -571,7 +571,7 @@ try {
     $request->crmUser->address->postalCode = '88900-2876';
     $request->crmUser->address->region = 'voluptate';
     $request->crmUser->address->regionCode = 'soluta';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d', '2021-05-05');
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-05T11:15:25.411Z');
     $request->crmUser->currency = 'voluptate';
     $request->crmUser->department = 'neque';
     $request->crmUser->division = 'explicabo';
@@ -588,7 +588,7 @@ try {
     ];
     $request->crmUser->timezone = 'asperiores';
     $request->crmUser->title = 'Ms.';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-11');
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-11T05:46:17.082Z');
     $request->connectionId = 'animi';
     $request->id = '5da664b7-e778-4a74-baaa-2832bb65862d';
 
@@ -640,13 +640,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d', '2022-04-27');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-27T09:20:39.988Z');
     $request->email = 'Arnold_Wyman@gmail.com';
     $request->environment = 'veritatis';
     $request->id = '4aa6bdec-7f44-4423-ae9a-5dee1acd72a8';
     $request->meta = new PropertyUserMeta();
     $request->name = 'Miss Andy Lehner';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-02-08');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-08T16:00:16.238Z');
     $request->workspaceId = 'repudiandae';
     $request->workspaceIds = [
         'ex',

@@ -86,7 +86,7 @@ try {
     $request->order = 'facilis';
     $request->query = 'nostrum';
     $request->sort = 'alias';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-03-02');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-02T07:31:55.964Z');
 
     $requestSecurity = new GetCrmConnectionIdLeadSecurity();
     $requestSecurity->jwt = '';
@@ -205,7 +205,7 @@ try {
     $request->crmLead->address->regionCode = 'nulla';
     $request->crmLead->companyId = 'inventore';
     $request->crmLead->contactId = 'in';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d', '2022-12-01');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-01T02:43:18.590Z');
     $request->crmLead->creatorUserId = 'ad';
     $request->crmLead->emails = [
         new CrmEmail(),
@@ -216,7 +216,7 @@ try {
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-03-28');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-28T03:14:23.553Z');
     $request->crmLead->userId = 'fugiat';
     $request->connectionId = 'perspiciatis';
     $request->id = '948d6ede-d477-4680-bc7a-17a82e5e82fd';
@@ -288,7 +288,7 @@ try {
     $request->crmLead->address->regionCode = 'omnis';
     $request->crmLead->companyId = 'qui';
     $request->crmLead->contactId = 'dolorum';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-13');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-13T09:22:43.090Z');
     $request->crmLead->creatorUserId = 'quaerat';
     $request->crmLead->emails = [
         new CrmEmail(),
@@ -299,7 +299,7 @@ try {
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-03-30');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-30T17:48:51.317Z');
     $request->crmLead->userId = 'veritatis';
     $request->connectionId = 'doloremque';
 
@@ -370,7 +370,7 @@ try {
     $request->crmLead->address->regionCode = 'sint';
     $request->crmLead->companyId = 'aliquid';
     $request->crmLead->contactId = 'odit';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d', '2022-02-19');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-19T07:08:52.403Z');
     $request->crmLead->creatorUserId = 'amet';
     $request->crmLead->emails = [
         new CrmEmail(),
@@ -381,7 +381,7 @@ try {
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-02-18');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-18T05:48:35.664Z');
     $request->crmLead->userId = 'necessitatibus';
     $request->connectionId = 'perferendis';
     $request->id = 'd56d73b0-0550-43e8-9c62-6ff77c65675f';

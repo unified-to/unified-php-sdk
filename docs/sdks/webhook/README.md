@@ -83,7 +83,7 @@ try {
     $request->offset = 4993.29;
     $request->order = 'occaecati';
     $request->sort = 'nostrum';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-08-13');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-13T05:59:43.168Z');
 
     $requestSecurity = new GetUnifiedWebhookSecurity();
     $requestSecurity->jwt = '';
@@ -186,9 +186,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostUnifiedWebhookConnectionIdObjectRequest();
     $request->webhook = new Webhook();
-    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d', '2021-04-07');
+    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-07T16:51:18.060Z');
     $request->webhook->connectionId = 'omnis';
-    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d', '2021-01-19');
+    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-19T08:25:38.905Z');
     $request->webhook->environment = 'nisi';
     $request->webhook->events = [
         PropertyWebhookEvents::Updated,
@@ -202,7 +202,7 @@ try {
     $request->webhook->subscriptions = [
         'architecto',
     ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-01-30');
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-30T12:29:43.021Z');
     $request->webhook->workspaceId = 'soluta';
     $request->connectionId = 'mollitia';
     $request->events = [

@@ -143,7 +143,7 @@ try {
     $request->order = 'vero';
     $request->query = 'excepturi';
     $request->sort = 'accusantium';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-03-25');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-25T11:55:37.709Z');
 
     $requestSecurity = new GetCrmConnectionIdCompanySecurity();
     $requestSecurity->jwt = '';
@@ -311,7 +311,7 @@ try {
     $request->crmCompany->address->postalCode = '17497';
     $request->crmCompany->address->region = 'tempore';
     $request->crmCompany->address->regionCode = 'quidem';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d', '2022-01-31');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-31T12:51:31.220Z');
     $request->crmCompany->dealIds = [
         'fugit',
     ];
@@ -327,7 +327,7 @@ try {
     $request->crmCompany->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-11-26');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-26T08:12:43.733Z');
     $request->crmCompany->websites = [
         'amet',
     ];
@@ -450,7 +450,7 @@ try {
     $request->crmCompany->address->postalCode = '79775-9563';
     $request->crmCompany->address->region = 'accusantium';
     $request->crmCompany->address->regionCode = 'illo';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d', '2022-01-06');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-06T19:53:40.287Z');
     $request->crmCompany->dealIds = [
         'nostrum',
     ];
@@ -466,7 +466,7 @@ try {
     $request->crmCompany->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-31');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-31T13:11:59.129Z');
     $request->crmCompany->websites = [
         'tenetur',
     ];
@@ -537,7 +537,7 @@ try {
     $request->crmCompany->address->postalCode = '40602-8363';
     $request->crmCompany->address->region = 'eligendi';
     $request->crmCompany->address->regionCode = 'placeat';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-04');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-04T04:18:38.456Z');
     $request->crmCompany->dealIds = [
         'unde',
     ];
@@ -553,7 +553,7 @@ try {
     $request->crmCompany->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-09-15');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-15T09:33:00.010Z');
     $request->crmCompany->websites = [
         'pariatur',
     ];

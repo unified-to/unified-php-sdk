@@ -44,7 +44,7 @@ class GetCrmConnectionIdTeamRequest
      * 
      * @var ?\DateTime $updatedGte
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d')]
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
     
 	public function __construct()

@@ -188,7 +188,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetUnifiedApicallRequest();
     $request->connectionId = 'dolores';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d', '2021-04-12');
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-12T07:50:32.201Z');
     $request->env = 'harum';
     $request->error = false;
     $request->externalXref = 'corrupti';
@@ -197,7 +197,7 @@ try {
     $request->offset = 7877.69;
     $request->order = 'sequi';
     $request->sort = 'culpa';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-10-23');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-23T00:21:09.182Z');
 
     $requestSecurity = new GetUnifiedApicallSecurity();
     $requestSecurity->jwt = '';
@@ -305,7 +305,7 @@ try {
     $request->offset = 8856.75;
     $request->order = 'consectetur';
     $request->sort = 'reiciendis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-11-17');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-17T00:52:06.013Z');
 
     $requestSecurity = new GetUnifiedConnectionSecurity();
     $requestSecurity->jwt = '';
@@ -413,7 +413,7 @@ try {
     $request->order = 'ratione';
     $request->sort = 'eligendi';
     $request->summary = false;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-11-27');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-27T00:14:53.581Z');
 
     $requestSecurity = new GetUnifiedIntegrationSecurity();
     $requestSecurity->jwt = '';
@@ -713,7 +713,7 @@ try {
     $request->offset = 9935.59;
     $request->order = 'amet';
     $request->sort = 'quod';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-11-10');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-10T08:01:50.699Z');
 
     $requestSecurity = new GetUnifiedWebhookSecurity();
     $requestSecurity->jwt = '';
@@ -830,7 +830,7 @@ try {
         'adipisci',
     ];
     $request->connection->auth->expiresIn = 5694.15;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d', '2022-03-11');
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-11T01:26:47.707Z');
     $request->connection->auth->key = 'maxime';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
     $request->connection->auth->name = 'Miss Van O'Connell';
@@ -846,7 +846,7 @@ try {
     $request->connection->categories = [
         PropertyConnectionCategories::Auth,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d', '2022-12-19');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-19T10:14:39.692Z');
     $request->connection->environment = 'cumque';
     $request->connection->externalXref = 'doloribus';
     $request->connection->id = '5e6cb6eb-abe5-4e0b-99f3-b1358d6a87bb';
@@ -855,7 +855,7 @@ try {
     $request->connection->permissions = [
         PropertyConnectionPermissions::TicketingCustomerWrite,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-08-11');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-11T19:46:11.395Z');
     $request->connection->workspaceId = 'harum';
     $request->id = 'e569d70c-b069-4907-b989-441452a9f01f';
 
@@ -907,13 +907,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d', '2022-09-09');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-09T06:20:47.802Z');
     $request->email = 'Chelsea.Runolfsson@gmail.com';
     $request->environment = 'quidem';
     $request->id = 'e133bacd-e532-4b65-a6f8-62853fe2859c';
     $request->meta = new PropertyUserMeta();
     $request->name = 'Alfred Cummerata';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-12-05');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-05T18:17:30.909Z');
     $request->workspaceId = 'doloribus';
     $request->workspaceIds = [
         'earum',
@@ -983,7 +983,7 @@ try {
         'magni',
     ];
     $request->auth->expiresIn = 9805.84;
-    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d', '2021-09-02');
+    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-02T02:01:55.619Z');
     $request->auth->key = 'ad';
     $request->auth->meta = new PropertyPropertyConnectionAuthMeta();
     $request->auth->name = 'Ms. Ira Nader';
@@ -999,7 +999,7 @@ try {
     $request->categories = [
         PropertyConnectionCategories::Uc,
     ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d', '2021-12-28');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-28T08:06:10.966Z');
     $request->environment = 'quae';
     $request->externalXref = 'eaque';
     $request->id = 'a2aa8749-479e-4dd4-bcf7-b50cf87f08f3';
@@ -1008,7 +1008,7 @@ try {
     $request->permissions = [
         PropertyConnectionPermissions::CrmCompanyWrite,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-12-04');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-04T04:15:00.638Z');
     $request->workspaceId = 'perferendis';
 
     $requestSecurity = new PostUnifiedConnectionSecurity();
@@ -1063,9 +1063,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostUnifiedWebhookConnectionIdObjectRequest();
     $request->webhook = new Webhook();
-    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d', '2022-07-28');
+    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-28T15:12:20.173Z');
     $request->webhook->connectionId = 'culpa';
-    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d', '2022-09-14');
+    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-14T19:04:56.953Z');
     $request->webhook->environment = 'distinctio';
     $request->webhook->events = [
         PropertyWebhookEvents::Updated,
@@ -1079,7 +1079,7 @@ try {
     $request->webhook->subscriptions = [
         'voluptate',
     ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-11-09');
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-09T09:19:40.796Z');
     $request->webhook->workspaceId = 'dolorem';
     $request->connectionId = 'soluta';
     $request->events = [
@@ -1153,7 +1153,7 @@ try {
         'commodi',
     ];
     $request->connection->auth->expiresIn = 792.39;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d', '2021-08-03');
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-03T05:56:05.673Z');
     $request->connection->auth->key = 'voluptatum';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
     $request->connection->auth->name = 'Suzanne Cummerata';
@@ -1169,7 +1169,7 @@ try {
     $request->connection->categories = [
         PropertyConnectionCategories::Martech,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-17');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-17T04:01:35.648Z');
     $request->connection->environment = 'maiores';
     $request->connection->externalXref = 'veritatis';
     $request->connection->id = 'b61a331a-54dc-4102-94f9-2fed939ba8f7';
@@ -1178,7 +1178,7 @@ try {
     $request->connection->permissions = [
         PropertyConnectionPermissions::AtsInterviewRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-05-31');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-31T07:58:59.734Z');
     $request->connection->workspaceId = 'iste';
     $request->id = '2c20ee12-28ac-43ad-8647-d240bc11ea48';
 
@@ -1230,13 +1230,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-25');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-25T18:01:21.633Z');
     $request->email = 'Elinor_Schamberger40@gmail.com';
     $request->environment = 'laborum';
     $request->id = '2f0f5b9d-3cb1-41a7-a87d-3100e8e2b9b0';
     $request->meta = new PropertyUserMeta();
     $request->name = 'Cody Hahn';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-04-29');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-29T00:24:51.754Z');
     $request->workspaceId = 'nihil';
     $request->workspaceIds = [
         'quisquam',

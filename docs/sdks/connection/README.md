@@ -89,7 +89,7 @@ try {
     $request->offset = 2550.64;
     $request->order = 'optio';
     $request->sort = 'nobis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-01-01');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-01T17:19:13.312Z');
 
     $requestSecurity = new GetUnifiedConnectionSecurity();
     $requestSecurity->jwt = '';
@@ -206,7 +206,7 @@ try {
         'expedita',
     ];
     $request->connection->auth->expiresIn = 7300.03;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d', '2022-11-07');
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-07T07:22:33.976Z');
     $request->connection->auth->key = 'minus';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
     $request->connection->auth->name = 'Gustavo Mayer';
@@ -222,7 +222,7 @@ try {
     $request->connection->categories = [
         PropertyConnectionCategories::Ticketing,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d', '2021-02-06');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-06T23:02:21.782Z');
     $request->connection->environment = 'deleniti';
     $request->connection->externalXref = 'modi';
     $request->connection->id = 'f144f3e0-7edc-4c4a-a5f3-cabd905a972e';
@@ -231,7 +231,7 @@ try {
     $request->connection->permissions = [
         PropertyConnectionPermissions::CrmUserWrite,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-07-11');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-11T22:08:27.190Z');
     $request->connection->workspaceId = 'quia';
     $request->id = '8227b2d3-0947-40bf-ba4f-a87cf535a6fa';
 
@@ -299,7 +299,7 @@ try {
         'optio',
     ];
     $request->auth->expiresIn = 1936.23;
-    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d', '2022-11-21');
+    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-21T00:41:23.553Z');
     $request->auth->key = 'voluptatibus';
     $request->auth->meta = new PropertyPropertyConnectionAuthMeta();
     $request->auth->name = 'Tammy Farrell';
@@ -315,7 +315,7 @@ try {
     $request->categories = [
         PropertyConnectionCategories::Uc,
     ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-02');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-02T11:11:56.667Z');
     $request->environment = 'accusantium';
     $request->externalXref = 'quod';
     $request->id = 'c8df79f0-a396-4d90-8364-b7c15dfbace1';
@@ -324,7 +324,7 @@ try {
     $request->permissions = [
         PropertyConnectionPermissions::MartechListRead,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-05');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-05T14:24:35.908Z');
     $request->workspaceId = 'impedit';
 
     $requestSecurity = new PostUnifiedConnectionSecurity();
@@ -393,7 +393,7 @@ try {
         'eligendi',
     ];
     $request->connection->auth->expiresIn = 9231.59;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d', '2022-11-23');
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-23T15:22:12.767Z');
     $request->connection->auth->key = 'veritatis';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
     $request->connection->auth->name = 'Dexter Terry DDS';
@@ -409,7 +409,7 @@ try {
     $request->connection->categories = [
         PropertyConnectionCategories::Uc,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d', '2021-08-04');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-04T19:13:24.542Z');
     $request->connection->environment = 'quaerat';
     $request->connection->externalXref = 'ipsum';
     $request->connection->id = '78ba2531-7747-4dc9-95ad-2caf5dd6723d';
@@ -418,7 +418,7 @@ try {
     $request->connection->permissions = [
         PropertyConnectionPermissions::AtsApplicationRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-12-13');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-13T10:52:20.774Z');
     $request->connection->workspaceId = 'culpa';
     $request->id = 'e2f3a6b7-0087-4875-a143-f5a6c98b5555';
 

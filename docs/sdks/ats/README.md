@@ -312,7 +312,7 @@ try {
     $request->order = 'aliquid';
     $request->query = 'tenetur';
     $request->sort = 'quae';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-09-23');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-23T16:25:56.144Z');
 
     $requestSecurity = new GetAtsConnectionIdApplicationSecurity();
     $requestSecurity->jwt = '';
@@ -417,7 +417,7 @@ try {
     $request->order = 'accusantium';
     $request->query = 'rem';
     $request->sort = 'aut';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-02-21');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-21T23:29:55.837Z');
 
     $requestSecurity = new GetAtsConnectionIdCandidateSecurity();
     $requestSecurity->jwt = '';
@@ -523,7 +523,7 @@ try {
     $request->order = 'ab';
     $request->query = 'adipisci';
     $request->sort = 'fuga';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-03-29');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-29T01:37:24.454Z');
 
     $requestSecurity = new GetAtsConnectionIdInterviewSecurity();
     $requestSecurity->jwt = '';
@@ -628,7 +628,7 @@ try {
     $request->order = 'necessitatibus';
     $request->query = 'dolore';
     $request->sort = 'sunt';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-04-11');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-11T12:10:44.801Z');
 
     $requestSecurity = new GetAtsConnectionIdJobSecurity();
     $requestSecurity->jwt = '';
@@ -736,7 +736,7 @@ try {
     $request->order = 'hic';
     $request->query = 'nesciunt';
     $request->sort = 'culpa';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-04-07');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-07T21:05:22.480Z');
 
     $requestSecurity = new GetAtsConnectionIdScorecardSecurity();
     $requestSecurity->jwt = '';
@@ -839,17 +839,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsConnectionIdApplicationIdRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d', '2022-03-06');
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-06T01:38:10.905Z');
     $request->atsApplication->candidateId = 'sed';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-26');
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-26T03:32:06.720Z');
     $request->atsApplication->id = 'e3698f44-7f60-43e8-b445-e80ca55efd20';
     $request->atsApplication->jobId = 'saepe';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d', '2022-09-02');
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-02T13:45:48.565Z');
     $request->atsApplication->rejectedReason = 'in';
     $request->atsApplication->source = 'officiis';
     $request->atsApplication->status = AtsApplicationStatus::Reviewing;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-04-21');
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-21T14:42:01.744Z');
     $request->connectionId = 'praesentium';
     $request->id = 'b6a89fbe-3a5a-4a8e-8824-d0ab4075088e';
 
@@ -918,7 +918,7 @@ try {
     $request->atsCandidate->address->region = 'dolorem';
     $request->atsCandidate->address->regionCode = 'harum';
     $request->atsCandidate->companyName = 'dicta';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-04');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-04T08:15:04.756Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
@@ -934,7 +934,7 @@ try {
         new AtsTelephone(),
     ];
     $request->atsCandidate->title = 'Dr.';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-18');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-18T05:19:26.990Z');
     $request->connectionId = 'error';
     $request->id = 'eee9526f-8d98-46e8-81ea-d4f0e1012563';
 
@@ -991,16 +991,16 @@ try {
     $request->atsInterview = new AtsInterview();
     $request->atsInterview->applicationId = 'a';
     $request->atsInterview->candidateId = 'molestias';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d', '2022-02-04');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d', '2022-06-03');
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-04T04:20:12.809Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-03T06:15:48.130Z');
     $request->atsInterview->externalEventXref = 'officiis';
     $request->atsInterview->id = '973e922a-57a1-45be-be06-0807e2b6e3ab';
     $request->atsInterview->jobId = 'voluptatum';
     $request->atsInterview->location = 'rem';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d', '2022-09-05');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-05T23:50:51.335Z');
     $request->atsInterview->status = AtsInterviewStatus::Complete;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-08-21');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-21T19:13:25.245Z');
     $request->atsInterview->userIds = [
         'perspiciatis',
     ];
@@ -1066,11 +1066,11 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d', '2022-08-24');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-24T14:31:36.261Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-06');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-06T04:30:23.999Z');
     $request->atsJob->departments = [
         'nostrum',
     ];
@@ -1091,7 +1091,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Pending;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-02');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-02T01:22:45.175Z');
     $request->connectionId = 'provident';
     $request->id = 'ebfd0e9f-e6c6-432c-a3ae-d0117996312f';
 
@@ -1148,14 +1148,14 @@ try {
     $request->atsScorecard = new AtsScorecard();
     $request->atsScorecard->applicationId = 'nulla';
     $request->atsScorecard->candidateId = 'necessitatibus';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d', '2022-09-24');
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-24T01:02:47.291Z');
     $request->atsScorecard->id = '771778ff-61d0-4174-b636-0a15db6a6606';
     $request->atsScorecard->interviewId = 'voluptas';
     $request->atsScorecard->interviewerId = 'iste';
     $request->atsScorecard->jobId = 'id';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::DefinitelyNo;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-05-10');
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-10T15:26:02.215Z');
     $request->connectionId = 'voluptates';
     $request->id = 'aab5851d-6c64-45b0-8b61-891baa0fe1ad';
 
@@ -1210,17 +1210,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostAtsConnectionIdApplicationRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d', '2022-11-30');
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-30T00:52:48.741Z');
     $request->atsApplication->candidateId = 'alias';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d', '2021-02-15');
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-15T19:55:34.024Z');
     $request->atsApplication->id = '6f8c5f35-0d8c-4db5-a341-814301042181';
     $request->atsApplication->jobId = 'dolor';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d', '2021-11-22');
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-22T09:48:38.420Z');
     $request->atsApplication->rejectedReason = 'consequuntur';
     $request->atsApplication->source = 'ipsa';
     $request->atsApplication->status = AtsApplicationStatus::ThirdInterview;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-09-06');
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-09-06T01:35:17.785Z');
     $request->connectionId = 'officiis';
 
     $requestSecurity = new PostAtsConnectionIdApplicationSecurity();
@@ -1288,7 +1288,7 @@ try {
     $request->atsCandidate->address->region = 'voluptatem';
     $request->atsCandidate->address->regionCode = 'exercitationem';
     $request->atsCandidate->companyName = 'necessitatibus';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d', '2022-08-10');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-10T17:05:50.277Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
@@ -1304,7 +1304,7 @@ try {
         new AtsTelephone(),
     ];
     $request->atsCandidate->title = 'Miss';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-12-02');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-02T07:12:07.456Z');
     $request->connectionId = 'fuga';
 
     $requestSecurity = new PostAtsConnectionIdCandidateSecurity();
@@ -1360,16 +1360,16 @@ try {
     $request->atsInterview = new AtsInterview();
     $request->atsInterview->applicationId = 'accusamus';
     $request->atsInterview->candidateId = 'voluptatibus';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d', '2021-10-13');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d', '2022-01-06');
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-13T17:26:42.757Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-06T10:12:04.022Z');
     $request->atsInterview->externalEventXref = 'praesentium';
     $request->atsInterview->id = 'c4d86e68-e4be-4056-813f-59da757a59ec';
     $request->atsInterview->jobId = 'hic';
     $request->atsInterview->location = 'necessitatibus';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d', '2021-10-15');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-15T06:49:27.168Z');
     $request->atsInterview->status = AtsInterviewStatus::AwaitingFeedback;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-02-08');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-02-08T01:38:42.167Z');
     $request->atsInterview->userIds = [
         'quae',
     ];
@@ -1434,11 +1434,11 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d', '2021-08-25');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-25T17:55:33.849Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d', '2022-10-03');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-03T14:46:04.624Z');
     $request->atsJob->departments = [
         'atque',
     ];
@@ -1459,7 +1459,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Archived;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-01-28');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-01-28T09:46:18.788Z');
     $request->connectionId = 'iste';
 
     $requestSecurity = new PostAtsConnectionIdJobSecurity();
@@ -1515,14 +1515,14 @@ try {
     $request->atsScorecard = new AtsScorecard();
     $request->atsScorecard->applicationId = 'itaque';
     $request->atsScorecard->candidateId = 'alias';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d', '2022-01-26');
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-26T00:00:57.040Z');
     $request->atsScorecard->id = '3a437000-ae6b-46bc-9b8f-759eac55a974';
     $request->atsScorecard->interviewId = 'veritatis';
     $request->atsScorecard->interviewerId = 'vero';
     $request->atsScorecard->jobId = 'consectetur';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::DefinitelyNo;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-15');
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-15T11:04:29.234Z');
     $request->connectionId = 'ad';
 
     $requestSecurity = new PostAtsConnectionIdScorecardSecurity();
@@ -1576,17 +1576,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutAtsConnectionIdApplicationIdRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d', '2022-05-22');
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-22T20:46:18.043Z');
     $request->atsApplication->candidateId = 'ex';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d', '2022-04-03');
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-03T23:45:33.127Z');
     $request->atsApplication->id = 'b8a72026-1143-45e1-b9db-c2259b1abda8';
     $request->atsApplication->jobId = 'placeat';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d', '2022-07-10');
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-10T00:35:28.130Z');
     $request->atsApplication->rejectedReason = 'ipsa';
     $request->atsApplication->source = 'voluptates';
     $request->atsApplication->status = AtsApplicationStatus::New;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-26');
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-26T05:52:38.352Z');
     $request->connectionId = 'dolore';
     $request->id = 'cb0672d1-ad87-49ee-b966-5b85efbd02ba';
 
@@ -1655,7 +1655,7 @@ try {
     $request->atsCandidate->address->region = 'quidem';
     $request->atsCandidate->address->regionCode = 'quis';
     $request->atsCandidate->companyName = 'beatae';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d', '2022-01-17');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-17T19:54:28.296Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
@@ -1671,7 +1671,7 @@ try {
         new AtsTelephone(),
     ];
     $request->atsCandidate->title = 'Miss';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-05-01');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-01T17:29:02.755Z');
     $request->connectionId = 'impedit';
     $request->id = 'fbe2fd57-0757-4792-9177-deac646ecb57';
 
@@ -1728,16 +1728,16 @@ try {
     $request->atsInterview = new AtsInterview();
     $request->atsInterview->applicationId = 'dolorem';
     $request->atsInterview->candidateId = 'modi';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-04');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d', '2022-06-01');
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-04T22:19:22.955Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-01T14:00:05.540Z');
     $request->atsInterview->externalEventXref = 'repudiandae';
     $request->atsInterview->id = 'b1e5a2b1-2eb0-47f1-96db-99545fc95fa8';
     $request->atsInterview->jobId = 'totam';
     $request->atsInterview->location = 'molestias';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d', '2022-12-13');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-13T07:44:48.227Z');
     $request->atsInterview->status = AtsInterviewStatus::Complete;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-12');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-12T13:18:33.057Z');
     $request->atsInterview->userIds = [
         'iste',
     ];
@@ -1803,11 +1803,11 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d', '2022-08-27');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-27T02:09:55.586Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d', '2022-10-04');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-04T10:29:48.523Z');
     $request->atsJob->departments = [
         'facilis',
     ];
@@ -1828,7 +1828,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Archived;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-13');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-13T17:49:01.077Z');
     $request->connectionId = 'iusto';
     $request->id = '7b114eeb-52ff-4785-bc37-814d4c98e0c2';
 
@@ -1885,14 +1885,14 @@ try {
     $request->atsScorecard = new AtsScorecard();
     $request->atsScorecard->applicationId = 'nam';
     $request->atsScorecard->candidateId = 'expedita';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d', '2021-10-26');
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-26T16:10:32.283Z');
     $request->atsScorecard->id = 'eb75dad6-36c6-4005-83d8-bb31180f739a';
     $request->atsScorecard->interviewId = 'necessitatibus';
     $request->atsScorecard->interviewerId = 'provident';
     $request->atsScorecard->jobId = 'repudiandae';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::DefinitelyNo;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-07-11');
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-11T07:45:44.709Z');
     $request->connectionId = 'itaque';
     $request->id = 'b809e281-0331-4f39-81d4-c700b607f3c9';
 

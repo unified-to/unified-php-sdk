@@ -86,7 +86,7 @@ try {
     $request->order = 'quis';
     $request->query = 'id';
     $request->sort = 'delectus';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-05-22');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-22T16:36:56.884Z');
 
     $requestSecurity = new GetAtsConnectionIdJobSecurity();
     $requestSecurity->jwt = '';
@@ -197,11 +197,11 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d', '2022-04-11');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-11T16:17:08.350Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d', '2021-12-21');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-21T23:22:52.834Z');
     $request->atsJob->departments = [
         'fugit',
     ];
@@ -222,7 +222,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-14');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-14T02:02:24.824Z');
     $request->connectionId = 'minus';
     $request->id = '7dda70ec-60e6-4075-894d-61c14cd90227';
 
@@ -285,11 +285,11 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d', '2022-05-21');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T22:14:19.804Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d', '2022-04-01');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-01T17:48:28.978Z');
     $request->atsJob->departments = [
         'eaque',
     ];
@@ -310,7 +310,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-03-03');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-03T05:46:06.717Z');
     $request->connectionId = 'in';
 
     $requestSecurity = new PostAtsConnectionIdJobSecurity();
@@ -372,11 +372,11 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d', '2022-05-21');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T14:34:25.049Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d', '2021-02-17');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-17T17:49:31.963Z');
     $request->atsJob->departments = [
         'nulla',
     ];
@@ -397,7 +397,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Pending;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-07-07');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-07T19:13:18.965Z');
     $request->connectionId = 'quas';
     $request->id = 'f277485c-1976-4af9-80da-7a089fc44db2';
 

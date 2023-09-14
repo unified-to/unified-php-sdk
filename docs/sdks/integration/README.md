@@ -38,7 +38,7 @@ try {
     $request->order = 'temporibus';
     $request->sort = 'sapiente';
     $request->summary = false;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-11-20');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-20T09:01:47.169Z');
 
     $requestSecurity = new GetUnifiedIntegrationSecurity();
     $requestSecurity->jwt = '';

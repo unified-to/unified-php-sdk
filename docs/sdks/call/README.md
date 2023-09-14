@@ -33,7 +33,7 @@ try {
     $request->order = 'explicabo';
     $request->query = 'exercitationem';
     $request->sort = 'nihil';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-12-07');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-07T03:30:14.990Z');
 
     $requestSecurity = new GetUcConnectionIdCallSecurity();
     $requestSecurity->jwt = '';

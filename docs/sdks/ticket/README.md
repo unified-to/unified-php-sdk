@@ -88,7 +88,7 @@ try {
     $request->order = 'eligendi';
     $request->query = 'dignissimos';
     $request->sort = 'sint';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-06-10');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-10T00:47:46.325Z');
 
     $requestSecurity = new GetTicketingConnectionIdTicketSecurity();
     $requestSecurity->jwt = '';
@@ -192,8 +192,8 @@ try {
     $request = new PatchTicketingConnectionIdTicketIdRequest();
     $request->ticketingTicket = new TicketingTicket();
     $request->ticketingTicket->category = 'aperiam';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d', '2022-07-17');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d', '2022-11-26');
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-17T21:23:58.538Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-26T18:04:37.009Z');
     $request->ticketingTicket->customerId = 'laboriosam';
     $request->ticketingTicket->description = 'maxime';
     $request->ticketingTicket->id = 'a34bb87d-4f62-4127-a607-d1606294514c';
@@ -206,7 +206,7 @@ try {
     $request->ticketingTicket->tags = [
         'similique',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-01-30');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-30T04:09:09.834Z');
     $request->connectionId = 'consectetur';
     $request->id = '8bd2be87-8703-4493-b49a-a8465a328327';
 
@@ -262,8 +262,8 @@ try {
     $request = new PostTicketingConnectionIdTicketRequest();
     $request->ticketingTicket = new TicketingTicket();
     $request->ticketingTicket->category = 'natus';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d', '2022-01-26');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-18');
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-26T07:45:53.026Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-18T03:01:39.928Z');
     $request->ticketingTicket->customerId = 'quibusdam';
     $request->ticketingTicket->description = 'ab';
     $request->ticketingTicket->id = 'cea673d8-6e3b-435e-89a3-135778ce54ca';
@@ -276,7 +276,7 @@ try {
     $request->ticketingTicket->tags = [
         'vero',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-11-09');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-09T20:01:17.491Z');
     $request->connectionId = 'ducimus';
 
     $requestSecurity = new PostTicketingConnectionIdTicketSecurity();
@@ -331,8 +331,8 @@ try {
     $request = new PutTicketingConnectionIdTicketIdRequest();
     $request->ticketingTicket = new TicketingTicket();
     $request->ticketingTicket->category = 'minima';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d', '2022-09-17');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d', '2022-04-24');
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-17T09:53:48.544Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-24T20:48:09.787Z');
     $request->ticketingTicket->customerId = 'error';
     $request->ticketingTicket->description = 'quod';
     $request->ticketingTicket->id = 'f63b2151-86ab-45e3-a022-614315d15682';
@@ -345,7 +345,7 @@ try {
     $request->ticketingTicket->tags = [
         'officia',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-09-03');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-09-03T02:39:45.703Z');
     $request->connectionId = 'in';
     $request->id = '186ff20b-7a73-4df4-8ca0-d7657c1641bb';
 

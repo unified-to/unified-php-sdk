@@ -143,7 +143,7 @@ try {
     $request->order = 'aliquam';
     $request->query = 'asperiores';
     $request->sort = 'debitis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-11-06');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-06T13:12:47.143Z');
 
     $requestSecurity = new GetMartechConnectionIdListSecurity();
     $requestSecurity->jwt = '';
@@ -249,7 +249,7 @@ try {
     $request->order = 'reprehenderit';
     $request->query = 'mollitia';
     $request->sort = 'cumque';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-01-08');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-08T14:36:35.772Z');
 
     $requestSecurity = new GetMartechConnectionIdListIdMemberSecurity();
     $requestSecurity->jwt = '';
@@ -356,7 +356,7 @@ try {
     $request->marketingList->id = 'ffd2967d-f8fd-4882-a8e6-0be620cd9c5a';
     $request->marketingList->name = 'Mrs. Owen Spencer';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-07-18');
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-18T23:19:54.317Z');
     $request->connectionId = 'corporis';
     $request->id = '2512beae-1d87-4ecc-9fdc-ea8e7a883116';
 
@@ -412,7 +412,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchMartechConnectionIdListIdMemberIdRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d', '2022-10-24');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-24T15:32:14.517Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
@@ -425,7 +425,7 @@ try {
     $request->marketingMember->tags = [
         'incidunt',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-11-25');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-25T22:17:16.108Z');
     $request->connectionId = 'beatae';
     $request->id = 'cc75e4f0-c004-4b5b-b758-cc94562f0069';
     $request->listId = 'ea';
@@ -484,7 +484,7 @@ try {
     $request->marketingList->id = '5fcd1a17-3d84-4bbe-a4f2-9834afb0735c';
     $request->marketingList->name = 'Lester Dach';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-02-17');
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-17T09:39:03.223Z');
     $request->connectionId = 'est';
 
     $requestSecurity = new PostMartechConnectionIdListSecurity();
@@ -539,7 +539,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostMartechConnectionIdListIdMemberRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-25');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-25T16:53:34.625Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
@@ -552,7 +552,7 @@ try {
     $request->marketingMember->tags = [
         'ratione',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-09');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-09T07:53:46.600Z');
     $request->connectionId = 'nam';
     $request->listId = 'ab';
 
@@ -610,7 +610,7 @@ try {
     $request->marketingList->id = '789032ac-3331-472e-add7-9ec74ba7e88d';
     $request->marketingList->name = 'Rudolph Erdman';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-05');
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-05T17:40:52.037Z');
     $request->connectionId = 'eligendi';
     $request->id = 'cc341c86-5734-474f-8a74-0fb4ab441c3a';
 
@@ -666,7 +666,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutMartechConnectionIdListIdMemberIdRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-05');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-05T23:05:15.998Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
@@ -679,7 +679,7 @@ try {
     $request->marketingMember->tags = [
         'dolor',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-08-04');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-04T05:39:18.746Z');
     $request->connectionId = 'asperiores';
     $request->id = 'dcc13558-2c1b-4855-a889-d9ef932e9000';
     $request->listId = 'culpa';

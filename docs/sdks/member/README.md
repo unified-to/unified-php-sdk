@@ -88,7 +88,7 @@ try {
     $request->order = 'mollitia';
     $request->query = 'libero';
     $request->sort = 'tempore';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-05-21');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T17:47:45.502Z');
 
     $requestSecurity = new GetMartechConnectionIdListIdMemberSecurity();
     $requestSecurity->jwt = '';
@@ -193,7 +193,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchMartechConnectionIdListIdMemberIdRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d', '2022-10-15');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-15T19:42:25.344Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
@@ -206,7 +206,7 @@ try {
     $request->marketingMember->tags = [
         'soluta',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-02-17');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-17T18:00:35.072Z');
     $request->connectionId = 'voluptas';
     $request->id = '97bdd9c9-85e4-4373-8a5d-72d9edd785be';
     $request->listId = 'quis';
@@ -263,7 +263,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostMartechConnectionIdListIdMemberRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d', '2021-08-16');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-16T04:18:17.446Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
@@ -276,7 +276,7 @@ try {
     $request->marketingMember->tags = [
         'ducimus',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-12-04');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-04T01:43:48.334Z');
     $request->connectionId = 'aliquid';
     $request->listId = 'quaerat';
 
@@ -332,7 +332,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutMartechConnectionIdListIdMemberIdRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d', '2022-12-30');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-30T01:25:16.995Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
@@ -345,7 +345,7 @@ try {
     $request->marketingMember->tags = [
         'error',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-07-08');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-08T12:35:58.376Z');
     $request->connectionId = 'eius';
     $request->id = 'ae7b1a5b-908d-44e3-8491-aa35d4a839f0';
     $request->listId = 'ipsum';

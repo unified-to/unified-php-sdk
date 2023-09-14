@@ -17,12 +17,12 @@ class HrisEmployee
     public ?PropertyHrisEmployeeAddress $address = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('date_of_birth')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $dateOfBirth = null;
     
@@ -67,7 +67,7 @@ class HrisEmployee
     public ?HrisEmployeeGender $gender = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('hired_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $hiredAt = null;
     
@@ -112,7 +112,7 @@ class HrisEmployee
     public ?array $telephones = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('terminated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $terminatedAt = null;
     
@@ -122,7 +122,7 @@ class HrisEmployee
     public ?string $title = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     

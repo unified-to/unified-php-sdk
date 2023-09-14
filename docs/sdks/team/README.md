@@ -86,7 +86,7 @@ try {
     $request->order = 'fugiat';
     $request->query = 'ab';
     $request->sort = 'voluptate';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-01-27');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-27T05:15:31.688Z');
 
     $requestSecurity = new GetCrmConnectionIdTeamSecurity();
     $requestSecurity->jwt = '';
@@ -188,12 +188,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmConnectionIdTeamIdRequest();
     $request->crmTeam = new CrmTeam();
-    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d', '2022-03-30');
+    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-30T21:43:39.349Z');
     $request->crmTeam->description = 'quos';
     $request->crmTeam->id = 'b83a38a8-a88c-4144-a00c-2caeb1ae1ecf';
     $request->crmTeam->name = 'Salvatore Fisher';
     $request->crmTeam->raw = new PropertyCrmTeamRaw();
-    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-08-02');
+    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-02T04:30:22.741Z');
     $request->crmTeam->userIds = [
         'harum',
     ];
@@ -250,12 +250,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostCrmConnectionIdTeamRequest();
     $request->crmTeam = new CrmTeam();
-    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d', '2021-04-03');
+    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-03T18:27:00.342Z');
     $request->crmTeam->description = 'vel';
     $request->crmTeam->id = '6e97e054-1033-447d-b8ff-2491145fab9e';
     $request->crmTeam->name = 'Erika Osinski';
     $request->crmTeam->raw = new PropertyCrmTeamRaw();
-    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-05-09');
+    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-09T22:54:29.590Z');
     $request->crmTeam->userIds = [
         'amet',
     ];
@@ -311,12 +311,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutCrmConnectionIdTeamIdRequest();
     $request->crmTeam = new CrmTeam();
-    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d', '2022-08-06');
+    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-06T05:57:36.477Z');
     $request->crmTeam->description = 'dolore';
     $request->crmTeam->id = 'eaa6bf2f-f14e-48c1-b352-accedacc5227';
     $request->crmTeam->name = 'Juan Funk';
     $request->crmTeam->raw = new PropertyCrmTeamRaw();
-    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-11-29');
+    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-29T09:22:53.335Z');
     $request->crmTeam->userIds = [
         'architecto',
     ];

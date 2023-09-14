@@ -86,7 +86,7 @@ try {
     $request->order = 'excepturi';
     $request->query = 'distinctio';
     $request->sort = 'cum';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-03-02');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-02T18:21:43.719Z');
 
     $requestSecurity = new GetHrisConnectionIdGroupSecurity();
     $requestSecurity->jwt = '';
@@ -189,7 +189,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchHrisConnectionIdGroupIdRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d', '2021-07-24');
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-24T20:49:56.592Z');
     $request->hrisGroup->description = 'quas';
     $request->hrisGroup->employeeIds = [
         'nemo',
@@ -203,7 +203,7 @@ try {
     $request->hrisGroup->parentId = 'dolore';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
     $request->hrisGroup->type = HrisGroupType::Division;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-06-07');
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-07T11:36:40.272Z');
     $request->connectionId = 'minus';
     $request->id = '439ed8c4-320f-4412-80d4-487ac693b94c';
 
@@ -258,7 +258,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostHrisConnectionIdGroupRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d', '2022-04-22');
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-22T08:13:23.249Z');
     $request->hrisGroup->description = 'unde';
     $request->hrisGroup->employeeIds = [
         'fugiat',
@@ -272,7 +272,7 @@ try {
     $request->hrisGroup->parentId = 'fugiat';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
     $request->hrisGroup->type = HrisGroupType::Division;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-05-10');
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-10T03:30:41.953Z');
     $request->connectionId = 'cum';
 
     $requestSecurity = new PostHrisConnectionIdGroupSecurity();
@@ -326,7 +326,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutHrisConnectionIdGroupIdRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d', '2022-04-24');
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-24T09:45:54.515Z');
     $request->hrisGroup->description = 'magnam';
     $request->hrisGroup->employeeIds = [
         'illo',
@@ -340,7 +340,7 @@ try {
     $request->hrisGroup->parentId = 'molestias';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
     $request->hrisGroup->type = HrisGroupType::Branch;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-11-03');
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-03T07:45:54.681Z');
     $request->connectionId = 'eos';
     $request->id = '53c8962f-4896-4bf5-9e46-52d3c343d617';
 

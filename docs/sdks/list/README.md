@@ -86,7 +86,7 @@ try {
     $request->order = 'animi';
     $request->query = 'dicta';
     $request->sort = 'vitae';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-05-30');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-30T16:50:43.702Z');
 
     $requestSecurity = new GetMartechConnectionIdListSecurity();
     $requestSecurity->jwt = '';
@@ -192,7 +192,7 @@ try {
     $request->marketingList->id = 'caf1b025-f1d1-4471-8c6f-a2fad0c06c5d';
     $request->marketingList->name = 'Jorge Hackett';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d', '2020-05-25');
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-05-25T06:53:51.738Z');
     $request->connectionId = 'nulla';
     $request->id = '14fc43b7-0bca-488f-a70c-43351c3dd1eb';
 
@@ -250,7 +250,7 @@ try {
     $request->marketingList->id = 'f7f75f4f-23f1-4c0a-986c-3ae7d7b67fee';
     $request->marketingList->name = 'Mrs. Floyd Torphy';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-03-19');
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-19T04:08:33.771Z');
     $request->connectionId = 'exercitationem';
 
     $requestSecurity = new PostMartechConnectionIdListSecurity();
@@ -307,7 +307,7 @@ try {
     $request->marketingList->id = '1dbeceff-7c4b-4156-a927-8275eea76817';
     $request->marketingList->name = 'Mrs. Katie Lang';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-07-02');
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-02T12:03:24.577Z');
     $request->connectionId = 'perspiciatis';
     $request->id = '9b7956c0-b0fa-40bb-a0a4-0e7c4ae64064';
 

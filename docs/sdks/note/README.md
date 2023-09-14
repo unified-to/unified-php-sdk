@@ -88,7 +88,7 @@ try {
     $request->query = 'nisi';
     $request->sort = 'voluptas';
     $request->ticketId = 'fugit';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-07-03');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-03T01:52:41.110Z');
 
     $requestSecurity = new GetTicketingConnectionIdNotesTicketIdSecurity();
     $requestSecurity->jwt = '';
@@ -192,7 +192,7 @@ try {
     $request = new PatchTicketingConnectionIdNotesTicketIdIdRequest();
     $request->ticketingNote = new TicketingNote();
     $request->ticketingNote->agentId = 'repellendus';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d', '2022-11-10');
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-10T17:52:30.412Z');
     $request->ticketingNote->customerId = 'amet';
     $request->ticketingNote->description = 'dolores';
     $request->ticketingNote->id = '9e45837e-8f2a-4d6b-b10e-255fdc480d6e';
@@ -253,7 +253,7 @@ try {
     $request = new PostTicketingConnectionIdNotesTicketIdRequest();
     $request->ticketingNote = new TicketingNote();
     $request->ticketingNote->agentId = 'ea';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-03');
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-03T02:11:43.720Z');
     $request->ticketingNote->customerId = 'sapiente';
     $request->ticketingNote->description = 'nesciunt';
     $request->ticketingNote->id = 'c3f5589b-ea5d-4264-a41e-2ca84822e513';
@@ -313,7 +313,7 @@ try {
     $request = new PutTicketingConnectionIdNotesTicketIdIdRequest();
     $request->ticketingNote = new TicketingNote();
     $request->ticketingNote->agentId = 'excepturi';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d', '2022-07-01');
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-01T00:19:35.015Z');
     $request->ticketingNote->customerId = 'similique';
     $request->ticketingNote->description = 'possimus';
     $request->ticketingNote->id = '37c30990-77c1-40b6-8792-163e67d48860';

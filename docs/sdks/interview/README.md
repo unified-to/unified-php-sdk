@@ -87,7 +87,7 @@ try {
     $request->order = 'veniam';
     $request->query = 'eligendi';
     $request->sort = 'aspernatur';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-01-06');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-06T16:38:23.028Z');
 
     $requestSecurity = new GetAtsConnectionIdInterviewSecurity();
     $requestSecurity->jwt = '';
@@ -192,16 +192,16 @@ try {
     $request->atsInterview = new AtsInterview();
     $request->atsInterview->applicationId = 'voluptatum';
     $request->atsInterview->candidateId = 'cum';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d', '2022-12-03');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d', '2021-02-23');
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-03T03:49:20.737Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-23T04:19:27.614Z');
     $request->atsInterview->externalEventXref = 'numquam';
     $request->atsInterview->id = '1a7a215c-a12a-44ba-9d59-988192cfd0c7';
     $request->atsInterview->jobId = 'iusto';
     $request->atsInterview->location = 'eligendi';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d', '2022-10-16');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-16T08:43:25.281Z');
     $request->atsInterview->status = AtsInterviewStatus::Complete;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-02-14');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-14T23:33:42.485Z');
     $request->atsInterview->userIds = [
         'dignissimos',
     ];
@@ -261,16 +261,16 @@ try {
     $request->atsInterview = new AtsInterview();
     $request->atsInterview->applicationId = 'deleniti';
     $request->atsInterview->candidateId = 'qui';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d', '2022-03-08');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d', '2022-06-19');
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-08T02:43:59.416Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-19T04:54:11.642Z');
     $request->atsInterview->externalEventXref = 'perspiciatis';
     $request->atsInterview->id = 'a36a6b2d-27eb-4707-aa60-c8fe46e6177d';
     $request->atsInterview->jobId = 'quidem';
     $request->atsInterview->location = 'iste';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d', '2020-10-04');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-10-04T15:37:05.208Z');
     $request->atsInterview->status = AtsInterviewStatus::Scheduled;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-06');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-06T09:03:43.073Z');
     $request->atsInterview->userIds = [
         'eaque',
     ];
@@ -329,16 +329,16 @@ try {
     $request->atsInterview = new AtsInterview();
     $request->atsInterview->applicationId = 'voluptatibus';
     $request->atsInterview->candidateId = 'cum';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d', '2022-03-19');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d', '2022-01-02');
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-19T08:59:52.583Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-02T18:57:36.773Z');
     $request->atsInterview->externalEventXref = 'aperiam';
     $request->atsInterview->id = 'ee770e36-097e-4f7c-a06e-61b0d308714c';
     $request->atsInterview->jobId = 'consequuntur';
     $request->atsInterview->location = 'perferendis';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d', '2022-07-25');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-25T17:57:21.741Z');
     $request->atsInterview->status = AtsInterviewStatus::Complete;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-11-29');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-29T14:00:40.022Z');
     $request->atsInterview->userIds = [
         'ea',
     ];

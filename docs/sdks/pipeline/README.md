@@ -86,7 +86,7 @@ try {
     $request->order = 'ad';
     $request->query = 'atque';
     $request->sort = 'illum';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-07-08');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-08T13:44:16.897Z');
 
     $requestSecurity = new GetCrmConnectionIdPipelineSecurity();
     $requestSecurity->jwt = '';
@@ -189,13 +189,13 @@ try {
     $request = new PatchCrmConnectionIdPipelineIdRequest();
     $request->crmPipeline = new CrmPipeline();
     $request->crmPipeline->active = false;
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d', '2022-09-22');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-22T10:27:09.018Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8251.83;
     $request->crmPipeline->id = '8ed87b28-e8af-4abc-986e-241e43b23424';
     $request->crmPipeline->name = 'Mrs. Tanya Stamm';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-16');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-16T13:30:24.336Z');
     $request->connectionId = 'nisi';
     $request->id = '2aa9ae4a-e8ab-44a9-8492-c5e8ba5d4aa4';
 
@@ -250,13 +250,13 @@ try {
     $request = new PostCrmConnectionIdPipelineRequest();
     $request->crmPipeline = new CrmPipeline();
     $request->crmPipeline->active = false;
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-03');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-03T11:55:23.394Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 239.1;
     $request->crmPipeline->id = '8bd380c2-9aa8-4dd7-9bdd-aa30b7b91449';
     $request->crmPipeline->name = 'Elias Homenick';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-19');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-19T08:16:05.031Z');
     $request->connectionId = 'totam';
 
     $requestSecurity = new PostCrmConnectionIdPipelineSecurity();
@@ -310,13 +310,13 @@ try {
     $request = new PutCrmConnectionIdPipelineIdRequest();
     $request->crmPipeline = new CrmPipeline();
     $request->crmPipeline->active = false;
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d', '2022-02-21');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-21T08:34:33.397Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 1110.26;
     $request->crmPipeline->id = '8bb71804-f423-4d54-b935-f377ac5c9b7e';
     $request->crmPipeline->name = 'Lee Reichert';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-03-28');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-28T19:58:27.264Z');
     $request->connectionId = 'minima';
     $request->id = '23105e7c-34ca-4b0e-8b81-2a66148944a8';
 

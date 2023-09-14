@@ -88,7 +88,7 @@ try {
     $request->order = 'culpa';
     $request->query = 'quis';
     $request->sort = 'asperiores';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-08-16');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-16T09:16:26.639Z');
 
     $requestSecurity = new GetCrmConnectionIdDealSecurity();
     $requestSecurity->jwt = '';
@@ -191,8 +191,8 @@ try {
     $request = new PatchCrmConnectionIdDealIdRequest();
     $request->crmDeal = new CrmDeal();
     $request->crmDeal->amount = 655.82;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d', '2022-04-27');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d', '2021-01-05');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-27T22:22:59.359Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-05T02:33:10.229Z');
     $request->crmDeal->currency = 'quasi';
     $request->crmDeal->id = '5920c90d-1b49-401f-abd8-9c8a32639da5';
     $request->crmDeal->lostReason = 'facilis';
@@ -205,7 +205,7 @@ try {
     $request->crmDeal->tags = [
         'dolorum',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-11');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-11T21:23:09.486Z');
     $request->crmDeal->wonReason = 'maiores';
     $request->connectionId = 'ea';
     $request->id = '43664a8f-0af8-4c69-9d73-2d9fbaf9476a';
@@ -261,8 +261,8 @@ try {
     $request = new PostCrmConnectionIdDealRequest();
     $request->crmDeal = new CrmDeal();
     $request->crmDeal->amount = 1829.52;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d', '2021-03-31');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d', '2021-05-09');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-31T02:28:56.167Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-09T10:10:01.467Z');
     $request->crmDeal->currency = 'optio';
     $request->crmDeal->id = 'c50c8a35-12c7-4378-8893-0750a00e966e';
     $request->crmDeal->lostReason = 'eligendi';
@@ -275,7 +275,7 @@ try {
     $request->crmDeal->tags = [
         'nesciunt',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-11-27');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-27T13:13:17.103Z');
     $request->crmDeal->wonReason = 'optio';
     $request->connectionId = 'molestiae';
 
@@ -330,8 +330,8 @@ try {
     $request = new PutCrmConnectionIdDealIdRequest();
     $request->crmDeal = new CrmDeal();
     $request->crmDeal->amount = 5408.26;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d', '2022-03-30');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d', '2022-09-07');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-30T05:40:43.542Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-07T20:11:30.814Z');
     $request->crmDeal->currency = 'dolor';
     $request->crmDeal->id = '98ed3d3a-b7ca-43c5-8a86-49a70cfd5d69';
     $request->crmDeal->lostReason = 'corrupti';
@@ -344,7 +344,7 @@ try {
     $request->crmDeal->tags = [
         'iure',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-02-24');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-24T22:30:32.992Z');
     $request->crmDeal->wonReason = 'et';
     $request->connectionId = 'perspiciatis';
     $request->id = 'ea83d492-ed14-4b8a-ac19-54545e955dcc';

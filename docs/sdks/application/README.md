@@ -88,7 +88,7 @@ try {
     $request->order = 'quos';
     $request->query = 'aliquid';
     $request->sort = 'dolorem';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-10-11');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-11T19:23:49.728Z');
 
     $requestSecurity = new GetAtsConnectionIdApplicationSecurity();
     $requestSecurity->jwt = '';
@@ -191,17 +191,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsConnectionIdApplicationIdRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d', '2021-10-14');
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-14T20:34:13.522Z');
     $request->atsApplication->candidateId = 'necessitatibus';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d', '2021-01-08');
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-08T01:15:41.988Z');
     $request->atsApplication->id = '737ae420-3ce5-4e6a-95d8-a0d446ce2af7';
     $request->atsApplication->jobId = 'harum';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d', '2022-10-14');
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-14T08:09:09.090Z');
     $request->atsApplication->rejectedReason = 'quisquam';
     $request->atsApplication->source = 'tenetur';
     $request->atsApplication->status = AtsApplicationStatus::Screening;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-03-29');
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-29T09:11:09.370Z');
     $request->connectionId = 'numquam';
     $request->id = '53f870b3-26b5-4a73-829c-db1a8422bb67';
 
@@ -256,17 +256,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostAtsConnectionIdApplicationRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d', '2021-04-27');
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-27T11:41:31.258Z');
     $request->atsApplication->candidateId = 'qui';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d', '2022-11-09');
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-09T03:08:00.106Z');
     $request->atsApplication->id = '2715bf0c-bb1e-431b-8b90-f3443a1108e0';
     $request->atsApplication->jobId = 'est';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d', '2020-08-24');
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-24T06:10:53.249Z');
     $request->atsApplication->rejectedReason = 'doloribus';
     $request->atsApplication->source = 'ut';
     $request->atsApplication->status = AtsApplicationStatus::Offered;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-08-21');
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-21T09:49:15.782Z');
     $request->connectionId = 'quae';
 
     $requestSecurity = new PostAtsConnectionIdApplicationSecurity();
@@ -320,17 +320,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutAtsConnectionIdApplicationIdRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d', '2022-01-11');
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-11T11:48:15.910Z');
     $request->atsApplication->candidateId = 'occaecati';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d', '2020-08-21');
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-21T15:23:31.740Z');
     $request->atsApplication->id = 'e953f73e-f7fb-4c7a-bd74-dd39c0f5d2cf';
     $request->atsApplication->jobId = 'doloribus';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d', '2022-03-31');
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-31T22:43:48.703Z');
     $request->atsApplication->rejectedReason = 'ducimus';
     $request->atsApplication->source = 'alias';
     $request->atsApplication->status = AtsApplicationStatus::BackgroundCheck;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-08-19');
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-19T11:11:55.326Z');
     $request->connectionId = 'ea';
     $request->id = '26d43681-3f16-4d9f-9fce-6c556146c3e2';
 

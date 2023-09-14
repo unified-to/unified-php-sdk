@@ -87,7 +87,7 @@ try {
     $request->order = 'aspernatur';
     $request->query = 'perferendis';
     $request->sort = 'ad';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-09-13');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-13T17:41:46.141Z');
 
     $requestSecurity = new GetTicketingConnectionIdAgentSecurity();
     $requestSecurity->jwt = '';
@@ -193,7 +193,7 @@ try {
     $request->order = 'dolorem';
     $request->query = 'culpa';
     $request->sort = 'consequuntur';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2021-01-15');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-15T20:18:47.519Z');
 
     $requestSecurity = new GetUcConnectionIdAgentSecurity();
     $requestSecurity->jwt = '';
@@ -249,7 +249,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchTicketingConnectionIdAgentIdRequest();
     $request->ticketingAgent = new TicketingAgent();
-    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d', '2022-06-30');
+    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-30T02:19:51.375Z');
     $request->ticketingAgent->emails = [
         new TicketingEmail(),
     ];
@@ -259,7 +259,7 @@ try {
     $request->ticketingAgent->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-08');
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-08T10:49:12.847Z');
     $request->connectionId = 'dicta';
     $request->id = '5471b5e6-e13b-499d-888e-1e91e450ad2a';
 
@@ -317,7 +317,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostTicketingConnectionIdAgentRequest();
     $request->ticketingAgent = new TicketingAgent();
-    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d', '2021-04-26');
+    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-26T18:54:54.344Z');
     $request->ticketingAgent->emails = [
         new TicketingEmail(),
     ];
@@ -327,7 +327,7 @@ try {
     $request->ticketingAgent->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-08');
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-08T04:08:32.252Z');
     $request->connectionId = 'magnam';
 
     $requestSecurity = new PostTicketingConnectionIdAgentSecurity();
@@ -384,7 +384,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutTicketingConnectionIdAgentIdRequest();
     $request->ticketingAgent = new TicketingAgent();
-    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d', '2020-07-23');
+    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-07-23T21:23:35.691Z');
     $request->ticketingAgent->emails = [
         new TicketingEmail(),
     ];
@@ -394,7 +394,7 @@ try {
     $request->ticketingAgent->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-09-14');
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-14T03:02:47.808Z');
     $request->connectionId = 'et';
     $request->id = '959890af-a563-4e25-96fe-4c8b711e5b7f';
 

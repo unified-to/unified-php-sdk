@@ -142,7 +142,7 @@ try {
     $request->order = 'facere';
     $request->query = 'provident';
     $request->sort = 'omnis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-08-18');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-18T19:09:00.927Z');
 
     $requestSecurity = new GetHrisConnectionIdEmployeeSecurity();
     $requestSecurity->jwt = '';
@@ -247,7 +247,7 @@ try {
     $request->order = 'maiores';
     $request->query = 'ducimus';
     $request->sort = 'rerum';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d', '2022-10-16');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-16T21:57:10.772Z');
 
     $requestSecurity = new GetHrisConnectionIdGroupSecurity();
     $requestSecurity->jwt = '';
@@ -367,8 +367,8 @@ try {
     $request->hrisEmployee->address->postalCode = '47776';
     $request->hrisEmployee->address->region = 'quaerat';
     $request->hrisEmployee->address->regionCode = 'inventore';
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d', '2020-01-22');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d', '2022-09-29');
+    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-01-22T02:04:50.343Z');
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-29T05:18:32.551Z');
     $request->hrisEmployee->department = 'nemo';
     $request->hrisEmployee->division = 'numquam';
     $request->hrisEmployee->emails = [
@@ -378,7 +378,7 @@ try {
     $request->hrisEmployee->employmentStatus = HrisEmployeeEmploymentStatus::Active;
     $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Consultant;
     $request->hrisEmployee->gender = HrisEmployeeGender::NonBinary;
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d', '2021-05-24');
+    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-24T05:44:39.520Z');
     $request->hrisEmployee->id = 'f116cdd5-444a-4756-a873-c7dd9efaf43d';
     $request->hrisEmployee->location = 'impedit';
     $request->hrisEmployee->managerId = 'autem';
@@ -388,9 +388,9 @@ try {
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d', '2022-10-11');
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-11T09:06:18.810Z');
     $request->hrisEmployee->title = 'Ms.';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-05-24');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-24T14:46:51.528Z');
     $request->connectionId = 'doloremque';
     $request->id = 'df3db022-faa5-465f-b8f6-52ebb9d38383';
 
@@ -445,7 +445,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchHrisConnectionIdGroupIdRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d', '2022-01-04');
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-04T00:51:01.257Z');
     $request->hrisGroup->description = 'molestias';
     $request->hrisGroup->employeeIds = [
         'aperiam',
@@ -459,7 +459,7 @@ try {
     $request->hrisGroup->parentId = 'aut';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
     $request->hrisGroup->type = HrisGroupType::BusinessUnit;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-04-04');
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-04T04:27:54.911Z');
     $request->connectionId = 'libero';
     $request->id = 'b744664e-b1d0-4338-8b0d-1bb17afee74b';
 
@@ -531,8 +531,8 @@ try {
     $request->hrisEmployee->address->postalCode = '48498';
     $request->hrisEmployee->address->region = 'laborum';
     $request->hrisEmployee->address->regionCode = 'reiciendis';
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d', '2022-05-29');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d', '2022-10-08');
+    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-29T11:34:03.754Z');
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-08T18:29:01.032Z');
     $request->hrisEmployee->department = 'autem';
     $request->hrisEmployee->division = 'tenetur';
     $request->hrisEmployee->emails = [
@@ -542,7 +542,7 @@ try {
     $request->hrisEmployee->employmentStatus = HrisEmployeeEmploymentStatus::Inactive;
     $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Consultant;
     $request->hrisEmployee->gender = HrisEmployeeGender::Female;
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d', '2020-07-10');
+    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-07-10T16:46:34.467Z');
     $request->hrisEmployee->id = '162b303e-3023-4b93-a343-16cf55b43135';
     $request->hrisEmployee->location = 'ullam';
     $request->hrisEmployee->managerId = 'consectetur';
@@ -552,9 +552,9 @@ try {
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d', '2022-09-21');
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-21T08:14:58.422Z');
     $request->hrisEmployee->title = 'Dr.';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-05-13');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-13T16:53:13.241Z');
     $request->connectionId = 'illum';
 
     $requestSecurity = new PostHrisConnectionIdEmployeeSecurity();
@@ -608,7 +608,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostHrisConnectionIdGroupRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d', '2020-08-17');
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-17T13:03:55.540Z');
     $request->hrisGroup->description = 'sint';
     $request->hrisGroup->employeeIds = [
         'occaecati',
@@ -622,7 +622,7 @@ try {
     $request->hrisGroup->parentId = 'minus';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
     $request->hrisGroup->type = HrisGroupType::BusinessUnit;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-11-03');
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-03T06:53:33.818Z');
     $request->connectionId = 'iste';
 
     $requestSecurity = new PostHrisConnectionIdGroupSecurity();
@@ -693,8 +693,8 @@ try {
     $request->hrisEmployee->address->postalCode = '13570';
     $request->hrisEmployee->address->region = 'nesciunt';
     $request->hrisEmployee->address->regionCode = 'corrupti';
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d', '2022-11-03');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d', '2022-11-18');
+    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-03T23:52:13.068Z');
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-18T13:26:27.939Z');
     $request->hrisEmployee->department = 'eveniet';
     $request->hrisEmployee->division = 'vitae';
     $request->hrisEmployee->emails = [
@@ -704,7 +704,7 @@ try {
     $request->hrisEmployee->employmentStatus = HrisEmployeeEmploymentStatus::Inactive;
     $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Casual;
     $request->hrisEmployee->gender = HrisEmployeeGender::Intersex;
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d', '2022-04-02');
+    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-02T01:49:42.567Z');
     $request->hrisEmployee->id = '5118c2cc-57fb-4d60-b1a7-8ed29a9d4eea';
     $request->hrisEmployee->location = 'totam';
     $request->hrisEmployee->managerId = 'ullam';
@@ -714,9 +714,9 @@ try {
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d', '2022-01-14');
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-14T22:01:27.378Z');
     $request->hrisEmployee->title = 'Mrs.';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d', '2021-06-15');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-06-15T21:37:38.524Z');
     $request->connectionId = 'quas';
     $request->id = 'be4f278f-d966-47e4-ac51-d2ffaa58dcef';
 
@@ -771,7 +771,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutHrisConnectionIdGroupIdRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d', '2022-10-23');
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-23T07:56:27.936Z');
     $request->hrisGroup->description = 'quaerat';
     $request->hrisGroup->employeeIds = [
         'minus',
@@ -785,7 +785,7 @@ try {
     $request->hrisGroup->parentId = 'alias';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
     $request->hrisGroup->type = HrisGroupType::Branch;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d', '2022-06-08');
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-08T02:36:26.289Z');
     $request->connectionId = 'eveniet';
     $request->id = 'f68e45c8-addf-4ac7-9450-0430c6632b43';
 
