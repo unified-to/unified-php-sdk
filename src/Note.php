@@ -24,17 +24,17 @@ class Note
     /**
      * Remove a note
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdSecurity $security
-     * @return \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdResponse
+     * @param \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest $request
+     * @param \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdSecurity $security
+     * @return \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdResponse
      */
-	public function deleteTicketingConnectionIdNotesTicketIdId(
-        ?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdSecurity $security,
-    ): \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdResponse
+	public function deleteTicketingConnectionIdNoteTicketIdId(
+        ?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest $request,
+        \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdSecurity $security,
+    ): \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/notes/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
@@ -45,14 +45,14 @@ class Note
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteTicketingConnectionIdNotesTicketIdIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $response->deleteTicketingConnectionIdNoteTicketIdIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -62,20 +62,20 @@ class Note
     /**
      * List all notes
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdSecurity $security
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdResponse
+     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdSecurity $security
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdResponse
      */
-	public function getTicketingConnectionIdNotesTicketId(
-        ?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdSecurity $security,
-    ): \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdResponse
+	public function getTicketingConnectionIdNoteTicketId(
+        ?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest $request,
+        \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdSecurity $security,
+    ): \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/notes/{ticket_id}', \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}', \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -84,7 +84,7 @@ class Note
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -102,17 +102,17 @@ class Note
     /**
      * Retrieve a note
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdSecurity $security
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdResponse
+     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdSecurity $security
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdResponse
      */
-	public function getTicketingConnectionIdNotesTicketIdId(
-        ?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdSecurity $security,
-    ): \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdResponse
+	public function getTicketingConnectionIdNoteTicketIdId(
+        ?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest $request,
+        \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdSecurity $security,
+    ): \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/notes/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
@@ -123,7 +123,7 @@ class Note
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -141,17 +141,17 @@ class Note
     /**
      * Update a note
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdSecurity $security
-     * @return \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdSecurity $security
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdResponse
      */
-	public function patchTicketingConnectionIdNotesTicketIdId(
-        ?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdSecurity $security,
-    ): \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdResponse
+	public function patchTicketingConnectionIdNoteTicketIdId(
+        ?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdSecurity $security,
+    ): \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/notes/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");
@@ -166,7 +166,7 @@ class Note
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -184,17 +184,17 @@ class Note
     /**
      * Create a note
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdSecurity $security
-     * @return \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdSecurity $security
+     * @return \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdResponse
      */
-	public function postTicketingConnectionIdNotesTicketId(
-        ?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdSecurity $security,
-    ): \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdResponse
+	public function postTicketingConnectionIdNoteTicketId(
+        ?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdRequest $request,
+        \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdSecurity $security,
+    ): \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/notes/{ticket_id}', \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}', \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");
@@ -209,7 +209,7 @@ class Note
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -227,17 +227,17 @@ class Note
     /**
      * Update a note
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdSecurity $security
-     * @return \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdSecurity $security
+     * @return \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdResponse
      */
-	public function putTicketingConnectionIdNotesTicketIdId(
-        ?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdSecurity $security,
-    ): \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdResponse
+	public function putTicketingConnectionIdNoteTicketIdId(
+        ?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdRequest $request,
+        \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdSecurity $security,
+    ): \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/notes/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");
@@ -252,7 +252,7 @@ class Note
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

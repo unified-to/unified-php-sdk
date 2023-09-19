@@ -1,30 +1,30 @@
-# ticketing
+# Ticketing
 
 ### Available Operations
 
 * [deleteTicketingConnectionIdAgentId](#deleteticketingconnectionidagentid) - Remove a agent
 * [deleteTicketingConnectionIdCustomerId](#deleteticketingconnectionidcustomerid) - Remove a customer
-* [deleteTicketingConnectionIdNotesTicketIdId](#deleteticketingconnectionidnotesticketidid) - Remove a note
+* [deleteTicketingConnectionIdNoteTicketIdId](#deleteticketingconnectionidnoteticketidid) - Remove a note
 * [deleteTicketingConnectionIdTicketId](#deleteticketingconnectionidticketid) - Remove a ticket
 * [getTicketingConnectionIdAgent](#getticketingconnectionidagent) - List all agents
 * [getTicketingConnectionIdAgentId](#getticketingconnectionidagentid) - Retrieve a agent
 * [getTicketingConnectionIdCustomer](#getticketingconnectionidcustomer) - List all customers
 * [getTicketingConnectionIdCustomerId](#getticketingconnectionidcustomerid) - Retrieve a customer
-* [getTicketingConnectionIdNotesTicketId](#getticketingconnectionidnotesticketid) - List all notes
-* [getTicketingConnectionIdNotesTicketIdId](#getticketingconnectionidnotesticketidid) - Retrieve a note
+* [getTicketingConnectionIdNoteTicketId](#getticketingconnectionidnoteticketid) - List all notes
+* [getTicketingConnectionIdNoteTicketIdId](#getticketingconnectionidnoteticketidid) - Retrieve a note
 * [getTicketingConnectionIdTicket](#getticketingconnectionidticket) - List all tickets
 * [getTicketingConnectionIdTicketId](#getticketingconnectionidticketid) - Retrieve a ticket
 * [patchTicketingConnectionIdAgentId](#patchticketingconnectionidagentid) - Update a agent
 * [patchTicketingConnectionIdCustomerId](#patchticketingconnectionidcustomerid) - Update a customer
-* [patchTicketingConnectionIdNotesTicketIdId](#patchticketingconnectionidnotesticketidid) - Update a note
+* [patchTicketingConnectionIdNoteTicketIdId](#patchticketingconnectionidnoteticketidid) - Update a note
 * [patchTicketingConnectionIdTicketId](#patchticketingconnectionidticketid) - Update a ticket
 * [postTicketingConnectionIdAgent](#postticketingconnectionidagent) - Create a agent
 * [postTicketingConnectionIdCustomer](#postticketingconnectionidcustomer) - Create a customer
-* [postTicketingConnectionIdNotesTicketId](#postticketingconnectionidnotesticketid) - Create a note
+* [postTicketingConnectionIdNoteTicketId](#postticketingconnectionidnoteticketid) - Create a note
 * [postTicketingConnectionIdTicket](#postticketingconnectionidticket) - Create a ticket
 * [putTicketingConnectionIdAgentId](#putticketingconnectionidagentid) - Update a agent
 * [putTicketingConnectionIdCustomerId](#putticketingconnectionidcustomerid) - Update a customer
-* [putTicketingConnectionIdNotesTicketIdId](#putticketingconnectionidnotesticketidid) - Update a note
+* [putTicketingConnectionIdNoteTicketIdId](#putticketingconnectionidnoteticketidid) - Update a note
 * [putTicketingConnectionIdTicketId](#putticketingconnectionidticketid) - Update a ticket
 
 ## deleteTicketingConnectionIdAgentId
@@ -127,7 +127,7 @@ try {
 **[?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdResponse](../../models/operations/DeleteTicketingConnectionIdCustomerIdResponse.md)**
 
 
-## deleteTicketingConnectionIdNotesTicketIdId
+## deleteTicketingConnectionIdNoteTicketIdId
 
 Remove a note
 
@@ -140,22 +140,22 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdSecurity;
+use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest;
+use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new DeleteTicketingConnectionIdNotesTicketIdIdRequest();
+    $request = new DeleteTicketingConnectionIdNoteTicketIdIdRequest();
     $request->connectionId = 'sequi';
     $request->id = '1653eeb3-b6e2-441c-b109-983663c66dcb';
     $request->ticketId = 'expedita';
 
-    $requestSecurity = new DeleteTicketingConnectionIdNotesTicketIdIdSecurity();
+    $requestSecurity = new DeleteTicketingConnectionIdNoteTicketIdIdSecurity();
     $requestSecurity->jwt = '';
 
-    $response = $sdk->ticketing->deleteTicketingConnectionIdNotesTicketIdId($request, $requestSecurity);
+    $response = $sdk->ticketing->deleteTicketingConnectionIdNoteTicketIdId($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -167,15 +167,15 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                 | Type                                                                                                                                                                      | Required                                                                                                                                                                  | Description                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdRequest](../../models/operations/DeleteTicketingConnectionIdNotesTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                        | The request object to use for the request.                                                                                                                                |
-| `security`                                                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdSecurity](../../models/operations/DeleteTicketingConnectionIdNotesTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                        | The security requirements to use for the request.                                                                                                                         |
+| Parameter                                                                                                                                                               | Type                                                                                                                                                                    | Required                                                                                                                                                                | Description                                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                              | [\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/DeleteTicketingConnectionIdNoteTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                      | The request object to use for the request.                                                                                                                              |
+| `security`                                                                                                                                                              | [\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdSecurity](../../models/operations/DeleteTicketingConnectionIdNoteTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                      | The security requirements to use for the request.                                                                                                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNotesTicketIdIdResponse](../../models/operations/DeleteTicketingConnectionIdNotesTicketIdIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/DeleteTicketingConnectionIdNoteTicketIdIdResponse.md)**
 
 
 ## deleteTicketingConnectionIdTicketId
@@ -438,7 +438,7 @@ try {
 **[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdResponse](../../models/operations/GetTicketingConnectionIdCustomerIdResponse.md)**
 
 
-## getTicketingConnectionIdNotesTicketId
+## getTicketingConnectionIdNoteTicketId
 
 List all notes
 
@@ -451,14 +451,14 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdRequest;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdSecurity;
+use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest;
+use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetTicketingConnectionIdNotesTicketIdRequest();
+    $request = new GetTicketingConnectionIdNoteTicketIdRequest();
     $request->connectionId = 'voluptate';
     $request->limit = 4885.55;
     $request->offset = 1203.88;
@@ -468,10 +468,10 @@ try {
     $request->ticketId = 'aliquid';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-05T12:29:08.370Z');
 
-    $requestSecurity = new GetTicketingConnectionIdNotesTicketIdSecurity();
+    $requestSecurity = new GetTicketingConnectionIdNoteTicketIdSecurity();
     $requestSecurity->jwt = '';
 
-    $response = $sdk->ticketing->getTicketingConnectionIdNotesTicketId($request, $requestSecurity);
+    $response = $sdk->ticketing->getTicketingConnectionIdNoteTicketId($request, $requestSecurity);
 
     if ($response->ticketingNotes !== null) {
         // handle response
@@ -483,18 +483,18 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdRequest](../../models/operations/GetTicketingConnectionIdNotesTicketIdRequest.md)   | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
-| `security`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdSecurity](../../models/operations/GetTicketingConnectionIdNotesTicketIdSecurity.md) | :heavy_check_mark:                                                                                                                                              | The security requirements to use for the request.                                                                                                               |
+| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest](../../models/operations/GetTicketingConnectionIdNoteTicketIdRequest.md)   | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
+| `security`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdSecurity](../../models/operations/GetTicketingConnectionIdNoteTicketIdSecurity.md) | :heavy_check_mark:                                                                                                                                            | The security requirements to use for the request.                                                                                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdResponse](../../models/operations/GetTicketingConnectionIdNotesTicketIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdResponse](../../models/operations/GetTicketingConnectionIdNoteTicketIdResponse.md)**
 
 
-## getTicketingConnectionIdNotesTicketIdId
+## getTicketingConnectionIdNoteTicketIdId
 
 Retrieve a note
 
@@ -507,22 +507,22 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdRequest;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdSecurity;
+use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest;
+use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetTicketingConnectionIdNotesTicketIdIdRequest();
+    $request = new GetTicketingConnectionIdNoteTicketIdIdRequest();
     $request->connectionId = 'nemo';
     $request->id = 'b7ec7626-649d-484e-b9e4-cfd2276e0b88';
     $request->ticketId = 'repellat';
 
-    $requestSecurity = new GetTicketingConnectionIdNotesTicketIdIdSecurity();
+    $requestSecurity = new GetTicketingConnectionIdNoteTicketIdIdSecurity();
     $requestSecurity->jwt = '';
 
-    $response = $sdk->ticketing->getTicketingConnectionIdNotesTicketIdId($request, $requestSecurity);
+    $response = $sdk->ticketing->getTicketingConnectionIdNoteTicketIdId($request, $requestSecurity);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -534,15 +534,15 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                           | Type                                                                                                                                                                | Required                                                                                                                                                            | Description                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdRequest](../../models/operations/GetTicketingConnectionIdNotesTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                  | The request object to use for the request.                                                                                                                          |
-| `security`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdSecurity](../../models/operations/GetTicketingConnectionIdNotesTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                  | The security requirements to use for the request.                                                                                                                   |
+| Parameter                                                                                                                                                         | Type                                                                                                                                                              | Required                                                                                                                                                          | Description                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/GetTicketingConnectionIdNoteTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
+| `security`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdSecurity](../../models/operations/GetTicketingConnectionIdNoteTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                | The security requirements to use for the request.                                                                                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNotesTicketIdIdResponse](../../models/operations/GetTicketingConnectionIdNotesTicketIdIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/GetTicketingConnectionIdNoteTicketIdIdResponse.md)**
 
 
 ## getTicketingConnectionIdTicket
@@ -791,7 +791,7 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdResponse](../../models/operations/PatchTicketingConnectionIdCustomerIdResponse.md)**
 
 
-## patchTicketingConnectionIdNotesTicketIdId
+## patchTicketingConnectionIdNoteTicketIdId
 
 Update a note
 
@@ -804,16 +804,16 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdRequest;
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
-use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdSecurity;
+use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PatchTicketingConnectionIdNotesTicketIdIdRequest();
+    $request = new PatchTicketingConnectionIdNoteTicketIdIdRequest();
     $request->ticketingNote = new TicketingNote();
     $request->ticketingNote->agentId = 'saepe';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-10T07:53:00.526Z');
@@ -826,10 +826,10 @@ try {
     $request->id = '8cd7f1bc-2cab-4af7-bc2c-cba4bef0df68';
     $request->ticketId = 'earum';
 
-    $requestSecurity = new PatchTicketingConnectionIdNotesTicketIdIdSecurity();
+    $requestSecurity = new PatchTicketingConnectionIdNoteTicketIdIdSecurity();
     $requestSecurity->jwt = '';
 
-    $response = $sdk->ticketing->patchTicketingConnectionIdNotesTicketIdId($request, $requestSecurity);
+    $response = $sdk->ticketing->patchTicketingConnectionIdNoteTicketIdId($request, $requestSecurity);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -841,15 +841,15 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                               | Type                                                                                                                                                                    | Required                                                                                                                                                                | Description                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdRequest](../../models/operations/PatchTicketingConnectionIdNotesTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                      | The request object to use for the request.                                                                                                                              |
-| `security`                                                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdSecurity](../../models/operations/PatchTicketingConnectionIdNotesTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                      | The security requirements to use for the request.                                                                                                                       |
+| Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/PatchTicketingConnectionIdNoteTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
+| `security`                                                                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdSecurity](../../models/operations/PatchTicketingConnectionIdNoteTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                    | The security requirements to use for the request.                                                                                                                     |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNotesTicketIdIdResponse](../../models/operations/PatchTicketingConnectionIdNotesTicketIdIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/PatchTicketingConnectionIdNoteTicketIdIdResponse.md)**
 
 
 ## patchTicketingConnectionIdTicketId
@@ -1059,7 +1059,7 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerResponse](../../models/operations/PostTicketingConnectionIdCustomerResponse.md)**
 
 
-## postTicketingConnectionIdNotesTicketId
+## postTicketingConnectionIdNoteTicketId
 
 Create a note
 
@@ -1072,16 +1072,16 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdRequest;
+use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdRequest;
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
-use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdSecurity;
+use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostTicketingConnectionIdNotesTicketIdRequest();
+    $request = new PostTicketingConnectionIdNoteTicketIdRequest();
     $request->ticketingNote = new TicketingNote();
     $request->ticketingNote->agentId = 'dolore';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-15T18:51:24.211Z');
@@ -1093,10 +1093,10 @@ try {
     $request->connectionId = 'tempore';
     $request->ticketId = 'ut';
 
-    $requestSecurity = new PostTicketingConnectionIdNotesTicketIdSecurity();
+    $requestSecurity = new PostTicketingConnectionIdNoteTicketIdSecurity();
     $requestSecurity->jwt = '';
 
-    $response = $sdk->ticketing->postTicketingConnectionIdNotesTicketId($request, $requestSecurity);
+    $response = $sdk->ticketing->postTicketingConnectionIdNoteTicketId($request, $requestSecurity);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -1108,15 +1108,15 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                         | Type                                                                                                                                                              | Required                                                                                                                                                          | Description                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdRequest](../../models/operations/PostTicketingConnectionIdNotesTicketIdRequest.md)   | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
-| `security`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdSecurity](../../models/operations/PostTicketingConnectionIdNotesTicketIdSecurity.md) | :heavy_check_mark:                                                                                                                                                | The security requirements to use for the request.                                                                                                                 |
+| Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdRequest](../../models/operations/PostTicketingConnectionIdNoteTicketIdRequest.md)   | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
+| `security`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdSecurity](../../models/operations/PostTicketingConnectionIdNoteTicketIdSecurity.md) | :heavy_check_mark:                                                                                                                                              | The security requirements to use for the request.                                                                                                               |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNotesTicketIdResponse](../../models/operations/PostTicketingConnectionIdNotesTicketIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdResponse](../../models/operations/PostTicketingConnectionIdNoteTicketIdResponse.md)**
 
 
 ## postTicketingConnectionIdTicket
@@ -1327,7 +1327,7 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdResponse](../../models/operations/PutTicketingConnectionIdCustomerIdResponse.md)**
 
 
-## putTicketingConnectionIdNotesTicketIdId
+## putTicketingConnectionIdNoteTicketIdId
 
 Update a note
 
@@ -1340,16 +1340,16 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdRequest;
+use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdRequest;
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
-use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdSecurity;
+use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutTicketingConnectionIdNotesTicketIdIdRequest();
+    $request = new PutTicketingConnectionIdNoteTicketIdIdRequest();
     $request->ticketingNote = new TicketingNote();
     $request->ticketingNote->agentId = 'dicta';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-03-23T23:48:13.561Z');
@@ -1362,10 +1362,10 @@ try {
     $request->id = 'ffc87450-05e9-4d3d-934e-036f5c388664';
     $request->ticketId = 'tenetur';
 
-    $requestSecurity = new PutTicketingConnectionIdNotesTicketIdIdSecurity();
+    $requestSecurity = new PutTicketingConnectionIdNoteTicketIdIdSecurity();
     $requestSecurity->jwt = '';
 
-    $response = $sdk->ticketing->putTicketingConnectionIdNotesTicketIdId($request, $requestSecurity);
+    $response = $sdk->ticketing->putTicketingConnectionIdNoteTicketIdId($request, $requestSecurity);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -1377,15 +1377,15 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                           | Type                                                                                                                                                                | Required                                                                                                                                                            | Description                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdRequest](../../models/operations/PutTicketingConnectionIdNotesTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                  | The request object to use for the request.                                                                                                                          |
-| `security`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdSecurity](../../models/operations/PutTicketingConnectionIdNotesTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                  | The security requirements to use for the request.                                                                                                                   |
+| Parameter                                                                                                                                                         | Type                                                                                                                                                              | Required                                                                                                                                                          | Description                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/PutTicketingConnectionIdNoteTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
+| `security`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdSecurity](../../models/operations/PutTicketingConnectionIdNoteTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                | The security requirements to use for the request.                                                                                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNotesTicketIdIdResponse](../../models/operations/PutTicketingConnectionIdNotesTicketIdIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/PutTicketingConnectionIdNoteTicketIdIdResponse.md)**
 
 
 ## putTicketingConnectionIdTicketId
