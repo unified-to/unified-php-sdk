@@ -25,12 +25,10 @@ class Person
      * Retrieve enrichment information for a person
      * 
      * @param \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonResponse
      */
 	public function getEnrichConnectionIdPerson(
         ?\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonRequest $request,
-        \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -41,8 +39,7 @@ class Person
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

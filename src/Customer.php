@@ -25,12 +25,10 @@ class Customer
      * Remove a customer
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdResponse
      */
 	public function deleteTicketingConnectionIdCustomerId(
         ?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Customer
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Customer
      * List all customers
      * 
      * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerResponse
      */
 	public function getTicketingConnectionIdCustomer(
         ?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerRequest $request,
-        \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Customer
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Customer
      * Retrieve a customer
      * 
      * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdResponse
      */
 	public function getTicketingConnectionIdCustomerId(
         ?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Customer
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class Customer
      * Update a customer
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdResponse
      */
 	public function patchTicketingConnectionIdCustomerId(
         ?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class Customer
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class Customer
      * Create a customer
      * 
      * @param \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerResponse
      */
 	public function postTicketingConnectionIdCustomer(
         ?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerRequest $request,
-        \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class Customer
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class Customer
      * Update a customer
      * 
      * @param \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdResponse
      */
 	public function putTicketingConnectionIdCustomerId(
         ?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Customer
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

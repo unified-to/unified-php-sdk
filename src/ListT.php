@@ -25,12 +25,10 @@ class ListT
      * Remove a list
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdResponse
      */
 	public function deleteMartechConnectionIdListId(
         ?\Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class ListT
      * List all lists
      * 
      * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListResponse
      */
 	public function getMartechConnectionIdList(
         ?\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListRequest $request,
-        \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class ListT
      * Retrieve a list
      * 
      * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdResponse
      */
 	public function getMartechConnectionIdListId(
         ?\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class ListT
      * Update a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdResponse
      */
 	public function patchMartechConnectionIdListId(
         ?\Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class ListT
      * Create a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListResponse
      */
 	public function postMartechConnectionIdList(
         ?\Unified\Unified_to\Models\Operations\PostMartechConnectionIdListRequest $request,
-        \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class ListT
      * Update a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdResponse
      */
 	public function putMartechConnectionIdListId(
         ?\Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -25,12 +25,10 @@ class Team
      * Remove a team
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdResponse
      */
 	public function deleteCrmConnectionIdTeamId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Team
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Team
      * List all teams
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamResponse
      */
 	public function getCrmConnectionIdTeam(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Team
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Team
      * Retrieve a team
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdResponse
      */
 	public function getCrmConnectionIdTeamId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Team
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class Team
      * Update a team
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdResponse
      */
 	public function patchCrmConnectionIdTeamId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class Team
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class Team
      * Create a team
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamResponse
      */
 	public function postCrmConnectionIdTeam(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class Team
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class Team
      * Update a team
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdResponse
      */
 	public function putCrmConnectionIdTeamId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Team
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

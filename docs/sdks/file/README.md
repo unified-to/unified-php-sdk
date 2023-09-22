@@ -22,21 +22,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteCrmConnectionIdFileIdRequest();
-    $request->connectionId = 'ratione';
-    $request->id = 'a56d6918-0ff6-40eb-9a66-58e69a4b843d';
+    $request->connectionId = 'occaecati';
+    $request->id = 'a6658e69-a4b8-443d-b82d-bec75c68c606';
 
-    $requestSecurity = new DeleteCrmConnectionIdFileIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->file->deleteCrmConnectionIdFileId($request, $requestSecurity);
+    $response = $sdk->file->deleteCrmConnectionIdFileId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -48,10 +45,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest](../../models/operations/DeleteCrmConnectionIdFileIdRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdSecurity](../../models/operations/DeleteCrmConnectionIdFileIdSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest](../../models/operations/DeleteCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -72,29 +68,26 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetCrmConnectionIdFileRequest();
-    $request->companyId = 'adipisci';
-    $request->connectionId = 'totam';
-    $request->contactId = 'explicabo';
-    $request->dealId = 'quibusdam';
-    $request->limit = 6893.09;
-    $request->offset = 9320.12;
-    $request->order = 'porro';
-    $request->query = 'ducimus';
-    $request->sort = 'ad';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-09T19:41:02.147Z');
+    $request->companyId = 'veniam';
+    $request->connectionId = 'cupiditate';
+    $request->contactId = 'aliquam';
+    $request->dealId = 'suscipit';
+    $request->limit = 5434.52;
+    $request->offset = 7950.8;
+    $request->order = 'debitis';
+    $request->query = 'neque';
+    $request->sort = 'doloremque';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-27T09:19:22.404Z');
 
-    $requestSecurity = new GetCrmConnectionIdFileSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->file->getCrmConnectionIdFile($request, $requestSecurity);
+    $response = $sdk->file->getCrmConnectionIdFile($request);
 
     if ($response->crmFiles !== null) {
         // handle response
@@ -106,10 +99,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest](../../models/operations/GetCrmConnectionIdFileRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileSecurity](../../models/operations/GetCrmConnectionIdFileSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest](../../models/operations/GetCrmConnectionIdFileRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
@@ -130,21 +122,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetCrmConnectionIdFileIdRequest();
-    $request->connectionId = 'corrupti';
-    $request->id = 'c6065946-8ce3-404d-8849-bf8214c337f9';
+    $request->connectionId = 'deleniti';
+    $request->id = '849bf821-4c33-47f9-abb0-c69e372db134';
 
-    $requestSecurity = new GetCrmConnectionIdFileIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->file->getCrmConnectionIdFileId($request, $requestSecurity);
+    $response = $sdk->file->getCrmConnectionIdFileId($request);
 
     if ($response->crmFile !== null) {
         // handle response
@@ -156,10 +145,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest](../../models/operations/GetCrmConnectionIdFileIdRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdSecurity](../../models/operations/GetCrmConnectionIdFileIdSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest](../../models/operations/GetCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
@@ -180,10 +168,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmFile;
 use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -192,28 +180,25 @@ try {
     $request = new PatchCrmConnectionIdFileIdRequest();
     $request->crmFile = new CrmFile();
     $request->crmFile->active = false;
-    $request->crmFile->activityId = 'iure';
-    $request->crmFile->companyId = 'libero';
-    $request->crmFile->contactId = 'cum';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-20T06:35:22.978Z');
-    $request->crmFile->dealId = 'vel';
-    $request->crmFile->description = 'omnis';
-    $request->crmFile->fileName = 'recusandae';
-    $request->crmFile->fileSize = 2406.19;
-    $request->crmFile->fileType = 'quam';
-    $request->crmFile->fileUrl = 'fugit';
-    $request->crmFile->id = 'db1344ba-9f78-4a5c-8ed7-aab62e97261f';
-    $request->crmFile->leadId = 'cum';
+    $request->crmFile->activityId = 'incidunt';
+    $request->crmFile->companyId = 'tempore';
+    $request->crmFile->contactId = 'deserunt';
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-11T11:20:45.776Z');
+    $request->crmFile->dealId = 'reprehenderit';
+    $request->crmFile->description = 'rem';
+    $request->crmFile->fileName = 'est';
+    $request->crmFile->fileSize = 3405.4;
+    $request->crmFile->fileType = 'impedit';
+    $request->crmFile->fileUrl = 'accusantium';
+    $request->crmFile->id = 'ed7aab62-e972-461f-b0c5-8d27b51996b5';
+    $request->crmFile->leadId = 'expedita';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-14T09:21:38.792Z');
-    $request->crmFile->userId = 'veniam';
-    $request->connectionId = 'corrupti';
-    $request->id = 'd27b5199-6b5b-44b5-8eef-712b7a7ab034';
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-16T05:13:37.183Z');
+    $request->crmFile->userId = 'quaerat';
+    $request->connectionId = 'accusantium';
+    $request->id = 'eef712b7-a7ab-4034-8b17-10688deebef8';
 
-    $requestSecurity = new PatchCrmConnectionIdFileIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->file->patchCrmConnectionIdFileId($request, $requestSecurity);
+    $response = $sdk->file->patchCrmConnectionIdFileId($request);
 
     if ($response->crmFile !== null) {
         // handle response
@@ -225,10 +210,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest](../../models/operations/PatchCrmConnectionIdFileIdRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdSecurity](../../models/operations/PatchCrmConnectionIdFileIdSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest](../../models/operations/PatchCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -249,10 +233,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest;
 use \Unified\Unified_to\Models\Shared\CrmFile;
 use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
-use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -261,27 +245,24 @@ try {
     $request = new PostCrmConnectionIdFileRequest();
     $request->crmFile = new CrmFile();
     $request->crmFile->active = false;
-    $request->crmFile->activityId = 'modi';
-    $request->crmFile->companyId = 'soluta';
-    $request->crmFile->contactId = 'inventore';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-20T13:22:34.695Z');
-    $request->crmFile->dealId = 'sit';
-    $request->crmFile->description = 'autem';
-    $request->crmFile->fileName = 'rem';
-    $request->crmFile->fileSize = 5375.18;
-    $request->crmFile->fileType = 'illum';
-    $request->crmFile->fileUrl = 'necessitatibus';
-    $request->crmFile->id = 'ebef897f-3dd0-4ccd-b3f1-1b3e4e080aa1';
-    $request->crmFile->leadId = 'ipsa';
+    $request->crmFile->activityId = 'perspiciatis';
+    $request->crmFile->companyId = 'quam';
+    $request->crmFile->contactId = 'earum';
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-22T22:34:49.776Z');
+    $request->crmFile->dealId = 'pariatur';
+    $request->crmFile->description = 'voluptatem';
+    $request->crmFile->fileName = 'quod';
+    $request->crmFile->fileSize = 7961.94;
+    $request->crmFile->fileType = 'pariatur';
+    $request->crmFile->fileUrl = 'dolor';
+    $request->crmFile->id = '3f11b3e4-e080-4aa1-8418-6ec759e02f37';
+    $request->crmFile->leadId = 'doloremque';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-25T00:50:44.199Z');
-    $request->crmFile->userId = 'deleniti';
-    $request->connectionId = 'eum';
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-12T17:09:26.142Z');
+    $request->crmFile->userId = 'quis';
+    $request->connectionId = 'cumque';
 
-    $requestSecurity = new PostCrmConnectionIdFileSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->file->postCrmConnectionIdFile($request, $requestSecurity);
+    $response = $sdk->file->postCrmConnectionIdFile($request);
 
     if ($response->crmFile !== null) {
         // handle response
@@ -293,10 +274,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest](../../models/operations/PostCrmConnectionIdFileRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileSecurity](../../models/operations/PostCrmConnectionIdFileSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest](../../models/operations/PostCrmConnectionIdFileRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
@@ -317,10 +297,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmFile;
 use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -329,28 +309,25 @@ try {
     $request = new PutCrmConnectionIdFileIdRequest();
     $request->crmFile = new CrmFile();
     $request->crmFile->active = false;
-    $request->crmFile->activityId = 'accusamus';
-    $request->crmFile->companyId = 'optio';
-    $request->crmFile->contactId = 'odio';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-29T15:52:32.469Z');
-    $request->crmFile->dealId = 'officiis';
-    $request->crmFile->description = 'ipsa';
-    $request->crmFile->fileName = 'eos';
-    $request->crmFile->fileSize = 9646.54;
-    $request->crmFile->fileType = 'dolor';
-    $request->crmFile->fileUrl = 'dignissimos';
-    $request->crmFile->id = '02c5c8e2-d30e-4ad3-904f-a44707bf375b';
-    $request->crmFile->leadId = 'ut';
+    $request->crmFile->activityId = 'laudantium';
+    $request->crmFile->companyId = 'recusandae';
+    $request->crmFile->contactId = 'odit';
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-30T16:07:16.405Z');
+    $request->crmFile->dealId = 'consequatur';
+    $request->crmFile->description = 'voluptates';
+    $request->crmFile->fileName = 'culpa';
+    $request->crmFile->fileSize = 8725.53;
+    $request->crmFile->fileType = 'dolorem';
+    $request->crmFile->fileUrl = 'sunt';
+    $request->crmFile->id = '04fa4470-7bf3-475b-8428-2821fdb2f69e';
+    $request->crmFile->leadId = 'veniam';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-06T09:14:44.032Z');
-    $request->crmFile->userId = 'quas';
-    $request->connectionId = 'aspernatur';
-    $request->id = '821fdb2f-69e5-4926-bc71-cc8d3cd4258d';
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-03T08:00:04.759Z');
+    $request->crmFile->userId = 'laboriosam';
+    $request->connectionId = 'iusto';
+    $request->id = 'c71cc8d3-cd42-458d-8358-a82c808fe275';
 
-    $requestSecurity = new PutCrmConnectionIdFileIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->file->putCrmConnectionIdFileId($request, $requestSecurity);
+    $response = $sdk->file->putCrmConnectionIdFileId($request);
 
     if ($response->crmFile !== null) {
         // handle response
@@ -362,10 +339,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest](../../models/operations/PutCrmConnectionIdFileIdRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdSecurity](../../models/operations/PutCrmConnectionIdFileIdSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest](../../models/operations/PutCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response

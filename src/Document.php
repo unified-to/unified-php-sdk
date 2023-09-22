@@ -25,12 +25,10 @@ class Document
      * Remove a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdResponse
      */
 	public function deleteAtsConnectionIdScorecardId(
         ?\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Document
      * List all scorecards
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardResponse
      */
 	public function getAtsConnectionIdScorecard(
         ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Document
      * Retrieve a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdResponse
      */
 	public function getAtsConnectionIdScorecardId(
         ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class Document
      * Update a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdResponse
      */
 	public function patchAtsConnectionIdScorecardId(
         ?\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class Document
      * Create a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardResponse
      */
 	public function postAtsConnectionIdScorecard(
         ?\Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class Document
      * Update a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdResponse
      */
 	public function putAtsConnectionIdScorecardId(
         ?\Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

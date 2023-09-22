@@ -18,30 +18,27 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedApicallRequest();
-    $request->connectionId = 'quibusdam';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-04T19:17:08.641Z');
-    $request->env = 'pariatur';
+    $request->connectionId = 'amet';
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-27T19:22:24.458Z');
+    $request->env = 'corporis';
     $request->error = false;
-    $request->externalXref = 'accusantium';
-    $request->integrationType = 'consequuntur';
-    $request->limit = 5083.15;
-    $request->offset = 6155.6;
-    $request->order = 'magni';
-    $request->sort = 'sunt';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-16T10:20:37.479Z');
+    $request->externalXref = 'hic';
+    $request->integrationType = 'libero';
+    $request->limit = 7499.99;
+    $request->offset = 1716.29;
+    $request->order = 'quis';
+    $request->sort = 'totam';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-12T03:59:56.327Z');
 
-    $requestSecurity = new GetUnifiedApicallSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->apicall->getUnifiedApicall($request, $requestSecurity);
+    $response = $sdk->apicall->getUnifiedApicall($request);
 
     if ($response->apiCalls !== null) {
         // handle response
@@ -53,10 +50,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest](../../models/operations/GetUnifiedApicallRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity](../../models/operations/GetUnifiedApicallSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest](../../models/operations/GetUnifiedApicallRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -77,20 +73,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedApicallIdRequest();
-    $request->id = 'dc692601-fb57-46b0-95f0-d30c5fbb2587';
+    $request->id = '53202c73-d5fe-49b9-8c28-909b3fe49a8d';
 
-    $requestSecurity = new GetUnifiedApicallIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->apicall->getUnifiedApicallId($request, $requestSecurity);
+    $response = $sdk->apicall->getUnifiedApicallId($request);
 
     if ($response->apiCall !== null) {
         // handle response
@@ -102,10 +95,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdSecurity](../../models/operations/GetUnifiedApicallIdSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response

@@ -18,22 +18,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyRequest;
-use \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanySecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetEnrichConnectionIdCompanyRequest();
-    $request->connectionId = 'eum';
-    $request->domain = 'doloremque';
-    $request->name = 'Dr. Audrey Runolfsdottir';
+    $request->connectionId = 'alias';
+    $request->domain = 'fuga';
+    $request->name = 'Lola Leuschke';
 
-    $requestSecurity = new GetEnrichConnectionIdCompanySecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->enrich->getEnrichConnectionIdCompany($request, $requestSecurity);
+    $response = $sdk->enrich->getEnrichConnectionIdCompany($request);
 
     if ($response->enrichCompany !== null) {
         // handle response
@@ -45,10 +42,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyRequest](../../models/operations/GetEnrichConnectionIdCompanyRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanySecurity](../../models/operations/GetEnrichConnectionIdCompanySecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyRequest](../../models/operations/GetEnrichConnectionIdCompanyRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
@@ -69,24 +65,21 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonRequest;
-use \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetEnrichConnectionIdPersonRequest();
-    $request->connectionId = 'culpa';
-    $request->email = 'Verner73@yahoo.com';
-    $request->linkedinUrl = 'molestias';
-    $request->name = 'Candace Braun';
-    $request->twitter = 'eligendi';
+    $request->connectionId = 'veniam';
+    $request->email = 'Shanny35@hotmail.com';
+    $request->linkedinUrl = 'incidunt';
+    $request->name = 'Jessie Fisher';
+    $request->twitter = 'dolore';
 
-    $requestSecurity = new GetEnrichConnectionIdPersonSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->enrich->getEnrichConnectionIdPerson($request, $requestSecurity);
+    $response = $sdk->enrich->getEnrichConnectionIdPerson($request);
 
     if ($response->enrichPerson !== null) {
         // handle response
@@ -98,10 +91,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonRequest](../../models/operations/GetEnrichConnectionIdPersonRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonSecurity](../../models/operations/GetEnrichConnectionIdPersonSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonRequest](../../models/operations/GetEnrichConnectionIdPersonRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response

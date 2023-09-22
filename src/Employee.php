@@ -25,12 +25,10 @@ class Employee
      * Remove a Employee
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdResponse
      */
 	public function deleteHrisConnectionIdEmployeeId(
         ?\Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Employee
      * List all Employees
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeResponse
      */
 	public function getHrisConnectionIdEmployee(
         ?\Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest $request,
-        \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Employee
      * Retrieve a Employee
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdResponse
      */
 	public function getHrisConnectionIdEmployeeId(
         ?\Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class Employee
      * Update a Employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdResponse
      */
 	public function patchHrisConnectionIdEmployeeId(
         ?\Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class Employee
      * Create a Employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeResponse
      */
 	public function postHrisConnectionIdEmployee(
         ?\Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeRequest $request,
-        \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class Employee
      * Update a Employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdResponse
      */
 	public function putHrisConnectionIdEmployeeId(
         ?\Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

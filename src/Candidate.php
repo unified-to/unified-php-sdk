@@ -25,12 +25,10 @@ class Candidate
      * Remove a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdResponse
      */
 	public function deleteAtsConnectionIdCandidateId(
         ?\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Candidate
      * List all candidates
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateResponse
      */
 	public function getAtsConnectionIdCandidate(
         ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Candidate
      * Retrieve a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdResponse
      */
 	public function getAtsConnectionIdCandidateId(
         ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class Candidate
      * Update a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdResponse
      */
 	public function patchAtsConnectionIdCandidateId(
         ?\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class Candidate
      * Create a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateResponse
      */
 	public function postAtsConnectionIdCandidate(
         ?\Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class Candidate
      * Update a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdResponse
      */
 	public function putAtsConnectionIdCandidateId(
         ?\Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

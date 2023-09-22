@@ -18,6 +18,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
 
@@ -26,19 +27,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'consectetur';
-    $request->externalXref = 'eligendi';
-    $request->failureRedirect = 'dignissimos';
-    $request->integrationType = 'consectetur';
-    $request->lang = 'soluta';
+    $request->env = 'non';
+    $request->externalXref = 'ab';
+    $request->failureRedirect = 'illo';
+    $request->integrationType = 'hic';
+    $request->lang = 'deserunt';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::TicketingAgentWrite,
+        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::AtsJobWrite,
     ];
-    $request->state = 'temporibus';
-    $request->subdomain = 'officia';
-    $request->successRedirect = 'amet';
-    $request->workspaceId = 'tenetur';
+    $request->state = 'non';
+    $request->subdomain = 'distinctio';
+    $request->successRedirect = 'in';
+    $request->workspaceId = 'exercitationem';
 
     $response = $sdk->auth->getUnifiedIntegrationAuthWorkspaceIdIntegrationType($request);
 
@@ -75,6 +76,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest;
 
 $sdk = UnifiedTo::builder()
@@ -82,13 +84,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'aspernatur';
-    $request->failureRedirect = 'quo';
-    $request->integrationType = 'itaque';
+    $request->env = 'labore';
+    $request->failureRedirect = 'numquam';
+    $request->integrationType = 'repudiandae';
     $request->redirect = false;
-    $request->state = 'illum';
-    $request->successRedirect = 'laborum';
-    $request->workspaceId = 'dignissimos';
+    $request->state = 'modi';
+    $request->successRedirect = 'in';
+    $request->workspaceId = 'explicabo';
 
     $response = $sdk->auth->getUnifiedIntegrationLoginWorkspaceIdIntegrationType($request);
 

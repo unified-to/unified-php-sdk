@@ -21,21 +21,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathRequest;
-use \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeletePassthroughConnectionIdPathRequest();
-    $request->connectionId = 'velit';
-    $request->path = 'doloribus';
+    $request->connectionId = 'officia';
+    $request->path = 'veniam';
 
-    $requestSecurity = new DeletePassthroughConnectionIdPathSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->passthrough->deletePassthroughConnectionIdPath($request, $requestSecurity);
+    $response = $sdk->passthrough->deletePassthroughConnectionIdPath($request);
 
     if ($response->undefined !== null) {
         // handle response
@@ -47,10 +44,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathRequest](../../models/operations/DeletePassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
-| `security`                                                                                                                                              | [\Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathSecurity](../../models/operations/DeletePassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                      | The security requirements to use for the request.                                                                                                       |
+| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathRequest](../../models/operations/DeletePassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
 
 
 ### Response
@@ -71,21 +67,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathRequest;
-use \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetPassthroughConnectionIdPathRequest();
-    $request->connectionId = 'nulla';
-    $request->path = 'ex';
+    $request->connectionId = 'cum';
+    $request->path = 'voluptatem';
 
-    $requestSecurity = new GetPassthroughConnectionIdPathSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->passthrough->getPassthroughConnectionIdPath($request, $requestSecurity);
+    $response = $sdk->passthrough->getPassthroughConnectionIdPath($request);
 
     if ($response->undefined !== null) {
         // handle response
@@ -97,10 +90,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathRequest](../../models/operations/GetPassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-| `security`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathSecurity](../../models/operations/GetPassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                | The security requirements to use for the request.                                                                                                 |
+| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathRequest](../../models/operations/GetPassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
 
 
 ### Response
@@ -121,23 +113,20 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathRequest;
 use \Unified\Unified_to\Models\Shared\Undefined;
-use \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new PatchPassthroughConnectionIdPathRequest();
-    $request->connectionId = 'cumque';
-    $request->path = 'magni';
+    $request->connectionId = 'sint';
+    $request->path = 'consequuntur';
     $request->undefined = new Undefined();
 
-    $requestSecurity = new PatchPassthroughConnectionIdPathSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->passthrough->patchPassthroughConnectionIdPath($request, $requestSecurity);
+    $response = $sdk->passthrough->patchPassthroughConnectionIdPath($request);
 
     if ($response->undefined !== null) {
         // handle response
@@ -149,10 +138,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathRequest](../../models/operations/PatchPassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
-| `security`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathSecurity](../../models/operations/PatchPassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                    | The security requirements to use for the request.                                                                                                     |
+| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathRequest](../../models/operations/PatchPassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
 
 
 ### Response
@@ -173,23 +161,20 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathRequest;
 use \Unified\Unified_to\Models\Shared\Undefined;
-use \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new PostPassthroughConnectionIdPathRequest();
-    $request->connectionId = 'animi';
-    $request->path = 'sunt';
+    $request->connectionId = 'magni';
+    $request->path = 'iure';
     $request->undefined = new Undefined();
 
-    $requestSecurity = new PostPassthroughConnectionIdPathSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->passthrough->postPassthroughConnectionIdPath($request, $requestSecurity);
+    $response = $sdk->passthrough->postPassthroughConnectionIdPath($request);
 
     if ($response->undefined !== null) {
         // handle response
@@ -201,10 +186,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathRequest](../../models/operations/PostPassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-| `security`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathSecurity](../../models/operations/PostPassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                  | The security requirements to use for the request.                                                                                                   |
+| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathRequest](../../models/operations/PostPassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
@@ -225,23 +209,20 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathRequest;
 use \Unified\Unified_to\Models\Shared\Undefined;
-use \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new PutPassthroughConnectionIdPathRequest();
-    $request->connectionId = 'voluptatem';
-    $request->path = 'saepe';
+    $request->connectionId = 'doloribus';
+    $request->path = 'quod';
     $request->undefined = new Undefined();
 
-    $requestSecurity = new PutPassthroughConnectionIdPathSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->passthrough->putPassthroughConnectionIdPath($request, $requestSecurity);
+    $response = $sdk->passthrough->putPassthroughConnectionIdPath($request);
 
     if ($response->undefined !== null) {
         // handle response
@@ -253,10 +234,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathRequest](../../models/operations/PutPassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-| `security`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathSecurity](../../models/operations/PutPassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                | The security requirements to use for the request.                                                                                                 |
+| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathRequest](../../models/operations/PutPassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
 
 
 ### Response

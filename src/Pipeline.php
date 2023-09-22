@@ -25,12 +25,10 @@ class Pipeline
      * Remove a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdResponse
      */
 	public function deleteCrmConnectionIdPipelineId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Pipeline
      * List all pipelines
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineResponse
      */
 	public function getCrmConnectionIdPipeline(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Pipeline
      * Retrieve a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdResponse
      */
 	public function getCrmConnectionIdPipelineId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class Pipeline
      * Update a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdResponse
      */
 	public function patchCrmConnectionIdPipelineId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class Pipeline
      * Create a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineResponse
      */
 	public function postCrmConnectionIdPipeline(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class Pipeline
      * Update a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdResponse
      */
 	public function putCrmConnectionIdPipelineId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

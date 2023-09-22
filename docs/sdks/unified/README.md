@@ -37,20 +37,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteUnifiedConnectionIdRequest();
-    $request->id = '645de986-7551-4a9c-8e61-ec2c79a39ae5';
+    $request->id = '1ec2c79a-39ae-45a4-95a6-5b4d5562d9b7';
 
-    $requestSecurity = new DeleteUnifiedConnectionIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->deleteUnifiedConnectionId($request, $requestSecurity);
+    $response = $sdk->unified->deleteUnifiedConnectionId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -62,10 +59,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdRequest](../../models/operations/DeleteUnifiedConnectionIdRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdSecurity](../../models/operations/DeleteUnifiedConnectionIdSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdRequest](../../models/operations/DeleteUnifiedConnectionIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -86,16 +82,13 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\DeleteUnifiedUserSecurity;
+use \Unified\Unified_to\Models\Shared\Security;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $requestSecurity = new DeleteUnifiedUserSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->deleteUnifiedUser($requestSecurity);
+    $response = $sdk->unified->deleteUnifiedUser();
 
     if ($response->statusCode === 200) {
         // handle response
@@ -104,12 +97,6 @@ try {
     // handle exception
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\DeleteUnifiedUserSecurity](../../models/operations/DeleteUnifiedUserSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response
@@ -130,20 +117,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteUnifiedWebhookIdRequest();
-    $request->id = 'a4d5a65b-4d55-462d-9b7d-9e2d6fcf5576';
+    $request->id = 'd9e2d6fc-f557-4629-9b87-5c3a890282a5';
 
-    $requestSecurity = new DeleteUnifiedWebhookIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->deleteUnifiedWebhookId($request, $requestSecurity);
+    $response = $sdk->unified->deleteUnifiedWebhookId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -155,10 +139,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest](../../models/operations/DeleteUnifiedWebhookIdRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdSecurity](../../models/operations/DeleteUnifiedWebhookIdSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest](../../models/operations/DeleteUnifiedWebhookIdRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
@@ -179,30 +162,27 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedApicallRequest();
-    $request->connectionId = 'dolores';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-12T07:50:32.201Z');
-    $request->env = 'harum';
+    $request->connectionId = 'quasi';
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-05T08:07:52.157Z');
+    $request->env = 'illo';
     $request->error = false;
-    $request->externalXref = 'corrupti';
-    $request->integrationType = 'quam';
-    $request->limit = 3233.18;
-    $request->offset = 7877.69;
-    $request->order = 'sequi';
-    $request->sort = 'culpa';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-23T00:21:09.182Z');
+    $request->externalXref = 'optio';
+    $request->integrationType = 'sapiente';
+    $request->limit = 4354.55;
+    $request->offset = 4771.07;
+    $request->order = 'iste';
+    $request->sort = 'iure';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-17T15:59:49.531Z');
 
-    $requestSecurity = new GetUnifiedApicallSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedApicall($request, $requestSecurity);
+    $response = $sdk->unified->getUnifiedApicall($request);
 
     if ($response->apiCalls !== null) {
         // handle response
@@ -214,10 +194,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest](../../models/operations/GetUnifiedApicallRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity](../../models/operations/GetUnifiedApicallSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest](../../models/operations/GetUnifiedApicallRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -238,20 +217,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedApicallIdRequest();
-    $request->id = '0282a51f-41cf-4679-aed3-d724c18f581e';
+    $request->id = '3d724c18-f581-4e98-8ce3-f716600da0e3';
 
-    $requestSecurity = new GetUnifiedApicallIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedApicallId($request, $requestSecurity);
+    $response = $sdk->unified->getUnifiedApicallId($request);
 
     if ($response->apiCall !== null) {
         // handle response
@@ -263,10 +239,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdSecurity](../../models/operations/GetUnifiedApicallIdSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
@@ -287,9 +262,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionCategories;
-use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -297,20 +272,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetUnifiedConnectionRequest();
     $request->categories = [
-        GetUnifiedConnectionCategories::Enrich,
+        GetUnifiedConnectionCategories::Martech,
     ];
-    $request->env = 'laudantium';
-    $request->externalXref = 'porro';
-    $request->limit = 7948.94;
-    $request->offset = 8856.75;
-    $request->order = 'consectetur';
-    $request->sort = 'reiciendis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-17T00:52:06.013Z');
+    $request->env = 'deserunt';
+    $request->externalXref = 'laboriosam';
+    $request->limit = 845.81;
+    $request->offset = 7599.24;
+    $request->order = 'ex';
+    $request->sort = 'repellat';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-30T18:30:45.044Z');
 
-    $requestSecurity = new GetUnifiedConnectionSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedConnection($request, $requestSecurity);
+    $response = $sdk->unified->getUnifiedConnection($request);
 
     if ($response->connections !== null) {
         // handle response
@@ -322,10 +294,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest](../../models/operations/GetUnifiedConnectionRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-| `security`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedConnectionSecurity](../../models/operations/GetUnifiedConnectionSecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest](../../models/operations/GetUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
@@ -346,20 +317,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedConnectionIdRequest();
-    $request->id = '6600da0e-3aa6-41c6-be09-d852b53b32c8';
+    $request->id = '9d852b53-b32c-48c7-83c7-10e1673d905c';
 
-    $requestSecurity = new GetUnifiedConnectionIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedConnectionId($request, $requestSecurity);
+    $response = $sdk->unified->getUnifiedConnectionId($request);
 
     if ($response->connection !== null) {
         // handle response
@@ -371,10 +339,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdRequest](../../models/operations/GetUnifiedConnectionIdRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdSecurity](../../models/operations/GetUnifiedConnectionIdSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdRequest](../../models/operations/GetUnifiedConnectionIdRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
@@ -395,9 +362,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationCategories;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -408,17 +375,14 @@ try {
     $request->categories = [
         GetUnifiedIntegrationCategories::Martech,
     ];
-    $request->limit = 4893.2;
-    $request->offset = 8112.21;
-    $request->order = 'ratione';
-    $request->sort = 'eligendi';
+    $request->limit = 2899.85;
+    $request->offset = 6946.19;
+    $request->order = 'recusandae';
+    $request->sort = 'illum';
     $request->summary = false;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-27T00:14:53.581Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-01-09T01:16:51.878Z');
 
-    $requestSecurity = new GetUnifiedIntegrationSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedIntegration($request, $requestSecurity);
+    $response = $sdk->unified->getUnifiedIntegration($request);
 
     if ($response->integrations !== null) {
         // handle response
@@ -430,10 +394,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest](../../models/operations/GetUnifiedIntegrationRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationSecurity](../../models/operations/GetUnifiedIntegrationSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest](../../models/operations/GetUnifiedIntegrationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
@@ -454,6 +417,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
 
@@ -462,19 +426,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'alias';
-    $request->externalXref = 'accusamus';
+    $request->env = 'amet';
+    $request->externalXref = 'quod';
     $request->failureRedirect = 'inventore';
-    $request->integrationType = 'voluptas';
-    $request->lang = 'molestiae';
+    $request->integrationType = 'odit';
+    $request->lang = 'in';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::CrmDealWrite,
+        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::HrisEmployeeRead,
     ];
-    $request->state = 'at';
+    $request->state = 'ipsum';
     $request->subdomain = 'excepturi';
-    $request->successRedirect = 'perferendis';
-    $request->workspaceId = 'nostrum';
+    $request->successRedirect = 'aperiam';
+    $request->workspaceId = 'molestias';
 
     $response = $sdk->unified->getUnifiedIntegrationAuthWorkspaceIdIntegrationType($request);
 
@@ -511,20 +475,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedIntegrationIntegrationTypeRequest();
-    $request->integrationType = 'quisquam';
+    $request->integrationType = 'iste';
 
-    $requestSecurity = new GetUnifiedIntegrationIntegrationTypeSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedIntegrationIntegrationType($request, $requestSecurity);
+    $response = $sdk->unified->getUnifiedIntegrationIntegrationType($request);
 
     if ($response->integration !== null) {
         // handle response
@@ -536,10 +497,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationIntegrationTypeRequest.md)   | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
-| `security`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeSecurity](../../models/operations/GetUnifiedIntegrationIntegrationTypeSecurity.md) | :heavy_check_mark:                                                                                                                                            | The security requirements to use for the request.                                                                                                             |
+| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
 
 
 ### Response
@@ -560,6 +520,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdCategories;
 
@@ -570,11 +531,11 @@ try {
     $request = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest();
     $request->active = false;
     $request->categories = [
-        GetUnifiedIntegrationWorkspaceWorkspaceIdCategories::Martech,
+        GetUnifiedIntegrationWorkspaceWorkspaceIdCategories::Auth,
     ];
-    $request->env = 'labore';
+    $request->env = 'veniam';
     $request->summary = false;
-    $request->workspaceId = 'quidem';
+    $request->workspaceId = 'consequuntur';
 
     $response = $sdk->unified->getUnifiedIntegrationWorkspaceWorkspaceId($request);
 
@@ -611,16 +572,13 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\GetUnifiedUserSecurity;
+use \Unified\Unified_to\Models\Shared\Security;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $requestSecurity = new GetUnifiedUserSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedUser($requestSecurity);
+    $response = $sdk->unified->getUnifiedUser();
 
     if ($response->user !== null) {
         // handle response
@@ -629,12 +587,6 @@ try {
     // handle exception
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetUnifiedUserSecurity](../../models/operations/GetUnifiedUserSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response
@@ -655,16 +607,13 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Operations\GetUnifiedUserTokenSecurity;
+use \Unified\Unified_to\Models\Shared\Security;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $requestSecurity = new GetUnifiedUserTokenSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedUserToken($requestSecurity);
+    $response = $sdk->unified->getUnifiedUserToken();
 
     if ($response->getUnifiedUserToken200ApplicationJSONString !== null) {
         // handle response
@@ -673,12 +622,6 @@ try {
     // handle exception
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedUserTokenSecurity](../../models/operations/GetUnifiedUserTokenSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
 
 
 ### Response
@@ -699,26 +642,23 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedWebhookSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedWebhookRequest();
-    $request->env = 'recusandae';
-    $request->limit = 8501.08;
-    $request->object = 'itaque';
-    $request->offset = 9935.59;
-    $request->order = 'amet';
-    $request->sort = 'quod';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-10T08:01:50.699Z');
+    $request->env = 'blanditiis';
+    $request->limit = 1730.52;
+    $request->object = 'ipsam';
+    $request->offset = 575.99;
+    $request->order = 'pariatur';
+    $request->sort = 'maxime';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-06T22:01:24.584Z');
 
-    $requestSecurity = new GetUnifiedWebhookSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedWebhook($request, $requestSecurity);
+    $response = $sdk->unified->getUnifiedWebhook($request);
 
     if ($response->webhooks !== null) {
         // handle response
@@ -730,10 +670,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest](../../models/operations/GetUnifiedWebhookRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUnifiedWebhookSecurity](../../models/operations/GetUnifiedWebhookSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest](../../models/operations/GetUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -754,20 +693,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedWebhookIdRequest();
-    $request->id = '7c390995-5282-450d-8bbc-d3b121b88c1e';
+    $request->id = 'cd3b121b-88c1-4ee5-a7a0-61391cc8fa0b';
 
-    $requestSecurity = new GetUnifiedWebhookIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->getUnifiedWebhookId($request, $requestSecurity);
+    $response = $sdk->unified->getUnifiedWebhookId($request);
 
     if ($response->webhook !== null) {
         // handle response
@@ -779,10 +715,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest](../../models/operations/GetUnifiedWebhookIdRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdSecurity](../../models/operations/GetUnifiedWebhookIdSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest](../../models/operations/GetUnifiedWebhookIdRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
@@ -803,13 +738,13 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdRequest;
 use \Unified\Unified_to\Models\Shared\Connection;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionAuth;
 use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
-use \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -818,51 +753,48 @@ try {
     $request = new PatchUnifiedConnectionIdRequest();
     $request->connection = new Connection();
     $request->connection->auth = new PropertyConnectionAuth();
-    $request->connection->auth->accessToken = 'saepe';
-    $request->connection->auth->apiUrl = 'minima';
-    $request->connection->auth->appId = 'saepe';
-    $request->connection->auth->authorizeUrl = 'voluptate';
-    $request->connection->auth->clientId = 'similique';
-    $request->connection->auth->clientSecret = 'doloremque';
-    $request->connection->auth->consumerKey = 'autem';
-    $request->connection->auth->consumerSecret = 'quasi';
+    $request->connection->auth->accessToken = 'iusto';
+    $request->connection->auth->apiUrl = 'repellendus';
+    $request->connection->auth->appId = 'beatae';
+    $request->connection->auth->authorizeUrl = 'ducimus';
+    $request->connection->auth->clientId = 'autem';
+    $request->connection->auth->clientSecret = 'ut';
+    $request->connection->auth->consumerKey = 'occaecati';
+    $request->connection->auth->consumerSecret = 'aspernatur';
     $request->connection->auth->emails = [
-        'adipisci',
+        'eum',
     ];
-    $request->connection->auth->expiresIn = 5694.15;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-11T01:26:47.707Z');
-    $request->connection->auth->key = 'maxime';
+    $request->connection->auth->expiresIn = 7041.93;
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-26T23:55:54.552Z');
+    $request->connection->auth->key = 'doloribus';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->connection->auth->name = 'Miss Van O'Connell';
+    $request->connection->auth->name = 'Sophie Jacobson';
     $request->connection->auth->otherAuthInfo = [
-        'repellendus',
+        'aliquid',
     ];
-    $request->connection->auth->pem = 'beatae';
-    $request->connection->auth->refreshToken = 'ducimus';
-    $request->connection->auth->state = 'autem';
-    $request->connection->auth->token = 'ut';
-    $request->connection->auth->tokenUrl = 'occaecati';
-    $request->connection->authAwsArn = 'aspernatur';
+    $request->connection->auth->pem = 'necessitatibus';
+    $request->connection->auth->refreshToken = 'harum';
+    $request->connection->auth->state = 'similique';
+    $request->connection->auth->token = 'expedita';
+    $request->connection->auth->tokenUrl = 'debitis';
+    $request->connection->authAwsArn = 'quis';
     $request->connection->categories = [
-        PropertyConnectionCategories::Auth,
+        PropertyConnectionCategories::Ticketing,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-19T10:14:39.692Z');
-    $request->connection->environment = 'cumque';
-    $request->connection->externalXref = 'doloribus';
-    $request->connection->id = '5e6cb6eb-abe5-4e0b-99f3-b1358d6a87bb';
-    $request->connection->integrationType = 'odio';
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-07T09:57:32.189Z');
+    $request->connection->environment = 'error';
+    $request->connection->externalXref = 'cupiditate';
+    $request->connection->id = 'f3b1358d-6a87-4bb7-aecb-e569d70cb069';
+    $request->connection->integrationType = 'occaecati';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::TicketingCustomerWrite,
+        PropertyConnectionPermissions::AtsScorecardWrite,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-11T19:46:11.395Z');
-    $request->connection->workspaceId = 'harum';
-    $request->id = 'e569d70c-b069-4907-b989-441452a9f01f';
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-08T13:01:50.552Z');
+    $request->connection->workspaceId = 'provident';
+    $request->id = '89441452-a9f0-41f3-842c-61be133bacde';
 
-    $requestSecurity = new PatchUnifiedConnectionIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->patchUnifiedConnectionId($request, $requestSecurity);
+    $response = $sdk->unified->patchUnifiedConnectionId($request);
 
     if ($response->connection !== null) {
         // handle response
@@ -874,10 +806,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdRequest](../../models/operations/PatchUnifiedConnectionIdRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdSecurity](../../models/operations/PatchUnifiedConnectionIdSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdRequest](../../models/operations/PatchUnifiedConnectionIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
@@ -898,31 +829,28 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Shared\User;
 use \Unified\Unified_to\Models\Shared\PropertyUserMeta;
-use \Unified\Unified_to\Models\Operations\PatchUnifiedUserSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-09T06:20:47.802Z');
-    $request->email = 'Chelsea.Runolfsson@gmail.com';
-    $request->environment = 'quidem';
-    $request->id = 'e133bacd-e532-4b65-a6f8-62853fe2859c';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-17T05:57:31.732Z');
+    $request->email = 'Mitchel.Jast@gmail.com';
+    $request->environment = 'laboriosam';
+    $request->id = 'f862853f-e285-49ce-b222-31fe6664c41d';
     $request->meta = new PropertyUserMeta();
-    $request->name = 'Alfred Cummerata';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-05T18:17:30.909Z');
-    $request->workspaceId = 'doloribus';
+    $request->name = 'Elisa Reichel';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-11-23T15:53:38.540Z');
+    $request->workspaceId = 'culpa';
     $request->workspaceIds = [
-        'earum',
+        'sit',
     ];
 
-    $requestSecurity = new PatchUnifiedUserSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->patchUnifiedUser($request, $requestSecurity);
+    $response = $sdk->unified->patchUnifiedUser($request);
 
     if ($response->user !== null) {
         // handle response
@@ -934,10 +862,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Shared\User](../../models/shared/User.md)                                                 | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
-| `security`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchUnifiedUserSecurity](../../models/operations/PatchUnifiedUserSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `$request`                                                            | [\Unified\Unified_to\Models\Shared\User](../../models/shared/User.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response
@@ -958,12 +885,12 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Shared\Connection;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionAuth;
 use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
-use \Unified\Unified_to\Models\Operations\PostUnifiedConnectionSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -971,50 +898,47 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new Connection();
     $request->auth = new PropertyConnectionAuth();
-    $request->auth->accessToken = 'commodi';
-    $request->auth->apiUrl = 'nisi';
-    $request->auth->appId = 'aliquid';
-    $request->auth->authorizeUrl = 'dolore';
-    $request->auth->clientId = 'eligendi';
-    $request->auth->clientSecret = 'numquam';
-    $request->auth->consumerKey = 'quae';
-    $request->auth->consumerSecret = 'pariatur';
+    $request->auth->accessToken = 'eum';
+    $request->auth->apiUrl = 'provident';
+    $request->auth->appId = 'tempore';
+    $request->auth->authorizeUrl = 'corrupti';
+    $request->auth->clientId = 'at';
+    $request->auth->clientSecret = 'fugit';
+    $request->auth->consumerKey = 'cupiditate';
+    $request->auth->consumerSecret = 'dicta';
     $request->auth->emails = [
-        'magni',
+        'libero',
     ];
-    $request->auth->expiresIn = 9805.84;
-    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-02T02:01:55.619Z');
-    $request->auth->key = 'ad';
+    $request->auth->expiresIn = 9281.55;
+    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-28T08:06:10.966Z');
+    $request->auth->key = 'quae';
     $request->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->auth->name = 'Ms. Ira Nader';
+    $request->auth->name = 'Genevieve Cormier';
     $request->auth->otherAuthInfo = [
-        'tempore',
+        'atque',
     ];
-    $request->auth->pem = 'corrupti';
-    $request->auth->refreshToken = 'at';
-    $request->auth->state = 'fugit';
-    $request->auth->token = 'cupiditate';
-    $request->auth->tokenUrl = 'dicta';
-    $request->authAwsArn = 'libero';
+    $request->auth->pem = 'molestiae';
+    $request->auth->refreshToken = 'aliquam';
+    $request->auth->state = 'perspiciatis';
+    $request->auth->token = 'labore';
+    $request->auth->tokenUrl = 'esse';
+    $request->authAwsArn = 'unde';
     $request->categories = [
         PropertyConnectionCategories::Uc,
     ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-28T08:06:10.966Z');
-    $request->environment = 'quae';
-    $request->externalXref = 'eaque';
-    $request->id = 'a2aa8749-479e-4dd4-bcf7-b50cf87f08f3';
-    $request->integrationType = 'excepturi';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-07-11T08:27:47.876Z');
+    $request->environment = 'modi';
+    $request->externalXref = 'maiores';
+    $request->id = 'cf7b50cf-87f0-48f3-9271-076a24b40c8f';
+    $request->integrationType = 'doloremque';
     $request->isPaused = false;
     $request->permissions = [
-        PropertyConnectionPermissions::CrmCompanyWrite,
+        PropertyConnectionPermissions::MartechListRead,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-04T04:15:00.638Z');
-    $request->workspaceId = 'perferendis';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-01T22:27:24.071Z');
+    $request->workspaceId = 'a';
 
-    $requestSecurity = new PostUnifiedConnectionSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->postUnifiedConnection($request, $requestSecurity);
+    $response = $sdk->unified->postUnifiedConnection($request);
 
     if ($response->connection !== null) {
         // handle response
@@ -1026,10 +950,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Shared\Connection](../../models/shared/Connection.md)                                               | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PostUnifiedConnectionSecurity](../../models/operations/PostUnifiedConnectionSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `$request`                                                                        | [\Unified\Unified_to\Models\Shared\Connection](../../models/shared/Connection.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
@@ -1050,12 +973,12 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest;
 use \Unified\Unified_to\Models\Shared\Webhook;
 use \Unified\Unified_to\Models\Shared\PropertyWebhookEvents;
 use \Unified\Unified_to\Models\Shared\WebhookObjectType;
 use \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectEvents;
-use \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -1063,34 +986,31 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostUnifiedWebhookConnectionIdObjectRequest();
     $request->webhook = new Webhook();
-    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-28T15:12:20.173Z');
-    $request->webhook->connectionId = 'culpa';
-    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-14T19:04:56.953Z');
-    $request->webhook->environment = 'distinctio';
+    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-16T04:30:42.293Z');
+    $request->webhook->connectionId = 'molestias';
+    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-04T19:42:40.275Z');
+    $request->webhook->environment = 'laudantium';
     $request->webhook->events = [
-        PropertyWebhookEvents::Updated,
+        PropertyWebhookEvents::Created,
     ];
-    $request->webhook->hookUrl = 'consequatur';
-    $request->webhook->id = 'c8f08bff-1081-4e88-b869-96c8e22be0a3';
+    $request->webhook->hookUrl = 'maiores';
+    $request->webhook->id = '86996c8e-22be-40a3-8f47-893bd23f8660';
     $request->webhook->includeRaw = false;
-    $request->webhook->integrationType = 'maxime';
-    $request->webhook->interval = 9477.24;
-    $request->webhook->objectType = WebhookObjectType::CrmDeal;
+    $request->webhook->integrationType = 'eaque';
+    $request->webhook->interval = 7950.71;
+    $request->webhook->objectType = WebhookObjectType::CrmLead;
     $request->webhook->subscriptions = [
-        'voluptate',
+        'inventore',
     ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-09T09:19:40.796Z');
-    $request->webhook->workspaceId = 'dolorem';
-    $request->connectionId = 'soluta';
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-03T05:56:05.673Z');
+    $request->webhook->workspaceId = 'voluptatum';
+    $request->connectionId = 'consectetur';
     $request->events = [
-        PostUnifiedWebhookConnectionIdObjectEvents::Created,
+        PostUnifiedWebhookConnectionIdObjectEvents::Updated,
     ];
-    $request->object = 'fugit';
+    $request->object = 'magni';
 
-    $requestSecurity = new PostUnifiedWebhookConnectionIdObjectSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->postUnifiedWebhookConnectionIdObject($request, $requestSecurity);
+    $response = $sdk->unified->postUnifiedWebhookConnectionIdObject($request);
 
     if ($response->webhook !== null) {
         // handle response
@@ -1102,10 +1022,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest](../../models/operations/PostUnifiedWebhookConnectionIdObjectRequest.md)   | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
-| `security`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectSecurity](../../models/operations/PostUnifiedWebhookConnectionIdObjectSecurity.md) | :heavy_check_mark:                                                                                                                                            | The security requirements to use for the request.                                                                                                             |
+| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest](../../models/operations/PostUnifiedWebhookConnectionIdObjectRequest.md) | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
 
 
 ### Response
@@ -1126,13 +1045,13 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdRequest;
 use \Unified\Unified_to\Models\Shared\Connection;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionAuth;
 use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
-use \Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -1141,51 +1060,48 @@ try {
     $request = new PutUnifiedConnectionIdRequest();
     $request->connection = new Connection();
     $request->connection->auth = new PropertyConnectionAuth();
-    $request->connection->auth->accessToken = 'neque';
-    $request->connection->auth->apiUrl = 'asperiores';
-    $request->connection->auth->appId = 'corrupti';
-    $request->connection->auth->authorizeUrl = 'autem';
-    $request->connection->auth->clientId = 'autem';
-    $request->connection->auth->clientSecret = 'alias';
-    $request->connection->auth->consumerKey = 'eaque';
-    $request->connection->auth->consumerSecret = 'minus';
+    $request->connection->auth->accessToken = 'in';
+    $request->connection->auth->apiUrl = 'ipsum';
+    $request->connection->auth->appId = 'impedit';
+    $request->connection->auth->authorizeUrl = 'est';
+    $request->connection->auth->clientId = 'est';
+    $request->connection->auth->clientSecret = 'provident';
+    $request->connection->auth->consumerKey = 'vitae';
+    $request->connection->auth->consumerSecret = 'quae';
     $request->connection->auth->emails = [
-        'commodi',
+        'voluptatum',
     ];
-    $request->connection->auth->expiresIn = 792.39;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-03T05:56:05.673Z');
-    $request->connection->auth->key = 'voluptatum';
+    $request->connection->auth->expiresIn = 7330.09;
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-17T04:01:35.648Z');
+    $request->connection->auth->key = 'maiores';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->connection->auth->name = 'Suzanne Cummerata';
+    $request->connection->auth->name = 'Miss Karla Jenkins';
     $request->connection->auth->otherAuthInfo = [
-        'impedit',
+        'ratione',
     ];
-    $request->connection->auth->pem = 'est';
-    $request->connection->auth->refreshToken = 'est';
-    $request->connection->auth->state = 'provident';
-    $request->connection->auth->token = 'vitae';
-    $request->connection->auth->tokenUrl = 'quae';
-    $request->connection->authAwsArn = 'voluptatum';
+    $request->connection->auth->pem = 'inventore';
+    $request->connection->auth->refreshToken = 'dolorum';
+    $request->connection->auth->state = 'ipsam';
+    $request->connection->auth->token = 'modi';
+    $request->connection->auth->tokenUrl = 'possimus';
+    $request->connection->authAwsArn = 'cumque';
     $request->connection->categories = [
-        PropertyConnectionCategories::Martech,
+        PropertyConnectionCategories::Passthrough,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-17T04:01:35.648Z');
-    $request->connection->environment = 'maiores';
-    $request->connection->externalXref = 'veritatis';
-    $request->connection->id = 'b61a331a-54dc-4102-94f9-2fed939ba8f7';
-    $request->connection->integrationType = 'et';
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-01T15:28:14.456Z');
+    $request->connection->environment = 'iste';
+    $request->connection->externalXref = 'modi';
+    $request->connection->id = 'f92fed93-9ba8-4f71-a299-2c20ee1228ac';
+    $request->connection->integrationType = 'dolor';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::AtsInterviewRead,
+        PropertyConnectionPermissions::TicketingCustomerWrite,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-31T07:58:59.734Z');
-    $request->connection->workspaceId = 'iste';
-    $request->id = '2c20ee12-28ac-43ad-8647-d240bc11ea48';
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-09-17T20:44:33.298Z');
+    $request->connection->workspaceId = 'commodi';
+    $request->id = '47d240bc-11ea-4482-824c-cc6a2f0f5b9d';
 
-    $requestSecurity = new PutUnifiedConnectionIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->putUnifiedConnectionId($request, $requestSecurity);
+    $response = $sdk->unified->putUnifiedConnectionId($request);
 
     if ($response->connection !== null) {
         // handle response
@@ -1197,10 +1113,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdRequest](../../models/operations/PutUnifiedConnectionIdRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdSecurity](../../models/operations/PutUnifiedConnectionIdSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdRequest](../../models/operations/PutUnifiedConnectionIdRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
@@ -1221,31 +1136,28 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Shared\User;
 use \Unified\Unified_to\Models\Shared\PropertyUserMeta;
-use \Unified\Unified_to\Models\Operations\PutUnifiedUserSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-25T18:01:21.633Z');
-    $request->email = 'Elinor_Schamberger40@gmail.com';
-    $request->environment = 'laborum';
-    $request->id = '2f0f5b9d-3cb1-41a7-a87d-3100e8e2b9b0';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-23T14:58:16.402Z');
+    $request->email = 'Ari.Brekke@hotmail.com';
+    $request->environment = 'commodi';
+    $request->id = '87d3100e-8e2b-49b0-9746-d2a7c7d1ea0e';
     $request->meta = new PropertyUserMeta();
-    $request->name = 'Cody Hahn';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-29T00:24:51.754Z');
-    $request->workspaceId = 'nihil';
+    $request->name = 'Sheryl White';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-27T08:05:51.028Z');
+    $request->workspaceId = 'earum';
     $request->workspaceIds = [
-        'quisquam',
+        'veniam',
     ];
 
-    $requestSecurity = new PutUnifiedUserSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->unified->putUnifiedUser($request, $requestSecurity);
+    $response = $sdk->unified->putUnifiedUser($request);
 
     if ($response->user !== null) {
         // handle response
@@ -1257,10 +1169,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Shared\User](../../models/shared/User.md)                                             | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
-| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\PutUnifiedUserSecurity](../../models/operations/PutUnifiedUserSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `$request`                                                            | [\Unified\Unified_to\Models\Shared\User](../../models/shared/User.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response

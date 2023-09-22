@@ -25,12 +25,10 @@ class Job
      * Remove a job
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdResponse
      */
 	public function deleteAtsConnectionIdJobId(
         ?\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Job
      * List all jobs
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobResponse
      */
 	public function getAtsConnectionIdJob(
         ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Job
      * Retrieve a job
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdResponse
      */
 	public function getAtsConnectionIdJobId(
         ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class Job
      * Update a job
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdResponse
      */
 	public function patchAtsConnectionIdJobId(
         ?\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class Job
      * Create a job
      * 
      * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobResponse
      */
 	public function postAtsConnectionIdJob(
         ?\Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobRequest $request,
-        \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class Job
      * Update a job
      * 
      * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdResponse
      */
 	public function putAtsConnectionIdJobId(
         ?\Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

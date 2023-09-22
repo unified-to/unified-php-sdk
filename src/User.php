@@ -25,12 +25,10 @@ class User
      * Remove a user
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdResponse
      */
 	public function deleteCrmConnectionIdUserId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -62,11 +59,9 @@ class User
     /**
      * Delete your user object
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteUnifiedUserSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteUnifiedUserResponse
      */
 	public function deleteUnifiedUser(
-        \Unified\Unified_to\Models\Operations\DeleteUnifiedUserSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteUnifiedUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -76,8 +71,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -99,12 +93,10 @@ class User
      * List all users
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserResponse
      */
 	public function getCrmConnectionIdUser(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -115,8 +107,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -139,12 +130,10 @@ class User
      * Retrieve a user
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdResponse
      */
 	public function getCrmConnectionIdUserId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -154,8 +143,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -177,11 +165,9 @@ class User
     /**
      * Retrieve your user object
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedUserSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedUserResponse
      */
 	public function getUnifiedUser(
-        \Unified\Unified_to\Models\Operations\GetUnifiedUserSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -191,8 +177,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -214,11 +199,9 @@ class User
     /**
      * Retrieve your user token
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedUserTokenSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedUserTokenResponse
      */
 	public function getUnifiedUserToken(
-        \Unified\Unified_to\Models\Operations\GetUnifiedUserTokenSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedUserTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -228,8 +211,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -251,12 +233,10 @@ class User
      * Update a user
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdResponse
      */
 	public function patchCrmConnectionIdUserId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -270,8 +250,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -296,12 +275,10 @@ class User
      * Only the name field is updated.
      * 
      * @param \Unified\Unified_to\Models\Shared\User $request
-     * @param \Unified\Unified_to\Models\Operations\PatchUnifiedUserSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchUnifiedUserResponse
      */
 	public function patchUnifiedUser(
         ?\Unified\Unified_to\Models\Shared\User $request,
-        \Unified\Unified_to\Models\Operations\PatchUnifiedUserSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchUnifiedUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -315,8 +292,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -339,12 +315,10 @@ class User
      * Create a user
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserResponse
      */
 	public function postCrmConnectionIdUser(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -358,8 +332,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -382,12 +355,10 @@ class User
      * Update a user
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdResponse
      */
 	public function putCrmConnectionIdUserId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -401,8 +372,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -427,12 +397,10 @@ class User
      * Only the name field is updated.
      * 
      * @param \Unified\Unified_to\Models\Shared\User $request
-     * @param \Unified\Unified_to\Models\Operations\PutUnifiedUserSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutUnifiedUserResponse
      */
 	public function putUnifiedUser(
         ?\Unified\Unified_to\Models\Shared\User $request,
-        \Unified\Unified_to\Models\Operations\PutUnifiedUserSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutUnifiedUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -446,8 +414,7 @@ class User
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

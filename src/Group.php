@@ -25,12 +25,10 @@ class Group
      * Remove a Group
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdResponse
      */
 	public function deleteHrisConnectionIdGroupId(
         ?\Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Group
      * List all Groups
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupResponse
      */
 	public function getHrisConnectionIdGroup(
         ?\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest $request,
-        \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Group
      * Retrieve a Group
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdResponse
      */
 	public function getHrisConnectionIdGroupId(
         ?\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class Group
      * Update a Group
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdResponse
      */
 	public function patchHrisConnectionIdGroupId(
         ?\Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class Group
      * Create a Group
      * 
      * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupResponse
      */
 	public function postHrisConnectionIdGroup(
         ?\Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest $request,
-        \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class Group
      * Update a Group
      * 
      * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdResponse
      */
 	public function putHrisConnectionIdGroupId(
         ?\Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

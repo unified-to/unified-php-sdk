@@ -25,12 +25,10 @@ class Apicall
      * Returns API Calls
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
      */
 	public function getUnifiedApicall(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -41,8 +39,7 @@ class Apicall
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -65,12 +62,10 @@ class Apicall
      * Retrieve specific API Call by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse
      */
 	public function getUnifiedApicallId(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -80,8 +75,7 @@ class Apicall
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

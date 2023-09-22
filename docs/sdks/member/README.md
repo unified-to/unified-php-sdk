@@ -22,22 +22,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteMartechConnectionIdListIdMemberIdRequest();
-    $request->connectionId = 'beatae';
-    $request->id = '3ad81242-08ef-4d23-8118-98e73879efbe';
-    $request->listId = 'voluptatum';
+    $request->connectionId = 'recusandae';
+    $request->id = '73879efb-e8ba-4eba-bb79-4536e90351bb';
+    $request->listId = 'unde';
 
-    $requestSecurity = new DeleteMartechConnectionIdListIdMemberIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->member->deleteMartechConnectionIdListIdMemberId($request, $requestSecurity);
+    $response = $sdk->member->deleteMartechConnectionIdListIdMemberId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -49,10 +46,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                           | Type                                                                                                                                                                | Required                                                                                                                                                            | Description                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdRequest](../../models/operations/DeleteMartechConnectionIdListIdMemberIdRequest.md)   | :heavy_check_mark:                                                                                                                                                  | The request object to use for the request.                                                                                                                          |
-| `security`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdSecurity](../../models/operations/DeleteMartechConnectionIdListIdMemberIdSecurity.md) | :heavy_check_mark:                                                                                                                                                  | The security requirements to use for the request.                                                                                                                   |
+| Parameter                                                                                                                                                         | Type                                                                                                                                                              | Required                                                                                                                                                          | Description                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdRequest](../../models/operations/DeleteMartechConnectionIdListIdMemberIdRequest.md) | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
 
 
 ### Response
@@ -73,27 +69,24 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest;
-use \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetMartechConnectionIdListIdMemberRequest();
-    $request->connectionId = 'rerum';
-    $request->limit = 6393.07;
-    $request->listId = 'saepe';
-    $request->offset = 7308.4;
-    $request->order = 'mollitia';
-    $request->query = 'libero';
-    $request->sort = 'tempore';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T17:47:45.502Z');
+    $request->connectionId = 'odio';
+    $request->limit = 4332.19;
+    $request->listId = 'adipisci';
+    $request->offset = 1042.32;
+    $request->order = 'iure';
+    $request->query = 'odit';
+    $request->sort = 'voluptatem';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-18T10:38:34.321Z');
 
-    $requestSecurity = new GetMartechConnectionIdListIdMemberSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->member->getMartechConnectionIdListIdMember($request, $requestSecurity);
+    $response = $sdk->member->getMartechConnectionIdListIdMember($request);
 
     if ($response->marketingMembers !== null) {
         // handle response
@@ -105,10 +98,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                 | Type                                                                                                                                                      | Required                                                                                                                                                  | Description                                                                                                                                               |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest](../../models/operations/GetMartechConnectionIdListIdMemberRequest.md)   | :heavy_check_mark:                                                                                                                                        | The request object to use for the request.                                                                                                                |
-| `security`                                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberSecurity](../../models/operations/GetMartechConnectionIdListIdMemberSecurity.md) | :heavy_check_mark:                                                                                                                                        | The security requirements to use for the request.                                                                                                         |
+| Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest](../../models/operations/GetMartechConnectionIdListIdMemberRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
 
 
 ### Response
@@ -129,22 +121,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdRequest;
-use \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetMartechConnectionIdListIdMemberIdRequest();
-    $request->connectionId = 'ut';
-    $request->id = '536e9035-1bb9-4763-9720-b77a5a5365a7';
-    $request->listId = 'unde';
+    $request->connectionId = 'odio';
+    $request->id = 'a5a5365a-79f1-4527-9f01-c0d361fed8dc';
+    $request->listId = 'nemo';
 
-    $requestSecurity = new GetMartechConnectionIdListIdMemberIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->member->getMartechConnectionIdListIdMemberId($request, $requestSecurity);
+    $response = $sdk->member->getMartechConnectionIdListIdMemberId($request);
 
     if ($response->marketingMember !== null) {
         // handle response
@@ -156,10 +145,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdRequest](../../models/operations/GetMartechConnectionIdListIdMemberIdRequest.md)   | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
-| `security`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdSecurity](../../models/operations/GetMartechConnectionIdListIdMemberIdSecurity.md) | :heavy_check_mark:                                                                                                                                            | The security requirements to use for the request.                                                                                                             |
+| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdRequest](../../models/operations/GetMartechConnectionIdListIdMemberIdRequest.md) | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
 
 
 ### Response
@@ -180,12 +168,12 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdRequest;
 use \Unified\Unified_to\Models\Shared\MarketingMember;
 use \Unified\Unified_to\Models\Shared\MarketingEmail;
 use \Unified\Unified_to\Models\Shared\MarketingEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyMarketingMemberRaw;
-use \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -193,28 +181,25 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchMartechConnectionIdListIdMemberIdRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-15T19:42:25.344Z');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-02-20T23:45:24.176Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
-    $request->marketingMember->id = '5271f01c-0d36-41fe-98dc-5effb453e908';
+    $request->marketingMember->id = 'fb453e90-89e8-471f-9b4d-697bdd9c985e';
     $request->marketingMember->listIds = [
-        'sint',
+        'incidunt',
     ];
-    $request->marketingMember->name = 'Dr. Everett Kilback';
+    $request->marketingMember->name = 'Marlene Flatley';
     $request->marketingMember->raw = new PropertyMarketingMemberRaw();
     $request->marketingMember->tags = [
-        'soluta',
+        'quis',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-17T18:00:35.072Z');
-    $request->connectionId = 'voluptas';
-    $request->id = '97bdd9c9-85e4-4373-8a5d-72d9edd785be';
-    $request->listId = 'quis';
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-05T18:54:35.067Z');
+    $request->connectionId = 'odit';
+    $request->id = 'd9edd785-be5e-47af-a552-97ba6281f44e';
+    $request->listId = 'dolorem';
 
-    $requestSecurity = new PatchMartechConnectionIdListIdMemberIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->member->patchMartechConnectionIdListIdMemberId($request, $requestSecurity);
+    $response = $sdk->member->patchMartechConnectionIdListIdMemberId($request);
 
     if ($response->marketingMember !== null) {
         // handle response
@@ -226,10 +211,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                         | Type                                                                                                                                                              | Required                                                                                                                                                          | Description                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdRequest](../../models/operations/PatchMartechConnectionIdListIdMemberIdRequest.md)   | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
-| `security`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdSecurity](../../models/operations/PatchMartechConnectionIdListIdMemberIdSecurity.md) | :heavy_check_mark:                                                                                                                                                | The security requirements to use for the request.                                                                                                                 |
+| Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdRequest](../../models/operations/PatchMartechConnectionIdListIdMemberIdRequest.md) | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
 
 
 ### Response
@@ -250,12 +234,12 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberRequest;
 use \Unified\Unified_to\Models\Shared\MarketingMember;
 use \Unified\Unified_to\Models\Shared\MarketingEmail;
 use \Unified\Unified_to\Models\Shared\MarketingEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyMarketingMemberRaw;
-use \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -263,27 +247,24 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostMartechConnectionIdListIdMemberRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-16T04:18:17.446Z');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-22T08:41:16.866Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
-    $request->marketingMember->id = 'afe55297-ba62-481f-84e3-a23394a68cc8';
+    $request->marketingMember->id = '3394a68c-c80d-430f-b721-64d0a91fe9d9';
     $request->marketingMember->listIds = [
-        'sit',
+        'autem',
     ];
-    $request->marketingMember->name = 'Chris Abernathy';
+    $request->marketingMember->name = 'Ida Ferry';
     $request->marketingMember->raw = new PropertyMarketingMemberRaw();
     $request->marketingMember->tags = [
-        'ducimus',
+        'excepturi',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-04T01:43:48.334Z');
-    $request->connectionId = 'aliquid';
-    $request->listId = 'quaerat';
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-12T19:12:24.738Z');
+    $request->connectionId = 'consequatur';
+    $request->listId = 'doloremque';
 
-    $requestSecurity = new PostMartechConnectionIdListIdMemberSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->member->postMartechConnectionIdListIdMember($request, $requestSecurity);
+    $response = $sdk->member->postMartechConnectionIdListIdMember($request);
 
     if ($response->marketingMember !== null) {
         // handle response
@@ -295,10 +276,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberRequest](../../models/operations/PostMartechConnectionIdListIdMemberRequest.md)   | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
-| `security`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberSecurity](../../models/operations/PostMartechConnectionIdListIdMemberSecurity.md) | :heavy_check_mark:                                                                                                                                          | The security requirements to use for the request.                                                                                                           |
+| Parameter                                                                                                                                                 | Type                                                                                                                                                      | Required                                                                                                                                                  | Description                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                | [\Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberRequest](../../models/operations/PostMartechConnectionIdListIdMemberRequest.md) | :heavy_check_mark:                                                                                                                                        | The request object to use for the request.                                                                                                                |
 
 
 ### Response
@@ -319,12 +299,12 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdRequest;
 use \Unified\Unified_to\Models\Shared\MarketingMember;
 use \Unified\Unified_to\Models\Shared\MarketingEmail;
 use \Unified\Unified_to\Models\Shared\MarketingEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyMarketingMemberRaw;
-use \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -332,28 +312,25 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutMartechConnectionIdListIdMemberIdRequest();
     $request->marketingMember = new MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-30T01:25:16.995Z');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-27T17:44:38.825Z');
     $request->marketingMember->emails = [
         new MarketingEmail(),
     ];
-    $request->marketingMember->id = 'a91fe9d9-6553-4b89-a000-9c6692de7b35';
+    $request->marketingMember->id = '6692de7b-3562-4201-a6aa-b4ae7b1a5b90';
     $request->marketingMember->listIds = [
-        'voluptas',
+        'rem',
     ];
-    $request->marketingMember->name = 'Miss Irene Beatty';
+    $request->marketingMember->name = 'Micheal VonRueden II';
     $request->marketingMember->raw = new PropertyMarketingMemberRaw();
     $request->marketingMember->tags = [
-        'error',
+        'perspiciatis',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-08T12:35:58.376Z');
-    $request->connectionId = 'eius';
-    $request->id = 'ae7b1a5b-908d-44e3-8491-aa35d4a839f0';
-    $request->listId = 'ipsum';
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-29T01:11:46.175Z');
+    $request->connectionId = 'fuga';
+    $request->id = '35d4a839-f03b-4ab7-bb91-8f0313984507';
+    $request->listId = 'officiis';
 
-    $requestSecurity = new PutMartechConnectionIdListIdMemberIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->member->putMartechConnectionIdListIdMemberId($request, $requestSecurity);
+    $response = $sdk->member->putMartechConnectionIdListIdMemberId($request);
 
     if ($response->marketingMember !== null) {
         // handle response
@@ -365,10 +342,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdRequest](../../models/operations/PutMartechConnectionIdListIdMemberIdRequest.md)   | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
-| `security`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdSecurity](../../models/operations/PutMartechConnectionIdListIdMemberIdSecurity.md) | :heavy_check_mark:                                                                                                                                            | The security requirements to use for the request.                                                                                                             |
+| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdRequest](../../models/operations/PutMartechConnectionIdListIdMemberIdRequest.md) | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
 
 
 ### Response

@@ -25,12 +25,10 @@ class Passthrough
      * Passthrough DELETE
      * 
      * @param \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathResponse
      */
 	public function deletePassthroughConnectionIdPath(
         ?\Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathRequest $request,
-        \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -64,12 +61,10 @@ class Passthrough
      * Passthrough GET
      * 
      * @param \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathResponse
      */
 	public function getPassthroughConnectionIdPath(
         ?\Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathRequest $request,
-        \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Passthrough
      * Passthrough PUT
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathResponse
      */
 	public function patchPassthroughConnectionIdPath(
         ?\Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -122,8 +114,7 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -146,12 +137,10 @@ class Passthrough
      * Passthrough POST
      * 
      * @param \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathResponse
      */
 	public function postPassthroughConnectionIdPath(
         ?\Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathRequest $request,
-        \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -165,8 +154,7 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -189,12 +177,10 @@ class Passthrough
      * Passthrough PUT
      * 
      * @param \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathResponse
      */
 	public function putPassthroughConnectionIdPath(
         ?\Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathRequest $request,
-        \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -208,8 +194,7 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

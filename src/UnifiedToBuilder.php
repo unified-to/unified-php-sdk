@@ -35,6 +35,18 @@ class UnifiedToBuilder
     }
     
     /**
+     * setSecurity is used to configure the security required for the SDK.
+     *
+     * @param Models\Shared\Security $security
+     * @return UnifiedToBuilder
+     */
+    public function setSecurity(Models\Shared\Security $security): UnifiedToBuilder
+    {
+        $this->sdkConfig->security = $security;
+        return $this;
+    }
+    
+    /**
      * setServerUrl is used to configure the server URL for the SDK, and optionally template any parameters in the URL.
      *
      * @param string $serverUrl
@@ -73,6 +85,10 @@ class UnifiedToBuilder
 				'timeout' => 60,
 			]);
 		}
+		if ($this->sdkConfig->security !== null) {
+			$this->sdkConfig->securityClient = Utils\Utils::configureSecurityClient($this->sdkConfig->defaultClient, $this->sdkConfig->security);
+		}
+		
 		if ($this->sdkConfig->securityClient === null) {
 			$this->sdkConfig->securityClient = $this->sdkConfig->defaultClient;
 		}

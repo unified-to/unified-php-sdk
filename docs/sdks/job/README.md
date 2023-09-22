@@ -22,21 +22,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteAtsConnectionIdJobIdRequest();
-    $request->connectionId = 'rem';
-    $request->id = 'db2cf2bf-4f3d-4ed3-96d7-e14b21cd9819';
+    $request->connectionId = 'fugiat';
+    $request->id = '7e14b21c-d981-496d-95af-69a1c4b79ae3';
 
-    $requestSecurity = new DeleteAtsConnectionIdJobIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->job->deleteAtsConnectionIdJobId($request, $requestSecurity);
+    $response = $sdk->job->deleteAtsConnectionIdJobId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -48,10 +45,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest](../../models/operations/DeleteAtsConnectionIdJobIdRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdSecurity](../../models/operations/DeleteAtsConnectionIdJobIdSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest](../../models/operations/DeleteAtsConnectionIdJobIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -72,26 +68,23 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest;
-use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetAtsConnectionIdJobRequest();
-    $request->connectionId = 'aliquid';
-    $request->limit = 8288.58;
-    $request->offset = 3320;
-    $request->order = 'quis';
-    $request->query = 'id';
-    $request->sort = 'delectus';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-22T16:36:56.884Z');
+    $request->connectionId = 'non';
+    $request->limit = 4269.64;
+    $request->offset = 5075.57;
+    $request->order = 'beatae';
+    $request->query = 'eligendi';
+    $request->sort = 'eos';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-30T06:53:34.825Z');
 
-    $requestSecurity = new GetAtsConnectionIdJobSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->job->getAtsConnectionIdJob($request, $requestSecurity);
+    $response = $sdk->job->getAtsConnectionIdJob($request);
 
     if ($response->atsJobs !== null) {
         // handle response
@@ -103,10 +96,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest](../../models/operations/GetAtsConnectionIdJobRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobSecurity](../../models/operations/GetAtsConnectionIdJobSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest](../../models/operations/GetAtsConnectionIdJobRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
@@ -127,21 +119,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest;
-use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetAtsConnectionIdJobIdRequest();
-    $request->connectionId = 'mollitia';
-    $request->id = '1c4b79ae-3368-41c2-bc39-a7c0e17cb12c';
+    $request->connectionId = 'dolorem';
+    $request->id = '9a7c0e17-cb12-4c5b-a825-fe22cd5cba6f';
 
-    $requestSecurity = new GetAtsConnectionIdJobIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->job->getAtsConnectionIdJobId($request, $requestSecurity);
+    $response = $sdk->job->getAtsConnectionIdJobId($request);
 
     if ($response->atsJob !== null) {
         // handle response
@@ -153,10 +142,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest](../../models/operations/GetAtsConnectionIdJobIdRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdSecurity](../../models/operations/GetAtsConnectionIdJobIdSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest](../../models/operations/GetAtsConnectionIdJobIdRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
@@ -177,6 +165,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
@@ -186,7 +175,6 @@ use \Unified\Unified_to\Models\Shared\AtsCompensationType;
 use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
-use \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -197,39 +185,36 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-11T16:17:08.350Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-03T19:50:58.154Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-21T23:22:52.834Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-19T18:54:18.276Z');
     $request->atsJob->departments = [
-        'fugit',
+        'perspiciatis',
     ];
-    $request->atsJob->description = 'corporis';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Other;
+    $request->atsJob->description = 'amet';
+    $request->atsJob->employmentType = AtsJobEmploymentType::PartTime;
     $request->atsJob->hiringManagerIds = [
-        'necessitatibus',
+        'fuga',
     ];
-    $request->atsJob->id = '22cd5cba-6fbf-4ec9-b2af-6813d65bfece';
-    $request->atsJob->languageLocale = 'quod';
-    $request->atsJob->name = 'Angelina Swaniawski';
+    $request->atsJob->id = 'f6813d65-bfec-4ec2-9d69-16f7fc7dda70';
+    $request->atsJob->languageLocale = 'recusandae';
+    $request->atsJob->name = 'Marc Balistreri';
     $request->atsJob->publicJobUrls = [
-        'inventore',
+        'aut',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'ea',
+        'reprehenderit',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-14T02:02:24.824Z');
-    $request->connectionId = 'minus';
-    $request->id = '7dda70ec-60e6-4075-894d-61c14cd90227';
+    $request->atsJob->status = AtsJobStatus::Pending;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-07T23:31:59.799Z');
+    $request->connectionId = 'numquam';
+    $request->id = 'd61c14cd-9022-47e3-bc0d-977f1a5491ab';
 
-    $requestSecurity = new PatchAtsConnectionIdJobIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->job->patchAtsConnectionIdJobId($request, $requestSecurity);
+    $response = $sdk->job->patchAtsConnectionIdJobId($request);
 
     if ($response->atsJob !== null) {
         // handle response
@@ -241,10 +226,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdRequest](../../models/operations/PatchAtsConnectionIdJobIdRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdSecurity](../../models/operations/PatchAtsConnectionIdJobIdSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdRequest](../../models/operations/PatchAtsConnectionIdJobIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -265,6 +249,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
@@ -274,7 +259,6 @@ use \Unified\Unified_to\Models\Shared\AtsCompensationType;
 use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
-use \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -285,38 +269,35 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T22:14:19.804Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-25T22:45:23.869Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-01T17:48:28.978Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-28T17:53:23.267Z');
     $request->atsJob->departments = [
-        'eaque',
+        'beatae',
     ];
-    $request->atsJob->description = 'facere';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Casual;
+    $request->atsJob->description = 'cum';
+    $request->atsJob->employmentType = AtsJobEmploymentType::PartTime;
     $request->atsJob->hiringManagerIds = [
-        'reprehenderit',
+        'doloremque',
     ];
-    $request->atsJob->id = '7f1a5491-abe9-4751-b106-d23e03e69815';
-    $request->atsJob->languageLocale = 'similique';
-    $request->atsJob->name = 'Stewart Moen';
+    $request->atsJob->id = '6d23e03e-6981-45aa-a99f-cde9e729c9d4';
+    $request->atsJob->languageLocale = 'maiores';
+    $request->atsJob->name = 'Freda Leannon';
     $request->atsJob->publicJobUrls = [
-        'nobis',
+        'tempora',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'repellendus',
+        'laboriosam',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-03T05:46:06.717Z');
-    $request->connectionId = 'in';
+    $request->atsJob->status = AtsJobStatus::Pending;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-18T14:03:50.432Z');
+    $request->connectionId = 'fuga';
 
-    $requestSecurity = new PostAtsConnectionIdJobSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->job->postAtsConnectionIdJob($request, $requestSecurity);
+    $response = $sdk->job->postAtsConnectionIdJob($request);
 
     if ($response->atsJob !== null) {
         // handle response
@@ -328,10 +309,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobRequest](../../models/operations/PostAtsConnectionIdJobRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobSecurity](../../models/operations/PostAtsConnectionIdJobSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobRequest](../../models/operations/PostAtsConnectionIdJobRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
@@ -352,6 +332,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
@@ -361,7 +342,6 @@ use \Unified\Unified_to\Models\Shared\AtsCompensationType;
 use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
-use \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -372,39 +352,36 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T14:34:25.049Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-10T19:47:03.720Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-17T17:49:31.963Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-10-17T15:48:34.743Z');
     $request->atsJob->departments = [
-        'nulla',
+        'nihil',
     ];
-    $request->atsJob->description = 'tempora';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Other;
+    $request->atsJob->description = 'neque';
+    $request->atsJob->employmentType = AtsJobEmploymentType::Casual;
     $request->atsJob->hiringManagerIds = [
-        'eos',
+        'consequuntur',
     ];
-    $request->atsJob->id = 'd8a44640-ca60-4db7-ba2f-93f467dc0d8d';
-    $request->atsJob->languageLocale = 'fuga';
-    $request->atsJob->name = 'Melanie Bogisich';
+    $request->atsJob->id = 'f93f467d-c0d8-4da5-a122-026ab8f27748';
+    $request->atsJob->languageLocale = 'exercitationem';
+    $request->atsJob->name = 'Henry McCullough';
     $request->atsJob->publicJobUrls = [
-        'aut',
+        'similique',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'quia',
+        'tenetur',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Pending;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-07T19:13:18.965Z');
-    $request->connectionId = 'quas';
-    $request->id = 'f277485c-1976-4af9-80da-7a089fc44db2';
+    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-22T16:17:11.183Z');
+    $request->connectionId = 'nulla';
+    $request->id = 'a7a089fc-44db-4274-930e-5cc7c6d0cbcf';
 
-    $requestSecurity = new PutAtsConnectionIdJobIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->job->putAtsConnectionIdJobId($request, $requestSecurity);
+    $response = $sdk->job->putAtsConnectionIdJobId($request);
 
     if ($response->atsJob !== null) {
         // handle response
@@ -416,10 +393,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdRequest](../../models/operations/PutAtsConnectionIdJobIdRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdSecurity](../../models/operations/PutAtsConnectionIdJobIdSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdRequest](../../models/operations/PutAtsConnectionIdJobIdRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response

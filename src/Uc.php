@@ -25,12 +25,10 @@ class Uc
      * Remove a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdResponse
      */
 	public function deleteUcConnectionIdContactId(
         ?\Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Uc
      * List all agents
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse
      */
 	public function getUcConnectionIdAgent(
         ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Uc
      * List all calls
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse
      */
 	public function getUcConnectionIdCall(
         ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -119,8 +111,7 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -143,12 +134,10 @@ class Uc
      * List all contacts
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactResponse
      */
 	public function getUcConnectionIdContact(
         ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -159,8 +148,7 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -183,12 +171,10 @@ class Uc
      * Retrieve a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdResponse
      */
 	public function getUcConnectionIdContactId(
         ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -198,8 +184,7 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -222,12 +207,10 @@ class Uc
      * Update a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdResponse
      */
 	public function patchUcConnectionIdContactId(
         ?\Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,8 +224,7 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -265,12 +247,10 @@ class Uc
      * Create a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactResponse
      */
 	public function postUcConnectionIdContact(
         ?\Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest $request,
-        \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -284,8 +264,7 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -308,12 +287,10 @@ class Uc
      * Update a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdResponse
      */
 	public function putUcConnectionIdContactId(
         ?\Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -327,8 +304,7 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

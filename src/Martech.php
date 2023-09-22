@@ -25,12 +25,10 @@ class Martech
      * Remove a list
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdResponse
      */
 	public function deleteMartechConnectionIdListId(
         ?\Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Martech
      * Remove member from a list
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdResponse
      */
 	public function deleteMartechConnectionIdListIdMemberId(
         ?\Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -78,8 +73,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -101,12 +95,10 @@ class Martech
      * List all lists
      * 
      * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListResponse
      */
 	public function getMartechConnectionIdList(
         ?\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListRequest $request,
-        \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -117,8 +109,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -141,12 +132,10 @@ class Martech
      * Retrieve a list
      * 
      * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdResponse
      */
 	public function getMartechConnectionIdListId(
         ?\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -156,8 +145,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -180,12 +168,10 @@ class Martech
      * List all members in a list
      * 
      * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberResponse
      */
 	public function getMartechConnectionIdListIdMember(
         ?\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest $request,
-        \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -196,8 +182,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -220,12 +205,10 @@ class Martech
      * Retrieve a member from a list
      * 
      * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdResponse
      */
 	public function getMartechConnectionIdListIdMemberId(
         ?\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -235,8 +218,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -259,12 +241,10 @@ class Martech
      * Update a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdResponse
      */
 	public function patchMartechConnectionIdListId(
         ?\Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -278,8 +258,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -302,12 +281,10 @@ class Martech
      * Update a member in a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdResponse
      */
 	public function patchMartechConnectionIdListIdMemberId(
         ?\Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -321,8 +298,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -345,12 +321,10 @@ class Martech
      * Create a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListResponse
      */
 	public function postMartechConnectionIdList(
         ?\Unified\Unified_to\Models\Operations\PostMartechConnectionIdListRequest $request,
-        \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -364,8 +338,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -388,12 +361,10 @@ class Martech
      * Create a member in a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberResponse
      */
 	public function postMartechConnectionIdListIdMember(
         ?\Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberRequest $request,
-        \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -407,8 +378,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -431,12 +401,10 @@ class Martech
      * Update a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdResponse
      */
 	public function putMartechConnectionIdListId(
         ?\Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -450,8 +418,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -474,12 +441,10 @@ class Martech
      * Update a member in a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdResponse
      */
 	public function putMartechConnectionIdListIdMemberId(
         ?\Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -493,8 +458,7 @@ class Martech
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

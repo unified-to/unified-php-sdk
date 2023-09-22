@@ -34,21 +34,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteCrmConnectionIdContactIdRequest();
-    $request->connectionId = 'tempora';
-    $request->id = '080d40bc-acc6-4cbd-ab5f-3ec909304f92';
+    $request->connectionId = 'maxime';
+    $request->id = '909304f9-26ba-4d25-9381-9b474b0ed20e';
 
-    $requestSecurity = new DeleteCrmConnectionIdContactIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->deleteCrmConnectionIdContactId($request, $requestSecurity);
+    $response = $sdk->contact->deleteCrmConnectionIdContactId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -60,10 +57,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdRequest](../../models/operations/DeleteCrmConnectionIdContactIdRequest.md)   | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-| `security`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdSecurity](../../models/operations/DeleteCrmConnectionIdContactIdSecurity.md) | :heavy_check_mark:                                                                                                                                | The security requirements to use for the request.                                                                                                 |
+| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdRequest](../../models/operations/DeleteCrmConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
 
 
 ### Response
@@ -84,22 +80,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest();
-    $request->companyId = 'vel';
-    $request->connectionId = 'cum';
-    $request->id = 'ad255381-9b47-44b0-ad20-e56248fff639';
+    $request->companyId = 'corporis';
+    $request->connectionId = 'ea';
+    $request->id = '248fff63-9a91-40ab-9cab-62676696e1ec';
 
-    $requestSecurity = new DeleteCrmConnectionIdContactIdCompanyCompanyIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->deleteCrmConnectionIdContactIdCompanyCompanyId($request, $requestSecurity);
+    $response = $sdk->contact->deleteCrmConnectionIdContactIdCompanyCompanyId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -111,10 +104,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                         | Type                                                                                                                                                                              | Required                                                                                                                                                                          | Description                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest](../../models/operations/DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest.md)   | :heavy_check_mark:                                                                                                                                                                | The request object to use for the request.                                                                                                                                        |
-| `security`                                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdSecurity](../../models/operations/DeleteCrmConnectionIdContactIdCompanyCompanyIdSecurity.md) | :heavy_check_mark:                                                                                                                                                                | The security requirements to use for the request.                                                                                                                                 |
+| Parameter                                                                                                                                                                       | Type                                                                                                                                                                            | Required                                                                                                                                                                        | Description                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest](../../models/operations/DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest.md) | :heavy_check_mark:                                                                                                                                                              | The request object to use for the request.                                                                                                                                      |
 
 
 ### Response
@@ -135,22 +127,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteCrmConnectionIdContactIdDealDealIdRequest();
-    $request->connectionId = 'animi';
-    $request->dealId = 'provident';
-    $request->id = '10abdcab-6267-4669-ae1e-c00221b335d8';
+    $request->connectionId = 'eaque';
+    $request->dealId = 'alias';
+    $request->id = '221b335d-89ac-4b3e-8fda-8d0c549ef030';
 
-    $requestSecurity = new DeleteCrmConnectionIdContactIdDealDealIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->deleteCrmConnectionIdContactIdDealDealId($request, $requestSecurity);
+    $response = $sdk->contact->deleteCrmConnectionIdContactIdDealDealId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -162,10 +151,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdRequest](../../models/operations/DeleteCrmConnectionIdContactIdDealDealIdRequest.md)   | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
-| `security`                                                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdSecurity](../../models/operations/DeleteCrmConnectionIdContactIdDealDealIdSecurity.md) | :heavy_check_mark:                                                                                                                                                    | The security requirements to use for the request.                                                                                                                     |
+| Parameter                                                                                                                                                           | Type                                                                                                                                                                | Required                                                                                                                                                            | Description                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdRequest](../../models/operations/DeleteCrmConnectionIdContactIdDealDealIdRequest.md) | :heavy_check_mark:                                                                                                                                                  | The request object to use for the request.                                                                                                                          |
 
 
 ### Response
@@ -186,21 +174,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteUcConnectionIdContactIdRequest();
-    $request->connectionId = 'unde';
-    $request->id = 'acb3ecfd-a8d0-4c54-9ef0-3004978a61fa';
+    $request->connectionId = 'doloremque';
+    $request->id = '4978a61f-a1cf-4206-88f7-7c1ffc71dca1';
 
-    $requestSecurity = new DeleteUcConnectionIdContactIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->deleteUcConnectionIdContactId($request, $requestSecurity);
+    $response = $sdk->contact->deleteUcConnectionIdContactId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -212,10 +197,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest](../../models/operations/DeleteUcConnectionIdContactIdRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdSecurity](../../models/operations/DeleteUcConnectionIdContactIdSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest](../../models/operations/DeleteUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response
@@ -236,28 +220,25 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactRequest;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetCrmConnectionIdContactRequest();
-    $request->companyId = 'veritatis';
-    $request->connectionId = 'quod';
-    $request->dealId = 'a';
-    $request->limit = 1853.13;
-    $request->offset = 349.89;
-    $request->order = 'commodi';
-    $request->query = 'atque';
-    $request->sort = 'totam';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-24T06:30:41.014Z');
+    $request->companyId = 'ex';
+    $request->connectionId = 'consectetur';
+    $request->dealId = 'maiores';
+    $request->limit = 1530.97;
+    $request->offset = 6571.41;
+    $request->order = 'sequi';
+    $request->query = 'eligendi';
+    $request->sort = 'voluptatum';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-30T19:59:48.348Z');
 
-    $requestSecurity = new GetCrmConnectionIdContactSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->getCrmConnectionIdContact($request, $requestSecurity);
+    $response = $sdk->contact->getCrmConnectionIdContact($request);
 
     if ($response->crmContacts !== null) {
         // handle response
@@ -269,10 +250,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactRequest](../../models/operations/GetCrmConnectionIdContactRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactSecurity](../../models/operations/GetCrmConnectionIdContactSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactRequest](../../models/operations/GetCrmConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -293,21 +273,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdRequest;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetCrmConnectionIdContactIdRequest();
-    $request->connectionId = 'quam';
-    $request->id = 'c1ffc71d-ca16-43f2-a3c8-0a97ff334cdd';
+    $request->connectionId = 'omnis';
+    $request->id = '7ff334cd-df85-47a9-a618-76c6ab21d29d';
 
-    $requestSecurity = new GetCrmConnectionIdContactIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->getCrmConnectionIdContactId($request, $requestSecurity);
+    $response = $sdk->contact->getCrmConnectionIdContactId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -319,10 +296,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdRequest](../../models/operations/GetCrmConnectionIdContactIdRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdSecurity](../../models/operations/GetCrmConnectionIdContactIdSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdRequest](../../models/operations/GetCrmConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -343,27 +319,24 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest;
-use \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUcConnectionIdContactRequest();
-    $request->agentId = 'tenetur';
-    $request->connectionId = 'molestias';
-    $request->limit = 3712.95;
-    $request->offset = 4562.22;
-    $request->order = 'laborum';
-    $request->query = 'perspiciatis';
-    $request->sort = 'voluptates';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-27T06:43:06.518Z');
+    $request->agentId = 'a';
+    $request->connectionId = 'impedit';
+    $request->limit = 6018.03;
+    $request->offset = 2814.54;
+    $request->order = 'facere';
+    $request->query = 'voluptas';
+    $request->sort = 'doloribus';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-21T17:46:18.554Z');
 
-    $requestSecurity = new GetUcConnectionIdContactSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->getUcConnectionIdContact($request, $requestSecurity);
+    $response = $sdk->contact->getUcConnectionIdContact($request);
 
     if ($response->ucContacts !== null) {
         // handle response
@@ -375,10 +348,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest](../../models/operations/GetUcConnectionIdContactRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactSecurity](../../models/operations/GetUcConnectionIdContactSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest](../../models/operations/GetUcConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
@@ -399,21 +371,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest;
-use \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUcConnectionIdContactIdRequest();
-    $request->connectionId = 'quas';
-    $request->id = '76c6ab21-d29d-4fc9-8d6f-ecd799390066';
+    $request->connectionId = 'facere';
+    $request->id = '79939006-6a6d-42d0-8035-5338cec086fa';
 
-    $requestSecurity = new GetUcConnectionIdContactIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->getUcConnectionIdContactId($request, $requestSecurity);
+    $response = $sdk->contact->getUcConnectionIdContactId($request);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -425,10 +394,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest](../../models/operations/GetUcConnectionIdContactIdRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdSecurity](../../models/operations/GetUcConnectionIdContactIdSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest](../../models/operations/GetUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -449,6 +417,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmContact;
 use \Unified\Unified_to\Models\Shared\PropertyCrmContactAddress;
@@ -457,7 +426,6 @@ use \Unified\Unified_to\Models\Shared\CrmEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyCrmContactRaw;
 use \Unified\Unified_to\Models\Shared\CrmTelephone;
 use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -466,40 +434,37 @@ try {
     $request = new PatchCrmConnectionIdContactIdRequest();
     $request->crmContact = new CrmContact();
     $request->crmContact->address = new PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'laborum';
-    $request->crmContact->address->address2 = 'autem';
-    $request->crmContact->address->city = 'Caguas';
-    $request->crmContact->address->country = 'Swaziland';
-    $request->crmContact->address->countryCode = 'AS';
-    $request->crmContact->address->postalCode = '02332';
-    $request->crmContact->address->region = 'ratione';
-    $request->crmContact->address->regionCode = 'quas';
-    $request->crmContact->company = 'Walsh, Runte and Batz';
+    $request->crmContact->address->address1 = 'fugit';
+    $request->crmContact->address->address2 = 'veritatis';
+    $request->crmContact->address->city = 'Norfolk';
+    $request->crmContact->address->country = 'Bouvet Island (Bouvetoya)';
+    $request->crmContact->address->countryCode = 'GU';
+    $request->crmContact->address->postalCode = '76211';
+    $request->crmContact->address->region = 'molestias';
+    $request->crmContact->address->regionCode = 'beatae';
+    $request->crmContact->company = 'Kunze - Rempel';
     $request->crmContact->companyIds = [
-        'totam',
+        'molestias',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-07T05:33:50.538Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-06T10:22:27.901Z');
     $request->crmContact->dealIds = [
-        'est',
+        'impedit',
     ];
     $request->crmContact->emails = [
         new CrmEmail(),
     ];
-    $request->crmContact->id = '21e9152c-b311-4916-bb8e-3c8db03408d6';
-    $request->crmContact->name = 'Vincent Hodkiewicz';
+    $request->crmContact->id = '8db03408-d6d3-464f-bd45-5906d1263d48';
+    $request->crmContact->name = 'Alejandro DuBuque';
     $request->crmContact->raw = new PropertyCrmContactRaw();
     $request->crmContact->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmContact->title = 'Dr.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-12T20:55:34.483Z');
-    $request->connectionId = 'enim';
-    $request->id = '5906d126-3d48-4e93-9c2c-9e81f30be3e4';
+    $request->crmContact->title = 'Mr.';
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-16T19:22:26.586Z');
+    $request->connectionId = 'recusandae';
+    $request->id = '81f30be3-e432-402d-b216-576506641870';
 
-    $requestSecurity = new PatchCrmConnectionIdContactIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->patchCrmConnectionIdContactId($request, $requestSecurity);
+    $response = $sdk->contact->patchCrmConnectionIdContactId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -511,10 +476,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdRequest](../../models/operations/PatchCrmConnectionIdContactIdRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdSecurity](../../models/operations/PatchCrmConnectionIdContactIdSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdRequest](../../models/operations/PatchCrmConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response
@@ -535,22 +499,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdRequest;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new PatchCrmConnectionIdContactIdCompanyCompanyIdRequest();
-    $request->companyId = 'adipisci';
-    $request->connectionId = 'magni';
-    $request->id = '02d72165-7650-4664-9870-d9d21f9ad030';
+    $request->companyId = 'assumenda';
+    $request->connectionId = 'provident';
+    $request->id = 'd21f9ad0-30c4-4ecc-91a0-836429068b85';
 
-    $requestSecurity = new PatchCrmConnectionIdContactIdCompanyCompanyIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->patchCrmConnectionIdContactIdCompanyCompanyId($request, $requestSecurity);
+    $response = $sdk->contact->patchCrmConnectionIdContactIdCompanyCompanyId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -562,10 +523,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                       | Type                                                                                                                                                                            | Required                                                                                                                                                                        | Description                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdRequest](../../models/operations/PatchCrmConnectionIdContactIdCompanyCompanyIdRequest.md)   | :heavy_check_mark:                                                                                                                                                              | The request object to use for the request.                                                                                                                                      |
-| `security`                                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdSecurity](../../models/operations/PatchCrmConnectionIdContactIdCompanyCompanyIdSecurity.md) | :heavy_check_mark:                                                                                                                                                              | The security requirements to use for the request.                                                                                                                               |
+| Parameter                                                                                                                                                                     | Type                                                                                                                                                                          | Required                                                                                                                                                                      | Description                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdRequest](../../models/operations/PatchCrmConnectionIdContactIdCompanyCompanyIdRequest.md) | :heavy_check_mark:                                                                                                                                                            | The request object to use for the request.                                                                                                                                    |
 
 
 ### Response
@@ -586,22 +546,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdRequest;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new PatchCrmConnectionIdContactIdDealDealIdRequest();
-    $request->connectionId = 'optio';
-    $request->dealId = 'tempora';
-    $request->id = 'ecc11a08-3642-4906-8b85-02a55e7f73bc';
+    $request->connectionId = 'aut';
+    $request->dealId = 'quia';
+    $request->id = 'a55e7f73-bc84-45e3-a0a3-19f4badf947c';
 
-    $requestSecurity = new PatchCrmConnectionIdContactIdDealDealIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->patchCrmConnectionIdContactIdDealDealId($request, $requestSecurity);
+    $response = $sdk->contact->patchCrmConnectionIdContactIdDealDealId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -613,10 +570,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                           | Type                                                                                                                                                                | Required                                                                                                                                                            | Description                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdRequest](../../models/operations/PatchCrmConnectionIdContactIdDealDealIdRequest.md)   | :heavy_check_mark:                                                                                                                                                  | The request object to use for the request.                                                                                                                          |
-| `security`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdSecurity](../../models/operations/PatchCrmConnectionIdContactIdDealDealIdSecurity.md) | :heavy_check_mark:                                                                                                                                                  | The security requirements to use for the request.                                                                                                                   |
+| Parameter                                                                                                                                                         | Type                                                                                                                                                              | Required                                                                                                                                                          | Description                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdRequest](../../models/operations/PatchCrmConnectionIdContactIdDealDealIdRequest.md) | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
 
 
 ### Response
@@ -637,6 +593,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest;
 use \Unified\Unified_to\Models\Shared\UcContact;
 use \Unified\Unified_to\Models\Shared\UcEmail;
@@ -644,7 +601,6 @@ use \Unified\Unified_to\Models\Shared\UcEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyUcContactRaw;
 use \Unified\Unified_to\Models\Shared\UcTelephone;
 use \Unified\Unified_to\Models\Shared\UcTelephoneType;
-use \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -652,26 +608,23 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Goodwin - Hilpert';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-30T20:03:45.488Z');
+    $request->ucContact->company = 'O'Kon - Lehner';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-13T16:11:34.612Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = '20a319f4-badf-4947-89a8-67bc42426665';
-    $request->ucContact->name = 'Joshua Hoppe';
+    $request->ucContact->id = 'bc424266-6581-46dd-8a8e-f51fcb4c593e';
+    $request->ucContact->name = 'Ryan Considine';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
     $request->ucContact->title = 'Miss';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-29T22:29:42.962Z');
-    $request->connectionId = 'voluptates';
-    $request->id = 'f51fcb4c-593e-4c12-8daa-d0ec7afedbd8';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-27T01:49:42.157Z');
+    $request->connectionId = 'ipsa';
+    $request->id = 'ec7afedb-d80d-4f44-8a47-f9390c588809';
 
-    $requestSecurity = new PatchUcConnectionIdContactIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->patchUcConnectionIdContactId($request, $requestSecurity);
+    $response = $sdk->contact->patchUcConnectionIdContactId($request);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -683,10 +636,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest](../../models/operations/PatchUcConnectionIdContactIdRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdSecurity](../../models/operations/PatchUcConnectionIdContactIdSecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest](../../models/operations/PatchUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
@@ -707,6 +659,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactRequest;
 use \Unified\Unified_to\Models\Shared\CrmContact;
 use \Unified\Unified_to\Models\Shared\PropertyCrmContactAddress;
@@ -715,7 +668,6 @@ use \Unified\Unified_to\Models\Shared\CrmEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyCrmContactRaw;
 use \Unified\Unified_to\Models\Shared\CrmTelephone;
 use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
-use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -724,39 +676,36 @@ try {
     $request = new PostCrmConnectionIdContactRequest();
     $request->crmContact = new CrmContact();
     $request->crmContact->address = new PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'aut';
-    $request->crmContact->address->address2 = 'temporibus';
-    $request->crmContact->address->city = 'El Monte';
-    $request->crmContact->address->country = 'El Salvador';
-    $request->crmContact->address->countryCode = 'MA';
-    $request->crmContact->address->postalCode = '24962-5073';
-    $request->crmContact->address->region = 'quos';
-    $request->crmContact->address->regionCode = 'blanditiis';
-    $request->crmContact->company = 'Barrows - McLaughlin';
+    $request->crmContact->address->address1 = 'quas';
+    $request->crmContact->address->address2 = 'ipsum';
+    $request->crmContact->address->city = 'Pflugerville';
+    $request->crmContact->address->country = 'Philippines';
+    $request->crmContact->address->countryCode = 'YE';
+    $request->crmContact->address->postalCode = '99299-8869';
+    $request->crmContact->address->region = 'odio';
+    $request->crmContact->address->regionCode = 'voluptatibus';
+    $request->crmContact->company = 'Konopelski LLC';
     $request->crmContact->companyIds = [
-        'quas',
+        'similique',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-15T21:16:58.297Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-15T09:54:23.214Z');
     $request->crmContact->dealIds = [
-        'fuga',
+        'facere',
     ];
     $request->crmContact->emails = [
         new CrmEmail(),
     ];
-    $request->crmContact->id = 'bf9ef3ff-dd9f-47f0-b9af-4d35724cdb0f';
-    $request->crmContact->name = 'Eula Daugherty Sr.';
+    $request->crmContact->id = '35724cdb-0f4d-4281-987d-56844eded85a';
+    $request->crmContact->name = 'Frank Keeling';
     $request->crmContact->raw = new PropertyCrmContactRaw();
     $request->crmContact->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmContact->title = 'Ms.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-22T23:57:29.960Z');
-    $request->connectionId = 'enim';
+    $request->crmContact->title = 'Mrs.';
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-30T12:03:22.493Z');
+    $request->connectionId = 'quidem';
 
-    $requestSecurity = new PostCrmConnectionIdContactSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->postCrmConnectionIdContact($request, $requestSecurity);
+    $response = $sdk->contact->postCrmConnectionIdContact($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -768,10 +717,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactRequest](../../models/operations/PostCrmConnectionIdContactRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactSecurity](../../models/operations/PostCrmConnectionIdContactSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactRequest](../../models/operations/PostCrmConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -792,6 +740,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest;
 use \Unified\Unified_to\Models\Shared\UcContact;
 use \Unified\Unified_to\Models\Shared\UcEmail;
@@ -799,7 +748,6 @@ use \Unified\Unified_to\Models\Shared\UcEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyUcContactRaw;
 use \Unified\Unified_to\Models\Shared\UcTelephone;
 use \Unified\Unified_to\Models\Shared\UcTelephoneType;
-use \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -807,25 +755,22 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostUcConnectionIdContactRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Langworth - Gleason';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-13T00:18:26.818Z');
+    $request->ucContact->company = 'Wisozk, Schowalter and Daniel';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-19T06:46:25.820Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = 'ded85a90-65e6-428b-9fc2-032b6c879923';
-    $request->ucContact->name = 'Mrs. Clinton Toy';
+    $request->ucContact->id = '2b6c8799-23b7-4e13-984f-7ae12c6891f8';
+    $request->ucContact->name = 'Mr. Lynne VonRueden';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
     $request->ucContact->title = 'Ms.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-04T17:39:35.177Z');
-    $request->connectionId = 'reprehenderit';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-19T01:47:33.364Z');
+    $request->connectionId = 'sed';
 
-    $requestSecurity = new PostUcConnectionIdContactSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->postUcConnectionIdContact($request, $requestSecurity);
+    $response = $sdk->contact->postUcConnectionIdContact($request);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -837,10 +782,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest](../../models/operations/PostUcConnectionIdContactRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PostUcConnectionIdContactSecurity](../../models/operations/PostUcConnectionIdContactSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest](../../models/operations/PostUcConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -861,6 +805,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmContact;
 use \Unified\Unified_to\Models\Shared\PropertyCrmContactAddress;
@@ -869,7 +814,6 @@ use \Unified\Unified_to\Models\Shared\CrmEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyCrmContactRaw;
 use \Unified\Unified_to\Models\Shared\CrmTelephone;
 use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -878,40 +822,37 @@ try {
     $request = new PutCrmConnectionIdContactIdRequest();
     $request->crmContact = new CrmContact();
     $request->crmContact->address = new PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'deserunt';
-    $request->crmContact->address->address2 = 'itaque';
-    $request->crmContact->address->city = 'East Omaview';
-    $request->crmContact->address->country = 'Liechtenstein';
-    $request->crmContact->address->countryCode = 'MU';
-    $request->crmContact->address->postalCode = '95179';
-    $request->crmContact->address->region = 'dicta';
-    $request->crmContact->address->regionCode = 'inventore';
-    $request->crmContact->company = 'Kshlerin - Bode';
+    $request->crmContact->address->address1 = 'dolorem';
+    $request->crmContact->address->address2 = 'eaque';
+    $request->crmContact->address->city = 'East Jacinto';
+    $request->crmContact->address->country = 'Kazakhstan';
+    $request->crmContact->address->countryCode = 'TF';
+    $request->crmContact->address->postalCode = '96558-9643';
+    $request->crmContact->address->region = 'voluptates';
+    $request->crmContact->address->regionCode = 'sequi';
+    $request->crmContact->company = 'Jerde - Kautzer';
     $request->crmContact->companyIds = [
-        'voluptate',
+        'rem',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-16T11:52:47.366Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-15T18:40:32.331Z');
     $request->crmContact->dealIds = [
-        'eaque',
+        'perspiciatis',
     ];
     $request->crmContact->emails = [
         new CrmEmail(),
     ];
-    $request->crmContact->id = '5377dcfa-89df-4975-a356-686092e9c3dd';
-    $request->crmContact->name = 'Mr. Warren Wilderman DDS';
+    $request->crmContact->id = '2e9c3ddc-5f11-41de-a102-6d541a4d190f';
+    $request->crmContact->name = 'Ms. Malcolm Crona';
     $request->crmContact->raw = new PropertyCrmContactRaw();
     $request->crmContact->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmContact->title = 'Dr.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-06T20:17:01.887Z');
-    $request->connectionId = 'voluptatem';
-    $request->id = '26d541a4-d190-4feb-a178-0bccc0dbbddb';
+    $request->crmContact->title = 'Mr.';
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-18T07:27:34.126Z');
+    $request->connectionId = 'quod';
+    $request->id = 'c0dbbddb-4847-408f-b4e3-91e6bc158c4c';
 
-    $requestSecurity = new PutCrmConnectionIdContactIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->putCrmConnectionIdContactId($request, $requestSecurity);
+    $response = $sdk->contact->putCrmConnectionIdContactId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -923,10 +864,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdRequest](../../models/operations/PutCrmConnectionIdContactIdRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdSecurity](../../models/operations/PutCrmConnectionIdContactIdSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdRequest](../../models/operations/PutCrmConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -947,22 +887,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdRequest;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new PutCrmConnectionIdContactIdCompanyCompanyIdRequest();
-    $request->companyId = 'magnam';
-    $request->connectionId = 'laudantium';
-    $request->id = '4708fb4e-391e-46bc-958c-4c4e54599ea3';
+    $request->companyId = 'ut';
+    $request->connectionId = 'earum';
+    $request->id = '54599ea3-4226-40e9-b200-ce78a1bd8fb7';
 
-    $requestSecurity = new PutCrmConnectionIdContactIdCompanyCompanyIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->putCrmConnectionIdContactIdCompanyCompanyId($request, $requestSecurity);
+    $response = $sdk->contact->putCrmConnectionIdContactIdCompanyCompanyId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -974,10 +911,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                   | Type                                                                                                                                                                        | Required                                                                                                                                                                    | Description                                                                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdRequest](../../models/operations/PutCrmConnectionIdContactIdCompanyCompanyIdRequest.md)   | :heavy_check_mark:                                                                                                                                                          | The request object to use for the request.                                                                                                                                  |
-| `security`                                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdSecurity](../../models/operations/PutCrmConnectionIdContactIdCompanyCompanyIdSecurity.md) | :heavy_check_mark:                                                                                                                                                          | The security requirements to use for the request.                                                                                                                           |
+| Parameter                                                                                                                                                                 | Type                                                                                                                                                                      | Required                                                                                                                                                                  | Description                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdRequest](../../models/operations/PutCrmConnectionIdContactIdCompanyCompanyIdRequest.md) | :heavy_check_mark:                                                                                                                                                        | The request object to use for the request.                                                                                                                                |
 
 
 ### Response
@@ -998,22 +934,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdRequest;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new PutCrmConnectionIdContactIdDealDealIdRequest();
-    $request->connectionId = 'modi';
-    $request->dealId = 'aspernatur';
-    $request->id = '260e9b20-0ce7-48a1-bd8f-b7a0a116ce72';
+    $request->connectionId = 'culpa';
+    $request->dealId = 'doloremque';
+    $request->id = 'a116ce72-3d40-497f-a30e-9af725b29122';
 
-    $requestSecurity = new PutCrmConnectionIdContactIdDealDealIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->putCrmConnectionIdContactIdDealDealId($request, $requestSecurity);
+    $response = $sdk->contact->putCrmConnectionIdContactIdDealDealId($request);
 
     if ($response->crmContact !== null) {
         // handle response
@@ -1025,10 +958,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdRequest](../../models/operations/PutCrmConnectionIdContactIdDealDealIdRequest.md)   | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
-| `security`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdSecurity](../../models/operations/PutCrmConnectionIdContactIdDealDealIdSecurity.md) | :heavy_check_mark:                                                                                                                                              | The security requirements to use for the request.                                                                                                               |
+| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdRequest](../../models/operations/PutCrmConnectionIdContactIdDealDealIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
 
 
 ### Response
@@ -1049,6 +981,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest;
 use \Unified\Unified_to\Models\Shared\UcContact;
 use \Unified\Unified_to\Models\Shared\UcEmail;
@@ -1056,7 +989,6 @@ use \Unified\Unified_to\Models\Shared\UcEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyUcContactRaw;
 use \Unified\Unified_to\Models\Shared\UcTelephone;
 use \Unified\Unified_to\Models\Shared\UcTelephoneType;
-use \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -1064,26 +996,23 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Senger and Sons';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-19T12:07:32.819Z');
+    $request->ucContact->company = 'Farrell Inc';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-28T08:36:40.882Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = '7fa30e9a-f725-4b29-9220-30d83f5aeb77';
-    $request->ucContact->name = 'Mr. Tracy Shields';
+    $request->ucContact->id = '3f5aeb77-99d2-42e8-81f8-493825fdc42c';
+    $request->ucContact->name = 'Harvey Jerde';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Ms.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-14T19:22:57.784Z');
-    $request->connectionId = 'repellat';
-    $request->id = '8493825f-dc42-4c87-ac2c-2dfb4cfc1c76';
+    $request->ucContact->title = 'Miss';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-07T08:54:57.907Z');
+    $request->connectionId = 'delectus';
+    $request->id = 'b4cfc1c7-6230-4f84-9fb1-bd23fdb14db6';
 
-    $requestSecurity = new PutUcConnectionIdContactIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->contact->putUcConnectionIdContactId($request, $requestSecurity);
+    $response = $sdk->contact->putUcConnectionIdContactId($request);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -1095,10 +1024,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest](../../models/operations/PutUcConnectionIdContactIdRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdSecurity](../../models/operations/PutUcConnectionIdContactIdSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest](../../models/operations/PutUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response

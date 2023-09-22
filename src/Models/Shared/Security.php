@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Unified\Unified_to\Models\Operations;
+namespace Unified\Unified_to\Models\Shared;
 
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
-class DeleteAtsConnectionIdJobIdSecurity
+class Security
 {
 	#[SpeakeasyMetadata('security:scheme=true,type=apiKey,subtype=header,name=authorization')]
     public string $jwt;

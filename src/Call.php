@@ -25,12 +25,10 @@ class Call
      * List all calls
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse
      */
 	public function getUcConnectionIdCall(
         ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -41,8 +39,7 @@ class Call
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -36,8 +36,6 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```php
 <?php
 
@@ -45,21 +43,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteTicketingConnectionIdAgentIdRequest();
-    $request->connectionId = 'corrupti';
-    $request->id = '9bd9d8d6-9a67-44e0-b467-cc8796ed151a';
+    $request->connectionId = 'perferendis';
+    $request->id = '5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb';
 
-    $requestSecurity = new DeleteTicketingConnectionIdAgentIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->agent->deleteTicketingConnectionIdAgentId($request, $requestSecurity);
+    $response = $sdk->agent->deleteTicketingConnectionIdAgentId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -561,6 +556,18 @@ try {
 * [getUnifiedWebhookId](docs/sdks/webhook/README.md#getunifiedwebhookid) - Retrieve webhook by its ID
 * [postUnifiedWebhookConnectionIdObject](docs/sdks/webhook/README.md#postunifiedwebhookconnectionidobject) - Create webhook subscription
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

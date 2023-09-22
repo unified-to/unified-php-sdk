@@ -22,21 +22,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteHrisConnectionIdGroupIdRequest();
-    $request->connectionId = 'doloremque';
-    $request->id = '358a82c8-08fe-4275-9a20-47c0449e143f';
+    $request->connectionId = 'inventore';
+    $request->id = 'a2047c04-49e1-443f-9619-bb7d40d5a11f';
 
-    $requestSecurity = new DeleteHrisConnectionIdGroupIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->group->deleteHrisConnectionIdGroupId($request, $requestSecurity);
+    $response = $sdk->group->deleteHrisConnectionIdGroupId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -48,10 +45,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest](../../models/operations/DeleteHrisConnectionIdGroupIdRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdSecurity](../../models/operations/DeleteHrisConnectionIdGroupIdSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest](../../models/operations/DeleteHrisConnectionIdGroupIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response
@@ -72,26 +68,23 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest;
-use \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetHrisConnectionIdGroupRequest();
-    $request->connectionId = 'natus';
-    $request->limit = 3881.71;
-    $request->offset = 981.38;
-    $request->order = 'excepturi';
-    $request->query = 'distinctio';
-    $request->sort = 'cum';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-02T18:21:43.719Z');
+    $request->connectionId = 'est';
+    $request->limit = 2688.56;
+    $request->offset = 1983.79;
+    $request->order = 'autem';
+    $request->query = 'repudiandae';
+    $request->sort = 'commodi';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-27T08:42:19.470Z');
 
-    $requestSecurity = new GetHrisConnectionIdGroupSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->group->getHrisConnectionIdGroup($request, $requestSecurity);
+    $response = $sdk->group->getHrisConnectionIdGroup($request);
 
     if ($response->hrisGroups !== null) {
         // handle response
@@ -103,10 +96,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest](../../models/operations/GetHrisConnectionIdGroupRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupSecurity](../../models/operations/GetHrisConnectionIdGroupSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest](../../models/operations/GetHrisConnectionIdGroupRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
@@ -127,21 +119,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest;
-use \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetHrisConnectionIdGroupIdRequest();
-    $request->connectionId = 'incidunt';
-    $request->id = '0d5a11fa-436e-4625-9233-f95c9d237397';
+    $request->connectionId = 'natus';
+    $request->id = '233f95c9-d237-4397-8785-b5db4f500183';
 
-    $requestSecurity = new GetHrisConnectionIdGroupIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->group->getHrisConnectionIdGroupId($request, $requestSecurity);
+    $response = $sdk->group->getHrisConnectionIdGroupId($request);
 
     if ($response->hrisGroup !== null) {
         // handle response
@@ -153,10 +142,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest](../../models/operations/GetHrisConnectionIdGroupIdRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdSecurity](../../models/operations/GetHrisConnectionIdGroupIdSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest](../../models/operations/GetHrisConnectionIdGroupIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -177,11 +165,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest;
 use \Unified\Unified_to\Models\Shared\HrisGroup;
 use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
 use \Unified\Unified_to\Models\Shared\HrisGroupType;
-use \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -189,28 +177,25 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchHrisConnectionIdGroupIdRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-24T20:49:56.592Z');
-    $request->hrisGroup->description = 'quas';
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-05-07T13:51:22.582Z');
+    $request->hrisGroup->description = 'tempore';
     $request->hrisGroup->employeeIds = [
-        'nemo',
+        'vero',
     ];
-    $request->hrisGroup->id = 'b5db4f50-0183-4feb-9f67-6b7206dab750';
+    $request->hrisGroup->id = 'f676b720-6dab-4750-852a-5647edc439ed';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'sit',
+        'corrupti',
     ];
-    $request->hrisGroup->name = 'Lois Padberg';
-    $request->hrisGroup->parentId = 'dolore';
+    $request->hrisGroup->name = 'Jay Ferry DVM';
+    $request->hrisGroup->parentId = 'incidunt';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Division;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-07T11:36:40.272Z');
-    $request->connectionId = 'minus';
-    $request->id = '439ed8c4-320f-4412-80d4-487ac693b94c';
+    $request->hrisGroup->type = HrisGroupType::Team;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-27T10:46:22.934Z');
+    $request->connectionId = 'voluptatem';
+    $request->id = 'd4487ac6-93b9-44c3-b9d2-488d795aa42f';
 
-    $requestSecurity = new PatchHrisConnectionIdGroupIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->group->patchHrisConnectionIdGroupId($request, $requestSecurity);
+    $response = $sdk->group->patchHrisConnectionIdGroupId($request);
 
     if ($response->hrisGroup !== null) {
         // handle response
@@ -222,10 +207,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest](../../models/operations/PatchHrisConnectionIdGroupIdRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdSecurity](../../models/operations/PatchHrisConnectionIdGroupIdSecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest](../../models/operations/PatchHrisConnectionIdGroupIdRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
@@ -246,11 +230,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest;
 use \Unified\Unified_to\Models\Shared\HrisGroup;
 use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
 use \Unified\Unified_to\Models\Shared\HrisGroupType;
-use \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -258,27 +242,24 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostHrisConnectionIdGroupRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-22T08:13:23.249Z');
-    $request->hrisGroup->description = 'unde';
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-12T23:00:01.148Z');
+    $request->hrisGroup->description = 'accusantium';
     $request->hrisGroup->employeeIds = [
-        'fugiat',
+        'corporis',
     ];
-    $request->hrisGroup->id = '2488d795-aa42-4fc4-8566-9f69a006d212';
+    $request->hrisGroup->id = '669f69a0-06d2-4124-9450-819d7c3b1b41';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'labore',
+        'atque',
     ];
-    $request->hrisGroup->name = 'Ms. Micheal Herman V';
-    $request->hrisGroup->parentId = 'fugiat';
+    $request->hrisGroup->name = 'Eva Adams PhD';
+    $request->hrisGroup->parentId = 'accusantium';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Division;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-10T03:30:41.953Z');
-    $request->connectionId = 'cum';
+    $request->hrisGroup->type = HrisGroupType::Team;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-01T19:20:31.162Z');
+    $request->connectionId = 'ipsa';
 
-    $requestSecurity = new PostHrisConnectionIdGroupSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->group->postHrisConnectionIdGroup($request, $requestSecurity);
+    $response = $sdk->group->postHrisConnectionIdGroup($request);
 
     if ($response->hrisGroup !== null) {
         // handle response
@@ -290,10 +271,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest](../../models/operations/PostHrisConnectionIdGroupRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupSecurity](../../models/operations/PostHrisConnectionIdGroupSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest](../../models/operations/PostHrisConnectionIdGroupRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -314,11 +294,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest;
 use \Unified\Unified_to\Models\Shared\HrisGroup;
 use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
 use \Unified\Unified_to\Models\Shared\HrisGroupType;
-use \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -326,28 +306,25 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutHrisConnectionIdGroupIdRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-24T09:45:54.515Z');
-    $request->hrisGroup->description = 'magnam';
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-13T12:17:37.565Z');
+    $request->hrisGroup->description = 'qui';
     $request->hrisGroup->employeeIds = [
-        'illo',
+        'velit',
     ];
-    $request->hrisGroup->id = '844060e0-0310-4d02-bdc9-01f5afd2a6c4';
+    $request->hrisGroup->id = 'dc901f5a-fd2a-46c4-8846-ae9d89253c89';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'magnam',
+        'ea',
     ];
-    $request->hrisGroup->name = 'Jesus Kerluke';
-    $request->hrisGroup->parentId = 'molestias';
+    $request->hrisGroup->name = 'Lucia Hahn';
+    $request->hrisGroup->parentId = 'eum';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Branch;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-03T07:45:54.681Z');
-    $request->connectionId = 'eos';
-    $request->id = '53c8962f-4896-4bf5-9e46-52d3c343d617';
+    $request->hrisGroup->type = HrisGroupType::BusinessUnit;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-15T01:08:49.822Z');
+    $request->connectionId = 'et';
+    $request->id = 'e4652d3c-343d-4617-b8af-491247725e62';
 
-    $requestSecurity = new PutHrisConnectionIdGroupIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->group->putHrisConnectionIdGroupId($request, $requestSecurity);
+    $response = $sdk->group->putHrisConnectionIdGroupId($request);
 
     if ($response->hrisGroup !== null) {
         // handle response
@@ -359,10 +336,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest](../../models/operations/PutHrisConnectionIdGroupIdRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdSecurity](../../models/operations/PutHrisConnectionIdGroupIdSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest](../../models/operations/PutHrisConnectionIdGroupIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response

@@ -25,12 +25,10 @@ class Crm
      * Remove a company
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdResponse
      */
 	public function deleteCrmConnectionIdCompanyId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Crm
      * Remove deal association from a company
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdResponse
      */
 	public function deleteCrmConnectionIdCompanyIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -78,8 +73,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -102,12 +96,10 @@ class Crm
      * Remove a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdResponse
      */
 	public function deleteCrmConnectionIdContactId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -117,8 +109,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -140,12 +131,10 @@ class Crm
      * Remove company association from a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdResponse
      */
 	public function deleteCrmConnectionIdContactIdCompanyCompanyId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdCompanyCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -155,8 +144,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -179,12 +167,10 @@ class Crm
      * Remove deal association from a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdResponse
      */
 	public function deleteCrmConnectionIdContactIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdContactIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -194,8 +180,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -218,12 +203,10 @@ class Crm
      * Remove a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdResponse
      */
 	public function deleteCrmConnectionIdDealId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -233,8 +216,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -256,12 +238,10 @@ class Crm
      * Remove a event
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdResponse
      */
 	public function deleteCrmConnectionIdEventId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -271,8 +251,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -294,12 +273,10 @@ class Crm
      * Remove company association from an event
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdCompanyCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdCompanyCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdCompanyCompanyIdResponse
      */
 	public function deleteCrmConnectionIdEventIdCompanyCompanyId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdCompanyCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdCompanyCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdCompanyCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -309,8 +286,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -333,12 +309,10 @@ class Crm
      * Remove contact association from an event
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdContactContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdContactContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdContactContactIdResponse
      */
 	public function deleteCrmConnectionIdEventIdContactContactId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdContactContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdContactContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdContactContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -348,8 +322,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -372,12 +345,10 @@ class Crm
      * Remove deal association from an event
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdDealDealIdResponse
      */
 	public function deleteCrmConnectionIdEventIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -387,8 +358,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -411,12 +381,10 @@ class Crm
      * Remove a file
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdResponse
      */
 	public function deleteCrmConnectionIdFileId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -426,8 +394,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -449,12 +416,10 @@ class Crm
      * Remove a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdResponse
      */
 	public function deleteCrmConnectionIdLeadId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -464,8 +429,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -487,12 +451,10 @@ class Crm
      * Remove a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdResponse
      */
 	public function deleteCrmConnectionIdPipelineId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -502,8 +464,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -525,12 +486,10 @@ class Crm
      * Remove a team
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdResponse
      */
 	public function deleteCrmConnectionIdTeamId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -540,8 +499,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -563,12 +521,10 @@ class Crm
      * Remove a user
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdResponse
      */
 	public function deleteCrmConnectionIdUserId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -578,8 +534,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -601,12 +556,10 @@ class Crm
      * List all companies
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyResponse
      */
 	public function getCrmConnectionIdCompany(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -617,8 +570,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -641,12 +593,10 @@ class Crm
      * Retrieve a company
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdResponse
      */
 	public function getCrmConnectionIdCompanyId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -656,8 +606,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -680,12 +629,10 @@ class Crm
      * List all contacts
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactResponse
      */
 	public function getCrmConnectionIdContact(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -696,8 +643,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -720,12 +666,10 @@ class Crm
      * Retrieve a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdResponse
      */
 	public function getCrmConnectionIdContactId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -735,8 +679,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -759,12 +702,10 @@ class Crm
      * List all deals
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealResponse
      */
 	public function getCrmConnectionIdDeal(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -775,8 +716,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -799,12 +739,10 @@ class Crm
      * Retrieve a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdResponse
      */
 	public function getCrmConnectionIdDealId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -814,8 +752,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -838,12 +775,10 @@ class Crm
      * List all events
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventResponse
      */
 	public function getCrmConnectionIdEvent(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -854,8 +789,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -878,12 +812,10 @@ class Crm
      * Retrieve a event
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventIdResponse
      */
 	public function getCrmConnectionIdEventId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -893,8 +825,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -917,12 +848,10 @@ class Crm
      * List all files
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileResponse
      */
 	public function getCrmConnectionIdFile(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -933,8 +862,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -957,12 +885,10 @@ class Crm
      * Retrieve a file
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdResponse
      */
 	public function getCrmConnectionIdFileId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -972,8 +898,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -996,12 +921,10 @@ class Crm
      * List all leads
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadResponse
      */
 	public function getCrmConnectionIdLead(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1012,8 +935,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1036,12 +958,10 @@ class Crm
      * Retrieve a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdResponse
      */
 	public function getCrmConnectionIdLeadId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1051,8 +971,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1075,12 +994,10 @@ class Crm
      * List all pipelines
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineResponse
      */
 	public function getCrmConnectionIdPipeline(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1091,8 +1008,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1115,12 +1031,10 @@ class Crm
      * Retrieve a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdResponse
      */
 	public function getCrmConnectionIdPipelineId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1130,8 +1044,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1154,12 +1067,10 @@ class Crm
      * List all teams
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamResponse
      */
 	public function getCrmConnectionIdTeam(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1170,8 +1081,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1194,12 +1104,10 @@ class Crm
      * Retrieve a team
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdResponse
      */
 	public function getCrmConnectionIdTeamId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1209,8 +1117,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1233,12 +1140,10 @@ class Crm
      * List all users
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserResponse
      */
 	public function getCrmConnectionIdUser(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1249,8 +1154,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1273,12 +1177,10 @@ class Crm
      * Retrieve a user
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdResponse
      */
 	public function getCrmConnectionIdUserId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1288,8 +1190,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1312,12 +1213,10 @@ class Crm
      * Update a company
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdResponse
      */
 	public function patchCrmConnectionIdCompanyId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1331,8 +1230,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1355,12 +1253,10 @@ class Crm
      * Associate a deal with a company
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdResponse
      */
 	public function patchCrmConnectionIdCompanyIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1370,8 +1266,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1394,12 +1289,10 @@ class Crm
      * Update a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdResponse
      */
 	public function patchCrmConnectionIdContactId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1413,8 +1306,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1437,12 +1329,10 @@ class Crm
      * Associate a company with a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdResponse
      */
 	public function patchCrmConnectionIdContactIdCompanyCompanyId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdCompanyCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1452,8 +1342,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1476,12 +1365,10 @@ class Crm
      * Associate a deal with a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdResponse
      */
 	public function patchCrmConnectionIdContactIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdContactIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1491,8 +1378,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1515,12 +1401,10 @@ class Crm
      * Update a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdResponse
      */
 	public function patchCrmConnectionIdDealId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1534,8 +1418,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1558,12 +1441,10 @@ class Crm
      * Update a event
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdResponse
      */
 	public function patchCrmConnectionIdEventId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1577,8 +1458,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1601,12 +1481,10 @@ class Crm
      * Associate a company with an event
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdCompanyCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdCompanyCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdCompanyCompanyIdResponse
      */
 	public function patchCrmConnectionIdEventIdCompanyCompanyId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdCompanyCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdCompanyCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdCompanyCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1616,8 +1494,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1640,12 +1517,10 @@ class Crm
      * Associate a contact with an event
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdContactContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdContactContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdContactContactIdResponse
      */
 	public function patchCrmConnectionIdEventIdContactContactId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdContactContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdContactContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdContactContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1655,8 +1530,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1679,12 +1553,10 @@ class Crm
      * Associate a deal with an event
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdDealDealIdResponse
      */
 	public function patchCrmConnectionIdEventIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdEventIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1694,8 +1566,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1718,12 +1589,10 @@ class Crm
      * Update a file
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdResponse
      */
 	public function patchCrmConnectionIdFileId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1737,8 +1606,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1761,12 +1629,10 @@ class Crm
      * Update a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdResponse
      */
 	public function patchCrmConnectionIdLeadId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1780,8 +1646,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1804,12 +1669,10 @@ class Crm
      * Update a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdResponse
      */
 	public function patchCrmConnectionIdPipelineId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1823,8 +1686,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1847,12 +1709,10 @@ class Crm
      * Update a team
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdResponse
      */
 	public function patchCrmConnectionIdTeamId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1866,8 +1726,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1890,12 +1749,10 @@ class Crm
      * Update a user
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdResponse
      */
 	public function patchCrmConnectionIdUserId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1909,8 +1766,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1933,12 +1789,10 @@ class Crm
      * Create a company
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanyRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanyResponse
      */
 	public function postCrmConnectionIdCompany(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanyRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1952,8 +1806,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1976,12 +1829,10 @@ class Crm
      * Create a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactResponse
      */
 	public function postCrmConnectionIdContact(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1995,8 +1846,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2019,12 +1869,10 @@ class Crm
      * Create a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealResponse
      */
 	public function postCrmConnectionIdDeal(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2038,8 +1886,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2062,12 +1909,10 @@ class Crm
      * Create a event
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdEventRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdEventResponse
      */
 	public function postCrmConnectionIdEvent(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdEventRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2081,8 +1926,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2105,12 +1949,10 @@ class Crm
      * Create a file
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileResponse
      */
 	public function postCrmConnectionIdFile(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2124,8 +1966,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2148,12 +1989,10 @@ class Crm
      * Create a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadResponse
      */
 	public function postCrmConnectionIdLead(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2167,8 +2006,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2191,12 +2029,10 @@ class Crm
      * Create a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineResponse
      */
 	public function postCrmConnectionIdPipeline(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2210,8 +2046,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2234,12 +2069,10 @@ class Crm
      * Create a team
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamResponse
      */
 	public function postCrmConnectionIdTeam(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2253,8 +2086,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2277,12 +2109,10 @@ class Crm
      * Create a user
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserResponse
      */
 	public function postCrmConnectionIdUser(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2296,8 +2126,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2320,12 +2149,10 @@ class Crm
      * Update a company
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdResponse
      */
 	public function putCrmConnectionIdCompanyId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2339,8 +2166,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2363,12 +2189,10 @@ class Crm
      * Associate a deal with a company
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdResponse
      */
 	public function putCrmConnectionIdCompanyIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2378,8 +2202,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2402,12 +2225,10 @@ class Crm
      * Update a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdResponse
      */
 	public function putCrmConnectionIdContactId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2421,8 +2242,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2445,12 +2265,10 @@ class Crm
      * Associate a company with a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdResponse
      */
 	public function putCrmConnectionIdContactIdCompanyCompanyId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdCompanyCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2460,8 +2278,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2484,12 +2301,10 @@ class Crm
      * Associate a deal with a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdResponse
      */
 	public function putCrmConnectionIdContactIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdContactIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2499,8 +2314,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2523,12 +2337,10 @@ class Crm
      * Update a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdResponse
      */
 	public function putCrmConnectionIdDealId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2542,8 +2354,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2566,12 +2377,10 @@ class Crm
      * Update a event
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdResponse
      */
 	public function putCrmConnectionIdEventId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2585,8 +2394,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2609,12 +2417,10 @@ class Crm
      * Associate a company with an event
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdCompanyCompanyIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdCompanyCompanyIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdCompanyCompanyIdResponse
      */
 	public function putCrmConnectionIdEventIdCompanyCompanyId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdCompanyCompanyIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdCompanyCompanyIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdCompanyCompanyIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2624,8 +2430,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2648,12 +2453,10 @@ class Crm
      * Associate a contact with an event
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdContactContactIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdContactContactIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdContactContactIdResponse
      */
 	public function putCrmConnectionIdEventIdContactContactId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdContactContactIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdContactContactIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdContactContactIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2663,8 +2466,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2687,12 +2489,10 @@ class Crm
      * Associate a deal with an event
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdDealDealIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdDealDealIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdDealDealIdResponse
      */
 	public function putCrmConnectionIdEventIdDealDealId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdDealDealIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdDealDealIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdEventIdDealDealIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2702,8 +2502,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2726,12 +2525,10 @@ class Crm
      * Update a file
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdResponse
      */
 	public function putCrmConnectionIdFileId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2745,8 +2542,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2769,12 +2565,10 @@ class Crm
      * Update a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdResponse
      */
 	public function putCrmConnectionIdLeadId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2788,8 +2582,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2812,12 +2605,10 @@ class Crm
      * Update a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdResponse
      */
 	public function putCrmConnectionIdPipelineId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2831,8 +2622,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2855,12 +2645,10 @@ class Crm
      * Update a team
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdResponse
      */
 	public function putCrmConnectionIdTeamId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2874,8 +2662,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2898,12 +2685,10 @@ class Crm
      * Update a user
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdResponse
      */
 	public function putCrmConnectionIdUserId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -2917,8 +2702,7 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

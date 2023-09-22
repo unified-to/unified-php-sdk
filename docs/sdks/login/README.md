@@ -17,6 +17,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest;
 
 $sdk = UnifiedTo::builder()
@@ -24,13 +25,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'consequuntur';
-    $request->failureRedirect = 'iusto';
-    $request->integrationType = 'explicabo';
+    $request->env = 'reprehenderit';
+    $request->failureRedirect = 'iste';
+    $request->integrationType = 'ratione';
     $request->redirect = false;
-    $request->state = 'autem';
-    $request->successRedirect = 'nostrum';
-    $request->workspaceId = 'esse';
+    $request->state = 'consequatur';
+    $request->successRedirect = 'pariatur';
+    $request->workspaceId = 'eum';
 
     $response = $sdk->login->getUnifiedIntegrationLoginWorkspaceIdIntegrationType($request);
 

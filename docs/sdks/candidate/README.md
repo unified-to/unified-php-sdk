@@ -22,21 +22,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteAtsConnectionIdCandidateIdRequest();
-    $request->connectionId = 'illo';
-    $request->id = 'faf4b754-4e47-42e8-8285-7a5b40463a7d';
+    $request->connectionId = 'magnam';
+    $request->id = '0463a7d5-75f1-4400-a764-ad7334ec1b78';
 
-    $requestSecurity = new DeleteAtsConnectionIdCandidateIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->candidate->deleteAtsConnectionIdCandidateId($request, $requestSecurity);
+    $response = $sdk->candidate->deleteAtsConnectionIdCandidateId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -48,10 +45,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdRequest](../../models/operations/DeleteAtsConnectionIdCandidateIdRequest.md)   | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
-| `security`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdSecurity](../../models/operations/DeleteAtsConnectionIdCandidateIdSecurity.md) | :heavy_check_mark:                                                                                                                                    | The security requirements to use for the request.                                                                                                     |
+| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdRequest](../../models/operations/DeleteAtsConnectionIdCandidateIdRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
 
 
 ### Response
@@ -72,26 +68,23 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateRequest;
-use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetAtsConnectionIdCandidateRequest();
-    $request->connectionId = 'nostrum';
-    $request->limit = 4753.25;
-    $request->offset = 3306;
-    $request->order = 'reiciendis';
-    $request->query = 'ab';
-    $request->sort = 'modi';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-27T01:39:48.546Z');
+    $request->connectionId = 'et';
+    $request->limit = 7049.48;
+    $request->offset = 2292.76;
+    $request->order = 'autem';
+    $request->query = 'fuga';
+    $request->sort = 'alias';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-23T17:03:28.575Z');
 
-    $requestSecurity = new GetAtsConnectionIdCandidateSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->candidate->getAtsConnectionIdCandidate($request, $requestSecurity);
+    $response = $sdk->candidate->getAtsConnectionIdCandidate($request);
 
     if ($response->atsCandidates !== null) {
         // handle response
@@ -103,10 +96,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateRequest](../../models/operations/GetAtsConnectionIdCandidateRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateSecurity](../../models/operations/GetAtsConnectionIdCandidateSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateRequest](../../models/operations/GetAtsConnectionIdCandidateRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -127,21 +119,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdRequest;
-use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetAtsConnectionIdCandidateIdRequest();
-    $request->connectionId = 'eveniet';
-    $request->id = '764ad733-4ec1-4b78-9b36-a08088d100ef';
+    $request->connectionId = 'quos';
+    $request->id = '8d100efa-da20-40ef-8422-eb2164cf9ab8';
 
-    $requestSecurity = new GetAtsConnectionIdCandidateIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->candidate->getAtsConnectionIdCandidateId($request, $requestSecurity);
+    $response = $sdk->candidate->getAtsConnectionIdCandidateId($request);
 
     if ($response->atsCandidate !== null) {
         // handle response
@@ -153,10 +142,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdRequest](../../models/operations/GetAtsConnectionIdCandidateIdRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdSecurity](../../models/operations/GetAtsConnectionIdCandidateIdSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdRequest](../../models/operations/GetAtsConnectionIdCandidateIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response
@@ -177,6 +165,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdRequest;
 use \Unified\Unified_to\Models\Shared\AtsCandidate;
 use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
@@ -185,7 +174,6 @@ use \Unified\Unified_to\Models\Shared\AtsEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
-use \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -194,39 +182,36 @@ try {
     $request = new PatchAtsConnectionIdCandidateIdRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'mollitia';
-    $request->atsCandidate->address->address2 = 'nulla';
-    $request->atsCandidate->address->city = 'Corwintown';
-    $request->atsCandidate->address->country = 'Afghanistan';
-    $request->atsCandidate->address->countryCode = 'TV';
-    $request->atsCandidate->address->postalCode = '02118-6113';
-    $request->atsCandidate->address->region = 'modi';
-    $request->atsCandidate->address->regionCode = 'optio';
-    $request->atsCandidate->companyName = 'voluptatibus';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-21T04:36:43.651Z');
+    $request->atsCandidate->address->address1 = 'sequi';
+    $request->atsCandidate->address->address2 = 'aliquid';
+    $request->atsCandidate->address->city = 'Oniemouth';
+    $request->atsCandidate->address->country = 'Burundi';
+    $request->atsCandidate->address->countryCode = 'DO';
+    $request->atsCandidate->address->postalCode = '98668-0379';
+    $request->atsCandidate->address->region = 'voluptates';
+    $request->atsCandidate->address->regionCode = 'non';
+    $request->atsCandidate->companyName = 'rem';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-24T16:59:25.397Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'libero';
-    $request->atsCandidate->id = '8366c723-ffda-49e0-abee-4825c1fc0e11';
-    $request->atsCandidate->imageUrl = 'enim';
-    $request->atsCandidate->name = 'Ian Auer';
+    $request->atsCandidate->externalId = 'quisquam';
+    $request->atsCandidate->id = '1fc0e115-c80b-4ff9-9854-4ec42defcce8';
+    $request->atsCandidate->imageUrl = 'reiciendis';
+    $request->atsCandidate->name = 'Becky Kozey';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'a',
+        'odio',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'Miss';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-13T08:38:01.413Z');
-    $request->connectionId = 'ullam';
-    $request->id = '44ec42de-fcce-48f1-9777-73e63562a7b4';
+    $request->atsCandidate->title = 'Mrs.';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-24T04:06:59.820Z');
+    $request->connectionId = 'neque';
+    $request->id = '562a7b40-8f05-4e3d-88fd-af313a1f5fd9';
 
-    $requestSecurity = new PatchAtsConnectionIdCandidateIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->candidate->patchAtsConnectionIdCandidateId($request, $requestSecurity);
+    $response = $sdk->candidate->patchAtsConnectionIdCandidateId($request);
 
     if ($response->atsCandidate !== null) {
         // handle response
@@ -238,10 +223,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdRequest](../../models/operations/PatchAtsConnectionIdCandidateIdRequest.md)   | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-| `security`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdSecurity](../../models/operations/PatchAtsConnectionIdCandidateIdSecurity.md) | :heavy_check_mark:                                                                                                                                  | The security requirements to use for the request.                                                                                                   |
+| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdCandidateIdRequest](../../models/operations/PatchAtsConnectionIdCandidateIdRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
@@ -262,6 +246,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateRequest;
 use \Unified\Unified_to\Models\Shared\AtsCandidate;
 use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
@@ -270,7 +255,6 @@ use \Unified\Unified_to\Models\Shared\AtsEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
-use \Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -279,38 +263,35 @@ try {
     $request = new PostAtsConnectionIdCandidateRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'ipsa';
-    $request->atsCandidate->address->address2 = 'rem';
-    $request->atsCandidate->address->city = 'Arecibo';
-    $request->atsCandidate->address->country = 'Gibraltar';
-    $request->atsCandidate->address->countryCode = 'TT';
-    $request->atsCandidate->address->postalCode = '83598';
-    $request->atsCandidate->address->region = 'est';
-    $request->atsCandidate->address->regionCode = 'delectus';
-    $request->atsCandidate->companyName = 'velit';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-19T14:23:55.205Z');
+    $request->atsCandidate->address->address1 = 'incidunt';
+    $request->atsCandidate->address->address2 = 'explicabo';
+    $request->atsCandidate->address->city = 'New Nola';
+    $request->atsCandidate->address->country = 'Afghanistan';
+    $request->atsCandidate->address->countryCode = 'PE';
+    $request->atsCandidate->address->postalCode = '49138';
+    $request->atsCandidate->address->region = 'officia';
+    $request->atsCandidate->address->regionCode = 'sint';
+    $request->atsCandidate->companyName = 'ut';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-20T01:04:48.949Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'similique';
-    $request->atsCandidate->id = '1f5fd942-59c0-4b36-b25e-a944f3b756c1';
-    $request->atsCandidate->imageUrl = 'beatae';
-    $request->atsCandidate->name = 'Charlie Schaefer';
+    $request->atsCandidate->externalId = 'adipisci';
+    $request->atsCandidate->id = 'b756c11f-6c37-4a51-a624-3835bbc05a23';
+    $request->atsCandidate->imageUrl = 'deserunt';
+    $request->atsCandidate->name = 'Sally Schmidt';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'fuga',
+        'quisquam',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
     $request->atsCandidate->title = 'Mrs.';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-26T18:16:01.869Z');
-    $request->connectionId = 'aliquid';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-07-09T15:33:26.948Z');
+    $request->connectionId = 'officiis';
 
-    $requestSecurity = new PostAtsConnectionIdCandidateSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->candidate->postAtsConnectionIdCandidate($request, $requestSecurity);
+    $response = $sdk->candidate->postAtsConnectionIdCandidate($request);
 
     if ($response->atsCandidate !== null) {
         // handle response
@@ -322,10 +303,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateRequest](../../models/operations/PostAtsConnectionIdCandidateRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateSecurity](../../models/operations/PostAtsConnectionIdCandidateSecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdCandidateRequest](../../models/operations/PostAtsConnectionIdCandidateRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
@@ -346,6 +326,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdRequest;
 use \Unified\Unified_to\Models\Shared\AtsCandidate;
 use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
@@ -354,7 +335,6 @@ use \Unified\Unified_to\Models\Shared\AtsEmailType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
-use \Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -363,39 +343,36 @@ try {
     $request = new PutAtsConnectionIdCandidateIdRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'magni';
-    $request->atsCandidate->address->address2 = 'incidunt';
-    $request->atsCandidate->address->city = 'New Dakota';
-    $request->atsCandidate->address->country = 'Guam';
-    $request->atsCandidate->address->countryCode = 'PH';
-    $request->atsCandidate->address->postalCode = '70361-2623';
-    $request->atsCandidate->address->region = 'quod';
-    $request->atsCandidate->address->regionCode = 'itaque';
-    $request->atsCandidate->companyName = 'a';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-19T09:03:37.544Z');
+    $request->atsCandidate->address->address1 = 'architecto';
+    $request->atsCandidate->address->address2 = 'alias';
+    $request->atsCandidate->address->city = 'Beierfort';
+    $request->atsCandidate->address->country = 'Tonga';
+    $request->atsCandidate->address->countryCode = 'CC';
+    $request->atsCandidate->address->postalCode = '45831';
+    $request->atsCandidate->address->region = 'accusantium';
+    $request->atsCandidate->address->regionCode = 'perferendis';
+    $request->atsCandidate->companyName = 'veritatis';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-06-20T22:36:53.570Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'doloribus';
-    $request->atsCandidate->id = 'de10a0ce-2169-4e51-8019-c6dc5e347627';
-    $request->atsCandidate->imageUrl = 'natus';
-    $request->atsCandidate->name = 'Felipe Wyman';
+    $request->atsCandidate->externalId = 'iure';
+    $request->atsCandidate->id = 'dc5e3476-2799-4bfb-be69-49fb2bb4ecae';
+    $request->atsCandidate->imageUrl = 'autem';
+    $request->atsCandidate->name = 'Antonio Stanton';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'itaque',
+        'facilis',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
     $request->atsCandidate->title = 'Mrs.';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-22T10:47:23.716Z');
-    $request->connectionId = 'perspiciatis';
-    $request->id = 'fb2bb4ec-ae6c-43d5-9b3a-debd5daea4c5';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-07T06:03:57.365Z');
+    $request->connectionId = 'recusandae';
+    $request->id = 'bd5daea4-c506-4a8a-a94c-02644cf5e9d9';
 
-    $requestSecurity = new PutAtsConnectionIdCandidateIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->candidate->putAtsConnectionIdCandidateId($request, $requestSecurity);
+    $response = $sdk->candidate->putAtsConnectionIdCandidateId($request);
 
     if ($response->atsCandidate !== null) {
         // handle response
@@ -407,10 +384,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdRequest](../../models/operations/PutAtsConnectionIdCandidateIdRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdSecurity](../../models/operations/PutAtsConnectionIdCandidateIdSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdCandidateIdRequest](../../models/operations/PutAtsConnectionIdCandidateIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response

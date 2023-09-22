@@ -22,21 +22,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteCrmConnectionIdDealIdRequest();
-    $request->connectionId = 'nostrum';
-    $request->id = '4fdd5ea9-5433-498d-afb4-2a8d63388e4d';
+    $request->connectionId = 'occaecati';
+    $request->id = '8dafb42a-8d63-4388-a4d8-039ea5f9b18a';
 
-    $requestSecurity = new DeleteCrmConnectionIdDealIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->deal->deleteCrmConnectionIdDealId($request, $requestSecurity);
+    $response = $sdk->deal->deleteCrmConnectionIdDealId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -48,10 +45,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest](../../models/operations/DeleteCrmConnectionIdDealIdRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdSecurity](../../models/operations/DeleteCrmConnectionIdDealIdSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest](../../models/operations/DeleteCrmConnectionIdDealIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -72,28 +68,25 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetCrmConnectionIdDealRequest();
-    $request->companyId = 'deleniti';
-    $request->connectionId = 'aut';
-    $request->contactId = 'nesciunt';
-    $request->limit = 6241.64;
-    $request->offset = 8999.43;
-    $request->order = 'culpa';
-    $request->query = 'quis';
-    $request->sort = 'asperiores';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-16T09:16:26.639Z');
+    $request->companyId = 'qui';
+    $request->connectionId = 'tempora';
+    $request->contactId = 'modi';
+    $request->limit = 9565.32;
+    $request->offset = 8198.45;
+    $request->order = 'nisi';
+    $request->query = 'ab';
+    $request->sort = 'omnis';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-14T05:28:28.891Z');
 
-    $requestSecurity = new GetCrmConnectionIdDealSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->deal->getCrmConnectionIdDeal($request, $requestSecurity);
+    $response = $sdk->deal->getCrmConnectionIdDeal($request);
 
     if ($response->crmDeals !== null) {
         // handle response
@@ -105,10 +98,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest](../../models/operations/GetCrmConnectionIdDealRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealSecurity](../../models/operations/GetCrmConnectionIdDealSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest](../../models/operations/GetCrmConnectionIdDealRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
@@ -129,21 +121,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetCrmConnectionIdDealIdRequest();
-    $request->connectionId = 'sunt';
-    $request->id = '8a244fd6-1903-49da-8d38-ed0dc671dc7f';
+    $request->connectionId = 'iste';
+    $request->id = 'dacd38ed-0dc6-471d-87f1-e3af15920c90';
 
-    $requestSecurity = new GetCrmConnectionIdDealIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->deal->getCrmConnectionIdDealId($request, $requestSecurity);
+    $response = $sdk->deal->getCrmConnectionIdDealId($request);
 
     if ($response->crmDeal !== null) {
         // handle response
@@ -155,10 +144,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest](../../models/operations/GetCrmConnectionIdDealIdRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdSecurity](../../models/operations/GetCrmConnectionIdDealIdSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest](../../models/operations/GetCrmConnectionIdDealIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
@@ -179,10 +167,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmDeal;
 use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -190,30 +178,27 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmConnectionIdDealIdRequest();
     $request->crmDeal = new CrmDeal();
-    $request->crmDeal->amount = 655.82;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-27T22:22:59.359Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-05T02:33:10.229Z');
-    $request->crmDeal->currency = 'quasi';
-    $request->crmDeal->id = '5920c90d-1b49-401f-abd8-9c8a32639da5';
-    $request->crmDeal->lostReason = 'facilis';
-    $request->crmDeal->name = 'Gayle Huel Sr.';
-    $request->crmDeal->pipeline = 'facilis';
-    $request->crmDeal->probability = 5423.22;
+    $request->crmDeal->amount = 8337.06;
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-05T08:51:46.893Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T06:29:04.361Z');
+    $request->crmDeal->currency = 'aperiam';
+    $request->crmDeal->id = '1f2bd89c-8a32-4639-9a5b-7b6902b881a9';
+    $request->crmDeal->lostReason = 'incidunt';
+    $request->crmDeal->name = 'Brett Gleichner';
+    $request->crmDeal->pipeline = 'autem';
+    $request->crmDeal->probability = 2725.62;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'atque';
-    $request->crmDeal->stage = 'illo';
+    $request->crmDeal->source = 'mollitia';
+    $request->crmDeal->stage = 'quas';
     $request->crmDeal->tags = [
-        'dolorum',
+        'hic',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-11T21:23:09.486Z');
-    $request->crmDeal->wonReason = 'maiores';
-    $request->connectionId = 'ea';
-    $request->id = '43664a8f-0af8-4c69-9d73-2d9fbaf9476a';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-03T20:06:53.494Z');
+    $request->crmDeal->wonReason = 'asperiores';
+    $request->connectionId = 'rem';
+    $request->id = 'c691d732-d9fb-4af9-876a-2ae8dcc50c8a';
 
-    $requestSecurity = new PatchCrmConnectionIdDealIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->deal->patchCrmConnectionIdDealId($request, $requestSecurity);
+    $response = $sdk->deal->patchCrmConnectionIdDealId($request);
 
     if ($response->crmDeal !== null) {
         // handle response
@@ -225,10 +210,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest](../../models/operations/PatchCrmConnectionIdDealIdRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdSecurity](../../models/operations/PatchCrmConnectionIdDealIdSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest](../../models/operations/PatchCrmConnectionIdDealIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -249,10 +233,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest;
 use \Unified\Unified_to\Models\Shared\CrmDeal;
 use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
-use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -260,29 +244,26 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostCrmConnectionIdDealRequest();
     $request->crmDeal = new CrmDeal();
-    $request->crmDeal->amount = 1829.52;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-31T02:28:56.167Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-09T10:10:01.467Z');
-    $request->crmDeal->currency = 'optio';
-    $request->crmDeal->id = 'c50c8a35-12c7-4378-8893-0750a00e966e';
-    $request->crmDeal->lostReason = 'eligendi';
-    $request->crmDeal->name = 'Florence Keeling';
-    $request->crmDeal->pipeline = 'neque';
-    $request->crmDeal->probability = 816.89;
+    $request->crmDeal->amount = 2350.13;
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-18T07:33:26.747Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-21T17:04:09.123Z');
+    $request->crmDeal->currency = 'iusto';
+    $request->crmDeal->id = '37848930-750a-400e-966e-c736d4319439';
+    $request->crmDeal->lostReason = 'corrupti';
+    $request->crmDeal->name = 'Javier Lindgren';
+    $request->crmDeal->pipeline = 'cupiditate';
+    $request->crmDeal->probability = 1577.51;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'omnis';
-    $request->crmDeal->stage = 'quaerat';
+    $request->crmDeal->source = 'dolor';
+    $request->crmDeal->stage = 'cupiditate';
     $request->crmDeal->tags = [
-        'nesciunt',
+        'praesentium',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-27T13:13:17.103Z');
-    $request->crmDeal->wonReason = 'optio';
-    $request->connectionId = 'molestiae';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-06T17:44:39.339Z');
+    $request->crmDeal->wonReason = 'ipsum';
+    $request->connectionId = 'pariatur';
 
-    $requestSecurity = new PostCrmConnectionIdDealSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->deal->postCrmConnectionIdDeal($request, $requestSecurity);
+    $response = $sdk->deal->postCrmConnectionIdDeal($request);
 
     if ($response->crmDeal !== null) {
         // handle response
@@ -294,10 +275,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest](../../models/operations/PostCrmConnectionIdDealRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealSecurity](../../models/operations/PostCrmConnectionIdDealSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest](../../models/operations/PostCrmConnectionIdDealRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
@@ -318,10 +298,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmDeal;
 use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -329,30 +309,27 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutCrmConnectionIdDealIdRequest();
     $request->crmDeal = new CrmDeal();
-    $request->crmDeal->amount = 5408.26;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-30T05:40:43.542Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-07T20:11:30.814Z');
-    $request->crmDeal->currency = 'dolor';
-    $request->crmDeal->id = '98ed3d3a-b7ca-43c5-8a86-49a70cfd5d69';
-    $request->crmDeal->lostReason = 'corrupti';
-    $request->crmDeal->name = 'Rudy Kirlin III';
-    $request->crmDeal->pipeline = 'magnam';
-    $request->crmDeal->probability = 3189;
+    $request->crmDeal->amount = 2276.69;
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-03T15:27:44.400Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-10T14:22:57.077Z');
+    $request->crmDeal->currency = 'est';
+    $request->crmDeal->id = '3c5ca864-9a70-4cfd-9d69-89b720645107';
+    $request->crmDeal->lostReason = 'voluptate';
+    $request->crmDeal->name = 'Harold Metz';
+    $request->crmDeal->pipeline = 'voluptatum';
+    $request->crmDeal->probability = 1880.08;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'quae';
-    $request->crmDeal->stage = 'ipsa';
+    $request->crmDeal->source = 'facere';
+    $request->crmDeal->stage = 'eius';
     $request->crmDeal->tags = [
-        'iure',
+        'perspiciatis',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-24T22:30:32.992Z');
-    $request->crmDeal->wonReason = 'et';
-    $request->connectionId = 'perspiciatis';
-    $request->id = 'ea83d492-ed14-4b8a-ac19-54545e955dcc';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-24T10:39:05.897Z');
+    $request->crmDeal->wonReason = 'quibusdam';
+    $request->connectionId = 'inventore';
+    $request->id = '4b8a2c19-5454-45e9-95dc-c185ea4901c7';
 
-    $requestSecurity = new PutCrmConnectionIdDealIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->deal->putCrmConnectionIdDealId($request, $requestSecurity);
+    $response = $sdk->deal->putCrmConnectionIdDealId($request);
 
     if ($response->crmDeal !== null) {
         // handle response
@@ -364,10 +341,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest](../../models/operations/PutCrmConnectionIdDealIdRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdSecurity](../../models/operations/PutCrmConnectionIdDealIdSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest](../../models/operations/PutCrmConnectionIdDealIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response

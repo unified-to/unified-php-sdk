@@ -20,9 +20,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationCategories;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -31,19 +31,16 @@ try {
     $request = new GetUnifiedIntegrationRequest();
     $request->active = false;
     $request->categories = [
-        GetUnifiedIntegrationCategories::Enrich,
+        GetUnifiedIntegrationCategories::Auth,
     ];
-    $request->limit = 814.31;
-    $request->offset = 9565.84;
-    $request->order = 'temporibus';
-    $request->sort = 'sapiente';
+    $request->limit = 6234.8;
+    $request->offset = 8727.98;
+    $request->order = 'incidunt';
+    $request->sort = 'autem';
     $request->summary = false;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-20T09:01:47.169Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-02T14:25:13.273Z');
 
-    $requestSecurity = new GetUnifiedIntegrationSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->integration->getUnifiedIntegration($request, $requestSecurity);
+    $response = $sdk->integration->getUnifiedIntegration($request);
 
     if ($response->integrations !== null) {
         // handle response
@@ -55,10 +52,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest](../../models/operations/GetUnifiedIntegrationRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationSecurity](../../models/operations/GetUnifiedIntegrationSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest](../../models/operations/GetUnifiedIntegrationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
@@ -79,6 +75,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
 
@@ -87,19 +84,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'nobis';
-    $request->externalXref = 'adipisci';
-    $request->failureRedirect = 'itaque';
-    $request->integrationType = 'unde';
-    $request->lang = 'beatae';
+    $request->env = 'iusto';
+    $request->externalXref = 'dignissimos';
+    $request->failureRedirect = 'debitis';
+    $request->integrationType = 'quo';
+    $request->lang = 'saepe';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::AtsInterviewRead,
+        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::TicketingNoteRead,
     ];
-    $request->state = 'quas';
-    $request->subdomain = 'maiores';
-    $request->successRedirect = 'voluptate';
-    $request->workspaceId = 'libero';
+    $request->state = 'sunt';
+    $request->subdomain = 'nisi';
+    $request->successRedirect = 'nulla';
+    $request->workspaceId = 'architecto';
 
     $response = $sdk->integration->getUnifiedIntegrationAuthWorkspaceIdIntegrationType($request);
 
@@ -136,20 +133,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetUnifiedIntegrationIntegrationTypeRequest();
-    $request->integrationType = 'quod';
+    $request->integrationType = 'accusantium';
 
-    $requestSecurity = new GetUnifiedIntegrationIntegrationTypeSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->integration->getUnifiedIntegrationIntegrationType($request, $requestSecurity);
+    $response = $sdk->integration->getUnifiedIntegrationIntegrationType($request);
 
     if ($response->integration !== null) {
         // handle response
@@ -161,10 +155,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationIntegrationTypeRequest.md)   | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
-| `security`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeSecurity](../../models/operations/GetUnifiedIntegrationIntegrationTypeSecurity.md) | :heavy_check_mark:                                                                                                                                            | The security requirements to use for the request.                                                                                                             |
+| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
 
 
 ### Response
@@ -185,6 +178,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdCategories;
 
@@ -195,11 +189,11 @@ try {
     $request = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest();
     $request->active = false;
     $request->categories = [
-        GetUnifiedIntegrationWorkspaceWorkspaceIdCategories::Auth,
+        GetUnifiedIntegrationWorkspaceWorkspaceIdCategories::Uc,
     ];
-    $request->env = 'error';
+    $request->env = 'et';
     $request->summary = false;
-    $request->workspaceId = 'at';
+    $request->workspaceId = 'repudiandae';
 
     $response = $sdk->integration->getUnifiedIntegrationWorkspaceWorkspaceId($request);
 

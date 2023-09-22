@@ -25,12 +25,10 @@ class Webhook
      * Remove webhook subscription
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdResponse
      */
 	public function deleteUnifiedWebhookId(
         ?\Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class Webhook
      * Returns all registered webhooks
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
      */
 	public function getUnifiedWebhook(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedWebhookSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class Webhook
      * Retrieve webhook by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdResponse
      */
 	public function getUnifiedWebhookId(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -144,12 +135,10 @@ class Webhook
      * To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
      * 
      * @param \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectResponse
      */
 	public function postUnifiedWebhookConnectionIdObject(
         ?\Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest $request,
-        \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -164,8 +153,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -22,21 +22,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest;
-use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new DeleteAtsConnectionIdScorecardIdRequest();
-    $request->connectionId = 'et';
-    $request->id = '85ea4901-c7c4-43ad-adaa-784aba3d230e';
+    $request->connectionId = 'cumque';
+    $request->id = '43ad2daa-784a-4ba3-9230-edf73811a115';
 
-    $requestSecurity = new DeleteAtsConnectionIdScorecardIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->document->deleteAtsConnectionIdScorecardId($request, $requestSecurity);
+    $response = $sdk->document->deleteAtsConnectionIdScorecardId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -48,10 +45,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest](../../models/operations/DeleteAtsConnectionIdScorecardIdRequest.md)   | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
-| `security`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdSecurity](../../models/operations/DeleteAtsConnectionIdScorecardIdSecurity.md) | :heavy_check_mark:                                                                                                                                    | The security requirements to use for the request.                                                                                                     |
+| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest](../../models/operations/DeleteAtsConnectionIdScorecardIdRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
 
 
 ### Response
@@ -72,29 +68,26 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest;
-use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetAtsConnectionIdScorecardRequest();
-    $request->applicationId = 'nulla';
-    $request->candidateId = 'tenetur';
-    $request->connectionId = 'dignissimos';
-    $request->interviewId = 'dolor';
-    $request->limit = 5167.16;
-    $request->offset = 1052.73;
-    $request->order = 'vitae';
-    $request->query = 'laborum';
-    $request->sort = 'beatae';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-01T04:03:25.906Z');
+    $request->applicationId = 'non';
+    $request->candidateId = 'laudantium';
+    $request->connectionId = 'consequuntur';
+    $request->interviewId = 'rerum';
+    $request->limit = 8583.17;
+    $request->offset = 4992.7;
+    $request->order = 'eveniet';
+    $request->query = 'repellendus';
+    $request->sort = 'enim';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-01T22:16:49.015Z');
 
-    $requestSecurity = new GetAtsConnectionIdScorecardSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->document->getAtsConnectionIdScorecard($request, $requestSecurity);
+    $response = $sdk->document->getAtsConnectionIdScorecard($request);
 
     if ($response->atsScorecards !== null) {
         // handle response
@@ -106,10 +99,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest](../../models/operations/GetAtsConnectionIdScorecardRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardSecurity](../../models/operations/GetAtsConnectionIdScorecardSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest](../../models/operations/GetAtsConnectionIdScorecardRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -130,21 +122,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest;
-use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
 
 try {
     $request = new GetAtsConnectionIdScorecardIdRequest();
-    $request->connectionId = 'non';
-    $request->id = '82bd7ed5-6507-4621-858f-4d7396564c20';
+    $request->connectionId = 'voluptatem';
+    $request->id = '7621c58f-4d73-4965-a4c2-0a0711a961d2';
 
-    $requestSecurity = new GetAtsConnectionIdScorecardIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->document->getAtsConnectionIdScorecardId($request, $requestSecurity);
+    $response = $sdk->document->getAtsConnectionIdScorecardId($request);
 
     if ($response->atsScorecard !== null) {
         // handle response
@@ -156,10 +145,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest](../../models/operations/GetAtsConnectionIdScorecardIdRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdSecurity](../../models/operations/GetAtsConnectionIdScorecardIdSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest](../../models/operations/GetAtsConnectionIdScorecardIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response
@@ -180,11 +168,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
-use \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -192,23 +180,20 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsConnectionIdScorecardIdRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'fuga';
-    $request->atsScorecard->candidateId = 'doloremque';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-19T06:02:49.943Z');
-    $request->atsScorecard->id = '1a961d24-a7db-4b8f-932d-892cf7812cb5';
-    $request->atsScorecard->interviewId = 'architecto';
-    $request->atsScorecard->interviewerId = 'consequuntur';
-    $request->atsScorecard->jobId = 'impedit';
+    $request->atsScorecard->applicationId = 'ut';
+    $request->atsScorecard->candidateId = 'deserunt';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-20T22:48:15.284Z');
+    $request->atsScorecard->id = 'bb8f532d-892c-4f78-92cb-512c878240bf';
+    $request->atsScorecard->interviewId = 'corporis';
+    $request->atsScorecard->interviewerId = 'tempora';
+    $request->atsScorecard->jobId = 'voluptatum';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-22T05:14:25.724Z');
-    $request->connectionId = 'aspernatur';
-    $request->id = '40bf548f-88f8-4f1b-b0bc-8e1f206d5d83';
+    $request->atsScorecard->recommendation = AtsScorecardRecommendation::StrongYes;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-30T15:49:38.515Z');
+    $request->connectionId = 'hic';
+    $request->id = '8f1bf0bc-8e1f-4206-95d8-31d0081090f6';
 
-    $requestSecurity = new PatchAtsConnectionIdScorecardIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->document->patchAtsConnectionIdScorecardId($request, $requestSecurity);
+    $response = $sdk->document->patchAtsConnectionIdScorecardId($request);
 
     if ($response->atsScorecard !== null) {
         // handle response
@@ -220,10 +205,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdRequest](../../models/operations/PatchAtsConnectionIdScorecardIdRequest.md)   | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-| `security`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdSecurity](../../models/operations/PatchAtsConnectionIdScorecardIdSecurity.md) | :heavy_check_mark:                                                                                                                                  | The security requirements to use for the request.                                                                                                   |
+| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdRequest](../../models/operations/PatchAtsConnectionIdScorecardIdRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
@@ -244,11 +228,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
-use \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -256,22 +240,19 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostAtsConnectionIdScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'illo';
-    $request->atsScorecard->candidateId = 'temporibus';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-14T22:27:17.851Z');
-    $request->atsScorecard->id = '81090f67-0667-43f3-a681-c5768dce7424';
-    $request->atsScorecard->interviewId = 'accusantium';
-    $request->atsScorecard->interviewerId = 'excepturi';
-    $request->atsScorecard->jobId = 'deserunt';
+    $request->atsScorecard->applicationId = 'nihil';
+    $request->atsScorecard->candidateId = 'quae';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-13T07:17:09.350Z');
+    $request->atsScorecard->id = '73f3a681-c576-48dc-a742-409a215e0860';
+    $request->atsScorecard->interviewId = 'vitae';
+    $request->atsScorecard->interviewerId = 'tempora';
+    $request->atsScorecard->jobId = 'molestias';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::DefinitelyNo;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-26T08:31:15.881Z');
-    $request->connectionId = 'officiis';
+    $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-05T09:02:12.649Z');
+    $request->connectionId = 'doloribus';
 
-    $requestSecurity = new PostAtsConnectionIdScorecardSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->document->postAtsConnectionIdScorecard($request, $requestSecurity);
+    $response = $sdk->document->postAtsConnectionIdScorecard($request);
 
     if ($response->atsScorecard !== null) {
         // handle response
@@ -283,10 +264,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardRequest](../../models/operations/PostAtsConnectionIdScorecardRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardSecurity](../../models/operations/PostAtsConnectionIdScorecardSecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardRequest](../../models/operations/PostAtsConnectionIdScorecardRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
@@ -307,11 +287,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
-use \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdSecurity;
 
 $sdk = UnifiedTo::builder()
     ->build();
@@ -319,23 +299,20 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutAtsConnectionIdScorecardIdRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'eaque';
-    $request->atsScorecard->candidateId = 'blanditiis';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-26T07:12:59.937Z');
-    $request->atsScorecard->id = '1489a5f6-3e3a-4f3d-99dd-a33dcd63483e';
-    $request->atsScorecard->interviewId = 'non';
-    $request->atsScorecard->interviewerId = 'dolorum';
-    $request->atsScorecard->jobId = 'esse';
+    $request->atsScorecard->applicationId = 'suscipit';
+    $request->atsScorecard->candidateId = 'sequi';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-19T02:43:38.749Z');
+    $request->atsScorecard->id = 'af3dd9dd-a33d-4cd6-b483-e4a7a98e4df3';
+    $request->atsScorecard->interviewId = 'in';
+    $request->atsScorecard->interviewerId = 'debitis';
+    $request->atsScorecard->jobId = 'quaerat';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-18T08:55:26.656Z');
-    $request->connectionId = 'saepe';
-    $request->id = '4df37e45-b895-45d4-93e1-3a482310907b';
+    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-18T18:36:43.695Z');
+    $request->connectionId = 'omnis';
+    $request->id = '55d413e1-3a48-4231-8907-bd354c092bd7';
 
-    $requestSecurity = new PutAtsConnectionIdScorecardIdSecurity();
-    $requestSecurity->jwt = '';
-
-    $response = $sdk->document->putAtsConnectionIdScorecardId($request, $requestSecurity);
+    $response = $sdk->document->putAtsConnectionIdScorecardId($request);
 
     if ($response->atsScorecard !== null) {
         // handle response
@@ -347,10 +324,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdRequest](../../models/operations/PutAtsConnectionIdScorecardIdRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdSecurity](../../models/operations/PutAtsConnectionIdScorecardIdSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdRequest](../../models/operations/PutAtsConnectionIdScorecardIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response

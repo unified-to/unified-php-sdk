@@ -25,12 +25,10 @@ class File
      * Remove a file
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdResponse
      */
 	public function deleteCrmConnectionIdFileId(
         ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest $request,
-        \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class File
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -63,12 +60,10 @@ class File
      * List all files
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileResponse
      */
 	public function getCrmConnectionIdFile(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class File
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +97,10 @@ class File
      * Retrieve a file
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdResponse
      */
 	public function getCrmConnectionIdFileId(
         ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +110,7 @@ class File
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -142,12 +133,10 @@ class File
      * Update a file
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdResponse
      */
 	public function patchCrmConnectionIdFileId(
         ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +150,7 @@ class File
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,12 +173,10 @@ class File
      * Create a file
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileResponse
      */
 	public function postCrmConnectionIdFile(
         ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest $request,
-        \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -204,8 +190,7 @@ class File
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,12 +213,10 @@ class File
      * Update a file
      * 
      * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdResponse
      */
 	public function putCrmConnectionIdFileId(
         ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest $request,
-        \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class File
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

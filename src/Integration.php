@@ -25,12 +25,10 @@ class Integration
      * Returns all integrations
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
      */
 	public function getUnifiedIntegration(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -41,8 +39,7 @@ class Integration
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -81,7 +78,7 @@ class Integration
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -103,12 +100,10 @@ class Integration
      * Retrieve an integration
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeResponse
      */
 	public function getUnifiedIntegrationIntegrationType(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -118,8 +113,7 @@ class Integration
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -158,7 +152,7 @@ class Integration
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
