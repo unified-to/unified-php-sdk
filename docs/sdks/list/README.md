@@ -1,4 +1,5 @@
 # ListT
+(*list*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteMartechConnectionIdListIdRequest();
-    $request->connectionId = 'alias';
-    $request->id = '014ef45c-ea11-4ac5-bebb-6587f340414c';
+    $request->connectionId = 'Minivan';
+    $request->id = '<ID>';
 
     $response = $sdk->list->deleteMartechConnectionIdListId($request);
 
@@ -76,13 +77,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetMartechConnectionIdListRequest();
-    $request->connectionId = 'ipsam';
-    $request->limit = 7395.69;
-    $request->offset = 5766.24;
-    $request->order = 'est';
-    $request->query = 'quod';
-    $request->sort = 'voluptates';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-30T15:03:19.847Z');
+    $request->connectionId = 'silver DeKalb';
+    $request->limit = 9799.48;
+    $request->offset = 4800.63;
+    $request->order = 'Bedfordshire';
+    $request->query = 'Hip Pass';
+    $request->sort = 'since';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-26T19:40:00.770Z');
 
     $response = $sdk->list->getMartechConnectionIdList($request);
 
@@ -127,8 +128,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetMartechConnectionIdListIdRequest();
-    $request->connectionId = 'quae';
-    $request->id = '0ae9f92c-af1b-4025-b1d1-4718c6fa2fad';
+    $request->connectionId = 'Jewelery orange';
+    $request->id = '<ID>';
 
     $response = $sdk->list->getMartechConnectionIdListId($request);
 
@@ -176,13 +177,13 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchMartechConnectionIdListIdRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'consequatur';
-    $request->marketingList->id = 'c06c5d95-472c-4dd1-8fc4-3b70bca88fa7';
-    $request->marketingList->name = 'Roxanne Green';
+    $request->marketingList->createdAt = 'Funk';
+    $request->marketingList->id = '<ID>';
+    $request->marketingList->name = 'lime Fiat';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-02T03:29:32.641Z');
-    $request->connectionId = 'quisquam';
-    $request->id = '3dd1eb8f-7f75-4f4f-a3f1-c0a586c3ae7d';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-15T20:51:24.192Z');
+    $request->connectionId = 'male sheepishly Intelligent';
+    $request->id = '<ID>';
 
     $response = $sdk->list->patchMartechConnectionIdListId($request);
 
@@ -230,12 +231,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostMartechConnectionIdListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'reprehenderit';
-    $request->marketingList->id = 'b67feef5-e142-4d95-b1db-eceff7c4b156';
-    $request->marketingList->name = 'Sergio Conn';
+    $request->marketingList->createdAt = 'synergistic Transexual Steel';
+    $request->marketingList->id = '<ID>';
+    $request->marketingList->name = 'Virginia whoever Bicycle';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-19T23:56:47.338Z');
-    $request->connectionId = 'ipsam';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-27T09:56:39.589Z');
+    $request->connectionId = 'Hybrid';
 
     $response = $sdk->list->postMartechConnectionIdList($request);
 
@@ -283,13 +284,13 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutMartechConnectionIdListIdRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'debitis';
-    $request->marketingList->id = 'ea768174-6806-43f7-99b7-956c0b0fa0bb';
-    $request->marketingList->name = 'Brenda Nader DVM';
+    $request->marketingList->createdAt = 'Underpass initiatives';
+    $request->marketingList->id = '<ID>';
+    $request->marketingList->name = 'North Progressive Assistant';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-23T23:53:15.044Z');
-    $request->connectionId = 'incidunt';
-    $request->id = 'ae640642-7265-47b0-9a07-c08fd3921c25';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-03T22:31:39.028Z');
+    $request->connectionId = 'Security Legacy onto';
+    $request->id = '<ID>';
 
     $response = $sdk->list->putMartechConnectionIdListId($request);
 

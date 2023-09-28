@@ -1,4 +1,5 @@
 # Document
+(*document*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteAtsConnectionIdScorecardIdRequest();
-    $request->connectionId = 'cumque';
-    $request->id = '43ad2daa-784a-4ba3-9230-edf73811a115';
+    $request->connectionId = 'Agent intrepid';
+    $request->id = '<ID>';
 
     $response = $sdk->document->deleteAtsConnectionIdScorecardId($request);
 
@@ -76,16 +77,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsConnectionIdScorecardRequest();
-    $request->applicationId = 'non';
-    $request->candidateId = 'laudantium';
-    $request->connectionId = 'consequuntur';
-    $request->interviewId = 'rerum';
-    $request->limit = 8583.17;
-    $request->offset = 4992.7;
-    $request->order = 'eveniet';
-    $request->query = 'repellendus';
-    $request->sort = 'enim';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-01T22:16:49.015Z');
+    $request->applicationId = 'Licensed deep';
+    $request->candidateId = 'happily';
+    $request->connectionId = 'lunch accusamus';
+    $request->interviewId = 'for famously Southwest';
+    $request->limit = 950.05;
+    $request->offset = 6133.23;
+    $request->order = 'withdrawal';
+    $request->query = 'Bicycle copy Bronze';
+    $request->sort = 'ouch non ut';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-01T09:53:52.927Z');
 
     $response = $sdk->document->getAtsConnectionIdScorecard($request);
 
@@ -130,8 +131,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsConnectionIdScorecardIdRequest();
-    $request->connectionId = 'voluptatem';
-    $request->id = '7621c58f-4d73-4965-a4c2-0a0711a961d2';
+    $request->connectionId = 'East mobile Mini';
+    $request->id = '<ID>';
 
     $response = $sdk->document->getAtsConnectionIdScorecardId($request);
 
@@ -180,18 +181,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsConnectionIdScorecardIdRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'ut';
-    $request->atsScorecard->candidateId = 'deserunt';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-20T22:48:15.284Z');
-    $request->atsScorecard->id = 'bb8f532d-892c-4f78-92cb-512c878240bf';
-    $request->atsScorecard->interviewId = 'corporis';
-    $request->atsScorecard->interviewerId = 'tempora';
-    $request->atsScorecard->jobId = 'voluptatum';
+    $request->atsScorecard->applicationId = 'Carter Hatchback functionalities';
+    $request->atsScorecard->candidateId = 'disagree gold New';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-08T15:11:07.692Z');
+    $request->atsScorecard->id = '<ID>';
+    $request->atsScorecard->interviewId = 'blue';
+    $request->atsScorecard->interviewerId = 'North Buckinghamshire blur';
+    $request->atsScorecard->jobId = 'kelvin hack Fantastic';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::StrongYes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-30T15:49:38.515Z');
-    $request->connectionId = 'hic';
-    $request->id = '8f1bf0bc-8e1f-4206-95d8-31d0081090f6';
+    $request->atsScorecard->recommendation = AtsScorecardRecommendation::DefinitelyNo;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T04:49:38.005Z');
+    $request->connectionId = 'hacking meter';
+    $request->id = '<ID>';
 
     $response = $sdk->document->patchAtsConnectionIdScorecardId($request);
 
@@ -240,17 +241,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostAtsConnectionIdScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'nihil';
-    $request->atsScorecard->candidateId = 'quae';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-13T07:17:09.350Z');
-    $request->atsScorecard->id = '73f3a681-c576-48dc-a742-409a215e0860';
-    $request->atsScorecard->interviewId = 'vitae';
-    $request->atsScorecard->interviewerId = 'tempora';
-    $request->atsScorecard->jobId = 'molestias';
+    $request->atsScorecard->applicationId = 'female bah';
+    $request->atsScorecard->candidateId = 'if since';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-26T00:06:29.981Z');
+    $request->atsScorecard->id = '<ID>';
+    $request->atsScorecard->interviewId = 'invoice';
+    $request->atsScorecard->interviewerId = 'male';
+    $request->atsScorecard->jobId = 'Accountability';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-05T09:02:12.649Z');
-    $request->connectionId = 'doloribus';
+    $request->atsScorecard->recommendation = AtsScorecardRecommendation::StrongYes;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-04T17:15:51.015Z');
+    $request->connectionId = 'Legacy tan';
 
     $response = $sdk->document->postAtsConnectionIdScorecard($request);
 
@@ -299,18 +300,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutAtsConnectionIdScorecardIdRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'suscipit';
-    $request->atsScorecard->candidateId = 'sequi';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-19T02:43:38.749Z');
-    $request->atsScorecard->id = 'af3dd9dd-a33d-4cd6-b483-e4a7a98e4df3';
-    $request->atsScorecard->interviewId = 'in';
-    $request->atsScorecard->interviewerId = 'debitis';
-    $request->atsScorecard->jobId = 'quaerat';
+    $request->atsScorecard->applicationId = 'East Granite';
+    $request->atsScorecard->candidateId = 'South';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-02T12:33:41.490Z');
+    $request->atsScorecard->id = '<ID>';
+    $request->atsScorecard->interviewId = 'Texas Technetium hack';
+    $request->atsScorecard->interviewerId = 'Adventure Kyrgyz Organic';
+    $request->atsScorecard->jobId = 'Home Dynamic Integration';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-18T18:36:43.695Z');
-    $request->connectionId = 'omnis';
-    $request->id = '55d413e1-3a48-4231-8907-bd354c092bd7';
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-13T03:01:57.066Z');
+    $request->connectionId = 'Transexual Manager Rap';
+    $request->id = '<ID>';
 
     $response = $sdk->document->putAtsConnectionIdScorecardId($request);
 

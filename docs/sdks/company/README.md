@@ -1,4 +1,5 @@
 # Company
+(*company*)
 
 ### Available Operations
 
@@ -34,8 +35,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdCompanyIdRequest();
-    $request->connectionId = 'mollitia';
-    $request->id = '4578adc1-ac60-40de-8001-ac802e2ec09f';
+    $request->connectionId = 'hertz morph';
+    $request->id = '<ID>';
 
     $response = $sdk->company->deleteCrmConnectionIdCompanyId($request);
 
@@ -80,9 +81,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdCompanyIdDealDealIdRequest();
-    $request->connectionId = 'maiores';
-    $request->dealId = 'laudantium';
-    $request->id = 'f0f816ff-3477-4c13-a902-c14125b0960a';
+    $request->connectionId = 'Carolina';
+    $request->dealId = 'Technician';
+    $request->id = '<ID>';
 
     $response = $sdk->company->deleteCrmConnectionIdCompanyIdDealDealId($request);
 
@@ -127,15 +128,15 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdCompanyRequest();
-    $request->connectionId = 'laboriosam';
-    $request->contactId = 'ex';
-    $request->dealId = 'quas';
-    $request->limit = 857.94;
-    $request->offset = 3564.4;
-    $request->order = 'quae';
-    $request->query = 'similique';
-    $request->sort = 'incidunt';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-31T04:49:14.254Z');
+    $request->connectionId = 'indexing';
+    $request->contactId = 'Porsche firewall';
+    $request->dealId = 'Hafnium Computers';
+    $request->limit = 902.85;
+    $request->offset = 2893.88;
+    $request->order = 'Interactions relationships juxtapose';
+    $request->query = 'newton Luxembourg';
+    $request->sort = 'Dakota quantifying Actinium';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T07:42:48.074Z');
 
     $response = $sdk->company->getCrmConnectionIdCompany($request);
 
@@ -180,8 +181,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdCompanyIdRequest();
-    $request->connectionId = 'deserunt';
-    $request->id = 'f923c594-9f83-4f35-8cf8-76ffb901c6ec';
+    $request->connectionId = 'Netherlands';
+    $request->id = '<ID>';
 
     $response = $sdk->company->getCrmConnectionIdCompanyId($request);
 
@@ -226,9 +227,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetEnrichConnectionIdCompanyRequest();
-    $request->connectionId = 'tempore';
-    $request->domain = 'quidem';
-    $request->name = 'Silvia Considine';
+    $request->connectionId = 'female Computers Central';
+    $request->domain = 'scientific-facet.biz';
+    $request->name = 'Outdoors embrace interface';
 
     $response = $sdk->company->getEnrichConnectionIdCompany($request);
 
@@ -283,36 +284,36 @@ try {
     $request->crmCompany = new CrmCompany();
     $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'eligendi';
-    $request->crmCompany->address->address2 = 'asperiores';
-    $request->crmCompany->address->city = 'Jettstead';
-    $request->crmCompany->address->country = 'Zimbabwe';
-    $request->crmCompany->address->countryCode = 'VE';
-    $request->crmCompany->address->postalCode = '99863-2836';
-    $request->crmCompany->address->region = 'saepe';
-    $request->crmCompany->address->regionCode = 'eum';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-22T20:40:55.626Z');
+    $request->crmCompany->address->address1 = 'invoice';
+    $request->crmCompany->address->address2 = 'indexing Ford';
+    $request->crmCompany->address->city = 'McAllen';
+    $request->crmCompany->address->country = 'Netherlands';
+    $request->crmCompany->address->countryCode = 'PF';
+    $request->crmCompany->address->postalCode = '93486';
+    $request->crmCompany->address->region = 'Steel impactful';
+    $request->crmCompany->address->regionCode = 'Dong';
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T08:43:38.995Z');
     $request->crmCompany->dealIds = [
-        'officia',
+        'usefully',
     ];
     $request->crmCompany->emails = [
         new CrmEmail(),
     ];
-    $request->crmCompany->id = 'c184c2b9-c247-4c88-b73a-40e1942f32e5';
-    $request->crmCompany->name = 'Jessica Heller';
+    $request->crmCompany->id = '<ID>';
+    $request->crmCompany->name = 'Borders';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
-        'ad',
+        'South',
     ];
     $request->crmCompany->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-20T09:58:08.980Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-08T19:02:47.171Z');
     $request->crmCompany->websites = [
-        'quis',
+        'boohoo',
     ];
-    $request->connectionId = 'quibusdam';
-    $request->id = '56d0bd0a-f2df-4e13-9b4f-62cba3f8941a';
+    $request->connectionId = 'Vermont Astatine';
+    $request->id = '<ID>';
 
     $response = $sdk->company->patchCrmConnectionIdCompanyId($request);
 
@@ -357,9 +358,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PatchCrmConnectionIdCompanyIdDealDealIdRequest();
-    $request->connectionId = 'accusamus';
-    $request->dealId = 'harum';
-    $request->id = 'c0b80a69-24d3-4b2e-8fcc-8f895010f5dd';
+    $request->connectionId = 'virtual BMX Tuna';
+    $request->dealId = 'frightened quia generating';
+    $request->id = '<ID>';
 
     $response = $sdk->company->patchCrmConnectionIdCompanyIdDealDealId($request);
 
@@ -414,35 +415,35 @@ try {
     $request->crmCompany = new CrmCompany();
     $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'neque';
-    $request->crmCompany->address->address2 = 'pariatur';
-    $request->crmCompany->address->city = 'Victorchester';
-    $request->crmCompany->address->country = 'Bahamas';
-    $request->crmCompany->address->countryCode = 'MC';
-    $request->crmCompany->address->postalCode = '29337';
-    $request->crmCompany->address->region = 'quas';
-    $request->crmCompany->address->regionCode = 'consequuntur';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-03T16:02:53.877Z');
+    $request->crmCompany->address->address1 = 'consequently gosh';
+    $request->crmCompany->address->address2 = 'phooey';
+    $request->crmCompany->address->city = 'Antonettaville';
+    $request->crmCompany->address->country = 'Lebanon';
+    $request->crmCompany->address->countryCode = 'SI';
+    $request->crmCompany->address->postalCode = '79462';
+    $request->crmCompany->address->region = 'orchid Oxygen Kids';
+    $request->crmCompany->address->regionCode = 'Electric utilisation';
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-01T08:46:18.197Z');
     $request->crmCompany->dealIds = [
-        'aliquid',
+        'Tennessee',
     ];
     $request->crmCompany->emails = [
         new CrmEmail(),
     ];
-    $request->crmCompany->id = '8a363c88-73e4-4843-80b1-f6b8ca275a60';
-    $request->crmCompany->name = 'Charles Grimes';
+    $request->crmCompany->id = '<ID>';
+    $request->crmCompany->name = 'payment Executive';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
-        'iste',
+        'Luxurious',
     ];
     $request->crmCompany->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-31T03:44:06.961Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-01T20:19:00.759Z');
     $request->crmCompany->websites = [
-        'placeat',
+        'frenetically',
     ];
-    $request->connectionId = 'voluptas';
+    $request->connectionId = 'Soft violet Account';
 
     $response = $sdk->company->postCrmConnectionIdCompany($request);
 
@@ -497,36 +498,36 @@ try {
     $request->crmCompany = new CrmCompany();
     $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'occaecati';
-    $request->crmCompany->address->address2 = 'unde';
-    $request->crmCompany->address->city = 'South Ariccester';
-    $request->crmCompany->address->country = 'Guyana';
-    $request->crmCompany->address->countryCode = 'BJ';
-    $request->crmCompany->address->postalCode = '16871-7927';
-    $request->crmCompany->address->region = 'corrupti';
-    $request->crmCompany->address->regionCode = 'rem';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-25T03:12:44.676Z');
+    $request->crmCompany->address->address1 = 'Northwest Northwest';
+    $request->crmCompany->address->address2 = 'portals Diesel';
+    $request->crmCompany->address->city = 'Azusa';
+    $request->crmCompany->address->country = 'Qatar';
+    $request->crmCompany->address->countryCode = 'CG';
+    $request->crmCompany->address->postalCode = '52396';
+    $request->crmCompany->address->region = 'Tuna sticky lest';
+    $request->crmCompany->address->regionCode = 'Soft boo Missoula';
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-14T19:17:30.970Z');
     $request->crmCompany->dealIds = [
-        'cum',
+        'Hybrid',
     ];
     $request->crmCompany->emails = [
         new CrmEmail(),
     ];
-    $request->crmCompany->id = 'dfc4ccca-99bc-47fc-8b2d-ce10873e42b0';
-    $request->crmCompany->name = 'Natalie Swift';
+    $request->crmCompany->id = '<ID>';
+    $request->crmCompany->name = 'citizen';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
-        'voluptatum',
+        'Technician',
     ];
     $request->crmCompany->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-22T10:15:29.477Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T14:26:25.488Z');
     $request->crmCompany->websites = [
-        'atque',
+        'praesentium',
     ];
-    $request->connectionId = 'rerum';
-    $request->id = 'a8581a58-208c-454f-afa9-c95f2eac5565';
+    $request->connectionId = 'architecture female holistic';
+    $request->id = '<ID>';
 
     $response = $sdk->company->putCrmConnectionIdCompanyId($request);
 
@@ -571,9 +572,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PutCrmConnectionIdCompanyIdDealDealIdRequest();
-    $request->connectionId = 'illum';
-    $request->dealId = 'nesciunt';
-    $request->id = '07cfee81-206e-4281-bfa4-a41c480d3f21';
+    $request->connectionId = 'Hybrid Mississippi Savings';
+    $request->dealId = 'West Hill Woman';
+    $request->id = '<ID>';
 
     $response = $sdk->company->putCrmConnectionIdCompanyIdDealDealId($request);
 

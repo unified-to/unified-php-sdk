@@ -1,4 +1,5 @@
 # Candidate
+(*candidate*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteAtsConnectionIdCandidateIdRequest();
-    $request->connectionId = 'magnam';
-    $request->id = '0463a7d5-75f1-4400-a764-ad7334ec1b78';
+    $request->connectionId = 'multimedia';
+    $request->id = '<ID>';
 
     $response = $sdk->candidate->deleteAtsConnectionIdCandidateId($request);
 
@@ -76,13 +77,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsConnectionIdCandidateRequest();
-    $request->connectionId = 'et';
-    $request->limit = 7049.48;
-    $request->offset = 2292.76;
-    $request->order = 'autem';
-    $request->query = 'fuga';
-    $request->sort = 'alias';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-23T17:03:28.575Z');
+    $request->connectionId = 'Northwest forceful Moore';
+    $request->limit = 2623.89;
+    $request->offset = 7811.91;
+    $request->order = 'Mouse whether deploy';
+    $request->query = 'pink';
+    $request->sort = 'huzzah thistle';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-13T15:14:03.645Z');
 
     $response = $sdk->candidate->getAtsConnectionIdCandidate($request);
 
@@ -127,8 +128,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsConnectionIdCandidateIdRequest();
-    $request->connectionId = 'quos';
-    $request->id = '8d100efa-da20-40ef-8422-eb2164cf9ab8';
+    $request->connectionId = 'ha Loan';
+    $request->id = '<ID>';
 
     $response = $sdk->candidate->getAtsConnectionIdCandidateId($request);
 
@@ -182,34 +183,34 @@ try {
     $request = new PatchAtsConnectionIdCandidateIdRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'sequi';
-    $request->atsCandidate->address->address2 = 'aliquid';
-    $request->atsCandidate->address->city = 'Oniemouth';
-    $request->atsCandidate->address->country = 'Burundi';
-    $request->atsCandidate->address->countryCode = 'DO';
-    $request->atsCandidate->address->postalCode = '98668-0379';
-    $request->atsCandidate->address->region = 'voluptates';
-    $request->atsCandidate->address->regionCode = 'non';
-    $request->atsCandidate->companyName = 'rem';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-24T16:59:25.397Z');
+    $request->atsCandidate->address->address1 = 'closely Goyette plus';
+    $request->atsCandidate->address->address2 = 'culpa';
+    $request->atsCandidate->address->city = 'Darrinshire';
+    $request->atsCandidate->address->country = 'Mongolia';
+    $request->atsCandidate->address->countryCode = 'GW';
+    $request->atsCandidate->address->postalCode = '05275';
+    $request->atsCandidate->address->region = 'TLS calculating';
+    $request->atsCandidate->address->regionCode = 'up Argon Internal';
+    $request->atsCandidate->companyName = 'Fadel, Schulist and Koss';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-09T07:16:54.728Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'quisquam';
-    $request->atsCandidate->id = '1fc0e115-c80b-4ff9-9854-4ec42defcce8';
-    $request->atsCandidate->imageUrl = 'reiciendis';
-    $request->atsCandidate->name = 'Becky Kozey';
+    $request->atsCandidate->externalId = 'Home';
+    $request->atsCandidate->id = '<ID>';
+    $request->atsCandidate->imageUrl = 'Cadillac Elegant';
+    $request->atsCandidate->name = 'Tricycle Yttrium Hybrid';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'odio',
+        'Blues',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'Mrs.';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-24T04:06:59.820Z');
-    $request->connectionId = 'neque';
-    $request->id = '562a7b40-8f05-4e3d-88fd-af313a1f5fd9';
+    $request->atsCandidate->title = 'whether Cadillac';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-01T02:58:46.894Z');
+    $request->connectionId = 'Hudson East';
+    $request->id = '<ID>';
 
     $response = $sdk->candidate->patchAtsConnectionIdCandidateId($request);
 
@@ -263,33 +264,33 @@ try {
     $request = new PostAtsConnectionIdCandidateRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'incidunt';
-    $request->atsCandidate->address->address2 = 'explicabo';
-    $request->atsCandidate->address->city = 'New Nola';
-    $request->atsCandidate->address->country = 'Afghanistan';
-    $request->atsCandidate->address->countryCode = 'PE';
-    $request->atsCandidate->address->postalCode = '49138';
-    $request->atsCandidate->address->region = 'officia';
-    $request->atsCandidate->address->regionCode = 'sint';
-    $request->atsCandidate->companyName = 'ut';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-20T01:04:48.949Z');
+    $request->atsCandidate->address->address1 = 'incubate';
+    $request->atsCandidate->address->address2 = 'azure Trans';
+    $request->atsCandidate->address->city = 'Port Rory';
+    $request->atsCandidate->address->country = 'El Salvador';
+    $request->atsCandidate->address->countryCode = 'CX';
+    $request->atsCandidate->address->postalCode = '54222-0235';
+    $request->atsCandidate->address->region = 'modi fooey';
+    $request->atsCandidate->address->regionCode = 'Metal TCP incidunt';
+    $request->atsCandidate->companyName = 'McCullough, Rosenbaum and Daugherty';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-07T05:55:59.357Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'adipisci';
-    $request->atsCandidate->id = 'b756c11f-6c37-4a51-a624-3835bbc05a23';
-    $request->atsCandidate->imageUrl = 'deserunt';
-    $request->atsCandidate->name = 'Sally Schmidt';
+    $request->atsCandidate->externalId = 'likewise withdrawal auxiliary';
+    $request->atsCandidate->id = '<ID>';
+    $request->atsCandidate->imageUrl = 'though North';
+    $request->atsCandidate->name = 'East Jewelery';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'quisquam',
+        'hm',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'Mrs.';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-07-09T15:33:26.948Z');
-    $request->connectionId = 'officiis';
+    $request->atsCandidate->title = 'Sausages';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-09T12:40:16.637Z');
+    $request->connectionId = 'Rubber Gender';
 
     $response = $sdk->candidate->postAtsConnectionIdCandidate($request);
 
@@ -343,34 +344,34 @@ try {
     $request = new PutAtsConnectionIdCandidateIdRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'architecto';
-    $request->atsCandidate->address->address2 = 'alias';
-    $request->atsCandidate->address->city = 'Beierfort';
-    $request->atsCandidate->address->country = 'Tonga';
-    $request->atsCandidate->address->countryCode = 'CC';
-    $request->atsCandidate->address->postalCode = '45831';
-    $request->atsCandidate->address->region = 'accusantium';
-    $request->atsCandidate->address->regionCode = 'perferendis';
-    $request->atsCandidate->companyName = 'veritatis';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-06-20T22:36:53.570Z');
+    $request->atsCandidate->address->address1 = 'archive';
+    $request->atsCandidate->address->address2 = 'Specialist Kyat';
+    $request->atsCandidate->address->city = 'New Dennis';
+    $request->atsCandidate->address->country = 'Mauritius';
+    $request->atsCandidate->address->countryCode = 'TL';
+    $request->atsCandidate->address->postalCode = '49105-9909';
+    $request->atsCandidate->address->region = 'copy olive';
+    $request->atsCandidate->address->regionCode = 'withdrawal cumque person';
+    $request->atsCandidate->companyName = 'Kuhn and Sons';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-28T10:51:00.922Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'iure';
-    $request->atsCandidate->id = 'dc5e3476-2799-4bfb-be69-49fb2bb4ecae';
-    $request->atsCandidate->imageUrl = 'autem';
-    $request->atsCandidate->name = 'Antonio Stanton';
+    $request->atsCandidate->externalId = 'Kenyan';
+    $request->atsCandidate->id = '<ID>';
+    $request->atsCandidate->imageUrl = 'Investment';
+    $request->atsCandidate->name = 'Concrete homogeneous';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'facilis',
+        'Reggae',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'Mrs.';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-07T06:03:57.365Z');
-    $request->connectionId = 'recusandae';
-    $request->id = 'bd5daea4-c506-4a8a-a94c-02644cf5e9d9';
+    $request->atsCandidate->title = 'Southwest Savings program';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-27T12:33:33.410Z');
+    $request->connectionId = 'collaborative';
+    $request->id = '<ID>';
 
     $response = $sdk->candidate->putAtsConnectionIdCandidateId($request);
 

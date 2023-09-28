@@ -1,4 +1,5 @@
 # Integration
+(*integration*)
 
 ### Available Operations
 
@@ -31,14 +32,14 @@ try {
     $request = new GetUnifiedIntegrationRequest();
     $request->active = false;
     $request->categories = [
-        GetUnifiedIntegrationCategories::Auth,
+        GetUnifiedIntegrationCategories::Enrich,
     ];
-    $request->limit = 6234.8;
-    $request->offset = 8727.98;
-    $request->order = 'incidunt';
-    $request->sort = 'autem';
+    $request->limit = 7363.95;
+    $request->offset = 8214.4;
+    $request->order = 'Nelda Implemented';
+    $request->sort = 'cabinet';
     $request->summary = false;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-02T14:25:13.273Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-05T00:16:37.455Z');
 
     $response = $sdk->integration->getUnifiedIntegration($request);
 
@@ -84,19 +85,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'iusto';
-    $request->externalXref = 'dignissimos';
-    $request->failureRedirect = 'debitis';
-    $request->integrationType = 'quo';
-    $request->lang = 'saepe';
+    $request->env = 'Algerian';
+    $request->externalXref = 'Cambridgeshire Surinam';
+    $request->failureRedirect = 'Designer Drive';
+    $request->integrationType = 'program Home';
+    $request->lang = 'Plastic program';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::TicketingNoteRead,
+        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::CrmFileRead,
     ];
-    $request->state = 'sunt';
-    $request->subdomain = 'nisi';
-    $request->successRedirect = 'nulla';
-    $request->workspaceId = 'architecto';
+    $request->state = 'Functionality Product';
+    $request->subdomain = 'payment Developer Dynamic';
+    $request->successRedirect = 'Northeast';
+    $request->workspaceId = 'duh empower Kwanza';
 
     $response = $sdk->integration->getUnifiedIntegrationAuthWorkspaceIdIntegrationType($request);
 
@@ -141,7 +142,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationIntegrationTypeRequest();
-    $request->integrationType = 'accusantium';
+    $request->integrationType = 'Pizza Electric';
 
     $response = $sdk->integration->getUnifiedIntegrationIntegrationType($request);
 
@@ -189,11 +190,11 @@ try {
     $request = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest();
     $request->active = false;
     $request->categories = [
-        GetUnifiedIntegrationWorkspaceWorkspaceIdCategories::Uc,
+        GetUnifiedIntegrationWorkspaceWorkspaceIdCategories::Hris,
     ];
-    $request->env = 'et';
+    $request->env = 'North Southeast exercitationem';
     $request->summary = false;
-    $request->workspaceId = 'repudiandae';
+    $request->workspaceId = 'Bronze Plastic';
 
     $response = $sdk->integration->getUnifiedIntegrationWorkspaceWorkspaceId($request);
 

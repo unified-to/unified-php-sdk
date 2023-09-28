@@ -1,4 +1,5 @@
 # Unified
+(*unified*)
 
 ### Available Operations
 
@@ -45,7 +46,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteUnifiedConnectionIdRequest();
-    $request->id = '1ec2c79a-39ae-45a4-95a6-5b4d5562d9b7';
+    $request->id = '<ID>';
 
     $response = $sdk->unified->deleteUnifiedConnectionId($request);
 
@@ -125,7 +126,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteUnifiedWebhookIdRequest();
-    $request->id = 'd9e2d6fc-f557-4629-9b87-5c3a890282a5';
+    $request->id = '<ID>';
 
     $response = $sdk->unified->deleteUnifiedWebhookId($request);
 
@@ -170,17 +171,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedApicallRequest();
-    $request->connectionId = 'quasi';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-05T08:07:52.157Z');
-    $request->env = 'illo';
+    $request->connectionId = 'delectus green Hybrid';
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-02T21:36:49.952Z');
+    $request->env = 'Fantastic Iodine indexing';
     $request->error = false;
-    $request->externalXref = 'optio';
-    $request->integrationType = 'sapiente';
-    $request->limit = 4354.55;
-    $request->offset = 4771.07;
-    $request->order = 'iste';
-    $request->sort = 'iure';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-17T15:59:49.531Z');
+    $request->externalXref = 'Music';
+    $request->integrationType = 'Soft';
+    $request->limit = 2390.64;
+    $request->offset = 3757.34;
+    $request->order = 'mobile envisioneer';
+    $request->sort = 'North payment opposite';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-11T16:18:13.644Z');
 
     $response = $sdk->unified->getUnifiedApicall($request);
 
@@ -225,7 +226,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedApicallIdRequest();
-    $request->id = '3d724c18-f581-4e98-8ce3-f716600da0e3';
+    $request->id = '<ID>';
 
     $response = $sdk->unified->getUnifiedApicallId($request);
 
@@ -272,15 +273,15 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetUnifiedConnectionRequest();
     $request->categories = [
-        GetUnifiedConnectionCategories::Martech,
+        GetUnifiedConnectionCategories::Ats,
     ];
-    $request->env = 'deserunt';
-    $request->externalXref = 'laboriosam';
-    $request->limit = 845.81;
-    $request->offset = 7599.24;
-    $request->order = 'ex';
-    $request->sort = 'repellat';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-30T18:30:45.044Z');
+    $request->env = 'copying invoice coulomb';
+    $request->externalXref = 'Islands West';
+    $request->limit = 7809.21;
+    $request->offset = 2750.2;
+    $request->order = 'Volkswagen architect';
+    $request->sort = 'consequently synthesizing Technician';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-09T20:41:53.442Z');
 
     $response = $sdk->unified->getUnifiedConnection($request);
 
@@ -325,7 +326,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedConnectionIdRequest();
-    $request->id = '9d852b53-b32c-48c7-83c7-10e1673d905c';
+    $request->id = '<ID>';
 
     $response = $sdk->unified->getUnifiedConnectionId($request);
 
@@ -373,14 +374,14 @@ try {
     $request = new GetUnifiedIntegrationRequest();
     $request->active = false;
     $request->categories = [
-        GetUnifiedIntegrationCategories::Martech,
+        GetUnifiedIntegrationCategories::Enrich,
     ];
-    $request->limit = 2899.85;
-    $request->offset = 6946.19;
-    $request->order = 'recusandae';
-    $request->sort = 'illum';
+    $request->limit = 7363.95;
+    $request->offset = 8214.4;
+    $request->order = 'Nelda Implemented';
+    $request->sort = 'cabinet';
     $request->summary = false;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-01-09T01:16:51.878Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-05T00:16:37.455Z');
 
     $response = $sdk->unified->getUnifiedIntegration($request);
 
@@ -426,19 +427,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'amet';
-    $request->externalXref = 'quod';
-    $request->failureRedirect = 'inventore';
-    $request->integrationType = 'odit';
-    $request->lang = 'in';
+    $request->env = 'Algerian';
+    $request->externalXref = 'Cambridgeshire Surinam';
+    $request->failureRedirect = 'Designer Drive';
+    $request->integrationType = 'program Home';
+    $request->lang = 'Plastic program';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::HrisEmployeeRead,
+        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::CrmFileRead,
     ];
-    $request->state = 'ipsum';
-    $request->subdomain = 'excepturi';
-    $request->successRedirect = 'aperiam';
-    $request->workspaceId = 'molestias';
+    $request->state = 'Functionality Product';
+    $request->subdomain = 'payment Developer Dynamic';
+    $request->successRedirect = 'Northeast';
+    $request->workspaceId = 'duh empower Kwanza';
 
     $response = $sdk->unified->getUnifiedIntegrationAuthWorkspaceIdIntegrationType($request);
 
@@ -483,7 +484,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationIntegrationTypeRequest();
-    $request->integrationType = 'iste';
+    $request->integrationType = 'Pizza Electric';
 
     $response = $sdk->unified->getUnifiedIntegrationIntegrationType($request);
 
@@ -531,11 +532,11 @@ try {
     $request = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest();
     $request->active = false;
     $request->categories = [
-        GetUnifiedIntegrationWorkspaceWorkspaceIdCategories::Auth,
+        GetUnifiedIntegrationWorkspaceWorkspaceIdCategories::Hris,
     ];
-    $request->env = 'veniam';
+    $request->env = 'North Southeast exercitationem';
     $request->summary = false;
-    $request->workspaceId = 'consequuntur';
+    $request->workspaceId = 'Bronze Plastic';
 
     $response = $sdk->unified->getUnifiedIntegrationWorkspaceWorkspaceId($request);
 
@@ -650,13 +651,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedWebhookRequest();
-    $request->env = 'blanditiis';
-    $request->limit = 1730.52;
-    $request->object = 'ipsam';
-    $request->offset = 575.99;
-    $request->order = 'pariatur';
-    $request->sort = 'maxime';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-06T22:01:24.584Z');
+    $request->env = 'Investor methodical Fitness';
+    $request->limit = 8087.22;
+    $request->object = 'Franc past salmon';
+    $request->offset = 5240.75;
+    $request->order = 'program';
+    $request->sort = 'below JSON';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-29T13:22:55.562Z');
 
     $response = $sdk->unified->getUnifiedWebhook($request);
 
@@ -701,7 +702,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedWebhookIdRequest();
-    $request->id = 'cd3b121b-88c1-4ee5-a7a0-61391cc8fa0b';
+    $request->id = '<ID>';
 
     $response = $sdk->unified->getUnifiedWebhookId($request);
 
@@ -753,46 +754,46 @@ try {
     $request = new PatchUnifiedConnectionIdRequest();
     $request->connection = new Connection();
     $request->connection->auth = new PropertyConnectionAuth();
-    $request->connection->auth->accessToken = 'iusto';
-    $request->connection->auth->apiUrl = 'repellendus';
-    $request->connection->auth->appId = 'beatae';
-    $request->connection->auth->authorizeUrl = 'ducimus';
-    $request->connection->auth->clientId = 'autem';
-    $request->connection->auth->clientSecret = 'ut';
-    $request->connection->auth->consumerKey = 'occaecati';
-    $request->connection->auth->consumerSecret = 'aspernatur';
+    $request->connection->auth->accessToken = 'Northwest Cupertino';
+    $request->connection->auth->apiUrl = 'Center Curium Electric';
+    $request->connection->auth->appId = 'female fragrant';
+    $request->connection->auth->authorizeUrl = 'Electric Bicycle payment';
+    $request->connection->auth->clientId = 'transmitting North';
+    $request->connection->auth->clientSecret = 'mole Gasoline morph';
+    $request->connection->auth->consumerKey = 'Keyboard Antimony primary';
+    $request->connection->auth->consumerSecret = 'yearly';
     $request->connection->auth->emails = [
-        'eum',
+        'athwart',
     ];
-    $request->connection->auth->expiresIn = 7041.93;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-26T23:55:54.552Z');
-    $request->connection->auth->key = 'doloribus';
+    $request->connection->auth->expiresIn = 3185.09;
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-12T13:21:47.977Z');
+    $request->connection->auth->key = '<key>';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->connection->auth->name = 'Sophie Jacobson';
+    $request->connection->auth->name = 'inside Rupee';
     $request->connection->auth->otherAuthInfo = [
-        'aliquid',
+        'Future',
     ];
-    $request->connection->auth->pem = 'necessitatibus';
-    $request->connection->auth->refreshToken = 'harum';
-    $request->connection->auth->state = 'similique';
-    $request->connection->auth->token = 'expedita';
-    $request->connection->auth->tokenUrl = 'debitis';
-    $request->connection->authAwsArn = 'quis';
+    $request->connection->auth->pem = 'guard Internal';
+    $request->connection->auth->refreshToken = 'Diesel';
+    $request->connection->auth->state = 'copy Cotton Bicycle';
+    $request->connection->auth->token = 'drive gold';
+    $request->connection->auth->tokenUrl = 'now';
+    $request->connection->authAwsArn = 'yum';
     $request->connection->categories = [
-        PropertyConnectionCategories::Ticketing,
+        PropertyConnectionCategories::Hris,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-07T09:57:32.189Z');
-    $request->connection->environment = 'error';
-    $request->connection->externalXref = 'cupiditate';
-    $request->connection->id = 'f3b1358d-6a87-4bb7-aecb-e569d70cb069';
-    $request->connection->integrationType = 'occaecati';
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-18T22:02:30.822Z');
+    $request->connection->environment = 'Northwest Balanced';
+    $request->connection->externalXref = 'boo';
+    $request->connection->id = '<ID>';
+    $request->connection->integrationType = 'Soft';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::AtsScorecardWrite,
+        PropertyConnectionPermissions::CrmLeadRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-08T13:01:50.552Z');
-    $request->connection->workspaceId = 'provident';
-    $request->id = '89441452-a9f0-41f3-842c-61be133bacde';
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-27T15:43:44.767Z');
+    $request->connection->workspaceId = 'extend';
+    $request->id = '<ID>';
 
     $response = $sdk->unified->patchUnifiedConnectionId($request);
 
@@ -838,16 +839,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-17T05:57:31.732Z');
-    $request->email = 'Mitchel.Jast@gmail.com';
-    $request->environment = 'laboriosam';
-    $request->id = 'f862853f-e285-49ce-b222-31fe6664c41d';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-24T15:25:24.483Z');
+    $request->email = 'Emmalee.Quitzon@yahoo.com';
+    $request->environment = 'Bicycle';
+    $request->id = '<ID>';
     $request->meta = new PropertyUserMeta();
-    $request->name = 'Elisa Reichel';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-11-23T15:53:38.540Z');
-    $request->workspaceId = 'culpa';
+    $request->name = 'vice compressing';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-05T16:52:20.023Z');
+    $request->workspaceId = 'Hybrid methodologies';
     $request->workspaceIds = [
-        'sit',
+        'Potassium',
     ];
 
     $response = $sdk->unified->patchUnifiedUser($request);
@@ -898,45 +899,45 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new Connection();
     $request->auth = new PropertyConnectionAuth();
-    $request->auth->accessToken = 'eum';
-    $request->auth->apiUrl = 'provident';
-    $request->auth->appId = 'tempore';
-    $request->auth->authorizeUrl = 'corrupti';
-    $request->auth->clientId = 'at';
-    $request->auth->clientSecret = 'fugit';
-    $request->auth->consumerKey = 'cupiditate';
-    $request->auth->consumerSecret = 'dicta';
+    $request->auth->accessToken = 'asperiores indexing';
+    $request->auth->apiUrl = 'plus pace global';
+    $request->auth->appId = 'And port';
+    $request->auth->authorizeUrl = 'West whiteboard';
+    $request->auth->clientId = 'Folk';
+    $request->auth->clientSecret = 'Northwest Modern';
+    $request->auth->consumerKey = 'Southeast deposit';
+    $request->auth->consumerSecret = 'Falls irritating up';
     $request->auth->emails = [
-        'libero',
+        'intuitive',
     ];
-    $request->auth->expiresIn = 9281.55;
-    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-12-28T08:06:10.966Z');
-    $request->auth->key = 'quae';
+    $request->auth->expiresIn = 4121.5;
+    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-21T03:25:42.786Z');
+    $request->auth->key = '<key>';
     $request->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->auth->name = 'Genevieve Cormier';
+    $request->auth->name = 'membership Classical schnitzel';
     $request->auth->otherAuthInfo = [
-        'atque',
+        'Convertible',
     ];
-    $request->auth->pem = 'molestiae';
-    $request->auth->refreshToken = 'aliquam';
-    $request->auth->state = 'perspiciatis';
-    $request->auth->token = 'labore';
-    $request->auth->tokenUrl = 'esse';
-    $request->authAwsArn = 'unde';
+    $request->auth->pem = 'magenta Riel bolívar';
+    $request->auth->refreshToken = 'Pula';
+    $request->auth->state = 'white';
+    $request->auth->token = 'Northwest';
+    $request->auth->tokenUrl = 'unbutton';
+    $request->authAwsArn = 'Investor circuit';
     $request->categories = [
-        PropertyConnectionCategories::Uc,
+        PropertyConnectionCategories::Ats,
     ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-07-11T08:27:47.876Z');
-    $request->environment = 'modi';
-    $request->externalXref = 'maiores';
-    $request->id = 'cf7b50cf-87f0-48f3-9271-076a24b40c8f';
-    $request->integrationType = 'doloremque';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-25T14:37:40.202Z');
+    $request->environment = 'Hat watt';
+    $request->externalXref = 'Sausages tan';
+    $request->id = '<ID>';
+    $request->integrationType = 'Principal Extended velit';
     $request->isPaused = false;
     $request->permissions = [
-        PropertyConnectionPermissions::MartechListRead,
+        PropertyConnectionPermissions::CrmFileWrite,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-01T22:27:24.071Z');
-    $request->workspaceId = 'a';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-22T05:13:05.778Z');
+    $request->workspaceId = 'Auto';
 
     $response = $sdk->unified->postUnifiedConnection($request);
 
@@ -986,29 +987,29 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostUnifiedWebhookConnectionIdObjectRequest();
     $request->webhook = new Webhook();
-    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-16T04:30:42.293Z');
-    $request->webhook->connectionId = 'molestias';
-    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-04T19:42:40.275Z');
-    $request->webhook->environment = 'laudantium';
+    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-25T07:12:08.980Z');
+    $request->webhook->connectionId = 'deposit 1080p Passenger';
+    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T14:58:56.193Z');
+    $request->webhook->environment = 'Minnesota Soap';
     $request->webhook->events = [
-        PropertyWebhookEvents::Created,
+        PropertyWebhookEvents::Updated,
     ];
-    $request->webhook->hookUrl = 'maiores';
-    $request->webhook->id = '86996c8e-22be-40a3-8f47-893bd23f8660';
+    $request->webhook->hookUrl = 'Table female ken';
+    $request->webhook->id = '<ID>';
     $request->webhook->includeRaw = false;
-    $request->webhook->integrationType = 'eaque';
-    $request->webhook->interval = 7950.71;
-    $request->webhook->objectType = WebhookObjectType::CrmLead;
+    $request->webhook->integrationType = 'chocolate';
+    $request->webhook->interval = 1710.16;
+    $request->webhook->objectType = WebhookObjectType::EnrichCompany;
     $request->webhook->subscriptions = [
-        'inventore',
+        'female',
     ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-03T05:56:05.673Z');
-    $request->webhook->workspaceId = 'voluptatum';
-    $request->connectionId = 'consectetur';
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-02T17:13:06.397Z');
+    $request->webhook->workspaceId = 'hertz';
+    $request->connectionId = 'Borders';
     $request->events = [
-        PostUnifiedWebhookConnectionIdObjectEvents::Updated,
+        PostUnifiedWebhookConnectionIdObjectEvents::Created,
     ];
-    $request->object = 'magni';
+    $request->object = 'scalable';
 
     $response = $sdk->unified->postUnifiedWebhookConnectionIdObject($request);
 
@@ -1060,46 +1061,46 @@ try {
     $request = new PutUnifiedConnectionIdRequest();
     $request->connection = new Connection();
     $request->connection->auth = new PropertyConnectionAuth();
-    $request->connection->auth->accessToken = 'in';
-    $request->connection->auth->apiUrl = 'ipsum';
-    $request->connection->auth->appId = 'impedit';
-    $request->connection->auth->authorizeUrl = 'est';
-    $request->connection->auth->clientId = 'est';
-    $request->connection->auth->clientSecret = 'provident';
-    $request->connection->auth->consumerKey = 'vitae';
-    $request->connection->auth->consumerSecret = 'quae';
+    $request->connection->auth->accessToken = 'female Buckinghamshire';
+    $request->connection->auth->apiUrl = 'Web';
+    $request->connection->auth->appId = 'pumpkin Account';
+    $request->connection->auth->authorizeUrl = 'dolorem Hybrid white';
+    $request->connection->auth->clientId = 'ohm';
+    $request->connection->auth->clientSecret = 'Pennsylvania Executive';
+    $request->connection->auth->consumerKey = 'silver Account Accountability';
+    $request->connection->auth->consumerSecret = 'Mouse';
     $request->connection->auth->emails = [
-        'voluptatum',
+        'oh',
     ];
-    $request->connection->auth->expiresIn = 7330.09;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-17T04:01:35.648Z');
-    $request->connection->auth->key = 'maiores';
+    $request->connection->auth->expiresIn = 8946.31;
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-29T12:35:08.478Z');
+    $request->connection->auth->key = '<key>';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->connection->auth->name = 'Miss Karla Jenkins';
+    $request->connection->auth->name = 'incidentally shrimp bypass';
     $request->connection->auth->otherAuthInfo = [
-        'ratione',
+        'invoice',
     ];
-    $request->connection->auth->pem = 'inventore';
-    $request->connection->auth->refreshToken = 'dolorum';
-    $request->connection->auth->state = 'ipsam';
-    $request->connection->auth->token = 'modi';
-    $request->connection->auth->tokenUrl = 'possimus';
-    $request->connection->authAwsArn = 'cumque';
+    $request->connection->auth->pem = 'recent midst Northeast';
+    $request->connection->auth->refreshToken = 'Product';
+    $request->connection->auth->state = 'circuit precious';
+    $request->connection->auth->token = 'gee collaborative withdrawal';
+    $request->connection->auth->tokenUrl = 'Platinum';
+    $request->connection->authAwsArn = 'suddenly Fiat';
     $request->connection->categories = [
-        PropertyConnectionCategories::Passthrough,
+        PropertyConnectionCategories::Uc,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-01T15:28:14.456Z');
-    $request->connection->environment = 'iste';
-    $request->connection->externalXref = 'modi';
-    $request->connection->id = 'f92fed93-9ba8-4f71-a299-2c20ee1228ac';
-    $request->connection->integrationType = 'dolor';
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-20T19:51:21.025Z');
+    $request->connection->environment = 'redundant Southeast Camren';
+    $request->connection->externalXref = 'firewall';
+    $request->connection->id = '<ID>';
+    $request->connection->integrationType = 'Beauty';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::TicketingCustomerWrite,
+        PropertyConnectionPermissions::Webhook,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-09-17T20:44:33.298Z');
-    $request->connection->workspaceId = 'commodi';
-    $request->id = '47d240bc-11ea-4482-824c-cc6a2f0f5b9d';
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-30T14:20:47.994Z');
+    $request->connection->workspaceId = 'parse Peso Investment';
+    $request->id = '<ID>';
 
     $response = $sdk->unified->putUnifiedConnectionId($request);
 
@@ -1145,16 +1146,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-23T14:58:16.402Z');
-    $request->email = 'Ari.Brekke@hotmail.com';
-    $request->environment = 'commodi';
-    $request->id = '87d3100e-8e2b-49b0-9746-d2a7c7d1ea0e';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-31T04:46:29.769Z');
+    $request->email = 'Selena59@yahoo.com';
+    $request->environment = 'Bedfordshire Lucia';
+    $request->id = '<ID>';
     $request->meta = new PropertyUserMeta();
-    $request->name = 'Sheryl White';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-27T08:05:51.028Z');
-    $request->workspaceId = 'earum';
+    $request->name = 'Bicycle hacking South';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-15T15:08:26.238Z');
+    $request->workspaceId = 'Card defect';
     $request->workspaceIds = [
-        'veniam',
+        'repudiandae',
     ];
 
     $response = $sdk->unified->putUnifiedUser($request);

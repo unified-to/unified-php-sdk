@@ -1,4 +1,5 @@
 # Note
+(*note*)
 
 ### Available Operations
 
@@ -30,9 +31,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteTicketingConnectionIdNoteTicketIdIdRequest();
-    $request->connectionId = 'accusantium';
-    $request->id = 'e39c7e23-ecb0-4604-a52e-23a3d6c657e9';
-    $request->ticketId = 'quibusdam';
+    $request->connectionId = 'DRAM Liaison';
+    $request->id = '<ID>';
+    $request->ticketId = 'Tasty exploit';
 
     $response = $sdk->note->deleteTicketingConnectionIdNoteTicketIdId($request);
 
@@ -77,14 +78,14 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetTicketingConnectionIdNoteTicketIdRequest();
-    $request->connectionId = 'debitis';
-    $request->limit = 5242.12;
-    $request->offset = 9387.2;
-    $request->order = 'molestiae';
-    $request->query = 'hic';
-    $request->sort = 'ipsa';
-    $request->ticketId = 'consequatur';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-22T10:34:13.056Z');
+    $request->connectionId = 'Account revolutionary';
+    $request->limit = 2310.88;
+    $request->offset = 6688.82;
+    $request->order = 'AI';
+    $request->query = 'stanch Investor attitude';
+    $request->sort = 'Cotton';
+    $request->ticketId = 'Handmade Kia';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-26T17:12:11.333Z');
 
     $response = $sdk->note->getTicketingConnectionIdNoteTicketId($request);
 
@@ -129,9 +130,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetTicketingConnectionIdNoteTicketIdIdRequest();
-    $request->connectionId = 'veritatis';
-    $request->id = '986aa99d-3a1d-4323-a9e4-5837e8f2ad6b';
-    $request->ticketId = 'harum';
+    $request->connectionId = 'for';
+    $request->id = '<ID>';
+    $request->ticketId = 'female';
 
     $response = $sdk->note->getTicketingConnectionIdNoteTicketIdId($request);
 
@@ -179,16 +180,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchTicketingConnectionIdNoteTicketIdIdRequest();
     $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'inventore';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-10T00:06:21.229Z');
-    $request->ticketingNote->customerId = 'fugit';
-    $request->ticketingNote->description = 'nostrum';
-    $request->ticketingNote->id = '5fdc480d-6e33-4086-b5cb-f186856a7e82';
+    $request->ticketingNote->agentId = 'compress Oganesson';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-16T08:13:19.991Z');
+    $request->ticketingNote->customerId = 'demystify';
+    $request->ticketingNote->description = 'Fundamental demand-driven workforce';
+    $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'eligendi';
-    $request->connectionId = 'facere';
-    $request->id = 'f9d0fc28-2c66-46af-bc3f-5589bea5d264';
-    $request->ticketId = 'voluptates';
+    $request->ticketingNote->updatedAt = 'Nissan';
+    $request->connectionId = 'Chicken';
+    $request->id = '<ID>';
+    $request->ticketId = 'frictionless convergence officia';
 
     $response = $sdk->note->patchTicketingConnectionIdNoteTicketIdId($request);
 
@@ -236,15 +237,15 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostTicketingConnectionIdNoteTicketIdRequest();
     $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'modi';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-06T14:57:04.274Z');
-    $request->ticketingNote->customerId = 'ratione';
-    $request->ticketingNote->description = 'porro';
-    $request->ticketingNote->id = 'a84822e5-13f6-4d9d-aad3-7c3099077c10';
+    $request->ticketingNote->agentId = 'Plantation blue';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-11T06:54:31.529Z');
+    $request->ticketingNote->customerId = 'asymmetric';
+    $request->ticketingNote->description = 'Expanded intermediate attitude';
+    $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'rerum';
-    $request->connectionId = 'laboriosam';
-    $request->ticketId = 'deleniti';
+    $request->ticketingNote->updatedAt = 'naturally';
+    $request->connectionId = 'Wagon Sulfur';
+    $request->ticketId = 'digital';
 
     $response = $sdk->note->postTicketingConnectionIdNoteTicketId($request);
 
@@ -292,16 +293,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutTicketingConnectionIdNoteTicketIdIdRequest();
     $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'molestiae';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-11T18:39:58.020Z');
-    $request->ticketingNote->customerId = 'veritatis';
-    $request->ticketingNote->description = 'commodi';
-    $request->ticketingNote->id = '3e67d488-6054-43c0-a304-9c3cf6c0276e';
+    $request->ticketingNote->agentId = 'SMTP Cis';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-27T18:14:06.584Z');
+    $request->ticketingNote->customerId = 'Carolina';
+    $request->ticketingNote->description = 'Integrated asymmetric strategy';
+    $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'dignissimos';
-    $request->connectionId = 'libero';
-    $request->id = '21bad90d-2743-4fd6-82a1-0e6c2978ec25';
-    $request->ticketId = 'commodi';
+    $request->ticketingNote->updatedAt = 'Northeast Morocco supposing';
+    $request->connectionId = 'DNS Fermium';
+    $request->id = '<ID>';
+    $request->ticketId = 'Southwest round';
 
     $response = $sdk->note->putTicketingConnectionIdNoteTicketIdId($request);
 

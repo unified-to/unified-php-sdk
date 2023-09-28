@@ -1,4 +1,5 @@
 # Group
+(*group*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteHrisConnectionIdGroupIdRequest();
-    $request->connectionId = 'inventore';
-    $request->id = 'a2047c04-49e1-443f-9619-bb7d40d5a11f';
+    $request->connectionId = 'consequently platforms Metal';
+    $request->id = '<ID>';
 
     $response = $sdk->group->deleteHrisConnectionIdGroupId($request);
 
@@ -76,13 +77,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetHrisConnectionIdGroupRequest();
-    $request->connectionId = 'est';
-    $request->limit = 2688.56;
-    $request->offset = 1983.79;
-    $request->order = 'autem';
-    $request->query = 'repudiandae';
-    $request->sort = 'commodi';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-27T08:42:19.470Z');
+    $request->connectionId = 'Loan';
+    $request->limit = 3486.96;
+    $request->offset = 9705.73;
+    $request->order = 'Coordinator';
+    $request->query = 'World';
+    $request->sort = 'Dollar';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-15T16:06:13.340Z');
 
     $response = $sdk->group->getHrisConnectionIdGroup($request);
 
@@ -127,8 +128,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetHrisConnectionIdGroupIdRequest();
-    $request->connectionId = 'natus';
-    $request->id = '233f95c9-d237-4397-8785-b5db4f500183';
+    $request->connectionId = 'behind';
+    $request->id = '<ID>';
 
     $response = $sdk->group->getHrisConnectionIdGroupId($request);
 
@@ -177,23 +178,23 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchHrisConnectionIdGroupIdRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-05-07T13:51:22.582Z');
-    $request->hrisGroup->description = 'tempore';
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-19T05:30:26.390Z');
+    $request->hrisGroup->description = 'Stand-alone asymmetric orchestration';
     $request->hrisGroup->employeeIds = [
-        'vero',
+        'shootdown',
     ];
-    $request->hrisGroup->id = 'f676b720-6dab-4750-852a-5647edc439ed';
+    $request->hrisGroup->id = '<ID>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'corrupti',
+        '24/7',
     ];
-    $request->hrisGroup->name = 'Jay Ferry DVM';
-    $request->hrisGroup->parentId = 'incidunt';
+    $request->hrisGroup->name = 'Agender trainer';
+    $request->hrisGroup->parentId = 'Configuration Kids Sedan';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Team;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-27T10:46:22.934Z');
-    $request->connectionId = 'voluptatem';
-    $request->id = 'd4487ac6-93b9-44c3-b9d2-488d795aa42f';
+    $request->hrisGroup->type = HrisGroupType::Division;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-18T16:48:12.885Z');
+    $request->connectionId = 'Intersex';
+    $request->id = '<ID>';
 
     $response = $sdk->group->patchHrisConnectionIdGroupId($request);
 
@@ -242,22 +243,22 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostHrisConnectionIdGroupRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-12T23:00:01.148Z');
-    $request->hrisGroup->description = 'accusantium';
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-23T15:35:38.483Z');
+    $request->hrisGroup->description = 'Configurable stable product';
     $request->hrisGroup->employeeIds = [
-        'corporis',
+        'Auto',
     ];
-    $request->hrisGroup->id = '669f69a0-06d2-4124-9450-819d7c3b1b41';
+    $request->hrisGroup->id = '<ID>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'atque',
+        'JSON',
     ];
-    $request->hrisGroup->name = 'Eva Adams PhD';
-    $request->hrisGroup->parentId = 'accusantium';
+    $request->hrisGroup->name = 'whereas Usability transmitting';
+    $request->hrisGroup->parentId = 'invoice Cyclocross Electric';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Team;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-01T19:20:31.162Z');
-    $request->connectionId = 'ipsa';
+    $request->hrisGroup->type = HrisGroupType::Group;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-30T12:40:50.129Z');
+    $request->connectionId = 'Hybrid Schenectady';
 
     $response = $sdk->group->postHrisConnectionIdGroup($request);
 
@@ -306,23 +307,23 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutHrisConnectionIdGroupIdRequest();
     $request->hrisGroup = new HrisGroup();
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-13T12:17:37.565Z');
-    $request->hrisGroup->description = 'qui';
+    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-10T12:11:42.375Z');
+    $request->hrisGroup->description = 'Decentralized methodical projection';
     $request->hrisGroup->employeeIds = [
-        'velit',
+        'Credit',
     ];
-    $request->hrisGroup->id = 'dc901f5a-fd2a-46c4-8846-ae9d89253c89';
+    $request->hrisGroup->id = '<ID>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'ea',
+        'South',
     ];
-    $request->hrisGroup->name = 'Lucia Hahn';
-    $request->hrisGroup->parentId = 'eum';
+    $request->hrisGroup->name = 'Jeep brr Northwest';
+    $request->hrisGroup->parentId = 'quickly Licensed';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
     $request->hrisGroup->type = HrisGroupType::BusinessUnit;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-15T01:08:49.822Z');
-    $request->connectionId = 'et';
-    $request->id = 'e4652d3c-343d-4617-b8af-491247725e62';
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-08T00:11:45.458Z');
+    $request->connectionId = 'vortals interface Gasoline';
+    $request->id = '<ID>';
 
     $response = $sdk->group->putHrisConnectionIdGroupId($request);
 

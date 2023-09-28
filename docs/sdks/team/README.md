@@ -1,4 +1,5 @@
 # Team
+(*team*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdTeamIdRequest();
-    $request->connectionId = 'asperiores';
-    $request->id = 'b0a4e66e-a475-478d-971e-2941818fc679';
+    $request->connectionId = 'Diverse';
+    $request->id = '<ID>';
 
     $response = $sdk->team->deleteCrmConnectionIdTeamId($request);
 
@@ -76,13 +77,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdTeamRequest();
-    $request->connectionId = 'facilis';
-    $request->limit = 4315.86;
-    $request->offset = 7075.83;
-    $request->order = 'quia';
-    $request->query = 'delectus';
-    $request->sort = 'sunt';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-15T08:46:53.406Z');
+    $request->connectionId = 'bath Lamborghini';
+    $request->limit = 1042.31;
+    $request->offset = 1586.42;
+    $request->order = 'Diesel Bike virtual';
+    $request->query = 'bakery';
+    $request->sort = 'Senior';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-04T23:56:00.028Z');
 
     $response = $sdk->team->getCrmConnectionIdTeam($request);
 
@@ -127,8 +128,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdTeamIdRequest();
-    $request->connectionId = 'corporis';
-    $request->id = '9b855d01-5b62-4c8b-83a3-8a8a88c14420';
+    $request->connectionId = 'Intelligent invoice Tesla';
+    $request->id = '<ID>';
 
     $response = $sdk->team->getCrmConnectionIdTeamId($request);
 
@@ -176,17 +177,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmConnectionIdTeamIdRequest();
     $request->crmTeam = new CrmTeam();
-    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-29T00:26:06.647Z');
-    $request->crmTeam->description = 'aspernatur';
-    $request->crmTeam->id = 'caeb1ae1-ecf8-4c34-946b-ba7a05a8b4a9';
-    $request->crmTeam->name = 'Edmund Hartmann';
+    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-20T12:47:48.451Z');
+    $request->crmTeam->description = 'Automated executive emulation';
+    $request->crmTeam->id = '<ID>';
+    $request->crmTeam->name = 'Internal experiences';
     $request->crmTeam->raw = new PropertyCrmTeamRaw();
-    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-28T17:56:27.401Z');
+    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-22T09:41:53.599Z');
     $request->crmTeam->userIds = [
-        'rem',
+        'lumen',
     ];
-    $request->connectionId = 'maxime';
-    $request->id = 'ca363272-760e-4966-a97e-054103347d78';
+    $request->connectionId = 'up Candace';
+    $request->id = '<ID>';
 
     $response = $sdk->team->patchCrmConnectionIdTeamId($request);
 
@@ -234,16 +235,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostCrmConnectionIdTeamRequest();
     $request->crmTeam = new CrmTeam();
-    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-01-07T09:14:35.417Z');
-    $request->crmTeam->description = 'odit';
-    $request->crmTeam->id = '491145fa-b9e5-49a4-af33-6664eaa6bf2f';
-    $request->crmTeam->name = 'Ryan Hagenes';
+    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-12T08:57:03.070Z');
+    $request->crmTeam->description = 'Organic transitional portal';
+    $request->crmTeam->id = '<ID>';
+    $request->crmTeam->name = 'male bandwidth';
     $request->crmTeam->raw = new PropertyCrmTeamRaw();
-    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-03T05:31:55.677Z');
+    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-29T15:50:04.365Z');
     $request->crmTeam->userIds = [
-        'expedita',
+        'meter',
     ];
-    $request->connectionId = 'velit';
+    $request->connectionId = 'Guaynabo AGP East';
 
     $response = $sdk->team->postCrmConnectionIdTeam($request);
 
@@ -291,17 +292,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutCrmConnectionIdTeamIdRequest();
     $request->crmTeam = new CrmTeam();
-    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-31T20:40:47.153Z');
-    $request->crmTeam->description = 'dolorum';
-    $request->crmTeam->id = 'ccedacc5-2278-414e-8a01-6bc41ea1342d';
-    $request->crmTeam->name = 'Julie Aufderhar';
+    $request->crmTeam->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-14T23:28:53.515Z');
+    $request->crmTeam->description = 'Inverse multi-tasking task-force';
+    $request->crmTeam->id = '<ID>';
+    $request->crmTeam->name = 'Indonesia Orchestrator Division';
     $request->crmTeam->raw = new PropertyCrmTeamRaw();
-    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-01T11:43:04.880Z');
+    $request->crmTeam->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-23T23:13:25.973Z');
     $request->crmTeam->userIds = [
-        'debitis',
+        'thoroughly',
     ];
-    $request->connectionId = 'asperiores';
-    $request->id = '71de57a1-1d61-44a4-b176-92ea48673d52';
+    $request->connectionId = 'delectus';
+    $request->id = '<ID>';
 
     $response = $sdk->team->putCrmConnectionIdTeamId($request);
 

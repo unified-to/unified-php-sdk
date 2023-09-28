@@ -1,4 +1,5 @@
 # Event
+(*event*)
 
 ### Available Operations
 
@@ -39,8 +40,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdEventIdRequest();
-    $request->connectionId = 'voluptatibus';
-    $request->id = 'e77210d1-f655-48c9-9c72-2d2bc0f94087';
+    $request->connectionId = 'Wooden Latin';
+    $request->id = '<ID>';
 
     $response = $sdk->event->deleteCrmConnectionIdEventId($request);
 
@@ -85,9 +86,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdEventIdCompanyCompanyIdRequest();
-    $request->companyId = 'possimus';
-    $request->connectionId = 'unde';
-    $request->id = 'caae042d-d7ca-4ac9-b4ca-a1cfe9e15df9';
+    $request->companyId = 'Gasoline gentle Japan';
+    $request->connectionId = 'Outdoors';
+    $request->id = '<ID>';
 
     $response = $sdk->event->deleteCrmConnectionIdEventIdCompanyCompanyId($request);
 
@@ -132,9 +133,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdEventIdContactContactIdRequest();
-    $request->connectionId = 'ipsa';
-    $request->contactId = 'amet';
-    $request->id = '907f3783-1983-4d42-a54a-85466597c502';
+    $request->connectionId = 'lecture Funk';
+    $request->contactId = 'Bedfordshire Genderqueer';
+    $request->id = '<ID>';
 
     $response = $sdk->event->deleteCrmConnectionIdEventIdContactContactId($request);
 
@@ -179,9 +180,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdEventIdDealDealIdRequest();
-    $request->connectionId = 'dolorem';
-    $request->dealId = 'nesciunt';
-    $request->id = 'c1471d51-aaa6-4ddf-9abd-6487c5fc2b86';
+    $request->connectionId = 'Southeast';
+    $request->dealId = 'Granite gah Dysprosium';
+    $request->id = '<ID>';
 
     $response = $sdk->event->deleteCrmConnectionIdEventIdDealDealId($request);
 
@@ -226,16 +227,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdEventRequest();
-    $request->companyId = 'aspernatur';
-    $request->connectionId = 'est';
-    $request->contactId = 'voluptatem';
-    $request->dealId = 'aut';
-    $request->limit = 7479.51;
-    $request->offset = 9065.77;
-    $request->order = 'maiores';
-    $request->query = 'autem';
-    $request->sort = 'perspiciatis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-13T16:28:10.920Z');
+    $request->companyId = 'Zirconium Avon Bedfordshire';
+    $request->connectionId = 'Hybrid grey Ferrari';
+    $request->contactId = 'Checking Southeast';
+    $request->dealId = 'Graham till Caesium';
+    $request->limit = 2928.84;
+    $request->offset = 5904.77;
+    $request->order = 'furthermore Tricycle Hop';
+    $request->query = 'auxiliary';
+    $request->sort = 'Southeast Bicycle Gorgeous';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-15T23:49:53.643Z');
 
     $response = $sdk->event->getCrmConnectionIdEvent($request);
 
@@ -280,8 +281,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdEventIdRequest();
-    $request->connectionId = 'aperiam';
-    $request->id = '0157630b-da7a-4fde-984a-35a41238e1a7';
+    $request->connectionId = 'Future equalise';
+    $request->id = '<ID>';
 
     $response = $sdk->event->getCrmConnectionIdEventId($request);
 
@@ -336,45 +337,45 @@ try {
     $request = new PatchCrmConnectionIdEventIdRequest();
     $request->crmEvent = new CrmEvent();
     $request->crmEvent->call = new PropertyCrmEventCall();
-    $request->crmEvent->call->description = 'sequi';
-    $request->crmEvent->call->duration = 3217.24;
+    $request->crmEvent->call->description = 'Optional zero defect function';
+    $request->crmEvent->call->duration = 5434.61;
     $request->crmEvent->companyIds = [
-        'fuga',
+        'silver',
     ];
     $request->crmEvent->contactIds = [
-        'quisquam',
+        'redefine',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-14T18:32:10.464Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-21T06:46:42.528Z');
     $request->crmEvent->dealIds = [
-        'officia',
+        'Solutions',
     ];
     $request->crmEvent->email = new PropertyCrmEventEmail();
-    $request->crmEvent->email->body = 'saepe';
+    $request->crmEvent->email->body = 'French';
     $request->crmEvent->email->cc = [
-        'ipsum',
+        'Checking',
     ];
-    $request->crmEvent->email->from = 'ratione';
-    $request->crmEvent->email->subject = 'expedita';
+    $request->crmEvent->email->from = 'SDD Toyota Northeast';
+    $request->crmEvent->email->subject = 'Convertible';
     $request->crmEvent->email->to = [
-        'itaque',
+        'Electronics',
     ];
-    $request->crmEvent->id = 'f971a8f4-6bca-4110-afe9-65b711d08cf8';
+    $request->crmEvent->id = '<ID>';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
-    $request->crmEvent->meeting->description = 'deleniti';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-09-10T16:44:56.500Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-21T08:33:52.151Z');
-    $request->crmEvent->meeting->title = 'Ms.';
+    $request->crmEvent->meeting->description = 'Monitored mission-critical customer loyalty';
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-22T17:43:00.863Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-24T06:40:04.926Z');
+    $request->crmEvent->meeting->title = 'Kip Switchable Chicken';
     $request->crmEvent->note = new PropertyCrmEventNote();
-    $request->crmEvent->note->description = 'libero';
+    $request->crmEvent->note->description = 'Cross-group high-level functionalities';
     $request->crmEvent->raw = new PropertyCrmEventRaw();
     $request->crmEvent->task = new PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'perspiciatis';
-    $request->crmEvent->task->name = 'Homer Hilll V';
-    $request->crmEvent->task->status = 'eum';
-    $request->crmEvent->type = CrmEventType::Email;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-03T15:27:28.517Z');
-    $request->connectionId = 'possimus';
-    $request->id = '333bb0ce-8aa6-4543-aa98-6eb7e14ca564';
+    $request->crmEvent->task->description = 'Horizontal empowering forecast';
+    $request->crmEvent->task->name = 'Principal extremely Jast';
+    $request->crmEvent->task->status = 'striped Concrete Bronze';
+    $request->crmEvent->type = CrmEventType::Note;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-18T21:34:24.992Z');
+    $request->connectionId = 'Dinar benchmark till';
+    $request->id = '<ID>';
 
     $response = $sdk->event->patchCrmConnectionIdEventId($request);
 
@@ -419,9 +420,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PatchCrmConnectionIdEventIdCompanyCompanyIdRequest();
-    $request->companyId = 'doloremque';
-    $request->connectionId = 'atque';
-    $request->id = '91500970-19a4-48f8-8ece-7bf904e01105';
+    $request->companyId = 'quis Operations';
+    $request->connectionId = 'convergence programming';
+    $request->id = '<ID>';
 
     $response = $sdk->event->patchCrmConnectionIdEventIdCompanyCompanyId($request);
 
@@ -466,9 +467,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PatchCrmConnectionIdEventIdContactContactIdRequest();
-    $request->connectionId = 'temporibus';
-    $request->contactId = 'sequi';
-    $request->id = '8908162c-6beb-468a-8f65-7b7d03a1480f';
+    $request->connectionId = 'gosh';
+    $request->contactId = 'North Guilder';
+    $request->id = '<ID>';
 
     $response = $sdk->event->patchCrmConnectionIdEventIdContactContactId($request);
 
@@ -513,9 +514,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PatchCrmConnectionIdEventIdDealDealIdRequest();
-    $request->connectionId = 'blanditiis';
-    $request->dealId = 'at';
-    $request->id = 'e30f069d-8106-418d-97e1-52297510da80';
+    $request->connectionId = 'nobis Developer withdrawal';
+    $request->dealId = 'male connect';
+    $request->id = '<ID>';
 
     $response = $sdk->event->patchCrmConnectionIdEventIdDealDealId($request);
 
@@ -570,44 +571,44 @@ try {
     $request = new PostCrmConnectionIdEventRequest();
     $request->crmEvent = new CrmEvent();
     $request->crmEvent->call = new PropertyCrmEventCall();
-    $request->crmEvent->call->description = 'amet';
-    $request->crmEvent->call->duration = 1102.8;
+    $request->crmEvent->call->description = 'Visionary bandwidth-monitored hardware';
+    $request->crmEvent->call->duration = 9256.02;
     $request->crmEvent->companyIds = [
-        'explicabo',
+        'Kentucky',
     ];
     $request->crmEvent->contactIds = [
-        'quia',
+        'Rustic',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-18T09:46:14.932Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-12T10:03:55.861Z');
     $request->crmEvent->dealIds = [
-        'nobis',
+        'agonizing',
     ];
     $request->crmEvent->email = new PropertyCrmEventEmail();
-    $request->crmEvent->email->body = 'optio';
+    $request->crmEvent->email->body = 'protocol';
     $request->crmEvent->email->cc = [
-        'laboriosam',
+        'Ratke',
     ];
-    $request->crmEvent->email->from = 'quasi';
-    $request->crmEvent->email->subject = 'porro';
+    $request->crmEvent->email->from = 'woman';
+    $request->crmEvent->email->subject = 'East Soft';
     $request->crmEvent->email->to = [
-        'sed',
+        'Southeast',
     ];
-    $request->crmEvent->id = 'a702bb97-ee10-42da-ade3-5f8e01bf33ea';
+    $request->crmEvent->id = '<ID>';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
-    $request->crmEvent->meeting->description = 'id';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-07T22:59:32.310Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-27T18:26:25.866Z');
-    $request->crmEvent->meeting->title = 'Mr.';
+    $request->crmEvent->meeting->description = 'Streamlined intangible time-frame';
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-18T21:50:55.608Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-24T14:06:25.626Z');
+    $request->crmEvent->meeting->title = 'violet Synergized blah';
     $request->crmEvent->note = new PropertyCrmEventNote();
-    $request->crmEvent->note->description = 'dolores';
+    $request->crmEvent->note->description = 'Mandatory eco-centric toolset';
     $request->crmEvent->raw = new PropertyCrmEventRaw();
     $request->crmEvent->task = new PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'dolorum';
-    $request->crmEvent->task->name = 'Mrs. Willie Kessler';
-    $request->crmEvent->task->status = 'a';
-    $request->crmEvent->type = CrmEventType::Note;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-07-26T18:32:05.042Z');
-    $request->connectionId = 'cupiditate';
+    $request->crmEvent->task->description = 'Team-oriented dynamic forecast';
+    $request->crmEvent->task->name = 'Grocery';
+    $request->crmEvent->task->status = 'excitedly Bacon';
+    $request->crmEvent->type = CrmEventType::Email;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-09T20:12:06.214Z');
+    $request->connectionId = 'Progressive';
 
     $response = $sdk->event->postCrmConnectionIdEvent($request);
 
@@ -662,45 +663,45 @@ try {
     $request = new PutCrmConnectionIdEventIdRequest();
     $request->crmEvent = new CrmEvent();
     $request->crmEvent->call = new PropertyCrmEventCall();
-    $request->crmEvent->call->description = 'asperiores';
-    $request->crmEvent->call->duration = 8024.49;
+    $request->crmEvent->call->description = 'Re-engineered composite time-frame';
+    $request->crmEvent->call->duration = 5444.58;
     $request->crmEvent->companyIds = [
-        'ex',
+        'DNS',
     ];
     $request->crmEvent->contactIds = [
-        'dicta',
+        'Skokie',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-28T07:41:25.984Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-05T01:37:36.877Z');
     $request->crmEvent->dealIds = [
-        'itaque',
+        'lux',
     ];
     $request->crmEvent->email = new PropertyCrmEventEmail();
-    $request->crmEvent->email->body = 'ad';
+    $request->crmEvent->email->body = 'Hatchback card';
     $request->crmEvent->email->cc = [
-        'voluptates',
+        'Gasoline',
     ];
-    $request->crmEvent->email->from = 'harum';
-    $request->crmEvent->email->subject = 'quaerat';
+    $request->crmEvent->email->from = 'Caribbean';
+    $request->crmEvent->email->subject = 'Account medium';
     $request->crmEvent->email->to = [
-        'delectus',
+        'copy',
     ];
-    $request->crmEvent->id = '0c492b57-44d0-48a2-a67a-aee79e3c71ad';
+    $request->crmEvent->id = '<ID>';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
-    $request->crmEvent->meeting->description = 'sequi';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-08T18:10:30.127Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-09-16T14:41:56.323Z');
-    $request->crmEvent->meeting->title = 'Miss';
+    $request->crmEvent->meeting->description = 'Inverse optimizing model';
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-21T17:32:41.888Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-17T10:31:48.119Z');
+    $request->crmEvent->meeting->title = 'male henry Hat';
     $request->crmEvent->note = new PropertyCrmEventNote();
-    $request->crmEvent->note->description = 'rem';
+    $request->crmEvent->note->description = 'Self-enabling asymmetric functionalities';
     $request->crmEvent->raw = new PropertyCrmEventRaw();
     $request->crmEvent->task = new PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'consectetur';
-    $request->crmEvent->task->name = 'Martin Fahey';
-    $request->crmEvent->task->status = 'mollitia';
-    $request->crmEvent->type = CrmEventType::Call;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-18T23:37:57.750Z');
-    $request->connectionId = 'sapiente';
-    $request->id = 'c23d9450-a986-4a49-9bac-707f06b28ecc';
+    $request->crmEvent->task->description = 'Reduced 4th generation analyzer';
+    $request->crmEvent->task->name = 'Savings Female nor';
+    $request->crmEvent->task->status = 'Customer sky';
+    $request->crmEvent->type = CrmEventType::Note;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-27T14:02:37.510Z');
+    $request->connectionId = 'transparent';
+    $request->id = '<ID>';
 
     $response = $sdk->event->putCrmConnectionIdEventId($request);
 
@@ -745,9 +746,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PutCrmConnectionIdEventIdCompanyCompanyIdRequest();
-    $request->companyId = 'atque';
-    $request->connectionId = 'autem';
-    $request->id = '492386f6-2c96-49c4-8c6b-78890a3fd3c8';
+    $request->companyId = 'Administrator';
+    $request->connectionId = 'Computers';
+    $request->id = '<ID>';
 
     $response = $sdk->event->putCrmConnectionIdEventIdCompanyCompanyId($request);
 
@@ -792,9 +793,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PutCrmConnectionIdEventIdContactContactIdRequest();
-    $request->connectionId = 'inventore';
-    $request->contactId = 'quibusdam';
-    $request->id = 'a10f8c23-df93-41da-bedb-51fad94acc94';
+    $request->connectionId = 'olive';
+    $request->contactId = 'deposit Bicycle';
+    $request->id = '<ID>';
 
     $response = $sdk->event->putCrmConnectionIdEventIdContactContactId($request);
 
@@ -839,9 +840,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PutCrmConnectionIdEventIdDealDealIdRequest();
-    $request->connectionId = 'consectetur';
-    $request->dealId = 'ullam';
-    $request->id = '137726d1-5321-4b83-aa56-d69180ff60eb';
+    $request->connectionId = 'Bloomington';
+    $request->dealId = 'provided apud Southeast';
+    $request->id = '<ID>';
 
     $response = $sdk->event->putCrmConnectionIdEventIdDealDealId($request);
 

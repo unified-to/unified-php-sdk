@@ -1,4 +1,5 @@
 # Enrich
+(*enrich*)
 
 ### Available Operations
 
@@ -26,9 +27,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetEnrichConnectionIdCompanyRequest();
-    $request->connectionId = 'alias';
-    $request->domain = 'fuga';
-    $request->name = 'Lola Leuschke';
+    $request->connectionId = 'female Computers Central';
+    $request->domain = 'scientific-facet.biz';
+    $request->name = 'Outdoors embrace interface';
 
     $response = $sdk->enrich->getEnrichConnectionIdCompany($request);
 
@@ -73,11 +74,11 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetEnrichConnectionIdPersonRequest();
-    $request->connectionId = 'veniam';
-    $request->email = 'Shanny35@hotmail.com';
-    $request->linkedinUrl = 'incidunt';
-    $request->name = 'Jessie Fisher';
-    $request->twitter = 'dolore';
+    $request->connectionId = 'Iowa Account';
+    $request->email = 'Jaiden_Weimann24@gmail.com';
+    $request->linkedinUrl = 'paradigms integrate Creative';
+    $request->name = 'Investment';
+    $request->twitter = 'Hills';
 
     $response = $sdk->enrich->getEnrichConnectionIdPerson($request);
 

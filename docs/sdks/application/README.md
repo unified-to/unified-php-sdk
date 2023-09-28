@@ -1,4 +1,5 @@
 # Application
+(*application*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteAtsConnectionIdApplicationIdRequest();
-    $request->connectionId = 'provident';
-    $request->id = 'cbf48633-323f-49b7-bf3a-4100674ebf69';
+    $request->connectionId = 'markets sievert meh';
+    $request->id = '<ID>';
 
     $response = $sdk->application->deleteAtsConnectionIdApplicationId($request);
 
@@ -76,15 +77,15 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsConnectionIdApplicationRequest();
-    $request->candidateId = 'eos';
-    $request->connectionId = 'atque';
-    $request->jobId = 'sit';
-    $request->limit = 8546.14;
-    $request->offset = 672.49;
-    $request->order = 'soluta';
-    $request->query = 'dolorum';
-    $request->sort = 'iusto';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-28T20:45:55.086Z');
+    $request->candidateId = 'turquoise';
+    $request->connectionId = 'Regional Bedfordshire';
+    $request->jobId = 'Northwest portal Electric';
+    $request->limit = 576.8;
+    $request->offset = 7467.13;
+    $request->order = 'Architect';
+    $request->query = 'loosely contingency';
+    $request->sort = 'female';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-05T13:59:23.348Z');
 
     $response = $sdk->application->getAtsConnectionIdApplication($request);
 
@@ -129,8 +130,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsConnectionIdApplicationIdRequest();
-    $request->connectionId = 'deleniti';
-    $request->id = '9ebf737a-e420-43ce-9e6a-95d8a0d446ce';
+    $request->connectionId = 'Buckinghamshire functionalities';
+    $request->id = '<ID>';
 
     $response = $sdk->application->getAtsConnectionIdApplicationId($request);
 
@@ -179,19 +180,19 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsConnectionIdApplicationIdRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-27T20:15:21.190Z');
-    $request->atsApplication->candidateId = 'a';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-25T01:36:09.517Z');
-    $request->atsApplication->id = '73cf3be4-53f8-470b-b26b-5a73429cdb1a';
-    $request->atsApplication->jobId = 'totam';
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-17T09:51:42.165Z');
+    $request->atsApplication->candidateId = 'North et beyond';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T08:26:22.845Z');
+    $request->atsApplication->id = '<ID>';
+    $request->atsApplication->jobId = 'ick Sausages Bronze';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-13T19:04:59.225Z');
-    $request->atsApplication->rejectedReason = 'dolores';
-    $request->atsApplication->source = 'distinctio';
-    $request->atsApplication->status = AtsApplicationStatus::Offered;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-15T22:48:14.867Z');
-    $request->connectionId = 'molestias';
-    $request->id = 'd2322715-bf0c-4bb1-a31b-8b90f3443a11';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-18T00:47:25.469Z');
+    $request->atsApplication->rejectedReason = 'Avon Sum quis';
+    $request->atsApplication->source = 'Carolina Wooden Pop';
+    $request->atsApplication->status = AtsApplicationStatus::Hired;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-20T22:05:46.009Z');
+    $request->connectionId = 'Baby Paucek';
+    $request->id = '<ID>';
 
     $response = $sdk->application->patchAtsConnectionIdApplicationId($request);
 
@@ -240,18 +241,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostAtsConnectionIdApplicationRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-12T04:30:45.210Z');
-    $request->atsApplication->candidateId = 'itaque';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-01T11:31:51.593Z');
-    $request->atsApplication->id = 'dcf4b921-879f-4ce9-93f7-3ef7fbc7abd7';
-    $request->atsApplication->jobId = 'dolore';
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-26T15:24:28.979Z');
+    $request->atsApplication->candidateId = 'solid';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-13T17:17:33.049Z');
+    $request->atsApplication->id = '<ID>';
+    $request->atsApplication->jobId = 'Gloves Pizza virtual';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-15T09:45:48.083Z');
-    $request->atsApplication->rejectedReason = 'sequi';
-    $request->atsApplication->source = 'natus';
-    $request->atsApplication->status = AtsApplicationStatus::Accepted;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-10T09:29:38.619Z');
-    $request->connectionId = 'exercitationem';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-27T18:41:56.821Z');
+    $request->atsApplication->rejectedReason = 'Northwest Kids';
+    $request->atsApplication->source = 'Human Tasty Loan';
+    $request->atsApplication->status = AtsApplicationStatus::New;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-01T21:08:50.319Z');
+    $request->connectionId = 'Jazz';
 
     $response = $sdk->application->postAtsConnectionIdApplication($request);
 
@@ -300,19 +301,19 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutAtsConnectionIdApplicationIdRequest();
     $request->atsApplication = new AtsApplication();
-    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-22T18:51:28.663Z');
-    $request->atsApplication->candidateId = 'porro';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-01-18T09:21:05.997Z');
-    $request->atsApplication->id = '7c70a456-26d4-4368-93f1-6d9f5fce6c55';
-    $request->atsApplication->jobId = 'aliquid';
+    $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-15T22:25:51.833Z');
+    $request->atsApplication->candidateId = 'farad Indianapolis';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T21:03:58.880Z');
+    $request->atsApplication->id = '<ID>';
+    $request->atsApplication->jobId = 'enable foreground';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-12T19:57:40.850Z');
-    $request->atsApplication->rejectedReason = 'ea';
-    $request->atsApplication->source = 'quo';
-    $request->atsApplication->status = AtsApplicationStatus::Screening;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-08T22:13:29.147Z');
-    $request->connectionId = 'minima';
-    $request->id = '0fb008c4-2e14-41aa-8366-c8dd6b144290';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-06T11:41:30.414Z');
+    $request->atsApplication->rejectedReason = 'virtual North plum';
+    $request->atsApplication->source = 'Fort solid';
+    $request->atsApplication->status = AtsApplicationStatus::Submitted;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-21T04:47:57.079Z');
+    $request->connectionId = 'Southeast';
+    $request->id = '<ID>';
 
     $response = $sdk->application->putAtsConnectionIdApplicationId($request);
 

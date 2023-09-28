@@ -1,4 +1,5 @@
 # Login
+(*login*)
 
 ### Available Operations
 
@@ -25,13 +26,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'reprehenderit';
-    $request->failureRedirect = 'iste';
-    $request->integrationType = 'ratione';
+    $request->env = 'Rubber';
+    $request->failureRedirect = 'gold Cambridgeshire';
+    $request->integrationType = 'Plastic services pixel';
     $request->redirect = false;
-    $request->state = 'consequatur';
-    $request->successRedirect = 'pariatur';
-    $request->workspaceId = 'eum';
+    $request->state = 'Volkswagen Southwest';
+    $request->successRedirect = 'drive integrated Bicycle';
+    $request->workspaceId = 'Fantastic recontextualize Frozen';
 
     $response = $sdk->login->getUnifiedIntegrationLoginWorkspaceIdIntegrationType($request);
 

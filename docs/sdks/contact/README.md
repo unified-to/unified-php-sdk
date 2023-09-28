@@ -1,4 +1,5 @@
 # Contact
+(*contact*)
 
 ### Available Operations
 
@@ -42,8 +43,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdContactIdRequest();
-    $request->connectionId = 'maxime';
-    $request->id = '909304f9-26ba-4d25-9381-9b474b0ed20e';
+    $request->connectionId = 'chargesheet';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->deleteCrmConnectionIdContactId($request);
 
@@ -88,9 +89,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest();
-    $request->companyId = 'corporis';
-    $request->connectionId = 'ea';
-    $request->id = '248fff63-9a91-40ab-9cab-62676696e1ec';
+    $request->companyId = 'unaware';
+    $request->connectionId = 'Nissan';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->deleteCrmConnectionIdContactIdCompanyCompanyId($request);
 
@@ -135,9 +136,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdContactIdDealDealIdRequest();
-    $request->connectionId = 'eaque';
-    $request->dealId = 'alias';
-    $request->id = '221b335d-89ac-4b3e-8fda-8d0c549ef030';
+    $request->connectionId = 'auxiliary ew';
+    $request->dealId = 'foreground Electronics Northeast';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->deleteCrmConnectionIdContactIdDealDealId($request);
 
@@ -182,8 +183,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteUcConnectionIdContactIdRequest();
-    $request->connectionId = 'doloremque';
-    $request->id = '4978a61f-a1cf-4206-88f7-7c1ffc71dca1';
+    $request->connectionId = 'Southeast Modern commonly';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->deleteUcConnectionIdContactId($request);
 
@@ -228,15 +229,15 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdContactRequest();
-    $request->companyId = 'ex';
-    $request->connectionId = 'consectetur';
-    $request->dealId = 'maiores';
-    $request->limit = 1530.97;
-    $request->offset = 6571.41;
-    $request->order = 'sequi';
-    $request->query = 'eligendi';
-    $request->sort = 'voluptatum';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-30T19:59:48.348Z');
+    $request->companyId = 'Southeast Human Southeast';
+    $request->connectionId = 'magenta loose';
+    $request->dealId = 'intuitive';
+    $request->limit = 9605;
+    $request->offset = 8572.44;
+    $request->order = 'Music Electronics';
+    $request->query = 'Elegant';
+    $request->sort = 'North Analyst Otis';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-18T15:42:24.943Z');
 
     $response = $sdk->contact->getCrmConnectionIdContact($request);
 
@@ -281,8 +282,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdContactIdRequest();
-    $request->connectionId = 'omnis';
-    $request->id = '7ff334cd-df85-47a9-a618-76c6ab21d29d';
+    $request->connectionId = 'Account fountain visionary';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->getCrmConnectionIdContactId($request);
 
@@ -327,14 +328,14 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUcConnectionIdContactRequest();
-    $request->agentId = 'a';
-    $request->connectionId = 'impedit';
-    $request->limit = 6018.03;
-    $request->offset = 2814.54;
-    $request->order = 'facere';
-    $request->query = 'voluptas';
-    $request->sort = 'doloribus';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-21T17:46:18.554Z');
+    $request->agentId = 'Refined Practical';
+    $request->connectionId = 'inasmuch Dodge';
+    $request->limit = 7215.14;
+    $request->offset = 2910.48;
+    $request->order = 'Vermont';
+    $request->query = 'maroon JBOD';
+    $request->sort = 'hertz';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-29T17:06:35.136Z');
 
     $response = $sdk->contact->getUcConnectionIdContact($request);
 
@@ -379,8 +380,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUcConnectionIdContactIdRequest();
-    $request->connectionId = 'facere';
-    $request->id = '79939006-6a6d-42d0-8035-5338cec086fa';
+    $request->connectionId = 'Land';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->getUcConnectionIdContactId($request);
 
@@ -434,35 +435,35 @@ try {
     $request = new PatchCrmConnectionIdContactIdRequest();
     $request->crmContact = new CrmContact();
     $request->crmContact->address = new PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'fugit';
-    $request->crmContact->address->address2 = 'veritatis';
-    $request->crmContact->address->city = 'Norfolk';
-    $request->crmContact->address->country = 'Bouvet Island (Bouvetoya)';
-    $request->crmContact->address->countryCode = 'GU';
-    $request->crmContact->address->postalCode = '76211';
-    $request->crmContact->address->region = 'molestias';
-    $request->crmContact->address->regionCode = 'beatae';
-    $request->crmContact->company = 'Kunze - Rempel';
+    $request->crmContact->address->address1 = 'until instantly Taiwan';
+    $request->crmContact->address->address2 = 'disintermediate ah Southwest';
+    $request->crmContact->address->city = 'San Antonio';
+    $request->crmContact->address->country = 'Djibouti';
+    $request->crmContact->address->countryCode = 'LA';
+    $request->crmContact->address->postalCode = '23695';
+    $request->crmContact->address->region = 'grey around';
+    $request->crmContact->address->regionCode = 'Folding';
+    $request->crmContact->company = 'Johnson - Gerlach';
     $request->crmContact->companyIds = [
-        'molestias',
+        'Personal',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-06T10:22:27.901Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-24T05:16:20.203Z');
     $request->crmContact->dealIds = [
-        'impedit',
+        'generation',
     ];
     $request->crmContact->emails = [
         new CrmEmail(),
     ];
-    $request->crmContact->id = '8db03408-d6d3-464f-bd45-5906d1263d48';
-    $request->crmContact->name = 'Alejandro DuBuque';
+    $request->crmContact->id = '<ID>';
+    $request->crmContact->name = 'person compressing signify';
     $request->crmContact->raw = new PropertyCrmContactRaw();
     $request->crmContact->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmContact->title = 'Mr.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-16T19:22:26.586Z');
-    $request->connectionId = 'recusandae';
-    $request->id = '81f30be3-e432-402d-b216-576506641870';
+    $request->crmContact->title = 'support disintermediate';
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-18T09:43:22.618Z');
+    $request->connectionId = 'unsung Borders';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->patchCrmConnectionIdContactId($request);
 
@@ -507,9 +508,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PatchCrmConnectionIdContactIdCompanyCompanyIdRequest();
-    $request->companyId = 'assumenda';
-    $request->connectionId = 'provident';
-    $request->id = 'd21f9ad0-30c4-4ecc-91a0-836429068b85';
+    $request->companyId = 'Folsom Selenium methodologies';
+    $request->connectionId = 'Platinum seamless Southwest';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->patchCrmConnectionIdContactIdCompanyCompanyId($request);
 
@@ -554,9 +555,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PatchCrmConnectionIdContactIdDealDealIdRequest();
-    $request->connectionId = 'aut';
-    $request->dealId = 'quia';
-    $request->id = 'a55e7f73-bc84-45e3-a0a3-19f4badf947c';
+    $request->connectionId = 'pascal Genderflux Metal';
+    $request->dealId = 'line';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->patchCrmConnectionIdContactIdDealDealId($request);
 
@@ -608,21 +609,21 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'O'Kon - Lehner';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-13T16:11:34.612Z');
+    $request->ucContact->company = 'Wilderman, Cremin and Gislason';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-18T06:13:06.229Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = 'bc424266-6581-46dd-8a8e-f51fcb4c593e';
-    $request->ucContact->name = 'Ryan Considine';
+    $request->ucContact->id = '<ID>';
+    $request->ucContact->name = 'Denar';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Miss';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-27T01:49:42.157Z');
-    $request->connectionId = 'ipsa';
-    $request->id = 'ec7afedb-d80d-4f44-8a47-f9390c588809';
+    $request->ucContact->title = 'strategy Synergized';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T04:42:09.384Z');
+    $request->connectionId = 'Chips Lead';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->patchUcConnectionIdContactId($request);
 
@@ -676,34 +677,34 @@ try {
     $request = new PostCrmConnectionIdContactRequest();
     $request->crmContact = new CrmContact();
     $request->crmContact->address = new PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'quas';
-    $request->crmContact->address->address2 = 'ipsum';
-    $request->crmContact->address->city = 'Pflugerville';
-    $request->crmContact->address->country = 'Philippines';
-    $request->crmContact->address->countryCode = 'YE';
-    $request->crmContact->address->postalCode = '99299-8869';
-    $request->crmContact->address->region = 'odio';
-    $request->crmContact->address->regionCode = 'voluptatibus';
-    $request->crmContact->company = 'Konopelski LLC';
+    $request->crmContact->address->address1 = 'orchid';
+    $request->crmContact->address->address2 = 'invoice wherever watt';
+    $request->crmContact->address->city = 'Rempelcester';
+    $request->crmContact->address->country = 'Nepal';
+    $request->crmContact->address->countryCode = 'FI';
+    $request->crmContact->address->postalCode = '27896-6482';
+    $request->crmContact->address->region = 'swig';
+    $request->crmContact->address->regionCode = 'Recumbent';
+    $request->crmContact->company = 'Fritsch - Bernhard';
     $request->crmContact->companyIds = [
-        'similique',
+        'Executive',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-15T09:54:23.214Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T17:34:53.280Z');
     $request->crmContact->dealIds = [
-        'facere',
+        'Southwest',
     ];
     $request->crmContact->emails = [
         new CrmEmail(),
     ];
-    $request->crmContact->id = '35724cdb-0f4d-4281-987d-56844eded85a';
-    $request->crmContact->name = 'Frank Keeling';
+    $request->crmContact->id = '<ID>';
+    $request->crmContact->name = 'Tuna Dothan Dynamic';
     $request->crmContact->raw = new PropertyCrmContactRaw();
     $request->crmContact->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmContact->title = 'Mrs.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-30T12:03:22.493Z');
-    $request->connectionId = 'quidem';
+    $request->crmContact->title = 'turquoise Dynamic withdrawal';
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-13T20:08:06.653Z');
+    $request->connectionId = 'second Fresh';
 
     $response = $sdk->contact->postCrmConnectionIdContact($request);
 
@@ -755,20 +756,20 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostUcConnectionIdContactRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Wisozk, Schowalter and Daniel';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-19T06:46:25.820Z');
+    $request->ucContact->company = 'Howell and Sons';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-18T04:56:44.573Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = '2b6c8799-23b7-4e13-984f-7ae12c6891f8';
-    $request->ucContact->name = 'Mr. Lynne VonRueden';
+    $request->ucContact->id = '<ID>';
+    $request->ucContact->name = 'Bacon Orchestrator Data';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Ms.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-19T01:47:33.364Z');
-    $request->connectionId = 'sed';
+    $request->ucContact->title = 'Togo';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T15:07:09.784Z');
+    $request->connectionId = 'Human COM';
 
     $response = $sdk->contact->postUcConnectionIdContact($request);
 
@@ -822,35 +823,35 @@ try {
     $request = new PutCrmConnectionIdContactIdRequest();
     $request->crmContact = new CrmContact();
     $request->crmContact->address = new PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'dolorem';
-    $request->crmContact->address->address2 = 'eaque';
-    $request->crmContact->address->city = 'East Jacinto';
-    $request->crmContact->address->country = 'Kazakhstan';
-    $request->crmContact->address->countryCode = 'TF';
-    $request->crmContact->address->postalCode = '96558-9643';
-    $request->crmContact->address->region = 'voluptates';
-    $request->crmContact->address->regionCode = 'sequi';
-    $request->crmContact->company = 'Jerde - Kautzer';
+    $request->crmContact->address->address1 = 'idolized';
+    $request->crmContact->address->address2 = 'Southeast Specialist background';
+    $request->crmContact->address->city = 'New Orlando';
+    $request->crmContact->address->country = 'Switzerland';
+    $request->crmContact->address->countryCode = 'GL';
+    $request->crmContact->address->postalCode = '95864';
+    $request->crmContact->address->region = 'Intersex mmm';
+    $request->crmContact->address->regionCode = 'Specialist';
+    $request->crmContact->company = 'Mann and Sons';
     $request->crmContact->companyIds = [
-        'rem',
+        'impedit',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-15T18:40:32.331Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-28T10:36:29.710Z');
     $request->crmContact->dealIds = [
-        'perspiciatis',
+        'transmitting',
     ];
     $request->crmContact->emails = [
         new CrmEmail(),
     ];
-    $request->crmContact->id = '2e9c3ddc-5f11-41de-a102-6d541a4d190f';
-    $request->crmContact->name = 'Ms. Malcolm Crona';
+    $request->crmContact->id = '<ID>';
+    $request->crmContact->name = 'Manager blue Ways';
     $request->crmContact->raw = new PropertyCrmContactRaw();
     $request->crmContact->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmContact->title = 'Mr.';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-18T07:27:34.126Z');
-    $request->connectionId = 'quod';
-    $request->id = 'c0dbbddb-4847-408f-b4e3-91e6bc158c4c';
+    $request->crmContact->title = 'Bolivia';
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-16T01:29:13.517Z');
+    $request->connectionId = 'Austria reinvent';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->putCrmConnectionIdContactId($request);
 
@@ -895,9 +896,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PutCrmConnectionIdContactIdCompanyCompanyIdRequest();
-    $request->companyId = 'ut';
-    $request->connectionId = 'earum';
-    $request->id = '54599ea3-4226-40e9-b200-ce78a1bd8fb7';
+    $request->companyId = 'till Jazz ugh';
+    $request->connectionId = 'Arizona tomorrow Chrysler';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->putCrmConnectionIdContactIdCompanyCompanyId($request);
 
@@ -942,9 +943,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PutCrmConnectionIdContactIdDealDealIdRequest();
-    $request->connectionId = 'culpa';
-    $request->dealId = 'doloremque';
-    $request->id = 'a116ce72-3d40-497f-a30e-9af725b29122';
+    $request->connectionId = 'Indiana relationships Coordinator';
+    $request->dealId = 'Dinar person';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->putCrmConnectionIdContactIdDealDealId($request);
 
@@ -996,21 +997,21 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Farrell Inc';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-28T08:36:40.882Z');
+    $request->ucContact->company = 'Feeney, Gusikowski and Douglas';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-15T18:36:56.888Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = '3f5aeb77-99d2-42e8-81f8-493825fdc42c';
-    $request->ucContact->name = 'Harvey Jerde';
+    $request->ucContact->id = '<ID>';
+    $request->ucContact->name = 'reboot';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Miss';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-07T08:54:57.907Z');
-    $request->connectionId = 'delectus';
-    $request->id = 'b4cfc1c7-6230-4f84-9fb1-bd23fdb14db6';
+    $request->ucContact->title = 'payment hem';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T05:28:31.787Z');
+    $request->connectionId = 'Hip Southwest';
+    $request->id = '<ID>';
 
     $response = $sdk->contact->putUcConnectionIdContactId($request);
 

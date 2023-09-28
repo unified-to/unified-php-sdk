@@ -1,4 +1,5 @@
 # Ticket
+(*ticket*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteTicketingConnectionIdTicketIdRequest();
-    $request->connectionId = 'sunt';
-    $request->id = 'b828a903-0660-4f02-8c79-b4cc64c2b3a3';
+    $request->connectionId = 'brownie azure payment';
+    $request->id = '<ID>';
 
     $response = $sdk->ticket->deleteTicketingConnectionIdTicketId($request);
 
@@ -76,15 +77,15 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetTicketingConnectionIdTicketRequest();
-    $request->agentId = 'odit';
-    $request->connectionId = 'optio';
-    $request->customerId = 'labore';
-    $request->limit = 5284.53;
-    $request->offset = 5338.77;
-    $request->order = 'mollitia';
-    $request->query = 'facere';
-    $request->sort = 'debitis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-31T14:16:10.203Z');
+    $request->agentId = 'New';
+    $request->connectionId = 'hertz Savings Steel';
+    $request->customerId = 'payment biopsy Kids';
+    $request->limit = 7673.64;
+    $request->offset = 5134.74;
+    $request->order = 'quantifying orange';
+    $request->query = 'male dynamic';
+    $request->sort = 'Sedan Tricycle Honda';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-06T21:30:52.879Z');
 
     $response = $sdk->ticket->getTicketingConnectionIdTicket($request);
 
@@ -129,8 +130,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetTicketingConnectionIdTicketIdRequest();
-    $request->connectionId = 'reiciendis';
-    $request->id = '6aa558a6-5e20-4830-96ca-34bb87d4f621';
+    $request->connectionId = 'yellow';
+    $request->id = '<ID>';
 
     $response = $sdk->ticket->getTicketingConnectionIdTicketId($request);
 
@@ -179,24 +180,24 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchTicketingConnectionIdTicketIdRequest();
     $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'sed';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-13T18:45:06.642Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-18T17:58:24.232Z');
-    $request->ticketingTicket->customerId = 'esse';
-    $request->ticketingTicket->description = 'facere';
-    $request->ticketingTicket->id = '16062945-14c3-4db9-8a9f-38bd2be87870';
-    $request->ticketingTicket->priority = 'neque';
+    $request->ticketingTicket->category = 'Representative calculate';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T14:58:54.732Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-11T04:52:37.095Z');
+    $request->ticketingTicket->customerId = 'indigo extend given';
+    $request->ticketingTicket->description = 'Profound motivating utilisation';
+    $request->ticketingTicket->id = '<ID>';
+    $request->ticketingTicket->priority = 'Hill Jazz';
     $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'magnam';
-    $request->ticketingTicket->sourceRef = 'natus';
-    $request->ticketingTicket->status = TicketingTicketStatus::Active;
-    $request->ticketingTicket->subject = 'doloribus';
+    $request->ticketingTicket->source = 'West Macedonia City';
+    $request->ticketingTicket->sourceRef = 'orange West doubtfully';
+    $request->ticketingTicket->status = TicketingTicketStatus::Closed;
+    $request->ticketingTicket->subject = 'Pizza';
     $request->ticketingTicket->tags = [
-        'dolore',
+        'definition',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-01T18:49:05.589Z');
-    $request->connectionId = 'mollitia';
-    $request->id = '8465a328-3279-4b71-9d1c-ea673d86e3b3';
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-05T23:17:22.031Z');
+    $request->connectionId = 'engage henry';
+    $request->id = '<ID>';
 
     $response = $sdk->ticket->patchTicketingConnectionIdTicketId($request);
 
@@ -245,23 +246,23 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostTicketingConnectionIdTicketRequest();
     $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'quis';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-02T06:59:28.866Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-09-05T06:15:33.653Z');
-    $request->ticketingTicket->customerId = 'adipisci';
-    $request->ticketingTicket->description = 'et';
-    $request->ticketingTicket->id = '35778ce5-4cac-4b0e-bea9-75045bacf63b';
-    $request->ticketingTicket->priority = 'sed';
+    $request->ticketingTicket->category = 'North';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-03T02:12:35.164Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-12T14:26:26.768Z');
+    $request->ticketingTicket->customerId = 'mull hierarchy';
+    $request->ticketingTicket->description = 'Triple-buffered solution-oriented info-mediaries';
+    $request->ticketingTicket->id = '<ID>';
+    $request->ticketingTicket->priority = 'person Idaho';
     $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'quasi';
-    $request->ticketingTicket->sourceRef = 'nemo';
-    $request->ticketingTicket->status = TicketingTicketStatus::Active;
-    $request->ticketingTicket->subject = 'quos';
+    $request->ticketingTicket->source = 'Convertible whenever feed';
+    $request->ticketingTicket->sourceRef = 'solid Electric Bespoke';
+    $request->ticketingTicket->status = TicketingTicketStatus::Closed;
+    $request->ticketingTicket->subject = 'sint uplift';
     $request->ticketingTicket->tags = [
-        'commodi',
+        'Idaho',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-21T10:41:26.234Z');
-    $request->connectionId = 'corporis';
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-24T01:04:15.890Z');
+    $request->connectionId = 'Oriental outrage';
 
     $response = $sdk->ticket->postTicketingConnectionIdTicket($request);
 
@@ -310,24 +311,24 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutTicketingConnectionIdTicketIdRequest();
     $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'voluptates';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-30T14:31:22.354Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-27T11:54:09.091Z');
-    $request->ticketingTicket->customerId = 'qui';
-    $request->ticketingTicket->description = 'autem';
-    $request->ticketingTicket->id = '14315d15-6829-49e6-9afc-7186ff20b7a7';
-    $request->ticketingTicket->priority = 'dolor';
+    $request->ticketingTicket->category = 'North Finland';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-08T00:37:44.739Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-01T07:24:49.830Z');
+    $request->ticketingTicket->customerId = 'Marketing';
+    $request->ticketingTicket->description = 'Future-proofed high-level system engine';
+    $request->ticketingTicket->id = '<ID>';
+    $request->ticketingTicket->priority = 'drat knottily';
     $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'possimus';
-    $request->ticketingTicket->sourceRef = 'delectus';
+    $request->ticketingTicket->source = 'Upgradable knuckle';
+    $request->ticketingTicket->sourceRef = 'anenst';
     $request->ticketingTicket->status = TicketingTicketStatus::Active;
-    $request->ticketingTicket->subject = 'accusantium';
+    $request->ticketingTicket->subject = 'indexing Wooden Crew';
     $request->ticketingTicket->tags = [
-        'quo',
+        'anti',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-30T09:27:06.726Z');
-    $request->connectionId = 'at';
-    $request->id = '7657c164-1bbf-4055-a71b-2511dd606dd1';
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-10T07:27:15.153Z');
+    $request->connectionId = 'neural orchestrate';
+    $request->id = '<ID>';
 
     $response = $sdk->ticket->putTicketingConnectionIdTicketId($request);
 

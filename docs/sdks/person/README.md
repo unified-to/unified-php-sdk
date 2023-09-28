@@ -1,4 +1,5 @@
 # Person
+(*person*)
 
 ### Available Operations
 
@@ -25,11 +26,11 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetEnrichConnectionIdPersonRequest();
-    $request->connectionId = 'placeat';
-    $request->email = 'Jennings.Morissette@gmail.com';
-    $request->linkedinUrl = 'optio';
-    $request->name = 'Claude Kilback';
-    $request->twitter = 'impedit';
+    $request->connectionId = 'Iowa Account';
+    $request->email = 'Jaiden_Weimann24@gmail.com';
+    $request->linkedinUrl = 'paradigms integrate Creative';
+    $request->name = 'Investment';
+    $request->twitter = 'Hills';
 
     $response = $sdk->person->getEnrichConnectionIdPerson($request);
 

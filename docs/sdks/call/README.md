@@ -1,4 +1,5 @@
 # Call
+(*call*)
 
 ### Available Operations
 
@@ -25,15 +26,15 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUcConnectionIdCallRequest();
-    $request->agentId = 'accusamus';
-    $request->connectionId = 'rem';
-    $request->contactId = 'aperiam';
-    $request->limit = 1418.17;
-    $request->offset = 5358.02;
-    $request->order = 'enim';
-    $request->query = 'voluptate';
-    $request->sort = 'similique';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-10T10:43:04.313Z');
+    $request->agentId = 'Directives';
+    $request->connectionId = 'female than';
+    $request->contactId = 'reintermediate Enid Applications';
+    $request->limit = 1980.39;
+    $request->offset = 3478;
+    $request->order = 'white Oklahoma Functionality';
+    $request->query = 'pricing whether Hillsboro';
+    $request->sort = 'Wooden desensitize SCSI';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-03T12:40:46.997Z');
 
     $response = $sdk->call->getUcConnectionIdCall($request);
 

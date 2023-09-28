@@ -1,4 +1,5 @@
 # User
+(*user*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdUserIdRequest();
-    $request->connectionId = 'maiores';
-    $request->id = '179f650b-1e70-47e7-a439-6713bacce072';
+    $request->connectionId = 'Intranet Data';
+    $request->id = '<ID>';
 
     $response = $sdk->user->deleteCrmConnectionIdUserId($request);
 
@@ -116,13 +117,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdUserRequest();
-    $request->connectionId = 'similique';
-    $request->limit = 7108.35;
-    $request->offset = 8436.48;
-    $request->order = 'ex';
-    $request->query = 'et';
-    $request->sort = 'cupiditate';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-22T21:50:43.271Z');
+    $request->connectionId = 'suit Electronic Tampa';
+    $request->limit = 2883.34;
+    $request->offset = 8886.55;
+    $request->order = 'despite';
+    $request->query = 'frightfully Fitness';
+    $request->sort = 'success servant';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-23T05:53:04.259Z');
 
     $response = $sdk->user->getCrmConnectionIdUser($request);
 
@@ -167,8 +168,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdUserIdRequest();
-    $request->connectionId = 'facere';
-    $request->id = '279c10c1-8516-4fd7-8be2-621272628fa5';
+    $request->connectionId = 'connecting Program';
+    $request->id = '<ID>';
 
     $response = $sdk->user->getCrmConnectionIdUserId($request);
 
@@ -293,34 +294,34 @@ try {
     $request->crmUser = new CrmUser();
     $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
-    $request->crmUser->address->address1 = 'ipsa';
-    $request->crmUser->address->address2 = 'ratione';
-    $request->crmUser->address->city = 'Kassulkeville';
-    $request->crmUser->address->country = 'Libyan Arab Jamahiriya';
-    $request->crmUser->address->countryCode = 'IR';
-    $request->crmUser->address->postalCode = '84172';
-    $request->crmUser->address->region = 'laborum';
-    $request->crmUser->address->regionCode = 'autem';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-09T22:56:57.789Z');
-    $request->crmUser->currency = 'qui';
-    $request->crmUser->department = 'labore';
-    $request->crmUser->division = 'rerum';
+    $request->crmUser->address->address1 = 'Customer';
+    $request->crmUser->address->address2 = 'violet groupware blanditiis';
+    $request->crmUser->address->city = 'South Phoebeshire';
+    $request->crmUser->address->country = 'Thailand';
+    $request->crmUser->address->countryCode = 'NO';
+    $request->crmUser->address->postalCode = '30801-4594';
+    $request->crmUser->address->region = 'portals Vanadium';
+    $request->crmUser->address->regionCode = 'Future';
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-04T02:42:28.788Z');
+    $request->crmUser->currency = 'Guinea Franc';
+    $request->crmUser->department = 'Gloves global rosin';
+    $request->crmUser->division = 'Berkshire Europium';
     $request->crmUser->emails = [
         new CrmEmail(),
     ];
-    $request->crmUser->id = '157f9bb6-ef72-4a50-871d-99b661a7def1';
-    $request->crmUser->imageUrl = 'commodi';
-    $request->crmUser->languageLocale = 'voluptatum';
-    $request->crmUser->name = 'Cecil Russel';
+    $request->crmUser->id = '<ID>';
+    $request->crmUser->imageUrl = 'anti';
+    $request->crmUser->languageLocale = 'Avon India';
+    $request->crmUser->name = 'Zimbabwe';
     $request->crmUser->raw = new PropertyCrmUserRaw();
     $request->crmUser->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmUser->timezone = 'sed';
-    $request->crmUser->title = 'Ms.';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-30T07:01:11.737Z');
-    $request->connectionId = 'distinctio';
-    $request->id = '4a9850ed-2f4a-41e9-84ae-55140e75726e';
+    $request->crmUser->timezone = 'Asia/Tokyo';
+    $request->crmUser->title = 'Porsche matrix Electric';
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-07T11:01:50.491Z');
+    $request->connectionId = 'Seaborgium male unto';
+    $request->id = '<ID>';
 
     $response = $sdk->user->patchCrmConnectionIdUserId($request);
 
@@ -366,16 +367,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-29T17:16:29.001Z');
-    $request->email = 'Oswaldo.Collins16@gmail.com';
-    $request->environment = 'natus';
-    $request->id = '4192518c-ee41-4c99-9f46-9f6f1cf1a3f0';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-24T15:25:24.483Z');
+    $request->email = 'Emmalee.Quitzon@yahoo.com';
+    $request->environment = 'Bicycle';
+    $request->id = '<ID>';
     $request->meta = new PropertyUserMeta();
-    $request->name = 'Annie Schimmel';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-02-21T07:53:55.382Z');
-    $request->workspaceId = 'laboriosam';
+    $request->name = 'vice compressing';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-05T16:52:20.023Z');
+    $request->workspaceId = 'Hybrid methodologies';
     $request->workspaceIds = [
-        'harum',
+        'Potassium',
     ];
 
     $response = $sdk->user->patchUnifiedUser($request);
@@ -431,33 +432,33 @@ try {
     $request->crmUser = new CrmUser();
     $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
-    $request->crmUser->address->address1 = 'commodi';
-    $request->crmUser->address->address2 = 'fugit';
-    $request->crmUser->address->city = 'Alexandroton';
-    $request->crmUser->address->country = 'British Indian Ocean Territory (Chagos Archipelago)';
-    $request->crmUser->address->countryCode = 'TH';
-    $request->crmUser->address->postalCode = '60345-5583';
-    $request->crmUser->address->region = 'in';
-    $request->crmUser->address->regionCode = 'odit';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-24T23:03:53.192Z');
-    $request->crmUser->currency = 'ipsum';
-    $request->crmUser->department = 'illo';
-    $request->crmUser->division = 'aperiam';
+    $request->crmUser->address->address1 = 'driver East';
+    $request->crmUser->address->address2 = 'relationships Computer navigate';
+    $request->crmUser->address->city = 'Homestead';
+    $request->crmUser->address->country = 'Cayman Islands';
+    $request->crmUser->address->countryCode = 'BW';
+    $request->crmUser->address->postalCode = '34958';
+    $request->crmUser->address->region = 'South';
+    $request->crmUser->address->regionCode = 'morph an colossal';
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-02T08:27:21.693Z');
+    $request->crmUser->currency = 'Cayman Islands Dollar';
+    $request->crmUser->department = 'um';
+    $request->crmUser->division = 'West sievert generating';
     $request->crmUser->emails = [
         new CrmEmail(),
     ];
-    $request->crmUser->id = '3f1a40c0-f3ec-4868-8fd8-ec6fc03128f0';
-    $request->crmUser->imageUrl = 'officia';
-    $request->crmUser->languageLocale = 'mollitia';
-    $request->crmUser->name = 'Erick Thiel Jr.';
+    $request->crmUser->id = '<ID>';
+    $request->crmUser->imageUrl = 'invoice';
+    $request->crmUser->languageLocale = 'Division Accountability radian';
+    $request->crmUser->name = 'bypass';
     $request->crmUser->raw = new PropertyCrmUserRaw();
     $request->crmUser->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmUser->timezone = 'labore';
-    $request->crmUser->title = 'Dr.';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-08-22T01:41:56.659Z');
-    $request->connectionId = 'voluptate';
+    $request->crmUser->timezone = 'Asia/Kuala_Lumpur';
+    $request->crmUser->title = 'Silicon Awesome Industrial';
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-14T15:51:58.095Z');
+    $request->connectionId = 'Tuna';
 
     $response = $sdk->user->postCrmConnectionIdUser($request);
 
@@ -512,34 +513,34 @@ try {
     $request->crmUser = new CrmUser();
     $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
-    $request->crmUser->address->address1 = 'soluta';
-    $request->crmUser->address->address2 = 'hic';
-    $request->crmUser->address->city = 'Itzelberg';
-    $request->crmUser->address->country = 'British Indian Ocean Territory (Chagos Archipelago)';
-    $request->crmUser->address->countryCode = 'OM';
-    $request->crmUser->address->postalCode = '30573-0541';
-    $request->crmUser->address->region = 'neque';
-    $request->crmUser->address->regionCode = 'quae';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-02T17:23:17.818Z');
-    $request->crmUser->currency = 'aliquid';
-    $request->crmUser->department = 'maiores';
-    $request->crmUser->division = 'voluptatem';
+    $request->crmUser->address->address1 = 'Honduras';
+    $request->crmUser->address->address2 = 'Oxygen Libyan Burundi';
+    $request->crmUser->address->city = 'North Gertrudefield';
+    $request->crmUser->address->country = 'Belgium';
+    $request->crmUser->address->countryCode = 'DK';
+    $request->crmUser->address->postalCode = '00781';
+    $request->crmUser->address->region = 'Wagon';
+    $request->crmUser->address->regionCode = 'how overriding';
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-13T00:47:15.649Z');
+    $request->crmUser->currency = 'Pakistan Rupee';
+    $request->crmUser->department = 'Tricycle vaguely';
+    $request->crmUser->division = 'Severn bluetooth Argon';
     $request->crmUser->emails = [
         new CrmEmail(),
     ];
-    $request->crmUser->id = 'bce55a86-8714-43c9-b905-ff797a5da664';
-    $request->crmUser->imageUrl = 'nobis';
-    $request->crmUser->languageLocale = 'in';
-    $request->crmUser->name = 'Mitchell Kuhn';
+    $request->crmUser->id = '<ID>';
+    $request->crmUser->imageUrl = 'program wimp Colombia';
+    $request->crmUser->languageLocale = 'AGP romance didactic';
+    $request->crmUser->name = 'ROI Polarised';
     $request->crmUser->raw = new PropertyCrmUserRaw();
     $request->crmUser->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmUser->timezone = 'nihil';
-    $request->crmUser->title = 'Mrs.';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-01T10:56:34.471Z');
-    $request->connectionId = 'culpa';
-    $request->id = 'a2832bb6-5862-4d2a-b1f9-b14aa6bdec7f';
+    $request->crmUser->timezone = 'Europe/Bucharest';
+    $request->crmUser->title = 'Central';
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T21:29:55.600Z');
+    $request->connectionId = 'Honda Indiana';
+    $request->id = '<ID>';
 
     $response = $sdk->user->putCrmConnectionIdUserId($request);
 
@@ -585,16 +586,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-13T19:16:05.544Z');
-    $request->email = 'Chanel91@gmail.com';
-    $request->environment = 'unde';
-    $request->id = 'a5dee1ac-d72a-4899-81b5-8fe682e1c2db';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-31T04:46:29.769Z');
+    $request->email = 'Selena59@yahoo.com';
+    $request->environment = 'Bedfordshire Lucia';
+    $request->id = '<ID>';
     $request->meta = new PropertyUserMeta();
-    $request->name = 'Louis Douglas';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-15T10:58:05.950Z');
-    $request->workspaceId = 'deleniti';
+    $request->name = 'Bicycle hacking South';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-15T15:08:26.238Z');
+    $request->workspaceId = 'Card defect';
     $request->workspaceIds = [
-        'sed',
+        'repudiandae',
     ];
 
     $response = $sdk->user->putUnifiedUser($request);

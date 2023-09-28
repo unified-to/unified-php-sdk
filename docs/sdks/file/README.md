@@ -1,4 +1,5 @@
 # File
+(*file*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdFileIdRequest();
-    $request->connectionId = 'occaecati';
-    $request->id = 'a6658e69-a4b8-443d-b82d-bec75c68c606';
+    $request->connectionId = 'Bicycle';
+    $request->id = '<ID>';
 
     $response = $sdk->file->deleteCrmConnectionIdFileId($request);
 
@@ -76,16 +77,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdFileRequest();
-    $request->companyId = 'veniam';
-    $request->connectionId = 'cupiditate';
-    $request->contactId = 'aliquam';
-    $request->dealId = 'suscipit';
-    $request->limit = 5434.52;
-    $request->offset = 7950.8;
-    $request->order = 'debitis';
-    $request->query = 'neque';
-    $request->sort = 'doloremque';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-27T09:19:22.404Z');
+    $request->companyId = 'reboot';
+    $request->connectionId = 'customise far';
+    $request->contactId = 'Electronic proactive';
+    $request->dealId = 'withdrawal deposit Gloves';
+    $request->limit = 1588.79;
+    $request->offset = 3754.81;
+    $request->order = 'Implemented fairly meh';
+    $request->query = 'FTP Producer';
+    $request->sort = 'soprano deliverables';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-02T03:00:09.711Z');
 
     $response = $sdk->file->getCrmConnectionIdFile($request);
 
@@ -130,8 +131,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdFileIdRequest();
-    $request->connectionId = 'deleniti';
-    $request->id = '849bf821-4c33-47f9-abb0-c69e372db134';
+    $request->connectionId = 'Bicycle';
+    $request->id = '<ID>';
 
     $response = $sdk->file->getCrmConnectionIdFileId($request);
 
@@ -180,23 +181,23 @@ try {
     $request = new PatchCrmConnectionIdFileIdRequest();
     $request->crmFile = new CrmFile();
     $request->crmFile->active = false;
-    $request->crmFile->activityId = 'incidunt';
-    $request->crmFile->companyId = 'tempore';
-    $request->crmFile->contactId = 'deserunt';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-11T11:20:45.776Z');
-    $request->crmFile->dealId = 'reprehenderit';
-    $request->crmFile->description = 'rem';
-    $request->crmFile->fileName = 'est';
-    $request->crmFile->fileSize = 3405.4;
-    $request->crmFile->fileType = 'impedit';
-    $request->crmFile->fileUrl = 'accusantium';
-    $request->crmFile->id = 'ed7aab62-e972-461f-b0c5-8d27b51996b5';
-    $request->crmFile->leadId = 'expedita';
+    $request->crmFile->activityId = 'duh Handmade harness';
+    $request->crmFile->companyId = 'CFP';
+    $request->crmFile->contactId = 'unaware yellow generating';
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-04T04:54:33.785Z');
+    $request->crmFile->dealId = 'channels SUV';
+    $request->crmFile->description = 'De-engineered didactic hardware';
+    $request->crmFile->fileName = 'metical_silver_yellow.html';
+    $request->crmFile->fileSize = 6861.53;
+    $request->crmFile->fileType = 'video';
+    $request->crmFile->fileUrl = 'navigate Funk';
+    $request->crmFile->id = '<ID>';
+    $request->crmFile->leadId = 'internal';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-16T05:13:37.183Z');
-    $request->crmFile->userId = 'quaerat';
-    $request->connectionId = 'accusantium';
-    $request->id = 'eef712b7-a7ab-4034-8b17-10688deebef8';
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T13:46:42.012Z');
+    $request->crmFile->userId = 'Interactions';
+    $request->connectionId = 'Handcrafted';
+    $request->id = '<ID>';
 
     $response = $sdk->file->patchCrmConnectionIdFileId($request);
 
@@ -245,22 +246,22 @@ try {
     $request = new PostCrmConnectionIdFileRequest();
     $request->crmFile = new CrmFile();
     $request->crmFile->active = false;
-    $request->crmFile->activityId = 'perspiciatis';
-    $request->crmFile->companyId = 'quam';
-    $request->crmFile->contactId = 'earum';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-22T22:34:49.776Z');
-    $request->crmFile->dealId = 'pariatur';
-    $request->crmFile->description = 'voluptatem';
-    $request->crmFile->fileName = 'quod';
-    $request->crmFile->fileSize = 7961.94;
-    $request->crmFile->fileType = 'pariatur';
-    $request->crmFile->fileUrl = 'dolor';
-    $request->crmFile->id = '3f11b3e4-e080-4aa1-8418-6ec759e02f37';
-    $request->crmFile->leadId = 'doloremque';
+    $request->crmFile->activityId = 'tan impedit Pickup';
+    $request->crmFile->companyId = 'Manager';
+    $request->crmFile->contactId = 'Florida Shoes East';
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T11:37:24.708Z');
+    $request->crmFile->dealId = 'Agent';
+    $request->crmFile->description = 'Multi-lateral well-modulated portal';
+    $request->crmFile->fileName = 'panel_city.wav';
+    $request->crmFile->fileSize = 1401.73;
+    $request->crmFile->fileType = 'application';
+    $request->crmFile->fileUrl = 'for Chips under';
+    $request->crmFile->id = '<ID>';
+    $request->crmFile->leadId = 'abaft Checking';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-12T17:09:26.142Z');
-    $request->crmFile->userId = 'quis';
-    $request->connectionId = 'cumque';
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-25T09:46:59.608Z');
+    $request->crmFile->userId = 'Mexico withdrawal';
+    $request->connectionId = 'national Lead';
 
     $response = $sdk->file->postCrmConnectionIdFile($request);
 
@@ -309,23 +310,23 @@ try {
     $request = new PutCrmConnectionIdFileIdRequest();
     $request->crmFile = new CrmFile();
     $request->crmFile->active = false;
-    $request->crmFile->activityId = 'laudantium';
-    $request->crmFile->companyId = 'recusandae';
-    $request->crmFile->contactId = 'odit';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-30T16:07:16.405Z');
-    $request->crmFile->dealId = 'consequatur';
-    $request->crmFile->description = 'voluptates';
-    $request->crmFile->fileName = 'culpa';
-    $request->crmFile->fileSize = 8725.53;
-    $request->crmFile->fileType = 'dolorem';
-    $request->crmFile->fileUrl = 'sunt';
-    $request->crmFile->id = '04fa4470-7bf3-475b-8428-2821fdb2f69e';
-    $request->crmFile->leadId = 'veniam';
+    $request->crmFile->activityId = 'Cotton';
+    $request->crmFile->companyId = 'Northeast';
+    $request->crmFile->contactId = 'Computer';
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-09T13:10:01.367Z');
+    $request->crmFile->dealId = 'toward confiscate East';
+    $request->crmFile->description = 'Devolved upward-trending matrices';
+    $request->crmFile->fileName = 'generation_tactics.wav';
+    $request->crmFile->fileSize = 4770.09;
+    $request->crmFile->fileType = 'audio';
+    $request->crmFile->fileUrl = 'framework azure Metal';
+    $request->crmFile->id = '<ID>';
+    $request->crmFile->leadId = 'ampere costume';
     $request->crmFile->raw = new PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-03T08:00:04.759Z');
-    $request->crmFile->userId = 'laboriosam';
-    $request->connectionId = 'iusto';
-    $request->id = 'c71cc8d3-cd42-458d-8358-a82c808fe275';
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-15T05:04:24.130Z');
+    $request->crmFile->userId = 'Research payment';
+    $request->connectionId = 'East Associate Mazda';
+    $request->id = '<ID>';
 
     $response = $sdk->file->putCrmConnectionIdFileId($request);
 

@@ -1,4 +1,5 @@
 # Auth
+(*auth*)
 
 ### Available Operations
 
@@ -27,19 +28,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'non';
-    $request->externalXref = 'ab';
-    $request->failureRedirect = 'illo';
-    $request->integrationType = 'hic';
-    $request->lang = 'deserunt';
+    $request->env = 'Algerian';
+    $request->externalXref = 'Cambridgeshire Surinam';
+    $request->failureRedirect = 'Designer Drive';
+    $request->integrationType = 'program Home';
+    $request->lang = 'Plastic program';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::AtsJobWrite,
+        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::CrmFileRead,
     ];
-    $request->state = 'non';
-    $request->subdomain = 'distinctio';
-    $request->successRedirect = 'in';
-    $request->workspaceId = 'exercitationem';
+    $request->state = 'Functionality Product';
+    $request->subdomain = 'payment Developer Dynamic';
+    $request->successRedirect = 'Northeast';
+    $request->workspaceId = 'duh empower Kwanza';
 
     $response = $sdk->auth->getUnifiedIntegrationAuthWorkspaceIdIntegrationType($request);
 
@@ -84,13 +85,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'labore';
-    $request->failureRedirect = 'numquam';
-    $request->integrationType = 'repudiandae';
+    $request->env = 'Rubber';
+    $request->failureRedirect = 'gold Cambridgeshire';
+    $request->integrationType = 'Plastic services pixel';
     $request->redirect = false;
-    $request->state = 'modi';
-    $request->successRedirect = 'in';
-    $request->workspaceId = 'explicabo';
+    $request->state = 'Volkswagen Southwest';
+    $request->successRedirect = 'drive integrated Bicycle';
+    $request->workspaceId = 'Fantastic recontextualize Frozen';
 
     $response = $sdk->auth->getUnifiedIntegrationLoginWorkspaceIdIntegrationType($request);
 

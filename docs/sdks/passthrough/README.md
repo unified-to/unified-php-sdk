@@ -1,4 +1,5 @@
 # Passthrough
+(*passthrough*)
 
 ### Available Operations
 
@@ -29,8 +30,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeletePassthroughConnectionIdPathRequest();
-    $request->connectionId = 'officia';
-    $request->path = 'veniam';
+    $request->connectionId = 'Planner Checking Tricycle';
+    $request->path = '/usr/obj';
 
     $response = $sdk->passthrough->deletePassthroughConnectionIdPath($request);
 
@@ -75,8 +76,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetPassthroughConnectionIdPathRequest();
-    $request->connectionId = 'cum';
-    $request->path = 'voluptatem';
+    $request->connectionId = 'Global';
+    $request->path = '/private/var';
 
     $response = $sdk->passthrough->getPassthroughConnectionIdPath($request);
 
@@ -122,8 +123,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PatchPassthroughConnectionIdPathRequest();
-    $request->connectionId = 'sint';
-    $request->path = 'consequuntur';
+    $request->connectionId = 'average maroon';
+    $request->path = '/proc';
     $request->undefined = new Undefined();
 
     $response = $sdk->passthrough->patchPassthroughConnectionIdPath($request);
@@ -170,8 +171,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PostPassthroughConnectionIdPathRequest();
-    $request->connectionId = 'magni';
-    $request->path = 'iure';
+    $request->connectionId = 'Computer Hip';
+    $request->path = '/boot/defaults';
     $request->undefined = new Undefined();
 
     $response = $sdk->passthrough->postPassthroughConnectionIdPath($request);
@@ -218,8 +219,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PutPassthroughConnectionIdPathRequest();
-    $request->connectionId = 'doloribus';
-    $request->path = 'quod';
+    $request->connectionId = 'Computer Oriental';
+    $request->path = '/usr/local/src';
     $request->undefined = new Undefined();
 
     $response = $sdk->passthrough->putPassthroughConnectionIdPath($request);

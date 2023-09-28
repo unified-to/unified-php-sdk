@@ -1,4 +1,5 @@
 # Apicall
+(*apicall*)
 
 ### Available Operations
 
@@ -26,17 +27,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedApicallRequest();
-    $request->connectionId = 'amet';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-27T19:22:24.458Z');
-    $request->env = 'corporis';
+    $request->connectionId = 'delectus green Hybrid';
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-02T21:36:49.952Z');
+    $request->env = 'Fantastic Iodine indexing';
     $request->error = false;
-    $request->externalXref = 'hic';
-    $request->integrationType = 'libero';
-    $request->limit = 7499.99;
-    $request->offset = 1716.29;
-    $request->order = 'quis';
-    $request->sort = 'totam';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-12T03:59:56.327Z');
+    $request->externalXref = 'Music';
+    $request->integrationType = 'Soft';
+    $request->limit = 2390.64;
+    $request->offset = 3757.34;
+    $request->order = 'mobile envisioneer';
+    $request->sort = 'North payment opposite';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-11T16:18:13.644Z');
 
     $response = $sdk->apicall->getUnifiedApicall($request);
 
@@ -81,7 +82,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedApicallIdRequest();
-    $request->id = '53202c73-d5fe-49b9-8c28-909b3fe49a8d';
+    $request->id = '<ID>';
 
     $response = $sdk->apicall->getUnifiedApicallId($request);
 

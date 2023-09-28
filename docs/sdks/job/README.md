@@ -1,4 +1,5 @@
 # Job
+(*job*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteAtsConnectionIdJobIdRequest();
-    $request->connectionId = 'fugiat';
-    $request->id = '7e14b21c-d981-496d-95af-69a1c4b79ae3';
+    $request->connectionId = 'Sedan Bedfordshire Hybrid';
+    $request->id = '<ID>';
 
     $response = $sdk->job->deleteAtsConnectionIdJobId($request);
 
@@ -76,13 +77,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsConnectionIdJobRequest();
-    $request->connectionId = 'non';
-    $request->limit = 4269.64;
-    $request->offset = 5075.57;
-    $request->order = 'beatae';
-    $request->query = 'eligendi';
-    $request->sort = 'eos';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-30T06:53:34.825Z');
+    $request->connectionId = 'City katal';
+    $request->limit = 3542.62;
+    $request->offset = 5417.97;
+    $request->order = 'publisher';
+    $request->query = 'Folding';
+    $request->sort = 'Kip gross recontextualize';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-12T03:36:20.050Z');
 
     $response = $sdk->job->getAtsConnectionIdJob($request);
 
@@ -127,8 +128,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsConnectionIdJobIdRequest();
-    $request->connectionId = 'dolorem';
-    $request->id = '9a7c0e17-cb12-4c5b-a825-fe22cd5cba6f';
+    $request->connectionId = 'Jazz';
+    $request->id = '<ID>';
 
     $response = $sdk->job->getAtsConnectionIdJobId($request);
 
@@ -185,34 +186,34 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-03T19:50:58.154Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-08T22:05:20.134Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-08-19T18:54:18.276Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-25T05:01:57.220Z');
     $request->atsJob->departments = [
-        'perspiciatis',
+        'jaunty',
     ];
-    $request->atsJob->description = 'amet';
-    $request->atsJob->employmentType = AtsJobEmploymentType::PartTime;
+    $request->atsJob->description = 'Visionary human-resource framework';
+    $request->atsJob->employmentType = AtsJobEmploymentType::Casual;
     $request->atsJob->hiringManagerIds = [
-        'fuga',
+        'Kia',
     ];
-    $request->atsJob->id = 'f6813d65-bfec-4ec2-9d69-16f7fc7dda70';
-    $request->atsJob->languageLocale = 'recusandae';
-    $request->atsJob->name = 'Marc Balistreri';
+    $request->atsJob->id = '<ID>';
+    $request->atsJob->languageLocale = 'Ferrari Facilitator';
+    $request->atsJob->name = 'redundant Towels Mendelevium';
     $request->atsJob->publicJobUrls = [
-        'aut',
+        'Manager',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'reprehenderit',
+        'Grand',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Pending;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-07T23:31:59.799Z');
-    $request->connectionId = 'numquam';
-    $request->id = 'd61c14cd-9022-47e3-bc0d-977f1a5491ab';
+    $request->atsJob->status = AtsJobStatus::Archived;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-18T01:50:37.635Z');
+    $request->connectionId = 'Account Copernicium at';
+    $request->id = '<ID>';
 
     $response = $sdk->job->patchAtsConnectionIdJobId($request);
 
@@ -269,33 +270,33 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-25T22:45:23.869Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-20T16:01:17.966Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-28T17:53:23.267Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-10T02:25:47.743Z');
     $request->atsJob->departments = [
-        'beatae',
+        'Gasoline',
     ];
-    $request->atsJob->description = 'cum';
-    $request->atsJob->employmentType = AtsJobEmploymentType::PartTime;
+    $request->atsJob->description = 'Self-enabling hybrid capacity';
+    $request->atsJob->employmentType = AtsJobEmploymentType::Freelance;
     $request->atsJob->hiringManagerIds = [
-        'doloremque',
+        'kelvin',
     ];
-    $request->atsJob->id = '6d23e03e-6981-45aa-a99f-cde9e729c9d4';
-    $request->atsJob->languageLocale = 'maiores';
-    $request->atsJob->name = 'Freda Leannon';
+    $request->atsJob->id = '<ID>';
+    $request->atsJob->languageLocale = 'upwardly';
+    $request->atsJob->name = 'Diesel virtual';
     $request->atsJob->publicJobUrls = [
-        'tempora',
+        'appetiser',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'laboriosam',
+        'scale',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Pending;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-18T14:03:50.432Z');
-    $request->connectionId = 'fuga';
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-02T08:41:47.798Z');
+    $request->connectionId = 'crossly Krona perfectly';
 
     $response = $sdk->job->postAtsConnectionIdJob($request);
 
@@ -352,34 +353,34 @@ try {
     $request->atsJob->addresses = [
         new AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-10T19:47:03.720Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T19:59:38.491Z');
     $request->atsJob->compensation = [
         new AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-10-17T15:48:34.743Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-31T19:51:50.974Z');
     $request->atsJob->departments = [
-        'nihil',
+        'Keyboard',
     ];
-    $request->atsJob->description = 'neque';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Casual;
+    $request->atsJob->description = 'Upgradable scalable workforce';
+    $request->atsJob->employmentType = AtsJobEmploymentType::Seasonal;
     $request->atsJob->hiringManagerIds = [
-        'consequuntur',
+        'meanwhile',
     ];
-    $request->atsJob->id = 'f93f467d-c0d8-4da5-a122-026ab8f27748';
-    $request->atsJob->languageLocale = 'exercitationem';
-    $request->atsJob->name = 'Henry McCullough';
+    $request->atsJob->id = '<ID>';
+    $request->atsJob->languageLocale = 'Dodge Outdoors BMW';
+    $request->atsJob->name = 'Division Coordinator lighthearted';
     $request->atsJob->publicJobUrls = [
-        'similique',
+        'online',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'tenetur',
+        'Bicycle',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Open;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-22T16:17:11.183Z');
-    $request->connectionId = 'nulla';
-    $request->id = 'a7a089fc-44db-4274-930e-5cc7c6d0cbcf';
+    $request->atsJob->status = AtsJobStatus::Pending;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-18T14:37:16.689Z');
+    $request->connectionId = 'Northwest';
+    $request->id = '<ID>';
 
     $response = $sdk->job->putAtsConnectionIdJobId($request);
 

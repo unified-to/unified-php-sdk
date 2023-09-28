@@ -1,4 +1,5 @@
 # Deal
+(*deal*)
 
 ### Available Operations
 
@@ -30,8 +31,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteCrmConnectionIdDealIdRequest();
-    $request->connectionId = 'occaecati';
-    $request->id = '8dafb42a-8d63-4388-a4d8-039ea5f9b18a';
+    $request->connectionId = 'Fresh';
+    $request->id = '<ID>';
 
     $response = $sdk->deal->deleteCrmConnectionIdDealId($request);
 
@@ -76,15 +77,15 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdDealRequest();
-    $request->companyId = 'qui';
-    $request->connectionId = 'tempora';
-    $request->contactId = 'modi';
-    $request->limit = 9565.32;
-    $request->offset = 8198.45;
-    $request->order = 'nisi';
-    $request->query = 'ab';
-    $request->sort = 'omnis';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-14T05:28:28.891Z');
+    $request->companyId = 'Tools Card copying';
+    $request->connectionId = 'Renminbi';
+    $request->contactId = 'till payment World';
+    $request->limit = 8656.16;
+    $request->offset = 4455.8;
+    $request->order = 'global';
+    $request->query = 'Program Bespoke Wisconsin';
+    $request->sort = 'Netherlands under';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-23T01:47:21.816Z');
 
     $response = $sdk->deal->getCrmConnectionIdDeal($request);
 
@@ -129,8 +130,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmConnectionIdDealIdRequest();
-    $request->connectionId = 'iste';
-    $request->id = 'dacd38ed-0dc6-471d-87f1-e3af15920c90';
+    $request->connectionId = 'Concrete Director';
+    $request->id = '<ID>';
 
     $response = $sdk->deal->getCrmConnectionIdDealId($request);
 
@@ -178,25 +179,25 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmConnectionIdDealIdRequest();
     $request->crmDeal = new CrmDeal();
-    $request->crmDeal->amount = 8337.06;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-05T08:51:46.893Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T06:29:04.361Z');
-    $request->crmDeal->currency = 'aperiam';
-    $request->crmDeal->id = '1f2bd89c-8a32-4639-9a5b-7b6902b881a9';
-    $request->crmDeal->lostReason = 'incidunt';
-    $request->crmDeal->name = 'Brett Gleichner';
-    $request->crmDeal->pipeline = 'autem';
-    $request->crmDeal->probability = 2725.62;
+    $request->crmDeal->amount = 7725.78;
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-28T08:42:49.591Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-23T15:03:53.999Z');
+    $request->crmDeal->currency = 'Afghani';
+    $request->crmDeal->id = '<ID>';
+    $request->crmDeal->lostReason = 'North';
+    $request->crmDeal->name = 'midnight';
+    $request->crmDeal->pipeline = 'envisioneer Functionality Loan';
+    $request->crmDeal->probability = 7051.73;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'mollitia';
-    $request->crmDeal->stage = 'quas';
+    $request->crmDeal->source = 'Krone';
+    $request->crmDeal->stage = 'pascal aliquam gripping';
     $request->crmDeal->tags = [
-        'hic',
+        'where',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-03T20:06:53.494Z');
-    $request->crmDeal->wonReason = 'asperiores';
-    $request->connectionId = 'rem';
-    $request->id = 'c691d732-d9fb-4af9-876a-2ae8dcc50c8a';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-05T10:21:22.505Z');
+    $request->crmDeal->wonReason = 'Savings kilogram';
+    $request->connectionId = 'Chair weber silver';
+    $request->id = '<ID>';
 
     $response = $sdk->deal->patchCrmConnectionIdDealId($request);
 
@@ -244,24 +245,24 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostCrmConnectionIdDealRequest();
     $request->crmDeal = new CrmDeal();
-    $request->crmDeal->amount = 2350.13;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-18T07:33:26.747Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-21T17:04:09.123Z');
-    $request->crmDeal->currency = 'iusto';
-    $request->crmDeal->id = '37848930-750a-400e-966e-c736d4319439';
-    $request->crmDeal->lostReason = 'corrupti';
-    $request->crmDeal->name = 'Javier Lindgren';
-    $request->crmDeal->pipeline = 'cupiditate';
-    $request->crmDeal->probability = 1577.51;
+    $request->crmDeal->amount = 6144.41;
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T09:55:59.977Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-20T07:28:03.436Z');
+    $request->crmDeal->currency = 'Convertible Marks';
+    $request->crmDeal->id = '<ID>';
+    $request->crmDeal->lostReason = 'pfft female';
+    $request->crmDeal->name = 'Expressway';
+    $request->crmDeal->pipeline = 'withdrawal Extended busily';
+    $request->crmDeal->probability = 7998.22;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'dolor';
-    $request->crmDeal->stage = 'cupiditate';
+    $request->crmDeal->source = 'spiffy sometimes';
+    $request->crmDeal->stage = 'transmitter';
     $request->crmDeal->tags = [
-        'praesentium',
+        'intermediate',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-06-06T17:44:39.339Z');
-    $request->crmDeal->wonReason = 'ipsum';
-    $request->connectionId = 'pariatur';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T18:34:11.762Z');
+    $request->crmDeal->wonReason = 'Cisgender input HTTP';
+    $request->connectionId = 'accusantium Checking';
 
     $response = $sdk->deal->postCrmConnectionIdDeal($request);
 
@@ -309,25 +310,25 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutCrmConnectionIdDealIdRequest();
     $request->crmDeal = new CrmDeal();
-    $request->crmDeal->amount = 2276.69;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-03T15:27:44.400Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-10T14:22:57.077Z');
-    $request->crmDeal->currency = 'est';
-    $request->crmDeal->id = '3c5ca864-9a70-4cfd-9d69-89b720645107';
-    $request->crmDeal->lostReason = 'voluptate';
-    $request->crmDeal->name = 'Harold Metz';
-    $request->crmDeal->pipeline = 'voluptatum';
-    $request->crmDeal->probability = 1880.08;
+    $request->crmDeal->amount = 4050.98;
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-15T04:05:31.641Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-04T01:28:32.466Z');
+    $request->crmDeal->currency = 'Bermudian Dollar (customarily known as Bermuda Dollar)';
+    $request->crmDeal->id = '<ID>';
+    $request->crmDeal->lostReason = 'laudantium Southwest';
+    $request->crmDeal->name = 'wail Developer';
+    $request->crmDeal->pipeline = 'male Samarium Gourde';
+    $request->crmDeal->probability = 6728.74;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'facere';
-    $request->crmDeal->stage = 'eius';
+    $request->crmDeal->source = 'Stage Gasoline Metal';
+    $request->crmDeal->stage = 'Corporate withdrawal Tasty';
     $request->crmDeal->tags = [
-        'perspiciatis',
+        'extranet',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-24T10:39:05.897Z');
-    $request->crmDeal->wonReason = 'quibusdam';
-    $request->connectionId = 'inventore';
-    $request->id = '4b8a2c19-5454-45e9-95dc-c185ea4901c7';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-16T22:38:02.052Z');
+    $request->crmDeal->wonReason = 'phooey';
+    $request->connectionId = 'Jazz';
+    $request->id = '<ID>';
 
     $response = $sdk->deal->putCrmConnectionIdDealId($request);
 

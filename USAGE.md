@@ -16,8 +16,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteTicketingConnectionIdAgentIdRequest();
-    $request->connectionId = 'corrupti';
-    $request->id = '9bd9d8d6-9a67-44e0-b467-cc8796ed151a';
+    $request->connectionId = 'navigate';
+    $request->id = '<ID>';
 
     $response = $sdk->agent->deleteTicketingConnectionIdAgentId($request);
 

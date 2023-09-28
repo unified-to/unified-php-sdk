@@ -1,4 +1,5 @@
 # Uc
+(*uc*)
 
 ### Available Operations
 
@@ -32,8 +33,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new DeleteUcConnectionIdContactIdRequest();
-    $request->connectionId = 'sapiente';
-    $request->id = '13402e94-5f53-4743-afde-1198221f9b1f';
+    $request->connectionId = 'Southeast Modern commonly';
+    $request->id = '<ID>';
 
     $response = $sdk->uc->deleteUcConnectionIdContactId($request);
 
@@ -78,14 +79,14 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUcConnectionIdAgentRequest();
-    $request->connectionId = 'nihil';
-    $request->contactId = 'fugiat';
-    $request->limit = 6145.13;
-    $request->offset = 6433.74;
-    $request->order = 'earum';
-    $request->query = 'a';
-    $request->sort = 'repudiandae';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-24T06:40:21.262Z');
+    $request->connectionId = 'Regional East Sedan';
+    $request->contactId = 'blue';
+    $request->limit = 7827.68;
+    $request->offset = 2116.69;
+    $request->order = 'Bicycle';
+    $request->query = 'Bacon officia iterate';
+    $request->sort = 'sticky vote lumen';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-05T19:53:29.041Z');
 
     $response = $sdk->uc->getUcConnectionIdAgent($request);
 
@@ -130,15 +131,15 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUcConnectionIdCallRequest();
-    $request->agentId = 'aliquid';
-    $request->connectionId = 'blanditiis';
-    $request->contactId = 'sed';
-    $request->limit = 6503.91;
-    $request->offset = 7932.57;
-    $request->order = 'recusandae';
-    $request->query = 'recusandae';
-    $request->sort = 'asperiores';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-07T20:15:25.375Z');
+    $request->agentId = 'Directives';
+    $request->connectionId = 'female than';
+    $request->contactId = 'reintermediate Enid Applications';
+    $request->limit = 1980.39;
+    $request->offset = 3478;
+    $request->order = 'white Oklahoma Functionality';
+    $request->query = 'pricing whether Hillsboro';
+    $request->sort = 'Wooden desensitize SCSI';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-03T12:40:46.997Z');
 
     $response = $sdk->uc->getUcConnectionIdCall($request);
 
@@ -183,14 +184,14 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUcConnectionIdContactRequest();
-    $request->agentId = 'magnam';
-    $request->connectionId = 'reiciendis';
-    $request->limit = 5315.12;
-    $request->offset = 8031.86;
-    $request->order = 'ad';
-    $request->query = 'illo';
-    $request->sort = 'ratione';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-01-09T19:20:56.968Z');
+    $request->agentId = 'Refined Practical';
+    $request->connectionId = 'inasmuch Dodge';
+    $request->limit = 7215.14;
+    $request->offset = 2910.48;
+    $request->order = 'Vermont';
+    $request->query = 'maroon JBOD';
+    $request->sort = 'hertz';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-29T17:06:35.136Z');
 
     $response = $sdk->uc->getUcConnectionIdContact($request);
 
@@ -235,8 +236,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUcConnectionIdContactIdRequest();
-    $request->connectionId = 'id';
-    $request->id = 'bea708ed-5798-4d38-9d46-0599d5c33495';
+    $request->connectionId = 'Land';
+    $request->id = '<ID>';
 
     $response = $sdk->uc->getUcConnectionIdContactId($request);
 
@@ -288,21 +289,21 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Kemmer - Schumm';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-24T23:30:56.480Z');
+    $request->ucContact->company = 'Wilderman, Cremin and Gislason';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-18T06:13:06.229Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = '209e9a22-53b6-4d76-9886-eeae5fd4b39f';
-    $request->ucContact->name = 'Shaun Bogisich';
+    $request->ucContact->id = '<ID>';
+    $request->ucContact->name = 'Denar';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Mr.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-21T05:27:30.710Z');
-    $request->connectionId = 'quos';
-    $request->id = 'f13c686d-839f-4c9e-975f-fa906ae559b7';
+    $request->ucContact->title = 'strategy Synergized';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T04:42:09.384Z');
+    $request->connectionId = 'Chips Lead';
+    $request->id = '<ID>';
 
     $response = $sdk->uc->patchUcConnectionIdContactId($request);
 
@@ -354,20 +355,20 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PostUcConnectionIdContactRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Trantow LLC';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-05T14:59:15.588Z');
+    $request->ucContact->company = 'Howell and Sons';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-18T04:56:44.573Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = '46030fe1-8376-4c2b-adee-76790ed0c16a';
-    $request->ucContact->name = 'Opal Okuneva';
+    $request->ucContact->id = '<ID>';
+    $request->ucContact->name = 'Bacon Orchestrator Data';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Ms.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-31T16:32:53.167Z');
-    $request->connectionId = 'magnam';
+    $request->ucContact->title = 'Togo';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T15:07:09.784Z');
+    $request->connectionId = 'Human COM';
 
     $response = $sdk->uc->postUcConnectionIdContact($request);
 
@@ -419,21 +420,21 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PutUcConnectionIdContactIdRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Larson LLC';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-14T10:29:42.076Z');
+    $request->ucContact->company = 'Feeney, Gusikowski and Douglas';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-15T18:36:56.888Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
-    $request->ucContact->id = '770ef048-091a-42ba-a5ee-6c75af8a60a7';
-    $request->ucContact->name = 'Conrad Fadel';
+    $request->ucContact->id = '<ID>';
+    $request->ucContact->name = 'reboot';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Dr.';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-21T09:25:07.085Z');
-    $request->connectionId = 'esse';
-    $request->id = '9e5afe60-acac-4a64-9de9-867551a9cce6';
+    $request->ucContact->title = 'payment hem';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T05:28:31.787Z');
+    $request->connectionId = 'Hip Southwest';
+    $request->id = '<ID>';
 
     $response = $sdk->uc->putUcConnectionIdContactId($request);
 
