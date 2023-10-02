@@ -4,15 +4,12 @@
 ### Available Operations
 
 * [deleteCrmConnectionIdCompanyId](#deletecrmconnectionidcompanyid) - Remove a company
-* [deleteCrmConnectionIdCompanyIdDealDealId](#deletecrmconnectionidcompanyiddealdealid) - Remove deal association from a company
 * [getCrmConnectionIdCompany](#getcrmconnectionidcompany) - List all companies
 * [getCrmConnectionIdCompanyId](#getcrmconnectionidcompanyid) - Retrieve a company
 * [getEnrichConnectionIdCompany](#getenrichconnectionidcompany) - Retrieve enrichment information for a company
 * [patchCrmConnectionIdCompanyId](#patchcrmconnectionidcompanyid) - Update a company
-* [patchCrmConnectionIdCompanyIdDealDealId](#patchcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 * [postCrmConnectionIdCompany](#postcrmconnectionidcompany) - Create a company
 * [putCrmConnectionIdCompanyId](#putcrmconnectionidcompanyid) - Update a company
-* [putCrmConnectionIdCompanyIdDealDealId](#putcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 
 ## deleteCrmConnectionIdCompanyId
 
@@ -58,53 +55,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdResponse](../../models/operations/DeleteCrmConnectionIdCompanyIdResponse.md)**
-
-
-## deleteCrmConnectionIdCompanyIdDealDealId
-
-Remove deal association from a company
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdRequest;
-
-$sdk = UnifiedTo::builder()
-    ->build();
-
-try {
-    $request = new DeleteCrmConnectionIdCompanyIdDealDealIdRequest();
-    $request->connectionId = 'Carolina';
-    $request->dealId = 'Technician';
-    $request->id = '<ID>';
-
-    $response = $sdk->company->deleteCrmConnectionIdCompanyIdDealDealId($request);
-
-    if ($response->crmCompany !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                           | Type                                                                                                                                                                | Required                                                                                                                                                            | Description                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdRequest](../../models/operations/DeleteCrmConnectionIdCompanyIdDealDealIdRequest.md) | :heavy_check_mark:                                                                                                                                                  | The request object to use for the request.                                                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdResponse](../../models/operations/DeleteCrmConnectionIdCompanyIdDealDealIdResponse.md)**
 
 
 ## getCrmConnectionIdCompany
@@ -337,53 +287,6 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdResponse](../../models/operations/PatchCrmConnectionIdCompanyIdResponse.md)**
 
 
-## patchCrmConnectionIdCompanyIdDealDealId
-
-Associate a deal with a company
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdRequest;
-
-$sdk = UnifiedTo::builder()
-    ->build();
-
-try {
-    $request = new PatchCrmConnectionIdCompanyIdDealDealIdRequest();
-    $request->connectionId = 'virtual BMX Tuna';
-    $request->dealId = 'frightened quia generating';
-    $request->id = '<ID>';
-
-    $response = $sdk->company->patchCrmConnectionIdCompanyIdDealDealId($request);
-
-    if ($response->crmCompany !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                         | Type                                                                                                                                                              | Required                                                                                                                                                          | Description                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdRequest](../../models/operations/PatchCrmConnectionIdCompanyIdDealDealIdRequest.md) | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdResponse](../../models/operations/PatchCrmConnectionIdCompanyIdDealDealIdResponse.md)**
-
-
 ## postCrmConnectionIdCompany
 
 Create a company
@@ -549,51 +452,4 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdResponse](../../models/operations/PutCrmConnectionIdCompanyIdResponse.md)**
-
-
-## putCrmConnectionIdCompanyIdDealDealId
-
-Associate a deal with a company
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdRequest;
-
-$sdk = UnifiedTo::builder()
-    ->build();
-
-try {
-    $request = new PutCrmConnectionIdCompanyIdDealDealIdRequest();
-    $request->connectionId = 'Hybrid Mississippi Savings';
-    $request->dealId = 'West Hill Woman';
-    $request->id = '<ID>';
-
-    $response = $sdk->company->putCrmConnectionIdCompanyIdDealDealId($request);
-
-    if ($response->crmCompany !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdRequest](../../models/operations/PutCrmConnectionIdCompanyIdDealDealIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdResponse](../../models/operations/PutCrmConnectionIdCompanyIdDealDealIdResponse.md)**
 

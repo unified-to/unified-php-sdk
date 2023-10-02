@@ -57,42 +57,6 @@ class Company
     }
 	
     /**
-     * Remove deal association from a company
-     * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdResponse
-     */
-	public function deleteCrmConnectionIdCompanyIdDealDealId(
-        ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}/deal/{deal_id}', \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdDealDealIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmCompany = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmCompany', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * List all companies
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyRequest $request
@@ -243,42 +207,6 @@ class Company
     }
 	
     /**
-     * Associate a deal with a company
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdResponse
-     */
-	public function patchCrmConnectionIdCompanyIdDealDealId(
-        ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}/deal/{deal_id}', \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdDealDealIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmCompany = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmCompany', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Create a company
      * 
      * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanyRequest $request
@@ -344,42 +272,6 @@ class Company
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $response = new \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmCompany = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmCompany', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Associate a deal with a company
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdResponse
-     */
-	public function putCrmConnectionIdCompanyIdDealDealId(
-        ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}/deal/{deal_id}', \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdDealDealIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
