@@ -22,7 +22,7 @@ class Employee
 	}
 	
     /**
-     * Remove a Employee
+     * Remove an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdResponse
@@ -57,7 +57,7 @@ class Employee
     }
 	
     /**
-     * List all Employees
+     * List all employees
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeResponse
@@ -94,7 +94,7 @@ class Employee
     }
 	
     /**
-     * Retrieve a Employee
+     * Retrieve an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdResponse
@@ -130,7 +130,7 @@ class Employee
     }
 	
     /**
-     * Update a Employee
+     * Update an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdResponse
@@ -170,7 +170,7 @@ class Employee
     }
 	
     /**
-     * Create a Employee
+     * Create an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeRequest $request
      * @return \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeResponse
@@ -210,7 +210,7 @@ class Employee
     }
 	
     /**
-     * Update a Employee
+     * Update an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdResponse

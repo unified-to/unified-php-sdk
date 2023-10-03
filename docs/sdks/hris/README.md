@@ -3,22 +3,22 @@
 
 ### Available Operations
 
-* [deleteHrisConnectionIdEmployeeId](#deletehrisconnectionidemployeeid) - Remove a Employee
-* [deleteHrisConnectionIdGroupId](#deletehrisconnectionidgroupid) - Remove a Group
-* [getHrisConnectionIdEmployee](#gethrisconnectionidemployee) - List all Employees
-* [getHrisConnectionIdEmployeeId](#gethrisconnectionidemployeeid) - Retrieve a Employee
-* [getHrisConnectionIdGroup](#gethrisconnectionidgroup) - List all Groups
-* [getHrisConnectionIdGroupId](#gethrisconnectionidgroupid) - Retrieve a Group
-* [patchHrisConnectionIdEmployeeId](#patchhrisconnectionidemployeeid) - Update a Employee
-* [patchHrisConnectionIdGroupId](#patchhrisconnectionidgroupid) - Update a Group
-* [postHrisConnectionIdEmployee](#posthrisconnectionidemployee) - Create a Employee
-* [postHrisConnectionIdGroup](#posthrisconnectionidgroup) - Create a Group
-* [putHrisConnectionIdEmployeeId](#puthrisconnectionidemployeeid) - Update a Employee
-* [putHrisConnectionIdGroupId](#puthrisconnectionidgroupid) - Update a Group
+* [deleteHrisConnectionIdEmployeeId](#deletehrisconnectionidemployeeid) - Remove an employee
+* [deleteHrisConnectionIdGroupId](#deletehrisconnectionidgroupid) - Remove a group
+* [getHrisConnectionIdEmployee](#gethrisconnectionidemployee) - List all employees
+* [getHrisConnectionIdEmployeeId](#gethrisconnectionidemployeeid) - Retrieve an employee
+* [getHrisConnectionIdGroup](#gethrisconnectionidgroup) - List all groups
+* [getHrisConnectionIdGroupId](#gethrisconnectionidgroupid) - Retrieve a group
+* [patchHrisConnectionIdEmployeeId](#patchhrisconnectionidemployeeid) - Update an employee
+* [patchHrisConnectionIdGroupId](#patchhrisconnectionidgroupid) - Update a group
+* [postHrisConnectionIdEmployee](#posthrisconnectionidemployee) - Create an employee
+* [postHrisConnectionIdGroup](#posthrisconnectionidgroup) - Create a group
+* [putHrisConnectionIdEmployeeId](#puthrisconnectionidemployeeid) - Update an employee
+* [putHrisConnectionIdGroupId](#puthrisconnectionidgroupid) - Update a group
 
 ## deleteHrisConnectionIdEmployeeId
 
-Remove a Employee
+Remove an employee
 
 ### Example Usage
 
@@ -64,7 +64,7 @@ try {
 
 ## deleteHrisConnectionIdGroupId
 
-Remove a Group
+Remove a group
 
 ### Example Usage
 
@@ -110,7 +110,7 @@ try {
 
 ## getHrisConnectionIdEmployee
 
-List all Employees
+List all employees
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ try {
 
 ## getHrisConnectionIdEmployeeId
 
-Retrieve a Employee
+Retrieve an employee
 
 ### Example Usage
 
@@ -207,7 +207,7 @@ try {
 
 ## getHrisConnectionIdGroup
 
-List all Groups
+List all groups
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ try {
 
 ## getHrisConnectionIdGroupId
 
-Retrieve a Group
+Retrieve a group
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ try {
 
 ## patchHrisConnectionIdEmployeeId
 
-Update a Employee
+Update an employee
 
 ### Example Usage
 
@@ -395,7 +395,7 @@ try {
 
 ## patchHrisConnectionIdGroupId
 
-Update a Group
+Update a group
 
 ### Example Usage
 
@@ -460,7 +460,7 @@ try {
 
 ## postHrisConnectionIdEmployee
 
-Create a Employee
+Create an employee
 
 ### Example Usage
 
@@ -550,7 +550,7 @@ try {
 
 ## postHrisConnectionIdGroup
 
-Create a Group
+Create a group
 
 ### Example Usage
 
@@ -614,7 +614,7 @@ try {
 
 ## putHrisConnectionIdEmployeeId
 
-Update a Employee
+Update an employee
 
 ### Example Usage
 
@@ -705,7 +705,7 @@ try {
 
 ## putHrisConnectionIdGroupId
 
-Update a Group
+Update a group
 
 ### Example Usage
 

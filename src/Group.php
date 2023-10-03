@@ -22,7 +22,7 @@ class Group
 	}
 	
     /**
-     * Remove a Group
+     * Remove a group
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdResponse
@@ -57,7 +57,7 @@ class Group
     }
 	
     /**
-     * List all Groups
+     * List all groups
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupResponse
@@ -94,7 +94,7 @@ class Group
     }
 	
     /**
-     * Retrieve a Group
+     * Retrieve a group
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdResponse
@@ -130,7 +130,7 @@ class Group
     }
 	
     /**
-     * Update a Group
+     * Update a group
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdResponse
@@ -170,7 +170,7 @@ class Group
     }
 	
     /**
-     * Create a Group
+     * Create a group
      * 
      * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest $request
      * @return \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupResponse
@@ -210,7 +210,7 @@ class Group
     }
 	
     /**
-     * Update a Group
+     * Update a group
      * 
      * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdResponse

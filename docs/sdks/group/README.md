@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteHrisConnectionIdGroupId](#deletehrisconnectionidgroupid) - Remove a Group
-* [getHrisConnectionIdGroup](#gethrisconnectionidgroup) - List all Groups
-* [getHrisConnectionIdGroupId](#gethrisconnectionidgroupid) - Retrieve a Group
-* [patchHrisConnectionIdGroupId](#patchhrisconnectionidgroupid) - Update a Group
-* [postHrisConnectionIdGroup](#posthrisconnectionidgroup) - Create a Group
-* [putHrisConnectionIdGroupId](#puthrisconnectionidgroupid) - Update a Group
+* [deleteHrisConnectionIdGroupId](#deletehrisconnectionidgroupid) - Remove a group
+* [getHrisConnectionIdGroup](#gethrisconnectionidgroup) - List all groups
+* [getHrisConnectionIdGroupId](#gethrisconnectionidgroupid) - Retrieve a group
+* [patchHrisConnectionIdGroupId](#patchhrisconnectionidgroupid) - Update a group
+* [postHrisConnectionIdGroup](#posthrisconnectionidgroup) - Create a group
+* [putHrisConnectionIdGroupId](#puthrisconnectionidgroupid) - Update a group
 
 ## deleteHrisConnectionIdGroupId
 
-Remove a Group
+Remove a group
 
 ### Example Usage
 
@@ -58,7 +58,7 @@ try {
 
 ## getHrisConnectionIdGroup
 
-List all Groups
+List all groups
 
 ### Example Usage
 
@@ -109,7 +109,7 @@ try {
 
 ## getHrisConnectionIdGroupId
 
-Retrieve a Group
+Retrieve a group
 
 ### Example Usage
 
@@ -155,7 +155,7 @@ try {
 
 ## patchHrisConnectionIdGroupId
 
-Update a Group
+Update a group
 
 ### Example Usage
 
@@ -220,7 +220,7 @@ try {
 
 ## postHrisConnectionIdGroup
 
-Create a Group
+Create a group
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ try {
 
 ## putHrisConnectionIdGroupId
 
-Update a Group
+Update a group
 
 ### Example Usage
 

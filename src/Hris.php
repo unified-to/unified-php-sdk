@@ -22,7 +22,7 @@ class Hris
 	}
 	
     /**
-     * Remove a Employee
+     * Remove an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdResponse
@@ -57,7 +57,7 @@ class Hris
     }
 	
     /**
-     * Remove a Group
+     * Remove a group
      * 
      * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdResponse
@@ -92,7 +92,7 @@ class Hris
     }
 	
     /**
-     * List all Employees
+     * List all employees
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeResponse
@@ -129,7 +129,7 @@ class Hris
     }
 	
     /**
-     * Retrieve a Employee
+     * Retrieve an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdResponse
@@ -165,7 +165,7 @@ class Hris
     }
 	
     /**
-     * List all Groups
+     * List all groups
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupResponse
@@ -202,7 +202,7 @@ class Hris
     }
 	
     /**
-     * Retrieve a Group
+     * Retrieve a group
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdResponse
@@ -238,7 +238,7 @@ class Hris
     }
 	
     /**
-     * Update a Employee
+     * Update an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdResponse
@@ -278,7 +278,7 @@ class Hris
     }
 	
     /**
-     * Update a Group
+     * Update a group
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdResponse
@@ -318,7 +318,7 @@ class Hris
     }
 	
     /**
-     * Create a Employee
+     * Create an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeRequest $request
      * @return \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeResponse
@@ -358,7 +358,7 @@ class Hris
     }
 	
     /**
-     * Create a Group
+     * Create a group
      * 
      * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest $request
      * @return \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupResponse
@@ -398,7 +398,7 @@ class Hris
     }
 	
     /**
-     * Update a Employee
+     * Update an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdResponse
@@ -438,7 +438,7 @@ class Hris
     }
 	
     /**
-     * Update a Group
+     * Update a group
      * 
      * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest $request
      * @return \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdResponse
