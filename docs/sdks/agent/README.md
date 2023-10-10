@@ -27,7 +27,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -73,7 +77,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -124,7 +132,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -170,7 +182,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -228,7 +244,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingAgentRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -292,7 +312,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingAgentRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -355,7 +379,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingAgentRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

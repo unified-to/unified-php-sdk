@@ -9,6 +9,12 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/**
+ * AtsAddress - Unified address object
+ * 
+ * @package Unified\Unified_to\Models\Shared
+ * @access public
+ */
 class AtsAddress
 {
 	#[\JMS\Serializer\Annotation\SerializedName('address1')]

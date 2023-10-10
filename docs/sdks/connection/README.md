@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionCategories;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -126,7 +134,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -176,7 +188,11 @@ use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -266,7 +282,11 @@ use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -355,7 +375,11 @@ use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
 use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

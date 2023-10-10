@@ -9,6 +9,12 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/**
+ * AtsApplication - An application is an association object between a candidate and a job
+ * 
+ * @package Unified\Unified_to\Models\Shared
+ * @access public
+ */
 class AtsApplication
 {
 	#[\JMS\Serializer\Annotation\SerializedName('applied_at')]

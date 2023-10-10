@@ -9,6 +9,12 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/**
+ * PropertyAtsCandidateAddress - Unified address object
+ * 
+ * @package Unified\Unified_to\Models\Shared
+ * @access public
+ */
 class PropertyAtsCandidateAddress
 {
 	#[\JMS\Serializer\Annotation\SerializedName('address1')]

@@ -25,7 +25,11 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationCategories;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -80,7 +84,11 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -137,7 +145,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -183,7 +195,11 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdCategories;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

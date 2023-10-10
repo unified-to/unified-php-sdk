@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PutAtsConnectionIdJobIdRequest
 {
+    /**
+     * An opened position/job
+     * 
+     * @var ?\Unified\Unified_to\Models\Shared\AtsJob $atsJob
+     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?\Unified\Unified_to\Models\Shared\AtsJob $atsJob = null;
     

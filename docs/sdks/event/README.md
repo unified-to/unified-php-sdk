@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdEventIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -126,7 +134,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdEventIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -180,7 +192,11 @@ use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
 use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
 use \Unified\Unified_to\Models\Shared\CrmEventType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -273,7 +289,11 @@ use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
 use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
 use \Unified\Unified_to\Models\Shared\CrmEventType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -365,7 +385,11 @@ use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
 use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
 use \Unified\Unified_to\Models\Shared\CrmEventType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

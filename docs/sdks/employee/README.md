@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -123,7 +131,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -180,7 +192,11 @@ use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeRaw;
 use \Unified\Unified_to\Models\Shared\HrisTelephone;
 use \Unified\Unified_to\Models\Shared\HrisTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -271,7 +287,11 @@ use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeRaw;
 use \Unified\Unified_to\Models\Shared\HrisTelephone;
 use \Unified\Unified_to\Models\Shared\HrisTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -361,7 +381,11 @@ use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeRaw;
 use \Unified\Unified_to\Models\Shared\HrisTelephone;
 use \Unified\Unified_to\Models\Shared\HrisTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

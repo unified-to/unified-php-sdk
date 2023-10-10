@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdTicketIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -125,7 +133,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -174,7 +186,11 @@ use \Unified\Unified_to\Models\Shared\TicketingTicket;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -240,7 +256,11 @@ use \Unified\Unified_to\Models\Shared\TicketingTicket;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -305,7 +325,11 @@ use \Unified\Unified_to\Models\Shared\TicketingTicket;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

@@ -9,6 +9,12 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/**
+ * ApiCall - An API call made to Unified or a API callback/webhook made from Unified
+ * 
+ * @package Unified\Unified_to\Models\Shared
+ * @access public
+ */
 class ApiCall
 {
 	#[\JMS\Serializer\Annotation\SerializedName('connection_id')]

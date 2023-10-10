@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -123,7 +131,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -171,7 +183,11 @@ use \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdRequest;
 use \Unified\Unified_to\Models\Shared\MarketingList;
 use \Unified\Unified_to\Models\Shared\PropertyMarketingListRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -225,7 +241,11 @@ use \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListRequest;
 use \Unified\Unified_to\Models\Shared\MarketingList;
 use \Unified\Unified_to\Models\Shared\PropertyMarketingListRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -278,7 +298,11 @@ use \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdRequest;
 use \Unified\Unified_to\Models\Shared\MarketingList;
 use \Unified\Unified_to\Models\Shared\PropertyMarketingListRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

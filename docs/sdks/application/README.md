@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdApplicationIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdApplicationRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -125,7 +133,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdApplicationIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -174,7 +186,11 @@ use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
 use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -235,7 +251,11 @@ use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
 use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -295,7 +315,11 @@ use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
 use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

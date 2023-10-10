@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -123,7 +131,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -171,7 +183,11 @@ use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmPipeline;
 use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -228,7 +244,11 @@ use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineRequest;
 use \Unified\Unified_to\Models\Shared\CrmPipeline;
 use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -284,7 +304,11 @@ use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmPipeline;
 use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

@@ -44,7 +44,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -90,7 +94,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -136,7 +144,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -183,7 +195,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdTicketIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -229,7 +245,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -280,7 +300,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -326,7 +350,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -377,7 +405,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -423,7 +455,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -475,7 +511,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -522,7 +562,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -575,7 +619,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -627,7 +675,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingAgentRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -691,7 +743,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -754,7 +810,11 @@ use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketId
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -812,7 +872,11 @@ use \Unified\Unified_to\Models\Shared\TicketingTicket;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -881,7 +945,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingAgentRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -944,7 +1012,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1006,7 +1078,11 @@ use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdR
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1063,7 +1139,11 @@ use \Unified\Unified_to\Models\Shared\TicketingTicket;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1131,7 +1211,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingAgentRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1195,7 +1279,11 @@ use \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTelephone;
 use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1258,7 +1346,11 @@ use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdId
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1316,7 +1408,11 @@ use \Unified\Unified_to\Models\Shared\TicketingTicket;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

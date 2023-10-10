@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -73,7 +77,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -125,7 +133,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -174,7 +186,11 @@ use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketId
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -231,7 +247,11 @@ use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdR
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -287,7 +307,11 @@ use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdId
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

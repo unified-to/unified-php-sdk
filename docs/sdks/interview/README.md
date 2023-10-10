@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -124,7 +132,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -173,7 +185,11 @@ use \Unified\Unified_to\Models\Shared\AtsInterview;
 use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
 use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -238,7 +254,11 @@ use \Unified\Unified_to\Models\Shared\AtsInterview;
 use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
 use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -302,7 +322,11 @@ use \Unified\Unified_to\Models\Shared\AtsInterview;
 use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
 use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -126,7 +134,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -174,7 +186,11 @@ use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmFile;
 use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -239,7 +255,11 @@ use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest;
 use \Unified\Unified_to\Models\Shared\CrmFile;
 use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -303,7 +323,11 @@ use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmFile;
 use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

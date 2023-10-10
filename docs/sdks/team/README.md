@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -123,7 +131,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -171,7 +183,11 @@ use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmTeam;
 use \Unified\Unified_to\Models\Shared\PropertyCrmTeamRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -229,7 +245,11 @@ use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamRequest;
 use \Unified\Unified_to\Models\Shared\CrmTeam;
 use \Unified\Unified_to\Models\Shared\PropertyCrmTeamRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -286,7 +306,11 @@ use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmTeam;
 use \Unified\Unified_to\Models\Shared\PropertyCrmTeamRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -123,7 +131,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -172,7 +184,11 @@ use \Unified\Unified_to\Models\Shared\HrisGroup;
 use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
 use \Unified\Unified_to\Models\Shared\HrisGroupType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -237,7 +253,11 @@ use \Unified\Unified_to\Models\Shared\HrisGroup;
 use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
 use \Unified\Unified_to\Models\Shared\HrisGroupType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -301,7 +321,11 @@ use \Unified\Unified_to\Models\Shared\HrisGroup;
 use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
 use \Unified\Unified_to\Models\Shared\HrisGroupType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

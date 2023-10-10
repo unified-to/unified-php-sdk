@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -123,7 +131,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -177,7 +189,11 @@ use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -261,7 +277,11 @@ use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -344,7 +364,11 @@ use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

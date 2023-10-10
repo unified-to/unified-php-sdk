@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -123,7 +131,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -176,7 +188,11 @@ use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -257,7 +273,11 @@ use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -337,7 +357,11 @@ use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

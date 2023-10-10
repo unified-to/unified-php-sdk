@@ -9,6 +9,12 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/**
+ * AtsEmail - An unified email object
+ * 
+ * @package Unified\Unified_to\Models\Shared
+ * @access public
+ */
 class AtsEmail
 {
 	#[\JMS\Serializer\Annotation\SerializedName('email')]

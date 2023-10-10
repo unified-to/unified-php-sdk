@@ -9,6 +9,12 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/**
+ * AtsTelephone - A unified telephone object
+ * 
+ * @package Unified\Unified_to\Models\Shared
+ * @access public
+ */
 class AtsTelephone
 {
 	#[\JMS\Serializer\Annotation\SerializedName('telephone')]

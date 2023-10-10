@@ -42,11 +42,15 @@ composer update
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest;
+use Unified\Unified_to\UnifiedTo;
+use Unified\Unified_to\Models\Shared\Security;
+use Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest;
+
+$security = new Security();
+$security->jwt = '';
 
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -62,6 +66,7 @@ try {
 } catch (Exception $e) {
     // handle exception
 }
+
 ```
 <!-- End SDK Example Usage -->
 

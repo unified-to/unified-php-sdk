@@ -9,8 +9,19 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/**
+ * AtsCandidate - A candidate looking for work
+ * 
+ * @package Unified\Unified_to\Models\Shared
+ * @access public
+ */
 class AtsCandidate
 {
+    /**
+     * Unified address object
+     * 
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress $address
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]

@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 76108e321f4d72dedb6c9bb7b146f4ad
+  docChecksum: 2d99b5ee7d87bd65c85fa34518d516fd
   docVersion: "1.0"
-  speakeasyVersion: 1.93.1
-  generationVersion: 2.144.7
+  speakeasyVersion: 1.97.1
+  generationVersion: 2.152.1
 generation:
   comments:
     disableComments: false
@@ -14,11 +14,11 @@ generation:
   tagNamespacingDisabled: false
 features:
   php:
-    core: 2.88.1
+    core: 2.88.2
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 php:
-  version: 0.5.1
+  version: 0.5.2
   maxMethodParams: 0
   namespace: Unified\Unified_to
   packageName: unified/unified-to

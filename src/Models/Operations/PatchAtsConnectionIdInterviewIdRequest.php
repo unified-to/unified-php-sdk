@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchAtsConnectionIdInterviewIdRequest
 {
+    /**
+     * An interview between a candidate for a specific job
+     * 
+     * @var ?\Unified\Unified_to\Models\Shared\AtsInterview $atsInterview
+     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?\Unified\Unified_to\Models\Shared\AtsInterview $atsInterview = null;
     

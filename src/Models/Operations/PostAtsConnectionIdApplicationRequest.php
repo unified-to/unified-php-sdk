@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PostAtsConnectionIdApplicationRequest
 {
+    /**
+     * An application is an association object between a candidate and a job
+     * 
+     * @var ?\Unified\Unified_to\Models\Shared\AtsApplication $atsApplication
+     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?\Unified\Unified_to\Models\Shared\AtsApplication $atsApplication = null;
     

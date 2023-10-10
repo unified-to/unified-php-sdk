@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -125,7 +133,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -173,7 +185,11 @@ use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmDeal;
 use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -239,7 +255,11 @@ use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest;
 use \Unified\Unified_to\Models\Shared\CrmDeal;
 use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -304,7 +324,11 @@ use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest;
 use \Unified\Unified_to\Models\Shared\CrmDeal;
 use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

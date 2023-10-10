@@ -26,7 +26,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -126,7 +134,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -175,7 +187,11 @@ use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -235,7 +251,11 @@ use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -294,7 +314,11 @@ use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

@@ -9,6 +9,12 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/**
+ * AtsScorecard - A scorecard is feedback/assessment of a candidate's interview
+ * 
+ * @package Unified\Unified_to\Models\Shared
+ * @access public
+ */
 class AtsScorecard
 {
 	#[\JMS\Serializer\Annotation\SerializedName('application_id')]

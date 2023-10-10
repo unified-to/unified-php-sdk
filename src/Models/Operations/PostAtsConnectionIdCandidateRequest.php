@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PostAtsConnectionIdCandidateRequest
 {
+    /**
+     * A candidate looking for work
+     * 
+     * @var ?\Unified\Unified_to\Models\Shared\AtsCandidate $atsCandidate
+     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?\Unified\Unified_to\Models\Shared\AtsCandidate $atsCandidate = null;
     

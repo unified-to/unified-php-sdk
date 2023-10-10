@@ -50,7 +50,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdApplicationIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -96,7 +100,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdCandidateIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -142,7 +150,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -188,7 +200,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -234,7 +250,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -280,7 +300,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdApplicationRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -333,7 +357,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdApplicationIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -379,7 +407,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -430,7 +462,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdCandidateIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -476,7 +512,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -528,7 +568,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -574,7 +618,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -625,7 +673,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -671,7 +723,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -725,7 +781,11 @@ use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -774,7 +834,11 @@ use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
 use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -839,7 +903,11 @@ use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -916,7 +984,11 @@ use \Unified\Unified_to\Models\Shared\AtsInterview;
 use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
 use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -986,7 +1058,11 @@ use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1065,7 +1141,11 @@ use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1125,7 +1205,11 @@ use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
 use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1189,7 +1273,11 @@ use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1265,7 +1353,11 @@ use \Unified\Unified_to\Models\Shared\AtsInterview;
 use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
 use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1334,7 +1426,11 @@ use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1412,7 +1508,11 @@ use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1471,7 +1571,11 @@ use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
 use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1536,7 +1640,11 @@ use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
 use \Unified\Unified_to\Models\Shared\AtsTelephone;
 use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1613,7 +1721,11 @@ use \Unified\Unified_to\Models\Shared\AtsInterview;
 use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
 use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1683,7 +1795,11 @@ use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1762,7 +1878,11 @@ use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
 use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
 
+$security = new Security();
+$security->jwt = '';
+
 $sdk = UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
