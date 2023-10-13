@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [getUnifiedIntegrationAuthWorkspaceIdIntegrationType](#getunifiedintegrationauthworkspaceidintegrationtype) - Create connection indirectly
-* [getUnifiedIntegrationLoginWorkspaceIdIntegrationType](#getunifiedintegrationloginworkspaceidintegrationtype) - Sign in a user
+* [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Create connection indirectly
+* [getUnifiedIntegrationLogin](#getunifiedintegrationlogin) - Sign in a user
 
-## getUnifiedIntegrationAuthWorkspaceIdIntegrationType
+## getUnifiedIntegrationAuth
 
 Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 
@@ -20,8 +20,8 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
+use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest;
+use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthScopes;
 
 $security = new Security();
 $security->jwt = '';
@@ -31,24 +31,24 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'Algerian';
-    $request->externalXref = 'Cambridgeshire Surinam';
-    $request->failureRedirect = 'Designer Drive';
-    $request->integrationType = 'program Home';
-    $request->lang = 'Plastic program';
+    $request = new GetUnifiedIntegrationAuthRequest();
+    $request->env = 'Reggae Van pascal';
+    $request->externalXref = 'plum';
+    $request->failureRedirect = 'North groupware deposit';
+    $request->integrationType = 'Aston pink Crew';
+    $request->lang = 'collar Northwest North';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes::CrmFileRead,
+        GetUnifiedIntegrationAuthScopes::AuthLogin,
     ];
-    $request->state = 'Functionality Product';
-    $request->subdomain = 'payment Developer Dynamic';
-    $request->successRedirect = 'Northeast';
-    $request->workspaceId = 'duh empower Kwanza';
+    $request->state = 'Rubber Southwest';
+    $request->subdomain = 'North South';
+    $request->successRedirect = 'Rubber overriding middleware';
+    $request->workspaceId = 'redefine AGP';
 
-    $response = $sdk->auth->getUnifiedIntegrationAuthWorkspaceIdIntegrationType($request);
+    $response = $sdk->auth->getUnifiedIntegrationAuth($request);
 
-    if ($response->getUnifiedIntegrationAuthWorkspaceIdIntegrationType200ApplicationJSONString !== null) {
+    if ($response->getUnifiedIntegrationAuth200ApplicationJSONString !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -58,17 +58,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                 | Type                                                                                                                                                                                      | Required                                                                                                                                                                                  | Description                                                                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                                                        | The request object to use for the request.                                                                                                                                                |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest](../../models/operations/GetUnifiedIntegrationAuthRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse](../../models/operations/GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse](../../models/operations/GetUnifiedIntegrationAuthResponse.md)**
 
 
-## getUnifiedIntegrationLoginWorkspaceIdIntegrationType
+## getUnifiedIntegrationLogin
 
 Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
 
@@ -82,7 +82,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest;
+use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -92,18 +92,18 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'Rubber';
-    $request->failureRedirect = 'gold Cambridgeshire';
-    $request->integrationType = 'Plastic services pixel';
+    $request = new GetUnifiedIntegrationLoginRequest();
+    $request->env = 'Bicycle markets Soft';
+    $request->failureRedirect = 'bus Strontium';
+    $request->integrationType = 'more purple';
     $request->redirect = false;
-    $request->state = 'Volkswagen Southwest';
-    $request->successRedirect = 'drive integrated Bicycle';
-    $request->workspaceId = 'Fantastic recontextualize Frozen';
+    $request->state = 'District';
+    $request->successRedirect = 'pascal Berkshire';
+    $request->workspaceId = 'meanwhile volt';
 
-    $response = $sdk->auth->getUnifiedIntegrationLoginWorkspaceIdIntegrationType($request);
+    $response = $sdk->auth->getUnifiedIntegrationLogin($request);
 
-    if ($response->getUnifiedIntegrationLoginWorkspaceIdIntegrationType200ApplicationJSONString !== null) {
+    if ($response->getUnifiedIntegrationLogin200ApplicationJSONString !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -113,12 +113,12 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                   | Type                                                                                                                                                                                        | Required                                                                                                                                                                                    | Description                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                                                          | The request object to use for the request.                                                                                                                                                  |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest](../../models/operations/GetUnifiedIntegrationLoginRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse](../../models/operations/GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginResponse](../../models/operations/GetUnifiedIntegrationLoginResponse.md)**
 

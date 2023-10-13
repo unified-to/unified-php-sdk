@@ -14,10 +14,10 @@ class GetUnifiedConnectionResponse
     /**
      * Successful
      * 
-     * @var ?array<\Unified\Unified_to\Models\Shared\Connection> $connections
+     * @var ?\Unified\Unified_to\Models\Shared\Connection $connection
      */
 	
-    public ?array $connections = null;
+    public ?\Unified\Unified_to\Models\Shared\Connection $connection = null;
     
     /**
      * HTTP response content type for this operation
@@ -45,7 +45,7 @@ class GetUnifiedConnectionResponse
     
 	public function __construct()
 	{
-		$this->connections = null;
+		$this->connection = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;

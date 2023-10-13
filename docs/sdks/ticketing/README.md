@@ -3,927 +3,32 @@
 
 ### Available Operations
 
-* [deleteTicketingConnectionIdAgentId](#deleteticketingconnectionidagentid) - Remove a agent
-* [deleteTicketingConnectionIdCustomerId](#deleteticketingconnectionidcustomerid) - Remove a customer
-* [deleteTicketingConnectionIdNoteTicketIdId](#deleteticketingconnectionidnoteticketidid) - Remove a note
-* [deleteTicketingConnectionIdTicketId](#deleteticketingconnectionidticketid) - Remove a ticket
-* [getTicketingConnectionIdAgent](#getticketingconnectionidagent) - List all agents
-* [getTicketingConnectionIdAgentId](#getticketingconnectionidagentid) - Retrieve a agent
-* [getTicketingConnectionIdCustomer](#getticketingconnectionidcustomer) - List all customers
-* [getTicketingConnectionIdCustomerId](#getticketingconnectionidcustomerid) - Retrieve a customer
-* [getTicketingConnectionIdNoteTicketId](#getticketingconnectionidnoteticketid) - List all notes
-* [getTicketingConnectionIdNoteTicketIdId](#getticketingconnectionidnoteticketidid) - Retrieve a note
-* [getTicketingConnectionIdTicket](#getticketingconnectionidticket) - List all tickets
-* [getTicketingConnectionIdTicketId](#getticketingconnectionidticketid) - Retrieve a ticket
-* [patchTicketingConnectionIdAgentId](#patchticketingconnectionidagentid) - Update a agent
-* [patchTicketingConnectionIdCustomerId](#patchticketingconnectionidcustomerid) - Update a customer
-* [patchTicketingConnectionIdNoteTicketIdId](#patchticketingconnectionidnoteticketidid) - Update a note
-* [patchTicketingConnectionIdTicketId](#patchticketingconnectionidticketid) - Update a ticket
-* [postTicketingConnectionIdAgent](#postticketingconnectionidagent) - Create a agent
-* [postTicketingConnectionIdCustomer](#postticketingconnectionidcustomer) - Create a customer
-* [postTicketingConnectionIdNoteTicketId](#postticketingconnectionidnoteticketid) - Create a note
-* [postTicketingConnectionIdTicket](#postticketingconnectionidticket) - Create a ticket
-* [putTicketingConnectionIdAgentId](#putticketingconnectionidagentid) - Update a agent
-* [putTicketingConnectionIdCustomerId](#putticketingconnectionidcustomerid) - Update a customer
-* [putTicketingConnectionIdNoteTicketIdId](#putticketingconnectionidnoteticketidid) - Update a note
-* [putTicketingConnectionIdTicketId](#putticketingconnectionidticketid) - Update a ticket
-
-## deleteTicketingConnectionIdAgentId
-
-Remove a agent
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteTicketingConnectionIdAgentIdRequest();
-    $request->connectionId = 'navigate';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->deleteTicketingConnectionIdAgentId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest](../../models/operations/DeleteTicketingConnectionIdAgentIdRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdResponse](../../models/operations/DeleteTicketingConnectionIdAgentIdResponse.md)**
-
-
-## deleteTicketingConnectionIdCustomerId
-
-Remove a customer
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteTicketingConnectionIdCustomerIdRequest();
-    $request->connectionId = 'Electric Gloves pish';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->deleteTicketingConnectionIdCustomerId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdRequest](../../models/operations/DeleteTicketingConnectionIdCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdCustomerIdResponse](../../models/operations/DeleteTicketingConnectionIdCustomerIdResponse.md)**
-
-
-## deleteTicketingConnectionIdNoteTicketIdId
-
-Remove a note
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteTicketingConnectionIdNoteTicketIdIdRequest();
-    $request->connectionId = 'DRAM Liaison';
-    $request->id = '<ID>';
-    $request->ticketId = 'Tasty exploit';
-
-    $response = $sdk->ticketing->deleteTicketingConnectionIdNoteTicketIdId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                            | [\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/DeleteTicketingConnectionIdNoteTicketIdIdRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/DeleteTicketingConnectionIdNoteTicketIdIdResponse.md)**
-
-
-## deleteTicketingConnectionIdTicketId
-
-Remove a ticket
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdTicketIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteTicketingConnectionIdTicketIdRequest();
-    $request->connectionId = 'brownie azure payment';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->deleteTicketingConnectionIdTicketId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                 | Type                                                                                                                                                      | Required                                                                                                                                                  | Description                                                                                                                                               |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdTicketIdRequest](../../models/operations/DeleteTicketingConnectionIdTicketIdRequest.md) | :heavy_check_mark:                                                                                                                                        | The request object to use for the request.                                                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdTicketIdResponse](../../models/operations/DeleteTicketingConnectionIdTicketIdResponse.md)**
-
-
-## getTicketingConnectionIdAgent
-
-List all agents
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetTicketingConnectionIdAgentRequest();
-    $request->connectionId = 'East Steel Frozen';
-    $request->limit = 8285.04;
-    $request->offset = 5507.07;
-    $request->order = 'Korea West Ryan';
-    $request->query = 'invoice coulomb soluta';
-    $request->sort = 'adored';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:25:12.859Z');
-
-    $response = $sdk->ticketing->getTicketingConnectionIdAgent($request);
-
-    if ($response->ticketingAgents !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentRequest](../../models/operations/GetTicketingConnectionIdAgentRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentResponse](../../models/operations/GetTicketingConnectionIdAgentResponse.md)**
-
-
-## getTicketingConnectionIdAgentId
-
-Retrieve a agent
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetTicketingConnectionIdAgentIdRequest();
-    $request->connectionId = 'Hat gas Cisgender';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->getTicketingConnectionIdAgentId($request);
-
-    if ($response->ticketingAgent !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdRequest](../../models/operations/GetTicketingConnectionIdAgentIdRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdResponse](../../models/operations/GetTicketingConnectionIdAgentIdResponse.md)**
-
-
-## getTicketingConnectionIdCustomer
-
-List all customers
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetTicketingConnectionIdCustomerRequest();
-    $request->connectionId = 'SDD because Salad';
-    $request->limit = 8049.62;
-    $request->offset = 4323.42;
-    $request->order = 'override';
-    $request->query = 'Rolls 1080p';
-    $request->sort = 'quantifying Southeast Kansas';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-20T19:18:39.254Z');
-
-    $response = $sdk->ticketing->getTicketingConnectionIdCustomer($request);
-
-    if ($response->ticketingCustomers !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerRequest](../../models/operations/GetTicketingConnectionIdCustomerRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerResponse](../../models/operations/GetTicketingConnectionIdCustomerResponse.md)**
-
-
-## getTicketingConnectionIdCustomerId
-
-Retrieve a customer
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetTicketingConnectionIdCustomerIdRequest();
-    $request->connectionId = 'further Ebert';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->getTicketingConnectionIdCustomerId($request);
-
-    if ($response->ticketingCustomer !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdRequest](../../models/operations/GetTicketingConnectionIdCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdCustomerIdResponse](../../models/operations/GetTicketingConnectionIdCustomerIdResponse.md)**
-
-
-## getTicketingConnectionIdNoteTicketId
-
-List all notes
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetTicketingConnectionIdNoteTicketIdRequest();
-    $request->connectionId = 'Account revolutionary';
-    $request->limit = 2310.88;
-    $request->offset = 6688.82;
-    $request->order = 'AI';
-    $request->query = 'stanch Investor attitude';
-    $request->sort = 'Cotton';
-    $request->ticketId = 'Handmade Kia';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-26T17:12:11.333Z');
-
-    $response = $sdk->ticketing->getTicketingConnectionIdNoteTicketId($request);
-
-    if ($response->ticketingNotes !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdRequest](../../models/operations/GetTicketingConnectionIdNoteTicketIdRequest.md) | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdResponse](../../models/operations/GetTicketingConnectionIdNoteTicketIdResponse.md)**
-
-
-## getTicketingConnectionIdNoteTicketIdId
-
-Retrieve a note
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetTicketingConnectionIdNoteTicketIdIdRequest();
-    $request->connectionId = 'for';
-    $request->id = '<ID>';
-    $request->ticketId = 'female';
-
-    $response = $sdk->ticketing->getTicketingConnectionIdNoteTicketIdId($request);
-
-    if ($response->ticketingNote !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/GetTicketingConnectionIdNoteTicketIdIdRequest.md) | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/GetTicketingConnectionIdNoteTicketIdIdResponse.md)**
-
-
-## getTicketingConnectionIdTicket
-
-List all tickets
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetTicketingConnectionIdTicketRequest();
-    $request->agentId = 'New';
-    $request->connectionId = 'hertz Savings Steel';
-    $request->customerId = 'payment biopsy Kids';
-    $request->limit = 7673.64;
-    $request->offset = 5134.74;
-    $request->order = 'quantifying orange';
-    $request->query = 'male dynamic';
-    $request->sort = 'Sedan Tricycle Honda';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-06T21:30:52.879Z');
-
-    $response = $sdk->ticketing->getTicketingConnectionIdTicket($request);
-
-    if ($response->ticketingTickets !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketRequest](../../models/operations/GetTicketingConnectionIdTicketRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketResponse](../../models/operations/GetTicketingConnectionIdTicketResponse.md)**
-
-
-## getTicketingConnectionIdTicketId
-
-Retrieve a ticket
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetTicketingConnectionIdTicketIdRequest();
-    $request->connectionId = 'yellow';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->getTicketingConnectionIdTicketId($request);
-
-    if ($response->ticketingTicket !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketIdRequest](../../models/operations/GetTicketingConnectionIdTicketIdRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdTicketIdResponse](../../models/operations/GetTicketingConnectionIdTicketIdResponse.md)**
-
-
-## patchTicketingConnectionIdAgentId
-
-Update a agent
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdRequest;
-use \Unified\Unified_to\Models\Shared\TicketingAgent;
-use \Unified\Unified_to\Models\Shared\TicketingEmail;
-use \Unified\Unified_to\Models\Shared\TicketingEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingAgentRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTelephone;
-use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchTicketingConnectionIdAgentIdRequest();
-    $request->ticketingAgent = new TicketingAgent();
-    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-01T22:24:40.372Z');
-    $request->ticketingAgent->emails = [
-        new TicketingEmail(),
-    ];
-    $request->ticketingAgent->id = '<ID>';
-    $request->ticketingAgent->name = 'Cambridgeshire';
-    $request->ticketingAgent->raw = new PropertyTicketingAgentRaw();
-    $request->ticketingAgent->telephones = [
-        new TicketingTelephone(),
-    ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-06T10:50:58.119Z');
-    $request->connectionId = 'Brand Hop';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->patchTicketingConnectionIdAgentId($request);
-
-    if ($response->ticketingAgent !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdRequest](../../models/operations/PatchTicketingConnectionIdAgentIdRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdResponse](../../models/operations/PatchTicketingConnectionIdAgentIdResponse.md)**
-
-
-## patchTicketingConnectionIdCustomerId
-
-Update a customer
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdRequest;
-use \Unified\Unified_to\Models\Shared\TicketingCustomer;
-use \Unified\Unified_to\Models\Shared\TicketingEmail;
-use \Unified\Unified_to\Models\Shared\TicketingEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTelephone;
-use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchTicketingConnectionIdCustomerIdRequest();
-    $request->ticketingCustomer = new TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-22T19:33:25.134Z');
-    $request->ticketingCustomer->emails = [
-        new TicketingEmail(),
-    ];
-    $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'Bicycle Waco';
-    $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
-    $request->ticketingCustomer->tags = [
-        'tertiary',
-    ];
-    $request->ticketingCustomer->telephones = [
-        new TicketingTelephone(),
-    ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-30T14:51:27.544Z');
-    $request->connectionId = 'whiteboard Smyrna Hialeah';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->patchTicketingConnectionIdCustomerId($request);
-
-    if ($response->ticketingCustomer !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdRequest](../../models/operations/PatchTicketingConnectionIdCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdCustomerIdResponse](../../models/operations/PatchTicketingConnectionIdCustomerIdResponse.md)**
-
-
-## patchTicketingConnectionIdNoteTicketIdId
-
-Update a note
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdRequest;
-use \Unified\Unified_to\Models\Shared\TicketingNote;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchTicketingConnectionIdNoteTicketIdIdRequest();
-    $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'compress Oganesson';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-16T08:13:19.991Z');
-    $request->ticketingNote->customerId = 'demystify';
-    $request->ticketingNote->description = 'Fundamental demand-driven workforce';
-    $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'Nissan';
-    $request->connectionId = 'Chicken';
-    $request->id = '<ID>';
-    $request->ticketId = 'frictionless convergence officia';
-
-    $response = $sdk->ticketing->patchTicketingConnectionIdNoteTicketIdId($request);
-
-    if ($response->ticketingNote !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                           | Type                                                                                                                                                                | Required                                                                                                                                                            | Description                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/PatchTicketingConnectionIdNoteTicketIdIdRequest.md) | :heavy_check_mark:                                                                                                                                                  | The request object to use for the request.                                                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/PatchTicketingConnectionIdNoteTicketIdIdResponse.md)**
-
-
-## patchTicketingConnectionIdTicketId
-
-Update a ticket
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdTicketIdRequest;
-use \Unified\Unified_to\Models\Shared\TicketingTicket;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchTicketingConnectionIdTicketIdRequest();
-    $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'Representative calculate';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T14:58:54.732Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-11T04:52:37.095Z');
-    $request->ticketingTicket->customerId = 'indigo extend given';
-    $request->ticketingTicket->description = 'Profound motivating utilisation';
-    $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'Hill Jazz';
-    $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'West Macedonia City';
-    $request->ticketingTicket->sourceRef = 'orange West doubtfully';
-    $request->ticketingTicket->status = TicketingTicketStatus::Closed;
-    $request->ticketingTicket->subject = 'Pizza';
-    $request->ticketingTicket->tags = [
-        'definition',
-    ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-05T23:17:22.031Z');
-    $request->connectionId = 'engage henry';
-    $request->id = '<ID>';
-
-    $response = $sdk->ticketing->patchTicketingConnectionIdTicketId($request);
-
-    if ($response->ticketingTicket !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdTicketIdRequest](../../models/operations/PatchTicketingConnectionIdTicketIdRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdTicketIdResponse](../../models/operations/PatchTicketingConnectionIdTicketIdResponse.md)**
-
-
-## postTicketingConnectionIdAgent
+* [createTicketingAgent](#createticketingagent) - Create a agent
+* [createTicketingCustomer](#createticketingcustomer) - Create a customer
+* [createTicketingNote](#createticketingnote) - Create a note
+* [createTicketingTicket](#createticketingticket) - Create a ticket
+* [getTicketingAgent](#getticketingagent) - Retrieve a agent
+* [getTicketingCustomer](#getticketingcustomer) - Retrieve a customer
+* [getTicketingNote](#getticketingnote) - Retrieve a note
+* [getTicketingTicket](#getticketingticket) - Retrieve a ticket
+* [listTicketingAgents](#listticketingagents) - List all agents
+* [listTicketingCustomers](#listticketingcustomers) - List all customers
+* [listTicketingNotes](#listticketingnotes) - List all notes
+* [listTicketingTickets](#listticketingtickets) - List all tickets
+* [patchTicketingAgent](#patchticketingagent) - Update a agent
+* [patchTicketingCustomer](#patchticketingcustomer) - Update a customer
+* [patchTicketingNote](#patchticketingnote) - Update a note
+* [patchTicketingTicket](#patchticketingticket) - Update a ticket
+* [removeTicketingAgent](#removeticketingagent) - Remove a agent
+* [removeTicketingCustomer](#removeticketingcustomer) - Remove a customer
+* [removeTicketingNote](#removeticketingnote) - Remove a note
+* [removeTicketingTicket](#removeticketingticket) - Remove a ticket
+* [updateTicketingAgent](#updateticketingagent) - Update a agent
+* [updateTicketingCustomer](#updateticketingcustomer) - Update a customer
+* [updateTicketingNote](#updateticketingnote) - Update a note
+* [updateTicketingTicket](#updateticketingticket) - Update a ticket
+
+## createTicketingAgent
 
 Create a agent
 
@@ -937,7 +42,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentRequest;
+use \Unified\Unified_to\Models\Operations\CreateTicketingAgentRequest;
 use \Unified\Unified_to\Models\Shared\TicketingAgent;
 use \Unified\Unified_to\Models\Shared\TicketingEmail;
 use \Unified\Unified_to\Models\Shared\TicketingEmailType;
@@ -953,22 +58,22 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostTicketingConnectionIdAgentRequest();
+    $request = new CreateTicketingAgentRequest();
     $request->ticketingAgent = new TicketingAgent();
-    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-14T10:20:29.412Z');
+    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-04T22:14:13.251Z');
     $request->ticketingAgent->emails = [
         new TicketingEmail(),
     ];
     $request->ticketingAgent->id = '<ID>';
-    $request->ticketingAgent->name = 'proactive';
+    $request->ticketingAgent->name = 'Vermont Belize Seaborgium';
     $request->ticketingAgent->raw = new PropertyTicketingAgentRaw();
     $request->ticketingAgent->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-05T05:37:22.282Z');
-    $request->connectionId = 'Unbranded Sedan';
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-03T05:11:49.371Z');
+    $request->connectionId = 'Soul';
 
-    $response = $sdk->ticketing->postTicketingConnectionIdAgent($request);
+    $response = $sdk->ticketing->createTicketingAgent($request);
 
     if ($response->ticketingAgent !== null) {
         // handle response
@@ -980,17 +85,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentRequest](../../models/operations/PostTicketingConnectionIdAgentRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\CreateTicketingAgentRequest](../../models/operations/CreateTicketingAgentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentResponse](../../models/operations/PostTicketingConnectionIdAgentResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateTicketingAgentResponse](../../models/operations/CreateTicketingAgentResponse.md)**
 
 
-## postTicketingConnectionIdCustomer
+## createTicketingCustomer
 
 Create a customer
 
@@ -1004,7 +109,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerRequest;
+use \Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest;
 use \Unified\Unified_to\Models\Shared\TicketingCustomer;
 use \Unified\Unified_to\Models\Shared\TicketingEmail;
 use \Unified\Unified_to\Models\Shared\TicketingEmailType;
@@ -1020,25 +125,25 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostTicketingConnectionIdCustomerRequest();
+    $request = new CreateTicketingCustomerRequest();
     $request->ticketingCustomer = new TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-23T15:06:12.012Z');
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-19T07:03:19.095Z');
     $request->ticketingCustomer->emails = [
         new TicketingEmail(),
     ];
     $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'Northeast West';
+    $request->ticketingCustomer->name = 'blue programming';
     $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
     $request->ticketingCustomer->tags = [
-        'Plastic',
+        'Cargo',
     ];
     $request->ticketingCustomer->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-13T21:57:44.847Z');
-    $request->connectionId = 'neural engineer gold';
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T18:53:13.968Z');
+    $request->connectionId = 'earum';
 
-    $response = $sdk->ticketing->postTicketingConnectionIdCustomer($request);
+    $response = $sdk->ticketing->createTicketingCustomer($request);
 
     if ($response->ticketingCustomer !== null) {
         // handle response
@@ -1050,17 +155,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                            | [\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerRequest](../../models/operations/PostTicketingConnectionIdCustomerRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest](../../models/operations/CreateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdCustomerResponse](../../models/operations/PostTicketingConnectionIdCustomerResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateTicketingCustomerResponse](../../models/operations/CreateTicketingCustomerResponse.md)**
 
 
-## postTicketingConnectionIdNoteTicketId
+## createTicketingNote
 
 Create a note
 
@@ -1074,7 +179,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdRequest;
+use \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest;
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
 
@@ -1086,19 +191,19 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostTicketingConnectionIdNoteTicketIdRequest();
+    $request = new CreateTicketingNoteRequest();
     $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'Plantation blue';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-11T06:54:31.529Z');
-    $request->ticketingNote->customerId = 'asymmetric';
-    $request->ticketingNote->description = 'Expanded intermediate attitude';
+    $request->ticketingNote->agentId = 'Books kilogram hmph';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-15T08:09:08.152Z');
+    $request->ticketingNote->customerId = 'Markets';
+    $request->ticketingNote->description = 'Decentralized incremental function';
     $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'naturally';
-    $request->connectionId = 'Wagon Sulfur';
-    $request->ticketId = 'digital';
+    $request->ticketingNote->updatedAt = 'Home Outdoors transmitter';
+    $request->connectionId = 'National geez Direct';
+    $request->ticketId = 'male';
 
-    $response = $sdk->ticketing->postTicketingConnectionIdNoteTicketId($request);
+    $response = $sdk->ticketing->createTicketingNote($request);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -1110,17 +215,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdRequest](../../models/operations/PostTicketingConnectionIdNoteTicketIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest](../../models/operations/CreateTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdNoteTicketIdResponse](../../models/operations/PostTicketingConnectionIdNoteTicketIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse](../../models/operations/CreateTicketingNoteResponse.md)**
 
 
-## postTicketingConnectionIdTicket
+## createTicketingTicket
 
 Create a ticket
 
@@ -1134,7 +239,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdTicketRequest;
+use \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest;
 use \Unified\Unified_to\Models\Shared\TicketingTicket;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
@@ -1147,27 +252,27 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostTicketingConnectionIdTicketRequest();
+    $request = new CreateTicketingTicketRequest();
     $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'North';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-03T02:12:35.164Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-12T14:26:26.768Z');
-    $request->ticketingTicket->customerId = 'mull hierarchy';
-    $request->ticketingTicket->description = 'Triple-buffered solution-oriented info-mediaries';
+    $request->ticketingTicket->category = 'back';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-05T11:24:57.446Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-14T07:48:18.427Z');
+    $request->ticketingTicket->customerId = 'around pristine driver';
+    $request->ticketingTicket->description = 'Synergistic cohesive function';
     $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'person Idaho';
+    $request->ticketingTicket->priority = 'repellendus';
     $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'Convertible whenever feed';
-    $request->ticketingTicket->sourceRef = 'solid Electric Bespoke';
-    $request->ticketingTicket->status = TicketingTicketStatus::Closed;
-    $request->ticketingTicket->subject = 'sint uplift';
+    $request->ticketingTicket->source = 'Bike violet';
+    $request->ticketingTicket->sourceRef = 'excluding kilogram';
+    $request->ticketingTicket->status = TicketingTicketStatus::Active;
+    $request->ticketingTicket->subject = 'engage International Antimony';
     $request->ticketingTicket->tags = [
-        'Idaho',
+        'turquoise',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-24T01:04:15.890Z');
-    $request->connectionId = 'Oriental outrage';
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-22T14:24:24.761Z');
+    $request->connectionId = 'hackwork';
 
-    $response = $sdk->ticketing->postTicketingConnectionIdTicket($request);
+    $response = $sdk->ticketing->createTicketingTicket($request);
 
     if ($response->ticketingTicket !== null) {
         // handle response
@@ -1179,17 +284,441 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdTicketRequest](../../models/operations/PostTicketingConnectionIdTicketRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest](../../models/operations/CreateTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdTicketResponse](../../models/operations/PostTicketingConnectionIdTicketResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse](../../models/operations/CreateTicketingTicketResponse.md)**
 
 
-## putTicketingConnectionIdAgentId
+## getTicketingAgent
+
+Retrieve a agent
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetTicketingAgentRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetTicketingAgentRequest();
+    $request->connectionId = 'Lamborghini';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->getTicketingAgent($request);
+
+    if ($response->ticketingAgent !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetTicketingAgentRequest](../../models/operations/GetTicketingAgentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetTicketingAgentResponse](../../models/operations/GetTicketingAgentResponse.md)**
+
+
+## getTicketingCustomer
+
+Retrieve a customer
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetTicketingCustomerRequest();
+    $request->connectionId = 'benchmark';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->getTicketingCustomer($request);
+
+    if ($response->ticketingCustomer !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest](../../models/operations/GetTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetTicketingCustomerResponse](../../models/operations/GetTicketingCustomerResponse.md)**
+
+
+## getTicketingNote
+
+Retrieve a note
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetTicketingNoteRequest();
+    $request->connectionId = 'joule program';
+    $request->id = '<ID>';
+    $request->ticketId = 'Fitness Applications Switchable';
+
+    $response = $sdk->ticketing->getTicketingNote($request);
+
+    if ($response->ticketingNote !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetTicketingNoteRequest](../../models/operations/GetTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetTicketingNoteResponse](../../models/operations/GetTicketingNoteResponse.md)**
+
+
+## getTicketingTicket
+
+Retrieve a ticket
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetTicketingTicketRequest();
+    $request->connectionId = 'Zimbabwe Dollar';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->getTicketingTicket($request);
+
+    if ($response->ticketingTicket !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\GetTicketingTicketRequest](../../models/operations/GetTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetTicketingTicketResponse](../../models/operations/GetTicketingTicketResponse.md)**
+
+
+## listTicketingAgents
+
+List all agents
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListTicketingAgentsRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListTicketingAgentsRequest();
+    $request->connectionId = 'Mazda';
+    $request->limit = 1864.4;
+    $request->offset = 3027.97;
+    $request->order = 'North';
+    $request->query = 'maroon World';
+    $request->sort = 'North';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-09T18:25:04.153Z');
+
+    $response = $sdk->ticketing->listTicketingAgents($request);
+
+    if ($response->ticketingAgents !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListTicketingAgentsRequest](../../models/operations/ListTicketingAgentsRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListTicketingAgentsResponse](../../models/operations/ListTicketingAgentsResponse.md)**
+
+
+## listTicketingCustomers
+
+List all customers
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListTicketingCustomersRequest();
+    $request->connectionId = 'Carrollton yellow';
+    $request->limit = 9126.75;
+    $request->offset = 7082.67;
+    $request->order = 'geez';
+    $request->query = 'Cotton Chips';
+    $request->sort = 'deposit louse';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-22T18:24:21.846Z');
+
+    $response = $sdk->ticketing->listTicketingCustomers($request);
+
+    if ($response->ticketingCustomers !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest](../../models/operations/ListTicketingCustomersRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListTicketingCustomersResponse](../../models/operations/ListTicketingCustomersResponse.md)**
+
+
+## listTicketingNotes
+
+List all notes
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListTicketingNotesRequest();
+    $request->connectionId = 'Hybrid North';
+    $request->limit = 9973.53;
+    $request->offset = 4262.61;
+    $request->order = 'Marvin';
+    $request->query = 'Synergistic henry loudly';
+    $request->sort = 'Baby ability';
+    $request->ticketId = 'Engineer niches Honda';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-14T07:12:00.787Z');
+
+    $response = $sdk->ticketing->listTicketingNotes($request);
+
+    if ($response->ticketingNotes !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListTicketingNotesRequest](../../models/operations/ListTicketingNotesRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListTicketingNotesResponse](../../models/operations/ListTicketingNotesResponse.md)**
+
+
+## listTicketingTickets
+
+List all tickets
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListTicketingTicketsRequest();
+    $request->agentId = 'Tools Southwest';
+    $request->connectionId = 'while Copper';
+    $request->customerId = 'Quality Integration';
+    $request->limit = 9402.89;
+    $request->offset = 2038.67;
+    $request->order = 'Electric Zimbabwe';
+    $request->query = 'Coconut';
+    $request->sort = 'Rial';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T04:01:57.661Z');
+
+    $response = $sdk->ticketing->listTicketingTickets($request);
+
+    if ($response->ticketingTickets !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest](../../models/operations/ListTicketingTicketsRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse](../../models/operations/ListTicketingTicketsResponse.md)**
+
+
+## patchTicketingAgent
 
 Update a agent
 
@@ -1203,7 +732,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchTicketingAgentRequest;
 use \Unified\Unified_to\Models\Shared\TicketingAgent;
 use \Unified\Unified_to\Models\Shared\TicketingEmail;
 use \Unified\Unified_to\Models\Shared\TicketingEmailType;
@@ -1219,23 +748,23 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutTicketingConnectionIdAgentIdRequest();
+    $request = new PatchTicketingAgentRequest();
     $request->ticketingAgent = new TicketingAgent();
-    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-19T19:47:13.993Z');
+    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-16T22:07:40.240Z');
     $request->ticketingAgent->emails = [
         new TicketingEmail(),
     ];
     $request->ticketingAgent->id = '<ID>';
-    $request->ticketingAgent->name = 'West whose newton';
+    $request->ticketingAgent->name = 'Supervisor';
     $request->ticketingAgent->raw = new PropertyTicketingAgentRaw();
     $request->ticketingAgent->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-29T08:11:17.985Z');
-    $request->connectionId = 'withdrawal cricket helplessly';
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T17:57:18.300Z');
+    $request->connectionId = 'envious';
     $request->id = '<ID>';
 
-    $response = $sdk->ticketing->putTicketingConnectionIdAgentId($request);
+    $response = $sdk->ticketing->patchTicketingAgent($request);
 
     if ($response->ticketingAgent !== null) {
         // handle response
@@ -1247,17 +776,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdRequest](../../models/operations/PutTicketingConnectionIdAgentIdRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchTicketingAgentRequest](../../models/operations/PatchTicketingAgentRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdResponse](../../models/operations/PutTicketingConnectionIdAgentIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchTicketingAgentResponse](../../models/operations/PatchTicketingAgentResponse.md)**
 
 
-## putTicketingConnectionIdCustomerId
+## patchTicketingCustomer
 
 Update a customer
 
@@ -1271,7 +800,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest;
 use \Unified\Unified_to\Models\Shared\TicketingCustomer;
 use \Unified\Unified_to\Models\Shared\TicketingEmail;
 use \Unified\Unified_to\Models\Shared\TicketingEmailType;
@@ -1287,26 +816,26 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutTicketingConnectionIdCustomerIdRequest();
+    $request = new PatchTicketingCustomerRequest();
     $request->ticketingCustomer = new TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-21T09:25:32.395Z');
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-30T19:19:15.782Z');
     $request->ticketingCustomer->emails = [
         new TicketingEmail(),
     ];
     $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'scarcely Grocery copy';
+    $request->ticketingCustomer->name = 'Van Brownsville Frozen';
     $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
     $request->ticketingCustomer->tags = [
-        'gray',
+        'calculating',
     ];
     $request->ticketingCustomer->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-03T07:16:05.992Z');
-    $request->connectionId = 'female';
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-22T00:19:38.663Z');
+    $request->connectionId = 'Northeast Metal Rustic';
     $request->id = '<ID>';
 
-    $response = $sdk->ticketing->putTicketingConnectionIdCustomerId($request);
+    $response = $sdk->ticketing->patchTicketingCustomer($request);
 
     if ($response->ticketingCustomer !== null) {
         // handle response
@@ -1318,17 +847,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdRequest](../../models/operations/PutTicketingConnectionIdCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest](../../models/operations/PatchTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdCustomerIdResponse](../../models/operations/PutTicketingConnectionIdCustomerIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchTicketingCustomerResponse](../../models/operations/PatchTicketingCustomerResponse.md)**
 
 
-## putTicketingConnectionIdNoteTicketIdId
+## patchTicketingNote
 
 Update a note
 
@@ -1342,7 +871,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest;
 use \Unified\Unified_to\Models\Shared\TicketingNote;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
 
@@ -1354,20 +883,20 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutTicketingConnectionIdNoteTicketIdIdRequest();
+    $request = new PatchTicketingNoteRequest();
     $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'SMTP Cis';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-27T18:14:06.584Z');
-    $request->ticketingNote->customerId = 'Carolina';
-    $request->ticketingNote->description = 'Integrated asymmetric strategy';
+    $request->ticketingNote->agentId = 'Bicycle Southwest Darmstadtium';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-26T20:26:16.031Z');
+    $request->ticketingNote->customerId = 'forecast woman';
+    $request->ticketingNote->description = 'Pre-emptive intermediate artificial intelligence';
     $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'Northeast Morocco supposing';
-    $request->connectionId = 'DNS Fermium';
+    $request->ticketingNote->updatedAt = 'Metal Hybrid';
+    $request->connectionId = 'Customer Hryvnia';
     $request->id = '<ID>';
-    $request->ticketId = 'Southwest round';
+    $request->ticketId = 'Credit';
 
-    $response = $sdk->ticketing->putTicketingConnectionIdNoteTicketIdId($request);
+    $response = $sdk->ticketing->patchTicketingNote($request);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -1379,17 +908,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/PutTicketingConnectionIdNoteTicketIdIdRequest.md) | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest](../../models/operations/PatchTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/PutTicketingConnectionIdNoteTicketIdIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse](../../models/operations/PatchTicketingNoteResponse.md)**
 
 
-## putTicketingConnectionIdTicketId
+## patchTicketingTicket
 
 Update a ticket
 
@@ -1403,7 +932,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdTicketIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest;
 use \Unified\Unified_to\Models\Shared\TicketingTicket;
 use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
 use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
@@ -1416,28 +945,28 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutTicketingConnectionIdTicketIdRequest();
+    $request = new PatchTicketingTicketRequest();
     $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'North Finland';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-08T00:37:44.739Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-01T07:24:49.830Z');
-    $request->ticketingTicket->customerId = 'Marketing';
-    $request->ticketingTicket->description = 'Future-proofed high-level system engine';
+    $request->ticketingTicket->category = 'Soul';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-17T22:46:45.974Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T05:09:23.974Z');
+    $request->ticketingTicket->customerId = 'Chrysler Bike Maserati';
+    $request->ticketingTicket->description = 'Polarised full-range Graphic Interface';
     $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'drat knottily';
+    $request->ticketingTicket->priority = 'Strategist soupy';
     $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'Upgradable knuckle';
-    $request->ticketingTicket->sourceRef = 'anenst';
+    $request->ticketingTicket->source = 'override as';
+    $request->ticketingTicket->sourceRef = 'HTTP middleware';
     $request->ticketingTicket->status = TicketingTicketStatus::Active;
-    $request->ticketingTicket->subject = 'indexing Wooden Crew';
+    $request->ticketingTicket->subject = 'Quality velit Avon';
     $request->ticketingTicket->tags = [
-        'anti',
+        'pascal',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-10T07:27:15.153Z');
-    $request->connectionId = 'neural orchestrate';
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T18:09:01.786Z');
+    $request->connectionId = 'Steel mint transparent';
     $request->id = '<ID>';
 
-    $response = $sdk->ticketing->putTicketingConnectionIdTicketId($request);
+    $response = $sdk->ticketing->patchTicketingTicket($request);
 
     if ($response->ticketingTicket !== null) {
         // handle response
@@ -1449,12 +978,483 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdTicketIdRequest](../../models/operations/PutTicketingConnectionIdTicketIdRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest](../../models/operations/PatchTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdTicketIdResponse](../../models/operations/PutTicketingConnectionIdTicketIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse](../../models/operations/PatchTicketingTicketResponse.md)**
+
+
+## removeTicketingAgent
+
+Remove a agent
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveTicketingAgentRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveTicketingAgentRequest();
+    $request->connectionId = 'monitor';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->removeTicketingAgent($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\RemoveTicketingAgentRequest](../../models/operations/RemoveTicketingAgentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveTicketingAgentResponse](../../models/operations/RemoveTicketingAgentResponse.md)**
+
+
+## removeTicketingCustomer
+
+Remove a customer
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveTicketingCustomerRequest();
+    $request->connectionId = 'salmon';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->removeTicketingCustomer($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest](../../models/operations/RemoveTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveTicketingCustomerResponse](../../models/operations/RemoveTicketingCustomerResponse.md)**
+
+
+## removeTicketingNote
+
+Remove a note
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveTicketingNoteRequest();
+    $request->connectionId = 'Granite hm West';
+    $request->id = '<ID>';
+    $request->ticketId = 'in';
+
+    $response = $sdk->ticketing->removeTicketingNote($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest](../../models/operations/RemoveTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse](../../models/operations/RemoveTicketingNoteResponse.md)**
+
+
+## removeTicketingTicket
+
+Remove a ticket
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveTicketingTicketRequest();
+    $request->connectionId = 'Handmade';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->removeTicketingTicket($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest](../../models/operations/RemoveTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse](../../models/operations/RemoveTicketingTicketResponse.md)**
+
+
+## updateTicketingAgent
+
+Update a agent
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateTicketingAgentRequest;
+use \Unified\Unified_to\Models\Shared\TicketingAgent;
+use \Unified\Unified_to\Models\Shared\TicketingEmail;
+use \Unified\Unified_to\Models\Shared\TicketingEmailType;
+use \Unified\Unified_to\Models\Shared\PropertyTicketingAgentRaw;
+use \Unified\Unified_to\Models\Shared\TicketingTelephone;
+use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateTicketingAgentRequest();
+    $request->ticketingAgent = new TicketingAgent();
+    $request->ticketingAgent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-28T14:12:45.377Z');
+    $request->ticketingAgent->emails = [
+        new TicketingEmail(),
+    ];
+    $request->ticketingAgent->id = '<ID>';
+    $request->ticketingAgent->name = 'to Philippines';
+    $request->ticketingAgent->raw = new PropertyTicketingAgentRaw();
+    $request->ticketingAgent->telephones = [
+        new TicketingTelephone(),
+    ];
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-04T21:57:06.367Z');
+    $request->connectionId = 'beside Usability Bedfordshire';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->updateTicketingAgent($request);
+
+    if ($response->ticketingAgent !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\UpdateTicketingAgentRequest](../../models/operations/UpdateTicketingAgentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateTicketingAgentResponse](../../models/operations/UpdateTicketingAgentResponse.md)**
+
+
+## updateTicketingCustomer
+
+Update a customer
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest;
+use \Unified\Unified_to\Models\Shared\TicketingCustomer;
+use \Unified\Unified_to\Models\Shared\TicketingEmail;
+use \Unified\Unified_to\Models\Shared\TicketingEmailType;
+use \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw;
+use \Unified\Unified_to\Models\Shared\TicketingTelephone;
+use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateTicketingCustomerRequest();
+    $request->ticketingCustomer = new TicketingCustomer();
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T13:29:08.944Z');
+    $request->ticketingCustomer->emails = [
+        new TicketingEmail(),
+    ];
+    $request->ticketingCustomer->id = '<ID>';
+    $request->ticketingCustomer->name = 'Granite South FTP';
+    $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->tags = [
+        'navigating',
+    ];
+    $request->ticketingCustomer->telephones = [
+        new TicketingTelephone(),
+    ];
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T14:51:51.077Z');
+    $request->connectionId = 'Bolivia';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->updateTicketingCustomer($request);
+
+    if ($response->ticketingCustomer !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest](../../models/operations/UpdateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateTicketingCustomerResponse](../../models/operations/UpdateTicketingCustomerResponse.md)**
+
+
+## updateTicketingNote
+
+Update a note
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest;
+use \Unified\Unified_to\Models\Shared\TicketingNote;
+use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateTicketingNoteRequest();
+    $request->ticketingNote = new TicketingNote();
+    $request->ticketingNote->agentId = 'via among Quality';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-18T10:33:02.905Z');
+    $request->ticketingNote->customerId = 'Bedfordshire Chief';
+    $request->ticketingNote->description = 'Right-sized radical info-mediaries';
+    $request->ticketingNote->id = '<ID>';
+    $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
+    $request->ticketingNote->updatedAt = 'navigating';
+    $request->connectionId = 'state Solutions Bespoke';
+    $request->id = '<ID>';
+    $request->ticketId = 'sievert firewall';
+
+    $response = $sdk->ticketing->updateTicketingNote($request);
+
+    if ($response->ticketingNote !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest](../../models/operations/UpdateTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse](../../models/operations/UpdateTicketingNoteResponse.md)**
+
+
+## updateTicketingTicket
+
+Update a ticket
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest;
+use \Unified\Unified_to\Models\Shared\TicketingTicket;
+use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
+use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateTicketingTicketRequest();
+    $request->ticketingTicket = new TicketingTicket();
+    $request->ticketingTicket->category = 'Bicycle';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-08T18:39:58.773Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-07T17:28:00.405Z');
+    $request->ticketingTicket->customerId = 'Synergized Northwest';
+    $request->ticketingTicket->description = 'Re-engineered clear-thinking initiative';
+    $request->ticketingTicket->id = '<ID>';
+    $request->ticketingTicket->priority = 'Integration North array';
+    $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
+    $request->ticketingTicket->source = 'recap';
+    $request->ticketingTicket->sourceRef = 'Music Investor';
+    $request->ticketingTicket->status = TicketingTicketStatus::Closed;
+    $request->ticketingTicket->subject = 'harness';
+    $request->ticketingTicket->tags = [
+        'withdrawal',
+    ];
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-14T14:48:53.243Z');
+    $request->connectionId = 'azure Cobalt';
+    $request->id = '<ID>';
+
+    $response = $sdk->ticketing->updateTicketingTicket($request);
+
+    if ($response->ticketingTicket !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest](../../models/operations/UpdateTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse](../../models/operations/UpdateTicketingTicketResponse.md)**
 

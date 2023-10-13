@@ -22,63 +22,31 @@ class Agent
 	}
 	
     /**
-     * Remove a agent
+     * Create a agent
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateTicketingAgentRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingAgentResponse
      */
-	public function deleteTicketingConnectionIdAgentId(
-        ?\Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdResponse
+	public function createTicketingAgent(
+        ?\Unified\Unified_to\Models\Operations\CreateTicketingAgentRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateTicketingAgentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent', \Unified\Unified_to\Models\Operations\CreateTicketingAgentRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\DeleteTicketingConnectionIdAgentIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteTicketingConnectionIdAgentIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
-            }
+        $body = Utils\Utils::serializeRequestBody($request, "ticketingAgent", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
         }
-
-        return $response;
-    }
-	
-    /**
-     * List all agents
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentResponse
-     */
-	public function getTicketingConnectionIdAgent(
-        ?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent', \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentResponse();
+        $response = new \Unified\Unified_to\Models\Operations\CreateTicketingAgentResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -86,7 +54,7 @@ class Agent
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingAgents = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TicketingAgent>', 'json');
+                $response->ticketingAgent = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingAgent', 'json');
             }
         }
 
@@ -96,15 +64,15 @@ class Agent
     /**
      * Retrieve a agent
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdResponse
+     * @param \Unified\Unified_to\Models\Operations\GetTicketingAgentRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingAgentResponse
      */
-	public function getTicketingConnectionIdAgentId(
-        ?\Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdResponse
+	public function getTicketingAgent(
+        ?\Unified\Unified_to\Models\Operations\GetTicketingAgentRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetTicketingAgentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\GetTicketingAgentRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
@@ -114,7 +82,7 @@ class Agent
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetTicketingConnectionIdAgentIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetTicketingAgentResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -132,18 +100,18 @@ class Agent
     /**
      * List all agents
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse
+     * @param \Unified\Unified_to\Models\Operations\ListTicketingAgentsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingAgentsResponse
      */
-	public function getUcConnectionIdAgent(
-        ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse
+	public function listTicketingAgents(
+        ?\Unified\Unified_to\Models\Operations\ListTicketingAgentsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListTicketingAgentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/agent', \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent', \Unified\Unified_to\Models\Operations\ListTicketingAgentsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTicketingAgentsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -151,7 +119,44 @@ class Agent
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListTicketingAgentsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->ticketingAgents = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TicketingAgent>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List all agents
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListUcAgentsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcAgentsResponse
+     */
+	public function listUcAgents(
+        ?\Unified\Unified_to\Models\Operations\ListUcAgentsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUcAgentsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/agent', \Unified\Unified_to\Models\Operations\ListUcAgentsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUcAgentsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListUcAgentsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -169,15 +174,15 @@ class Agent
     /**
      * Update a agent
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchTicketingAgentRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingAgentResponse
      */
-	public function patchTicketingConnectionIdAgentId(
-        ?\Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdResponse
+	public function patchTicketingAgent(
+        ?\Unified\Unified_to\Models\Operations\PatchTicketingAgentRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchTicketingAgentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingAgentRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingAgent", "json");
@@ -191,7 +196,7 @@ class Agent
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchTicketingConnectionIdAgentIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchTicketingAgentResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -207,39 +212,34 @@ class Agent
     }
 	
     /**
-     * Create a agent
+     * Remove a agent
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveTicketingAgentRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingAgentResponse
      */
-	public function postTicketingConnectionIdAgent(
-        ?\Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentResponse
+	public function removeTicketingAgent(
+        ?\Unified\Unified_to\Models\Operations\RemoveTicketingAgentRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveTicketingAgentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent', \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingAgentRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "ticketingAgent", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostTicketingConnectionIdAgentResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveTicketingAgentResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->ticketingAgent = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingAgent', 'json');
+                $response->removeTicketingAgentDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -249,15 +249,15 @@ class Agent
     /**
      * Update a agent
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateTicketingAgentRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingAgentResponse
      */
-	public function putTicketingConnectionIdAgentId(
-        ?\Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdResponse
+	public function updateTicketingAgent(
+        ?\Unified\Unified_to\Models\Operations\UpdateTicketingAgentRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateTicketingAgentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingAgentRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingAgent", "json");
@@ -271,7 +271,7 @@ class Agent
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutTicketingConnectionIdAgentIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateTicketingAgentResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

@@ -22,34 +22,75 @@ class Employee
 	}
 	
     /**
-     * Remove an employee
+     * Create an employee
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
      */
-	public function deleteHrisConnectionIdEmployeeId(
-        ?\Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdResponse
+	public function createHrisEmployee(
+        ?\Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve an employee
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
+     */
+	public function getHrisEmployee(
+        ?\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdEmployeeIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteHrisConnectionIdEmployeeIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Employee
     /**
      * List all employees
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeResponse
+     * @param \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
      */
-	public function getHrisConnectionIdEmployee(
-        ?\Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeResponse
+	public function listHrisEmployees(
+        ?\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Employee
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Employee
     }
 	
     /**
-     * Retrieve an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdResponse
-     */
-	public function getHrisConnectionIdEmployeeId(
-        ?\Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetHrisConnectionIdEmployeeIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update an employee
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
      */
-	public function patchHrisConnectionIdEmployeeId(
-        ?\Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdResponse
+	public function patchHrisEmployee(
+        ?\Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
@@ -154,7 +159,7 @@ class Employee
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdEmployeeIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Employee
     }
 	
     /**
-     * Create an employee
+     * Remove an employee
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
      */
-	public function postHrisConnectionIdEmployee(
-        ?\Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeResponse
+	public function removeHrisEmployee(
+        ?\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostHrisConnectionIdEmployeeResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->removeHrisEmployeeDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Employee
     /**
      * Update an employee
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
      */
-	public function putHrisConnectionIdEmployeeId(
-        ?\Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdResponse
+	public function updateHrisEmployee(
+        ?\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
@@ -234,7 +234,7 @@ class Employee
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutHrisConnectionIdEmployeeIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

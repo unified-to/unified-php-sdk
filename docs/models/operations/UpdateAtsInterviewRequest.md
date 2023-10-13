@@ -1,0 +1,10 @@
+# UpdateAtsInterviewRequest
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `atsInterview`                                                                         | [?\Unified\Unified_to\Models\Shared\AtsInterview](../../models/shared/AtsInterview.md) | :heavy_minus_sign:                                                                     | An interview between a candidate for a specific job                                    |
+| `connectionId`                                                                         | *string*                                                                               | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
+| `id`                                                                                   | *string*                                                                               | :heavy_check_mark:                                                                     | ID of the Interview                                                                    |

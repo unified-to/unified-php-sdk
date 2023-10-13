@@ -22,34 +22,75 @@ class Document
 	}
 	
     /**
-     * Remove a scorecard
+     * Create a scorecard
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
      */
-	public function deleteAtsConnectionIdScorecardId(
-        ?\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdResponse
+	public function createAtsScorecard(
+        ?\Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "atsScorecard", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a scorecard
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
+     */
+	public function getAtsScorecard(
+        ?\Unified\Unified_to\Models\Operations\GetAtsScorecardRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdScorecardIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteAtsConnectionIdScorecardIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Document
     /**
      * List all scorecards
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardResponse
+     * @param \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
      */
-	public function getAtsConnectionIdScorecard(
-        ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardResponse
+	public function listAtsScorecards(
+        ?\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Document
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Document
     }
 	
     /**
-     * Retrieve a scorecard
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdResponse
-     */
-	public function getAtsConnectionIdScorecardId(
-        ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsConnectionIdScorecardIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a scorecard
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
      */
-	public function patchAtsConnectionIdScorecardId(
-        ?\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdResponse
+	public function patchAtsScorecard(
+        ?\Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "atsScorecard", "json");
@@ -154,7 +159,7 @@ class Document
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdScorecardIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Document
     }
 	
     /**
-     * Create a scorecard
+     * Remove a scorecard
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
      */
-	public function postAtsConnectionIdScorecard(
-        ?\Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardResponse
+	public function removeAtsScorecard(
+        ?\Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsScorecard", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostAtsConnectionIdScorecardResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
+                $response->removeAtsScorecardDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Document
     /**
      * Update a scorecard
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
      */
-	public function putAtsConnectionIdScorecardId(
-        ?\Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdResponse
+	public function updateAtsScorecard(
+        ?\Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "atsScorecard", "json");
@@ -234,7 +234,7 @@ class Document
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutAtsConnectionIdScorecardIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

@@ -3,311 +3,15 @@
 
 ### Available Operations
 
-* [deleteCrmConnectionIdCompanyId](#deletecrmconnectionidcompanyid) - Remove a company
-* [getCrmConnectionIdCompany](#getcrmconnectionidcompany) - List all companies
-* [getCrmConnectionIdCompanyId](#getcrmconnectionidcompanyid) - Retrieve a company
-* [getEnrichConnectionIdCompany](#getenrichconnectionidcompany) - Retrieve enrichment information for a company
-* [patchCrmConnectionIdCompanyId](#patchcrmconnectionidcompanyid) - Update a company
-* [postCrmConnectionIdCompany](#postcrmconnectionidcompany) - Create a company
-* [putCrmConnectionIdCompanyId](#putcrmconnectionidcompanyid) - Update a company
-
-## deleteCrmConnectionIdCompanyId
-
-Remove a company
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteCrmConnectionIdCompanyIdRequest();
-    $request->connectionId = 'hertz morph';
-    $request->id = '<ID>';
-
-    $response = $sdk->company->deleteCrmConnectionIdCompanyId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdRequest](../../models/operations/DeleteCrmConnectionIdCompanyIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdCompanyIdResponse](../../models/operations/DeleteCrmConnectionIdCompanyIdResponse.md)**
-
-
-## getCrmConnectionIdCompany
-
-List all companies
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetCrmConnectionIdCompanyRequest();
-    $request->connectionId = 'indexing';
-    $request->contactId = 'Porsche firewall';
-    $request->dealId = 'Hafnium Computers';
-    $request->limit = 902.85;
-    $request->offset = 2893.88;
-    $request->order = 'Interactions relationships juxtapose';
-    $request->query = 'newton Luxembourg';
-    $request->sort = 'Dakota quantifying Actinium';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T07:42:48.074Z');
-
-    $response = $sdk->company->getCrmConnectionIdCompany($request);
-
-    if ($response->crmCompanies !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyRequest](../../models/operations/GetCrmConnectionIdCompanyRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyResponse](../../models/operations/GetCrmConnectionIdCompanyResponse.md)**
-
-
-## getCrmConnectionIdCompanyId
-
-Retrieve a company
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetCrmConnectionIdCompanyIdRequest();
-    $request->connectionId = 'Netherlands';
-    $request->id = '<ID>';
-
-    $response = $sdk->company->getCrmConnectionIdCompanyId($request);
-
-    if ($response->crmCompany !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdRequest](../../models/operations/GetCrmConnectionIdCompanyIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdCompanyIdResponse](../../models/operations/GetCrmConnectionIdCompanyIdResponse.md)**
-
-
-## getEnrichConnectionIdCompany
-
-Retrieve enrichment information for a company
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetEnrichConnectionIdCompanyRequest();
-    $request->connectionId = 'female Computers Central';
-    $request->domain = 'scientific-facet.biz';
-    $request->name = 'Outdoors embrace interface';
-
-    $response = $sdk->company->getEnrichConnectionIdCompany($request);
-
-    if ($response->enrichCompany !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyRequest](../../models/operations/GetEnrichConnectionIdCompanyRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyResponse](../../models/operations/GetEnrichConnectionIdCompanyResponse.md)**
-
-
-## patchCrmConnectionIdCompanyId
-
-Update a company
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdRequest;
-use \Unified\Unified_to\Models\Shared\CrmCompany;
-use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchCrmConnectionIdCompanyIdRequest();
-    $request->crmCompany = new CrmCompany();
-    $request->crmCompany->active = false;
-    $request->crmCompany->address = new PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'invoice';
-    $request->crmCompany->address->address2 = 'indexing Ford';
-    $request->crmCompany->address->city = 'McAllen';
-    $request->crmCompany->address->country = 'Netherlands';
-    $request->crmCompany->address->countryCode = 'PF';
-    $request->crmCompany->address->postalCode = '93486';
-    $request->crmCompany->address->region = 'Steel impactful';
-    $request->crmCompany->address->regionCode = 'Dong';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T08:43:38.995Z');
-    $request->crmCompany->dealIds = [
-        'usefully',
-    ];
-    $request->crmCompany->emails = [
-        new CrmEmail(),
-    ];
-    $request->crmCompany->id = '<ID>';
-    $request->crmCompany->name = 'Borders';
-    $request->crmCompany->raw = new PropertyCrmCompanyRaw();
-    $request->crmCompany->tags = [
-        'South',
-    ];
-    $request->crmCompany->telephones = [
-        new CrmTelephone(),
-    ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-08T19:02:47.171Z');
-    $request->crmCompany->websites = [
-        'boohoo',
-    ];
-    $request->connectionId = 'Vermont Astatine';
-    $request->id = '<ID>';
-
-    $response = $sdk->company->patchCrmConnectionIdCompanyId($request);
-
-    if ($response->crmCompany !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdRequest](../../models/operations/PatchCrmConnectionIdCompanyIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdCompanyIdResponse](../../models/operations/PatchCrmConnectionIdCompanyIdResponse.md)**
-
-
-## postCrmConnectionIdCompany
+* [createCrmCompany](#createcrmcompany) - Create a company
+* [getCrmCompany](#getcrmcompany) - Retrieve a company
+* [listCrmCompanies](#listcrmcompanies) - List all companies
+* [listEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
+* [patchCrmCompany](#patchcrmcompany) - Update a company
+* [removeCrmCompany](#removecrmcompany) - Remove a company
+* [updateCrmCompany](#updatecrmcompany) - Update a company
+
+## createCrmCompany
 
 Create a company
 
@@ -321,7 +25,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanyRequest;
+use \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest;
 use \Unified\Unified_to\Models\Shared\CrmCompany;
 use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress;
 use \Unified\Unified_to\Models\Shared\CrmEmail;
@@ -338,41 +42,41 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostCrmConnectionIdCompanyRequest();
+    $request = new CreateCrmCompanyRequest();
     $request->crmCompany = new CrmCompany();
     $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'consequently gosh';
-    $request->crmCompany->address->address2 = 'phooey';
-    $request->crmCompany->address->city = 'Antonettaville';
-    $request->crmCompany->address->country = 'Lebanon';
-    $request->crmCompany->address->countryCode = 'SI';
-    $request->crmCompany->address->postalCode = '79462';
-    $request->crmCompany->address->region = 'orchid Oxygen Kids';
-    $request->crmCompany->address->regionCode = 'Electric utilisation';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-01T08:46:18.197Z');
+    $request->crmCompany->address->address1 = 'parsing Hawaii';
+    $request->crmCompany->address->address2 = 'experiences';
+    $request->crmCompany->address->city = 'Narcisoville';
+    $request->crmCompany->address->country = 'Paraguay';
+    $request->crmCompany->address->countryCode = 'MV';
+    $request->crmCompany->address->postalCode = '94455-5359';
+    $request->crmCompany->address->region = 'Money Rubber';
+    $request->crmCompany->address->regionCode = 'Fantastic';
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-07T09:46:51.431Z');
     $request->crmCompany->dealIds = [
-        'Tennessee',
+        'protocol',
     ];
     $request->crmCompany->emails = [
         new CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
-    $request->crmCompany->name = 'payment Executive';
+    $request->crmCompany->name = 'Bicycle';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
-        'Luxurious',
+        'invoice',
     ];
     $request->crmCompany->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-01T20:19:00.759Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-29T12:51:32.805Z');
     $request->crmCompany->websites = [
-        'frenetically',
+        'Customer',
     ];
-    $request->connectionId = 'Soft violet Account';
+    $request->connectionId = 'Diesel';
 
-    $response = $sdk->company->postCrmConnectionIdCompany($request);
+    $response = $sdk->company->createCrmCompany($request);
 
     if ($response->crmCompany !== null) {
         // handle response
@@ -384,17 +88,175 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanyRequest](../../models/operations/PostCrmConnectionIdCompanyRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest](../../models/operations/CreateCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdCompanyResponse](../../models/operations/PostCrmConnectionIdCompanyResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse](../../models/operations/CreateCrmCompanyResponse.md)**
 
 
-## putCrmConnectionIdCompanyId
+## getCrmCompany
+
+Retrieve a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetCrmCompanyRequest();
+    $request->connectionId = 'THX Strategist deposit';
+    $request->id = '<ID>';
+
+    $response = $sdk->company->getCrmCompany($request);
+
+    if ($response->crmCompany !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\GetCrmCompanyRequest](../../models/operations/GetCrmCompanyRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetCrmCompanyResponse](../../models/operations/GetCrmCompanyResponse.md)**
+
+
+## listCrmCompanies
+
+List all companies
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListCrmCompaniesRequest();
+    $request->connectionId = 'Jazz solid Lamborghini';
+    $request->contactId = 'synthesizing';
+    $request->dealId = 'honestly South dolor';
+    $request->limit = 4736.2;
+    $request->offset = 7700.92;
+    $request->order = 'AGP alarm sedately';
+    $request->query = 'veritatis rudely Shoes';
+    $request->sort = 'Colorado Loan Modern';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-15T21:32:26.765Z');
+
+    $response = $sdk->company->listCrmCompanies($request);
+
+    if ($response->crmCompanies !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest](../../models/operations/ListCrmCompaniesRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse](../../models/operations/ListCrmCompaniesResponse.md)**
+
+
+## listEnrichCompanies
+
+Retrieve enrichment information for a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListEnrichCompaniesRequest();
+    $request->connectionId = 'Chips';
+    $request->domain = 'impure-guava.org';
+    $request->name = 'sadly Principal';
+
+    $response = $sdk->company->listEnrichCompanies($request);
+
+    if ($response->enrichCompany !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest](../../models/operations/ListEnrichCompaniesRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse](../../models/operations/ListEnrichCompaniesResponse.md)**
+
+
+## patchCrmCompany
 
 Update a company
 
@@ -408,7 +270,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest;
 use \Unified\Unified_to\Models\Shared\CrmCompany;
 use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress;
 use \Unified\Unified_to\Models\Shared\CrmEmail;
@@ -425,42 +287,42 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutCrmConnectionIdCompanyIdRequest();
+    $request = new PatchCrmCompanyRequest();
     $request->crmCompany = new CrmCompany();
     $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'Northwest Northwest';
-    $request->crmCompany->address->address2 = 'portals Diesel';
-    $request->crmCompany->address->city = 'Azusa';
-    $request->crmCompany->address->country = 'Qatar';
-    $request->crmCompany->address->countryCode = 'CG';
-    $request->crmCompany->address->postalCode = '52396';
-    $request->crmCompany->address->region = 'Tuna sticky lest';
-    $request->crmCompany->address->regionCode = 'Soft boo Missoula';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-14T19:17:30.970Z');
+    $request->crmCompany->address->address1 = 'Platinum Beauty haptic';
+    $request->crmCompany->address->address2 = 'Genderflux ADP';
+    $request->crmCompany->address->city = 'New Philip';
+    $request->crmCompany->address->country = 'Iran';
+    $request->crmCompany->address->countryCode = 'GN';
+    $request->crmCompany->address->postalCode = '07632';
+    $request->crmCompany->address->region = 'Luxurious Salad Cyprus';
+    $request->crmCompany->address->regionCode = 'Thorium Buckinghamshire Programmable';
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-22T21:44:08.753Z');
     $request->crmCompany->dealIds = [
-        'Hybrid',
+        'revolutionary',
     ];
     $request->crmCompany->emails = [
         new CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
-    $request->crmCompany->name = 'citizen';
+    $request->crmCompany->name = 'Cotton';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
-        'Technician',
+        'Czech',
     ];
     $request->crmCompany->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T14:26:25.488Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T09:49:13.337Z');
     $request->crmCompany->websites = [
-        'praesentium',
+        'Administrator',
     ];
-    $request->connectionId = 'architecture female holistic';
+    $request->connectionId = 'black recognise';
     $request->id = '<ID>';
 
-    $response = $sdk->company->putCrmConnectionIdCompanyId($request);
+    $response = $sdk->company->patchCrmCompany($request);
 
     if ($response->crmCompany !== null) {
         // handle response
@@ -472,12 +334,150 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdRequest](../../models/operations/PutCrmConnectionIdCompanyIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest](../../models/operations/PatchCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdCompanyIdResponse](../../models/operations/PutCrmConnectionIdCompanyIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse](../../models/operations/PatchCrmCompanyResponse.md)**
+
+
+## removeCrmCompany
+
+Remove a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveCrmCompanyRequest();
+    $request->connectionId = 'Mayaguez index wireless';
+    $request->id = '<ID>';
+
+    $response = $sdk->company->removeCrmCompany($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest](../../models/operations/RemoveCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse](../../models/operations/RemoveCrmCompanyResponse.md)**
+
+
+## updateCrmCompany
+
+Update a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest;
+use \Unified\Unified_to\Models\Shared\CrmCompany;
+use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress;
+use \Unified\Unified_to\Models\Shared\CrmEmail;
+use \Unified\Unified_to\Models\Shared\CrmEmailType;
+use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyRaw;
+use \Unified\Unified_to\Models\Shared\CrmTelephone;
+use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateCrmCompanyRequest();
+    $request->crmCompany = new CrmCompany();
+    $request->crmCompany->active = false;
+    $request->crmCompany->address = new PropertyCrmCompanyAddress();
+    $request->crmCompany->address->address1 = 'Brand enterprise';
+    $request->crmCompany->address->address2 = 'Director bypassing';
+    $request->crmCompany->address->city = 'Kennithborough';
+    $request->crmCompany->address->country = 'Djibouti';
+    $request->crmCompany->address->countryCode = 'HN';
+    $request->crmCompany->address->postalCode = '96951-4844';
+    $request->crmCompany->address->region = 'Kyat Rubber Volvo';
+    $request->crmCompany->address->regionCode = 'portals';
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-19T11:53:09.825Z');
+    $request->crmCompany->dealIds = [
+        'Salvador',
+    ];
+    $request->crmCompany->emails = [
+        new CrmEmail(),
+    ];
+    $request->crmCompany->id = '<ID>';
+    $request->crmCompany->name = 'monitor Blues Northwest';
+    $request->crmCompany->raw = new PropertyCrmCompanyRaw();
+    $request->crmCompany->tags = [
+        'Borders',
+    ];
+    $request->crmCompany->telephones = [
+        new CrmTelephone(),
+    ];
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-25T11:18:12.448Z');
+    $request->crmCompany->websites = [
+        'Romania',
+    ];
+    $request->connectionId = 'killer Product';
+    $request->id = '<ID>';
+
+    $response = $sdk->company->updateCrmCompany($request);
+
+    if ($response->crmCompany !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest](../../models/operations/UpdateCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse](../../models/operations/UpdateCrmCompanyResponse.md)**
 

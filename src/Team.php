@@ -22,34 +22,75 @@ class Team
 	}
 	
     /**
-     * Remove a team
+     * Create a team
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmTeamRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmTeamResponse
      */
-	public function deleteCrmConnectionIdTeamId(
-        ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdResponse
+	public function createCrmTeam(
+        ?\Unified\Unified_to\Models\Operations\CreateCrmTeamRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateCrmTeamResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team', \Unified\Unified_to\Models\Operations\CreateCrmTeamRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "crmTeam", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateCrmTeamResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->crmTeam = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmTeam', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a team
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetCrmTeamRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmTeamResponse
+     */
+	public function getCrmTeam(
+        ?\Unified\Unified_to\Models\Operations\GetCrmTeamRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetCrmTeamResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\GetCrmTeamRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdTeamIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetCrmTeamResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteCrmConnectionIdTeamIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->crmTeam = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmTeam', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Team
     /**
      * List all teams
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamResponse
+     * @param \Unified\Unified_to\Models\Operations\ListCrmTeamsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmTeamsResponse
      */
-	public function getCrmConnectionIdTeam(
-        ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamResponse
+	public function listCrmTeams(
+        ?\Unified\Unified_to\Models\Operations\ListCrmTeamsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListCrmTeamsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team', \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team', \Unified\Unified_to\Models\Operations\ListCrmTeamsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmTeamsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Team
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListCrmTeamsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Team
     }
 	
     /**
-     * Retrieve a team
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdResponse
-     */
-	public function getCrmConnectionIdTeamId(
-        ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetCrmConnectionIdTeamIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmTeam = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmTeam', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a team
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmTeamRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmTeamResponse
      */
-	public function patchCrmConnectionIdTeamId(
-        ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdResponse
+	public function patchCrmTeam(
+        ?\Unified\Unified_to\Models\Operations\PatchCrmTeamRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchCrmTeamResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\PatchCrmTeamRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "crmTeam", "json");
@@ -154,7 +159,7 @@ class Team
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdTeamIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchCrmTeamResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Team
     }
 	
     /**
-     * Create a team
+     * Remove a team
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmTeamRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmTeamResponse
      */
-	public function postCrmConnectionIdTeam(
-        ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamResponse
+	public function removeCrmTeam(
+        ?\Unified\Unified_to\Models\Operations\RemoveCrmTeamRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveCrmTeamResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team', \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmTeamRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmTeam", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostCrmConnectionIdTeamResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveCrmTeamResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmTeam = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmTeam', 'json');
+                $response->removeCrmTeamDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Team
     /**
      * Update a team
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmTeamRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmTeamResponse
      */
-	public function putCrmConnectionIdTeamId(
-        ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdResponse
+	public function updateCrmTeam(
+        ?\Unified\Unified_to\Models\Operations\UpdateCrmTeamRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateCrmTeamResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\UpdateCrmTeamRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "crmTeam", "json");
@@ -234,7 +234,7 @@ class Team
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutCrmConnectionIdTeamIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateCrmTeamResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

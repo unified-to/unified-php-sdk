@@ -3,252 +3,14 @@
 
 ### Available Operations
 
-* [deleteCrmConnectionIdLeadId](#deletecrmconnectionidleadid) - Remove a lead
-* [getCrmConnectionIdLead](#getcrmconnectionidlead) - List all leads
-* [getCrmConnectionIdLeadId](#getcrmconnectionidleadid) - Retrieve a lead
-* [patchCrmConnectionIdLeadId](#patchcrmconnectionidleadid) - Update a lead
-* [postCrmConnectionIdLead](#postcrmconnectionidlead) - Create a lead
-* [putCrmConnectionIdLeadId](#putcrmconnectionidleadid) - Update a lead
-
-## deleteCrmConnectionIdLeadId
-
-Remove a lead
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteCrmConnectionIdLeadIdRequest();
-    $request->connectionId = 'Senior azure';
-    $request->id = '<ID>';
-
-    $response = $sdk->lead->deleteCrmConnectionIdLeadId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdRequest](../../models/operations/DeleteCrmConnectionIdLeadIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdResponse](../../models/operations/DeleteCrmConnectionIdLeadIdResponse.md)**
-
-
-## getCrmConnectionIdLead
-
-List all leads
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetCrmConnectionIdLeadRequest();
-    $request->connectionId = 'Computer Hop';
-    $request->limit = 7411.81;
-    $request->offset = 9004.32;
-    $request->order = 'Operations candela Integration';
-    $request->query = 'impactful transform';
-    $request->sort = 'Tala defense Southwest';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-29T00:37:32.184Z');
-
-    $response = $sdk->lead->getCrmConnectionIdLead($request);
-
-    if ($response->crmLeads !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadRequest](../../models/operations/GetCrmConnectionIdLeadRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadResponse](../../models/operations/GetCrmConnectionIdLeadResponse.md)**
-
-
-## getCrmConnectionIdLeadId
-
-Retrieve a lead
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetCrmConnectionIdLeadIdRequest();
-    $request->connectionId = 'users Minnesota Bypass';
-    $request->id = '<ID>';
-
-    $response = $sdk->lead->getCrmConnectionIdLeadId($request);
-
-    if ($response->crmLead !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdRequest](../../models/operations/GetCrmConnectionIdLeadIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdResponse](../../models/operations/GetCrmConnectionIdLeadIdResponse.md)**
-
-
-## patchCrmConnectionIdLeadId
-
-Update a lead
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdRequest;
-use \Unified\Unified_to\Models\Shared\CrmLead;
-use \Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmLeadRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchCrmConnectionIdLeadIdRequest();
-    $request->crmLead = new CrmLead();
-    $request->crmLead->active = false;
-    $request->crmLead->address = new PropertyCrmLeadAddress();
-    $request->crmLead->address->address1 = 'Cambridgeshire';
-    $request->crmLead->address->address2 = 'Oriental farad male';
-    $request->crmLead->address->city = 'D\'Amorebury';
-    $request->crmLead->address->country = 'Reunion';
-    $request->crmLead->address->countryCode = 'UY';
-    $request->crmLead->address->postalCode = '87017-9001';
-    $request->crmLead->address->region = 'Buckinghamshire Electric';
-    $request->crmLead->address->regionCode = 'South gee';
-    $request->crmLead->companyId = 'Gasoline conglomeration Tennessine';
-    $request->crmLead->contactId = 'grow hub';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-09T15:23:12.644Z');
-    $request->crmLead->creatorUserId = 'voluptates';
-    $request->crmLead->emails = [
-        new CrmEmail(),
-    ];
-    $request->crmLead->id = '<ID>';
-    $request->crmLead->name = 'digital watt';
-    $request->crmLead->raw = new PropertyCrmLeadRaw();
-    $request->crmLead->telephones = [
-        new CrmTelephone(),
-    ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-25T09:29:16.994Z');
-    $request->crmLead->userId = 'withdrawal Producer';
-    $request->connectionId = 'Diesel Triathlon/Time';
-    $request->id = '<ID>';
-
-    $response = $sdk->lead->patchCrmConnectionIdLeadId($request);
-
-    if ($response->crmLead !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdRequest](../../models/operations/PatchCrmConnectionIdLeadIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdResponse](../../models/operations/PatchCrmConnectionIdLeadIdResponse.md)**
-
-
-## postCrmConnectionIdLead
+* [createCrmLead](#createcrmlead) - Create a lead
+* [getCrmLead](#getcrmlead) - Retrieve a lead
+* [listCrmLeads](#listcrmleads) - List all leads
+* [patchCrmLead](#patchcrmlead) - Update a lead
+* [removeCrmLead](#removecrmlead) - Remove a lead
+* [updateCrmLead](#updatecrmlead) - Update a lead
+
+## createCrmLead
 
 Create a lead
 
@@ -262,7 +24,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadRequest;
+use \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest;
 use \Unified\Unified_to\Models\Shared\CrmLead;
 use \Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress;
 use \Unified\Unified_to\Models\Shared\CrmEmail;
@@ -279,36 +41,36 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostCrmConnectionIdLeadRequest();
+    $request = new CreateCrmLeadRequest();
     $request->crmLead = new CrmLead();
     $request->crmLead->active = false;
     $request->crmLead->address = new PropertyCrmLeadAddress();
-    $request->crmLead->address->address1 = 'XSS Country knowledge';
-    $request->crmLead->address->address2 = 'structure';
-    $request->crmLead->address->city = 'Giovaniton';
-    $request->crmLead->address->country = 'Ghana';
-    $request->crmLead->address->countryCode = 'CO';
-    $request->crmLead->address->postalCode = '34495-0585';
-    $request->crmLead->address->region = 'Modern';
-    $request->crmLead->address->regionCode = 'Diesel';
-    $request->crmLead->companyId = 'yuppify';
-    $request->crmLead->contactId = 'demanding scratch male';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-07T11:22:05.657Z');
-    $request->crmLead->creatorUserId = 'masticate South';
+    $request->crmLead->address->address1 = 'port steradian prize';
+    $request->crmLead->address->address2 = 'ability Einsteinium Orchestrator';
+    $request->crmLead->address->city = 'Nikolausmouth';
+    $request->crmLead->address->country = 'Egypt';
+    $request->crmLead->address->countryCode = 'NG';
+    $request->crmLead->address->postalCode = '44776-3314';
+    $request->crmLead->address->region = 'Minnesota';
+    $request->crmLead->address->regionCode = 'Strategist Product Reggae';
+    $request->crmLead->companyId = 'possimus Chief Intelligent';
+    $request->crmLead->contactId = 'Division Ball Diesel';
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T13:25:51.701Z');
+    $request->crmLead->creatorUserId = 'cyan Grocery';
     $request->crmLead->emails = [
         new CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
-    $request->crmLead->name = 'Savings';
+    $request->crmLead->name = 'backing Southeast';
     $request->crmLead->raw = new PropertyCrmLeadRaw();
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-12T19:19:26.443Z');
-    $request->crmLead->userId = 'port override';
-    $request->connectionId = 'mmm indeed';
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T00:13:31.481Z');
+    $request->crmLead->userId = 'Shirt';
+    $request->connectionId = 'female transmitter';
 
-    $response = $sdk->lead->postCrmConnectionIdLead($request);
+    $response = $sdk->lead->createCrmLead($request);
 
     if ($response->crmLead !== null) {
         // handle response
@@ -320,17 +82,122 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadRequest](../../models/operations/PostCrmConnectionIdLeadRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\CreateCrmLeadRequest](../../models/operations/CreateCrmLeadRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadResponse](../../models/operations/PostCrmConnectionIdLeadResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateCrmLeadResponse](../../models/operations/CreateCrmLeadResponse.md)**
 
 
-## putCrmConnectionIdLeadId
+## getCrmLead
+
+Retrieve a lead
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetCrmLeadRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetCrmLeadRequest();
+    $request->connectionId = 'Handmade Keyboard yum';
+    $request->id = '<ID>';
+
+    $response = $sdk->lead->getCrmLead($request);
+
+    if ($response->crmLead !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                              | [\Unified\Unified_to\Models\Operations\GetCrmLeadRequest](../../models/operations/GetCrmLeadRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetCrmLeadResponse](../../models/operations/GetCrmLeadResponse.md)**
+
+
+## listCrmLeads
+
+List all leads
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListCrmLeadsRequest();
+    $request->connectionId = 'International';
+    $request->limit = 5756.06;
+    $request->offset = 1922.44;
+    $request->order = 'Platinum Recycled Internal';
+    $request->query = 'generous Mazda';
+    $request->sort = 'alarm';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-19T19:46:53.477Z');
+
+    $response = $sdk->lead->listCrmLeads($request);
+
+    if ($response->crmLeads !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListCrmLeadsRequest](../../models/operations/ListCrmLeadsRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListCrmLeadsResponse](../../models/operations/ListCrmLeadsResponse.md)**
+
+
+## patchCrmLead
 
 Update a lead
 
@@ -344,7 +211,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest;
 use \Unified\Unified_to\Models\Shared\CrmLead;
 use \Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress;
 use \Unified\Unified_to\Models\Shared\CrmEmail;
@@ -361,37 +228,37 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutCrmConnectionIdLeadIdRequest();
+    $request = new PatchCrmLeadRequest();
     $request->crmLead = new CrmLead();
     $request->crmLead->active = false;
     $request->crmLead->address = new PropertyCrmLeadAddress();
-    $request->crmLead->address->address1 = 'Extension';
-    $request->crmLead->address->address2 = 'supposing Dorado Assistant';
-    $request->crmLead->address->city = 'South Gate';
-    $request->crmLead->address->country = 'Reunion';
-    $request->crmLead->address->countryCode = 'IS';
-    $request->crmLead->address->postalCode = '73732-2192';
-    $request->crmLead->address->region = 'JBOD phew';
-    $request->crmLead->address->regionCode = 'Southeast Framingham female';
-    $request->crmLead->companyId = 'deposit male';
-    $request->crmLead->contactId = 'bunch edge';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-03T18:08:02.798Z');
-    $request->crmLead->creatorUserId = 'East Panama';
+    $request->crmLead->address->address1 = 'teal Hat';
+    $request->crmLead->address->address2 = 'Ball Chips';
+    $request->crmLead->address->city = 'Port Adeliamouth';
+    $request->crmLead->address->country = 'Venezuela';
+    $request->crmLead->address->countryCode = 'NF';
+    $request->crmLead->address->postalCode = '47585';
+    $request->crmLead->address->region = 'Gary Lesotho';
+    $request->crmLead->address->regionCode = 'pascal Lanka';
+    $request->crmLead->companyId = 'Portland';
+    $request->crmLead->contactId = 'Field methodology';
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T13:59:39.244Z');
+    $request->crmLead->creatorUserId = 'Forint olive';
     $request->crmLead->emails = [
         new CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
-    $request->crmLead->name = 'SAS Bedfordshire';
+    $request->crmLead->name = 'Ergonomic Ergonomic';
     $request->crmLead->raw = new PropertyCrmLeadRaw();
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-09T08:31:24.216Z');
-    $request->crmLead->userId = 'pianist';
-    $request->connectionId = 'caricature female';
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-18T07:05:56.875Z');
+    $request->crmLead->userId = 'female Coupe';
+    $request->connectionId = 'Fisher convergence';
     $request->id = '<ID>';
 
-    $response = $sdk->lead->putCrmConnectionIdLeadId($request);
+    $response = $sdk->lead->patchCrmLead($request);
 
     if ($response->crmLead !== null) {
         // handle response
@@ -403,12 +270,145 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdRequest](../../models/operations/PutCrmConnectionIdLeadIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchCrmLeadRequest](../../models/operations/PatchCrmLeadRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdResponse](../../models/operations/PutCrmConnectionIdLeadIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchCrmLeadResponse](../../models/operations/PatchCrmLeadResponse.md)**
+
+
+## removeCrmLead
+
+Remove a lead
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveCrmLeadRequest();
+    $request->connectionId = 'Southeast';
+    $request->id = '<ID>';
+
+    $response = $sdk->lead->removeCrmLead($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest](../../models/operations/RemoveCrmLeadRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse](../../models/operations/RemoveCrmLeadResponse.md)**
+
+
+## updateCrmLead
+
+Update a lead
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest;
+use \Unified\Unified_to\Models\Shared\CrmLead;
+use \Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress;
+use \Unified\Unified_to\Models\Shared\CrmEmail;
+use \Unified\Unified_to\Models\Shared\CrmEmailType;
+use \Unified\Unified_to\Models\Shared\PropertyCrmLeadRaw;
+use \Unified\Unified_to\Models\Shared\CrmTelephone;
+use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateCrmLeadRequest();
+    $request->crmLead = new CrmLead();
+    $request->crmLead->active = false;
+    $request->crmLead->address = new PropertyCrmLeadAddress();
+    $request->crmLead->address->address1 = 'compelling';
+    $request->crmLead->address->address2 = 'Pickup Polestar Checking';
+    $request->crmLead->address->city = 'West Laisha';
+    $request->crmLead->address->country = 'Pakistan';
+    $request->crmLead->address->countryCode = 'MA';
+    $request->crmLead->address->postalCode = '19406';
+    $request->crmLead->address->region = 'usher';
+    $request->crmLead->address->regionCode = 'Bicycle';
+    $request->crmLead->companyId = 'est deposit';
+    $request->crmLead->contactId = 'Response';
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-10T10:21:01.592Z');
+    $request->crmLead->creatorUserId = 'Concrete';
+    $request->crmLead->emails = [
+        new CrmEmail(),
+    ];
+    $request->crmLead->id = '<ID>';
+    $request->crmLead->name = 'Northwest';
+    $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->telephones = [
+        new CrmTelephone(),
+    ];
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T20:48:33.132Z');
+    $request->crmLead->userId = 'treasure attitude sint';
+    $request->connectionId = 'Cab charming';
+    $request->id = '<ID>';
+
+    $response = $sdk->lead->updateCrmLead($request);
+
+    if ($response->crmLead !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest](../../models/operations/UpdateCrmLeadRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse](../../models/operations/UpdateCrmLeadResponse.md)**
 

@@ -14,10 +14,10 @@ class GetUnifiedApicallResponse
     /**
      * Successful
      * 
-     * @var ?array<\Unified\Unified_to\Models\Shared\ApiCall> $apiCalls
+     * @var ?\Unified\Unified_to\Models\Shared\ApiCall $apiCall
      */
 	
-    public ?array $apiCalls = null;
+    public ?\Unified\Unified_to\Models\Shared\ApiCall $apiCall = null;
     
     /**
      * HTTP response content type for this operation
@@ -45,7 +45,7 @@ class GetUnifiedApicallResponse
     
 	public function __construct()
 	{
-		$this->apiCalls = null;
+		$this->apiCall = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;

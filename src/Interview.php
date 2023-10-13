@@ -22,34 +22,75 @@ class Interview
 	}
 	
     /**
-     * Remove a interview
+     * Create a interview
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
      */
-	public function deleteAtsConnectionIdInterviewId(
-        ?\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdResponse
+	public function createAtsInterview(
+        ?\Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "atsInterview", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsInterview = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a interview
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
+     */
+	public function getAtsInterview(
+        ?\Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteAtsConnectionIdInterviewIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsInterview = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Interview
     /**
      * List all interviews
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewResponse
+     * @param \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
      */
-	public function getAtsConnectionIdInterview(
-        ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewResponse
+	public function listAtsInterviews(
+        ?\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Interview
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Interview
     }
 	
     /**
-     * Retrieve a interview
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdResponse
-     */
-	public function getAtsConnectionIdInterviewId(
-        ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a interview
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
      */
-	public function patchAtsConnectionIdInterviewId(
-        ?\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdResponse
+	public function patchAtsInterview(
+        ?\Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "atsInterview", "json");
@@ -154,7 +159,7 @@ class Interview
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Interview
     }
 	
     /**
-     * Create a interview
+     * Remove a interview
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
      */
-	public function postAtsConnectionIdInterview(
-        ?\Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewResponse
+	public function removeAtsInterview(
+        ?\Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', \Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsInterview", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
+                $response->removeAtsInterviewDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Interview
     /**
      * Update a interview
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
      */
-	public function putAtsConnectionIdInterviewId(
-        ?\Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdResponse
+	public function updateAtsInterview(
+        ?\Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "atsInterview", "json");
@@ -234,7 +234,7 @@ class Interview
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

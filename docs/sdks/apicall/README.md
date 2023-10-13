@@ -3,12 +3,12 @@
 
 ### Available Operations
 
-* [getUnifiedApicall](#getunifiedapicall) - Returns API Calls
-* [getUnifiedApicallId](#getunifiedapicallid) - Retrieve specific API Call by its ID
+* [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
+* [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 
 ## getUnifiedApicall
 
-Returns API Calls
+Retrieve specific API Call by its ID
 
 ### Example Usage
 
@@ -31,21 +31,11 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedApicallRequest();
-    $request->connectionId = 'delectus green Hybrid';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-02T21:36:49.952Z');
-    $request->env = 'Fantastic Iodine indexing';
-    $request->error = false;
-    $request->externalXref = 'Music';
-    $request->integrationType = 'Soft';
-    $request->limit = 2390.64;
-    $request->offset = 3757.34;
-    $request->order = 'mobile envisioneer';
-    $request->sort = 'North payment opposite';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-11T16:18:13.644Z');
+    $request->id = '<ID>';
 
     $response = $sdk->apicall->getUnifiedApicall($request);
 
-    if ($response->apiCalls !== null) {
+    if ($response->apiCall !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -65,9 +55,9 @@ try {
 **[?\Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse](../../models/operations/GetUnifiedApicallResponse.md)**
 
 
-## getUnifiedApicallId
+## listUnifiedApicalls
 
-Retrieve specific API Call by its ID
+Returns API Calls
 
 ### Example Usage
 
@@ -79,7 +69,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest;
+use \Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -89,12 +79,22 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetUnifiedApicallIdRequest();
-    $request->id = '<ID>';
+    $request = new ListUnifiedApicallsRequest();
+    $request->connectionId = 'Madagascar Lead Krone';
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-06T17:13:51.274Z');
+    $request->env = 'parse dearly Integration';
+    $request->error = false;
+    $request->externalXref = 'Customer Rap';
+    $request->integrationType = 'Rest solution';
+    $request->limit = 1797.17;
+    $request->offset = 2364.47;
+    $request->order = 'Kentucky';
+    $request->sort = 'copy Chile';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-07T15:44:54.599Z');
 
-    $response = $sdk->apicall->getUnifiedApicallId($request);
+    $response = $sdk->apicall->listUnifiedApicalls($request);
 
-    if ($response->apiCall !== null) {
+    if ($response->apiCalls !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -106,10 +106,10 @@ try {
 
 | Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest](../../models/operations/ListUnifiedApicallsRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse](../../models/operations/GetUnifiedApicallIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse](../../models/operations/ListUnifiedApicallsResponse.md)**
 

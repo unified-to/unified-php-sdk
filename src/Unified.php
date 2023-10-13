@@ -22,635 +22,14 @@ class Unified
 	}
 	
     /**
-     * Remove connection
-     * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdResponse
-     */
-	public function deleteUnifiedConnectionId(
-        ?\Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\DeleteUnifiedConnectionIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteUnifiedConnectionIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Delete your user object
-     * 
-     * @return \Unified\Unified_to\Models\Operations\DeleteUnifiedUserResponse
-     */
-	public function deleteUnifiedUser(
-    ): \Unified\Unified_to\Models\Operations\DeleteUnifiedUserResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/user');
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\DeleteUnifiedUserResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteUnifiedUserDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Remove webhook subscription
-     * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdResponse
-     */
-	public function deleteUnifiedWebhookId(
-        ?\Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteUnifiedWebhookIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Returns API Calls
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
-     */
-	public function getUnifiedApicall(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall');
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->apiCalls = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\ApiCall>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Retrieve specific API Call by its ID
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse
-     */
-	public function getUnifiedApicallId(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->apiCall = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\ApiCall', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * List all connections
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
-     */
-	public function getUnifiedConnection(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->connections = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Connection>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Retrieve connection
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdResponse
-     */
-	public function getUnifiedConnectionId(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedConnectionIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->connection = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Connection', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Returns all integrations
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
-     */
-	public function getUnifiedIntegration(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration');
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->integrations = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Integration>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Create connection indirectly
-     * 
-     * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse
-     */
-	public function getUnifiedIntegrationAuthWorkspaceIdIntegrationType(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->getUnifiedIntegrationAuthWorkspaceIdIntegrationType200ApplicationJSONString = $httpResponse->getBody()->getContents();
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Retrieve an integration
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeResponse
-     */
-	public function getUnifiedIntegrationIntegrationType(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->integration = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Integration', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Returns all activated integrations in a workspace
-     * 
-     * No authentication required as this is to be used by front-end interface
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdResponse
-     */
-	public function getUnifiedIntegrationWorkspaceWorkspaceId(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/workspace/{workspace_id}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->integrations = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Integration>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Retrieve your user object
-     * 
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedUserResponse
-     */
-	public function getUnifiedUser(
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedUserResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/user');
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedUserResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->user = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\User', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Retrieve your user token
-     * 
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedUserTokenResponse
-     */
-	public function getUnifiedUserToken(
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedUserTokenResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/user/token');
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedUserTokenResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->getUnifiedUserToken200ApplicationJSONString = $httpResponse->getBody()->getContents();
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Returns all registered webhooks
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
-     */
-	public function getUnifiedWebhook(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->webhooks = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Webhook>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Retrieve webhook by its ID
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdResponse
-     */
-	public function getUnifiedWebhookId(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->webhook = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Update connection
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdResponse
-     */
-	public function patchUnifiedConnectionId(
-        ?\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "connection", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->connection = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Connection', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Updates your user object
-     * 
-     * Only the name field is updated.
-     * 
-     * @param \Unified\Unified_to\Models\Shared\User $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedUserResponse
-     */
-	public function patchUnifiedUser(
-        ?\Unified\Unified_to\Models\Shared\User $request,
-    ): \Unified\Unified_to\Models\Operations\PatchUnifiedUserResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/user');
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchUnifiedUserResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->user = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\User', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Create connection
      * 
      * @param \Unified\Unified_to\Models\Shared\Connection $request
-     * @return \Unified\Unified_to\Models\Operations\PostUnifiedConnectionResponse
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse
      */
-	public function postUnifiedConnection(
+	public function createUnifiedConnection(
         ?\Unified\Unified_to\Models\Shared\Connection $request,
-    ): \Unified\Unified_to\Models\Operations\PostUnifiedConnectionResponse
+    ): \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
@@ -667,7 +46,7 @@ class Unified
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostUnifiedConnectionResponse();
+        $response = new \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -687,22 +66,22 @@ class Unified
      * 
      * To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
      */
-	public function postUnifiedWebhookConnectionIdObject(
-        ?\Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectResponse
+	public function createUnifiedWebhook(
+        ?\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{connection_id}/{object}', \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{connection_id}/{object}', \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "webhook", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -710,7 +89,7 @@ class Unified
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectResponse();
+        $response = new \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -726,31 +105,63 @@ class Unified
     }
 	
     /**
-     * Update connection
+     * Retrieve specific API Call by its ID
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdResponse
+     * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
      */
-	public function putUnifiedConnectionId(
-        ?\Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdResponse
+	public function getUnifiedApicall(
+        ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "connection", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutUnifiedConnectionIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->apiCall = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\ApiCall', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve connection
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
+     */
+	public function getUnifiedConnection(
+        ?\Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -766,22 +177,427 @@ class Unified
     }
 	
     /**
-     * Updates your user object
+     * Retrieve an integration
      * 
-     * Only the name field is updated.
-     * 
-     * @param \Unified\Unified_to\Models\Shared\User $request
-     * @return \Unified\Unified_to\Models\Operations\PutUnifiedUserResponse
+     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
      */
-	public function putUnifiedUser(
-        ?\Unified\Unified_to\Models\Shared\User $request,
-    ): \Unified\Unified_to\Models\Operations\PutUnifiedUserResponse
+	public function getUnifiedIntegration(
+        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/user');
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->integration = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Integration', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Create connection indirectly
+     * 
+     * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse
+     */
+	public function getUnifiedIntegrationAuth(
+        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $response->getUnifiedIntegrationAuth200ApplicationJSONString = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve webhook by its ID
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
+     */
+	public function getUnifiedWebhook(
+        ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->webhook = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns API Calls
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
+     */
+	public function listUnifiedApicalls(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->apiCalls = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\ApiCall>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List all connections
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse
+     */
+	public function listUnifiedConnections(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->connections = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Connection>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns all activated integrations in a workspace
+     * 
+     * No authentication required as this is to be used by front-end interface
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse
+     */
+	public function listUnifiedIntegrationWorkspaces(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/workspace/{workspace_id}', \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->integrations = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Integration>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns all integrations
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
+     */
+	public function listUnifiedIntegrations(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->integrations = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Integration>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns all registered webhooks
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
+     */
+	public function listUnifiedWebhooks(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->webhooks = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Webhook>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update connection
+     * 
+     * @param \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse
+     */
+	public function patchUnifiedConnection(
+        ?\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "connection", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->connection = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Connection', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Remove connection
+     * 
+     * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse
+     */
+	public function removeUnifiedConnection(
+        ?\Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $response->removeUnifiedConnectionDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Remove webhook subscription
+     * 
+     * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
+     */
+	public function removeUnifiedWebhook(
+        ?\Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $response->removeUnifiedWebhookDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update connection
+     * 
+     * @param \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse
+     */
+	public function updateUnifiedConnection(
+        ?\Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "connection", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -792,7 +608,7 @@ class Unified
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutUnifiedUserResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -800,7 +616,7 @@ class Unified
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->user = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\User', 'json');
+                $response->connection = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Connection', 'json');
             }
         }
 

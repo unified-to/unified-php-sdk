@@ -1,0 +1,15 @@
+# ListAtsInterviewsRequest
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `applicationId`                                                          | *?string*                                                                | :heavy_minus_sign:                                                       | The application ID to filter results                                     |
+| `connectionId`                                                           | *string*                                                                 | :heavy_check_mark:                                                       | ID of the connection                                                     |
+| `limit`                                                                  | *?float*                                                                 | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `offset`                                                                 | *?float*                                                                 | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `order`                                                                  | *?string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `query`                                                                  | *?string*                                                                | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
+| `sort`                                                                   | *?string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `updatedGte`                                                             | [\DateTime](https://www.php.net/manual/en/class.datetime.php)            | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |

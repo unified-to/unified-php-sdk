@@ -22,34 +22,75 @@ class Member
 	}
 	
     /**
-     * Remove member from a list
+     * Create a member in a list
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse
      */
-	public function deleteMartechConnectionIdListIdMemberId(
-        ?\Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdResponse
+	public function createMartechMember(
+        ?\Unified\Unified_to\Models\Operations\CreateMartechMemberRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member', \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "marketingMember", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->marketingMember = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\MarketingMember', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a member from a list
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetMartechMemberRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetMartechMemberResponse
+     */
+	public function getMartechMember(
+        ?\Unified\Unified_to\Models\Operations\GetMartechMemberRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetMartechMemberResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\GetMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteMartechConnectionIdListIdMemberIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetMartechMemberResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteMartechConnectionIdListIdMemberIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->marketingMember = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\MarketingMember', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Member
     /**
      * List all members in a list
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberResponse
+     * @param \Unified\Unified_to\Models\Operations\ListMartechMembersRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechMembersResponse
      */
-	public function getMartechConnectionIdListIdMember(
-        ?\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberResponse
+	public function listMartechMembers(
+        ?\Unified\Unified_to\Models\Operations\ListMartechMembersRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListMartechMembersResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member', \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member', \Unified\Unified_to\Models\Operations\ListMartechMembersRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListMartechMembersRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Member
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListMartechMembersResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Member
     }
 	
     /**
-     * Retrieve a member from a list
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdResponse
-     */
-	public function getMartechConnectionIdListIdMemberId(
-        ?\Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetMartechConnectionIdListIdMemberIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->marketingMember = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\MarketingMember', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a member in a list
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse
      */
-	public function patchMartechConnectionIdListIdMemberId(
-        ?\Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdResponse
+	public function patchMartechMember(
+        ?\Unified\Unified_to\Models\Operations\PatchMartechMemberRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "marketingMember", "json");
@@ -154,7 +159,7 @@ class Member
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchMartechConnectionIdListIdMemberIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Member
     }
 	
     /**
-     * Create a member in a list
+     * Remove member from a list
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse
      */
-	public function postMartechConnectionIdListIdMember(
-        ?\Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberResponse
+	public function removeMartechMember(
+        ?\Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member', \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "marketingMember", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostMartechConnectionIdListIdMemberResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->marketingMember = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\MarketingMember', 'json');
+                $response->removeMartechMemberDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Member
     /**
      * Update a member in a list
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse
      */
-	public function putMartechConnectionIdListIdMemberId(
-        ?\Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdResponse
+	public function updateMartechMember(
+        ?\Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "marketingMember", "json");
@@ -234,7 +234,7 @@ class Member
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutMartechConnectionIdListIdMemberIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

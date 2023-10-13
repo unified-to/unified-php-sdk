@@ -3,239 +3,14 @@
 
 ### Available Operations
 
-* [deleteAtsConnectionIdInterviewId](#deleteatsconnectionidinterviewid) - Remove a interview
-* [getAtsConnectionIdInterview](#getatsconnectionidinterview) - List all interviews
-* [getAtsConnectionIdInterviewId](#getatsconnectionidinterviewid) - Retrieve a interview
-* [patchAtsConnectionIdInterviewId](#patchatsconnectionidinterviewid) - Update a interview
-* [postAtsConnectionIdInterview](#postatsconnectionidinterview) - Create a interview
-* [putAtsConnectionIdInterviewId](#putatsconnectionidinterviewid) - Update a interview
-
-## deleteAtsConnectionIdInterviewId
-
-Remove a interview
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteAtsConnectionIdInterviewIdRequest();
-    $request->connectionId = 'redundant Health Hayes';
-    $request->id = '<ID>';
-
-    $response = $sdk->interview->deleteAtsConnectionIdInterviewId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdRequest](../../models/operations/DeleteAtsConnectionIdInterviewIdRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdInterviewIdResponse](../../models/operations/DeleteAtsConnectionIdInterviewIdResponse.md)**
-
-
-## getAtsConnectionIdInterview
-
-List all interviews
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetAtsConnectionIdInterviewRequest();
-    $request->applicationId = 'Fresh Pickup converse';
-    $request->connectionId = 'vortals';
-    $request->limit = 5167.08;
-    $request->offset = 6488.61;
-    $request->order = 'Oregon Metal';
-    $request->query = 'Account';
-    $request->sort = 'haptic';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-23T19:46:35.825Z');
-
-    $response = $sdk->interview->getAtsConnectionIdInterview($request);
-
-    if ($response->atsInterviews !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewRequest](../../models/operations/GetAtsConnectionIdInterviewRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewResponse](../../models/operations/GetAtsConnectionIdInterviewResponse.md)**
-
-
-## getAtsConnectionIdInterviewId
-
-Retrieve a interview
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetAtsConnectionIdInterviewIdRequest();
-    $request->connectionId = 'Loan Gorgeous lux';
-    $request->id = '<ID>';
-
-    $response = $sdk->interview->getAtsConnectionIdInterviewId($request);
-
-    if ($response->atsInterview !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdRequest](../../models/operations/GetAtsConnectionIdInterviewIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdInterviewIdResponse](../../models/operations/GetAtsConnectionIdInterviewIdResponse.md)**
-
-
-## patchAtsConnectionIdInterviewId
-
-Update a interview
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdRequest;
-use \Unified\Unified_to\Models\Shared\AtsInterview;
-use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
-use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchAtsConnectionIdInterviewIdRequest();
-    $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'SSD green pascal';
-    $request->atsInterview->candidateId = 'Buckinghamshire example';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-24T08:30:07.073Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-27T04:06:46.373Z');
-    $request->atsInterview->externalEventXref = 'apropos Gadolinium';
-    $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'transgender transmitting';
-    $request->atsInterview->location = 'Investor synthesizing';
-    $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-19T01:51:02.213Z');
-    $request->atsInterview->status = AtsInterviewStatus::AwaitingFeedback;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T17:38:09.113Z');
-    $request->atsInterview->userIds = [
-        'Honda',
-    ];
-    $request->connectionId = 'Myrl Dram Trail';
-    $request->id = '<ID>';
-
-    $response = $sdk->interview->patchAtsConnectionIdInterviewId($request);
-
-    if ($response->atsInterview !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdRequest](../../models/operations/PatchAtsConnectionIdInterviewIdRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdInterviewIdResponse](../../models/operations/PatchAtsConnectionIdInterviewIdResponse.md)**
-
-
-## postAtsConnectionIdInterview
+* [createAtsInterview](#createatsinterview) - Create a interview
+* [getAtsInterview](#getatsinterview) - Retrieve a interview
+* [listAtsInterviews](#listatsinterviews) - List all interviews
+* [patchAtsInterview](#patchatsinterview) - Update a interview
+* [removeAtsInterview](#removeatsinterview) - Remove a interview
+* [updateAtsInterview](#updateatsinterview) - Update a interview
+
+## createAtsInterview
 
 Create a interview
 
@@ -249,7 +24,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewRequest;
+use \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest;
 use \Unified\Unified_to\Models\Shared\AtsInterview;
 use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
 use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
@@ -262,26 +37,26 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostAtsConnectionIdInterviewRequest();
+    $request = new CreateAtsInterviewRequest();
     $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'round Hat Savings';
-    $request->atsInterview->candidateId = 'Northeast';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-27T10:33:09.160Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-12T23:57:19.974Z');
-    $request->atsInterview->externalEventXref = 'platforms';
+    $request->atsInterview->applicationId = 'pixellate arc';
+    $request->atsInterview->candidateId = 'drat';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T16:48:42.126Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-17T22:03:34.997Z');
+    $request->atsInterview->externalEventXref = 'harpsichord Roanoke Smart';
     $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'payment panel Identity';
-    $request->atsInterview->location = 'Northwest Buckinghamshire';
+    $request->atsInterview->jobId = 'redundant Account ubiquitous';
+    $request->atsInterview->location = 'Davenport West nestle';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-02T05:07:18.592Z');
-    $request->atsInterview->status = AtsInterviewStatus::Complete;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-13T16:35:04.177Z');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-03T12:23:41.502Z');
+    $request->atsInterview->status = AtsInterviewStatus::Scheduled;
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-30T09:38:42.807Z');
     $request->atsInterview->userIds = [
-        'Chevrolet',
+        'HTTP',
     ];
-    $request->connectionId = 'Shoes Northeast SMTP';
+    $request->connectionId = 'Direct Sedan';
 
-    $response = $sdk->interview->postAtsConnectionIdInterview($request);
+    $response = $sdk->interview->createAtsInterview($request);
 
     if ($response->atsInterview !== null) {
         // handle response
@@ -293,17 +68,123 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewRequest](../../models/operations/PostAtsConnectionIdInterviewRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest](../../models/operations/CreateAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostAtsConnectionIdInterviewResponse](../../models/operations/PostAtsConnectionIdInterviewResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse](../../models/operations/CreateAtsInterviewResponse.md)**
 
 
-## putAtsConnectionIdInterviewId
+## getAtsInterview
+
+Retrieve a interview
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetAtsInterviewRequest();
+    $request->connectionId = 'syndicate longingly Mobility';
+    $request->id = '<ID>';
+
+    $response = $sdk->interview->getAtsInterview($request);
+
+    if ($response->atsInterview !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetAtsInterviewRequest](../../models/operations/GetAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetAtsInterviewResponse](../../models/operations/GetAtsInterviewResponse.md)**
+
+
+## listAtsInterviews
+
+List all interviews
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListAtsInterviewsRequest();
+    $request->applicationId = 'Northeast';
+    $request->connectionId = 'Avon';
+    $request->limit = 1795.86;
+    $request->offset = 8334.82;
+    $request->order = 'granular';
+    $request->query = 'West';
+    $request->sort = 'Analyst Pickup';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-09T17:56:10.255Z');
+
+    $response = $sdk->interview->listAtsInterviews($request);
+
+    if ($response->atsInterviews !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest](../../models/operations/ListAtsInterviewsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse](../../models/operations/ListAtsInterviewsResponse.md)**
+
+
+## patchAtsInterview
 
 Update a interview
 
@@ -317,7 +198,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest;
 use \Unified\Unified_to\Models\Shared\AtsInterview;
 use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
 use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
@@ -330,27 +211,27 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutAtsConnectionIdInterviewIdRequest();
+    $request = new PatchAtsInterviewRequest();
     $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'Generic capacitor';
-    $request->atsInterview->candidateId = 'Road disbelieve';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-22T01:57:06.573Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-28T02:29:32.144Z');
-    $request->atsInterview->externalEventXref = 'architectures';
+    $request->atsInterview->applicationId = 'Idaho Francium Cambridgeshire';
+    $request->atsInterview->candidateId = 'quantifying Regional';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-23T13:36:34.664Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-17T13:01:20.492Z');
+    $request->atsInterview->externalEventXref = 'District Northeast';
     $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'Casper 1080p South';
-    $request->atsInterview->location = 'program siemens Cis';
+    $request->atsInterview->jobId = 'SCSI';
+    $request->atsInterview->location = 'mope Avon';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-14T15:20:41.084Z');
-    $request->atsInterview->status = AtsInterviewStatus::AwaitingFeedback;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-14T19:59:39.905Z');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-21T17:27:43.478Z');
+    $request->atsInterview->status = AtsInterviewStatus::Complete;
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-22T19:15:29.292Z');
     $request->atsInterview->userIds = [
-        'East',
+        'Zloty',
     ];
-    $request->connectionId = 'ASCII yet Hybrid';
+    $request->connectionId = 'quirkily Liaison Metical';
     $request->id = '<ID>';
 
-    $response = $sdk->interview->putAtsConnectionIdInterviewId($request);
+    $response = $sdk->interview->patchAtsInterview($request);
 
     if ($response->atsInterview !== null) {
         // handle response
@@ -362,12 +243,131 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdRequest](../../models/operations/PutAtsConnectionIdInterviewIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest](../../models/operations/PatchAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutAtsConnectionIdInterviewIdResponse](../../models/operations/PutAtsConnectionIdInterviewIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse](../../models/operations/PatchAtsInterviewResponse.md)**
+
+
+## removeAtsInterview
+
+Remove a interview
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveAtsInterviewRequest();
+    $request->connectionId = 'Polynesia redefine pfft';
+    $request->id = '<ID>';
+
+    $response = $sdk->interview->removeAtsInterview($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest](../../models/operations/RemoveAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse](../../models/operations/RemoveAtsInterviewResponse.md)**
+
+
+## updateAtsInterview
+
+Update a interview
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest;
+use \Unified\Unified_to\Models\Shared\AtsInterview;
+use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
+use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateAtsInterviewRequest();
+    $request->atsInterview = new AtsInterview();
+    $request->atsInterview->applicationId = 'Loan Southeast omnis';
+    $request->atsInterview->candidateId = 'Modern';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-24T14:14:45.020Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-29T12:49:59.631Z');
+    $request->atsInterview->externalEventXref = 'female payment aw';
+    $request->atsInterview->id = '<ID>';
+    $request->atsInterview->jobId = 'incidentally Research';
+    $request->atsInterview->location = 'female Technician watt';
+    $request->atsInterview->raw = new PropertyAtsInterviewRaw();
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-16T12:19:39.092Z');
+    $request->atsInterview->status = AtsInterviewStatus::AwaitingFeedback;
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-01T01:36:21.844Z');
+    $request->atsInterview->userIds = [
+        'Program',
+    ];
+    $request->connectionId = 'tensor what';
+    $request->id = '<ID>';
+
+    $response = $sdk->interview->updateAtsInterview($request);
+
+    if ($response->atsInterview !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest](../../models/operations/UpdateAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse](../../models/operations/UpdateAtsInterviewResponse.md)**
 

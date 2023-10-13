@@ -22,7 +22,7 @@ class Apicall
 	}
 	
     /**
-     * Returns API Calls
+     * Retrieve specific API Call by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
@@ -32,10 +32,9 @@ class Apicall
     ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall');
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -51,7 +50,7 @@ class Apicall
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->apiCalls = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\ApiCall>', 'json');
+                $response->apiCall = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\ApiCall', 'json');
             }
         }
 
@@ -59,19 +58,20 @@ class Apicall
     }
 	
     /**
-     * Retrieve specific API Call by its ID
+     * Returns API Calls
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
      */
-	public function getUnifiedApicallId(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse
+	public function listUnifiedApicalls(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall');
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -79,7 +79,7 @@ class Apicall
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedApicallIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -87,7 +87,7 @@ class Apicall
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->apiCall = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\ApiCall', 'json');
+                $response->apiCalls = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\ApiCall>', 'json');
             }
         }
 

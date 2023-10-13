@@ -12,53 +12,15 @@ use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class GetUnifiedIntegrationRequest
 {
     /**
-     * Filter the results for only the workspace's active integrations
+     * Type of the supported integration
      * 
-     * @var ?bool $active
+     * @var string $integrationType
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=active')]
-    public ?bool $active = null;
-    
-    /**
-     * Filter the results on these categories
-     * 
-     * @var ?array<\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationCategories> $categories
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=categories')]
-    public ?array $categories = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
-    public ?float $limit = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
-    public ?float $offset = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
-    public ?string $order = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
-    public ?string $sort = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=summary')]
-    public ?bool $summary = null;
-    
-    /**
-     * Return only results whose updated date is equal or greater to this value
-     * 
-     * @var ?\DateTime $updatedGte
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=integration_type')]
+    public string $integrationType;
     
 	public function __construct()
 	{
-		$this->active = null;
-		$this->categories = null;
-		$this->limit = null;
-		$this->offset = null;
-		$this->order = null;
-		$this->sort = null;
-		$this->summary = null;
-		$this->updatedGte = null;
+		$this->integrationType = "";
 	}
 }

@@ -24,18 +24,18 @@ class Call
     /**
      * List all calls
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse
+     * @param \Unified\Unified_to\Models\Operations\ListUcCallsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      */
-	public function getUcConnectionIdCall(
-        ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse
+	public function listUcCalls(
+        ?\Unified\Unified_to\Models\Operations\ListUcCallsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUcCallsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', \Unified\Unified_to\Models\Operations\ListUcCallsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUcCallsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -43,7 +43,7 @@ class Call
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListUcCallsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

@@ -22,34 +22,75 @@ class Lead
 	}
 	
     /**
-     * Remove a lead
+     * Create a lead
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
      */
-	public function deleteCrmConnectionIdLeadId(
-        ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdResponse
+	public function createCrmLead(
+        ?\Unified\Unified_to\Models\Operations\CreateCrmLeadRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "crmLead", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->crmLead = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmLead', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a lead
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetCrmLeadRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
+     */
+	public function getCrmLead(
+        ?\Unified\Unified_to\Models\Operations\GetCrmLeadRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\GetCrmLeadRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdLeadIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetCrmLeadResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteCrmConnectionIdLeadIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->crmLead = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmLead', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Lead
     /**
      * List all leads
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadResponse
+     * @param \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
      */
-	public function getCrmConnectionIdLead(
-        ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadResponse
+	public function listCrmLeads(
+        ?\Unified\Unified_to\Models\Operations\ListCrmLeadsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmLeadsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Lead
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Lead
     }
 	
     /**
-     * Retrieve a lead
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdResponse
-     */
-	public function getCrmConnectionIdLeadId(
-        ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetCrmConnectionIdLeadIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmLead = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmLead', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a lead
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
      */
-	public function patchCrmConnectionIdLeadId(
-        ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdResponse
+	public function patchCrmLead(
+        ?\Unified\Unified_to\Models\Operations\PatchCrmLeadRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "crmLead", "json");
@@ -154,7 +159,7 @@ class Lead
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdLeadIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Lead
     }
 	
     /**
-     * Create a lead
+     * Remove a lead
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
      */
-	public function postCrmConnectionIdLead(
-        ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadResponse
+	public function removeCrmLead(
+        ?\Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmLead", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostCrmConnectionIdLeadResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmLead = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmLead', 'json');
+                $response->removeCrmLeadDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Lead
     /**
      * Update a lead
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
      */
-	public function putCrmConnectionIdLeadId(
-        ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdResponse
+	public function updateCrmLead(
+        ?\Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "crmLead", "json");
@@ -234,7 +234,7 @@ class Lead
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutCrmConnectionIdLeadIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

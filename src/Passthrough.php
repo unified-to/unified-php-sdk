@@ -22,27 +22,31 @@ class Passthrough
 	}
 	
     /**
-     * Passthrough DELETE
+     * Passthrough POST
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathResponse
+     * @param \Unified\Unified_to\Models\Operations\CreatePassthroughRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePassthroughResponse
      */
-	public function deletePassthroughConnectionIdPath(
-        ?\Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathResponse
+	public function createPassthrough(
+        ?\Unified\Unified_to\Models\Operations\CreatePassthroughRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreatePassthroughResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\CreatePassthroughRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "undefined", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeletePassthroughConnectionIdPathResponse();
+        $response = new \Unified\Unified_to\Models\Operations\CreatePassthroughResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -60,15 +64,15 @@ class Passthrough
     /**
      * Passthrough GET
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathResponse
+     * @param \Unified\Unified_to\Models\Operations\ListPassthroughsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListPassthroughsResponse
      */
-	public function getPassthroughConnectionIdPath(
-        ?\Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathResponse
+	public function listPassthroughs(
+        ?\Unified\Unified_to\Models\Operations\ListPassthroughsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListPassthroughsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\ListPassthroughsRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
@@ -78,7 +82,7 @@ class Passthrough
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetPassthroughConnectionIdPathResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListPassthroughsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -96,15 +100,15 @@ class Passthrough
     /**
      * Passthrough PUT
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchPassthroughRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPassthroughResponse
      */
-	public function patchPassthroughConnectionIdPath(
-        ?\Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathResponse
+	public function patchPassthrough(
+        ?\Unified\Unified_to\Models\Operations\PatchPassthroughRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchPassthroughResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\PatchPassthroughRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "undefined", "json");
@@ -118,7 +122,7 @@ class Passthrough
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchPassthroughConnectionIdPathResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchPassthroughResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -134,31 +138,27 @@ class Passthrough
     }
 	
     /**
-     * Passthrough POST
+     * Passthrough DELETE
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathResponse
+     * @param \Unified\Unified_to\Models\Operations\RemovePassthroughRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePassthroughResponse
      */
-	public function postPassthroughConnectionIdPath(
-        ?\Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathResponse
+	public function removePassthrough(
+        ?\Unified\Unified_to\Models\Operations\RemovePassthroughRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemovePassthroughResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\RemovePassthroughRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "undefined", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostPassthroughConnectionIdPathResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemovePassthroughResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -176,15 +176,15 @@ class Passthrough
     /**
      * Passthrough PUT
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdatePassthroughRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePassthroughResponse
      */
-	public function putPassthroughConnectionIdPath(
-        ?\Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathResponse
+	public function updatePassthrough(
+        ?\Unified\Unified_to\Models\Operations\UpdatePassthroughRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdatePassthroughResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\UpdatePassthroughRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "undefined", "json");
@@ -198,7 +198,7 @@ class Passthrough
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutPassthroughConnectionIdPathResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdatePassthroughResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

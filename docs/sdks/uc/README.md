@@ -3,355 +3,16 @@
 
 ### Available Operations
 
-* [deleteUcConnectionIdContactId](#deleteucconnectionidcontactid) - Remove a contact
-* [getUcConnectionIdAgent](#getucconnectionidagent) - List all agents
-* [getUcConnectionIdCall](#getucconnectionidcall) - List all calls
-* [getUcConnectionIdContact](#getucconnectionidcontact) - List all contacts
-* [getUcConnectionIdContactId](#getucconnectionidcontactid) - Retrieve a contact
-* [patchUcConnectionIdContactId](#patchucconnectionidcontactid) - Update a contact
-* [postUcConnectionIdContact](#postucconnectionidcontact) - Create a contact
-* [putUcConnectionIdContactId](#putucconnectionidcontactid) - Update a contact
-
-## deleteUcConnectionIdContactId
-
-Remove a contact
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteUcConnectionIdContactIdRequest();
-    $request->connectionId = 'Southeast Modern commonly';
-    $request->id = '<ID>';
-
-    $response = $sdk->uc->deleteUcConnectionIdContactId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest](../../models/operations/DeleteUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdResponse](../../models/operations/DeleteUcConnectionIdContactIdResponse.md)**
-
-
-## getUcConnectionIdAgent
-
-List all agents
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetUcConnectionIdAgentRequest();
-    $request->connectionId = 'Regional East Sedan';
-    $request->contactId = 'blue';
-    $request->limit = 7827.68;
-    $request->offset = 2116.69;
-    $request->order = 'Bicycle';
-    $request->query = 'Bacon officia iterate';
-    $request->sort = 'sticky vote lumen';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-05T19:53:29.041Z');
-
-    $response = $sdk->uc->getUcConnectionIdAgent($request);
-
-    if ($response->ucAgents !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest](../../models/operations/GetUcConnectionIdAgentRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse](../../models/operations/GetUcConnectionIdAgentResponse.md)**
-
-
-## getUcConnectionIdCall
-
-List all calls
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetUcConnectionIdCallRequest();
-    $request->agentId = 'Directives';
-    $request->connectionId = 'female than';
-    $request->contactId = 'reintermediate Enid Applications';
-    $request->limit = 1980.39;
-    $request->offset = 3478;
-    $request->order = 'white Oklahoma Functionality';
-    $request->query = 'pricing whether Hillsboro';
-    $request->sort = 'Wooden desensitize SCSI';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-03T12:40:46.997Z');
-
-    $response = $sdk->uc->getUcConnectionIdCall($request);
-
-    if ($response->ucCalls !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest](../../models/operations/GetUcConnectionIdCallRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse](../../models/operations/GetUcConnectionIdCallResponse.md)**
-
-
-## getUcConnectionIdContact
-
-List all contacts
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetUcConnectionIdContactRequest();
-    $request->agentId = 'Refined Practical';
-    $request->connectionId = 'inasmuch Dodge';
-    $request->limit = 7215.14;
-    $request->offset = 2910.48;
-    $request->order = 'Vermont';
-    $request->query = 'maroon JBOD';
-    $request->sort = 'hertz';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-29T17:06:35.136Z');
-
-    $response = $sdk->uc->getUcConnectionIdContact($request);
-
-    if ($response->ucContacts !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest](../../models/operations/GetUcConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactResponse](../../models/operations/GetUcConnectionIdContactResponse.md)**
-
-
-## getUcConnectionIdContactId
-
-Retrieve a contact
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetUcConnectionIdContactIdRequest();
-    $request->connectionId = 'Land';
-    $request->id = '<ID>';
-
-    $response = $sdk->uc->getUcConnectionIdContactId($request);
-
-    if ($response->ucContact !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest](../../models/operations/GetUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdResponse](../../models/operations/GetUcConnectionIdContactIdResponse.md)**
-
-
-## patchUcConnectionIdContactId
-
-Update a contact
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest;
-use \Unified\Unified_to\Models\Shared\UcContact;
-use \Unified\Unified_to\Models\Shared\UcEmail;
-use \Unified\Unified_to\Models\Shared\UcEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyUcContactRaw;
-use \Unified\Unified_to\Models\Shared\UcTelephone;
-use \Unified\Unified_to\Models\Shared\UcTelephoneType;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchUcConnectionIdContactIdRequest();
-    $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Wilderman, Cremin and Gislason';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-18T06:13:06.229Z');
-    $request->ucContact->emails = [
-        new UcEmail(),
-    ];
-    $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'Denar';
-    $request->ucContact->raw = new PropertyUcContactRaw();
-    $request->ucContact->telephones = [
-        new UcTelephone(),
-    ];
-    $request->ucContact->title = 'strategy Synergized';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T04:42:09.384Z');
-    $request->connectionId = 'Chips Lead';
-    $request->id = '<ID>';
-
-    $response = $sdk->uc->patchUcConnectionIdContactId($request);
-
-    if ($response->ucContact !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest](../../models/operations/PatchUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdResponse](../../models/operations/PatchUcConnectionIdContactIdResponse.md)**
-
-
-## postUcConnectionIdContact
+* [createUcContact](#createuccontact) - Create a contact
+* [getUcContact](#getuccontact) - Retrieve a contact
+* [listUcAgents](#listucagents) - List all agents
+* [listUcCalls](#listuccalls) - List all calls
+* [listUcContacts](#listuccontacts) - List all contacts
+* [patchUcContact](#patchuccontact) - Update a contact
+* [removeUcContact](#removeuccontact) - Remove a contact
+* [updateUcContact](#updateuccontact) - Update a contact
+
+## createUcContact
 
 Create a contact
 
@@ -365,7 +26,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest;
+use \Unified\Unified_to\Models\Operations\CreateUcContactRequest;
 use \Unified\Unified_to\Models\Shared\UcContact;
 use \Unified\Unified_to\Models\Shared\UcEmail;
 use \Unified\Unified_to\Models\Shared\UcEmailType;
@@ -381,24 +42,24 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostUcConnectionIdContactRequest();
+    $request = new CreateUcContactRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Howell and Sons';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-18T04:56:44.573Z');
+    $request->ucContact->company = 'Gottlieb - Becker';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-20T18:36:15.437Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
     $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'Bacon Orchestrator Data';
+    $request->ucContact->name = 'disintermediate indigo indeed';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Togo';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T15:07:09.784Z');
-    $request->connectionId = 'Human COM';
+    $request->ucContact->title = 'meanwhile';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-20T17:09:49.957Z');
+    $request->connectionId = 'West Auto Garden';
 
-    $response = $sdk->uc->postUcConnectionIdContact($request);
+    $response = $sdk->uc->createUcContact($request);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -410,17 +71,236 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest](../../models/operations/PostUcConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateUcContactRequest](../../models/operations/CreateUcContactRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostUcConnectionIdContactResponse](../../models/operations/PostUcConnectionIdContactResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateUcContactResponse](../../models/operations/CreateUcContactResponse.md)**
 
 
-## putUcConnectionIdContactId
+## getUcContact
+
+Retrieve a contact
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetUcContactRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetUcContactRequest();
+    $request->connectionId = 'JBOD ivory fool';
+    $request->id = '<ID>';
+
+    $response = $sdk->uc->getUcContact($request);
+
+    if ($response->ucContact !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUcContactRequest](../../models/operations/GetUcContactRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetUcContactResponse](../../models/operations/GetUcContactResponse.md)**
+
+
+## listUcAgents
+
+List all agents
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListUcAgentsRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListUcAgentsRequest();
+    $request->connectionId = 'Representative';
+    $request->contactId = 'Chief';
+    $request->limit = 4223.29;
+    $request->offset = 2385.02;
+    $request->order = 'Rock reliable';
+    $request->query = 'Classical Electric aboard';
+    $request->sort = 'Analyst beside harmonious';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T11:27:26.461Z');
+
+    $response = $sdk->uc->listUcAgents($request);
+
+    if ($response->ucAgents !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListUcAgentsRequest](../../models/operations/ListUcAgentsRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListUcAgentsResponse](../../models/operations/ListUcAgentsResponse.md)**
+
+
+## listUcCalls
+
+List all calls
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListUcCallsRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListUcCallsRequest();
+    $request->agentId = 'optical';
+    $request->connectionId = 'playfully';
+    $request->contactId = 'AGP';
+    $request->limit = 1965.31;
+    $request->offset = 4663.16;
+    $request->order = 'ubiquitous error denationalise';
+    $request->query = 'at';
+    $request->sort = 'Money Florida female';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-12T14:01:07.814Z');
+
+    $response = $sdk->uc->listUcCalls($request);
+
+    if ($response->ucCalls !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                | [\Unified\Unified_to\Models\Operations\ListUcCallsRequest](../../models/operations/ListUcCallsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListUcCallsResponse](../../models/operations/ListUcCallsResponse.md)**
+
+
+## listUcContacts
+
+List all contacts
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListUcContactsRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListUcContactsRequest();
+    $request->agentId = 'Bicycle male';
+    $request->connectionId = 'haptic';
+    $request->limit = 8550.33;
+    $request->offset = 3957.45;
+    $request->order = 'generating Legacy North';
+    $request->query = 'Car';
+    $request->sort = 'Berkshire';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-12T05:27:22.539Z');
+
+    $response = $sdk->uc->listUcContacts($request);
+
+    if ($response->ucContacts !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\ListUcContactsRequest](../../models/operations/ListUcContactsRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListUcContactsResponse](../../models/operations/ListUcContactsResponse.md)**
+
+
+## patchUcContact
 
 Update a contact
 
@@ -434,7 +314,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchUcContactRequest;
 use \Unified\Unified_to\Models\Shared\UcContact;
 use \Unified\Unified_to\Models\Shared\UcEmail;
 use \Unified\Unified_to\Models\Shared\UcEmailType;
@@ -450,25 +330,25 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutUcConnectionIdContactIdRequest();
+    $request = new PatchUcContactRequest();
     $request->ucContact = new UcContact();
-    $request->ucContact->company = 'Feeney, Gusikowski and Douglas';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-15T18:36:56.888Z');
+    $request->ucContact->company = 'Runolfsdottir, Boehm and Toy';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-28T14:51:42.138Z');
     $request->ucContact->emails = [
         new UcEmail(),
     ];
     $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'reboot';
+    $request->ucContact->name = 'Borders Carolina South';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'payment hem';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T05:28:31.787Z');
-    $request->connectionId = 'Hip Southwest';
+    $request->ucContact->title = 'deliverables';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-04T14:30:17.869Z');
+    $request->connectionId = 'Product aggravating';
     $request->id = '<ID>';
 
-    $response = $sdk->uc->putUcConnectionIdContactId($request);
+    $response = $sdk->uc->patchUcContact($request);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -480,12 +360,132 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest](../../models/operations/PutUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchUcContactRequest](../../models/operations/PatchUcContactRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdResponse](../../models/operations/PutUcConnectionIdContactIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchUcContactResponse](../../models/operations/PatchUcContactResponse.md)**
+
+
+## removeUcContact
+
+Remove a contact
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveUcContactRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveUcContactRequest();
+    $request->connectionId = 'Configurable';
+    $request->id = '<ID>';
+
+    $response = $sdk->uc->removeUcContact($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveUcContactRequest](../../models/operations/RemoveUcContactRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveUcContactResponse](../../models/operations/RemoveUcContactResponse.md)**
+
+
+## updateUcContact
+
+Update a contact
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateUcContactRequest;
+use \Unified\Unified_to\Models\Shared\UcContact;
+use \Unified\Unified_to\Models\Shared\UcEmail;
+use \Unified\Unified_to\Models\Shared\UcEmailType;
+use \Unified\Unified_to\Models\Shared\PropertyUcContactRaw;
+use \Unified\Unified_to\Models\Shared\UcTelephone;
+use \Unified\Unified_to\Models\Shared\UcTelephoneType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateUcContactRequest();
+    $request->ucContact = new UcContact();
+    $request->ucContact->company = 'Marquardt Group';
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T01:40:47.681Z');
+    $request->ucContact->emails = [
+        new UcEmail(),
+    ];
+    $request->ucContact->id = '<ID>';
+    $request->ucContact->name = 'whether Illinois';
+    $request->ucContact->raw = new PropertyUcContactRaw();
+    $request->ucContact->telephones = [
+        new UcTelephone(),
+    ];
+    $request->ucContact->title = 'Northeast';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T00:14:26.766Z');
+    $request->connectionId = 'Cruiser';
+    $request->id = '<ID>';
+
+    $response = $sdk->uc->updateUcContact($request);
+
+    if ($response->ucContact !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateUcContactRequest](../../models/operations/UpdateUcContactRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateUcContactResponse](../../models/operations/UpdateUcContactResponse.md)**
 

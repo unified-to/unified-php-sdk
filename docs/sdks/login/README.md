@@ -3,9 +3,9 @@
 
 ### Available Operations
 
-* [getUnifiedIntegrationLoginWorkspaceIdIntegrationType](#getunifiedintegrationloginworkspaceidintegrationtype) - Sign in a user
+* [getUnifiedIntegrationLogin](#getunifiedintegrationlogin) - Sign in a user
 
-## getUnifiedIntegrationLoginWorkspaceIdIntegrationType
+## getUnifiedIntegrationLogin
 
 Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
 
@@ -19,7 +19,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest;
+use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -29,18 +29,18 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest();
-    $request->env = 'Rubber';
-    $request->failureRedirect = 'gold Cambridgeshire';
-    $request->integrationType = 'Plastic services pixel';
+    $request = new GetUnifiedIntegrationLoginRequest();
+    $request->env = 'Bicycle markets Soft';
+    $request->failureRedirect = 'bus Strontium';
+    $request->integrationType = 'more purple';
     $request->redirect = false;
-    $request->state = 'Volkswagen Southwest';
-    $request->successRedirect = 'drive integrated Bicycle';
-    $request->workspaceId = 'Fantastic recontextualize Frozen';
+    $request->state = 'District';
+    $request->successRedirect = 'pascal Berkshire';
+    $request->workspaceId = 'meanwhile volt';
 
-    $response = $sdk->login->getUnifiedIntegrationLoginWorkspaceIdIntegrationType($request);
+    $response = $sdk->login->getUnifiedIntegrationLogin($request);
 
-    if ($response->getUnifiedIntegrationLoginWorkspaceIdIntegrationType200ApplicationJSONString !== null) {
+    if ($response->getUnifiedIntegrationLogin200ApplicationJSONString !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -50,12 +50,12 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                   | Type                                                                                                                                                                                        | Required                                                                                                                                                                                    | Description                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                                                          | The request object to use for the request.                                                                                                                                                  |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest](../../models/operations/GetUnifiedIntegrationLoginRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse](../../models/operations/GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginResponse](../../models/operations/GetUnifiedIntegrationLoginResponse.md)**
 

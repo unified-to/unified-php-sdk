@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [getEnrichConnectionIdCompany](#getenrichconnectionidcompany) - Retrieve enrichment information for a company
-* [getEnrichConnectionIdPerson](#getenrichconnectionidperson) - Retrieve enrichment information for a person
+* [listEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
+* [listEnrichPeople](#listenrichpeople) - Retrieve enrichment information for a person
 
-## getEnrichConnectionIdCompany
+## listEnrichCompanies
 
 Retrieve enrichment information for a company
 
@@ -20,7 +20,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyRequest;
+use \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -30,12 +30,12 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetEnrichConnectionIdCompanyRequest();
-    $request->connectionId = 'female Computers Central';
-    $request->domain = 'scientific-facet.biz';
-    $request->name = 'Outdoors embrace interface';
+    $request = new ListEnrichCompaniesRequest();
+    $request->connectionId = 'Chips';
+    $request->domain = 'impure-guava.org';
+    $request->name = 'sadly Principal';
 
-    $response = $sdk->enrich->getEnrichConnectionIdCompany($request);
+    $response = $sdk->enrich->listEnrichCompanies($request);
 
     if ($response->enrichCompany !== null) {
         // handle response
@@ -47,17 +47,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyRequest](../../models/operations/GetEnrichConnectionIdCompanyRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest](../../models/operations/ListEnrichCompaniesRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdCompanyResponse](../../models/operations/GetEnrichConnectionIdCompanyResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse](../../models/operations/ListEnrichCompaniesResponse.md)**
 
 
-## getEnrichConnectionIdPerson
+## listEnrichPeople
 
 Retrieve enrichment information for a person
 
@@ -71,7 +71,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonRequest;
+use \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -81,14 +81,14 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetEnrichConnectionIdPersonRequest();
-    $request->connectionId = 'Iowa Account';
-    $request->email = 'Jaiden_Weimann24@gmail.com';
-    $request->linkedinUrl = 'paradigms integrate Creative';
-    $request->name = 'Investment';
-    $request->twitter = 'Hills';
+    $request = new ListEnrichPeopleRequest();
+    $request->connectionId = 'Passenger';
+    $request->email = 'Lia.Green@yahoo.com';
+    $request->linkedinUrl = 'ad';
+    $request->name = 'Investor';
+    $request->twitter = 'Convertible';
 
-    $response = $sdk->enrich->getEnrichConnectionIdPerson($request);
+    $response = $sdk->enrich->listEnrichPeople($request);
 
     if ($response->enrichPerson !== null) {
         // handle response
@@ -100,12 +100,12 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonRequest](../../models/operations/GetEnrichConnectionIdPersonRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest](../../models/operations/ListEnrichPeopleRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetEnrichConnectionIdPersonResponse](../../models/operations/GetEnrichConnectionIdPersonResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse](../../models/operations/ListEnrichPeopleResponse.md)**
 

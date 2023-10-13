@@ -26,18 +26,18 @@ class Login
      * 
      * Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse
+     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginResponse
      */
-	public function getUnifiedIntegrationLoginWorkspaceIdIntegrationType(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse
+	public function getUnifiedIntegrationLogin(
+        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/login/{workspace_id}/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/login/{workspace_id}/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -45,14 +45,14 @@ class Login
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->getUnifiedIntegrationLoginWorkspaceIdIntegrationType200ApplicationJSONString = $httpResponse->getBody()->getContents();
+                $response->getUnifiedIntegrationLogin200ApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 

@@ -12,53 +12,15 @@ use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class GetUnifiedConnectionRequest
 {
     /**
-     * Filter the results on these categories
+     * ID of the Connection
      * 
-     * @var ?array<\Unified\Unified_to\Models\Operations\GetUnifiedConnectionCategories> $categories
+     * @var string $id
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=categories')]
-    public ?array $categories = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
-    public ?string $env = null;
-    
-    /**
-     * Filter the results to only those integrations for your user referenced by this value
-     * 
-     * @var ?string $externalXref
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=external_xref')]
-    public ?string $externalXref = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
-    public ?float $limit = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
-    public ?float $offset = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
-    public ?string $order = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
-    public ?string $sort = null;
-    
-    /**
-     * Return only results whose updated date is equal or greater to this value
-     * 
-     * @var ?\DateTime $updatedGte
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
+    public string $id;
     
 	public function __construct()
 	{
-		$this->categories = null;
-		$this->env = null;
-		$this->externalXref = null;
-		$this->limit = null;
-		$this->offset = null;
-		$this->order = null;
-		$this->sort = null;
-		$this->updatedGte = null;
+		$this->id = "";
 	}
 }

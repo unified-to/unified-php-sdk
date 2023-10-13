@@ -22,34 +22,75 @@ class Uc
 	}
 	
     /**
-     * Remove a contact
+     * Create a contact
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateUcContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcContactResponse
      */
-	public function deleteUcConnectionIdContactId(
-        ?\Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdResponse
+	public function createUcContact(
+        ?\Unified\Unified_to\Models\Operations\CreateUcContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', \Unified\Unified_to\Models\Operations\CreateUcContactRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "ucContact", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateUcContactResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->ucContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\UcContact', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a contact
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetUcContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcContactResponse
+     */
+	public function getUcContact(
+        ?\Unified\Unified_to\Models\Operations\GetUcContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetUcContactResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\GetUcContactRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteUcConnectionIdContactIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetUcContactResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteUcConnectionIdContactIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->ucContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\UcContact', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Uc
     /**
      * List all agents
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse
+     * @param \Unified\Unified_to\Models\Operations\ListUcAgentsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcAgentsResponse
      */
-	public function getUcConnectionIdAgent(
-        ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse
+	public function listUcAgents(
+        ?\Unified\Unified_to\Models\Operations\ListUcAgentsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUcAgentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/agent', \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/agent', \Unified\Unified_to\Models\Operations\ListUcAgentsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUcAgentsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Uc
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUcConnectionIdAgentResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListUcAgentsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -96,18 +137,18 @@ class Uc
     /**
      * List all calls
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse
+     * @param \Unified\Unified_to\Models\Operations\ListUcCallsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      */
-	public function getUcConnectionIdCall(
-        ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse
+	public function listUcCalls(
+        ?\Unified\Unified_to\Models\Operations\ListUcCallsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUcCallsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', \Unified\Unified_to\Models\Operations\ListUcCallsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUcConnectionIdCallRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUcCallsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -115,7 +156,7 @@ class Uc
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUcConnectionIdCallResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListUcCallsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -133,18 +174,18 @@ class Uc
     /**
      * List all contacts
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactResponse
+     * @param \Unified\Unified_to\Models\Operations\ListUcContactsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcContactsResponse
      */
-	public function getUcConnectionIdContact(
-        ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactResponse
+	public function listUcContacts(
+        ?\Unified\Unified_to\Models\Operations\ListUcContactsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUcContactsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', \Unified\Unified_to\Models\Operations\ListUcContactsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUcContactsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -152,7 +193,7 @@ class Uc
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListUcContactsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -168,53 +209,17 @@ class Uc
     }
 	
     /**
-     * Retrieve a contact
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdResponse
-     */
-	public function getUcConnectionIdContactId(
-        ?\Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUcConnectionIdContactIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->ucContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\UcContact', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a contact
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchUcContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcContactResponse
      */
-	public function patchUcConnectionIdContactId(
-        ?\Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdResponse
+	public function patchUcContact(
+        ?\Unified\Unified_to\Models\Operations\PatchUcContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\PatchUcContactRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ucContact", "json");
@@ -228,7 +233,7 @@ class Uc
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchUcConnectionIdContactIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchUcContactResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -244,39 +249,34 @@ class Uc
     }
 	
     /**
-     * Create a contact
+     * Remove a contact
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveUcContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
      */
-	public function postUcConnectionIdContact(
-        ?\Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactResponse
+	public function removeUcContact(
+        ?\Unified\Unified_to\Models\Operations\RemoveUcContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\RemoveUcContactRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "ucContact", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostUcConnectionIdContactResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveUcContactResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->ucContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\UcContact', 'json');
+                $response->removeUcContactDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -286,15 +286,15 @@ class Uc
     /**
      * Update a contact
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateUcContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcContactResponse
      */
-	public function putUcConnectionIdContactId(
-        ?\Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdResponse
+	public function updateUcContact(
+        ?\Unified\Unified_to\Models\Operations\UpdateUcContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\UpdateUcContactRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ucContact", "json");
@@ -308,7 +308,7 @@ class Uc
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutUcConnectionIdContactIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateUcContactResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

@@ -3,437 +3,14 @@
 
 ### Available Operations
 
-* [deleteCrmConnectionIdUserId](#deletecrmconnectioniduserid) - Remove a user
-* [deleteUnifiedUser](#deleteunifieduser) - Delete your user object
-* [getCrmConnectionIdUser](#getcrmconnectioniduser) - List all users
-* [getCrmConnectionIdUserId](#getcrmconnectioniduserid) - Retrieve a user
-* [getUnifiedUser](#getunifieduser) - Retrieve your user object
-* [getUnifiedUserToken](#getunifiedusertoken) - Retrieve your user token
-* [patchCrmConnectionIdUserId](#patchcrmconnectioniduserid) - Update a user
-* [patchUnifiedUser](#patchunifieduser) - Updates your user object
-* [postCrmConnectionIdUser](#postcrmconnectioniduser) - Create a user
-* [putCrmConnectionIdUserId](#putcrmconnectioniduserid) - Update a user
-* [putUnifiedUser](#putunifieduser) - Updates your user object
-
-## deleteCrmConnectionIdUserId
-
-Remove a user
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteCrmConnectionIdUserIdRequest();
-    $request->connectionId = 'Intranet Data';
-    $request->id = '<ID>';
-
-    $response = $sdk->user->deleteCrmConnectionIdUserId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdRequest](../../models/operations/DeleteCrmConnectionIdUserIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdUserIdResponse](../../models/operations/DeleteCrmConnectionIdUserIdResponse.md)**
-
-
-## deleteUnifiedUser
-
-Delete your user object
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $response = $sdk->user->deleteUnifiedUser();
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteUnifiedUserResponse](../../models/operations/DeleteUnifiedUserResponse.md)**
-
-
-## getCrmConnectionIdUser
-
-List all users
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetCrmConnectionIdUserRequest();
-    $request->connectionId = 'suit Electronic Tampa';
-    $request->limit = 2883.34;
-    $request->offset = 8886.55;
-    $request->order = 'despite';
-    $request->query = 'frightfully Fitness';
-    $request->sort = 'success servant';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-23T05:53:04.259Z');
-
-    $response = $sdk->user->getCrmConnectionIdUser($request);
-
-    if ($response->crmUsers !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserRequest](../../models/operations/GetCrmConnectionIdUserRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserResponse](../../models/operations/GetCrmConnectionIdUserResponse.md)**
-
-
-## getCrmConnectionIdUserId
-
-Retrieve a user
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetCrmConnectionIdUserIdRequest();
-    $request->connectionId = 'connecting Program';
-    $request->id = '<ID>';
-
-    $response = $sdk->user->getCrmConnectionIdUserId($request);
-
-    if ($response->crmUser !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdRequest](../../models/operations/GetCrmConnectionIdUserIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdUserIdResponse](../../models/operations/GetCrmConnectionIdUserIdResponse.md)**
-
-
-## getUnifiedUser
-
-Retrieve your user object
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $response = $sdk->user->getUnifiedUser();
-
-    if ($response->user !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedUserResponse](../../models/operations/GetUnifiedUserResponse.md)**
-
-
-## getUnifiedUserToken
-
-Retrieve your user token
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $response = $sdk->user->getUnifiedUserToken();
-
-    if ($response->getUnifiedUserToken200ApplicationJSONString !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedUserTokenResponse](../../models/operations/GetUnifiedUserTokenResponse.md)**
-
-
-## patchCrmConnectionIdUserId
-
-Update a user
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdRequest;
-use \Unified\Unified_to\Models\Shared\CrmUser;
-use \Unified\Unified_to\Models\Shared\PropertyCrmUserAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmUserRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchCrmConnectionIdUserIdRequest();
-    $request->crmUser = new CrmUser();
-    $request->crmUser->active = false;
-    $request->crmUser->address = new PropertyCrmUserAddress();
-    $request->crmUser->address->address1 = 'Customer';
-    $request->crmUser->address->address2 = 'violet groupware blanditiis';
-    $request->crmUser->address->city = 'South Phoebeshire';
-    $request->crmUser->address->country = 'Thailand';
-    $request->crmUser->address->countryCode = 'NO';
-    $request->crmUser->address->postalCode = '30801-4594';
-    $request->crmUser->address->region = 'portals Vanadium';
-    $request->crmUser->address->regionCode = 'Future';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-04T02:42:28.788Z');
-    $request->crmUser->currency = 'Guinea Franc';
-    $request->crmUser->department = 'Gloves global rosin';
-    $request->crmUser->division = 'Berkshire Europium';
-    $request->crmUser->emails = [
-        new CrmEmail(),
-    ];
-    $request->crmUser->id = '<ID>';
-    $request->crmUser->imageUrl = 'anti';
-    $request->crmUser->languageLocale = 'Avon India';
-    $request->crmUser->name = 'Zimbabwe';
-    $request->crmUser->raw = new PropertyCrmUserRaw();
-    $request->crmUser->telephones = [
-        new CrmTelephone(),
-    ];
-    $request->crmUser->timezone = 'Asia/Tokyo';
-    $request->crmUser->title = 'Porsche matrix Electric';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-07T11:01:50.491Z');
-    $request->connectionId = 'Seaborgium male unto';
-    $request->id = '<ID>';
-
-    $response = $sdk->user->patchCrmConnectionIdUserId($request);
-
-    if ($response->crmUser !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdRequest](../../models/operations/PatchCrmConnectionIdUserIdRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdUserIdResponse](../../models/operations/PatchCrmConnectionIdUserIdResponse.md)**
-
-
-## patchUnifiedUser
-
-Only the name field is updated.
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Shared\User;
-use \Unified\Unified_to\Models\Shared\PropertyUserMeta;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-24T15:25:24.483Z');
-    $request->email = 'Emmalee.Quitzon@yahoo.com';
-    $request->environment = 'Bicycle';
-    $request->id = '<ID>';
-    $request->meta = new PropertyUserMeta();
-    $request->name = 'vice compressing';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-05T16:52:20.023Z');
-    $request->workspaceId = 'Hybrid methodologies';
-    $request->workspaceIds = [
-        'Potassium',
-    ];
-
-    $response = $sdk->user->patchUnifiedUser($request);
-
-    if ($response->user !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `$request`                                                            | [\Unified\Unified_to\Models\Shared\User](../../models/shared/User.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchUnifiedUserResponse](../../models/operations/PatchUnifiedUserResponse.md)**
-
-
-## postCrmConnectionIdUser
+* [createCrmUser](#createcrmuser) - Create a user
+* [getCrmUser](#getcrmuser) - Retrieve a user
+* [listCrmUsers](#listcrmusers) - List all users
+* [patchCrmUser](#patchcrmuser) - Update a user
+* [removeCrmUser](#removecrmuser) - Remove a user
+* [updateCrmUser](#updatecrmuser) - Update a user
+
+## createCrmUser
 
 Create a user
 
@@ -447,7 +24,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserRequest;
+use \Unified\Unified_to\Models\Operations\CreateCrmUserRequest;
 use \Unified\Unified_to\Models\Shared\CrmUser;
 use \Unified\Unified_to\Models\Shared\PropertyCrmUserAddress;
 use \Unified\Unified_to\Models\Shared\CrmEmail;
@@ -464,39 +41,39 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostCrmConnectionIdUserRequest();
+    $request = new CreateCrmUserRequest();
     $request->crmUser = new CrmUser();
     $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
-    $request->crmUser->address->address1 = 'driver East';
-    $request->crmUser->address->address2 = 'relationships Computer navigate';
-    $request->crmUser->address->city = 'Homestead';
-    $request->crmUser->address->country = 'Cayman Islands';
-    $request->crmUser->address->countryCode = 'BW';
-    $request->crmUser->address->postalCode = '34958';
-    $request->crmUser->address->region = 'South';
-    $request->crmUser->address->regionCode = 'morph an colossal';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-02T08:27:21.693Z');
-    $request->crmUser->currency = 'Cayman Islands Dollar';
-    $request->crmUser->department = 'um';
-    $request->crmUser->division = 'West sievert generating';
+    $request->crmUser->address->address1 = 'await male';
+    $request->crmUser->address->address2 = 'Incredible Virginia';
+    $request->crmUser->address->city = 'East Providenci';
+    $request->crmUser->address->country = 'United States Minor Outlying Islands';
+    $request->crmUser->address->countryCode = 'SY';
+    $request->crmUser->address->postalCode = '14531';
+    $request->crmUser->address->region = 'Tandem though';
+    $request->crmUser->address->regionCode = 'Bedfordshire';
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-22T22:20:10.918Z');
+    $request->crmUser->currency = 'Bermudian Dollar (customarily known as Bermuda Dollar)';
+    $request->crmUser->department = 'Ohio male';
+    $request->crmUser->division = 'AI North';
     $request->crmUser->emails = [
         new CrmEmail(),
     ];
     $request->crmUser->id = '<ID>';
-    $request->crmUser->imageUrl = 'invoice';
-    $request->crmUser->languageLocale = 'Division Accountability radian';
-    $request->crmUser->name = 'bypass';
+    $request->crmUser->imageUrl = 'Latin Will the';
+    $request->crmUser->languageLocale = 'Central Director';
+    $request->crmUser->name = 'Personal compelling similique';
     $request->crmUser->raw = new PropertyCrmUserRaw();
     $request->crmUser->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmUser->timezone = 'Asia/Kuala_Lumpur';
-    $request->crmUser->title = 'Silicon Awesome Industrial';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-14T15:51:58.095Z');
-    $request->connectionId = 'Tuna';
+    $request->crmUser->timezone = 'Europe/Athens';
+    $request->crmUser->title = 'Assimilated';
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T01:04:23.014Z');
+    $request->connectionId = 'Buckinghamshire';
 
-    $response = $sdk->user->postCrmConnectionIdUser($request);
+    $response = $sdk->user->createCrmUser($request);
 
     if ($response->crmUser !== null) {
         // handle response
@@ -508,17 +85,122 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserRequest](../../models/operations/PostCrmConnectionIdUserRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\CreateCrmUserRequest](../../models/operations/CreateCrmUserRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdUserResponse](../../models/operations/PostCrmConnectionIdUserResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateCrmUserResponse](../../models/operations/CreateCrmUserResponse.md)**
 
 
-## putCrmConnectionIdUserId
+## getCrmUser
+
+Retrieve a user
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetCrmUserRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetCrmUserRequest();
+    $request->connectionId = 'Bespoke Dollar';
+    $request->id = '<ID>';
+
+    $response = $sdk->user->getCrmUser($request);
+
+    if ($response->crmUser !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                              | [\Unified\Unified_to\Models\Operations\GetCrmUserRequest](../../models/operations/GetCrmUserRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetCrmUserResponse](../../models/operations/GetCrmUserResponse.md)**
+
+
+## listCrmUsers
+
+List all users
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListCrmUsersRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListCrmUsersRequest();
+    $request->connectionId = 'careless Costa';
+    $request->limit = 1707.72;
+    $request->offset = 6650.22;
+    $request->order = 'cyan Southeast';
+    $request->query = 'scale Rock San';
+    $request->sort = 'Centralized Neptunium';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T06:25:33.606Z');
+
+    $response = $sdk->user->listCrmUsers($request);
+
+    if ($response->crmUsers !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListCrmUsersRequest](../../models/operations/ListCrmUsersRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListCrmUsersResponse](../../models/operations/ListCrmUsersResponse.md)**
+
+
+## patchCrmUser
 
 Update a user
 
@@ -532,7 +214,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchCrmUserRequest;
 use \Unified\Unified_to\Models\Shared\CrmUser;
 use \Unified\Unified_to\Models\Shared\PropertyCrmUserAddress;
 use \Unified\Unified_to\Models\Shared\CrmEmail;
@@ -549,40 +231,40 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutCrmConnectionIdUserIdRequest();
+    $request = new PatchCrmUserRequest();
     $request->crmUser = new CrmUser();
     $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
-    $request->crmUser->address->address1 = 'Honduras';
-    $request->crmUser->address->address2 = 'Oxygen Libyan Burundi';
-    $request->crmUser->address->city = 'North Gertrudefield';
-    $request->crmUser->address->country = 'Belgium';
-    $request->crmUser->address->countryCode = 'DK';
-    $request->crmUser->address->postalCode = '00781';
-    $request->crmUser->address->region = 'Wagon';
-    $request->crmUser->address->regionCode = 'how overriding';
-    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-13T00:47:15.649Z');
-    $request->crmUser->currency = 'Pakistan Rupee';
-    $request->crmUser->department = 'Tricycle vaguely';
-    $request->crmUser->division = 'Severn bluetooth Argon';
+    $request->crmUser->address->address1 = 'Bronze composite';
+    $request->crmUser->address->address2 = 'katal Industrial Classical';
+    $request->crmUser->address->city = 'Bowling Green';
+    $request->crmUser->address->country = 'Canada';
+    $request->crmUser->address->countryCode = 'IT';
+    $request->crmUser->address->postalCode = '93073-3008';
+    $request->crmUser->address->region = 'Cab colorfully';
+    $request->crmUser->address->regionCode = 'Convertible';
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-18T22:39:35.070Z');
+    $request->crmUser->currency = 'Danish Krone';
+    $request->crmUser->department = 'Sanford';
+    $request->crmUser->division = 'meter Bike';
     $request->crmUser->emails = [
         new CrmEmail(),
     ];
     $request->crmUser->id = '<ID>';
-    $request->crmUser->imageUrl = 'program wimp Colombia';
-    $request->crmUser->languageLocale = 'AGP romance didactic';
-    $request->crmUser->name = 'ROI Polarised';
+    $request->crmUser->imageUrl = 'card equal';
+    $request->crmUser->languageLocale = 'Cotton apud';
+    $request->crmUser->name = 'male Land fumbling';
     $request->crmUser->raw = new PropertyCrmUserRaw();
     $request->crmUser->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmUser->timezone = 'Europe/Bucharest';
-    $request->crmUser->title = 'Central';
-    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T21:29:55.600Z');
-    $request->connectionId = 'Honda Indiana';
+    $request->crmUser->timezone = 'Asia/Almaty';
+    $request->crmUser->title = 'Borders turquoise';
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-05T04:59:37.900Z');
+    $request->connectionId = 'Cambridgeshire sit Account';
     $request->id = '<ID>';
 
-    $response = $sdk->user->putCrmConnectionIdUserId($request);
+    $response = $sdk->user->patchCrmUser($request);
 
     if ($response->crmUser !== null) {
         // handle response
@@ -594,19 +276,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdRequest](../../models/operations/PutCrmConnectionIdUserIdRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchCrmUserRequest](../../models/operations/PatchCrmUserRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdUserIdResponse](../../models/operations/PutCrmConnectionIdUserIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchCrmUserResponse](../../models/operations/PatchCrmUserResponse.md)**
 
 
-## putUnifiedUser
+## removeCrmUser
 
-Only the name field is updated.
+Remove a user
 
 ### Example Usage
 
@@ -618,8 +300,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Shared\User;
-use \Unified\Unified_to\Models\Shared\PropertyUserMeta;
+use \Unified\Unified_to\Models\Operations\RemoveCrmUserRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -629,22 +310,13 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new User();
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-31T04:46:29.769Z');
-    $request->email = 'Selena59@yahoo.com';
-    $request->environment = 'Bedfordshire Lucia';
+    $request = new RemoveCrmUserRequest();
+    $request->connectionId = 'Southeast';
     $request->id = '<ID>';
-    $request->meta = new PropertyUserMeta();
-    $request->name = 'Bicycle hacking South';
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-15T15:08:26.238Z');
-    $request->workspaceId = 'Card defect';
-    $request->workspaceIds = [
-        'repudiandae',
-    ];
 
-    $response = $sdk->user->putUnifiedUser($request);
+    $response = $sdk->user->removeCrmUser($request);
 
-    if ($response->user !== null) {
+    if ($response->statusCode === 200) {
         // handle response
     }
 } catch (Exception $e) {
@@ -654,12 +326,98 @@ try {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `$request`                                                            | [\Unified\Unified_to\Models\Shared\User](../../models/shared/User.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\RemoveCrmUserRequest](../../models/operations/RemoveCrmUserRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutUnifiedUserResponse](../../models/operations/PutUnifiedUserResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\RemoveCrmUserResponse](../../models/operations/RemoveCrmUserResponse.md)**
+
+
+## updateCrmUser
+
+Update a user
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateCrmUserRequest;
+use \Unified\Unified_to\Models\Shared\CrmUser;
+use \Unified\Unified_to\Models\Shared\PropertyCrmUserAddress;
+use \Unified\Unified_to\Models\Shared\CrmEmail;
+use \Unified\Unified_to\Models\Shared\CrmEmailType;
+use \Unified\Unified_to\Models\Shared\PropertyCrmUserRaw;
+use \Unified\Unified_to\Models\Shared\CrmTelephone;
+use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateCrmUserRequest();
+    $request->crmUser = new CrmUser();
+    $request->crmUser->active = false;
+    $request->crmUser->address = new PropertyCrmUserAddress();
+    $request->crmUser->address->address1 = 'Idaho green';
+    $request->crmUser->address->address2 = 'Savings';
+    $request->crmUser->address->city = 'Port Camillecester';
+    $request->crmUser->address->country = 'Antarctica (the territory South of 60 deg S)';
+    $request->crmUser->address->countryCode = 'RE';
+    $request->crmUser->address->postalCode = '79822';
+    $request->crmUser->address->region = 'Communications Concrete North';
+    $request->crmUser->address->regionCode = 'Southwest Hat Northwest';
+    $request->crmUser->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-12T15:42:51.263Z');
+    $request->crmUser->currency = 'Lempira';
+    $request->crmUser->department = 'Bronze quis';
+    $request->crmUser->division = 'female less';
+    $request->crmUser->emails = [
+        new CrmEmail(),
+    ];
+    $request->crmUser->id = '<ID>';
+    $request->crmUser->imageUrl = 'perspiciatis Creative 1080p';
+    $request->crmUser->languageLocale = 'Road Movies regulation';
+    $request->crmUser->name = 'Northeast Avon';
+    $request->crmUser->raw = new PropertyCrmUserRaw();
+    $request->crmUser->telephones = [
+        new CrmTelephone(),
+    ];
+    $request->crmUser->timezone = 'Europe/Dublin';
+    $request->crmUser->title = 'lavender hmph';
+    $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-19T17:15:40.477Z');
+    $request->connectionId = 'Movies Bedford';
+    $request->id = '<ID>';
+
+    $response = $sdk->user->updateCrmUser($request);
+
+    if ($response->crmUser !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\UpdateCrmUserRequest](../../models/operations/UpdateCrmUserRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateCrmUserResponse](../../models/operations/UpdateCrmUserResponse.md)**
 

@@ -22,34 +22,75 @@ class Job
 	}
 	
     /**
-     * Remove a job
+     * Create a job
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
      */
-	public function deleteAtsConnectionIdJobId(
-        ?\Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdResponse
+	public function createAtsJob(
+        ?\Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', \Unified\Unified_to\Models\Operations\CreateAtsJobRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "atsJob", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateAtsJobResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsJob = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a job
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetAtsJobRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
+     */
+	public function getAtsJob(
+        ?\Unified\Unified_to\Models\Operations\GetAtsJobRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetAtsJobResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\GetAtsJobRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteAtsConnectionIdJobIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetAtsJobResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteAtsConnectionIdJobIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsJob = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Job
     /**
      * List all jobs
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobResponse
+     * @param \Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
      */
-	public function getAtsConnectionIdJob(
-        ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobResponse
+	public function listAtsJobs(
+        ?\Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', \Unified\Unified_to\Models\Operations\ListAtsJobsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsJobsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Job
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListAtsJobsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Job
     }
 	
     /**
-     * Retrieve a job
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdResponse
-     */
-	public function getAtsConnectionIdJobId(
-        ?\Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsConnectionIdJobIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a job
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
      */
-	public function patchAtsConnectionIdJobId(
-        ?\Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdResponse
+	public function patchAtsJob(
+        ?\Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\PatchAtsJobRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "atsJob", "json");
@@ -154,7 +159,7 @@ class Job
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchAtsConnectionIdJobIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchAtsJobResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Job
     }
 	
     /**
-     * Create a job
+     * Remove a job
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
      */
-	public function postAtsConnectionIdJob(
-        ?\Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobResponse
+	public function removeAtsJob(
+        ?\Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsJob", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostAtsConnectionIdJobResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
+                $response->removeAtsJobDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Job
     /**
      * Update a job
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
      */
-	public function putAtsConnectionIdJobId(
-        ?\Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdResponse
+	public function updateAtsJob(
+        ?\Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "atsJob", "json");
@@ -234,7 +234,7 @@ class Job
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutAtsConnectionIdJobIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

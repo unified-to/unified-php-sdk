@@ -22,7 +22,7 @@ class Integration
 	}
 	
     /**
-     * Returns all integrations
+     * Retrieve an integration
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
@@ -32,10 +32,9 @@ class Integration
     ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration');
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -51,7 +50,7 @@ class Integration
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->integrations = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Integration>', 'json');
+                $response->integration = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Integration', 'json');
             }
         }
 
@@ -63,18 +62,18 @@ class Integration
      * 
      * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse
+     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse
      */
-	public function getUnifiedIntegrationAuthWorkspaceIdIntegrationType(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse
+	public function getUnifiedIntegrationAuth(
+        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -82,50 +81,14 @@ class Integration
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->getUnifiedIntegrationAuthWorkspaceIdIntegrationType200ApplicationJSONString = $httpResponse->getBody()->getContents();
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Retrieve an integration
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeResponse
-     */
-	public function getUnifiedIntegrationIntegrationType(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationIntegrationTypeResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->integration = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Integration', 'json');
+                $response->getUnifiedIntegrationAuth200ApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -137,18 +100,18 @@ class Integration
      * 
      * No authentication required as this is to be used by front-end interface
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdResponse
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse
      */
-	public function getUnifiedIntegrationWorkspaceWorkspaceId(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdResponse
+	public function listUnifiedIntegrationWorkspaces(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/workspace/{workspace_id}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/workspace/{workspace_id}', \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -156,7 +119,44 @@ class Integration
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationWorkspaceWorkspaceIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->integrations = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Integration>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns all integrations
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
+     */
+	public function listUnifiedIntegrations(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

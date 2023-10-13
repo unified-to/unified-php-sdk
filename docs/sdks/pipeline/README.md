@@ -3,230 +3,14 @@
 
 ### Available Operations
 
-* [deleteCrmConnectionIdPipelineId](#deletecrmconnectionidpipelineid) - Remove a pipeline
-* [getCrmConnectionIdPipeline](#getcrmconnectionidpipeline) - List all pipelines
-* [getCrmConnectionIdPipelineId](#getcrmconnectionidpipelineid) - Retrieve a pipeline
-* [patchCrmConnectionIdPipelineId](#patchcrmconnectionidpipelineid) - Update a pipeline
-* [postCrmConnectionIdPipeline](#postcrmconnectionidpipeline) - Create a pipeline
-* [putCrmConnectionIdPipelineId](#putcrmconnectionidpipelineid) - Update a pipeline
-
-## deleteCrmConnectionIdPipelineId
-
-Remove a pipeline
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new DeleteCrmConnectionIdPipelineIdRequest();
-    $request->connectionId = 'Customer';
-    $request->id = '<ID>';
-
-    $response = $sdk->pipeline->deleteCrmConnectionIdPipelineId($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdRequest](../../models/operations/DeleteCrmConnectionIdPipelineIdRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdPipelineIdResponse](../../models/operations/DeleteCrmConnectionIdPipelineIdResponse.md)**
-
-
-## getCrmConnectionIdPipeline
-
-List all pipelines
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetCrmConnectionIdPipelineRequest();
-    $request->connectionId = 'dirty Awesome Checking';
-    $request->limit = 9055.88;
-    $request->offset = 3443.76;
-    $request->order = 'glom';
-    $request->query = 'panel';
-    $request->sort = 'Latin tightly';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-01T15:47:43.244Z');
-
-    $response = $sdk->pipeline->getCrmConnectionIdPipeline($request);
-
-    if ($response->crmPipelines !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineRequest](../../models/operations/GetCrmConnectionIdPipelineRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineResponse](../../models/operations/GetCrmConnectionIdPipelineResponse.md)**
-
-
-## getCrmConnectionIdPipelineId
-
-Retrieve a pipeline
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new GetCrmConnectionIdPipelineIdRequest();
-    $request->connectionId = 'Tricycle roughly markets';
-    $request->id = '<ID>';
-
-    $response = $sdk->pipeline->getCrmConnectionIdPipelineId($request);
-
-    if ($response->crmPipeline !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdRequest](../../models/operations/GetCrmConnectionIdPipelineIdRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdPipelineIdResponse](../../models/operations/GetCrmConnectionIdPipelineIdResponse.md)**
-
-
-## patchCrmConnectionIdPipelineId
-
-Update a pipeline
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdRequest;
-use \Unified\Unified_to\Models\Shared\CrmPipeline;
-use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new PatchCrmConnectionIdPipelineIdRequest();
-    $request->crmPipeline = new CrmPipeline();
-    $request->crmPipeline->active = false;
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-24T17:39:51.183Z');
-    $request->crmPipeline->dealProbability = false;
-    $request->crmPipeline->displayOrder = 664.58;
-    $request->crmPipeline->id = '<ID>';
-    $request->crmPipeline->name = 'bandwidth';
-    $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-27T01:55:15.440Z');
-    $request->connectionId = 'Chips';
-    $request->id = '<ID>';
-
-    $response = $sdk->pipeline->patchCrmConnectionIdPipelineId($request);
-
-    if ($response->crmPipeline !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdRequest](../../models/operations/PatchCrmConnectionIdPipelineIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdPipelineIdResponse](../../models/operations/PatchCrmConnectionIdPipelineIdResponse.md)**
-
-
-## postCrmConnectionIdPipeline
+* [createCrmPipeline](#createcrmpipeline) - Create a pipeline
+* [getCrmPipeline](#getcrmpipeline) - Retrieve a pipeline
+* [listCrmPipelines](#listcrmpipelines) - List all pipelines
+* [patchCrmPipeline](#patchcrmpipeline) - Update a pipeline
+* [removeCrmPipeline](#removecrmpipeline) - Remove a pipeline
+* [updateCrmPipeline](#updatecrmpipeline) - Update a pipeline
+
+## createCrmPipeline
 
 Create a pipeline
 
@@ -240,7 +24,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineRequest;
+use \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest;
 use \Unified\Unified_to\Models\Shared\CrmPipeline;
 use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
 
@@ -252,19 +36,19 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PostCrmConnectionIdPipelineRequest();
+    $request = new CreateCrmPipelineRequest();
     $request->crmPipeline = new CrmPipeline();
     $request->crmPipeline->active = false;
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-10T23:55:22.206Z');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-24T14:15:54.218Z');
     $request->crmPipeline->dealProbability = false;
-    $request->crmPipeline->displayOrder = 3879.73;
+    $request->crmPipeline->displayOrder = 6254.97;
     $request->crmPipeline->id = '<ID>';
-    $request->crmPipeline->name = 'upward Mayaguez';
+    $request->crmPipeline->name = 'Vista';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-25T10:43:23.679Z');
-    $request->connectionId = 'Lead Health';
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-13T00:16:45.285Z');
+    $request->connectionId = 'Hatchback Nobelium California';
 
-    $response = $sdk->pipeline->postCrmConnectionIdPipeline($request);
+    $response = $sdk->pipeline->createCrmPipeline($request);
 
     if ($response->crmPipeline !== null) {
         // handle response
@@ -276,17 +60,122 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineRequest](../../models/operations/PostCrmConnectionIdPipelineRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest](../../models/operations/CreateCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdPipelineResponse](../../models/operations/PostCrmConnectionIdPipelineResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse](../../models/operations/CreateCrmPipelineResponse.md)**
 
 
-## putCrmConnectionIdPipelineId
+## getCrmPipeline
+
+Retrieve a pipeline
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetCrmPipelineRequest();
+    $request->connectionId = 'withdrawal Southeast';
+    $request->id = '<ID>';
+
+    $response = $sdk->pipeline->getCrmPipeline($request);
+
+    if ($response->crmPipeline !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetCrmPipelineRequest](../../models/operations/GetCrmPipelineRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetCrmPipelineResponse](../../models/operations/GetCrmPipelineResponse.md)**
+
+
+## listCrmPipelines
+
+List all pipelines
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListCrmPipelinesRequest();
+    $request->connectionId = 'primary';
+    $request->limit = 7011.75;
+    $request->offset = 2585.55;
+    $request->order = 'tesla';
+    $request->query = 'majestically mobile generate';
+    $request->sort = 'female National';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-04T20:48:27.612Z');
+
+    $response = $sdk->pipeline->listCrmPipelines($request);
+
+    if ($response->crmPipelines !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest](../../models/operations/ListCrmPipelinesRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse](../../models/operations/ListCrmPipelinesResponse.md)**
+
+
+## patchCrmPipeline
 
 Update a pipeline
 
@@ -300,7 +189,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdRequest;
+use \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest;
 use \Unified\Unified_to\Models\Shared\CrmPipeline;
 use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
 
@@ -312,20 +201,20 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PutCrmConnectionIdPipelineIdRequest();
+    $request = new PatchCrmPipelineRequest();
     $request->crmPipeline = new CrmPipeline();
     $request->crmPipeline->active = false;
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-16T17:24:47.805Z');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-26T17:19:01.949Z');
     $request->crmPipeline->dealProbability = false;
-    $request->crmPipeline->displayOrder = 5470.76;
+    $request->crmPipeline->displayOrder = 8620.92;
     $request->crmPipeline->id = '<ID>';
-    $request->crmPipeline->name = 'West';
+    $request->crmPipeline->name = 'Costa Southwest';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-28T07:49:31.151Z');
-    $request->connectionId = 'optimizing';
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T04:56:01.093Z');
+    $request->connectionId = 'Lead Operative';
     $request->id = '<ID>';
 
-    $response = $sdk->pipeline->putCrmConnectionIdPipelineId($request);
+    $response = $sdk->pipeline->patchCrmPipeline($request);
 
     if ($response->crmPipeline !== null) {
         // handle response
@@ -337,12 +226,123 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdRequest](../../models/operations/PutCrmConnectionIdPipelineIdRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest](../../models/operations/PatchCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdPipelineIdResponse](../../models/operations/PutCrmConnectionIdPipelineIdResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse](../../models/operations/PatchCrmPipelineResponse.md)**
+
+
+## removeCrmPipeline
+
+Remove a pipeline
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveCrmPipelineRequest();
+    $request->connectionId = 'Hybrid merrily';
+    $request->id = '<ID>';
+
+    $response = $sdk->pipeline->removeCrmPipeline($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest](../../models/operations/RemoveCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse](../../models/operations/RemoveCrmPipelineResponse.md)**
+
+
+## updateCrmPipeline
+
+Update a pipeline
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest;
+use \Unified\Unified_to\Models\Shared\CrmPipeline;
+use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateCrmPipelineRequest();
+    $request->crmPipeline = new CrmPipeline();
+    $request->crmPipeline->active = false;
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-27T08:28:05.275Z');
+    $request->crmPipeline->dealProbability = false;
+    $request->crmPipeline->displayOrder = 8923.83;
+    $request->crmPipeline->id = '<ID>';
+    $request->crmPipeline->name = 'Androgyne Northeast';
+    $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-30T06:55:51.144Z');
+    $request->connectionId = 'Configuration Minivan';
+    $request->id = '<ID>';
+
+    $response = $sdk->pipeline->updateCrmPipeline($request);
+
+    if ($response->crmPipeline !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest](../../models/operations/UpdateCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse](../../models/operations/UpdateCrmPipelineResponse.md)**
 

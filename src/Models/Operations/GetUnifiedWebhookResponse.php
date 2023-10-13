@@ -38,16 +38,16 @@ class GetUnifiedWebhookResponse
     /**
      * Successful
      * 
-     * @var ?array<\Unified\Unified_to\Models\Shared\Webhook> $webhooks
+     * @var ?\Unified\Unified_to\Models\Shared\Webhook $webhook
      */
 	
-    public ?array $webhooks = null;
+    public ?\Unified\Unified_to\Models\Shared\Webhook $webhook = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->webhooks = null;
+		$this->webhook = null;
 	}
 }

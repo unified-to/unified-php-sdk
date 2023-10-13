@@ -22,34 +22,42 @@ class Webhook
 	}
 	
     /**
-     * Remove webhook subscription
+     * Create webhook subscription
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdResponse
+     * To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
+     * 
+     * @param \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
      */
-	public function deleteUnifiedWebhookId(
-        ?\Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdResponse
+	public function createUnifiedWebhook(
+        ?\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{connection_id}/{object}', \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "webhook", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteUnifiedWebhookIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteUnifiedWebhookIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->webhook = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
             }
         }
 
@@ -57,7 +65,7 @@ class Webhook
     }
 	
     /**
-     * Returns all registered webhooks
+     * Retrieve webhook by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
@@ -67,10 +75,9 @@ class Webhook
     ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -86,6 +93,43 @@ class Webhook
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
+                $response->webhook = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns all registered webhooks
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
+     */
+	public function listUnifiedWebhooks(
+        ?\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
                 $response->webhooks = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Webhook>', 'json');
             }
         }
@@ -94,78 +138,34 @@ class Webhook
     }
 	
     /**
-     * Retrieve webhook by its ID
+     * Remove webhook subscription
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
      */
-	public function getUnifiedWebhookId(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdResponse
+	public function removeUnifiedWebhook(
+        ?\Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedWebhookIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->webhook = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Create webhook subscription
-     * 
-     * To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectResponse
-     */
-	public function postUnifiedWebhookConnectionIdObject(
-        ?\Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{connection_id}/{object}', \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "webhook", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\PostUnifiedWebhookConnectionIdObjectResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->webhook = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
+                $response->removeUnifiedWebhookDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 

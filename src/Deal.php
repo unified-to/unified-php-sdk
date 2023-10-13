@@ -22,34 +22,75 @@ class Deal
 	}
 	
     /**
-     * Remove a deal
+     * Create a deal
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmDealRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
      */
-	public function deleteCrmConnectionIdDealId(
-        ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdResponse
+	public function createCrmDeal(
+        ?\Unified\Unified_to\Models\Operations\CreateCrmDealRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', \Unified\Unified_to\Models\Operations\CreateCrmDealRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "crmDeal", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateCrmDealResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->crmDeal = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmDeal', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a deal
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetCrmDealRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
+     */
+	public function getCrmDeal(
+        ?\Unified\Unified_to\Models\Operations\GetCrmDealRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetCrmDealResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\GetCrmDealRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdDealIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetCrmDealResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteCrmConnectionIdDealIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->crmDeal = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmDeal', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Deal
     /**
      * List all deals
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealResponse
+     * @param \Unified\Unified_to\Models\Operations\ListCrmDealsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
      */
-	public function getCrmConnectionIdDeal(
-        ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealResponse
+	public function listCrmDeals(
+        ?\Unified\Unified_to\Models\Operations\ListCrmDealsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', \Unified\Unified_to\Models\Operations\ListCrmDealsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmDealsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Deal
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListCrmDealsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Deal
     }
 	
     /**
-     * Retrieve a deal
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdResponse
-     */
-	public function getCrmConnectionIdDealId(
-        ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetCrmConnectionIdDealIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmDeal = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmDeal', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a deal
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmDealRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
      */
-	public function patchCrmConnectionIdDealId(
-        ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdResponse
+	public function patchCrmDeal(
+        ?\Unified\Unified_to\Models\Operations\PatchCrmDealRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\PatchCrmDealRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "crmDeal", "json");
@@ -154,7 +159,7 @@ class Deal
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdDealIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchCrmDealResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Deal
     }
 	
     /**
-     * Create a deal
+     * Remove a deal
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
      */
-	public function postCrmConnectionIdDeal(
-        ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealResponse
+	public function removeCrmDeal(
+        ?\Unified\Unified_to\Models\Operations\RemoveCrmDealRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmDeal", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostCrmConnectionIdDealResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmDeal = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmDeal', 'json');
+                $response->removeCrmDealDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Deal
     /**
      * Update a deal
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
      */
-	public function putCrmConnectionIdDealId(
-        ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdResponse
+	public function updateCrmDeal(
+        ?\Unified\Unified_to\Models\Operations\UpdateCrmDealRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "crmDeal", "json");
@@ -234,7 +234,7 @@ class Deal
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutCrmConnectionIdDealIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

@@ -22,34 +22,75 @@ class File
 	}
 	
     /**
-     * Remove a file
+     * Create a file
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmFileRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmFileResponse
      */
-	public function deleteCrmConnectionIdFileId(
-        ?\Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdResponse
+	public function createCrmFile(
+        ?\Unified\Unified_to\Models\Operations\CreateCrmFileRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateCrmFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file', \Unified\Unified_to\Models\Operations\CreateCrmFileRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "crmFile", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateCrmFileResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->crmFile = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmFile', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a file
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetCrmFileRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmFileResponse
+     */
+	public function getCrmFile(
+        ?\Unified\Unified_to\Models\Operations\GetCrmFileRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetCrmFileResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\GetCrmFileRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteCrmConnectionIdFileIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetCrmFileResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteCrmConnectionIdFileIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->crmFile = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmFile', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class File
     /**
      * List all files
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileResponse
+     * @param \Unified\Unified_to\Models\Operations\ListCrmFilesRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmFilesResponse
      */
-	public function getCrmConnectionIdFile(
-        ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileResponse
+	public function listCrmFiles(
+        ?\Unified\Unified_to\Models\Operations\ListCrmFilesRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListCrmFilesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file', \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file', \Unified\Unified_to\Models\Operations\ListCrmFilesRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmFilesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class File
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListCrmFilesResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class File
     }
 	
     /**
-     * Retrieve a file
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdResponse
-     */
-	public function getCrmConnectionIdFileId(
-        ?\Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetCrmConnectionIdFileIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmFile = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmFile', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a file
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmFileRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmFileResponse
      */
-	public function patchCrmConnectionIdFileId(
-        ?\Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdResponse
+	public function patchCrmFile(
+        ?\Unified\Unified_to\Models\Operations\PatchCrmFileRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchCrmFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\PatchCrmFileRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "crmFile", "json");
@@ -154,7 +159,7 @@ class File
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchCrmConnectionIdFileIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchCrmFileResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class File
     }
 	
     /**
-     * Create a file
+     * Remove a file
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmFileRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmFileResponse
      */
-	public function postCrmConnectionIdFile(
-        ?\Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileResponse
+	public function removeCrmFile(
+        ?\Unified\Unified_to\Models\Operations\RemoveCrmFileRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveCrmFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file', \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmFileRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmFile", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostCrmConnectionIdFileResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveCrmFileResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->crmFile = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmFile', 'json');
+                $response->removeCrmFileDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class File
     /**
      * Update a file
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmFileRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmFileResponse
      */
-	public function putCrmConnectionIdFileId(
-        ?\Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdResponse
+	public function updateCrmFile(
+        ?\Unified\Unified_to\Models\Operations\UpdateCrmFileRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateCrmFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\UpdateCrmFileRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "crmFile", "json");
@@ -234,7 +234,7 @@ class File
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutCrmConnectionIdFileIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateCrmFileResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

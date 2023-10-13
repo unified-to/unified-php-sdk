@@ -22,10 +22,10 @@ class GetUnifiedIntegrationResponse
     /**
      * Successful
      * 
-     * @var ?array<\Unified\Unified_to\Models\Shared\Integration> $integrations
+     * @var ?\Unified\Unified_to\Models\Shared\Integration $integration
      */
 	
-    public ?array $integrations = null;
+    public ?\Unified\Unified_to\Models\Shared\Integration $integration = null;
     
     /**
      * HTTP response status code for this operation
@@ -46,7 +46,7 @@ class GetUnifiedIntegrationResponse
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->integrations = null;
+		$this->integration = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 	}

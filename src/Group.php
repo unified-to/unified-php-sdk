@@ -22,34 +22,75 @@ class Group
 	}
 	
     /**
-     * Remove a group
+     * Create a group
      * 
-     * @param \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
      */
-	public function deleteHrisConnectionIdGroupId(
-        ?\Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdResponse
+	public function createHrisGroup(
+        ?\Unified\Unified_to\Models\Operations\CreateHrisGroupRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "hrisGroup", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a group
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetHrisGroupRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
+     */
+	public function getHrisGroup(
+        ?\Unified\Unified_to\Models\Operations\GetHrisGroupRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\GetHrisGroupRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\DeleteHrisConnectionIdGroupIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetHrisGroupResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $response->deleteHrisConnectionIdGroupIdDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
             }
         }
 
@@ -59,18 +100,18 @@ class Group
     /**
      * List all groups
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupResponse
+     * @param \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
      */
-	public function getHrisConnectionIdGroup(
-        ?\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupResponse
+	public function listHrisGroups(
+        ?\Unified\Unified_to\Models\Operations\ListHrisGroupsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisGroupsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -78,7 +119,7 @@ class Group
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -94,53 +135,17 @@ class Group
     }
 	
     /**
-     * Retrieve a group
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdResponse
-     */
-	public function getHrisConnectionIdGroupId(
-        ?\Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \Unified\Unified_to\Models\Operations\GetHrisConnectionIdGroupIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->hrisGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update a group
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
      */
-	public function patchHrisConnectionIdGroupId(
-        ?\Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdResponse
+	public function patchHrisGroup(
+        ?\Unified\Unified_to\Models\Operations\PatchHrisGroupRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "hrisGroup", "json");
@@ -154,7 +159,7 @@ class Group
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchHrisConnectionIdGroupIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -170,39 +175,34 @@ class Group
     }
 	
     /**
-     * Create a group
+     * Remove a group
      * 
-     * @param \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
      */
-	public function postHrisConnectionIdGroup(
-        ?\Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupResponse
+	public function removeHrisGroup(
+        ?\Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisGroup", "json");
-        if ($body !== null) {
-            $options = array_merge_recursive($options, $body);
-        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PostHrisConnectionIdGroupResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200) {
+        if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->hrisGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
+                $response->removeHrisGroupDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -212,15 +212,15 @@ class Group
     /**
      * Update a group
      * 
-     * @param \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
      */
-	public function putHrisConnectionIdGroupId(
-        ?\Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdResponse
+	public function updateHrisGroup(
+        ?\Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "hrisGroup", "json");
@@ -234,7 +234,7 @@ class Group
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \Unified\Unified_to\Models\Operations\PutHrisConnectionIdGroupIdResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
