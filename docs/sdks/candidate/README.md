@@ -71,6 +71,9 @@ try {
     $request->atsCandidate->title = 'Bicycle midst';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-20T17:32:48.573Z');
     $request->connectionId = 'Money Folk Minivan';
+    $request->fields = [
+        'Avon',
+    ];
 
     $response = $sdk->candidate->createAtsCandidate($request);
 
@@ -120,6 +123,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetAtsCandidateRequest();
     $request->connectionId = 'Markets';
+    $request->fields = [
+        'payment',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->candidate->getAtsCandidate($request);
@@ -170,12 +176,15 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListAtsCandidatesRequest();
     $request->connectionId = 'mole clearly';
-    $request->limit = 8552.83;
-    $request->offset = 6403.86;
-    $request->order = 'colorful Chair';
-    $request->query = 'turquoise';
-    $request->sort = 'Hybrid New';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-08T17:42:53.570Z');
+    $request->fields = [
+        'Van',
+    ];
+    $request->limit = 8649.52;
+    $request->offset = 1284.05;
+    $request->order = 'Burleson';
+    $request->query = 'PNG Hybrid New';
+    $request->sort = 'plus';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-22T17:23:30.146Z');
 
     $response = $sdk->candidate->listAtsCandidates($request);
 
@@ -260,6 +269,9 @@ try {
     $request->atsCandidate->title = 'Executive female';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-05T19:04:45.670Z');
     $request->connectionId = 'ivory Investment Berkshire';
+    $request->fields = [
+        'for',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->candidate->patchAtsCandidate($request);
@@ -395,6 +407,9 @@ try {
     $request->atsCandidate->title = 'yellow Analyst';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-11T02:46:50.190Z');
     $request->connectionId = 'tan';
+    $request->fields = [
+        'whorl',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->candidate->updateAtsCandidate($request);

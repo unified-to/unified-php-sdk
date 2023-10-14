@@ -58,6 +58,9 @@ try {
     $request->ucContact->title = 'meanwhile';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-20T17:09:49.957Z');
     $request->connectionId = 'West Auto Garden';
+    $request->fields = [
+        'Southwest',
+    ];
 
     $response = $sdk->uc->createUcContact($request);
 
@@ -107,6 +110,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetUcContactRequest();
     $request->connectionId = 'JBOD ivory fool';
+    $request->fields = [
+        'Mouse',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->uc->getUcContact($request);
@@ -158,12 +164,15 @@ try {
     $request = new ListUcAgentsRequest();
     $request->connectionId = 'Representative';
     $request->contactId = 'Chief';
-    $request->limit = 4223.29;
-    $request->offset = 2385.02;
-    $request->order = 'Rock reliable';
-    $request->query = 'Classical Electric aboard';
-    $request->sort = 'Analyst beside harmonious';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T11:27:26.461Z');
+    $request->fields = [
+        'Pound',
+    ];
+    $request->limit = 5908.79;
+    $request->offset = 67.08;
+    $request->order = 'Producer Classical Electric';
+    $request->query = 'Wyoming Analyst beside';
+    $request->sort = 'Innovative male hierarchy';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T03:25:44.788Z');
 
     $response = $sdk->uc->listUcAgents($request);
 
@@ -215,12 +224,15 @@ try {
     $request->agentId = 'optical';
     $request->connectionId = 'playfully';
     $request->contactId = 'AGP';
-    $request->limit = 1965.31;
-    $request->offset = 4663.16;
-    $request->order = 'ubiquitous error denationalise';
-    $request->query = 'at';
-    $request->sort = 'Money Florida female';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-12T14:01:07.814Z');
+    $request->fields = [
+        'Health',
+    ];
+    $request->limit = 8985.18;
+    $request->offset = 2975.86;
+    $request->order = 'error denationalise Mauritania';
+    $request->query = 'female Tools Mouse';
+    $request->sort = 'Country';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-06T20:10:12.947Z');
 
     $response = $sdk->uc->listUcCalls($request);
 
@@ -271,12 +283,15 @@ try {
     $request = new ListUcContactsRequest();
     $request->agentId = 'Bicycle male';
     $request->connectionId = 'haptic';
-    $request->limit = 8550.33;
-    $request->offset = 3957.45;
-    $request->order = 'generating Legacy North';
-    $request->query = 'Car';
-    $request->sort = 'Berkshire';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-12T05:27:22.539Z');
+    $request->fields = [
+        'Pickup',
+    ];
+    $request->limit = 5017.12;
+    $request->offset = 6179.01;
+    $request->order = 'female North';
+    $request->query = 'Berkshire';
+    $request->sort = 'behind animi Jersey';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-30T03:50:09.755Z');
 
     $response = $sdk->uc->listUcContacts($request);
 
@@ -346,6 +361,9 @@ try {
     $request->ucContact->title = 'deliverables';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-04T14:30:17.869Z');
     $request->connectionId = 'Product aggravating';
+    $request->fields = [
+        'transmitter',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->uc->patchUcContact($request);
@@ -466,6 +484,9 @@ try {
     $request->ucContact->title = 'Northeast';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T00:14:26.766Z');
     $request->connectionId = 'Cruiser';
+    $request->fields = [
+        'Awesome',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->uc->updateUcContact($request);

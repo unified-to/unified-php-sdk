@@ -28,6 +28,14 @@ class ListAtsApplicationsRequest
     public string $connectionId;
     
     /**
+     * Comma-delimited fields to return
+     * 
+     * @var ?array<string> $fields
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+    
+    /**
      * The job ID to filter results
      * 
      * @var ?string $jobId
@@ -67,6 +75,7 @@ class ListAtsApplicationsRequest
 	{
 		$this->candidateId = null;
 		$this->connectionId = "";
+		$this->fields = null;
 		$this->jobId = null;
 		$this->limit = null;
 		$this->offset = null;

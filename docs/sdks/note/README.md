@@ -46,7 +46,10 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'Home Outdoors transmitter';
     $request->connectionId = 'National geez Direct';
-    $request->ticketId = 'male';
+    $request->fields = [
+        'repurpose',
+    ];
+    $request->ticketId = 'Northeast Steel M2F';
 
     $response = $sdk->note->createTicketingNote($request);
 
@@ -96,8 +99,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetTicketingNoteRequest();
     $request->connectionId = 'joule program';
+    $request->fields = [
+        'SUV',
+    ];
     $request->id = '<ID>';
-    $request->ticketId = 'Fitness Applications Switchable';
+    $request->ticketId = 'payment Architect';
 
     $response = $sdk->note->getTicketingNote($request);
 
@@ -147,13 +153,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListTicketingNotesRequest();
     $request->connectionId = 'Hybrid North';
-    $request->limit = 9973.53;
-    $request->offset = 4262.61;
-    $request->order = 'Marvin';
-    $request->query = 'Synergistic henry loudly';
-    $request->sort = 'Baby ability';
-    $request->ticketId = 'Engineer niches Honda';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-14T07:12:00.787Z');
+    $request->fields = [
+        'hosepipe',
+    ];
+    $request->limit = 2323.04;
+    $request->offset = 1566.46;
+    $request->order = 'accusamus Shoreline Synergistic';
+    $request->query = 'while withdrawal Baby';
+    $request->sort = 'West Engineer';
+    $request->ticketId = 'Account';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-29T15:22:21.255Z');
 
     $response = $sdk->note->listTicketingNotes($request);
 
@@ -213,8 +222,11 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'Metal Hybrid';
     $request->connectionId = 'Customer Hryvnia';
+    $request->fields = [
+        'maroon',
+    ];
     $request->id = '<ID>';
-    $request->ticketId = 'Credit';
+    $request->ticketId = 'East what';
 
     $response = $sdk->note->patchTicketingNote($request);
 
@@ -325,8 +337,11 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'navigating';
     $request->connectionId = 'state Solutions Bespoke';
+    $request->fields = [
+        'optimizing',
+    ];
     $request->id = '<ID>';
-    $request->ticketId = 'sievert firewall';
+    $request->ticketId = 'firewall systems intermediate';
 
     $response = $sdk->note->updateTicketingNote($request);
 

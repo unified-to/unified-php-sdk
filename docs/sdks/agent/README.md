@@ -55,6 +55,9 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-03T05:11:49.371Z');
     $request->connectionId = 'Soul';
+    $request->fields = [
+        'intangible',
+    ];
 
     $response = $sdk->agent->createTicketingAgent($request);
 
@@ -104,6 +107,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetTicketingAgentRequest();
     $request->connectionId = 'Lamborghini';
+    $request->fields = [
+        'SAS',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->agent->getTicketingAgent($request);
@@ -154,8 +160,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListTicketingAgentsRequest();
     $request->connectionId = 'Mazda';
-    $request->limit = 1864.4;
-    $request->offset = 3027.97;
+    $request->fields = [
+        'Home',
+    ];
+    $request->limit = 3254.85;
+    $request->offset = 6003.65;
     $request->order = 'North';
     $request->query = 'maroon World';
     $request->sort = 'North';
@@ -210,12 +219,15 @@ try {
     $request = new ListUcAgentsRequest();
     $request->connectionId = 'Representative';
     $request->contactId = 'Chief';
-    $request->limit = 4223.29;
-    $request->offset = 2385.02;
-    $request->order = 'Rock reliable';
-    $request->query = 'Classical Electric aboard';
-    $request->sort = 'Analyst beside harmonious';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T11:27:26.461Z');
+    $request->fields = [
+        'Pound',
+    ];
+    $request->limit = 5908.79;
+    $request->offset = 67.08;
+    $request->order = 'Producer Classical Electric';
+    $request->query = 'Wyoming Analyst beside';
+    $request->sort = 'Innovative male hierarchy';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T03:25:44.788Z');
 
     $response = $sdk->agent->listUcAgents($request);
 
@@ -283,6 +295,9 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T17:57:18.300Z');
     $request->connectionId = 'envious';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->agent->patchTicketingAgent($request);
@@ -401,6 +416,9 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-04T21:57:06.367Z');
     $request->connectionId = 'beside Usability Bedfordshire';
+    $request->fields = [
+        'SSD',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->agent->updateTicketingAgent($request);

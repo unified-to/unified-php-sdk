@@ -56,6 +56,9 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-22T14:24:24.761Z');
     $request->connectionId = 'hackwork';
+    $request->fields = [
+        'mmm',
+    ];
 
     $response = $sdk->ticket->createTicketingTicket($request);
 
@@ -105,6 +108,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetTicketingTicketRequest();
     $request->connectionId = 'Zimbabwe Dollar';
+    $request->fields = [
+        'Alaska',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticket->getTicketingTicket($request);
@@ -157,12 +163,15 @@ try {
     $request->agentId = 'Tools Southwest';
     $request->connectionId = 'while Copper';
     $request->customerId = 'Quality Integration';
-    $request->limit = 9402.89;
-    $request->offset = 2038.67;
-    $request->order = 'Electric Zimbabwe';
-    $request->query = 'Coconut';
-    $request->sort = 'Rial';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T04:01:57.661Z');
+    $request->fields = [
+        'convenience',
+    ];
+    $request->limit = 4219.01;
+    $request->offset = 8170.02;
+    $request->order = 'Zimbabwe utilize';
+    $request->query = 'deposit';
+    $request->sort = 'Female Books';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-12T23:51:37.173Z');
 
     $response = $sdk->ticket->listTicketingTickets($request);
 
@@ -232,6 +241,9 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T18:09:01.786Z');
     $request->connectionId = 'Steel mint transparent';
+    $request->fields = [
+        'Internal',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticket->patchTicketingTicket($request);
@@ -352,6 +364,9 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-14T14:48:53.243Z');
     $request->connectionId = 'azure Cobalt';
+    $request->fields = [
+        'Bicycle',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticket->updateTicketingTicket($request);

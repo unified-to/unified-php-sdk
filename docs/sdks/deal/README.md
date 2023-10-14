@@ -56,6 +56,9 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-05T12:31:42.723Z');
     $request->crmDeal->wonReason = 'notwithstanding Hybrid';
     $request->connectionId = 'Chile Web';
+    $request->fields = [
+        'connect',
+    ];
 
     $response = $sdk->deal->createCrmDeal($request);
 
@@ -105,6 +108,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmDealRequest();
     $request->connectionId = 'male orange';
+    $request->fields = [
+        'Reduced',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->deal->getCrmDeal($request);
@@ -157,12 +163,15 @@ try {
     $request->companyId = 'Lamborghini';
     $request->connectionId = 'Health male Tala';
     $request->contactId = 'tan';
-    $request->limit = 2926.12;
-    $request->offset = 7035.78;
-    $request->order = 'sweetly';
-    $request->query = 'Cambridgeshire quantifying';
-    $request->sort = 'ash distance';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-10T06:24:14.414Z');
+    $request->fields = [
+        'West',
+    ];
+    $request->limit = 7917.89;
+    $request->offset = 5118.2;
+    $request->order = 'leisure';
+    $request->query = 'Zambia Bespoke';
+    $request->sort = 'gee';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-10T05:42:26.963Z');
 
     $response = $sdk->deal->listCrmDeals($request);
 
@@ -232,6 +241,9 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-17T04:00:27.811Z');
     $request->crmDeal->wonReason = 'motivating transition';
     $request->connectionId = 'Usability Folk';
+    $request->fields = [
+        'strategize',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->deal->patchCrmDeal($request);
@@ -352,6 +364,9 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-24T17:23:09.389Z');
     $request->crmDeal->wonReason = 'Neither times capacitor';
     $request->connectionId = 'Architect';
+    $request->fields = [
+        'Road',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->deal->updateCrmDeal($request);

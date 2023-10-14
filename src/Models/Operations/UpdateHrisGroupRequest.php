@@ -23,6 +23,14 @@ class UpdateHrisGroupRequest
     public string $connectionId;
     
     /**
+     * Comma-delimited fields to return
+     * 
+     * @var ?array<string> $fields
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+    
+    /**
      * ID of the Group
      * 
      * @var string $id
@@ -34,6 +42,7 @@ class UpdateHrisGroupRequest
 	{
 		$this->hrisGroup = null;
 		$this->connectionId = "";
+		$this->fields = null;
 		$this->id = "";
 	}
 }

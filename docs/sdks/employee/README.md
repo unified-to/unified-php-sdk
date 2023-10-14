@@ -81,6 +81,9 @@ try {
     $request->hrisEmployee->title = 'West';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-31T04:08:29.290Z');
     $request->connectionId = 'Carolina';
+    $request->fields = [
+        'Executive',
+    ];
 
     $response = $sdk->employee->createHrisEmployee($request);
 
@@ -130,6 +133,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetHrisEmployeeRequest();
     $request->connectionId = 'Automated';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->employee->getHrisEmployee($request);
@@ -180,9 +186,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListHrisEmployeesRequest();
     $request->connectionId = 'Table moratorium';
-    $request->limit = 4462.02;
-    $request->offset = 6942.29;
-    $request->order = 'hew Lari Cedi';
+    $request->fields = [
+        'payment',
+    ];
+    $request->limit = 9587.43;
+    $request->offset = 9972.64;
+    $request->order = 'Lari Cedi';
     $request->query = 'pug';
     $request->sort = 'SUV';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T14:38:18.201Z');
@@ -280,6 +289,9 @@ try {
     $request->hrisEmployee->title = 'tonight Southwest';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T08:59:26.562Z');
     $request->connectionId = 'accidentally Research';
+    $request->fields = [
+        'inventore',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->employee->patchHrisEmployee($request);
@@ -425,6 +437,9 @@ try {
     $request->hrisEmployee->title = 'Home orange';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-29T09:32:48.600Z');
     $request->connectionId = 'Northwest holistic Solomon';
+    $request->fields = [
+        'Outlying',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->employee->updateHrisEmployee($request);

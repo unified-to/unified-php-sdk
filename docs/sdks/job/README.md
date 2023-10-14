@@ -74,6 +74,9 @@ try {
     $request->atsJob->status = AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-30T11:52:47.581Z');
     $request->connectionId = 'Borders optical';
+    $request->fields = [
+        'male',
+    ];
 
     $response = $sdk->job->createAtsJob($request);
 
@@ -123,6 +126,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetAtsJobRequest();
     $request->connectionId = 'runway';
+    $request->fields = [
+        'Bronze',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->job->getAtsJob($request);
@@ -173,8 +179,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListAtsJobsRequest();
     $request->connectionId = 'niches SQL';
-    $request->limit = 4947.67;
-    $request->offset = 7427.26;
+    $request->fields = [
+        '1080p',
+    ];
+    $request->limit = 7749.91;
+    $request->offset = 523.86;
     $request->order = 'teal Electric ohm';
     $request->query = 'radian';
     $request->sort = 'Cambridgeshire';
@@ -266,6 +275,9 @@ try {
     $request->atsJob->status = AtsJobStatus::Draft;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-01T22:46:41.539Z');
     $request->connectionId = 'Reggae person Chief';
+    $request->fields = [
+        'Hat',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->job->patchAtsJob($request);
@@ -404,6 +416,9 @@ try {
     $request->atsJob->status = AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-08T06:24:43.982Z');
     $request->connectionId = 'Electric Southeast anti';
+    $request->fields = [
+        'quos',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->job->updateAtsJob($request);

@@ -57,6 +57,9 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T18:53:13.968Z');
     $request->connectionId = 'earum';
+    $request->fields = [
+        'monitor',
+    ];
 
     $response = $sdk->customer->createTicketingCustomer($request);
 
@@ -106,6 +109,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetTicketingCustomerRequest();
     $request->connectionId = 'benchmark';
+    $request->fields = [
+        'Cambridgeshire',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->customer->getTicketingCustomer($request);
@@ -156,11 +162,14 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListTicketingCustomersRequest();
     $request->connectionId = 'Carrollton yellow';
-    $request->limit = 9126.75;
-    $request->offset = 7082.67;
-    $request->order = 'geez';
-    $request->query = 'Cotton Chips';
-    $request->sort = 'deposit louse';
+    $request->fields = [
+        'until',
+    ];
+    $request->limit = 1472.38;
+    $request->offset = 9384.79;
+    $request->order = 'Folk';
+    $request->query = 'Chips JSON';
+    $request->sort = 'louse';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-22T18:24:21.846Z');
 
     $response = $sdk->customer->listTicketingCustomers($request);
@@ -232,6 +241,9 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-22T00:19:38.663Z');
     $request->connectionId = 'Northeast Metal Rustic';
+    $request->fields = [
+        'thug',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->customer->patchTicketingCustomer($request);
@@ -353,6 +365,9 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T14:51:51.077Z');
     $request->connectionId = 'Bolivia';
+    $request->fields = [
+        'pfft',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->customer->updateTicketingCustomer($request);

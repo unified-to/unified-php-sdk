@@ -39,6 +39,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -79,6 +80,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmContactRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -119,6 +121,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmDealRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -159,6 +162,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmEventRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -199,6 +203,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmFileRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -239,6 +244,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmLeadRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -279,6 +285,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -319,6 +326,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmTeamRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -359,6 +367,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateCrmUserRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -395,6 +404,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmCompanyRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -431,6 +441,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\GetCrmContactRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmContactRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -467,6 +478,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\GetCrmDealRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmDealRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -503,6 +515,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', \Unified\Unified_to\Models\Operations\GetCrmEventRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmEventRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -539,6 +552,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/file/{id}', \Unified\Unified_to\Models\Operations\GetCrmFileRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmFileRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -575,6 +589,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\GetCrmLeadRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmLeadRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -611,6 +626,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmPipelineRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -647,6 +663,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/team/{id}', \Unified\Unified_to\Models\Operations\GetCrmTeamRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmTeamRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -683,6 +700,7 @@ class Crm
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/user/{id}', \Unified\Unified_to\Models\Operations\GetCrmUserRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmUserRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1056,6 +1074,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1096,6 +1115,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmContactRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1136,6 +1156,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmDealRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1176,6 +1197,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmEventRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1216,6 +1238,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmFileRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1256,6 +1279,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmLeadRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1296,6 +1320,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1336,6 +1361,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmTeamRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1376,6 +1402,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchCrmUserRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1731,6 +1758,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1771,6 +1799,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmContactRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1811,6 +1840,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmDealRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1851,6 +1881,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmEventRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1891,6 +1922,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmFileRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1931,6 +1963,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1971,6 +2004,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -2011,6 +2045,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmTeamRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -2051,6 +2086,7 @@ class Crm
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateCrmUserRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         

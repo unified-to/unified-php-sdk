@@ -50,6 +50,9 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::StrongYes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-31T23:56:41.326Z');
     $request->connectionId = 'Metal hexagon';
+    $request->fields = [
+        'groupware',
+    ];
 
     $response = $sdk->document->createAtsScorecard($request);
 
@@ -99,6 +102,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetAtsScorecardRequest();
     $request->connectionId = 'Executive';
+    $request->fields = [
+        'Berkelium',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->document->getAtsScorecard($request);
@@ -151,13 +157,16 @@ try {
     $request->applicationId = 'Hybrid Bugatti';
     $request->candidateId = 'Cotton silver Diesel';
     $request->connectionId = 'Grocery';
-    $request->interviewId = 'Francium Reggae';
-    $request->limit = 2997.88;
-    $request->offset = 1910.15;
-    $request->order = 'bus Adaptive';
-    $request->query = 'experiences';
-    $request->sort = 'Coupe';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-26T02:42:21.256Z');
+    $request->fields = [
+        'parallelism',
+    ];
+    $request->interviewId = 'Reggae Account Adaptive';
+    $request->limit = 2925.09;
+    $request->offset = 3357.99;
+    $request->order = 'Pizza Baby Circle';
+    $request->query = 'Metal';
+    $request->sort = 'International';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-20T10:34:27.085Z');
 
     $response = $sdk->document->listAtsScorecards($request);
 
@@ -221,6 +230,9 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-08T12:33:31.906Z');
     $request->connectionId = 'Electric';
+    $request->fields = [
+        'Pickup',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->document->patchAtsScorecard($request);
@@ -335,6 +347,9 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T06:37:40.295Z');
     $request->connectionId = 'Executive haptic';
+    $request->fields = [
+        'Account',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->document->updateAtsScorecard($request);

@@ -83,6 +83,9 @@ try {
     $request->crmEvent->type = CrmEventType::Note;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-21T07:55:02.041Z');
     $request->connectionId = 'Van Borders application';
+    $request->fields = [
+        'whoa',
+    ];
 
     $response = $sdk->event->createCrmEvent($request);
 
@@ -132,6 +135,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmEventRequest();
     $request->connectionId = 'Metal South blockchains';
+    $request->fields = [
+        'comics',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->event->getCrmEvent($request);
@@ -185,12 +191,15 @@ try {
     $request->connectionId = 'violet';
     $request->contactId = 'Female Checking';
     $request->dealId = 'pascal';
-    $request->limit = 9371.11;
-    $request->offset = 6537.91;
-    $request->order = 'Executive';
-    $request->query = 'essence Andy XSS';
-    $request->sort = 'ivory Supervisor';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-19T15:34:51.183Z');
+    $request->fields = [
+        'gadzooks',
+    ];
+    $request->limit = 615.02;
+    $request->offset = 6613.16;
+    $request->order = 'et male essence';
+    $request->query = 'paradigms';
+    $request->sort = 'proffer ivory';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-18T23:05:23.591Z');
 
     $response = $sdk->event->listCrmEvents($request);
 
@@ -287,6 +296,9 @@ try {
     $request->crmEvent->type = CrmEventType::Meeting;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-08T19:52:57.687Z');
     $request->connectionId = 'mostly communities';
+    $request->fields = [
+        'Bugatti',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->event->patchCrmEvent($request);
@@ -434,6 +446,9 @@ try {
     $request->crmEvent->type = CrmEventType::Email;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-20T23:16:54.957Z');
     $request->connectionId = 'wearily Southeast pledge';
+    $request->fields = [
+        'Soul',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->event->updateCrmEvent($request);

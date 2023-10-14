@@ -55,7 +55,10 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-13T20:05:10.353Z');
     $request->connectionId = 'dolor calculate translate';
-    $request->listId = 'scalable';
+    $request->fields = [
+        'B2C',
+    ];
+    $request->listId = 'Hassium';
 
     $response = $sdk->member->createMartechMember($request);
 
@@ -105,8 +108,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetMartechMemberRequest();
     $request->connectionId = 'Yuan';
+    $request->fields = [
+        'Gibraltar',
+    ];
     $request->id = '<ID>';
-    $request->listId = 'vertical Northeast';
+    $request->listId = 'Iceland';
 
     $response = $sdk->member->getMartechMember($request);
 
@@ -156,13 +162,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListMartechMembersRequest();
     $request->connectionId = 'Money';
-    $request->limit = 2202.33;
-    $request->listId = 'grubby lime';
-    $request->offset = 6827.47;
-    $request->order = 'Fresh';
-    $request->query = 'Trigender turquoise';
-    $request->sort = 'Cotton shearling standardise';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-06T05:05:45.199Z');
+    $request->fields = [
+        'Practical',
+    ];
+    $request->limit = 8757.6;
+    $request->listId = 'lime Manager';
+    $request->offset = 2458.73;
+    $request->order = 'Neither huzzah wireless';
+    $request->query = 'Loop';
+    $request->sort = 'standardise reinvent microchip';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T03:36:49.362Z');
 
     $response = $sdk->member->listMartechMembers($request);
 
@@ -231,8 +240,11 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-06T21:18:24.488Z');
     $request->connectionId = 'overriding Money Brand';
+    $request->fields = [
+        'Rock',
+    ];
     $request->id = '<ID>';
-    $request->listId = 'West integrated';
+    $request->listId = 'integrated Regional local';
 
     $response = $sdk->member->patchMartechMember($request);
 
@@ -352,8 +364,11 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-21T23:18:02.833Z');
     $request->connectionId = 'Checking deploy Hermaphrodite';
+    $request->fields = [
+        'navigate',
+    ];
     $request->id = '<ID>';
-    $request->listId = 'Bespoke below';
+    $request->listId = 'methodologies state Computer';
 
     $response = $sdk->member->updateMartechMember($request);
 

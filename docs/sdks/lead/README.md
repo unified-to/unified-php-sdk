@@ -69,6 +69,9 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T00:13:31.481Z');
     $request->crmLead->userId = 'Shirt';
     $request->connectionId = 'female transmitter';
+    $request->fields = [
+        'microchip',
+    ];
 
     $response = $sdk->lead->createCrmLead($request);
 
@@ -118,6 +121,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmLeadRequest();
     $request->connectionId = 'Handmade Keyboard yum';
+    $request->fields = [
+        'magnetic',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->lead->getCrmLead($request);
@@ -168,10 +174,13 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListCrmLeadsRequest();
     $request->connectionId = 'International';
-    $request->limit = 5756.06;
-    $request->offset = 1922.44;
-    $request->order = 'Platinum Recycled Internal';
-    $request->query = 'generous Mazda';
+    $request->fields = [
+        'ratione',
+    ];
+    $request->limit = 9106.08;
+    $request->offset = 4275.23;
+    $request->order = 'Recycled Internal Human';
+    $request->query = 'Mazda';
     $request->sort = 'alarm';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-19T19:46:53.477Z');
 
@@ -256,6 +265,9 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-18T07:05:56.875Z');
     $request->crmLead->userId = 'female Coupe';
     $request->connectionId = 'Fisher convergence';
+    $request->fields = [
+        'Hybrid',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->lead->patchCrmLead($request);
@@ -389,6 +401,9 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T20:48:33.132Z');
     $request->crmLead->userId = 'treasure attitude sint';
     $request->connectionId = 'Cab charming';
+    $request->fields = [
+        'laudantium',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->lead->updateCrmLead($request);

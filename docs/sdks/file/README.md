@@ -55,6 +55,9 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-17T10:16:03.549Z');
     $request->crmFile->userId = 'mobile firewall salmon';
     $request->connectionId = 'Hybrid Auto';
+    $request->fields = [
+        'recontextualize',
+    ];
 
     $response = $sdk->file->createCrmFile($request);
 
@@ -104,6 +107,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmFileRequest();
     $request->connectionId = 'ease';
+    $request->fields = [
+        'bypassing',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->file->getCrmFile($request);
@@ -157,12 +163,15 @@ try {
     $request->connectionId = 'Monitored';
     $request->contactId = 'hertz invoice lime';
     $request->dealId = 'blah';
-    $request->limit = 4750.59;
-    $request->offset = 2265.7;
-    $request->order = 'olive';
-    $request->query = 'suite Checking';
-    $request->sort = 'SUV';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-26T17:23:51.411Z');
+    $request->fields = [
+        'DRAM',
+    ];
+    $request->limit = 2133.79;
+    $request->offset = 1662.9;
+    $request->order = 'impish Casas SUV';
+    $request->query = 'Irondequoit';
+    $request->sort = 'Small infomediaries';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-25T00:07:01.988Z');
 
     $response = $sdk->file->listCrmFiles($request);
 
@@ -231,6 +240,9 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-05T02:16:40.085Z');
     $request->crmFile->userId = 'National Granite redundant';
     $request->connectionId = 'East';
+    $request->fields = [
+        'Quality',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->file->patchCrmFile($request);
@@ -350,6 +362,9 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-06T16:38:28.722Z');
     $request->crmFile->userId = 'Czech wasting';
     $request->connectionId = 'Shoes';
+    $request->fields = [
+        'how',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->file->updateCrmFile($request);

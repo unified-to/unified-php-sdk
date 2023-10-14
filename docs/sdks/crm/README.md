@@ -122,6 +122,9 @@ try {
         'Customer',
     ];
     $request->connectionId = 'Diesel';
+    $request->fields = [
+        'Frozen',
+    ];
 
     $response = $sdk->crm->createCrmCompany($request);
 
@@ -207,6 +210,9 @@ try {
     $request->crmContact->title = 'generate rapidly Southeast';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-19T03:47:58.688Z');
     $request->connectionId = 'Electronics huff';
+    $request->fields = [
+        'Lempira',
+    ];
 
     $response = $sdk->crm->createCrmContact($request);
 
@@ -276,6 +282,9 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-05T12:31:42.723Z');
     $request->crmDeal->wonReason = 'notwithstanding Hybrid';
     $request->connectionId = 'Chile Web';
+    $request->fields = [
+        'connect',
+    ];
 
     $response = $sdk->crm->createCrmDeal($request);
 
@@ -372,6 +381,9 @@ try {
     $request->crmEvent->type = CrmEventType::Note;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-21T07:55:02.041Z');
     $request->connectionId = 'Van Borders application';
+    $request->fields = [
+        'whoa',
+    ];
 
     $response = $sdk->crm->createCrmEvent($request);
 
@@ -440,6 +452,9 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-17T10:16:03.549Z');
     $request->crmFile->userId = 'mobile firewall salmon';
     $request->connectionId = 'Hybrid Auto';
+    $request->fields = [
+        'recontextualize',
+    ];
 
     $response = $sdk->crm->createCrmFile($request);
 
@@ -522,6 +537,9 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T00:13:31.481Z');
     $request->crmLead->userId = 'Shirt';
     $request->connectionId = 'female transmitter';
+    $request->fields = [
+        'microchip',
+    ];
 
     $response = $sdk->crm->createCrmLead($request);
 
@@ -582,6 +600,9 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-13T00:16:45.285Z');
     $request->connectionId = 'Hatchback Nobelium California';
+    $request->fields = [
+        'API',
+    ];
 
     $response = $sdk->crm->createCrmPipeline($request);
 
@@ -643,6 +664,9 @@ try {
         'Barbados',
     ];
     $request->connectionId = 'hacking Northwest tow';
+    $request->fields = [
+        'Cis',
+    ];
 
     $response = $sdk->crm->createCrmTeam($request);
 
@@ -728,6 +752,9 @@ try {
     $request->crmUser->title = 'Assimilated';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T01:04:23.014Z');
     $request->connectionId = 'Buckinghamshire';
+    $request->fields = [
+        'however',
+    ];
 
     $response = $sdk->crm->createCrmUser($request);
 
@@ -777,6 +804,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmCompanyRequest();
     $request->connectionId = 'THX Strategist deposit';
+    $request->fields = [
+        'snag',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmCompany($request);
@@ -827,6 +857,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmContactRequest();
     $request->connectionId = 'Oregon';
+    $request->fields = [
+        'methodology',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmContact($request);
@@ -877,6 +910,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmDealRequest();
     $request->connectionId = 'male orange';
+    $request->fields = [
+        'Reduced',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmDeal($request);
@@ -927,6 +963,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmEventRequest();
     $request->connectionId = 'Metal South blockchains';
+    $request->fields = [
+        'comics',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmEvent($request);
@@ -977,6 +1016,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmFileRequest();
     $request->connectionId = 'ease';
+    $request->fields = [
+        'bypassing',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmFile($request);
@@ -1027,6 +1069,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmLeadRequest();
     $request->connectionId = 'Handmade Keyboard yum';
+    $request->fields = [
+        'magnetic',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmLead($request);
@@ -1077,6 +1122,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmPipelineRequest();
     $request->connectionId = 'withdrawal Southeast';
+    $request->fields = [
+        'evolve',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmPipeline($request);
@@ -1127,6 +1175,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmTeamRequest();
     $request->connectionId = 'digital awful';
+    $request->fields = [
+        'Peru',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmTeam($request);
@@ -1177,6 +1228,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmUserRequest();
     $request->connectionId = 'Bespoke Dollar';
+    $request->fields = [
+        'unto',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->getCrmUser($request);
@@ -1229,12 +1283,15 @@ try {
     $request->connectionId = 'Jazz solid Lamborghini';
     $request->contactId = 'synthesizing';
     $request->dealId = 'honestly South dolor';
-    $request->limit = 4736.2;
-    $request->offset = 7700.92;
-    $request->order = 'AGP alarm sedately';
-    $request->query = 'veritatis rudely Shoes';
-    $request->sort = 'Colorado Loan Modern';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-15T21:32:26.765Z');
+    $request->fields = [
+        'SSL',
+    ];
+    $request->limit = 7980.96;
+    $request->offset = 4696.96;
+    $request->order = 'alarm';
+    $request->query = 'male veritatis rudely';
+    $request->sort = 'UTF8';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-26T08:26:47.847Z');
 
     $response = $sdk->crm->listCrmCompanies($request);
 
@@ -1286,12 +1343,15 @@ try {
     $request->companyId = 'Awesome index steradian';
     $request->connectionId = 'invoice bah';
     $request->dealId = 'Alaska';
-    $request->limit = 5152.64;
-    $request->offset = 6222.97;
-    $request->order = 'ew Tuna narrow';
-    $request->query = 'black';
-    $request->sort = 'North instantly Gloves';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-05T19:53:17.402Z');
+    $request->fields = [
+        'generating',
+    ];
+    $request->limit = 9658.75;
+    $request->offset = 9202.53;
+    $request->order = 'Tuna';
+    $request->query = 'copy black blue';
+    $request->sort = 'instantly';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-04T20:08:38.586Z');
 
     $response = $sdk->crm->listCrmContacts($request);
 
@@ -1343,12 +1403,15 @@ try {
     $request->companyId = 'Lamborghini';
     $request->connectionId = 'Health male Tala';
     $request->contactId = 'tan';
-    $request->limit = 2926.12;
-    $request->offset = 7035.78;
-    $request->order = 'sweetly';
-    $request->query = 'Cambridgeshire quantifying';
-    $request->sort = 'ash distance';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-10T06:24:14.414Z');
+    $request->fields = [
+        'West',
+    ];
+    $request->limit = 7917.89;
+    $request->offset = 5118.2;
+    $request->order = 'leisure';
+    $request->query = 'Zambia Bespoke';
+    $request->sort = 'gee';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-10T05:42:26.963Z');
 
     $response = $sdk->crm->listCrmDeals($request);
 
@@ -1401,12 +1464,15 @@ try {
     $request->connectionId = 'violet';
     $request->contactId = 'Female Checking';
     $request->dealId = 'pascal';
-    $request->limit = 9371.11;
-    $request->offset = 6537.91;
-    $request->order = 'Executive';
-    $request->query = 'essence Andy XSS';
-    $request->sort = 'ivory Supervisor';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-19T15:34:51.183Z');
+    $request->fields = [
+        'gadzooks',
+    ];
+    $request->limit = 615.02;
+    $request->offset = 6613.16;
+    $request->order = 'et male essence';
+    $request->query = 'paradigms';
+    $request->sort = 'proffer ivory';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-18T23:05:23.591Z');
 
     $response = $sdk->crm->listCrmEvents($request);
 
@@ -1459,12 +1525,15 @@ try {
     $request->connectionId = 'Monitored';
     $request->contactId = 'hertz invoice lime';
     $request->dealId = 'blah';
-    $request->limit = 4750.59;
-    $request->offset = 2265.7;
-    $request->order = 'olive';
-    $request->query = 'suite Checking';
-    $request->sort = 'SUV';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-26T17:23:51.411Z');
+    $request->fields = [
+        'DRAM',
+    ];
+    $request->limit = 2133.79;
+    $request->offset = 1662.9;
+    $request->order = 'impish Casas SUV';
+    $request->query = 'Irondequoit';
+    $request->sort = 'Small infomediaries';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-25T00:07:01.988Z');
 
     $response = $sdk->crm->listCrmFiles($request);
 
@@ -1514,10 +1583,13 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListCrmLeadsRequest();
     $request->connectionId = 'International';
-    $request->limit = 5756.06;
-    $request->offset = 1922.44;
-    $request->order = 'Platinum Recycled Internal';
-    $request->query = 'generous Mazda';
+    $request->fields = [
+        'ratione',
+    ];
+    $request->limit = 9106.08;
+    $request->offset = 4275.23;
+    $request->order = 'Recycled Internal Human';
+    $request->query = 'Mazda';
     $request->sort = 'alarm';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-19T19:46:53.477Z');
 
@@ -1569,12 +1641,15 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListCrmPipelinesRequest();
     $request->connectionId = 'primary';
-    $request->limit = 7011.75;
-    $request->offset = 2585.55;
-    $request->order = 'tesla';
-    $request->query = 'majestically mobile generate';
-    $request->sort = 'female National';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-04T20:48:27.612Z');
+    $request->fields = [
+        'female',
+    ];
+    $request->limit = 2586.24;
+    $request->offset = 7450.66;
+    $request->order = 'Analyst generate';
+    $request->query = 'female National';
+    $request->sort = 'Buckinghamshire Bedfordshire';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-10T20:55:53.457Z');
 
     $response = $sdk->crm->listCrmPipelines($request);
 
@@ -1624,12 +1699,15 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListCrmTeamsRequest();
     $request->connectionId = 'Classical microchip Wooden';
-    $request->limit = 7301.3;
-    $request->offset = 5943.38;
-    $request->order = 'Direct';
-    $request->query = 'Oriental brand';
-    $request->sort = 'Principal Fluorine haptic';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-13T09:26:41.977Z');
+    $request->fields = [
+        'Lutetium',
+    ];
+    $request->limit = 2314.97;
+    $request->offset = 6409.99;
+    $request->order = 'conglomeration';
+    $request->query = 'brand becquerel audit';
+    $request->sort = 'Buckinghamshire Berkshire';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-22T07:37:51.566Z');
 
     $response = $sdk->crm->listCrmTeams($request);
 
@@ -1679,10 +1757,13 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListCrmUsersRequest();
     $request->connectionId = 'careless Costa';
-    $request->limit = 1707.72;
-    $request->offset = 6650.22;
-    $request->order = 'cyan Southeast';
-    $request->query = 'scale Rock San';
+    $request->fields = [
+        'olive',
+    ];
+    $request->limit = 4392.99;
+    $request->offset = 7999.12;
+    $request->order = 'Southeast orange tesla';
+    $request->query = 'San';
     $request->sort = 'Centralized Neptunium';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T06:25:33.606Z');
 
@@ -1772,6 +1853,9 @@ try {
         'Administrator',
     ];
     $request->connectionId = 'black recognise';
+    $request->fields = [
+        'Hyundai',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmCompany($request);
@@ -1858,6 +1942,9 @@ try {
     $request->crmContact->title = 'Northwest lavender';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-05T23:10:17.249Z');
     $request->connectionId = 'blockchains';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmContact($request);
@@ -1928,6 +2015,9 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-17T04:00:27.811Z');
     $request->crmDeal->wonReason = 'motivating transition';
     $request->connectionId = 'Usability Folk';
+    $request->fields = [
+        'strategize',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmDeal($request);
@@ -2025,6 +2115,9 @@ try {
     $request->crmEvent->type = CrmEventType::Meeting;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-08T19:52:57.687Z');
     $request->connectionId = 'mostly communities';
+    $request->fields = [
+        'Bugatti',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmEvent($request);
@@ -2094,6 +2187,9 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-05T02:16:40.085Z');
     $request->crmFile->userId = 'National Granite redundant';
     $request->connectionId = 'East';
+    $request->fields = [
+        'Quality',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmFile($request);
@@ -2177,6 +2273,9 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-18T07:05:56.875Z');
     $request->crmLead->userId = 'female Coupe';
     $request->connectionId = 'Fisher convergence';
+    $request->fields = [
+        'Hybrid',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmLead($request);
@@ -2238,6 +2337,9 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T04:56:01.093Z');
     $request->connectionId = 'Lead Operative';
+    $request->fields = [
+        'Refined',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmPipeline($request);
@@ -2300,6 +2402,9 @@ try {
         'incentivize',
     ];
     $request->connectionId = 'Coordinator convergence';
+    $request->fields = [
+        'Country',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmTeam($request);
@@ -2386,6 +2491,9 @@ try {
     $request->crmUser->title = 'Borders turquoise';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-05T04:59:37.900Z');
     $request->connectionId = 'Cambridgeshire sit Account';
+    $request->fields = [
+        'ubiquitous',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmUser($request);
@@ -2924,6 +3032,9 @@ try {
         'Romania',
     ];
     $request->connectionId = 'killer Product';
+    $request->fields = [
+        'drat',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmCompany($request);
@@ -3010,6 +3121,9 @@ try {
     $request->crmContact->title = 'program';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-27T16:33:46.279Z');
     $request->connectionId = 'Barbados Directives male';
+    $request->fields = [
+        'Road',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmContact($request);
@@ -3080,6 +3194,9 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-24T17:23:09.389Z');
     $request->crmDeal->wonReason = 'Neither times capacitor';
     $request->connectionId = 'Architect';
+    $request->fields = [
+        'Road',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmDeal($request);
@@ -3177,6 +3294,9 @@ try {
     $request->crmEvent->type = CrmEventType::Email;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-20T23:16:54.957Z');
     $request->connectionId = 'wearily Southeast pledge';
+    $request->fields = [
+        'Soul',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmEvent($request);
@@ -3246,6 +3366,9 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-06T16:38:28.722Z');
     $request->crmFile->userId = 'Czech wasting';
     $request->connectionId = 'Shoes';
+    $request->fields = [
+        'how',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmFile($request);
@@ -3329,6 +3452,9 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T20:48:33.132Z');
     $request->crmLead->userId = 'treasure attitude sint';
     $request->connectionId = 'Cab charming';
+    $request->fields = [
+        'laudantium',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmLead($request);
@@ -3390,6 +3516,9 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-30T06:55:51.144Z');
     $request->connectionId = 'Configuration Minivan';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmPipeline($request);
@@ -3452,6 +3581,9 @@ try {
         'Electric',
     ];
     $request->connectionId = 'Northeast orchid';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmTeam($request);
@@ -3538,6 +3670,9 @@ try {
     $request->crmUser->title = 'lavender hmph';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-19T17:15:40.477Z');
     $request->connectionId = 'Movies Bedford';
+    $request->fields = [
+        'virtual',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmUser($request);

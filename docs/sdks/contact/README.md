@@ -78,6 +78,9 @@ try {
     $request->crmContact->title = 'generate rapidly Southeast';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-19T03:47:58.688Z');
     $request->connectionId = 'Electronics huff';
+    $request->fields = [
+        'Lempira',
+    ];
 
     $response = $sdk->contact->createCrmContact($request);
 
@@ -147,6 +150,9 @@ try {
     $request->ucContact->title = 'meanwhile';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-20T17:09:49.957Z');
     $request->connectionId = 'West Auto Garden';
+    $request->fields = [
+        'Southwest',
+    ];
 
     $response = $sdk->contact->createUcContact($request);
 
@@ -196,6 +202,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmContactRequest();
     $request->connectionId = 'Oregon';
+    $request->fields = [
+        'methodology',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->getCrmContact($request);
@@ -246,6 +255,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetUcContactRequest();
     $request->connectionId = 'JBOD ivory fool';
+    $request->fields = [
+        'Mouse',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->getUcContact($request);
@@ -298,12 +310,15 @@ try {
     $request->companyId = 'Awesome index steradian';
     $request->connectionId = 'invoice bah';
     $request->dealId = 'Alaska';
-    $request->limit = 5152.64;
-    $request->offset = 6222.97;
-    $request->order = 'ew Tuna narrow';
-    $request->query = 'black';
-    $request->sort = 'North instantly Gloves';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-05T19:53:17.402Z');
+    $request->fields = [
+        'generating',
+    ];
+    $request->limit = 9658.75;
+    $request->offset = 9202.53;
+    $request->order = 'Tuna';
+    $request->query = 'copy black blue';
+    $request->sort = 'instantly';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-04T20:08:38.586Z');
 
     $response = $sdk->contact->listCrmContacts($request);
 
@@ -354,12 +369,15 @@ try {
     $request = new ListUcContactsRequest();
     $request->agentId = 'Bicycle male';
     $request->connectionId = 'haptic';
-    $request->limit = 8550.33;
-    $request->offset = 3957.45;
-    $request->order = 'generating Legacy North';
-    $request->query = 'Car';
-    $request->sort = 'Berkshire';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-12T05:27:22.539Z');
+    $request->fields = [
+        'Pickup',
+    ];
+    $request->limit = 5017.12;
+    $request->offset = 6179.01;
+    $request->order = 'female North';
+    $request->query = 'Berkshire';
+    $request->sort = 'behind animi Jersey';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-30T03:50:09.755Z');
 
     $response = $sdk->contact->listUcContacts($request);
 
@@ -445,6 +463,9 @@ try {
     $request->crmContact->title = 'Northwest lavender';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-05T23:10:17.249Z');
     $request->connectionId = 'blockchains';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->patchCrmContact($request);
@@ -515,6 +536,9 @@ try {
     $request->ucContact->title = 'deliverables';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-04T14:30:17.869Z');
     $request->connectionId = 'Product aggravating';
+    $request->fields = [
+        'transmitter',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->patchUcContact($request);
@@ -701,6 +725,9 @@ try {
     $request->crmContact->title = 'program';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-27T16:33:46.279Z');
     $request->connectionId = 'Barbados Directives male';
+    $request->fields = [
+        'Road',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->updateCrmContact($request);
@@ -771,6 +798,9 @@ try {
     $request->ucContact->title = 'Northeast';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T00:14:26.766Z');
     $request->connectionId = 'Cruiser';
+    $request->fields = [
+        'Awesome',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->updateUcContact($request);

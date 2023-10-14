@@ -51,6 +51,9 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::SecondInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T16:55:31.599Z');
     $request->connectionId = 'Bicycle';
+    $request->fields = [
+        'appeal',
+    ];
 
     $response = $sdk->application->createAtsApplication($request);
 
@@ -100,6 +103,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetAtsApplicationRequest();
     $request->connectionId = 'anenst Balboa';
+    $request->fields = [
+        'navigate',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->application->getAtsApplication($request);
@@ -151,13 +157,16 @@ try {
     $request = new ListAtsApplicationsRequest();
     $request->candidateId = 'Summit';
     $request->connectionId = 'withdrawal Springs Blues';
-    $request->jobId = 'solutions';
-    $request->limit = 1330.66;
-    $request->offset = 5248.28;
-    $request->order = 'Kazakhstan';
-    $request->query = 'SDD East boohoo';
-    $request->sort = 'Sports Assistant Chlorine';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-05T05:05:40.196Z');
+    $request->fields = [
+        'pink',
+    ];
+    $request->jobId = 'Nebraska';
+    $request->limit = 99.95;
+    $request->offset = 498.82;
+    $request->order = 'known Lead';
+    $request->query = 'boohoo easily';
+    $request->sort = 'Assistant Chlorine sensor';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T08:34:05.882Z');
 
     $response = $sdk->application->listAtsApplications($request);
 
@@ -222,6 +231,9 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::Accepted;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-22T18:46:40.363Z');
     $request->connectionId = 'Irving Generic Buckinghamshire';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->application->patchAtsApplication($request);
@@ -337,6 +349,9 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T02:13:22.264Z');
     $request->connectionId = 'Pants West';
+    $request->fields = [
+        'iterate',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->application->updateAtsApplication($request);

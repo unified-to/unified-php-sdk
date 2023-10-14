@@ -75,6 +75,9 @@ try {
         'Customer',
     ];
     $request->connectionId = 'Diesel';
+    $request->fields = [
+        'Frozen',
+    ];
 
     $response = $sdk->company->createCrmCompany($request);
 
@@ -124,6 +127,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmCompanyRequest();
     $request->connectionId = 'THX Strategist deposit';
+    $request->fields = [
+        'snag',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->company->getCrmCompany($request);
@@ -176,12 +182,15 @@ try {
     $request->connectionId = 'Jazz solid Lamborghini';
     $request->contactId = 'synthesizing';
     $request->dealId = 'honestly South dolor';
-    $request->limit = 4736.2;
-    $request->offset = 7700.92;
-    $request->order = 'AGP alarm sedately';
-    $request->query = 'veritatis rudely Shoes';
-    $request->sort = 'Colorado Loan Modern';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-15T21:32:26.765Z');
+    $request->fields = [
+        'SSL',
+    ];
+    $request->limit = 7980.96;
+    $request->offset = 4696.96;
+    $request->order = 'alarm';
+    $request->query = 'male veritatis rudely';
+    $request->sort = 'UTF8';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-26T08:26:47.847Z');
 
     $response = $sdk->company->listCrmCompanies($request);
 
@@ -320,6 +329,9 @@ try {
         'Administrator',
     ];
     $request->connectionId = 'black recognise';
+    $request->fields = [
+        'Hyundai',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->company->patchCrmCompany($request);
@@ -458,6 +470,9 @@ try {
         'Romania',
     ];
     $request->connectionId = 'killer Product';
+    $request->fields = [
+        'drat',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->company->updateCrmCompany($request);

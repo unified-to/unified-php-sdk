@@ -39,6 +39,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateTicketingAgentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -79,6 +80,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -112,13 +114,14 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}', \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note', \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -159,6 +162,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -195,6 +199,7 @@ class Ticketing
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/agent/{id}', \Unified\Unified_to\Models\Operations\GetTicketingAgentRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingAgentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -231,6 +236,7 @@ class Ticketing
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -264,9 +270,10 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note/{id}', \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingNoteRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -303,6 +310,7 @@ class Ticketing
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingTicketRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -410,7 +418,7 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}', \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note', \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTicketingNotesRequest::class, $request, null));
@@ -491,6 +499,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchTicketingAgentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -531,6 +540,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -564,13 +574,14 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -611,6 +622,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -714,7 +726,7 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
@@ -791,6 +803,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateTicketingAgentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -831,6 +844,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -864,13 +878,14 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{ticket_id}/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -911,6 +926,7 @@ class Ticketing
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         

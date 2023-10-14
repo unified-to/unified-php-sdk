@@ -72,6 +72,9 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-03T05:11:49.371Z');
     $request->connectionId = 'Soul';
+    $request->fields = [
+        'intangible',
+    ];
 
     $response = $sdk->ticketing->createTicketingAgent($request);
 
@@ -142,6 +145,9 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T18:53:13.968Z');
     $request->connectionId = 'earum';
+    $request->fields = [
+        'monitor',
+    ];
 
     $response = $sdk->ticketing->createTicketingCustomer($request);
 
@@ -201,7 +207,10 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'Home Outdoors transmitter';
     $request->connectionId = 'National geez Direct';
-    $request->ticketId = 'male';
+    $request->fields = [
+        'repurpose',
+    ];
+    $request->ticketId = 'Northeast Steel M2F';
 
     $response = $sdk->ticketing->createTicketingNote($request);
 
@@ -271,6 +280,9 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-22T14:24:24.761Z');
     $request->connectionId = 'hackwork';
+    $request->fields = [
+        'mmm',
+    ];
 
     $response = $sdk->ticketing->createTicketingTicket($request);
 
@@ -320,6 +332,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetTicketingAgentRequest();
     $request->connectionId = 'Lamborghini';
+    $request->fields = [
+        'SAS',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->getTicketingAgent($request);
@@ -370,6 +385,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetTicketingCustomerRequest();
     $request->connectionId = 'benchmark';
+    $request->fields = [
+        'Cambridgeshire',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->getTicketingCustomer($request);
@@ -420,8 +438,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetTicketingNoteRequest();
     $request->connectionId = 'joule program';
+    $request->fields = [
+        'SUV',
+    ];
     $request->id = '<ID>';
-    $request->ticketId = 'Fitness Applications Switchable';
+    $request->ticketId = 'payment Architect';
 
     $response = $sdk->ticketing->getTicketingNote($request);
 
@@ -471,6 +492,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetTicketingTicketRequest();
     $request->connectionId = 'Zimbabwe Dollar';
+    $request->fields = [
+        'Alaska',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->getTicketingTicket($request);
@@ -521,8 +545,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListTicketingAgentsRequest();
     $request->connectionId = 'Mazda';
-    $request->limit = 1864.4;
-    $request->offset = 3027.97;
+    $request->fields = [
+        'Home',
+    ];
+    $request->limit = 3254.85;
+    $request->offset = 6003.65;
     $request->order = 'North';
     $request->query = 'maroon World';
     $request->sort = 'North';
@@ -576,11 +603,14 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListTicketingCustomersRequest();
     $request->connectionId = 'Carrollton yellow';
-    $request->limit = 9126.75;
-    $request->offset = 7082.67;
-    $request->order = 'geez';
-    $request->query = 'Cotton Chips';
-    $request->sort = 'deposit louse';
+    $request->fields = [
+        'until',
+    ];
+    $request->limit = 1472.38;
+    $request->offset = 9384.79;
+    $request->order = 'Folk';
+    $request->query = 'Chips JSON';
+    $request->sort = 'louse';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-22T18:24:21.846Z');
 
     $response = $sdk->ticketing->listTicketingCustomers($request);
@@ -631,13 +661,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListTicketingNotesRequest();
     $request->connectionId = 'Hybrid North';
-    $request->limit = 9973.53;
-    $request->offset = 4262.61;
-    $request->order = 'Marvin';
-    $request->query = 'Synergistic henry loudly';
-    $request->sort = 'Baby ability';
-    $request->ticketId = 'Engineer niches Honda';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-14T07:12:00.787Z');
+    $request->fields = [
+        'hosepipe',
+    ];
+    $request->limit = 2323.04;
+    $request->offset = 1566.46;
+    $request->order = 'accusamus Shoreline Synergistic';
+    $request->query = 'while withdrawal Baby';
+    $request->sort = 'West Engineer';
+    $request->ticketId = 'Account';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-29T15:22:21.255Z');
 
     $response = $sdk->ticketing->listTicketingNotes($request);
 
@@ -689,12 +722,15 @@ try {
     $request->agentId = 'Tools Southwest';
     $request->connectionId = 'while Copper';
     $request->customerId = 'Quality Integration';
-    $request->limit = 9402.89;
-    $request->offset = 2038.67;
-    $request->order = 'Electric Zimbabwe';
-    $request->query = 'Coconut';
-    $request->sort = 'Rial';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T04:01:57.661Z');
+    $request->fields = [
+        'convenience',
+    ];
+    $request->limit = 4219.01;
+    $request->offset = 8170.02;
+    $request->order = 'Zimbabwe utilize';
+    $request->query = 'deposit';
+    $request->sort = 'Female Books';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-12T23:51:37.173Z');
 
     $response = $sdk->ticketing->listTicketingTickets($request);
 
@@ -762,6 +798,9 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T17:57:18.300Z');
     $request->connectionId = 'envious';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->patchTicketingAgent($request);
@@ -833,6 +872,9 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-22T00:19:38.663Z');
     $request->connectionId = 'Northeast Metal Rustic';
+    $request->fields = [
+        'thug',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->patchTicketingCustomer($request);
@@ -893,8 +935,11 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'Metal Hybrid';
     $request->connectionId = 'Customer Hryvnia';
+    $request->fields = [
+        'maroon',
+    ];
     $request->id = '<ID>';
-    $request->ticketId = 'Credit';
+    $request->ticketId = 'East what';
 
     $response = $sdk->ticketing->patchTicketingNote($request);
 
@@ -964,6 +1009,9 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T18:09:01.786Z');
     $request->connectionId = 'Steel mint transparent';
+    $request->fields = [
+        'Internal',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->patchTicketingTicket($request);
@@ -1233,6 +1281,9 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-04T21:57:06.367Z');
     $request->connectionId = 'beside Usability Bedfordshire';
+    $request->fields = [
+        'SSD',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->updateTicketingAgent($request);
@@ -1304,6 +1355,9 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T14:51:51.077Z');
     $request->connectionId = 'Bolivia';
+    $request->fields = [
+        'pfft',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->updateTicketingCustomer($request);
@@ -1364,8 +1418,11 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'navigating';
     $request->connectionId = 'state Solutions Bespoke';
+    $request->fields = [
+        'optimizing',
+    ];
     $request->id = '<ID>';
-    $request->ticketId = 'sievert firewall';
+    $request->ticketId = 'firewall systems intermediate';
 
     $response = $sdk->ticketing->updateTicketingNote($request);
 
@@ -1435,6 +1492,9 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-14T14:48:53.243Z');
     $request->connectionId = 'azure Cobalt';
+    $request->fields = [
+        'Bicycle',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->updateTicketingTicket($request);

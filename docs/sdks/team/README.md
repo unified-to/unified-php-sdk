@@ -48,6 +48,9 @@ try {
         'Barbados',
     ];
     $request->connectionId = 'hacking Northwest tow';
+    $request->fields = [
+        'Cis',
+    ];
 
     $response = $sdk->team->createCrmTeam($request);
 
@@ -97,6 +100,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmTeamRequest();
     $request->connectionId = 'digital awful';
+    $request->fields = [
+        'Peru',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->team->getCrmTeam($request);
@@ -147,12 +153,15 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListCrmTeamsRequest();
     $request->connectionId = 'Classical microchip Wooden';
-    $request->limit = 7301.3;
-    $request->offset = 5943.38;
-    $request->order = 'Direct';
-    $request->query = 'Oriental brand';
-    $request->sort = 'Principal Fluorine haptic';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-13T09:26:41.977Z');
+    $request->fields = [
+        'Lutetium',
+    ];
+    $request->limit = 2314.97;
+    $request->offset = 6409.99;
+    $request->order = 'conglomeration';
+    $request->query = 'brand becquerel audit';
+    $request->sort = 'Buckinghamshire Berkshire';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-22T07:37:51.566Z');
 
     $response = $sdk->team->listCrmTeams($request);
 
@@ -214,6 +223,9 @@ try {
         'incentivize',
     ];
     $request->connectionId = 'Coordinator convergence';
+    $request->fields = [
+        'Country',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->team->patchCrmTeam($request);
@@ -326,6 +338,9 @@ try {
         'Electric',
     ];
     $request->connectionId = 'Northeast orchid';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->team->updateCrmTeam($request);

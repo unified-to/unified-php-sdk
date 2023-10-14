@@ -36,6 +36,14 @@ class ListAtsScorecardsRequest
     public string $connectionId;
     
     /**
+     * Comma-delimited fields to return
+     * 
+     * @var ?array<string> $fields
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+    
+    /**
      * The interview ID to filter results
      * 
      * @var ?string $interviewId
@@ -76,6 +84,7 @@ class ListAtsScorecardsRequest
 		$this->applicationId = null;
 		$this->candidateId = null;
 		$this->connectionId = "";
+		$this->fields = null;
 		$this->interviewId = null;
 		$this->limit = null;
 		$this->offset = null;

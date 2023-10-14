@@ -22,6 +22,14 @@ class ListUcContactsRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
     
+    /**
+     * Comma-delimited fields to return
+     * 
+     * @var ?array<string> $fields
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+    
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
     
@@ -54,6 +62,7 @@ class ListUcContactsRequest
 	{
 		$this->agentId = null;
 		$this->connectionId = "";
+		$this->fields = null;
 		$this->limit = null;
 		$this->offset = null;
 		$this->order = null;

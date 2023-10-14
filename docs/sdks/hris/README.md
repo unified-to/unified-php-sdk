@@ -87,6 +87,9 @@ try {
     $request->hrisEmployee->title = 'West';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-31T04:08:29.290Z');
     $request->connectionId = 'Carolina';
+    $request->fields = [
+        'Executive',
+    ];
 
     $response = $sdk->hris->createHrisEmployee($request);
 
@@ -155,6 +158,9 @@ try {
     $request->hrisGroup->type = HrisGroupType::Division;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-29T19:37:40.006Z');
     $request->connectionId = 'Electric';
+    $request->fields = [
+        'Nuevo',
+    ];
 
     $response = $sdk->hris->createHrisGroup($request);
 
@@ -204,6 +210,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetHrisEmployeeRequest();
     $request->connectionId = 'Automated';
+    $request->fields = [
+        'West',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->hris->getHrisEmployee($request);
@@ -254,6 +263,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetHrisGroupRequest();
     $request->connectionId = 'Cedi state Cadillac';
+    $request->fields = [
+        'optical',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->hris->getHrisGroup($request);
@@ -304,9 +316,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListHrisEmployeesRequest();
     $request->connectionId = 'Table moratorium';
-    $request->limit = 4462.02;
-    $request->offset = 6942.29;
-    $request->order = 'hew Lari Cedi';
+    $request->fields = [
+        'payment',
+    ];
+    $request->limit = 9587.43;
+    $request->offset = 9972.64;
+    $request->order = 'Lari Cedi';
     $request->query = 'pug';
     $request->sort = 'SUV';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T14:38:18.201Z');
@@ -359,9 +374,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListHrisGroupsRequest();
     $request->connectionId = 'Bronze Rubber';
-    $request->limit = 9801.54;
-    $request->offset = 3397.48;
-    $request->order = 'even Manager';
+    $request->fields = [
+        'feel',
+    ];
+    $request->limit = 3559.03;
+    $request->offset = 9067.53;
+    $request->order = 'Manager';
     $request->query = 'proactive deliverables';
     $request->sort = 'West Plastic transmit';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-19T02:41:06.804Z');
@@ -459,6 +477,9 @@ try {
     $request->hrisEmployee->title = 'tonight Southwest';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T08:59:26.562Z');
     $request->connectionId = 'accidentally Research';
+    $request->fields = [
+        'inventore',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->hris->patchHrisEmployee($request);
@@ -528,6 +549,9 @@ try {
     $request->hrisGroup->type = HrisGroupType::Group;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-17T19:30:24.300Z');
     $request->connectionId = 'Money Legacy Utah';
+    $request->fields = [
+        'Interface',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->hris->patchHrisGroup($request);
@@ -723,6 +747,9 @@ try {
     $request->hrisEmployee->title = 'Home orange';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-29T09:32:48.600Z');
     $request->connectionId = 'Northwest holistic Solomon';
+    $request->fields = [
+        'Outlying',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->hris->updateHrisEmployee($request);
@@ -792,6 +819,9 @@ try {
     $request->hrisGroup->type = HrisGroupType::Branch;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T10:20:39.465Z');
     $request->connectionId = 'atop Music Hat';
+    $request->fields = [
+        'panel',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->hris->updateHrisGroup($request);

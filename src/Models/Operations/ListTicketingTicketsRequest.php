@@ -35,6 +35,14 @@ class ListTicketingTicketsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=customer_id')]
     public ?string $customerId = null;
     
+    /**
+     * Comma-delimited fields to return
+     * 
+     * @var ?array<string> $fields
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+    
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
     
@@ -68,6 +76,7 @@ class ListTicketingTicketsRequest
 		$this->agentId = null;
 		$this->connectionId = "";
 		$this->customerId = null;
+		$this->fields = null;
 		$this->limit = null;
 		$this->offset = null;
 		$this->order = null;

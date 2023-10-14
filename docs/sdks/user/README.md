@@ -72,6 +72,9 @@ try {
     $request->crmUser->title = 'Assimilated';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T01:04:23.014Z');
     $request->connectionId = 'Buckinghamshire';
+    $request->fields = [
+        'however',
+    ];
 
     $response = $sdk->user->createCrmUser($request);
 
@@ -121,6 +124,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetCrmUserRequest();
     $request->connectionId = 'Bespoke Dollar';
+    $request->fields = [
+        'unto',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->user->getCrmUser($request);
@@ -171,10 +177,13 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListCrmUsersRequest();
     $request->connectionId = 'careless Costa';
-    $request->limit = 1707.72;
-    $request->offset = 6650.22;
-    $request->order = 'cyan Southeast';
-    $request->query = 'scale Rock San';
+    $request->fields = [
+        'olive',
+    ];
+    $request->limit = 4392.99;
+    $request->offset = 7999.12;
+    $request->order = 'Southeast orange tesla';
+    $request->query = 'San';
     $request->sort = 'Centralized Neptunium';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T06:25:33.606Z');
 
@@ -262,6 +271,9 @@ try {
     $request->crmUser->title = 'Borders turquoise';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-05T04:59:37.900Z');
     $request->connectionId = 'Cambridgeshire sit Account';
+    $request->fields = [
+        'ubiquitous',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->user->patchCrmUser($request);
@@ -398,6 +410,9 @@ try {
     $request->crmUser->title = 'lavender hmph';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-19T17:15:40.477Z');
     $request->connectionId = 'Movies Bedford';
+    $request->fields = [
+        'virtual',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->user->updateCrmUser($request);

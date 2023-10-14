@@ -50,6 +50,9 @@ try {
     $request->marketingList->raw = new PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T18:05:38.910Z');
     $request->connectionId = 'often iusto during';
+    $request->fields = [
+        'Folk',
+    ];
 
     $response = $sdk->martech->createMartechList($request);
 
@@ -118,7 +121,10 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-13T20:05:10.353Z');
     $request->connectionId = 'dolor calculate translate';
-    $request->listId = 'scalable';
+    $request->fields = [
+        'B2C',
+    ];
+    $request->listId = 'Hassium';
 
     $response = $sdk->martech->createMartechMember($request);
 
@@ -168,6 +174,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetMartechListRequest();
     $request->connectionId = 'Franklin Bicycle Victoria';
+    $request->fields = [
+        'Fish',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->martech->getMartechList($request);
@@ -218,8 +227,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetMartechMemberRequest();
     $request->connectionId = 'Yuan';
+    $request->fields = [
+        'Gibraltar',
+    ];
     $request->id = '<ID>';
-    $request->listId = 'vertical Northeast';
+    $request->listId = 'Iceland';
 
     $response = $sdk->martech->getMartechMember($request);
 
@@ -269,9 +281,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListMartechListsRequest();
     $request->connectionId = 'DeKalb magenta black';
-    $request->limit = 9030.29;
-    $request->offset = 5480.58;
-    $request->order = 'knife alarm evolve';
+    $request->fields = [
+        'provided',
+    ];
+    $request->limit = 9798.76;
+    $request->offset = 9811.35;
+    $request->order = 'alarm evolve';
     $request->query = 'Account';
     $request->sort = 'gold';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-20T04:13:08.935Z');
@@ -324,13 +339,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListMartechMembersRequest();
     $request->connectionId = 'Money';
-    $request->limit = 2202.33;
-    $request->listId = 'grubby lime';
-    $request->offset = 6827.47;
-    $request->order = 'Fresh';
-    $request->query = 'Trigender turquoise';
-    $request->sort = 'Cotton shearling standardise';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-06T05:05:45.199Z');
+    $request->fields = [
+        'Practical',
+    ];
+    $request->limit = 8757.6;
+    $request->listId = 'lime Manager';
+    $request->offset = 2458.73;
+    $request->order = 'Neither huzzah wireless';
+    $request->query = 'Loop';
+    $request->sort = 'standardise reinvent microchip';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T03:36:49.362Z');
 
     $response = $sdk->martech->listMartechMembers($request);
 
@@ -388,6 +406,9 @@ try {
     $request->marketingList->raw = new PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-21T05:37:31.198Z');
     $request->connectionId = 'hunker';
+    $request->fields = [
+        'Cotton',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->martech->patchMartechList($request);
@@ -457,8 +478,11 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-06T21:18:24.488Z');
     $request->connectionId = 'overriding Money Brand';
+    $request->fields = [
+        'Rock',
+    ];
     $request->id = '<ID>';
-    $request->listId = 'West integrated';
+    $request->listId = 'integrated Regional local';
 
     $response = $sdk->martech->patchMartechMember($request);
 
@@ -617,6 +641,9 @@ try {
     $request->marketingList->raw = new PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-11T21:33:05.389Z');
     $request->connectionId = 'Roanoke navigate';
+    $request->fields = [
+        'Androgynous',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->martech->updateMartechList($request);
@@ -686,8 +713,11 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-21T23:18:02.833Z');
     $request->connectionId = 'Checking deploy Hermaphrodite';
+    $request->fields = [
+        'navigate',
+    ];
     $request->id = '<ID>';
-    $request->listId = 'Bespoke below';
+    $request->listId = 'methodologies state Computer';
 
     $response = $sdk->martech->updateMartechMember($request);
 

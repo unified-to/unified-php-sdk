@@ -41,6 +41,7 @@ try {
         '2023-02-03T05:11:49.371Z',
     );
     $request->connectionId = 'Soul';
+    $request->fields = ['intangible'];
 
     $response = $sdk->agent->createTicketingAgent($request);
 

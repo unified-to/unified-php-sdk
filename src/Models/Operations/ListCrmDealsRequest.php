@@ -35,6 +35,14 @@ class ListCrmDealsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
     public ?string $contactId = null;
     
+    /**
+     * Comma-delimited fields to return
+     * 
+     * @var ?array<string> $fields
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+    
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
     
@@ -68,6 +76,7 @@ class ListCrmDealsRequest
 		$this->companyId = null;
 		$this->connectionId = "";
 		$this->contactId = null;
+		$this->fields = null;
 		$this->limit = null;
 		$this->offset = null;
 		$this->order = null;

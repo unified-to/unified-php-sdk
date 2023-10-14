@@ -33,12 +33,15 @@ try {
     $request->agentId = 'optical';
     $request->connectionId = 'playfully';
     $request->contactId = 'AGP';
-    $request->limit = 1965.31;
-    $request->offset = 4663.16;
-    $request->order = 'ubiquitous error denationalise';
-    $request->query = 'at';
-    $request->sort = 'Money Florida female';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-12T14:01:07.814Z');
+    $request->fields = [
+        'Health',
+    ];
+    $request->limit = 8985.18;
+    $request->offset = 2975.86;
+    $request->order = 'error denationalise Mauritania';
+    $request->query = 'female Tools Mouse';
+    $request->sort = 'Country';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-06T20:10:12.947Z');
 
     $response = $sdk->call->listUcCalls($request);
 

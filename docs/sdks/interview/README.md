@@ -55,6 +55,9 @@ try {
         'HTTP',
     ];
     $request->connectionId = 'Direct Sedan';
+    $request->fields = [
+        'Niger',
+    ];
 
     $response = $sdk->interview->createAtsInterview($request);
 
@@ -104,6 +107,9 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new GetAtsInterviewRequest();
     $request->connectionId = 'syndicate longingly Mobility';
+    $request->fields = [
+        'grease',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->interview->getAtsInterview($request);
@@ -155,12 +161,15 @@ try {
     $request = new ListAtsInterviewsRequest();
     $request->applicationId = 'Northeast';
     $request->connectionId = 'Avon';
-    $request->limit = 1795.86;
-    $request->offset = 8334.82;
-    $request->order = 'granular';
-    $request->query = 'West';
-    $request->sort = 'Analyst Pickup';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-09T17:56:10.255Z');
+    $request->fields = [
+        'gold',
+    ];
+    $request->limit = 2371.68;
+    $request->offset = 2991.18;
+    $request->order = 'North';
+    $request->query = 'SMTP transmitting invoice';
+    $request->sort = 'underwriting protocol';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T08:55:35.395Z');
 
     $response = $sdk->interview->listAtsInterviews($request);
 
@@ -229,6 +238,9 @@ try {
         'Zloty',
     ];
     $request->connectionId = 'quirkily Liaison Metical';
+    $request->fields = [
+        'Funk',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->interview->patchAtsInterview($request);
@@ -348,6 +360,9 @@ try {
         'Program',
     ];
     $request->connectionId = 'tensor what';
+    $request->fields = [
+        'besides',
+    ];
     $request->id = '<ID>';
 
     $response = $sdk->interview->updateAtsInterview($request);

@@ -20,6 +20,14 @@ class GetHrisEmployeeRequest
     public string $connectionId;
     
     /**
+     * Comma-delimited fields to return
+     * 
+     * @var ?array<string> $fields
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+    
+    /**
      * ID of the Employee
      * 
      * @var string $id
@@ -30,6 +38,7 @@ class GetHrisEmployeeRequest
 	public function __construct()
 	{
 		$this->connectionId = "";
+		$this->fields = null;
 		$this->id = "";
 	}
 }
