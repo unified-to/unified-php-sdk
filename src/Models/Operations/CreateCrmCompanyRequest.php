@@ -27,18 +27,9 @@ class CreateCrmCompanyRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
     
-    /**
-     * Comma-delimited fields to return
-     * 
-     * @var ?array<string> $fields
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-    
 	public function __construct()
 	{
 		$this->crmCompany = null;
 		$this->connectionId = "";
-		$this->fields = null;
 	}
 }

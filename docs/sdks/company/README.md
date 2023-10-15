@@ -75,9 +75,6 @@ try {
         'Customer',
     ];
     $request->connectionId = 'Diesel';
-    $request->fields = [
-        'Frozen',
-    ];
 
     $response = $sdk->company->createCrmCompany($request);
 
@@ -329,9 +326,6 @@ try {
         'Administrator',
     ];
     $request->connectionId = 'black recognise';
-    $request->fields = [
-        'Hyundai',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->company->patchCrmCompany($request);
@@ -470,9 +464,6 @@ try {
         'Romania',
     ];
     $request->connectionId = 'killer Product';
-    $request->fields = [
-        'drat',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->company->updateCrmCompany($request);

@@ -78,9 +78,6 @@ try {
     $request->crmContact->title = 'generate rapidly Southeast';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-19T03:47:58.688Z');
     $request->connectionId = 'Electronics huff';
-    $request->fields = [
-        'Lempira',
-    ];
 
     $response = $sdk->contact->createCrmContact($request);
 
@@ -150,9 +147,6 @@ try {
     $request->ucContact->title = 'meanwhile';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-20T17:09:49.957Z');
     $request->connectionId = 'West Auto Garden';
-    $request->fields = [
-        'Southwest',
-    ];
 
     $response = $sdk->contact->createUcContact($request);
 
@@ -463,9 +457,6 @@ try {
     $request->crmContact->title = 'Northwest lavender';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-05T23:10:17.249Z');
     $request->connectionId = 'blockchains';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->patchCrmContact($request);
@@ -536,9 +527,6 @@ try {
     $request->ucContact->title = 'deliverables';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-04T14:30:17.869Z');
     $request->connectionId = 'Product aggravating';
-    $request->fields = [
-        'transmitter',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->patchUcContact($request);
@@ -725,9 +713,6 @@ try {
     $request->crmContact->title = 'program';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-27T16:33:46.279Z');
     $request->connectionId = 'Barbados Directives male';
-    $request->fields = [
-        'Road',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->updateCrmContact($request);
@@ -798,9 +783,6 @@ try {
     $request->ucContact->title = 'Northeast';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T00:14:26.766Z');
     $request->connectionId = 'Cruiser';
-    $request->fields = [
-        'Awesome',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->contact->updateUcContact($request);

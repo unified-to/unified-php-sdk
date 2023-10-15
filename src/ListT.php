@@ -39,7 +39,6 @@ class ListT
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateMartechListRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -154,7 +153,6 @@ class ListT
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchMartechListRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -230,7 +228,6 @@ class ListT
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateMartechListRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         

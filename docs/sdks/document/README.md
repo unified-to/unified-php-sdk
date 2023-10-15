@@ -50,9 +50,6 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::StrongYes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-31T23:56:41.326Z');
     $request->connectionId = 'Metal hexagon';
-    $request->fields = [
-        'groupware',
-    ];
 
     $response = $sdk->document->createAtsScorecard($request);
 
@@ -230,9 +227,6 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-08T12:33:31.906Z');
     $request->connectionId = 'Electric';
-    $request->fields = [
-        'Pickup',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->document->patchAtsScorecard($request);
@@ -347,9 +341,6 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T06:37:40.295Z');
     $request->connectionId = 'Executive haptic';
-    $request->fields = [
-        'Account',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->document->updateAtsScorecard($request);

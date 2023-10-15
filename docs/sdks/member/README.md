@@ -55,10 +55,7 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-13T20:05:10.353Z');
     $request->connectionId = 'dolor calculate translate';
-    $request->fields = [
-        'B2C',
-    ];
-    $request->listId = 'Hassium';
+    $request->listId = 'scalable';
 
     $response = $sdk->member->createMartechMember($request);
 
@@ -240,11 +237,8 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-06T21:18:24.488Z');
     $request->connectionId = 'overriding Money Brand';
-    $request->fields = [
-        'Rock',
-    ];
     $request->id = '<ID>';
-    $request->listId = 'integrated Regional local';
+    $request->listId = 'West integrated';
 
     $response = $sdk->member->patchMartechMember($request);
 
@@ -364,11 +358,8 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-21T23:18:02.833Z');
     $request->connectionId = 'Checking deploy Hermaphrodite';
-    $request->fields = [
-        'navigate',
-    ];
     $request->id = '<ID>';
-    $request->listId = 'methodologies state Computer';
+    $request->listId = 'Bespoke below';
 
     $response = $sdk->member->updateMartechMember($request);
 

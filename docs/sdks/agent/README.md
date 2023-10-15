@@ -55,9 +55,6 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-03T05:11:49.371Z');
     $request->connectionId = 'Soul';
-    $request->fields = [
-        'intangible',
-    ];
 
     $response = $sdk->agent->createTicketingAgent($request);
 
@@ -295,9 +292,6 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T17:57:18.300Z');
     $request->connectionId = 'envious';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->agent->patchTicketingAgent($request);
@@ -416,9 +410,6 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-04T21:57:06.367Z');
     $request->connectionId = 'beside Usability Bedfordshire';
-    $request->fields = [
-        'SSD',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->agent->updateTicketingAgent($request);

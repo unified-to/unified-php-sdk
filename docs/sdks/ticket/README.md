@@ -56,9 +56,6 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-22T14:24:24.761Z');
     $request->connectionId = 'hackwork';
-    $request->fields = [
-        'mmm',
-    ];
 
     $response = $sdk->ticket->createTicketingTicket($request);
 
@@ -241,9 +238,6 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T18:09:01.786Z');
     $request->connectionId = 'Steel mint transparent';
-    $request->fields = [
-        'Internal',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticket->patchTicketingTicket($request);
@@ -364,9 +358,6 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-14T14:48:53.243Z');
     $request->connectionId = 'azure Cobalt';
-    $request->fields = [
-        'Bicycle',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticket->updateTicketingTicket($request);

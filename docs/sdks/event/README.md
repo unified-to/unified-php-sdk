@@ -83,9 +83,6 @@ try {
     $request->crmEvent->type = CrmEventType::Note;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-21T07:55:02.041Z');
     $request->connectionId = 'Van Borders application';
-    $request->fields = [
-        'whoa',
-    ];
 
     $response = $sdk->event->createCrmEvent($request);
 
@@ -296,9 +293,6 @@ try {
     $request->crmEvent->type = CrmEventType::Meeting;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-08T19:52:57.687Z');
     $request->connectionId = 'mostly communities';
-    $request->fields = [
-        'Bugatti',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->event->patchCrmEvent($request);
@@ -446,9 +440,6 @@ try {
     $request->crmEvent->type = CrmEventType::Email;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-20T23:16:54.957Z');
     $request->connectionId = 'wearily Southeast pledge';
-    $request->fields = [
-        'Soul',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->event->updateCrmEvent($request);

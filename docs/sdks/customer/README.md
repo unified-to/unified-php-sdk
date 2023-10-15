@@ -57,9 +57,6 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T18:53:13.968Z');
     $request->connectionId = 'earum';
-    $request->fields = [
-        'monitor',
-    ];
 
     $response = $sdk->customer->createTicketingCustomer($request);
 
@@ -241,9 +238,6 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-22T00:19:38.663Z');
     $request->connectionId = 'Northeast Metal Rustic';
-    $request->fields = [
-        'thug',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->customer->patchTicketingCustomer($request);
@@ -365,9 +359,6 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T14:51:51.077Z');
     $request->connectionId = 'Bolivia';
-    $request->fields = [
-        'pfft',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->customer->updateTicketingCustomer($request);

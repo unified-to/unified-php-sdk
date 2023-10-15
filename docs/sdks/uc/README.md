@@ -58,9 +58,6 @@ try {
     $request->ucContact->title = 'meanwhile';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-20T17:09:49.957Z');
     $request->connectionId = 'West Auto Garden';
-    $request->fields = [
-        'Southwest',
-    ];
 
     $response = $sdk->uc->createUcContact($request);
 
@@ -361,9 +358,6 @@ try {
     $request->ucContact->title = 'deliverables';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-04T14:30:17.869Z');
     $request->connectionId = 'Product aggravating';
-    $request->fields = [
-        'transmitter',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->uc->patchUcContact($request);
@@ -484,9 +478,6 @@ try {
     $request->ucContact->title = 'Northeast';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T00:14:26.766Z');
     $request->connectionId = 'Cruiser';
-    $request->fields = [
-        'Awesome',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->uc->updateUcContact($request);

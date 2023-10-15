@@ -23,14 +23,6 @@ class UpdateCrmLeadRequest
     public string $connectionId;
     
     /**
-     * Comma-delimited fields to return
-     * 
-     * @var ?array<string> $fields
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-    
-    /**
      * ID of the Lead
      * 
      * @var string $id
@@ -42,7 +34,6 @@ class UpdateCrmLeadRequest
 	{
 		$this->crmLead = null;
 		$this->connectionId = "";
-		$this->fields = null;
 		$this->id = "";
 	}
 }

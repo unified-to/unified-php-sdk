@@ -47,9 +47,6 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-13T00:16:45.285Z');
     $request->connectionId = 'Hatchback Nobelium California';
-    $request->fields = [
-        'API',
-    ];
 
     $response = $sdk->pipeline->createCrmPipeline($request);
 
@@ -221,9 +218,6 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T04:56:01.093Z');
     $request->connectionId = 'Lead Operative';
-    $request->fields = [
-        'Refined',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->pipeline->patchCrmPipeline($request);
@@ -335,9 +329,6 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-30T06:55:51.144Z');
     $request->connectionId = 'Configuration Minivan';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->pipeline->updateCrmPipeline($request);

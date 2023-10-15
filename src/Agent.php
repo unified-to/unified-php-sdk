@@ -39,7 +39,6 @@ class Agent
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateTicketingAgentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -191,7 +190,6 @@ class Agent
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchTicketingAgentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -267,7 +265,6 @@ class Agent
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateTicketingAgentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         

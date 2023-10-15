@@ -55,9 +55,6 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-17T10:16:03.549Z');
     $request->crmFile->userId = 'mobile firewall salmon';
     $request->connectionId = 'Hybrid Auto';
-    $request->fields = [
-        'recontextualize',
-    ];
 
     $response = $sdk->file->createCrmFile($request);
 
@@ -240,9 +237,6 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-05T02:16:40.085Z');
     $request->crmFile->userId = 'National Granite redundant';
     $request->connectionId = 'East';
-    $request->fields = [
-        'Quality',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->file->patchCrmFile($request);
@@ -362,9 +356,6 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-06T16:38:28.722Z');
     $request->crmFile->userId = 'Czech wasting';
     $request->connectionId = 'Shoes';
-    $request->fields = [
-        'how',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->file->updateCrmFile($request);

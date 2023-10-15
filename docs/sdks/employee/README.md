@@ -81,9 +81,6 @@ try {
     $request->hrisEmployee->title = 'West';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-31T04:08:29.290Z');
     $request->connectionId = 'Carolina';
-    $request->fields = [
-        'Executive',
-    ];
 
     $response = $sdk->employee->createHrisEmployee($request);
 
@@ -289,9 +286,6 @@ try {
     $request->hrisEmployee->title = 'tonight Southwest';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T08:59:26.562Z');
     $request->connectionId = 'accidentally Research';
-    $request->fields = [
-        'inventore',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->employee->patchHrisEmployee($request);
@@ -437,9 +431,6 @@ try {
     $request->hrisEmployee->title = 'Home orange';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-29T09:32:48.600Z');
     $request->connectionId = 'Northwest holistic Solomon';
-    $request->fields = [
-        'Outlying',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->employee->updateHrisEmployee($request);

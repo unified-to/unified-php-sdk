@@ -39,7 +39,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -80,7 +79,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -121,7 +119,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -162,7 +159,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateAtsJobRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -203,7 +199,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -614,7 +609,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -655,7 +649,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -696,7 +689,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -737,7 +729,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchAtsJobRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -778,7 +769,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -994,7 +984,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1035,7 +1024,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1076,7 +1064,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1117,7 +1104,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateAtsJobRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -1158,7 +1144,6 @@ class Ats
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         

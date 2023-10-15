@@ -69,9 +69,6 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T00:13:31.481Z');
     $request->crmLead->userId = 'Shirt';
     $request->connectionId = 'female transmitter';
-    $request->fields = [
-        'microchip',
-    ];
 
     $response = $sdk->lead->createCrmLead($request);
 
@@ -265,9 +262,6 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-18T07:05:56.875Z');
     $request->crmLead->userId = 'female Coupe';
     $request->connectionId = 'Fisher convergence';
-    $request->fields = [
-        'Hybrid',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->lead->patchCrmLead($request);
@@ -401,9 +395,6 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T20:48:33.132Z');
     $request->crmLead->userId = 'treasure attitude sint';
     $request->connectionId = 'Cab charming';
-    $request->fields = [
-        'laudantium',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->lead->updateCrmLead($request);

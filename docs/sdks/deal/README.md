@@ -56,9 +56,6 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-05T12:31:42.723Z');
     $request->crmDeal->wonReason = 'notwithstanding Hybrid';
     $request->connectionId = 'Chile Web';
-    $request->fields = [
-        'connect',
-    ];
 
     $response = $sdk->deal->createCrmDeal($request);
 
@@ -241,9 +238,6 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-17T04:00:27.811Z');
     $request->crmDeal->wonReason = 'motivating transition';
     $request->connectionId = 'Usability Folk';
-    $request->fields = [
-        'strategize',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->deal->patchCrmDeal($request);
@@ -364,9 +358,6 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-24T17:23:09.389Z');
     $request->crmDeal->wonReason = 'Neither times capacitor';
     $request->connectionId = 'Architect';
-    $request->fields = [
-        'Road',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->deal->updateCrmDeal($request);

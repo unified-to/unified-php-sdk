@@ -74,9 +74,6 @@ try {
     $request->atsJob->status = AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-30T11:52:47.581Z');
     $request->connectionId = 'Borders optical';
-    $request->fields = [
-        'male',
-    ];
 
     $response = $sdk->job->createAtsJob($request);
 
@@ -275,9 +272,6 @@ try {
     $request->atsJob->status = AtsJobStatus::Draft;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-01T22:46:41.539Z');
     $request->connectionId = 'Reggae person Chief';
-    $request->fields = [
-        'Hat',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->job->patchAtsJob($request);
@@ -416,9 +410,6 @@ try {
     $request->atsJob->status = AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-08T06:24:43.982Z');
     $request->connectionId = 'Electric Southeast anti';
-    $request->fields = [
-        'quos',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->job->updateAtsJob($request);

@@ -39,7 +39,6 @@ class Hris
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -80,7 +79,6 @@ class Hris
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateHrisGroupRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -269,7 +267,6 @@ class Hris
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -310,7 +307,6 @@ class Hris
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\PatchHrisGroupRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -421,7 +417,6 @@ class Hris
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -462,7 +457,6 @@ class Hris
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         

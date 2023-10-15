@@ -122,9 +122,6 @@ try {
         'Customer',
     ];
     $request->connectionId = 'Diesel';
-    $request->fields = [
-        'Frozen',
-    ];
 
     $response = $sdk->crm->createCrmCompany($request);
 
@@ -210,9 +207,6 @@ try {
     $request->crmContact->title = 'generate rapidly Southeast';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-19T03:47:58.688Z');
     $request->connectionId = 'Electronics huff';
-    $request->fields = [
-        'Lempira',
-    ];
 
     $response = $sdk->crm->createCrmContact($request);
 
@@ -282,9 +276,6 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-05T12:31:42.723Z');
     $request->crmDeal->wonReason = 'notwithstanding Hybrid';
     $request->connectionId = 'Chile Web';
-    $request->fields = [
-        'connect',
-    ];
 
     $response = $sdk->crm->createCrmDeal($request);
 
@@ -381,9 +372,6 @@ try {
     $request->crmEvent->type = CrmEventType::Note;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-21T07:55:02.041Z');
     $request->connectionId = 'Van Borders application';
-    $request->fields = [
-        'whoa',
-    ];
 
     $response = $sdk->crm->createCrmEvent($request);
 
@@ -452,9 +440,6 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-17T10:16:03.549Z');
     $request->crmFile->userId = 'mobile firewall salmon';
     $request->connectionId = 'Hybrid Auto';
-    $request->fields = [
-        'recontextualize',
-    ];
 
     $response = $sdk->crm->createCrmFile($request);
 
@@ -537,9 +522,6 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T00:13:31.481Z');
     $request->crmLead->userId = 'Shirt';
     $request->connectionId = 'female transmitter';
-    $request->fields = [
-        'microchip',
-    ];
 
     $response = $sdk->crm->createCrmLead($request);
 
@@ -600,9 +582,6 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-13T00:16:45.285Z');
     $request->connectionId = 'Hatchback Nobelium California';
-    $request->fields = [
-        'API',
-    ];
 
     $response = $sdk->crm->createCrmPipeline($request);
 
@@ -664,9 +643,6 @@ try {
         'Barbados',
     ];
     $request->connectionId = 'hacking Northwest tow';
-    $request->fields = [
-        'Cis',
-    ];
 
     $response = $sdk->crm->createCrmTeam($request);
 
@@ -752,9 +728,6 @@ try {
     $request->crmUser->title = 'Assimilated';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T01:04:23.014Z');
     $request->connectionId = 'Buckinghamshire';
-    $request->fields = [
-        'however',
-    ];
 
     $response = $sdk->crm->createCrmUser($request);
 
@@ -1853,9 +1826,6 @@ try {
         'Administrator',
     ];
     $request->connectionId = 'black recognise';
-    $request->fields = [
-        'Hyundai',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmCompany($request);
@@ -1942,9 +1912,6 @@ try {
     $request->crmContact->title = 'Northwest lavender';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-05T23:10:17.249Z');
     $request->connectionId = 'blockchains';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmContact($request);
@@ -2015,9 +1982,6 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-17T04:00:27.811Z');
     $request->crmDeal->wonReason = 'motivating transition';
     $request->connectionId = 'Usability Folk';
-    $request->fields = [
-        'strategize',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmDeal($request);
@@ -2115,9 +2079,6 @@ try {
     $request->crmEvent->type = CrmEventType::Meeting;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-08T19:52:57.687Z');
     $request->connectionId = 'mostly communities';
-    $request->fields = [
-        'Bugatti',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmEvent($request);
@@ -2187,9 +2148,6 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-05T02:16:40.085Z');
     $request->crmFile->userId = 'National Granite redundant';
     $request->connectionId = 'East';
-    $request->fields = [
-        'Quality',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmFile($request);
@@ -2273,9 +2231,6 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-18T07:05:56.875Z');
     $request->crmLead->userId = 'female Coupe';
     $request->connectionId = 'Fisher convergence';
-    $request->fields = [
-        'Hybrid',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmLead($request);
@@ -2337,9 +2292,6 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T04:56:01.093Z');
     $request->connectionId = 'Lead Operative';
-    $request->fields = [
-        'Refined',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmPipeline($request);
@@ -2402,9 +2354,6 @@ try {
         'incentivize',
     ];
     $request->connectionId = 'Coordinator convergence';
-    $request->fields = [
-        'Country',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmTeam($request);
@@ -2491,9 +2440,6 @@ try {
     $request->crmUser->title = 'Borders turquoise';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-05T04:59:37.900Z');
     $request->connectionId = 'Cambridgeshire sit Account';
-    $request->fields = [
-        'ubiquitous',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmUser($request);
@@ -3032,9 +2978,6 @@ try {
         'Romania',
     ];
     $request->connectionId = 'killer Product';
-    $request->fields = [
-        'drat',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmCompany($request);
@@ -3121,9 +3064,6 @@ try {
     $request->crmContact->title = 'program';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-27T16:33:46.279Z');
     $request->connectionId = 'Barbados Directives male';
-    $request->fields = [
-        'Road',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmContact($request);
@@ -3194,9 +3134,6 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-24T17:23:09.389Z');
     $request->crmDeal->wonReason = 'Neither times capacitor';
     $request->connectionId = 'Architect';
-    $request->fields = [
-        'Road',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmDeal($request);
@@ -3294,9 +3231,6 @@ try {
     $request->crmEvent->type = CrmEventType::Email;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-20T23:16:54.957Z');
     $request->connectionId = 'wearily Southeast pledge';
-    $request->fields = [
-        'Soul',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmEvent($request);
@@ -3366,9 +3300,6 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-06T16:38:28.722Z');
     $request->crmFile->userId = 'Czech wasting';
     $request->connectionId = 'Shoes';
-    $request->fields = [
-        'how',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmFile($request);
@@ -3452,9 +3383,6 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T20:48:33.132Z');
     $request->crmLead->userId = 'treasure attitude sint';
     $request->connectionId = 'Cab charming';
-    $request->fields = [
-        'laudantium',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmLead($request);
@@ -3516,9 +3444,6 @@ try {
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-30T06:55:51.144Z');
     $request->connectionId = 'Configuration Minivan';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmPipeline($request);
@@ -3581,9 +3506,6 @@ try {
         'Electric',
     ];
     $request->connectionId = 'Northeast orchid';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmTeam($request);
@@ -3670,9 +3592,6 @@ try {
     $request->crmUser->title = 'lavender hmph';
     $request->crmUser->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-19T17:15:40.477Z');
     $request->connectionId = 'Movies Bedford';
-    $request->fields = [
-        'virtual',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmUser($request);

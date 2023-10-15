@@ -75,9 +75,6 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::SecondInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T16:55:31.599Z');
     $request->connectionId = 'Bicycle';
-    $request->fields = [
-        'appeal',
-    ];
 
     $response = $sdk->ats->createAtsApplication($request);
 
@@ -162,9 +159,6 @@ try {
     $request->atsCandidate->title = 'Bicycle midst';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-20T17:32:48.573Z');
     $request->connectionId = 'Money Folk Minivan';
-    $request->fields = [
-        'Avon',
-    ];
 
     $response = $sdk->ats->createAtsCandidate($request);
 
@@ -233,9 +227,6 @@ try {
         'HTTP',
     ];
     $request->connectionId = 'Direct Sedan';
-    $request->fields = [
-        'Niger',
-    ];
 
     $response = $sdk->ats->createAtsInterview($request);
 
@@ -323,9 +314,6 @@ try {
     $request->atsJob->status = AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-30T11:52:47.581Z');
     $request->connectionId = 'Borders optical';
-    $request->fields = [
-        'male',
-    ];
 
     $response = $sdk->ats->createAtsJob($request);
 
@@ -389,9 +377,6 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::StrongYes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-31T23:56:41.326Z');
     $request->connectionId = 'Metal hexagon';
-    $request->fields = [
-        'groupware',
-    ];
 
     $response = $sdk->ats->createAtsScorecard($request);
 
@@ -1017,9 +1002,6 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::Accepted;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-22T18:46:40.363Z');
     $request->connectionId = 'Irving Generic Buckinghamshire';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsApplication($request);
@@ -1105,9 +1087,6 @@ try {
     $request->atsCandidate->title = 'Executive female';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-05T19:04:45.670Z');
     $request->connectionId = 'ivory Investment Berkshire';
-    $request->fields = [
-        'for',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsCandidate($request);
@@ -1177,9 +1156,6 @@ try {
         'Zloty',
     ];
     $request->connectionId = 'quirkily Liaison Metical';
-    $request->fields = [
-        'Funk',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsInterview($request);
@@ -1268,9 +1244,6 @@ try {
     $request->atsJob->status = AtsJobStatus::Draft;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-01T22:46:41.539Z');
     $request->connectionId = 'Reggae person Chief';
-    $request->fields = [
-        'Hat',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsJob($request);
@@ -1335,9 +1308,6 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-08T12:33:31.906Z');
     $request->connectionId = 'Electric';
-    $request->fields = [
-        'Pickup',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsScorecard($request);
@@ -1653,9 +1623,6 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T02:13:22.264Z');
     $request->connectionId = 'Pants West';
-    $request->fields = [
-        'iterate',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsApplication($request);
@@ -1741,9 +1708,6 @@ try {
     $request->atsCandidate->title = 'yellow Analyst';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-11T02:46:50.190Z');
     $request->connectionId = 'tan';
-    $request->fields = [
-        'whorl',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsCandidate($request);
@@ -1813,9 +1777,6 @@ try {
         'Program',
     ];
     $request->connectionId = 'tensor what';
-    $request->fields = [
-        'besides',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsInterview($request);
@@ -1904,9 +1865,6 @@ try {
     $request->atsJob->status = AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-08T06:24:43.982Z');
     $request->connectionId = 'Electric Southeast anti';
-    $request->fields = [
-        'quos',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsJob($request);
@@ -1971,9 +1929,6 @@ try {
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T06:37:40.295Z');
     $request->connectionId = 'Executive haptic';
-    $request->fields = [
-        'Account',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsScorecard($request);

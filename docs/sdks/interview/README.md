@@ -55,9 +55,6 @@ try {
         'HTTP',
     ];
     $request->connectionId = 'Direct Sedan';
-    $request->fields = [
-        'Niger',
-    ];
 
     $response = $sdk->interview->createAtsInterview($request);
 
@@ -238,9 +235,6 @@ try {
         'Zloty',
     ];
     $request->connectionId = 'quirkily Liaison Metical';
-    $request->fields = [
-        'Funk',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->interview->patchAtsInterview($request);
@@ -360,9 +354,6 @@ try {
         'Program',
     ];
     $request->connectionId = 'tensor what';
-    $request->fields = [
-        'besides',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->interview->updateAtsInterview($request);

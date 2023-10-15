@@ -51,9 +51,6 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::SecondInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T16:55:31.599Z');
     $request->connectionId = 'Bicycle';
-    $request->fields = [
-        'appeal',
-    ];
 
     $response = $sdk->application->createAtsApplication($request);
 
@@ -231,9 +228,6 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::Accepted;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-22T18:46:40.363Z');
     $request->connectionId = 'Irving Generic Buckinghamshire';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->application->patchAtsApplication($request);
@@ -349,9 +343,6 @@ try {
     $request->atsApplication->status = AtsApplicationStatus::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T02:13:22.264Z');
     $request->connectionId = 'Pants West';
-    $request->fields = [
-        'iterate',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->application->updateAtsApplication($request);

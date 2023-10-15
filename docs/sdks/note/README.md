@@ -46,10 +46,7 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'Home Outdoors transmitter';
     $request->connectionId = 'National geez Direct';
-    $request->fields = [
-        'repurpose',
-    ];
-    $request->ticketId = 'Northeast Steel M2F';
+    $request->ticketId = 'male';
 
     $response = $sdk->note->createTicketingNote($request);
 
@@ -222,11 +219,8 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'Metal Hybrid';
     $request->connectionId = 'Customer Hryvnia';
-    $request->fields = [
-        'maroon',
-    ];
     $request->id = '<ID>';
-    $request->ticketId = 'East what';
+    $request->ticketId = 'Credit';
 
     $response = $sdk->note->patchTicketingNote($request);
 
@@ -337,11 +331,8 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'navigating';
     $request->connectionId = 'state Solutions Bespoke';
-    $request->fields = [
-        'optimizing',
-    ];
     $request->id = '<ID>';
-    $request->ticketId = 'firewall systems intermediate';
+    $request->ticketId = 'sievert firewall';
 
     $response = $sdk->note->updateTicketingNote($request);
 

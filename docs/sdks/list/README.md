@@ -44,9 +44,6 @@ try {
     $request->marketingList->raw = new PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T18:05:38.910Z');
     $request->connectionId = 'often iusto during';
-    $request->fields = [
-        'Folk',
-    ];
 
     $response = $sdk->list->createMartechList($request);
 
@@ -215,9 +212,6 @@ try {
     $request->marketingList->raw = new PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-21T05:37:31.198Z');
     $request->connectionId = 'hunker';
-    $request->fields = [
-        'Cotton',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->list->patchMartechList($request);
@@ -326,9 +320,6 @@ try {
     $request->marketingList->raw = new PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-11T21:33:05.389Z');
     $request->connectionId = 'Roanoke navigate';
-    $request->fields = [
-        'Androgynous',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->list->updateMartechList($request);

@@ -71,9 +71,6 @@ try {
     $request->atsCandidate->title = 'Bicycle midst';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-20T17:32:48.573Z');
     $request->connectionId = 'Money Folk Minivan';
-    $request->fields = [
-        'Avon',
-    ];
 
     $response = $sdk->candidate->createAtsCandidate($request);
 
@@ -269,9 +266,6 @@ try {
     $request->atsCandidate->title = 'Executive female';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-05T19:04:45.670Z');
     $request->connectionId = 'ivory Investment Berkshire';
-    $request->fields = [
-        'for',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->candidate->patchAtsCandidate($request);
@@ -407,9 +401,6 @@ try {
     $request->atsCandidate->title = 'yellow Analyst';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-11T02:46:50.190Z');
     $request->connectionId = 'tan';
-    $request->fields = [
-        'whorl',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->candidate->updateAtsCandidate($request);

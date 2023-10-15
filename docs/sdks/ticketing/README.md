@@ -72,9 +72,6 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-03T05:11:49.371Z');
     $request->connectionId = 'Soul';
-    $request->fields = [
-        'intangible',
-    ];
 
     $response = $sdk->ticketing->createTicketingAgent($request);
 
@@ -145,9 +142,6 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T18:53:13.968Z');
     $request->connectionId = 'earum';
-    $request->fields = [
-        'monitor',
-    ];
 
     $response = $sdk->ticketing->createTicketingCustomer($request);
 
@@ -207,10 +201,7 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'Home Outdoors transmitter';
     $request->connectionId = 'National geez Direct';
-    $request->fields = [
-        'repurpose',
-    ];
-    $request->ticketId = 'Northeast Steel M2F';
+    $request->ticketId = 'male';
 
     $response = $sdk->ticketing->createTicketingNote($request);
 
@@ -280,9 +271,6 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-22T14:24:24.761Z');
     $request->connectionId = 'hackwork';
-    $request->fields = [
-        'mmm',
-    ];
 
     $response = $sdk->ticketing->createTicketingTicket($request);
 
@@ -798,9 +786,6 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T17:57:18.300Z');
     $request->connectionId = 'envious';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->patchTicketingAgent($request);
@@ -872,9 +857,6 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-22T00:19:38.663Z');
     $request->connectionId = 'Northeast Metal Rustic';
-    $request->fields = [
-        'thug',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->patchTicketingCustomer($request);
@@ -935,11 +917,8 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'Metal Hybrid';
     $request->connectionId = 'Customer Hryvnia';
-    $request->fields = [
-        'maroon',
-    ];
     $request->id = '<ID>';
-    $request->ticketId = 'East what';
+    $request->ticketId = 'Credit';
 
     $response = $sdk->ticketing->patchTicketingNote($request);
 
@@ -1009,9 +988,6 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T18:09:01.786Z');
     $request->connectionId = 'Steel mint transparent';
-    $request->fields = [
-        'Internal',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->patchTicketingTicket($request);
@@ -1281,9 +1257,6 @@ try {
     ];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-04T21:57:06.367Z');
     $request->connectionId = 'beside Usability Bedfordshire';
-    $request->fields = [
-        'SSD',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->updateTicketingAgent($request);
@@ -1355,9 +1328,6 @@ try {
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T14:51:51.077Z');
     $request->connectionId = 'Bolivia';
-    $request->fields = [
-        'pfft',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->updateTicketingCustomer($request);
@@ -1418,11 +1388,8 @@ try {
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
     $request->ticketingNote->updatedAt = 'navigating';
     $request->connectionId = 'state Solutions Bespoke';
-    $request->fields = [
-        'optimizing',
-    ];
     $request->id = '<ID>';
-    $request->ticketId = 'firewall systems intermediate';
+    $request->ticketId = 'sievert firewall';
 
     $response = $sdk->ticketing->updateTicketingNote($request);
 
@@ -1492,9 +1459,6 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-14T14:48:53.243Z');
     $request->connectionId = 'azure Cobalt';
-    $request->fields = [
-        'Bicycle',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->ticketing->updateTicketingTicket($request);

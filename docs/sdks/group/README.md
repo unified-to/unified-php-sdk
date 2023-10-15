@@ -55,9 +55,6 @@ try {
     $request->hrisGroup->type = HrisGroupType::Division;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-29T19:37:40.006Z');
     $request->connectionId = 'Electric';
-    $request->fields = [
-        'Nuevo',
-    ];
 
     $response = $sdk->group->createHrisGroup($request);
 
@@ -237,9 +234,6 @@ try {
     $request->hrisGroup->type = HrisGroupType::Group;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-17T19:30:24.300Z');
     $request->connectionId = 'Money Legacy Utah';
-    $request->fields = [
-        'Interface',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->group->patchHrisGroup($request);
@@ -359,9 +353,6 @@ try {
     $request->hrisGroup->type = HrisGroupType::Branch;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T10:20:39.465Z');
     $request->connectionId = 'atop Music Hat';
-    $request->fields = [
-        'panel',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->group->updateHrisGroup($request);

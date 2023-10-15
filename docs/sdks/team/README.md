@@ -48,9 +48,6 @@ try {
         'Barbados',
     ];
     $request->connectionId = 'hacking Northwest tow';
-    $request->fields = [
-        'Cis',
-    ];
 
     $response = $sdk->team->createCrmTeam($request);
 
@@ -223,9 +220,6 @@ try {
         'incentivize',
     ];
     $request->connectionId = 'Coordinator convergence';
-    $request->fields = [
-        'Country',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->team->patchCrmTeam($request);
@@ -338,9 +332,6 @@ try {
         'Electric',
     ];
     $request->connectionId = 'Northeast orchid';
-    $request->fields = [
-        'West',
-    ];
     $request->id = '<ID>';
 
     $response = $sdk->team->updateCrmTeam($request);
