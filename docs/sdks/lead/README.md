@@ -43,7 +43,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmLeadRequest();
     $request->crmLead = new CrmLead();
-    $request->crmLead->active = false;
     $request->crmLead->address = new PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'port steradian prize';
     $request->crmLead->address->address2 = 'ability Einsteinium Orchestrator';
@@ -61,14 +60,16 @@ try {
         new CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
+    $request->crmLead->isActive = false;
     $request->crmLead->name = 'backing Southeast';
     $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->source = 'Electronics Account Northeast';
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T00:13:31.481Z');
-    $request->crmLead->userId = 'Shirt';
-    $request->connectionId = 'female transmitter';
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-23T09:34:07.871Z');
+    $request->crmLead->userId = 'Fish Thorium';
+    $request->connectionId = 'Configurable Kyat gratefully';
 
     $response = $sdk->lead->createCrmLead($request);
 
@@ -236,7 +237,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmLeadRequest();
     $request->crmLead = new CrmLead();
-    $request->crmLead->active = false;
     $request->crmLead->address = new PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'teal Hat';
     $request->crmLead->address->address2 = 'Ball Chips';
@@ -254,14 +254,16 @@ try {
         new CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
+    $request->crmLead->isActive = false;
     $request->crmLead->name = 'Ergonomic Ergonomic';
     $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->source = 'Credit Coupe';
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-18T07:05:56.875Z');
-    $request->crmLead->userId = 'female Coupe';
-    $request->connectionId = 'Fisher convergence';
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-14T18:10:42.126Z');
+    $request->crmLead->userId = 'data';
+    $request->connectionId = 'pink 1080p microchip';
     $request->id = '<ID>';
 
     $response = $sdk->lead->patchCrmLead($request);
@@ -369,7 +371,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmLeadRequest();
     $request->crmLead = new CrmLead();
-    $request->crmLead->active = false;
     $request->crmLead->address = new PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'compelling';
     $request->crmLead->address->address2 = 'Pickup Polestar Checking';
@@ -387,14 +388,16 @@ try {
         new CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
+    $request->crmLead->isActive = false;
     $request->crmLead->name = 'Northwest';
     $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->source = 'whose aha Hampshire';
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T20:48:33.132Z');
-    $request->crmLead->userId = 'treasure attitude sint';
-    $request->connectionId = 'Cab charming';
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-29T19:53:05.027Z');
+    $request->crmLead->userId = 'Account Southeast hacking';
+    $request->connectionId = 'yawningly';
     $request->id = '<ID>';
 
     $response = $sdk->lead->updateCrmLead($request);

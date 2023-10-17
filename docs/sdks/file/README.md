@@ -38,7 +38,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmFileRequest();
     $request->crmFile = new CrmFile();
-    $request->crmFile->active = false;
     $request->crmFile->activityId = 'ASCII Wooden the';
     $request->crmFile->companyId = 'Tactics Bicycle copy';
     $request->crmFile->contactId = 'Soul';
@@ -50,6 +49,7 @@ try {
     $request->crmFile->fileType = 'application';
     $request->crmFile->fileUrl = 'program hacking';
     $request->crmFile->id = '<ID>';
+    $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'Bicycle Marketing Helium';
     $request->crmFile->raw = new PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-17T10:16:03.549Z');
@@ -220,7 +220,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmFileRequest();
     $request->crmFile = new CrmFile();
-    $request->crmFile->active = false;
     $request->crmFile->activityId = 'bluetooth';
     $request->crmFile->companyId = 'Southeast';
     $request->crmFile->contactId = 'Oriental invoice';
@@ -232,6 +231,7 @@ try {
     $request->crmFile->fileType = 'video';
     $request->crmFile->fileUrl = 'New qua';
     $request->crmFile->id = '<ID>';
+    $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'Usability';
     $request->crmFile->raw = new PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-05T02:16:40.085Z');
@@ -339,7 +339,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmFileRequest();
     $request->crmFile = new CrmFile();
-    $request->crmFile->active = false;
     $request->crmFile->activityId = 'Orchestrator';
     $request->crmFile->companyId = 'generate unexpectedly Nakfa';
     $request->crmFile->contactId = 'Specialist Station';
@@ -351,6 +350,7 @@ try {
     $request->crmFile->fileType = 'image';
     $request->crmFile->fileUrl = 'vitae';
     $request->crmFile->id = '<ID>';
+    $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'Mandatory';
     $request->crmFile->raw = new PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-06T16:38:28.722Z');

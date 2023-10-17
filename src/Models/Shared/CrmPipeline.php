@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmPipeline
 {
-	#[\JMS\Serializer\Annotation\SerializedName('active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $active = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -36,6 +31,11 @@ class CrmPipeline
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('is_active')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isActive = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -53,11 +53,11 @@ class CrmPipeline
     
 	public function __construct()
 	{
-		$this->active = null;
 		$this->createdAt = null;
 		$this->dealProbability = null;
 		$this->displayOrder = null;
 		$this->id = null;
+		$this->isActive = null;
 		$this->name = null;
 		$this->raw = null;
 		$this->updatedAt = null;

@@ -44,7 +44,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmCompanyRequest();
     $request->crmCompany = new CrmCompany();
-    $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'parsing Hawaii';
     $request->crmCompany->address->address2 = 'experiences';
@@ -62,6 +61,7 @@ try {
         new CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'Bicycle';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
@@ -295,7 +295,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmCompanyRequest();
     $request->crmCompany = new CrmCompany();
-    $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'Platinum Beauty haptic';
     $request->crmCompany->address->address2 = 'Genderflux ADP';
@@ -313,6 +312,7 @@ try {
         new CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'Cotton';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
@@ -433,7 +433,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmCompanyRequest();
     $request->crmCompany = new CrmCompany();
-    $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'Brand enterprise';
     $request->crmCompany->address->address2 = 'Director bypassing';
@@ -451,6 +450,7 @@ try {
         new CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'monitor Blues Northwest';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [

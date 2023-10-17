@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmUser
 {
-	#[\JMS\Serializer\Annotation\SerializedName('active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $active = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmUserAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -61,6 +56,11 @@ class CrmUser
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $imageUrl = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('is_active')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isActive = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('language_locale')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -103,7 +103,6 @@ class CrmUser
     
 	public function __construct()
 	{
-		$this->active = null;
 		$this->address = null;
 		$this->createdAt = null;
 		$this->currency = null;
@@ -112,6 +111,7 @@ class CrmUser
 		$this->emails = null;
 		$this->id = null;
 		$this->imageUrl = null;
+		$this->isActive = null;
 		$this->languageLocale = null;
 		$this->name = null;
 		$this->raw = null;

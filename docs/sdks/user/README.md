@@ -43,7 +43,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmUserRequest();
     $request->crmUser = new CrmUser();
-    $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
     $request->crmUser->address->address1 = 'await male';
     $request->crmUser->address->address2 = 'Incredible Virginia';
@@ -62,6 +61,7 @@ try {
     ];
     $request->crmUser->id = '<ID>';
     $request->crmUser->imageUrl = 'Latin Will the';
+    $request->crmUser->isActive = false;
     $request->crmUser->languageLocale = 'Central Director';
     $request->crmUser->name = 'Personal compelling similique';
     $request->crmUser->raw = new PropertyCrmUserRaw();
@@ -239,7 +239,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmUserRequest();
     $request->crmUser = new CrmUser();
-    $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
     $request->crmUser->address->address1 = 'Bronze composite';
     $request->crmUser->address->address2 = 'katal Industrial Classical';
@@ -258,6 +257,7 @@ try {
     ];
     $request->crmUser->id = '<ID>';
     $request->crmUser->imageUrl = 'card equal';
+    $request->crmUser->isActive = false;
     $request->crmUser->languageLocale = 'Cotton apud';
     $request->crmUser->name = 'male Land fumbling';
     $request->crmUser->raw = new PropertyCrmUserRaw();
@@ -375,7 +375,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmUserRequest();
     $request->crmUser = new CrmUser();
-    $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
     $request->crmUser->address->address1 = 'Idaho green';
     $request->crmUser->address->address2 = 'Savings';
@@ -394,6 +393,7 @@ try {
     ];
     $request->crmUser->id = '<ID>';
     $request->crmUser->imageUrl = 'perspiciatis Creative 1080p';
+    $request->crmUser->isActive = false;
     $request->crmUser->languageLocale = 'Road Movies regulation';
     $request->crmUser->name = 'Northeast Avon';
     $request->crmUser->raw = new PropertyCrmUserRaw();

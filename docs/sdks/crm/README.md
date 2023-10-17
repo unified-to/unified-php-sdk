@@ -91,7 +91,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmCompanyRequest();
     $request->crmCompany = new CrmCompany();
-    $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'parsing Hawaii';
     $request->crmCompany->address->address2 = 'experiences';
@@ -109,6 +108,7 @@ try {
         new CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'Bicycle';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
@@ -423,7 +423,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmFileRequest();
     $request->crmFile = new CrmFile();
-    $request->crmFile->active = false;
     $request->crmFile->activityId = 'ASCII Wooden the';
     $request->crmFile->companyId = 'Tactics Bicycle copy';
     $request->crmFile->contactId = 'Soul';
@@ -435,6 +434,7 @@ try {
     $request->crmFile->fileType = 'application';
     $request->crmFile->fileUrl = 'program hacking';
     $request->crmFile->id = '<ID>';
+    $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'Bicycle Marketing Helium';
     $request->crmFile->raw = new PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-17T10:16:03.549Z');
@@ -496,7 +496,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmLeadRequest();
     $request->crmLead = new CrmLead();
-    $request->crmLead->active = false;
     $request->crmLead->address = new PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'port steradian prize';
     $request->crmLead->address->address2 = 'ability Einsteinium Orchestrator';
@@ -514,14 +513,16 @@ try {
         new CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
+    $request->crmLead->isActive = false;
     $request->crmLead->name = 'backing Southeast';
     $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->source = 'Electronics Account Northeast';
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T00:13:31.481Z');
-    $request->crmLead->userId = 'Shirt';
-    $request->connectionId = 'female transmitter';
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-23T09:34:07.871Z');
+    $request->crmLead->userId = 'Fish Thorium';
+    $request->connectionId = 'Configurable Kyat gratefully';
 
     $response = $sdk->crm->createCrmLead($request);
 
@@ -573,11 +574,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmPipelineRequest();
     $request->crmPipeline = new CrmPipeline();
-    $request->crmPipeline->active = false;
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-24T14:15:54.218Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 6254.97;
     $request->crmPipeline->id = '<ID>';
+    $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'Vista';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-13T00:16:45.285Z');
@@ -699,7 +700,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateCrmUserRequest();
     $request->crmUser = new CrmUser();
-    $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
     $request->crmUser->address->address1 = 'await male';
     $request->crmUser->address->address2 = 'Incredible Virginia';
@@ -718,6 +718,7 @@ try {
     ];
     $request->crmUser->id = '<ID>';
     $request->crmUser->imageUrl = 'Latin Will the';
+    $request->crmUser->isActive = false;
     $request->crmUser->languageLocale = 'Central Director';
     $request->crmUser->name = 'Personal compelling similique';
     $request->crmUser->raw = new PropertyCrmUserRaw();
@@ -1795,7 +1796,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmCompanyRequest();
     $request->crmCompany = new CrmCompany();
-    $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'Platinum Beauty haptic';
     $request->crmCompany->address->address2 = 'Genderflux ADP';
@@ -1813,6 +1813,7 @@ try {
         new CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'Cotton';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
@@ -2131,7 +2132,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmFileRequest();
     $request->crmFile = new CrmFile();
-    $request->crmFile->active = false;
     $request->crmFile->activityId = 'bluetooth';
     $request->crmFile->companyId = 'Southeast';
     $request->crmFile->contactId = 'Oriental invoice';
@@ -2143,6 +2143,7 @@ try {
     $request->crmFile->fileType = 'video';
     $request->crmFile->fileUrl = 'New qua';
     $request->crmFile->id = '<ID>';
+    $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'Usability';
     $request->crmFile->raw = new PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-05T02:16:40.085Z');
@@ -2205,7 +2206,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmLeadRequest();
     $request->crmLead = new CrmLead();
-    $request->crmLead->active = false;
     $request->crmLead->address = new PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'teal Hat';
     $request->crmLead->address->address2 = 'Ball Chips';
@@ -2223,14 +2223,16 @@ try {
         new CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
+    $request->crmLead->isActive = false;
     $request->crmLead->name = 'Ergonomic Ergonomic';
     $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->source = 'Credit Coupe';
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-18T07:05:56.875Z');
-    $request->crmLead->userId = 'female Coupe';
-    $request->connectionId = 'Fisher convergence';
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-14T18:10:42.126Z');
+    $request->crmLead->userId = 'data';
+    $request->connectionId = 'pink 1080p microchip';
     $request->id = '<ID>';
 
     $response = $sdk->crm->patchCrmLead($request);
@@ -2283,11 +2285,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmPipelineRequest();
     $request->crmPipeline = new CrmPipeline();
-    $request->crmPipeline->active = false;
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-26T17:19:01.949Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8620.92;
     $request->crmPipeline->id = '<ID>';
+    $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'Costa Southwest';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T04:56:01.093Z');
@@ -2411,7 +2413,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchCrmUserRequest();
     $request->crmUser = new CrmUser();
-    $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
     $request->crmUser->address->address1 = 'Bronze composite';
     $request->crmUser->address->address2 = 'katal Industrial Classical';
@@ -2430,6 +2431,7 @@ try {
     ];
     $request->crmUser->id = '<ID>';
     $request->crmUser->imageUrl = 'card equal';
+    $request->crmUser->isActive = false;
     $request->crmUser->languageLocale = 'Cotton apud';
     $request->crmUser->name = 'male Land fumbling';
     $request->crmUser->raw = new PropertyCrmUserRaw();
@@ -2947,7 +2949,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmCompanyRequest();
     $request->crmCompany = new CrmCompany();
-    $request->crmCompany->active = false;
     $request->crmCompany->address = new PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'Brand enterprise';
     $request->crmCompany->address->address2 = 'Director bypassing';
@@ -2965,6 +2966,7 @@ try {
         new CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'monitor Blues Northwest';
     $request->crmCompany->raw = new PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
@@ -3283,7 +3285,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmFileRequest();
     $request->crmFile = new CrmFile();
-    $request->crmFile->active = false;
     $request->crmFile->activityId = 'Orchestrator';
     $request->crmFile->companyId = 'generate unexpectedly Nakfa';
     $request->crmFile->contactId = 'Specialist Station';
@@ -3295,6 +3296,7 @@ try {
     $request->crmFile->fileType = 'image';
     $request->crmFile->fileUrl = 'vitae';
     $request->crmFile->id = '<ID>';
+    $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'Mandatory';
     $request->crmFile->raw = new PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-06T16:38:28.722Z');
@@ -3357,7 +3359,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmLeadRequest();
     $request->crmLead = new CrmLead();
-    $request->crmLead->active = false;
     $request->crmLead->address = new PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'compelling';
     $request->crmLead->address->address2 = 'Pickup Polestar Checking';
@@ -3375,14 +3376,16 @@ try {
         new CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
+    $request->crmLead->isActive = false;
     $request->crmLead->name = 'Northwest';
     $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->source = 'whose aha Hampshire';
     $request->crmLead->telephones = [
         new CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-08T20:48:33.132Z');
-    $request->crmLead->userId = 'treasure attitude sint';
-    $request->connectionId = 'Cab charming';
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-29T19:53:05.027Z');
+    $request->crmLead->userId = 'Account Southeast hacking';
+    $request->connectionId = 'yawningly';
     $request->id = '<ID>';
 
     $response = $sdk->crm->updateCrmLead($request);
@@ -3435,11 +3438,11 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmPipelineRequest();
     $request->crmPipeline = new CrmPipeline();
-    $request->crmPipeline->active = false;
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-27T08:28:05.275Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8923.83;
     $request->crmPipeline->id = '<ID>';
+    $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'Androgyne Northeast';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-30T06:55:51.144Z');
@@ -3563,7 +3566,6 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateCrmUserRequest();
     $request->crmUser = new CrmUser();
-    $request->crmUser->active = false;
     $request->crmUser->address = new PropertyCrmUserAddress();
     $request->crmUser->address->address1 = 'Idaho green';
     $request->crmUser->address->address2 = 'Savings';
@@ -3582,6 +3584,7 @@ try {
     ];
     $request->crmUser->id = '<ID>';
     $request->crmUser->imageUrl = 'perspiciatis Creative 1080p';
+    $request->crmUser->isActive = false;
     $request->crmUser->languageLocale = 'Road Movies regulation';
     $request->crmUser->name = 'Northeast Avon';
     $request->crmUser->raw = new PropertyCrmUserRaw();

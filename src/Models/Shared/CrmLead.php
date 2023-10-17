@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmLead
 {
-	#[\JMS\Serializer\Annotation\SerializedName('active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $active = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -56,6 +51,11 @@ class CrmLead
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('is_active')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isActive = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -65,6 +65,11 @@ class CrmLead
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmLeadRaw')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmLeadRaw $raw = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('source')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $source = null;
     
     /**
      * $telephones
@@ -88,7 +93,6 @@ class CrmLead
     
 	public function __construct()
 	{
-		$this->active = null;
 		$this->address = null;
 		$this->companyId = null;
 		$this->contactId = null;
@@ -96,8 +100,10 @@ class CrmLead
 		$this->creatorUserId = null;
 		$this->emails = null;
 		$this->id = null;
+		$this->isActive = null;
 		$this->name = null;
 		$this->raw = null;
+		$this->source = null;
 		$this->telephones = null;
 		$this->updatedAt = null;
 		$this->userId = null;

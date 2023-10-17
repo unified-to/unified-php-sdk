@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmFile
 {
-	#[\JMS\Serializer\Annotation\SerializedName('active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $active = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('activity_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -71,6 +66,11 @@ class CrmFile
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('is_active')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isActive = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('lead_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -93,7 +93,6 @@ class CrmFile
     
 	public function __construct()
 	{
-		$this->active = null;
 		$this->activityId = null;
 		$this->companyId = null;
 		$this->contactId = null;
@@ -105,6 +104,7 @@ class CrmFile
 		$this->fileType = null;
 		$this->fileUrl = null;
 		$this->id = null;
+		$this->isActive = null;
 		$this->leadId = null;
 		$this->raw = null;
 		$this->updatedAt = null;
