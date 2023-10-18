@@ -23,4 +23,5 @@ enum AtsApplicationStatus: string
     case Accepted = 'ACCEPTED';
     case Hired = 'HIRED';
     case Rejected = 'REJECTED';
+    case Withdrawn = 'WITHDRAWN';
 }

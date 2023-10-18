@@ -38,12 +38,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'Architect responsive';
+    $request->marketingList->createdAt = 'Latin';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'EXE';
+    $request->marketingList->name = 'withdrawal';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T18:05:38.910Z');
-    $request->connectionId = 'often iusto during';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-22T16:43:28.990Z');
+    $request->connectionId = 'Recycled';
 
     $response = $sdk->list->createMartechList($request);
 
@@ -92,9 +92,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetMartechListRequest();
-    $request->connectionId = 'Franklin Bicycle Victoria';
+    $request->connectionId = 'red';
     $request->fields = [
-        'Fish',
+        'users',
     ];
     $request->id = '<ID>';
 
@@ -145,16 +145,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListMartechListsRequest();
-    $request->connectionId = 'DeKalb magenta black';
+    $request->connectionId = 'above';
     $request->fields = [
-        'provided',
+        'Fantastic',
     ];
-    $request->limit = 9798.76;
-    $request->offset = 9811.35;
-    $request->order = 'alarm evolve';
-    $request->query = 'Account';
-    $request->sort = 'gold';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-20T04:13:08.935Z');
+    $request->limit = 3446.94;
+    $request->offset = 7906.96;
+    $request->order = 'Consultant';
+    $request->query = 'customized';
+    $request->sort = 'parse';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-11T08:12:55.475Z');
 
     $response = $sdk->list->listMartechLists($request);
 
@@ -206,12 +206,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'Operations Liaison';
+    $request->marketingList->createdAt = 'Classical';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'Buckinghamshire Montana Health';
+    $request->marketingList->name = 'alarm';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-21T05:37:31.198Z');
-    $request->connectionId = 'hunker';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-06T03:03:29.299Z');
+    $request->connectionId = 'Electronic';
     $request->id = '<ID>';
 
     $response = $sdk->list->patchMartechList($request);
@@ -261,7 +261,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveMartechListRequest();
-    $request->connectionId = 'misty';
+    $request->connectionId = 'Northwest';
     $request->id = '<ID>';
 
     $response = $sdk->list->removeMartechList($request);
@@ -314,12 +314,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'Secured Kia Stroman';
+    $request->marketingList->createdAt = 'innocently';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'Bentley Gasoline';
+    $request->marketingList->name = 'gold';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-11T21:33:05.389Z');
-    $request->connectionId = 'Roanoke navigate';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-04T08:51:08.881Z');
+    $request->connectionId = 'Stroman';
     $request->id = '<ID>';
 
     $response = $sdk->list->updateMartechList($request);

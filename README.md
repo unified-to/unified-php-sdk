@@ -68,14 +68,14 @@ try {
     );
     $request->ticketingAgent->emails = [new TicketingEmail()];
     $request->ticketingAgent->id = '<ID>';
-    $request->ticketingAgent->name = 'Vermont Belize Seaborgium';
+    $request->ticketingAgent->name = 'purple';
     $request->ticketingAgent->raw = new PropertyTicketingAgentRaw();
     $request->ticketingAgent->telephones = [new TicketingTelephone()];
     $request->ticketingAgent->updatedAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
-        '2023-02-03T05:11:49.371Z',
+        '2023-09-11T07:50:00.955Z',
     );
-    $request->connectionId = 'Soul';
+    $request->connectionId = 'Belize';
 
     $response = $sdk->agent->createTicketingAgent($request);
 

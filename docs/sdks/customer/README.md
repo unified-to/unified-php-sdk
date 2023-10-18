@@ -47,16 +47,16 @@ try {
         new TicketingEmail(),
     ];
     $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'blue programming';
+    $request->ticketingCustomer->name = 'Investment';
     $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
     $request->ticketingCustomer->tags = [
-        'Cargo',
+        'blue',
     ];
     $request->ticketingCustomer->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-31T18:53:13.968Z');
-    $request->connectionId = 'earum';
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T02:30:21.759Z');
+    $request->connectionId = 'tepid';
 
     $response = $sdk->customer->createTicketingCustomer($request);
 
@@ -105,9 +105,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetTicketingCustomerRequest();
-    $request->connectionId = 'benchmark';
+    $request->connectionId = 'Berkshire';
     $request->fields = [
-        'Cambridgeshire',
+        'Gloves',
     ];
     $request->id = '<ID>';
 
@@ -158,16 +158,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListTicketingCustomersRequest();
-    $request->connectionId = 'Carrollton yellow';
+    $request->connectionId = 'adapter';
     $request->fields = [
-        'until',
+        'Unions',
     ];
     $request->limit = 1472.38;
     $request->offset = 9384.79;
-    $request->order = 'Folk';
-    $request->query = 'Chips JSON';
-    $request->sort = 'louse';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-22T18:24:21.846Z');
+    $request->order = 'Awesome';
+    $request->query = 'Cotton';
+    $request->sort = 'Chips';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-10T11:45:44.036Z');
 
     $response = $sdk->customer->listTicketingCustomers($request);
 
@@ -228,16 +228,16 @@ try {
         new TicketingEmail(),
     ];
     $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'Van Brownsville Frozen';
+    $request->ticketingCustomer->name = 'Hybrid';
     $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
     $request->ticketingCustomer->tags = [
-        'calculating',
+        'West',
     ];
     $request->ticketingCustomer->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-22T00:19:38.663Z');
-    $request->connectionId = 'Northeast Metal Rustic';
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-03T17:14:29.211Z');
+    $request->connectionId = 'Northeast';
     $request->id = '<ID>';
 
     $response = $sdk->customer->patchTicketingCustomer($request);
@@ -287,7 +287,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveTicketingCustomerRequest();
-    $request->connectionId = 'salmon';
+    $request->connectionId = 'West';
     $request->id = '<ID>';
 
     $response = $sdk->customer->removeTicketingCustomer($request);
@@ -349,16 +349,16 @@ try {
         new TicketingEmail(),
     ];
     $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'Granite South FTP';
+    $request->ticketingCustomer->name = 'Zinc';
     $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
     $request->ticketingCustomer->tags = [
-        'navigating',
+        'Rock',
     ];
     $request->ticketingCustomer->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T14:51:51.077Z');
-    $request->connectionId = 'Bolivia';
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-09T11:09:37.265Z');
+    $request->connectionId = 'FTP';
     $request->id = '<ID>';
 
     $response = $sdk->customer->updateTicketingCustomer($request);

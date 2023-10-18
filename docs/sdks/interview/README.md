@@ -39,22 +39,22 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateAtsInterviewRequest();
     $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'pixellate arc';
-    $request->atsInterview->candidateId = 'drat';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T16:48:42.126Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-17T22:03:34.997Z');
-    $request->atsInterview->externalEventXref = 'harpsichord Roanoke Smart';
+    $request->atsInterview->applicationId = 'Metrics';
+    $request->atsInterview->candidateId = 'Bar';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T10:11:26.881Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T16:48:42.126Z');
+    $request->atsInterview->externalEventXref = 'azure';
     $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'redundant Account ubiquitous';
-    $request->atsInterview->location = 'Davenport West nestle';
+    $request->atsInterview->jobId = 'harpsichord';
+    $request->atsInterview->location = 'Roanoke';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-03T12:23:41.502Z');
-    $request->atsInterview->status = AtsInterviewStatus::Scheduled;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-30T09:38:42.807Z');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-19T04:12:52.712Z');
+    $request->atsInterview->status = AtsInterviewStatus::Complete;
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-20T17:10:33.906Z');
     $request->atsInterview->userIds = [
-        'HTTP',
+        'redundant',
     ];
-    $request->connectionId = 'Direct Sedan';
+    $request->connectionId = 'Account';
 
     $response = $sdk->interview->createAtsInterview($request);
 
@@ -103,9 +103,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsInterviewRequest();
-    $request->connectionId = 'syndicate longingly Mobility';
+    $request->connectionId = 'yum';
     $request->fields = [
-        'grease',
+        'programming',
     ];
     $request->id = '<ID>';
 
@@ -156,17 +156,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsInterviewsRequest();
-    $request->applicationId = 'Northeast';
-    $request->connectionId = 'Avon';
+    $request->applicationId = 'Bronze';
+    $request->connectionId = 'Wooden';
     $request->fields = [
-        'gold',
+        'Avon',
     ];
-    $request->limit = 2371.68;
-    $request->offset = 2991.18;
-    $request->order = 'North';
-    $request->query = 'SMTP transmitting invoice';
-    $request->sort = 'underwriting protocol';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T08:55:35.395Z');
+    $request->limit = 1795.86;
+    $request->offset = 8334.82;
+    $request->order = 'Elegant';
+    $request->query = 'evolve';
+    $request->sort = 'West';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-08T07:24:23.420Z');
 
     $response = $sdk->interview->listAtsInterviews($request);
 
@@ -219,22 +219,22 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsInterviewRequest();
     $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'Idaho Francium Cambridgeshire';
-    $request->atsInterview->candidateId = 'quantifying Regional';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-23T13:36:34.664Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-17T13:01:20.492Z');
-    $request->atsInterview->externalEventXref = 'District Northeast';
+    $request->atsInterview->applicationId = 'courageously';
+    $request->atsInterview->candidateId = 'Handmade';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-18T09:12:18.749Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-14T21:48:10.753Z');
+    $request->atsInterview->externalEventXref = 'hen';
     $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'SCSI';
-    $request->atsInterview->location = 'mope Avon';
+    $request->atsInterview->jobId = 'quantifying';
+    $request->atsInterview->location = 'Regional';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-21T17:27:43.478Z');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-23T13:36:34.664Z');
     $request->atsInterview->status = AtsInterviewStatus::Complete;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-22T19:15:29.292Z');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-19T08:03:32.340Z');
     $request->atsInterview->userIds = [
-        'Zloty',
+        'District',
     ];
-    $request->connectionId = 'quirkily Liaison Metical';
+    $request->connectionId = 'Northeast';
     $request->id = '<ID>';
 
     $response = $sdk->interview->patchAtsInterview($request);
@@ -284,7 +284,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsInterviewRequest();
-    $request->connectionId = 'Polynesia redefine pfft';
+    $request->connectionId = 'green';
     $request->id = '<ID>';
 
     $response = $sdk->interview->removeAtsInterview($request);
@@ -338,22 +338,22 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateAtsInterviewRequest();
     $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'Loan Southeast omnis';
-    $request->atsInterview->candidateId = 'Modern';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-24T14:14:45.020Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-29T12:49:59.631Z');
-    $request->atsInterview->externalEventXref = 'female payment aw';
+    $request->atsInterview->applicationId = 'maroon';
+    $request->atsInterview->candidateId = 'maroon';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-01T14:26:12.006Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T11:41:49.964Z');
+    $request->atsInterview->externalEventXref = 'omnis';
     $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'incidentally Research';
-    $request->atsInterview->location = 'female Technician watt';
+    $request->atsInterview->jobId = 'Gorgeous';
+    $request->atsInterview->location = 'magenta';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-16T12:19:39.092Z');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-29T12:28:44.106Z');
     $request->atsInterview->status = AtsInterviewStatus::AwaitingFeedback;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-01T01:36:21.844Z');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-27T22:37:05.474Z');
     $request->atsInterview->userIds = [
-        'Program',
+        'aw',
     ];
-    $request->connectionId = 'tensor what';
+    $request->connectionId = 'solid';
     $request->id = '<ID>';
 
     $response = $sdk->interview->updateAtsInterview($request);

@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/**
- * AtsJob - An opened position/job
- * 
- * @package Unified\Unified_to\Models\Shared
- * @access public
- */
 class AtsJob
 {
     /**

@@ -39,17 +39,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'Northwest Account';
-    $request->atsScorecard->candidateId = 'mint Southeast';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T10:43:10.267Z');
+    $request->atsScorecard->applicationId = 'Brunei';
+    $request->atsScorecard->candidateId = 'Account';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T05:38:00.981Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'target Unbranded Handcrafted';
-    $request->atsScorecard->interviewerId = 'Bronze';
-    $request->atsScorecard->jobId = 'Cotton';
+    $request->atsScorecard->interviewId = 'mint';
+    $request->atsScorecard->interviewerId = 'Southeast';
+    $request->atsScorecard->jobId = 'Credit';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::StrongYes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-31T23:56:41.326Z');
-    $request->connectionId = 'Metal hexagon';
+    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-05T00:10:36.512Z');
+    $request->connectionId = 'hm';
 
     $response = $sdk->document->createAtsScorecard($request);
 
@@ -98,9 +98,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsScorecardRequest();
-    $request->connectionId = 'Executive';
+    $request->connectionId = 'Cordoba';
     $request->fields = [
-        'Berkelium',
+        'Nissan',
     ];
     $request->id = '<ID>';
 
@@ -151,19 +151,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsScorecardsRequest();
-    $request->applicationId = 'Hybrid Bugatti';
-    $request->candidateId = 'Cotton silver Diesel';
-    $request->connectionId = 'Grocery';
+    $request->applicationId = 'synthesizing';
+    $request->candidateId = 'surprised';
+    $request->connectionId = 'Gislason';
     $request->fields = [
-        'parallelism',
+        'Pickup',
     ];
-    $request->interviewId = 'Reggae Account Adaptive';
-    $request->limit = 2925.09;
-    $request->offset = 3357.99;
-    $request->order = 'Pizza Baby Circle';
-    $request->query = 'Metal';
-    $request->sort = 'International';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-20T10:34:27.085Z');
+    $request->interviewId = 'slop';
+    $request->limit = 121;
+    $request->offset = 355.08;
+    $request->order = 'Grocery';
+    $request->query = 'parallelism';
+    $request->sort = 'Lutetium';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T03:46:32.779Z');
 
     $response = $sdk->document->listAtsScorecards($request);
 
@@ -216,17 +216,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'eek';
-    $request->atsScorecard->candidateId = 'Electronic';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T06:50:19.647Z');
+    $request->atsScorecard->applicationId = 'Falls';
+    $request->atsScorecard->candidateId = 'engage';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-07T09:27:30.028Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'watt Interactions';
-    $request->atsScorecard->interviewerId = 'up';
-    $request->atsScorecard->jobId = 'Convertible';
+    $request->atsScorecard->interviewId = 'Malawi';
+    $request->atsScorecard->interviewerId = 'watt';
+    $request->atsScorecard->jobId = 'Interactions';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-08T12:33:31.906Z');
-    $request->connectionId = 'Electric';
+    $request->atsScorecard->recommendation = AtsScorecardRecommendation::DefinitelyNo;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-20T09:12:12.298Z');
+    $request->connectionId = 'Malawi';
     $request->id = '<ID>';
 
     $response = $sdk->document->patchAtsScorecard($request);
@@ -276,7 +276,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsScorecardRequest();
-    $request->connectionId = 'Cambridgeshire maximized';
+    $request->connectionId = 'approach';
     $request->id = '<ID>';
 
     $response = $sdk->document->removeAtsScorecard($request);
@@ -330,17 +330,17 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'grey';
-    $request->atsScorecard->candidateId = 'Legacy';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-28T23:56:34.967Z');
+    $request->atsScorecard->applicationId = 'East';
+    $request->atsScorecard->candidateId = 'Digitized';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-05T03:10:55.487Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'East Incredible';
-    $request->atsScorecard->interviewerId = 'youthful South';
-    $request->atsScorecard->jobId = 'person';
+    $request->atsScorecard->interviewId = 'Copernicium';
+    $request->atsScorecard->interviewerId = 'backing';
+    $request->atsScorecard->jobId = 'Incredible';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T06:37:40.295Z');
-    $request->connectionId = 'Executive haptic';
+    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T23:04:23.563Z');
+    $request->connectionId = 'act';
     $request->id = '<ID>';
 
     $response = $sdk->document->updateAtsScorecard($request);

@@ -30,11 +30,11 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListEnrichPeopleRequest();
-    $request->connectionId = 'Passenger';
-    $request->email = 'Lia.Green@yahoo.com';
-    $request->linkedinUrl = 'ad';
-    $request->name = 'Investor';
-    $request->twitter = 'Convertible';
+    $request->connectionId = 'Southwest';
+    $request->email = 'Ari.Lindgren@hotmail.com';
+    $request->linkedinUrl = 'bandwidth';
+    $request->name = 'Organic';
+    $request->twitter = 'eyeballs';
 
     $response = $sdk->person->listEnrichPeople($request);
 

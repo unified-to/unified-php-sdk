@@ -1,13 +1,11 @@
 # AtsCandidate
 
-A candidate looking for work
-
 
 ## Fields
 
 | Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `address`                                                                          | [?PropertyAtsCandidateAddress](../../models/shared/PropertyAtsCandidateAddress.md) | :heavy_minus_sign:                                                                 | Unified address object                                                             |
+| `address`                                                                          | [?PropertyAtsCandidateAddress](../../models/shared/PropertyAtsCandidateAddress.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
 | `companyName`                                                                      | *?string*                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
 | `createdAt`                                                                        | [\DateTime](https://www.php.net/manual/en/class.datetime.php)                      | :heavy_minus_sign:                                                                 | N/A                                                                                |
 | `emails`                                                                           | array<[AtsEmail](../../models/shared/AtsEmail.md)>                                 | :heavy_minus_sign:                                                                 | N/A                                                                                |

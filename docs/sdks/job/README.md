@@ -61,19 +61,19 @@ try {
         'Mini',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'Savings Customer Loan';
-    $request->atsJob->name = 'Investor District';
+    $request->atsJob->languageLocale = 'health';
+    $request->atsJob->name = 'Ergonomic';
     $request->atsJob->publicJobUrls = [
-        'hub',
+        'Customer',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'reboot',
+        'Loan',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-30T11:52:47.581Z');
-    $request->connectionId = 'Borders optical';
+    $request->atsJob->status = AtsJobStatus::Draft;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T11:13:11.642Z');
+    $request->connectionId = 'Optimization';
 
     $response = $sdk->job->createAtsJob($request);
 
@@ -122,9 +122,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsJobRequest();
-    $request->connectionId = 'runway';
+    $request->connectionId = 'Southwest';
     $request->fields = [
-        'Bronze',
+        'panel',
     ];
     $request->id = '<ID>';
 
@@ -175,16 +175,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsJobsRequest();
-    $request->connectionId = 'niches SQL';
+    $request->connectionId = 'firmware';
     $request->fields = [
-        '1080p',
+        'Praseodymium',
     ];
-    $request->limit = 7749.91;
-    $request->offset = 523.86;
-    $request->order = 'teal Electric ohm';
-    $request->query = 'radian';
-    $request->sort = 'Cambridgeshire';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-21T23:19:13.049Z');
+    $request->limit = 7427.26;
+    $request->offset = 7749.91;
+    $request->order = 'teal';
+    $request->query = 'Electric';
+    $request->sort = 'ohm';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-15T18:47:12.832Z');
 
     $response = $sdk->job->listAtsJobs($request);
 
@@ -259,19 +259,19 @@ try {
         'Waldorf',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'microchip Gasoline';
-    $request->atsJob->name = 'BMW Concrete Missoula';
+    $request->atsJob->languageLocale = 'firewall';
+    $request->atsJob->name = 'gold';
     $request->atsJob->publicJobUrls = [
-        'every',
+        'Principal',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'voluptates',
+        'BMW',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Draft;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-01T22:46:41.539Z');
-    $request->connectionId = 'Reggae person Chief';
+    $request->atsJob->status = AtsJobStatus::Pending;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-06T03:40:01.899Z');
+    $request->connectionId = 'killer';
     $request->id = '<ID>';
 
     $response = $sdk->job->patchAtsJob($request);
@@ -321,7 +321,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsJobRequest();
-    $request->connectionId = 'Aruba';
+    $request->connectionId = 'Northeast';
     $request->id = '<ID>';
 
     $response = $sdk->job->removeAtsJob($request);
@@ -397,19 +397,19 @@ try {
         'Metrics',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'payment withdrawal';
-    $request->atsJob->name = 'Investor Mini Orchestrator';
+    $request->atsJob->languageLocale = 'withdrawal';
+    $request->atsJob->name = 'index';
     $request->atsJob->publicJobUrls = [
-        'Southeast',
+        'visualize',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'East',
+        'Investor',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Open;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-08T06:24:43.982Z');
-    $request->connectionId = 'Electric Southeast anti';
+    $request->atsJob->status = AtsJobStatus::Closed;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-25T23:18:21.631Z');
+    $request->connectionId = 'Orchestrator';
     $request->id = '<ID>';
 
     $response = $sdk->job->updateAtsJob($request);

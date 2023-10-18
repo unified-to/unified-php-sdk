@@ -43,19 +43,19 @@ try {
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-23T03:04:45.267Z');
     $request->crmDeal->currency = 'Cuban Peso';
     $request->crmDeal->id = '<ID>';
-    $request->crmDeal->lostReason = 'Rap';
-    $request->crmDeal->name = 'lay programming Pop';
-    $request->crmDeal->pipeline = 'Intersex female';
-    $request->crmDeal->probability = 7337.04;
+    $request->crmDeal->lostReason = 'Southeast';
+    $request->crmDeal->name = 'worth';
+    $request->crmDeal->pipeline = 'lay';
+    $request->crmDeal->probability = 5009.11;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'kilogram morph';
-    $request->crmDeal->stage = 'ick';
+    $request->crmDeal->source = 'supposing';
+    $request->crmDeal->stage = 'Lexi';
     $request->crmDeal->tags = [
-        'Steel',
+        'female',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-05T12:31:42.723Z');
-    $request->crmDeal->wonReason = 'notwithstanding Hybrid';
-    $request->connectionId = 'Chile Web';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-15T09:44:17.218Z');
+    $request->crmDeal->wonReason = 'invoice';
+    $request->connectionId = 'Elegant';
 
     $response = $sdk->deal->createCrmDeal($request);
 
@@ -104,9 +104,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmDealRequest();
-    $request->connectionId = 'male orange';
+    $request->connectionId = 'payment';
     $request->fields = [
-        'Reduced',
+        'mint',
     ];
     $request->id = '<ID>';
 
@@ -157,18 +157,18 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListCrmDealsRequest();
-    $request->companyId = 'Lamborghini';
-    $request->connectionId = 'Health male Tala';
-    $request->contactId = 'tan';
+    $request->companyId = 'Southeast';
+    $request->connectionId = 'synthesize';
+    $request->contactId = 'Health';
     $request->fields = [
-        'West',
+        'male',
     ];
-    $request->limit = 7917.89;
-    $request->offset = 5118.2;
-    $request->order = 'leisure';
-    $request->query = 'Zambia Bespoke';
-    $request->sort = 'gee';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-10T05:42:26.963Z');
+    $request->limit = 4268.08;
+    $request->offset = 8759.87;
+    $request->order = 'Avon';
+    $request->query = 'virtual';
+    $request->sort = 'female';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T05:55:38.090Z');
 
     $response = $sdk->deal->listCrmDeals($request);
 
@@ -225,19 +225,19 @@ try {
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T07:03:46.302Z');
     $request->crmDeal->currency = 'Riel';
     $request->crmDeal->id = '<ID>';
-    $request->crmDeal->lostReason = 'female Berkshire Electric';
-    $request->crmDeal->name = 'Integration cyan';
-    $request->crmDeal->pipeline = 'backing Northeast HEX';
-    $request->crmDeal->probability = 6885.22;
+    $request->crmDeal->lostReason = 'quill';
+    $request->crmDeal->name = 'Avon';
+    $request->crmDeal->pipeline = 'Loan';
+    $request->crmDeal->probability = 4610.4;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'Books';
-    $request->crmDeal->stage = 'Electric Bicycle Naira';
+    $request->crmDeal->source = 'Integration';
+    $request->crmDeal->stage = 'cyan';
     $request->crmDeal->tags = [
-        'Northwest',
+        'including',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-17T04:00:27.811Z');
-    $request->crmDeal->wonReason = 'motivating transition';
-    $request->connectionId = 'Usability Folk';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-28T16:38:25.368Z');
+    $request->crmDeal->wonReason = 'Computer';
+    $request->connectionId = 'Cheese';
     $request->id = '<ID>';
 
     $response = $sdk->deal->patchCrmDeal($request);
@@ -287,7 +287,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveCrmDealRequest();
-    $request->connectionId = 'Nihonium';
+    $request->connectionId = 'Handmade';
     $request->id = '<ID>';
 
     $response = $sdk->deal->removeCrmDeal($request);
@@ -345,19 +345,19 @@ try {
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-20T16:49:31.989Z');
     $request->crmDeal->currency = 'Pound Sterling';
     $request->crmDeal->id = '<ID>';
-    $request->crmDeal->lostReason = 'female';
-    $request->crmDeal->name = 'Transexual envisioneer bus';
-    $request->crmDeal->pipeline = 'Tala Elegant';
-    $request->crmDeal->probability = 4198.21;
+    $request->crmDeal->lostReason = 'viral';
+    $request->crmDeal->name = 'Credit';
+    $request->crmDeal->pipeline = 'Orchestrator';
+    $request->crmDeal->probability = 8437.09;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'Principal payment';
-    $request->crmDeal->stage = 'solution Interactions Knoxville';
+    $request->crmDeal->source = 'Gloves';
+    $request->crmDeal->stage = 'deliver';
     $request->crmDeal->tags = [
-        'Northeast',
+        'obese',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-24T17:23:09.389Z');
-    $request->crmDeal->wonReason = 'Neither times capacitor';
-    $request->connectionId = 'Architect';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-24T22:15:55.880Z');
+    $request->crmDeal->wonReason = 'emotional';
+    $request->connectionId = 'technologies';
     $request->id = '<ID>';
 
     $response = $sdk->deal->updateCrmDeal($request);

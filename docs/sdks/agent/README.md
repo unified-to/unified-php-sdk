@@ -48,13 +48,13 @@ try {
         new TicketingEmail(),
     ];
     $request->ticketingAgent->id = '<ID>';
-    $request->ticketingAgent->name = 'Vermont Belize Seaborgium';
+    $request->ticketingAgent->name = 'purple';
     $request->ticketingAgent->raw = new PropertyTicketingAgentRaw();
     $request->ticketingAgent->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-03T05:11:49.371Z');
-    $request->connectionId = 'Soul';
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-11T07:50:00.955Z');
+    $request->connectionId = 'Belize';
 
     $response = $sdk->agent->createTicketingAgent($request);
 
@@ -103,9 +103,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetTicketingAgentRequest();
-    $request->connectionId = 'Lamborghini';
+    $request->connectionId = 'Tennessee';
     $request->fields = [
-        'SAS',
+        'connect',
     ];
     $request->id = '<ID>';
 
@@ -156,16 +156,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListTicketingAgentsRequest();
-    $request->connectionId = 'Mazda';
+    $request->connectionId = 'transparent';
     $request->fields = [
-        'Home',
+        'Corporate',
     ];
-    $request->limit = 3254.85;
-    $request->offset = 6003.65;
+    $request->limit = 3027.97;
+    $request->offset = 3254.85;
     $request->order = 'North';
-    $request->query = 'maroon World';
-    $request->sort = 'North';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-09T18:25:04.153Z');
+    $request->query = 'Data';
+    $request->sort = 'Investment';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-07T15:17:20.195Z');
 
     $response = $sdk->agent->listTicketingAgents($request);
 
@@ -214,17 +214,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListUcAgentsRequest();
-    $request->connectionId = 'Representative';
-    $request->contactId = 'Chief';
+    $request->connectionId = 'Ohio';
+    $request->contactId = 'huzzah';
     $request->fields = [
-        'Pound',
+        'Chief',
     ];
-    $request->limit = 5908.79;
-    $request->offset = 67.08;
-    $request->order = 'Producer Classical Electric';
-    $request->query = 'Wyoming Analyst beside';
-    $request->sort = 'Innovative male hierarchy';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T03:25:44.788Z');
+    $request->limit = 4223.29;
+    $request->offset = 2385.02;
+    $request->order = 'Man';
+    $request->query = 'West';
+    $request->sort = 'Producer';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T01:33:18.662Z');
 
     $response = $sdk->agent->listUcAgents($request);
 
@@ -285,13 +285,13 @@ try {
         new TicketingEmail(),
     ];
     $request->ticketingAgent->id = '<ID>';
-    $request->ticketingAgent->name = 'Supervisor';
+    $request->ticketingAgent->name = 'Handcrafted';
     $request->ticketingAgent->raw = new PropertyTicketingAgentRaw();
     $request->ticketingAgent->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T17:57:18.300Z');
-    $request->connectionId = 'envious';
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-19T02:31:50.783Z');
+    $request->connectionId = 'decent';
     $request->id = '<ID>';
 
     $response = $sdk->agent->patchTicketingAgent($request);
@@ -341,7 +341,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveTicketingAgentRequest();
-    $request->connectionId = 'monitor';
+    $request->connectionId = 'Northwest';
     $request->id = '<ID>';
 
     $response = $sdk->agent->removeTicketingAgent($request);
@@ -403,13 +403,13 @@ try {
         new TicketingEmail(),
     ];
     $request->ticketingAgent->id = '<ID>';
-    $request->ticketingAgent->name = 'to Philippines';
+    $request->ticketingAgent->name = 'Communications';
     $request->ticketingAgent->raw = new PropertyTicketingAgentRaw();
     $request->ticketingAgent->telephones = [
         new TicketingTelephone(),
     ];
-    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-04T21:57:06.367Z');
-    $request->connectionId = 'beside Usability Bedfordshire';
+    $request->ticketingAgent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-17T22:10:28.087Z');
+    $request->connectionId = 'alliance';
     $request->id = '<ID>';
 
     $response = $sdk->agent->updateTicketingAgent($request);

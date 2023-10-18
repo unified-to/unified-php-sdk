@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/**
- * AtsInterview - An interview between a candidate for a specific job
- * 
- * @package Unified\Unified_to\Models\Shared
- * @access public
- */
 class AtsInterview
 {
 	#[\JMS\Serializer\Annotation\SerializedName('application_id')]

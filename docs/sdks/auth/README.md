@@ -32,19 +32,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthRequest();
-    $request->env = 'Reggae Van pascal';
-    $request->externalXref = 'plum';
-    $request->failureRedirect = 'North groupware deposit';
-    $request->integrationType = 'Aston pink Crew';
-    $request->lang = 'collar Northwest North';
+    $request->env = 'supposing';
+    $request->externalXref = 'Nobelium';
+    $request->failureRedirect = 'Branding';
+    $request->integrationType = 'pascal';
+    $request->lang = 'West';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::AuthLogin,
+        GetUnifiedIntegrationAuthScopes::TicketingAgentRead,
     ];
-    $request->state = 'Rubber Southwest';
-    $request->subdomain = 'North South';
-    $request->successRedirect = 'Rubber overriding middleware';
-    $request->workspaceId = 'redefine AGP';
+    $request->state = 'blot';
+    $request->subdomain = 'Haverhill';
+    $request->successRedirect = 'Investment';
+    $request->workspaceId = 'spirit';
 
     $response = $sdk->auth->getUnifiedIntegrationAuth($request);
 
@@ -93,13 +93,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationLoginRequest();
-    $request->env = 'Bicycle markets Soft';
-    $request->failureRedirect = 'bus Strontium';
-    $request->integrationType = 'more purple';
+    $request->env = 'when';
+    $request->failureRedirect = 'Tricycle';
+    $request->integrationType = 'markets';
     $request->redirect = false;
-    $request->state = 'District';
-    $request->successRedirect = 'pascal Berkshire';
-    $request->workspaceId = 'meanwhile volt';
+    $request->state = 'Soft';
+    $request->successRedirect = 'haptic';
+    $request->workspaceId = 'SUV';
 
     $response = $sdk->auth->getUnifiedIntegrationLogin($request);
 

@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAtsScorecardRequest
 {
-    /**
-     * A scorecard is feedback/assessment of a candidate's interview
-     * 
-     * @var ?\Unified\Unified_to\Models\Shared\AtsScorecard $atsScorecard
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?\Unified\Unified_to\Models\Shared\AtsScorecard $atsScorecard = null;
     

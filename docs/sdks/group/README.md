@@ -49,12 +49,12 @@ try {
     $request->hrisGroup->managerIds = [
         'Proactive',
     ];
-    $request->hrisGroup->name = 'Avon Synchronised';
-    $request->hrisGroup->parentId = 'M2F Iranian';
+    $request->hrisGroup->name = 'markets';
+    $request->hrisGroup->parentId = 'Forks';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
     $request->hrisGroup->type = HrisGroupType::Division;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-29T19:37:40.006Z');
-    $request->connectionId = 'Electric';
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-03T19:27:00.862Z');
+    $request->connectionId = 'navigating';
 
     $response = $sdk->group->createHrisGroup($request);
 
@@ -103,9 +103,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetHrisGroupRequest();
-    $request->connectionId = 'Cedi state Cadillac';
+    $request->connectionId = 'likewise';
     $request->fields = [
-        'optical',
+        'while',
     ];
     $request->id = '<ID>';
 
@@ -156,16 +156,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListHrisGroupsRequest();
-    $request->connectionId = 'Bronze Rubber';
+    $request->connectionId = 'Northwest';
     $request->fields = [
-        'feel',
+        'however',
     ];
-    $request->limit = 3559.03;
-    $request->offset = 9067.53;
-    $request->order = 'Manager';
-    $request->query = 'proactive deliverables';
-    $request->sort = 'West Plastic transmit';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-19T02:41:06.804Z');
+    $request->limit = 8700.83;
+    $request->offset = 6401.41;
+    $request->order = 'Tools';
+    $request->query = 'feel';
+    $request->sort = 'olive';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-04T23:24:05.802Z');
 
     $response = $sdk->group->listHrisGroups($request);
 
@@ -228,12 +228,12 @@ try {
     $request->hrisGroup->managerIds = [
         'Mobility',
     ];
-    $request->hrisGroup->name = 'boohoo South';
-    $request->hrisGroup->parentId = 'Mountain gladly schemas';
+    $request->hrisGroup->name = 'UTF8';
+    $request->hrisGroup->parentId = 'Music';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Group;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-17T19:30:24.300Z');
-    $request->connectionId = 'Money Legacy Utah';
+    $request->hrisGroup->type = HrisGroupType::Department;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-28T23:19:24.671Z');
+    $request->connectionId = 'Mountain';
     $request->id = '<ID>';
 
     $response = $sdk->group->patchHrisGroup($request);
@@ -283,7 +283,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveHrisGroupRequest();
-    $request->connectionId = 'Human Soft Unbranded';
+    $request->connectionId = 'glistening';
     $request->id = '<ID>';
 
     $response = $sdk->group->removeHrisGroup($request);
@@ -347,12 +347,12 @@ try {
     $request->hrisGroup->managerIds = [
         'Bahamas',
     ];
-    $request->hrisGroup->name = 'Real';
-    $request->hrisGroup->parentId = 'Checking';
+    $request->hrisGroup->name = 'Berkshire';
+    $request->hrisGroup->parentId = 'Southeast';
     $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Branch;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T10:20:39.465Z');
-    $request->connectionId = 'atop Music Hat';
+    $request->hrisGroup->type = HrisGroupType::Group;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T19:36:14.469Z');
+    $request->connectionId = 'Charlottesville';
     $request->id = '<ID>';
 
     $response = $sdk->group->updateHrisGroup($request);

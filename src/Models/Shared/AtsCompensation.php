@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/**
- * AtsCompensation - Unified compensation object for a job
- * 
- * @package Unified\Unified_to\Models\Shared
- * @access public
- */
 class AtsCompensation
 {
 	#[\JMS\Serializer\Annotation\SerializedName('currency')]
