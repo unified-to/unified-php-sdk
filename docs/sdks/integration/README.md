@@ -90,7 +90,7 @@ try {
     $request->lang = 'West';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::TicketingAgentRead,
+        GetUnifiedIntegrationAuthScopes::CrmPipelineWrite,
     ];
     $request->state = 'blot';
     $request->subdomain = 'Haverhill';

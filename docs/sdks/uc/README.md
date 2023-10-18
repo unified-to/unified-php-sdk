@@ -5,7 +5,6 @@
 
 * [createUcContact](#createuccontact) - Create a contact
 * [getUcContact](#getuccontact) - Retrieve a contact
-* [listUcAgents](#listucagents) - List all agents
 * [listUcCalls](#listuccalls) - List all calls
 * [listUcContacts](#listuccontacts) - List all contacts
 * [patchUcContact](#patchuccontact) - Update a contact
@@ -132,65 +131,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\GetUcContactResponse](../../models/operations/GetUcContactResponse.md)**
-
-
-## listUcAgents
-
-List all agents
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUcAgentsRequest;
-
-$security = new Security();
-$security->jwt = '';
-
-$sdk = UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
-
-try {
-    $request = new ListUcAgentsRequest();
-    $request->connectionId = 'Ohio';
-    $request->contactId = 'huzzah';
-    $request->fields = [
-        'Chief',
-    ];
-    $request->limit = 4223.29;
-    $request->offset = 2385.02;
-    $request->order = 'Man';
-    $request->query = 'West';
-    $request->sort = 'Producer';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T01:33:18.662Z');
-
-    $response = $sdk->uc->listUcAgents($request);
-
-    if ($response->ucAgents !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListUcAgentsRequest](../../models/operations/ListUcAgentsRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\ListUcAgentsResponse](../../models/operations/ListUcAgentsResponse.md)**
 
 
 ## listUcCalls

@@ -24,20 +24,16 @@ enum WebhookObjectType: string
     case CrmFile = 'crm_file';
     case CrmLead = 'crm_lead';
     case CrmPipeline = 'crm_pipeline';
-    case CrmTeam = 'crm_team';
-    case CrmUser = 'crm_user';
-    case EnrichCompany = 'enrich_company';
-    case EnrichPerson = 'enrich_person';
     case HrisEmployee = 'hris_employee';
     case HrisGroup = 'hris_group';
     case MartechList = 'martech_list';
     case MartechMember = 'martech_member';
     case Passthrough = 'passthrough';
-    case TicketingAgent = 'ticketing_agent';
-    case TicketingCustomer = 'ticketing_customer';
     case TicketingNote = 'ticketing_note';
     case TicketingTicket = 'ticketing_ticket';
-    case UcAgent = 'uc_agent';
-    case UcCall = 'uc_call';
+    case TicketingCustomer = 'ticketing_customer';
     case UcContact = 'uc_contact';
+    case UcCall = 'uc_call';
+    case EnrichPerson = 'enrich_person';
+    case EnrichCompany = 'enrich_company';
 }

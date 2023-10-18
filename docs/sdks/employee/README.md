@@ -57,30 +57,34 @@ try {
     $request->hrisEmployee->address->region = 'Deckow';
     $request->hrisEmployee->address->regionCode = 'Spur';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-23T22:14:37.407Z');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-17T06:57:07.657Z');
-    $request->hrisEmployee->department = 'candela';
-    $request->hrisEmployee->division = 'Data';
+    $request->hrisEmployee->currency = 'Iranian Rial';
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-02T19:32:38.780Z');
+    $request->hrisEmployee->department = 'Kids';
+    $request->hrisEmployee->division = 'olive';
     $request->hrisEmployee->emails = [
         new HrisEmail(),
     ];
-    $request->hrisEmployee->employeeNumber = 'Representative';
+    $request->hrisEmployee->employeeNumber = 'Koruna';
     $request->hrisEmployee->employmentStatus = HrisEmployeeEmploymentStatus::Inactive;
-    $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Casual;
-    $request->hrisEmployee->gender = HrisEmployeeGender::Female;
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-18T03:26:10.390Z');
+    $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Seasonal;
+    $request->hrisEmployee->gender = HrisEmployeeGender::Trans;
+    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T06:17:05.046Z');
     $request->hrisEmployee->id = '<ID>';
-    $request->hrisEmployee->location = 'East';
-    $request->hrisEmployee->managerId = 'City';
+    $request->hrisEmployee->imageUrl = 'back';
+    $request->hrisEmployee->languageLocale = 'City';
+    $request->hrisEmployee->location = 'snake';
+    $request->hrisEmployee->managerId = 'Agent';
     $request->hrisEmployee->maritalStatus = HrisEmployeeMaritalStatus::Single;
-    $request->hrisEmployee->name = 'Gasoline';
+    $request->hrisEmployee->name = 'Dinar';
     $request->hrisEmployee->raw = new PropertyHrisEmployeeRaw();
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-24T00:02:16.169Z');
-    $request->hrisEmployee->title = 'index';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-13T11:07:08.778Z');
-    $request->connectionId = 'yowza';
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-08T06:42:46.329Z');
+    $request->hrisEmployee->timezone = 'Asia/Magadan';
+    $request->hrisEmployee->title = 'corrupti';
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T09:46:02.751Z');
+    $request->connectionId = 'Honda';
 
     $response = $sdk->employee->createHrisEmployee($request);
 
@@ -262,30 +266,34 @@ try {
     $request->hrisEmployee->address->region = 'port';
     $request->hrisEmployee->address->regionCode = 'qua';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-01T15:09:40.907Z');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-06T23:32:48.401Z');
-    $request->hrisEmployee->department = 'Terbium';
-    $request->hrisEmployee->division = 'pace';
+    $request->hrisEmployee->currency = 'Somoni';
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-12T22:27:56.357Z');
+    $request->hrisEmployee->department = 'parse';
+    $request->hrisEmployee->division = 'Representative';
     $request->hrisEmployee->emails = [
         new HrisEmail(),
     ];
-    $request->hrisEmployee->employeeNumber = 'witch';
+    $request->hrisEmployee->employeeNumber = 'stickybeak';
     $request->hrisEmployee->employmentStatus = HrisEmployeeEmploymentStatus::Inactive;
-    $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Casual;
-    $request->hrisEmployee->gender = HrisEmployeeGender::Male;
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-31T22:13:50.024Z');
+    $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::PartTime;
+    $request->hrisEmployee->gender = HrisEmployeeGender::Intersex;
+    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-08T10:56:06.443Z');
     $request->hrisEmployee->id = '<ID>';
-    $request->hrisEmployee->location = 'Sleek';
-    $request->hrisEmployee->managerId = 'navigate';
+    $request->hrisEmployee->imageUrl = 'hard';
+    $request->hrisEmployee->languageLocale = 'white';
+    $request->hrisEmployee->location = 'Benz';
+    $request->hrisEmployee->managerId = 'Borders';
     $request->hrisEmployee->maritalStatus = HrisEmployeeMaritalStatus::Single;
-    $request->hrisEmployee->name = 'Soft';
+    $request->hrisEmployee->name = 'Northwest';
     $request->hrisEmployee->raw = new PropertyHrisEmployeeRaw();
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-22T21:09:49.659Z');
-    $request->hrisEmployee->title = 'mole';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-11T00:26:48.645Z');
-    $request->connectionId = 'Executive';
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-12T05:16:18.382Z');
+    $request->hrisEmployee->timezone = 'Europe/Sarajevo';
+    $request->hrisEmployee->title = 'outlet';
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-21T10:10:05.621Z');
+    $request->connectionId = 'intuitive';
     $request->id = '<ID>';
 
     $response = $sdk->employee->patchHrisEmployee($request);
@@ -407,8 +415,9 @@ try {
     $request->hrisEmployee->address->region = 'silver';
     $request->hrisEmployee->address->regionCode = 'Hybrid';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-04T04:51:18.540Z');
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-28T06:52:57.241Z');
-    $request->hrisEmployee->department = 'Screen';
+    $request->hrisEmployee->currency = 'Cuban Peso Convertible';
+    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-12T06:04:57.500Z');
+    $request->hrisEmployee->department = 'Hybrid';
     $request->hrisEmployee->division = 'Investor';
     $request->hrisEmployee->emails = [
         new HrisEmail(),
@@ -419,18 +428,21 @@ try {
     $request->hrisEmployee->gender = HrisEmployeeGender::NonBinary;
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-08T07:31:04.963Z');
     $request->hrisEmployee->id = '<ID>';
-    $request->hrisEmployee->location = 'plum';
-    $request->hrisEmployee->managerId = 'Won';
-    $request->hrisEmployee->maritalStatus = HrisEmployeeMaritalStatus::Single;
-    $request->hrisEmployee->name = 'anti';
+    $request->hrisEmployee->imageUrl = 'plum';
+    $request->hrisEmployee->languageLocale = 'Won';
+    $request->hrisEmployee->location = 'parsing';
+    $request->hrisEmployee->managerId = 'ivory';
+    $request->hrisEmployee->maritalStatus = HrisEmployeeMaritalStatus::Married;
+    $request->hrisEmployee->name = 'Designer';
     $request->hrisEmployee->raw = new PropertyHrisEmployeeRaw();
     $request->hrisEmployee->telephones = [
         new HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-27T09:46:28.961Z');
-    $request->hrisEmployee->title = 'unleash';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-12T18:00:52.745Z');
-    $request->connectionId = 'Designer';
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-31T06:02:42.728Z');
+    $request->hrisEmployee->timezone = 'America/Phoenix';
+    $request->hrisEmployee->title = 'connect';
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-30T05:50:01.381Z');
+    $request->connectionId = 'cleverly';
     $request->id = '<ID>';
 
     $response = $sdk->employee->updateHrisEmployee($request);

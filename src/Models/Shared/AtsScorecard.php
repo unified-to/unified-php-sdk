@@ -21,6 +21,11 @@ class AtsScorecard
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $candidateId = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('comment')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $comment = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -64,6 +69,7 @@ class AtsScorecard
 	{
 		$this->applicationId = null;
 		$this->candidateId = null;
+		$this->comment = null;
 		$this->createdAt = null;
 		$this->id = null;
 		$this->interviewId = null;

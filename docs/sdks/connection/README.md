@@ -75,7 +75,7 @@ try {
     $request->integrationType = 'mint';
     $request->isPaused = false;
     $request->permissions = [
-        PropertyConnectionPermissions::TicketingAgentWrite,
+        PropertyConnectionPermissions::CrmPipelineWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-28T15:17:00.404Z');
     $request->workspaceId = 'coulomb';
@@ -277,7 +277,7 @@ try {
     $request->connection->integrationType = 'buckwheat';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::AtsCandidateRead,
+        PropertyConnectionPermissions::HrisEmployeeRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-15T21:15:39.701Z');
     $request->connection->workspaceId = 'indigo';
@@ -421,7 +421,7 @@ try {
     $request->connection->integrationType = 'North';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::CrmPipelineRead,
+        PropertyConnectionPermissions::CrmDealWrite,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-11T14:05:43.897Z');
     $request->connection->workspaceId = 'homely';

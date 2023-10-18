@@ -85,7 +85,7 @@ try {
     $request->integrationType = 'mint';
     $request->isPaused = false;
     $request->permissions = [
-        PropertyConnectionPermissions::TicketingAgentWrite,
+        PropertyConnectionPermissions::CrmPipelineWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-28T15:17:00.404Z');
     $request->workspaceId = 'coulomb';
@@ -154,7 +154,7 @@ try {
     $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'cyan';
     $request->webhook->interval = 764.77;
-    $request->webhook->objectType = WebhookObjectType::CrmCompany;
+    $request->webhook->objectType = WebhookObjectType::AtsScorecard;
     $request->webhook->subscriptions = [
         'East',
     ];
@@ -368,7 +368,7 @@ try {
     $request->lang = 'West';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::TicketingAgentRead,
+        GetUnifiedIntegrationAuthScopes::CrmPipelineWrite,
     ];
     $request->state = 'blot';
     $request->subdomain = 'Haverhill';
@@ -805,7 +805,7 @@ try {
     $request->connection->integrationType = 'buckwheat';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::AtsCandidateRead,
+        PropertyConnectionPermissions::HrisEmployeeRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-15T21:15:39.701Z');
     $request->connection->workspaceId = 'indigo';
@@ -998,7 +998,7 @@ try {
     $request->connection->integrationType = 'North';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::CrmPipelineRead,
+        PropertyConnectionPermissions::CrmDealWrite,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-11T14:05:43.897Z');
     $request->connection->workspaceId = 'homely';

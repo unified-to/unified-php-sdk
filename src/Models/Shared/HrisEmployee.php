@@ -21,6 +21,11 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('currency')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $currency = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('date_of_birth')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -76,6 +81,16 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('image_url')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $imageUrl = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('language_locale')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $languageLocale = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('location')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -116,6 +131,11 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $terminatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('timezone')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $timezone = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('title')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -130,6 +150,7 @@ class HrisEmployee
 	{
 		$this->address = null;
 		$this->createdAt = null;
+		$this->currency = null;
 		$this->dateOfBirth = null;
 		$this->department = null;
 		$this->division = null;
@@ -140,6 +161,8 @@ class HrisEmployee
 		$this->gender = null;
 		$this->hiredAt = null;
 		$this->id = null;
+		$this->imageUrl = null;
+		$this->languageLocale = null;
 		$this->location = null;
 		$this->managerId = null;
 		$this->maritalStatus = null;
@@ -147,6 +170,7 @@ class HrisEmployee
 		$this->raw = null;
 		$this->telephones = null;
 		$this->terminatedAt = null;
+		$this->timezone = null;
 		$this->title = null;
 		$this->updatedAt = null;
 	}

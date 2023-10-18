@@ -23,8 +23,6 @@ class UnifiedTo
 		'https://api-eu.unified.to',
 	];
   	
-	public Agent $agent;
-	
 	public Apicall $apicall;
 	
 	public Application $application;
@@ -87,8 +85,6 @@ class UnifiedTo
 	
 	public Pipeline $pipeline;
 	
-	public Team $team;
-	
 	public Ticket $ticket;
 	
 	public Ticketing $ticketing;
@@ -96,8 +92,6 @@ class UnifiedTo
 	public Uc $uc;
 	
 	public Unified $unified;
-	
-	public User $user;
 	
 	public Webhook $webhook;
 		
@@ -119,8 +113,6 @@ class UnifiedTo
 	public function __construct(SDKConfiguration $sdkConfiguration)
 	{
 		$this->sdkConfiguration = $sdkConfiguration;
-		
-		$this->agent = new Agent($this->sdkConfiguration);
 		
 		$this->apicall = new Apicall($this->sdkConfiguration);
 		
@@ -184,8 +176,6 @@ class UnifiedTo
 		
 		$this->pipeline = new Pipeline($this->sdkConfiguration);
 		
-		$this->team = new Team($this->sdkConfiguration);
-		
 		$this->ticket = new Ticket($this->sdkConfiguration);
 		
 		$this->ticketing = new Ticketing($this->sdkConfiguration);
@@ -193,8 +183,6 @@ class UnifiedTo
 		$this->uc = new Uc($this->sdkConfiguration);
 		
 		$this->unified = new Unified($this->sdkConfiguration);
-		
-		$this->user = new User($this->sdkConfiguration);
 		
 		$this->webhook = new Webhook($this->sdkConfiguration);
 	}

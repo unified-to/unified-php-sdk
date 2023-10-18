@@ -50,7 +50,7 @@ try {
     $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'cyan';
     $request->webhook->interval = 764.77;
-    $request->webhook->objectType = WebhookObjectType::CrmCompany;
+    $request->webhook->objectType = WebhookObjectType::AtsScorecard;
     $request->webhook->subscriptions = [
         'East',
     ];
