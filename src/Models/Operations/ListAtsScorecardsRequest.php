@@ -51,6 +51,14 @@ class ListAtsScorecardsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=interview_id')]
     public ?string $interviewId = null;
     
+    /**
+     * The job ID to filter results
+     * 
+     * @var ?string $jobId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
+    public ?string $jobId = null;
+    
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
     
@@ -86,6 +94,7 @@ class ListAtsScorecardsRequest
 		$this->connectionId = "";
 		$this->fields = null;
 		$this->interviewId = null;
+		$this->jobId = null;
 		$this->limit = null;
 		$this->offset = null;
 		$this->order = null;
