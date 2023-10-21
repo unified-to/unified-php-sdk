@@ -39,28 +39,28 @@ try {
     $request = new CreateUnifiedWebhookRequest();
     $request->webhook = new Webhook();
     $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-23T11:16:21.687Z');
-    $request->webhook->connectionId = 'East';
-    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-04T14:37:16.392Z');
-    $request->webhook->environment = 'Borders';
+    $request->webhook->connectionId = 'string';
+    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-21T14:22:58.807Z');
+    $request->webhook->environment = 'string';
     $request->webhook->events = [
-        PropertyWebhookEvents::Created,
+        PropertyWebhookEvents::Updated,
     ];
-    $request->webhook->hookUrl = 'tune';
+    $request->webhook->hookUrl = 'string';
     $request->webhook->id = '<ID>';
     $request->webhook->includeRaw = false;
-    $request->webhook->integrationType = 'cyan';
-    $request->webhook->interval = 764.77;
-    $request->webhook->objectType = WebhookObjectType::AtsScorecard;
+    $request->webhook->integrationType = 'string';
+    $request->webhook->interval = 6142.55;
+    $request->webhook->objectType = WebhookObjectType::AtsCandidate;
     $request->webhook->subscriptions = [
-        'East',
+        'string',
     ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-13T15:51:10.478Z');
-    $request->webhook->workspaceId = 'wireless';
-    $request->connectionId = 'delightfully';
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T17:23:28.216Z');
+    $request->webhook->workspaceId = 'string';
+    $request->connectionId = 'string';
     $request->events = [
-        CreateUnifiedWebhookEvents::Updated,
+        CreateUnifiedWebhookEvents::Created,
     ];
-    $request->object = 'up';
+    $request->object = 'string';
 
     $response = $sdk->webhook->createUnifiedWebhook($request);
 
@@ -158,13 +158,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListUnifiedWebhooksRequest();
-    $request->env = 'Southeast';
-    $request->limit = 1001.01;
-    $request->object = 'connecting';
-    $request->offset = 7855.11;
-    $request->order = 'violet';
-    $request->sort = 'optimize';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-08T10:25:07.117Z');
+    $request->env = 'string';
+    $request->limit = 1162.24;
+    $request->object = 'string';
+    $request->offset = 5094.7;
+    $request->order = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-20T14:39:47.451Z');
 
     $response = $sdk->webhook->listUnifiedWebhooks($request);
 

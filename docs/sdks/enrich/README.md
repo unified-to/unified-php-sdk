@@ -31,9 +31,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListEnrichCompaniesRequest();
-    $request->connectionId = 'Bike';
-    $request->domain = 'worse-herbs.info';
-    $request->name = 'yippee';
+    $request->connectionId = 'string';
+    $request->domain = 'dismal-cornmeal.org';
+    $request->name = 'string';
 
     $response = $sdk->enrich->listEnrichCompanies($request);
 
@@ -82,11 +82,11 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListEnrichPeopleRequest();
-    $request->connectionId = 'Southwest';
-    $request->email = 'Ari.Lindgren@hotmail.com';
-    $request->linkedinUrl = 'bandwidth';
-    $request->name = 'Organic';
-    $request->twitter = 'eyeballs';
+    $request->connectionId = 'string';
+    $request->email = 'Rosendo53@gmail.com';
+    $request->linkedinUrl = 'string';
+    $request->name = 'string';
+    $request->twitter = 'string';
 
     $response = $sdk->enrich->listEnrichPeople($request);
 

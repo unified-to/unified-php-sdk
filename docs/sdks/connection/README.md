@@ -40,45 +40,45 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new Connection();
     $request->auth = new PropertyConnectionAuth();
-    $request->auth->accessToken = 'likewise';
-    $request->auth->apiUrl = 'Rwanda';
-    $request->auth->appId = 'copying';
-    $request->auth->authorizeUrl = 'Maserati';
-    $request->auth->clientId = 'static';
-    $request->auth->clientSecret = 'Engineer';
-    $request->auth->consumerKey = 'Lilangeni';
-    $request->auth->consumerSecret = 'Rubber';
+    $request->auth->accessToken = 'string';
+    $request->auth->apiUrl = 'string';
+    $request->auth->appId = 'string';
+    $request->auth->authorizeUrl = 'string';
+    $request->auth->clientId = 'string';
+    $request->auth->clientSecret = 'string';
+    $request->auth->consumerKey = 'string';
+    $request->auth->consumerSecret = 'string';
     $request->auth->emails = [
-        'sticky',
+        'string',
     ];
-    $request->auth->expiresIn = 9652.2;
-    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T16:56:03.197Z');
+    $request->auth->expiresIn = 9168.17;
+    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T21:22:48.918Z');
     $request->auth->key = '<key>';
     $request->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->auth->name = 'fit';
+    $request->auth->name = 'string';
     $request->auth->otherAuthInfo = [
-        'Designer',
+        'string',
     ];
-    $request->auth->pem = 'cum';
-    $request->auth->refreshToken = 'maroon';
-    $request->auth->state = 'Group';
-    $request->auth->token = 'Rap';
-    $request->auth->tokenUrl = 'female';
-    $request->authAwsArn = 'Wagon';
+    $request->auth->pem = 'string';
+    $request->auth->refreshToken = 'string';
+    $request->auth->state = 'string';
+    $request->auth->token = 'string';
+    $request->auth->tokenUrl = 'string';
+    $request->authAwsArn = 'string';
     $request->categories = [
-        PropertyConnectionCategories::Uc,
+        PropertyConnectionCategories::Auth,
     ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-28T04:40:47.588Z');
-    $request->environment = 'Buckinghamshire';
-    $request->externalXref = 'inquisitively';
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-23T23:52:45.470Z');
+    $request->environment = 'string';
+    $request->externalXref = 'string';
     $request->id = '<ID>';
-    $request->integrationType = 'mint';
+    $request->integrationType = 'string';
     $request->isPaused = false;
     $request->permissions = [
-        PropertyConnectionPermissions::CrmPipelineWrite,
+        PropertyConnectionPermissions::CrmCompanyRead,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-28T15:17:00.404Z');
-    $request->workspaceId = 'coulomb';
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-03T20:48:03.468Z');
+    $request->workspaceId = 'string';
 
     $response = $sdk->connection->createUnifiedConnection($request);
 
@@ -180,13 +180,13 @@ try {
     $request->categories = [
         ListUnifiedConnectionsCategories::Crm,
     ];
-    $request->env = 'a';
-    $request->externalXref = 'Schamberger';
-    $request->limit = 7234.78;
-    $request->offset = 4370.35;
-    $request->order = 'FTP';
-    $request->sort = 'orange';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-17T20:11:44.517Z');
+    $request->env = 'string';
+    $request->externalXref = 'string';
+    $request->limit = 9638.08;
+    $request->offset = 15.12;
+    $request->order = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-20T10:15:04.986Z');
 
     $response = $sdk->connection->listUnifiedConnections($request);
 
@@ -242,45 +242,45 @@ try {
     $request = new PatchUnifiedConnectionRequest();
     $request->connection = new Connection();
     $request->connection->auth = new PropertyConnectionAuth();
-    $request->connection->auth->accessToken = 'International';
-    $request->connection->auth->apiUrl = 'square';
-    $request->connection->auth->appId = 'Electronic';
-    $request->connection->auth->authorizeUrl = 'Montana';
-    $request->connection->auth->clientId = 'scalable';
-    $request->connection->auth->clientSecret = 'Flerovium';
-    $request->connection->auth->consumerKey = 'online';
-    $request->connection->auth->consumerSecret = 'Chair';
+    $request->connection->auth->accessToken = 'string';
+    $request->connection->auth->apiUrl = 'string';
+    $request->connection->auth->appId = 'string';
+    $request->connection->auth->authorizeUrl = 'string';
+    $request->connection->auth->clientId = 'string';
+    $request->connection->auth->clientSecret = 'string';
+    $request->connection->auth->consumerKey = 'string';
+    $request->connection->auth->consumerSecret = 'string';
     $request->connection->auth->emails = [
-        'customized',
+        'string',
     ];
-    $request->connection->auth->expiresIn = 5808.98;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-26T13:18:37.846Z');
+    $request->connection->auth->expiresIn = 6565.39;
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-09T01:57:38.348Z');
     $request->connection->auth->key = '<key>';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->connection->auth->name = 'repeatedly';
+    $request->connection->auth->name = 'string';
     $request->connection->auth->otherAuthInfo = [
-        'Grocery',
+        'string',
     ];
-    $request->connection->auth->pem = 'Direct';
-    $request->connection->auth->refreshToken = 'Northeast';
-    $request->connection->auth->state = 'Causeway';
-    $request->connection->auth->token = 'hic';
-    $request->connection->auth->tokenUrl = 'Chair';
-    $request->connection->authAwsArn = 'Silver';
+    $request->connection->auth->pem = 'string';
+    $request->connection->auth->refreshToken = 'string';
+    $request->connection->auth->state = 'string';
+    $request->connection->auth->token = 'string';
+    $request->connection->auth->tokenUrl = 'string';
+    $request->connection->authAwsArn = 'string';
     $request->connection->categories = [
-        PropertyConnectionCategories::Crm,
+        PropertyConnectionCategories::Uc,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-19T03:31:12.982Z');
-    $request->connection->environment = 'schemas';
-    $request->connection->externalXref = 'Loti';
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T22:36:11.466Z');
+    $request->connection->environment = 'string';
+    $request->connection->externalXref = 'string';
     $request->connection->id = '<ID>';
-    $request->connection->integrationType = 'buckwheat';
+    $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::HrisEmployeeRead,
+        PropertyConnectionPermissions::AtsJobWrite,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-15T21:15:39.701Z');
-    $request->connection->workspaceId = 'indigo';
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-09T04:29:35.007Z');
+    $request->connection->workspaceId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->connection->patchUnifiedConnection($request);
@@ -386,45 +386,45 @@ try {
     $request = new UpdateUnifiedConnectionRequest();
     $request->connection = new Connection();
     $request->connection->auth = new PropertyConnectionAuth();
-    $request->connection->auth->accessToken = 'tan';
-    $request->connection->auth->apiUrl = 'revitalize';
-    $request->connection->auth->appId = 'deposit';
-    $request->connection->auth->authorizeUrl = 'from';
-    $request->connection->auth->clientId = 'Berkshire';
-    $request->connection->auth->clientSecret = 'Account';
-    $request->connection->auth->consumerKey = 'Recycled';
-    $request->connection->auth->consumerSecret = 'Pizza';
+    $request->connection->auth->accessToken = 'string';
+    $request->connection->auth->apiUrl = 'string';
+    $request->connection->auth->appId = 'string';
+    $request->connection->auth->authorizeUrl = 'string';
+    $request->connection->auth->clientId = 'string';
+    $request->connection->auth->clientSecret = 'string';
+    $request->connection->auth->consumerKey = 'string';
+    $request->connection->auth->consumerSecret = 'string';
     $request->connection->auth->emails = [
-        'Accounts',
+        'string',
     ];
-    $request->connection->auth->expiresIn = 9960.64;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-12T22:32:29.324Z');
+    $request->connection->auth->expiresIn = 7910.65;
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-13T00:55:19.590Z');
     $request->connection->auth->key = '<key>';
     $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
-    $request->connection->auth->name = 'Fish';
+    $request->connection->auth->name = 'string';
     $request->connection->auth->otherAuthInfo = [
-        'Books',
+        'string',
     ];
-    $request->connection->auth->pem = 'ampere';
-    $request->connection->auth->refreshToken = 'work';
-    $request->connection->auth->state = 'Wagon';
-    $request->connection->auth->token = 'Shoals';
-    $request->connection->auth->tokenUrl = 'invoice';
-    $request->connection->authAwsArn = 'Grocery';
+    $request->connection->auth->pem = 'string';
+    $request->connection->auth->refreshToken = 'string';
+    $request->connection->auth->state = 'string';
+    $request->connection->auth->token = 'string';
+    $request->connection->auth->tokenUrl = 'string';
+    $request->connection->authAwsArn = 'string';
     $request->connection->categories = [
-        PropertyConnectionCategories::Hris,
+        PropertyConnectionCategories::Uc,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-26T03:13:23.826Z');
-    $request->connection->environment = 'deposit';
-    $request->connection->externalXref = 'Martinique';
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-25T08:32:03.332Z');
+    $request->connection->environment = 'string';
+    $request->connection->externalXref = 'string';
     $request->connection->id = '<ID>';
-    $request->connection->integrationType = 'North';
+    $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::CrmDealWrite,
+        PropertyConnectionPermissions::CrmEventRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-11T14:05:43.897Z');
-    $request->connection->workspaceId = 'homely';
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-09T18:14:10.859Z');
+    $request->connection->workspaceId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->connection->updateUnifiedConnection($request);

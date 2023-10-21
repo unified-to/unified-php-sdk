@@ -64,17 +64,17 @@ try {
     $request = new CreateAtsApplicationRequest();
     $request->atsApplication = new AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-09T11:35:08.252Z');
-    $request->atsApplication->candidateId = 'incidentally';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-29T22:20:11.749Z');
+    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-22T15:02:56.144Z');
     $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'payment';
+    $request->atsApplication->jobId = 'string';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-14T08:24:54.358Z');
-    $request->atsApplication->rejectedReason = 'Money';
-    $request->atsApplication->source = 'approach';
-    $request->atsApplication->status = AtsApplicationStatus::Hired;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-29T01:08:00.744Z');
-    $request->connectionId = 'Cyclocross';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-18T22:03:17.799Z');
+    $request->atsApplication->rejectedReason = 'string';
+    $request->atsApplication->source = 'string';
+    $request->atsApplication->status = AtsApplicationStatus::FirstInterview;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T10:02:31.440Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->ats->createAtsApplication($request);
 
@@ -132,33 +132,33 @@ try {
     $request = new CreateAtsCandidateRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'tan';
-    $request->atsCandidate->address->address2 = 'Recycled';
-    $request->atsCandidate->address->city = 'Rosenbaumburgh';
-    $request->atsCandidate->address->country = 'Trinidad and Tobago';
-    $request->atsCandidate->address->countryCode = 'TR';
-    $request->atsCandidate->address->postalCode = '51636';
-    $request->atsCandidate->address->region = 'Designer';
-    $request->atsCandidate->address->regionCode = 'Netherlands';
-    $request->atsCandidate->companyName = 'O\'Reilly, Rosenbaum and Brown';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-27T08:09:47.536Z');
+    $request->atsCandidate->address->address1 = 'string';
+    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->city = 'South Hill';
+    $request->atsCandidate->address->country = 'Denmark';
+    $request->atsCandidate->address->countryCode = 'KM';
+    $request->atsCandidate->address->postalCode = '72991-5163';
+    $request->atsCandidate->address->region = 'string';
+    $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyName = 'Pollich - Lubowitz';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-05T23:23:31.487Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'Bedfordshire';
+    $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'Southeast';
-    $request->atsCandidate->name = 'Oregon';
+    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->name = 'string';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'Response',
+        'string',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'Music';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-06T05:25:05.539Z');
-    $request->connectionId = 'Bigender';
+    $request->atsCandidate->title = 'string';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T18:21:52.157Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->ats->createAtsCandidate($request);
 
@@ -211,22 +211,22 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateAtsInterviewRequest();
     $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'Metrics';
-    $request->atsInterview->candidateId = 'Bar';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T10:11:26.881Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T16:48:42.126Z');
-    $request->atsInterview->externalEventXref = 'azure';
+    $request->atsInterview->applicationId = 'string';
+    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-10T19:55:26.926Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-21T09:01:54.390Z');
+    $request->atsInterview->externalEventXref = 'string';
     $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'harpsichord';
-    $request->atsInterview->location = 'Roanoke';
+    $request->atsInterview->jobId = 'string';
+    $request->atsInterview->location = 'string';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-19T04:12:52.712Z');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T09:10:03.014Z');
     $request->atsInterview->status = AtsInterviewStatus::Complete;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-20T17:10:33.906Z');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-07T14:25:56.954Z');
     $request->atsInterview->userIds = [
-        'redundant',
+        'string',
     ];
-    $request->connectionId = 'Account';
+    $request->connectionId = 'string';
 
     $response = $sdk->ats->createAtsInterview($request);
 
@@ -293,27 +293,27 @@ try {
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-04T23:12:33.253Z');
     $request->atsJob->departments = [
-        'maroon',
+        'string',
     ];
-    $request->atsJob->description = 'Operative 24 hour methodology';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Other;
+    $request->atsJob->description = 'Secured fault-tolerant internet solution';
+    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
-        'Mini',
+        'string',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'health';
-    $request->atsJob->name = 'Ergonomic';
+    $request->atsJob->languageLocale = 'string';
+    $request->atsJob->name = 'string';
     $request->atsJob->publicJobUrls = [
-        'Customer',
+        'string',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'Loan',
+        'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Draft;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T11:13:11.642Z');
-    $request->connectionId = 'Optimization';
+    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T17:38:42.004Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->ats->createAtsJob($request);
 
@@ -366,18 +366,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'Brunei';
-    $request->atsScorecard->candidateId = 'Account';
+    $request->atsScorecard->applicationId = 'string';
+    $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-03T14:50:39.962Z');
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-24T07:49:32.768Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'violet';
-    $request->atsScorecard->interviewerId = 'Southeast';
-    $request->atsScorecard->jobId = 'Credit';
+    $request->atsScorecard->interviewId = 'string';
+    $request->atsScorecard->interviewerId = 'string';
+    $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-05T00:10:36.512Z');
-    $request->connectionId = 'hm';
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->ats->createAtsScorecard($request);
 
@@ -426,9 +426,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsApplicationRequest();
-    $request->connectionId = 'mobile';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Key',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -479,9 +479,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsCandidateRequest();
-    $request->connectionId = 'Generic';
+    $request->connectionId = 'string';
     $request->fields = [
-        'hub',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -532,9 +532,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsInterviewRequest();
-    $request->connectionId = 'yum';
+    $request->connectionId = 'string';
     $request->fields = [
-        'programming',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -585,9 +585,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsJobRequest();
-    $request->connectionId = 'Southwest';
+    $request->connectionId = 'string';
     $request->fields = [
-        'panel',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -638,9 +638,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsScorecardRequest();
-    $request->connectionId = 'Cordoba';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Nissan',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -691,18 +691,18 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsApplicationsRequest();
-    $request->candidateId = 'Cambodia';
-    $request->connectionId = 'models';
+    $request->candidateId = 'string';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Wagon',
+        'string',
     ];
-    $request->jobId = 'violet';
-    $request->limit = 3844.62;
-    $request->offset = 247.23;
-    $request->order = 'fuchsia';
-    $request->query = 'Blues';
-    $request->sort = 'pink';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-23T21:51:35.380Z');
+    $request->jobId = 'string';
+    $request->limit = 441.56;
+    $request->offset = 1448.74;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-21T12:43:47.690Z');
 
     $response = $sdk->ats->listAtsApplications($request);
 
@@ -751,16 +751,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsCandidatesRequest();
-    $request->connectionId = 'Mobility';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Cambridgeshire',
+        'string',
     ];
-    $request->limit = 1095.92;
-    $request->offset = 8552.83;
-    $request->order = 'Investor';
-    $request->query = 'colorful';
-    $request->sort = 'Chair';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-19T23:43:16.812Z');
+    $request->limit = 6384.09;
+    $request->offset = 7452.94;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-17T23:18:31.102Z');
 
     $response = $sdk->ats->listAtsCandidates($request);
 
@@ -809,17 +809,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsInterviewsRequest();
-    $request->applicationId = 'Bronze';
-    $request->connectionId = 'Wooden';
+    $request->applicationId = 'string';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Avon',
+        'string',
     ];
-    $request->limit = 1795.86;
-    $request->offset = 8334.82;
-    $request->order = 'Elegant';
-    $request->query = 'evolve';
-    $request->sort = 'West';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-08T07:24:23.420Z');
+    $request->limit = 2562.12;
+    $request->offset = 1185.02;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T09:19:25.744Z');
 
     $response = $sdk->ats->listAtsInterviews($request);
 
@@ -868,16 +868,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsJobsRequest();
-    $request->connectionId = 'firmware';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Praseodymium',
+        'string',
     ];
-    $request->limit = 7427.26;
-    $request->offset = 7749.91;
-    $request->order = 'teal';
-    $request->query = 'Electric';
-    $request->sort = 'ohm';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-15T18:47:12.832Z');
+    $request->limit = 3958.99;
+    $request->offset = 3223.84;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-03T15:53:00.086Z');
 
     $response = $sdk->ats->listAtsJobs($request);
 
@@ -926,20 +926,20 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsScorecardsRequest();
-    $request->applicationId = 'synthesizing';
-    $request->candidateId = 'surprised';
-    $request->connectionId = 'Gislason';
+    $request->applicationId = 'string';
+    $request->candidateId = 'string';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Pickup',
+        'string',
     ];
-    $request->interviewId = 'slop';
-    $request->jobId = 'North';
-    $request->limit = 1893.11;
-    $request->offset = 4281.16;
-    $request->order = 'parallelism';
-    $request->query = 'Lutetium';
-    $request->sort = 'Tools';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-30T11:15:06.025Z');
+    $request->interviewId = 'string';
+    $request->jobId = 'string';
+    $request->limit = 5126.98;
+    $request->offset = 8077.44;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T17:42:56.145Z');
 
     $response = $sdk->ats->listAtsScorecards($request);
 
@@ -993,17 +993,17 @@ try {
     $request = new PatchAtsApplicationRequest();
     $request->atsApplication = new AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-15T04:58:14.527Z');
-    $request->atsApplication->candidateId = 'South';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-12T22:20:57.326Z');
+    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-06T05:50:03.360Z');
     $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'Director';
+    $request->atsApplication->jobId = 'string';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-29T04:40:45.531Z');
-    $request->atsApplication->rejectedReason = 'alarm';
-    $request->atsApplication->source = 'well';
-    $request->atsApplication->status = AtsApplicationStatus::Offered;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-04T10:01:24.162Z');
-    $request->connectionId = 'Leonie';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-04T13:56:12.670Z');
+    $request->atsApplication->rejectedReason = 'string';
+    $request->atsApplication->source = 'string';
+    $request->atsApplication->status = AtsApplicationStatus::Screening;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-02T14:46:44.919Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsApplication($request);
@@ -1062,33 +1062,33 @@ try {
     $request = new PatchAtsCandidateRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'Sausages';
-    $request->atsCandidate->address->address2 = 'Tennessee';
-    $request->atsCandidate->address->city = 'East Guy';
-    $request->atsCandidate->address->country = 'New Zealand';
-    $request->atsCandidate->address->countryCode = 'BJ';
-    $request->atsCandidate->address->postalCode = '46106-5380';
-    $request->atsCandidate->address->region = 'Identity';
-    $request->atsCandidate->address->regionCode = 'where';
-    $request->atsCandidate->companyName = 'Bechtelar Inc';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-29T00:24:10.210Z');
+    $request->atsCandidate->address->address1 = 'string';
+    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->city = 'Fort Bridget';
+    $request->atsCandidate->address->country = 'Sri Lanka';
+    $request->atsCandidate->address->countryCode = 'GI';
+    $request->atsCandidate->address->postalCode = '46054';
+    $request->atsCandidate->address->region = 'string';
+    $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyName = 'Donnelly - Bartell';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-06T12:13:20.908Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'Van';
+    $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'Benz';
-    $request->atsCandidate->name = 'PCI';
+    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->name = 'string';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'to',
+        'string',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'Rustic';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-28T18:26:32.684Z');
-    $request->connectionId = 'District';
+    $request->atsCandidate->title = 'string';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-19T12:47:03.298Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsCandidate($request);
@@ -1142,22 +1142,22 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsInterviewRequest();
     $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'courageously';
-    $request->atsInterview->candidateId = 'Handmade';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-18T09:12:18.749Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-14T21:48:10.753Z');
-    $request->atsInterview->externalEventXref = 'hen';
+    $request->atsInterview->applicationId = 'string';
+    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-11T21:35:40.790Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-28T19:11:29.616Z');
+    $request->atsInterview->externalEventXref = 'string';
     $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'quantifying';
-    $request->atsInterview->location = 'Regional';
+    $request->atsInterview->jobId = 'string';
+    $request->atsInterview->location = 'string';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-23T13:36:34.664Z');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-10T02:01:13.488Z');
     $request->atsInterview->status = AtsInterviewStatus::Complete;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-19T08:03:32.340Z');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-18T09:12:18.749Z');
     $request->atsInterview->userIds = [
-        'District',
+        'string',
     ];
-    $request->connectionId = 'Northeast';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsInterview($request);
@@ -1225,27 +1225,27 @@ try {
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T13:38:57.141Z');
     $request->atsJob->departments = [
-        'blue',
+        'string',
     ];
-    $request->atsJob->description = 'Extended empowering middleware';
-    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
+    $request->atsJob->description = 'Seamless analyzing definition';
+    $request->atsJob->employmentType = AtsJobEmploymentType::Intern;
     $request->atsJob->hiringManagerIds = [
-        'Waldorf',
+        'string',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'firewall';
-    $request->atsJob->name = 'gold';
+    $request->atsJob->languageLocale = 'string';
+    $request->atsJob->name = 'string';
     $request->atsJob->publicJobUrls = [
-        'Principal',
+        'string',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'BMW',
+        'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Pending;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-06T03:40:01.899Z');
-    $request->connectionId = 'killer';
+    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T04:38:28.121Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsJob($request);
@@ -1299,18 +1299,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'Falls';
-    $request->atsScorecard->candidateId = 'engage';
-    $request->atsScorecard->comment = 'New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T06:50:19.647Z');
+    $request->atsScorecard->applicationId = 'string';
+    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->comment = 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-06T15:26:03.447Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'application';
-    $request->atsScorecard->interviewerId = 'Leu';
-    $request->atsScorecard->jobId = 'provided';
+    $request->atsScorecard->interviewId = 'string';
+    $request->atsScorecard->interviewerId = 'string';
+    $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-01T17:55:20.334Z');
-    $request->connectionId = 'up';
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->patchAtsScorecard($request);
@@ -1360,7 +1360,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsApplicationRequest();
-    $request->connectionId = 'gently';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->removeAtsApplication($request);
@@ -1410,7 +1410,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsCandidateRequest();
-    $request->connectionId = 'male';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->removeAtsCandidate($request);
@@ -1460,7 +1460,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsInterviewRequest();
-    $request->connectionId = 'green';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->removeAtsInterview($request);
@@ -1510,7 +1510,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsJobRequest();
-    $request->connectionId = 'Northeast';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->removeAtsJob($request);
@@ -1560,7 +1560,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsScorecardRequest();
-    $request->connectionId = 'approach';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->removeAtsScorecard($request);
@@ -1615,17 +1615,17 @@ try {
     $request = new UpdateAtsApplicationRequest();
     $request->atsApplication = new AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-22T07:14:38.941Z');
-    $request->atsApplication->candidateId = 'Rosie';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T12:20:07.563Z');
+    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-04T09:23:07.789Z');
     $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'tangible';
+    $request->atsApplication->jobId = 'string';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-25T18:54:45.418Z');
-    $request->atsApplication->rejectedReason = 'repeatedly';
-    $request->atsApplication->source = 'Configurable';
-    $request->atsApplication->status = AtsApplicationStatus::BackgroundCheck;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-20T08:16:09.226Z');
-    $request->connectionId = 'emulation';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-09T08:05:18.054Z');
+    $request->atsApplication->rejectedReason = 'string';
+    $request->atsApplication->source = 'string';
+    $request->atsApplication->status = AtsApplicationStatus::Rejected;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T16:36:33.801Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsApplication($request);
@@ -1684,33 +1684,33 @@ try {
     $request = new UpdateAtsCandidateRequest();
     $request->atsCandidate = new AtsCandidate();
     $request->atsCandidate->address = new PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'pascal';
-    $request->atsCandidate->address->address2 = 'synergies';
-    $request->atsCandidate->address->city = 'Erie';
-    $request->atsCandidate->address->country = 'French Southern Territories';
-    $request->atsCandidate->address->countryCode = 'TV';
-    $request->atsCandidate->address->postalCode = '23361';
-    $request->atsCandidate->address->region = 'calculate';
-    $request->atsCandidate->address->regionCode = 'lime';
-    $request->atsCandidate->companyName = 'Hodkiewicz Group';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-15T06:13:11.491Z');
+    $request->atsCandidate->address->address1 = 'string';
+    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->city = 'Hintzborough';
+    $request->atsCandidate->address->country = 'Afghanistan';
+    $request->atsCandidate->address->countryCode = 'TF';
+    $request->atsCandidate->address->postalCode = '39423';
+    $request->atsCandidate->address->region = 'string';
+    $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyName = 'O\'Reilly Inc';
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-30T14:37:21.726Z');
     $request->atsCandidate->emails = [
         new AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'Metal';
+    $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'eventually';
-    $request->atsCandidate->name = 'transition';
+    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->name = 'string';
     $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
-        'SUV',
+        'string',
     ];
     $request->atsCandidate->telephones = [
         new AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'Frozen';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-09T14:35:14.640Z');
-    $request->connectionId = 'puny';
+    $request->atsCandidate->title = 'string';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-18T01:19:42.316Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsCandidate($request);
@@ -1764,22 +1764,22 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateAtsInterviewRequest();
     $request->atsInterview = new AtsInterview();
-    $request->atsInterview->applicationId = 'maroon';
-    $request->atsInterview->candidateId = 'maroon';
-    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-01T14:26:12.006Z');
-    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T11:41:49.964Z');
-    $request->atsInterview->externalEventXref = 'omnis';
+    $request->atsInterview->applicationId = 'string';
+    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-06T10:37:46.574Z');
+    $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-29T10:34:23.230Z');
+    $request->atsInterview->externalEventXref = 'string';
     $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'Gorgeous';
-    $request->atsInterview->location = 'magenta';
+    $request->atsInterview->jobId = 'string';
+    $request->atsInterview->location = 'string';
     $request->atsInterview->raw = new PropertyAtsInterviewRaw();
-    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-29T12:28:44.106Z');
+    $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-05T12:38:13.018Z');
     $request->atsInterview->status = AtsInterviewStatus::AwaitingFeedback;
-    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-27T22:37:05.474Z');
+    $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-01T14:26:12.006Z');
     $request->atsInterview->userIds = [
-        'aw',
+        'string',
     ];
-    $request->connectionId = 'solid';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsInterview($request);
@@ -1847,27 +1847,27 @@ try {
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T15:51:57.038Z');
     $request->atsJob->departments = [
-        'Hydrogen',
+        'string',
     ];
-    $request->atsJob->description = 'Triple-buffered multimedia artificial intelligence';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Consultant;
+    $request->atsJob->description = 'Implemented even-keeled parallelism';
+    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
-        'Metrics',
+        'string',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'withdrawal';
-    $request->atsJob->name = 'index';
+    $request->atsJob->languageLocale = 'string';
+    $request->atsJob->name = 'string';
     $request->atsJob->publicJobUrls = [
-        'visualize',
+        'string',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'Investor',
+        'string',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-25T23:18:21.631Z');
-    $request->connectionId = 'Orchestrator';
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T15:41:17.674Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsJob($request);
@@ -1921,18 +1921,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'East';
-    $request->atsScorecard->candidateId = 'Digitized';
-    $request->atsScorecard->comment = 'Carbonite web goalkeeper gloves are ergonomically designed to give easy fit';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-16T18:41:45.959Z');
+    $request->atsScorecard->applicationId = 'string';
+    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->comment = 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-10T12:08:12.226Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'legislator';
-    $request->atsScorecard->interviewerId = 'East';
-    $request->atsScorecard->jobId = 'Incredible';
+    $request->atsScorecard->interviewId = 'string';
+    $request->atsScorecard->interviewerId = 'string';
+    $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T23:04:23.563Z');
-    $request->connectionId = 'act';
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ats->updateAtsScorecard($request);

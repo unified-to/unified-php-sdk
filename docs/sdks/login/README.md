@@ -30,13 +30,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationLoginRequest();
-    $request->env = 'when';
-    $request->failureRedirect = 'Tricycle';
-    $request->integrationType = 'markets';
+    $request->env = 'string';
+    $request->failureRedirect = 'string';
+    $request->integrationType = 'string';
     $request->redirect = false;
-    $request->state = 'Soft';
-    $request->successRedirect = 'haptic';
-    $request->workspaceId = 'SUV';
+    $request->state = 'string';
+    $request->successRedirect = 'string';
+    $request->workspaceId = 'string';
 
     $response = $sdk->login->getUnifiedIntegrationLogin($request);
 

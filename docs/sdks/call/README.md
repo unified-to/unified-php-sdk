@@ -30,18 +30,18 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListUcCallsRequest();
-    $request->agentId = 'Liberia';
-    $request->connectionId = 'Cargo';
-    $request->contactId = 'West';
+    $request->agentId = 'string';
+    $request->connectionId = 'string';
+    $request->contactId = 'string';
     $request->fields = [
-        'Pop',
+        'string',
     ];
-    $request->limit = 4712.72;
-    $request->offset = 244.3;
-    $request->order = 'Health';
-    $request->query = 'gracefully';
-    $request->sort = 'so';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-15T15:11:51.943Z');
+    $request->limit = 465.25;
+    $request->offset = 4996.09;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T02:48:36.966Z');
 
     $response = $sdk->call->listUcCalls($request);
 

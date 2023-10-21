@@ -38,15 +38,15 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateTicketingNoteRequest();
     $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'Cruiser';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-29T11:56:16.620Z');
-    $request->ticketingNote->customerId = 'Sausages';
-    $request->ticketingNote->description = 'Synergistic upward-trending benchmark';
+    $request->ticketingNote->agentId = 'string';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-20T19:05:27.564Z');
+    $request->ticketingNote->customerId = 'string';
+    $request->ticketingNote->description = 'Distributed 4th generation portal';
     $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'Markets';
-    $request->connectionId = 'Hoeger';
-    $request->ticketId = 'Folk';
+    $request->ticketingNote->updatedAt = 'string';
+    $request->connectionId = 'string';
+    $request->ticketId = 'string';
 
     $response = $sdk->note->createTicketingNote($request);
 
@@ -95,12 +95,12 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetTicketingNoteRequest();
-    $request->connectionId = 'SSD';
+    $request->connectionId = 'string';
     $request->fields = [
-        'intranet',
+        'string',
     ];
     $request->id = '<ID>';
-    $request->ticketId = 'Fresh';
+    $request->ticketId = 'string';
 
     $response = $sdk->note->getTicketingNote($request);
 
@@ -149,17 +149,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListTicketingNotesRequest();
-    $request->connectionId = 'Data';
+    $request->connectionId = 'string';
     $request->fields = [
-        'because',
+        'string',
     ];
-    $request->limit = 590.84;
-    $request->offset = 9973.53;
-    $request->order = 'Kroon';
-    $request->query = 'Marvin';
-    $request->sort = 'Ford';
-    $request->ticketId = 'shiny';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-01T19:09:46.934Z');
+    $request->limit = 6345.23;
+    $request->offset = 8100.5;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->ticketId = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-20T18:22:08.785Z');
 
     $response = $sdk->note->listTicketingNotes($request);
 
@@ -211,16 +211,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchTicketingNoteRequest();
     $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'soon';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T05:41:48.017Z');
-    $request->ticketingNote->customerId = 'yellow';
-    $request->ticketingNote->description = 'Versatile object-oriented system engine';
+    $request->ticketingNote->agentId = 'string';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T23:33:24.591Z');
+    $request->ticketingNote->customerId = 'string';
+    $request->ticketingNote->description = 'Right-sized national productivity';
     $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'Plastic';
-    $request->connectionId = 'probable';
+    $request->ticketingNote->updatedAt = 'string';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->ticketId = 'Infrastructure';
+    $request->ticketId = 'string';
 
     $response = $sdk->note->patchTicketingNote($request);
 
@@ -269,9 +269,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveTicketingNoteRequest();
-    $request->connectionId = 'Bicycle';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->ticketId = 'hm';
+    $request->ticketId = 'string';
 
     $response = $sdk->note->removeTicketingNote($request);
 
@@ -323,16 +323,16 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateTicketingNoteRequest();
     $request->ticketingNote = new TicketingNote();
-    $request->ticketingNote->agentId = 'lavender';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-07T07:44:11.881Z');
-    $request->ticketingNote->customerId = 'among';
-    $request->ticketingNote->description = 'Pre-emptive needs-based infrastructure';
+    $request->ticketingNote->agentId = 'string';
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-15T06:19:14.487Z');
+    $request->ticketingNote->customerId = 'string';
+    $request->ticketingNote->description = 'Versatile value-added utilisation';
     $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
-    $request->ticketingNote->updatedAt = 'Brand';
-    $request->connectionId = 'when';
+    $request->ticketingNote->updatedAt = 'string';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->ticketId = 'Folding';
+    $request->ticketId = 'string';
 
     $response = $sdk->note->updateTicketingNote($request);
 

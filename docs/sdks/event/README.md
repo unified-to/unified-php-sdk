@@ -48,41 +48,41 @@ try {
     $request->crmEvent->call->description = 'Grass-roots intangible superstructure';
     $request->crmEvent->call->duration = 6684.26;
     $request->crmEvent->companyIds = [
-        'Sedan',
+        'string',
     ];
     $request->crmEvent->contactIds = [
-        'altruistic',
+        'string',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-19T06:42:51.348Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T01:49:08.083Z');
     $request->crmEvent->dealIds = [
-        'array',
+        'string',
     ];
     $request->crmEvent->email = new PropertyCrmEventEmail();
-    $request->crmEvent->email->body = 'after';
+    $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
-        'Bronze',
+        'string',
     ];
-    $request->crmEvent->email->from = 'Northwest';
-    $request->crmEvent->email->subject = 'Books';
+    $request->crmEvent->email->from = 'string';
+    $request->crmEvent->email->subject = 'string';
     $request->crmEvent->email->to = [
-        'within',
+        'string',
     ];
     $request->crmEvent->id = '<ID>';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
-    $request->crmEvent->meeting->description = 'Multi-layered interactive function';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-05T21:23:02.258Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-04T21:08:27.295Z');
-    $request->crmEvent->meeting->title = 'Underpass';
+    $request->crmEvent->meeting->description = 'Synergized systemic adapter';
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-19T06:42:51.348Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-06T14:40:43.070Z');
+    $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new PropertyCrmEventNote();
-    $request->crmEvent->note->description = 'User-friendly 5th generation database';
+    $request->crmEvent->note->description = 'Horizontal zero administration architecture';
     $request->crmEvent->raw = new PropertyCrmEventRaw();
     $request->crmEvent->task = new PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'Re-engineered methodical software';
-    $request->crmEvent->task->name = 'Bohrium';
-    $request->crmEvent->task->status = 'Rock';
+    $request->crmEvent->task->description = 'Extended 5th generation artificial intelligence';
+    $request->crmEvent->task->name = 'string';
+    $request->crmEvent->task->status = 'string';
     $request->crmEvent->type = CrmEventType::Task;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-06T18:00:02.714Z');
-    $request->connectionId = 'Pickup';
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-14T14:31:08.257Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->event->createCrmEvent($request);
 
@@ -131,9 +131,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmEventRequest();
-    $request->connectionId = 'Technetium';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Ergonomic',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -184,19 +184,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListCrmEventsRequest();
-    $request->companyId = 'withdrawal';
-    $request->connectionId = 'empower';
-    $request->contactId = 'violet';
-    $request->dealId = 'generating';
+    $request->companyId = 'string';
+    $request->connectionId = 'string';
+    $request->contactId = 'string';
+    $request->dealId = 'string';
     $request->fields = [
-        'paradigms',
+        'string',
     ];
-    $request->limit = 4189.72;
-    $request->offset = 166.74;
-    $request->order = 'Northwest';
-    $request->query = 'pascal';
-    $request->sort = 'gadzooks';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-09T08:16:49.881Z');
+    $request->limit = 4453.11;
+    $request->offset = 4555.2;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T09:02:38.779Z');
 
     $response = $sdk->event->listCrmEvents($request);
 
@@ -258,41 +258,41 @@ try {
     $request->crmEvent->call->description = 'Multi-layered well-modulated middleware';
     $request->crmEvent->call->duration = 8718.07;
     $request->crmEvent->companyIds = [
-        'copying',
+        'string',
     ];
     $request->crmEvent->contactIds = [
-        'after',
+        'string',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T03:29:57.620Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-20T20:04:26.682Z');
     $request->crmEvent->dealIds = [
-        'Northwest',
+        'string',
     ];
     $request->crmEvent->email = new PropertyCrmEventEmail();
-    $request->crmEvent->email->body = 'female';
+    $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
-        'Connecticut',
+        'string',
     ];
-    $request->crmEvent->email->from = 'Administrator';
-    $request->crmEvent->email->subject = 'around';
+    $request->crmEvent->email->from = 'string';
+    $request->crmEvent->email->subject = 'string';
     $request->crmEvent->email->to = [
-        'Wooden',
+        'string',
     ];
     $request->crmEvent->id = '<ID>';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
-    $request->crmEvent->meeting->description = 'Sharable methodical initiative';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-25T14:26:02.786Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-07T03:40:51.881Z');
-    $request->crmEvent->meeting->title = 'Southwest';
+    $request->crmEvent->meeting->description = 'Horizontal uniform access';
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T03:29:57.620Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-11T20:55:56.558Z');
+    $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new PropertyCrmEventNote();
-    $request->crmEvent->note->description = 'Multi-tiered object-oriented time-frame';
+    $request->crmEvent->note->description = 'Exclusive non-volatile conglomeration';
     $request->crmEvent->raw = new PropertyCrmEventRaw();
     $request->crmEvent->task = new PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'User-friendly bi-directional core';
-    $request->crmEvent->task->name = 'boo';
-    $request->crmEvent->task->status = 'Technician';
+    $request->crmEvent->task->description = 'Cross-platform bi-directional open architecture';
+    $request->crmEvent->task->name = 'string';
+    $request->crmEvent->task->status = 'string';
     $request->crmEvent->type = CrmEventType::Task;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-30T14:01:27.741Z');
-    $request->connectionId = 'DNS';
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-30T20:46:48.999Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->event->patchCrmEvent($request);
@@ -342,7 +342,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveCrmEventRequest();
-    $request->connectionId = 'enterprise';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->event->removeCrmEvent($request);
@@ -405,41 +405,41 @@ try {
     $request->crmEvent->call->description = 'Intuitive incremental orchestration';
     $request->crmEvent->call->duration = 4665.81;
     $request->crmEvent->companyIds = [
-        'Bespoke',
+        'string',
     ];
     $request->crmEvent->contactIds = [
-        'Bicycle',
+        'string',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-03T21:08:02.575Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-01T00:40:18.553Z');
     $request->crmEvent->dealIds = [
-        'Wagon',
+        'string',
     ];
     $request->crmEvent->email = new PropertyCrmEventEmail();
-    $request->crmEvent->email->body = 'Borders';
+    $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
-        'rich',
+        'string',
     ];
-    $request->crmEvent->email->from = 'Keyboard';
-    $request->crmEvent->email->subject = 'thoroughly';
+    $request->crmEvent->email->from = 'string';
+    $request->crmEvent->email->subject = 'string';
     $request->crmEvent->email->to = [
-        'impactful',
+        'string',
     ];
     $request->crmEvent->id = '<ID>';
     $request->crmEvent->meeting = new PropertyCrmEventMeeting();
-    $request->crmEvent->meeting->description = 'Visionary 4th generation leverage';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-12T18:10:58.161Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-09T02:28:34.901Z');
-    $request->crmEvent->meeting->title = 'quantify';
+    $request->crmEvent->meeting->description = 'Optional real-time process improvement';
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-22T11:59:17.612Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-03T21:08:02.575Z');
+    $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new PropertyCrmEventNote();
-    $request->crmEvent->note->description = 'Managed regional circuit';
+    $request->crmEvent->note->description = 'Switchable zero defect approach';
     $request->crmEvent->raw = new PropertyCrmEventRaw();
     $request->crmEvent->task = new PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'Distributed coherent workforce';
-    $request->crmEvent->task->name = 'Interactions';
-    $request->crmEvent->task->status = 'Account';
-    $request->crmEvent->type = CrmEventType::Task;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-28T15:41:56.782Z');
-    $request->connectionId = 'Group';
+    $request->crmEvent->task->description = 'Pre-emptive system-worthy open system';
+    $request->crmEvent->task->name = 'string';
+    $request->crmEvent->task->status = 'string';
+    $request->crmEvent->type = CrmEventType::Email;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-26T08:01:25.242Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->event->updateCrmEvent($request);

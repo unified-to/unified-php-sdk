@@ -32,19 +32,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthRequest();
-    $request->env = 'supposing';
-    $request->externalXref = 'Nobelium';
-    $request->failureRedirect = 'Branding';
-    $request->integrationType = 'pascal';
-    $request->lang = 'West';
+    $request->env = 'string';
+    $request->externalXref = 'string';
+    $request->failureRedirect = 'string';
+    $request->integrationType = 'string';
+    $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::CrmPipelineWrite,
+        GetUnifiedIntegrationAuthScopes::HrisGroupRead,
     ];
-    $request->state = 'blot';
-    $request->subdomain = 'Haverhill';
-    $request->successRedirect = 'Investment';
-    $request->workspaceId = 'spirit';
+    $request->state = 'string';
+    $request->subdomain = 'string';
+    $request->successRedirect = 'string';
+    $request->workspaceId = 'string';
 
     $response = $sdk->auth->getUnifiedIntegrationAuth($request);
 
@@ -93,13 +93,13 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationLoginRequest();
-    $request->env = 'when';
-    $request->failureRedirect = 'Tricycle';
-    $request->integrationType = 'markets';
+    $request->env = 'string';
+    $request->failureRedirect = 'string';
+    $request->integrationType = 'string';
     $request->redirect = false;
-    $request->state = 'Soft';
-    $request->successRedirect = 'haptic';
-    $request->workspaceId = 'SUV';
+    $request->state = 'string';
+    $request->successRedirect = 'string';
+    $request->workspaceId = 'string';
 
     $response = $sdk->auth->getUnifiedIntegrationLogin($request);
 

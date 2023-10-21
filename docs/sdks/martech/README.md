@@ -44,12 +44,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'Latin';
+    $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'withdrawal';
+    $request->marketingList->name = 'string';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-22T16:43:28.990Z');
-    $request->connectionId = 'Recycled';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-15T11:18:03.715Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->martech->createMartechList($request);
 
@@ -109,16 +109,16 @@ try {
     ];
     $request->marketingMember->id = '<ID>';
     $request->marketingMember->listIds = [
-        'deposit',
+        'string',
     ];
-    $request->marketingMember->name = 'input';
+    $request->marketingMember->name = 'string';
     $request->marketingMember->raw = new PropertyMarketingMemberRaw();
     $request->marketingMember->tags = [
-        'SAS',
+        'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-05T10:13:17.067Z');
-    $request->connectionId = 'South';
-    $request->listId = 'Electronic';
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-19T04:53:01.271Z');
+    $request->connectionId = 'string';
+    $request->listId = 'string';
 
     $response = $sdk->martech->createMartechMember($request);
 
@@ -167,9 +167,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetMartechListRequest();
-    $request->connectionId = 'red';
+    $request->connectionId = 'string';
     $request->fields = [
-        'users',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -220,12 +220,12 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetMartechMemberRequest();
-    $request->connectionId = 'Japan';
+    $request->connectionId = 'string';
     $request->fields = [
-        'orange',
+        'string',
     ];
     $request->id = '<ID>';
-    $request->listId = 'Gibraltar';
+    $request->listId = 'string';
 
     $response = $sdk->martech->getMartechMember($request);
 
@@ -274,16 +274,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListMartechListsRequest();
-    $request->connectionId = 'above';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Fantastic',
+        'string',
     ];
-    $request->limit = 3446.94;
-    $request->offset = 7906.96;
-    $request->order = 'Consultant';
-    $request->query = 'customized';
-    $request->sort = 'parse';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-11T08:12:55.475Z');
+    $request->limit = 9665.22;
+    $request->offset = 367.94;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-12T06:44:44.684Z');
 
     $response = $sdk->martech->listMartechLists($request);
 
@@ -332,17 +332,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListMartechMembersRequest();
-    $request->connectionId = 'Frida';
+    $request->connectionId = 'string';
     $request->fields = [
-        'structure',
+        'string',
     ];
-    $request->limit = 3605.39;
-    $request->listId = 'lime';
-    $request->offset = 6827.47;
-    $request->order = 'Bike';
-    $request->query = 'outrageous';
-    $request->sort = 'Trigender';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-29T02:01:11.000Z');
+    $request->limit = 1432.99;
+    $request->listId = 'string';
+    $request->offset = 4150.29;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-09T03:38:53.799Z');
 
     $response = $sdk->martech->listMartechMembers($request);
 
@@ -394,12 +394,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'Classical';
+    $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'alarm';
+    $request->marketingList->name = 'string';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-06T03:03:29.299Z');
-    $request->connectionId = 'Electronic';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-07T20:57:43.081Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->martech->patchMartechList($request);
@@ -460,17 +460,17 @@ try {
     ];
     $request->marketingMember->id = '<ID>';
     $request->marketingMember->listIds = [
-        'bumpy',
+        'string',
     ];
-    $request->marketingMember->name = 'Usability';
+    $request->marketingMember->name = 'string';
     $request->marketingMember->raw = new PropertyMarketingMemberRaw();
     $request->marketingMember->tags = [
-        'Handcrafted',
+        'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T22:23:04.281Z');
-    $request->connectionId = 'Sedan';
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-21T13:07:32.283Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->listId = 'Unbranded';
+    $request->listId = 'string';
 
     $response = $sdk->martech->patchMartechMember($request);
 
@@ -519,7 +519,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveMartechListRequest();
-    $request->connectionId = 'Northwest';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->martech->removeMartechList($request);
@@ -569,9 +569,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveMartechMemberRequest();
-    $request->connectionId = 'integrated';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->listId = 'Analyst';
+    $request->listId = 'string';
 
     $response = $sdk->martech->removeMartechMember($request);
 
@@ -623,12 +623,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'innocently';
+    $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'gold';
+    $request->marketingList->name = 'string';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-04T08:51:08.881Z');
-    $request->connectionId = 'Stroman';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T06:01:18.792Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->martech->updateMartechList($request);
@@ -689,17 +689,17 @@ try {
     ];
     $request->marketingMember->id = '<ID>';
     $request->marketingMember->listIds = [
-        'Berkshire',
+        'string',
     ];
-    $request->marketingMember->name = 'Kong';
+    $request->marketingMember->name = 'string';
     $request->marketingMember->raw = new PropertyMarketingMemberRaw();
     $request->marketingMember->tags = [
-        'mobile',
+        'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-12T19:29:43.788Z');
-    $request->connectionId = 'Bike';
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-20T03:26:40.111Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->listId = 'Hyundai';
+    $request->listId = 'string';
 
     $response = $sdk->martech->updateMartechMember($request);
 

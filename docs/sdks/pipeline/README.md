@@ -43,10 +43,10 @@ try {
     $request->crmPipeline->displayOrder = 6254.97;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
-    $request->crmPipeline->name = 'enable';
+    $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-01T02:57:01.626Z');
-    $request->connectionId = 'West';
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-01T06:10:18.007Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->pipeline->createCrmPipeline($request);
 
@@ -95,9 +95,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmPipelineRequest();
-    $request->connectionId = 'withdrawal';
+    $request->connectionId = 'string';
     $request->fields = [
-        'online',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -148,16 +148,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListCrmPipelinesRequest();
-    $request->connectionId = 'Southeast';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Concrete',
+        'string',
     ];
-    $request->limit = 7450.66;
-    $request->offset = 5820.53;
-    $request->order = 'Analyst';
-    $request->query = 'generate';
-    $request->sort = 'synthesize';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-06T11:39:35.057Z');
+    $request->limit = 3318.18;
+    $request->offset = 4834.28;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-29T15:47:27.871Z');
 
     $response = $sdk->pipeline->listCrmPipelines($request);
 
@@ -214,10 +214,10 @@ try {
     $request->crmPipeline->displayOrder = 8620.92;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
-    $request->crmPipeline->name = 'Checking';
+    $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-02T03:10:12.625Z');
-    $request->connectionId = 'Southwest';
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T12:55:27.421Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->pipeline->patchCrmPipeline($request);
@@ -267,7 +267,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveCrmPipelineRequest();
-    $request->connectionId = 'protocol';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->pipeline->removeCrmPipeline($request);
@@ -325,10 +325,10 @@ try {
     $request->crmPipeline->displayOrder = 8923.83;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
-    $request->crmPipeline->name = 'generating';
+    $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-19T23:20:46.441Z');
-    $request->connectionId = 'Northeast';
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-18T01:45:20.441Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->pipeline->updateCrmPipeline($request);

@@ -35,8 +35,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new CreatePassthroughRequest();
-    $request->connectionId = 'turquoise';
-    $request->path = '/var';
+    $request->connectionId = 'string';
+    $request->path = '/etc/periodic';
     $request->undefined = new Undefined();
 
     $response = $sdk->passthrough->createPassthrough($request);
@@ -86,8 +86,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListPassthroughsRequest();
-    $request->connectionId = 'nisi';
-    $request->path = '/etc/ppp';
+    $request->connectionId = 'string';
+    $request->path = '/selinux';
 
     $response = $sdk->passthrough->listPassthroughs($request);
 
@@ -137,8 +137,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new PatchPassthroughRequest();
-    $request->connectionId = 'brand';
-    $request->path = '/var/mail';
+    $request->connectionId = 'string';
+    $request->path = '/mnt';
     $request->undefined = new Undefined();
 
     $response = $sdk->passthrough->patchPassthrough($request);
@@ -188,8 +188,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemovePassthroughRequest();
-    $request->connectionId = 'North';
-    $request->path = '/opt/bin';
+    $request->connectionId = 'string';
+    $request->path = '/Applications';
 
     $response = $sdk->passthrough->removePassthrough($request);
 
@@ -239,8 +239,8 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new UpdatePassthroughRequest();
-    $request->connectionId = 'Northwest';
-    $request->path = '/var/mail';
+    $request->connectionId = 'string';
+    $request->path = '/dev';
     $request->undefined = new Undefined();
 
     $response = $sdk->passthrough->updatePassthrough($request);

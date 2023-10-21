@@ -49,14 +49,14 @@ try {
         new UcEmail(),
     ];
     $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'enhance';
+    $request->ucContact->name = 'string';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'challenge';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-13T11:27:30.726Z');
-    $request->connectionId = 'indeed';
+    $request->ucContact->title = 'string';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T08:51:50.425Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->uc->createUcContact($request);
 
@@ -105,9 +105,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUcContactRequest();
-    $request->connectionId = 'for';
+    $request->connectionId = 'string';
     $request->fields = [
-        'deposit',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -158,18 +158,18 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListUcCallsRequest();
-    $request->agentId = 'Liberia';
-    $request->connectionId = 'Cargo';
-    $request->contactId = 'West';
+    $request->agentId = 'string';
+    $request->connectionId = 'string';
+    $request->contactId = 'string';
     $request->fields = [
-        'Pop',
+        'string',
     ];
-    $request->limit = 4712.72;
-    $request->offset = 244.3;
-    $request->order = 'Health';
-    $request->query = 'gracefully';
-    $request->sort = 'so';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-15T15:11:51.943Z');
+    $request->limit = 465.25;
+    $request->offset = 4996.09;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T02:48:36.966Z');
 
     $response = $sdk->uc->listUcCalls($request);
 
@@ -218,17 +218,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListUcContactsRequest();
-    $request->agentId = 'application';
-    $request->connectionId = 'Xenogender';
+    $request->agentId = 'string';
+    $request->connectionId = 'string';
     $request->fields = [
-        'male',
+        'string',
     ];
-    $request->limit = 11.48;
-    $request->offset = 4873.56;
-    $request->order = 'transmitting';
-    $request->query = 'paradigm';
-    $request->sort = 'generating';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-20T06:25:41.978Z');
+    $request->limit = 5333.71;
+    $request->offset = 7775.9;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-25T15:03:37.771Z');
 
     $response = $sdk->uc->listUcContacts($request);
 
@@ -290,14 +290,14 @@ try {
         new UcEmail(),
     ];
     $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'after';
+    $request->ucContact->name = 'string';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'male';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-08T12:55:44.030Z');
-    $request->connectionId = 'South';
+    $request->ucContact->title = 'string';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-29T10:49:56.119Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->uc->patchUcContact($request);
@@ -347,7 +347,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveUcContactRequest();
-    $request->connectionId = 'Plastic';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->uc->removeUcContact($request);
@@ -410,14 +410,14 @@ try {
         new UcEmail(),
     ];
     $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'Convertible';
+    $request->ucContact->name = 'string';
     $request->ucContact->raw = new PropertyUcContactRaw();
     $request->ucContact->telephones = [
         new UcTelephone(),
     ];
-    $request->ucContact->title = 'Wooden';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-25T08:16:30.884Z');
-    $request->connectionId = 'Northwest';
+    $request->ucContact->title = 'string';
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-14T09:25:29.060Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->uc->updateUcContact($request);

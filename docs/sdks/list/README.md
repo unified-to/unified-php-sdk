@@ -38,12 +38,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'Latin';
+    $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'withdrawal';
+    $request->marketingList->name = 'string';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-22T16:43:28.990Z');
-    $request->connectionId = 'Recycled';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-15T11:18:03.715Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->list->createMartechList($request);
 
@@ -92,9 +92,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetMartechListRequest();
-    $request->connectionId = 'red';
+    $request->connectionId = 'string';
     $request->fields = [
-        'users',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -145,16 +145,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListMartechListsRequest();
-    $request->connectionId = 'above';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Fantastic',
+        'string',
     ];
-    $request->limit = 3446.94;
-    $request->offset = 7906.96;
-    $request->order = 'Consultant';
-    $request->query = 'customized';
-    $request->sort = 'parse';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-11T08:12:55.475Z');
+    $request->limit = 9665.22;
+    $request->offset = 367.94;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-12T06:44:44.684Z');
 
     $response = $sdk->list->listMartechLists($request);
 
@@ -206,12 +206,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'Classical';
+    $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'alarm';
+    $request->marketingList->name = 'string';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-06T03:03:29.299Z');
-    $request->connectionId = 'Electronic';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-07T20:57:43.081Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->list->patchMartechList($request);
@@ -261,7 +261,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveMartechListRequest();
-    $request->connectionId = 'Northwest';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->list->removeMartechList($request);
@@ -314,12 +314,12 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateMartechListRequest();
     $request->marketingList = new MarketingList();
-    $request->marketingList->createdAt = 'innocently';
+    $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'gold';
+    $request->marketingList->name = 'string';
     $request->marketingList->raw = new PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-04T08:51:08.881Z');
-    $request->connectionId = 'Stroman';
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T06:01:18.792Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->list->updateMartechList($request);

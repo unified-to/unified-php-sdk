@@ -43,19 +43,19 @@ try {
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-23T03:04:45.267Z');
     $request->crmDeal->currency = 'Cuban Peso';
     $request->crmDeal->id = '<ID>';
-    $request->crmDeal->lostReason = 'Southeast';
-    $request->crmDeal->name = 'worth';
-    $request->crmDeal->pipeline = 'lay';
-    $request->crmDeal->probability = 5009.11;
+    $request->crmDeal->lostReason = 'string';
+    $request->crmDeal->name = 'string';
+    $request->crmDeal->pipeline = 'string';
+    $request->crmDeal->probability = 1087.81;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'supposing';
-    $request->crmDeal->stage = 'Lexi';
+    $request->crmDeal->source = 'string';
+    $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
-        'female',
+        'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-15T09:44:17.218Z');
-    $request->crmDeal->wonReason = 'invoice';
-    $request->connectionId = 'Elegant';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-13T05:28:26.663Z');
+    $request->crmDeal->wonReason = 'string';
+    $request->connectionId = 'string';
 
     $response = $sdk->deal->createCrmDeal($request);
 
@@ -104,9 +104,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetCrmDealRequest();
-    $request->connectionId = 'payment';
+    $request->connectionId = 'string';
     $request->fields = [
-        'mint',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -157,18 +157,18 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListCrmDealsRequest();
-    $request->companyId = 'Southeast';
-    $request->connectionId = 'synthesize';
-    $request->contactId = 'Health';
+    $request->companyId = 'string';
+    $request->connectionId = 'string';
+    $request->contactId = 'string';
     $request->fields = [
-        'male',
+        'string',
     ];
-    $request->limit = 4268.08;
-    $request->offset = 8759.87;
-    $request->order = 'Avon';
-    $request->query = 'virtual';
-    $request->sort = 'female';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T05:55:38.090Z');
+    $request->limit = 917.49;
+    $request->offset = 8216.92;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-03T12:16:34.604Z');
 
     $response = $sdk->deal->listCrmDeals($request);
 
@@ -225,19 +225,19 @@ try {
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T07:03:46.302Z');
     $request->crmDeal->currency = 'Riel';
     $request->crmDeal->id = '<ID>';
-    $request->crmDeal->lostReason = 'quill';
-    $request->crmDeal->name = 'Avon';
-    $request->crmDeal->pipeline = 'Loan';
-    $request->crmDeal->probability = 4610.4;
+    $request->crmDeal->lostReason = 'string';
+    $request->crmDeal->name = 'string';
+    $request->crmDeal->pipeline = 'string';
+    $request->crmDeal->probability = 9555.58;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'Integration';
-    $request->crmDeal->stage = 'cyan';
+    $request->crmDeal->source = 'string';
+    $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
-        'including',
+        'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-28T16:38:25.368Z');
-    $request->crmDeal->wonReason = 'Computer';
-    $request->connectionId = 'Cheese';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T14:41:27.897Z');
+    $request->crmDeal->wonReason = 'string';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->deal->patchCrmDeal($request);
@@ -287,7 +287,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveCrmDealRequest();
-    $request->connectionId = 'Handmade';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->deal->removeCrmDeal($request);
@@ -345,19 +345,19 @@ try {
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-20T16:49:31.989Z');
     $request->crmDeal->currency = 'Pound Sterling';
     $request->crmDeal->id = '<ID>';
-    $request->crmDeal->lostReason = 'viral';
-    $request->crmDeal->name = 'Credit';
-    $request->crmDeal->pipeline = 'Orchestrator';
-    $request->crmDeal->probability = 8437.09;
+    $request->crmDeal->lostReason = 'string';
+    $request->crmDeal->name = 'string';
+    $request->crmDeal->pipeline = 'string';
+    $request->crmDeal->probability = 2970.01;
     $request->crmDeal->raw = new PropertyCrmDealRaw();
-    $request->crmDeal->source = 'Gloves';
-    $request->crmDeal->stage = 'deliver';
+    $request->crmDeal->source = 'string';
+    $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
-        'obese',
+        'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-24T22:15:55.880Z');
-    $request->crmDeal->wonReason = 'emotional';
-    $request->connectionId = 'technologies';
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-31T15:37:01.475Z');
+    $request->crmDeal->wonReason = 'string';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->deal->updateCrmDeal($request);

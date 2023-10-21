@@ -39,18 +39,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'Brunei';
-    $request->atsScorecard->candidateId = 'Account';
+    $request->atsScorecard->applicationId = 'string';
+    $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-03T14:50:39.962Z');
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-24T07:49:32.768Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'violet';
-    $request->atsScorecard->interviewerId = 'Southeast';
-    $request->atsScorecard->jobId = 'Credit';
+    $request->atsScorecard->interviewId = 'string';
+    $request->atsScorecard->interviewerId = 'string';
+    $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-05T00:10:36.512Z');
-    $request->connectionId = 'hm';
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->document->createAtsScorecard($request);
 
@@ -99,9 +99,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsScorecardRequest();
-    $request->connectionId = 'Cordoba';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Nissan',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -152,20 +152,20 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsScorecardsRequest();
-    $request->applicationId = 'synthesizing';
-    $request->candidateId = 'surprised';
-    $request->connectionId = 'Gislason';
+    $request->applicationId = 'string';
+    $request->candidateId = 'string';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Pickup',
+        'string',
     ];
-    $request->interviewId = 'slop';
-    $request->jobId = 'North';
-    $request->limit = 1893.11;
-    $request->offset = 4281.16;
-    $request->order = 'parallelism';
-    $request->query = 'Lutetium';
-    $request->sort = 'Tools';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-30T11:15:06.025Z');
+    $request->interviewId = 'string';
+    $request->jobId = 'string';
+    $request->limit = 5126.98;
+    $request->offset = 8077.44;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T17:42:56.145Z');
 
     $response = $sdk->document->listAtsScorecards($request);
 
@@ -218,18 +218,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'Falls';
-    $request->atsScorecard->candidateId = 'engage';
-    $request->atsScorecard->comment = 'New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-24T06:50:19.647Z');
+    $request->atsScorecard->applicationId = 'string';
+    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->comment = 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-06T15:26:03.447Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'application';
-    $request->atsScorecard->interviewerId = 'Leu';
-    $request->atsScorecard->jobId = 'provided';
+    $request->atsScorecard->interviewId = 'string';
+    $request->atsScorecard->interviewerId = 'string';
+    $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-01T17:55:20.334Z');
-    $request->connectionId = 'up';
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->document->patchAtsScorecard($request);
@@ -279,7 +279,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsScorecardRequest();
-    $request->connectionId = 'approach';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->document->removeAtsScorecard($request);
@@ -333,18 +333,18 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateAtsScorecardRequest();
     $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'East';
-    $request->atsScorecard->candidateId = 'Digitized';
-    $request->atsScorecard->comment = 'Carbonite web goalkeeper gloves are ergonomically designed to give easy fit';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-16T18:41:45.959Z');
+    $request->atsScorecard->applicationId = 'string';
+    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->comment = 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive';
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-10T12:08:12.226Z');
     $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'legislator';
-    $request->atsScorecard->interviewerId = 'East';
-    $request->atsScorecard->jobId = 'Incredible';
+    $request->atsScorecard->interviewId = 'string';
+    $request->atsScorecard->interviewerId = 'string';
+    $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T23:04:23.563Z');
-    $request->connectionId = 'act';
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->document->updateAtsScorecard($request);

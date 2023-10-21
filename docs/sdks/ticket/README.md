@@ -39,23 +39,23 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new CreateTicketingTicketRequest();
     $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'sky';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-26T23:03:40.521Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-05T11:24:57.446Z');
-    $request->ticketingTicket->customerId = 'indigo';
-    $request->ticketingTicket->description = 'Virtual coherent strategy';
+    $request->ticketingTicket->category = 'string';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-28T11:20:21.005Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-19T22:26:35.479Z');
+    $request->ticketingTicket->customerId = 'string';
+    $request->ticketingTicket->description = 'Automated composite productivity';
     $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'Global';
+    $request->ticketingTicket->priority = 'string';
     $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'West';
-    $request->ticketingTicket->sourceRef = 'Shirt';
-    $request->ticketingTicket->status = TicketingTicketStatus::Active;
-    $request->ticketingTicket->subject = 'repellendus';
+    $request->ticketingTicket->source = 'string';
+    $request->ticketingTicket->sourceRef = 'string';
+    $request->ticketingTicket->status = TicketingTicketStatus::Closed;
+    $request->ticketingTicket->subject = 'string';
     $request->ticketingTicket->tags = [
-        'Czech',
+        'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-12T21:39:55.862Z');
-    $request->connectionId = 'withdrawal';
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-07T02:01:09.815Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->ticket->createTicketingTicket($request);
 
@@ -104,9 +104,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetTicketingTicketRequest();
-    $request->connectionId = 'Marks';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Dollar',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -157,18 +157,18 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListTicketingTicketsRequest();
-    $request->agentId = 'Cisgender';
-    $request->connectionId = 'archive';
-    $request->customerId = 'inform';
+    $request->agentId = 'string';
+    $request->connectionId = 'string';
+    $request->customerId = 'string';
     $request->fields = [
-        'while',
+        'string',
     ];
-    $request->limit = 7387.45;
-    $request->offset = 2376.21;
-    $request->order = 'Classical';
-    $request->query = 'Orchestrator';
-    $request->sort = 'Unbranded';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-12T05:37:26.961Z');
+    $request->limit = 6139.39;
+    $request->offset = 1839.22;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-28T14:14:11.846Z');
 
     $response = $sdk->ticket->listTicketingTickets($request);
 
@@ -221,23 +221,23 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new PatchTicketingTicketRequest();
     $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'Bespoke';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-11T01:07:39.359Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-17T22:46:45.974Z');
-    $request->ticketingTicket->customerId = 'smooth';
-    $request->ticketingTicket->description = 'Streamlined content-based definition';
+    $request->ticketingTicket->category = 'string';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-14T12:10:45.667Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-29T23:22:13.568Z');
+    $request->ticketingTicket->customerId = 'string';
+    $request->ticketingTicket->description = 'Operative composite strategy';
     $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'redefine';
+    $request->ticketingTicket->priority = 'string';
     $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'Licensed';
-    $request->ticketingTicket->sourceRef = 'Maserati';
+    $request->ticketingTicket->source = 'string';
+    $request->ticketingTicket->sourceRef = 'string';
     $request->ticketingTicket->status = TicketingTicketStatus::Closed;
-    $request->ticketingTicket->subject = 'Dinar';
+    $request->ticketingTicket->subject = 'string';
     $request->ticketingTicket->tags = [
-        'Strategist',
+        'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-15T09:38:25.083Z');
-    $request->connectionId = 'plum';
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-06T16:05:08.020Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ticket->patchTicketingTicket($request);
@@ -287,7 +287,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveTicketingTicketRequest();
-    $request->connectionId = 'communities';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ticket->removeTicketingTicket($request);
@@ -341,23 +341,23 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new UpdateTicketingTicketRequest();
     $request->ticketingTicket = new TicketingTicket();
-    $request->ticketingTicket->category = 'Rhode';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T09:31:52.843Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-08T18:39:58.773Z');
-    $request->ticketingTicket->customerId = 'East';
-    $request->ticketingTicket->description = 'Grass-roots system-worthy array';
+    $request->ticketingTicket->category = 'string';
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-30T22:19:31.995Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-29T18:27:57.571Z');
+    $request->ticketingTicket->customerId = 'string';
+    $request->ticketingTicket->description = 'Configurable user-facing middleware';
     $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'optimal';
+    $request->ticketingTicket->priority = 'string';
     $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
-    $request->ticketingTicket->source = 'tan';
-    $request->ticketingTicket->sourceRef = 'quietly';
+    $request->ticketingTicket->source = 'string';
+    $request->ticketingTicket->sourceRef = 'string';
     $request->ticketingTicket->status = TicketingTicketStatus::Active;
-    $request->ticketingTicket->subject = 'North';
+    $request->ticketingTicket->subject = 'string';
     $request->ticketingTicket->tags = [
-        'array',
+        'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-21T02:16:06.529Z');
-    $request->connectionId = 'recap';
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-16T17:18:07.743Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->ticket->updateTicketingTicket($request);

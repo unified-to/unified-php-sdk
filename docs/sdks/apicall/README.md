@@ -80,17 +80,17 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListUnifiedApicallsRequest();
-    $request->connectionId = 'attentive';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-31T18:23:34.605Z');
-    $request->env = 'Lead';
+    $request->connectionId = 'string';
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-09T20:57:25.500Z');
+    $request->env = 'string';
     $request->error = false;
-    $request->externalXref = 'Krone';
-    $request->integrationType = 'facilis';
-    $request->limit = 5472.46;
-    $request->offset = 9674.36;
-    $request->order = 'dearly';
-    $request->sort = 'Integration';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T19:38:01.045Z');
+    $request->externalXref = 'string';
+    $request->integrationType = 'string';
+    $request->limit = 494.66;
+    $request->offset = 5267.27;
+    $request->order = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T10:22:39.053Z');
 
     $response = $sdk->apicall->listUnifiedApicalls($request);
 

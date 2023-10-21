@@ -33,7 +33,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationRequest();
-    $request->integrationType = 'Mobility';
+    $request->integrationType = 'string';
 
     $response = $sdk->integration->getUnifiedIntegration($request);
 
@@ -83,19 +83,19 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetUnifiedIntegrationAuthRequest();
-    $request->env = 'supposing';
-    $request->externalXref = 'Nobelium';
-    $request->failureRedirect = 'Branding';
-    $request->integrationType = 'pascal';
-    $request->lang = 'West';
+    $request->env = 'string';
+    $request->externalXref = 'string';
+    $request->failureRedirect = 'string';
+    $request->integrationType = 'string';
+    $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::CrmPipelineWrite,
+        GetUnifiedIntegrationAuthScopes::HrisGroupRead,
     ];
-    $request->state = 'blot';
-    $request->subdomain = 'Haverhill';
-    $request->successRedirect = 'Investment';
-    $request->workspaceId = 'spirit';
+    $request->state = 'string';
+    $request->subdomain = 'string';
+    $request->successRedirect = 'string';
+    $request->workspaceId = 'string';
 
     $response = $sdk->integration->getUnifiedIntegrationAuth($request);
 
@@ -149,12 +149,12 @@ try {
     $request->categories = [
         ListUnifiedIntegrationWorkspacesCategories::Martech,
     ];
-    $request->env = 'supposing';
-    $request->limit = 3404.67;
-    $request->offset = 4075.93;
+    $request->env = 'string';
+    $request->limit = 9072.99;
+    $request->offset = 5948.93;
     $request->summary = false;
-    $request->updatedGte = 'Representative';
-    $request->workspaceId = 'transplantation';
+    $request->updatedGte = 'string';
+    $request->workspaceId = 'string';
 
     $response = $sdk->integration->listUnifiedIntegrationWorkspaces($request);
 
@@ -208,13 +208,13 @@ try {
     $request->categories = [
         ListUnifiedIntegrationsCategories::Auth,
     ];
-    $request->env = 'Boron';
-    $request->limit = 6471.35;
-    $request->offset = 6154.42;
-    $request->order = 'Sports';
-    $request->sort = 'at';
+    $request->env = 'string';
+    $request->limit = 7382.58;
+    $request->offset = 353.99;
+    $request->order = 'string';
+    $request->sort = 'string';
     $request->summary = false;
-    $request->updatedGte = 'Gabon';
+    $request->updatedGte = 'string';
 
     $response = $sdk->integration->listUnifiedIntegrations($request);
 

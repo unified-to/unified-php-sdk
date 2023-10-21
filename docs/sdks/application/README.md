@@ -40,17 +40,17 @@ try {
     $request = new CreateAtsApplicationRequest();
     $request->atsApplication = new AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-09T11:35:08.252Z');
-    $request->atsApplication->candidateId = 'incidentally';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-29T22:20:11.749Z');
+    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-22T15:02:56.144Z');
     $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'payment';
+    $request->atsApplication->jobId = 'string';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-14T08:24:54.358Z');
-    $request->atsApplication->rejectedReason = 'Money';
-    $request->atsApplication->source = 'approach';
-    $request->atsApplication->status = AtsApplicationStatus::Hired;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-29T01:08:00.744Z');
-    $request->connectionId = 'Cyclocross';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-18T22:03:17.799Z');
+    $request->atsApplication->rejectedReason = 'string';
+    $request->atsApplication->source = 'string';
+    $request->atsApplication->status = AtsApplicationStatus::FirstInterview;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T10:02:31.440Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->application->createAtsApplication($request);
 
@@ -99,9 +99,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsApplicationRequest();
-    $request->connectionId = 'mobile';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Key',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -152,18 +152,18 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsApplicationsRequest();
-    $request->candidateId = 'Cambodia';
-    $request->connectionId = 'models';
+    $request->candidateId = 'string';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Wagon',
+        'string',
     ];
-    $request->jobId = 'violet';
-    $request->limit = 3844.62;
-    $request->offset = 247.23;
-    $request->order = 'fuchsia';
-    $request->query = 'Blues';
-    $request->sort = 'pink';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-23T21:51:35.380Z');
+    $request->jobId = 'string';
+    $request->limit = 441.56;
+    $request->offset = 1448.74;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-21T12:43:47.690Z');
 
     $response = $sdk->application->listAtsApplications($request);
 
@@ -217,17 +217,17 @@ try {
     $request = new PatchAtsApplicationRequest();
     $request->atsApplication = new AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-15T04:58:14.527Z');
-    $request->atsApplication->candidateId = 'South';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-12T22:20:57.326Z');
+    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-06T05:50:03.360Z');
     $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'Director';
+    $request->atsApplication->jobId = 'string';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-29T04:40:45.531Z');
-    $request->atsApplication->rejectedReason = 'alarm';
-    $request->atsApplication->source = 'well';
-    $request->atsApplication->status = AtsApplicationStatus::Offered;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-04T10:01:24.162Z');
-    $request->connectionId = 'Leonie';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-04T13:56:12.670Z');
+    $request->atsApplication->rejectedReason = 'string';
+    $request->atsApplication->source = 'string';
+    $request->atsApplication->status = AtsApplicationStatus::Screening;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-02T14:46:44.919Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->application->patchAtsApplication($request);
@@ -277,7 +277,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsApplicationRequest();
-    $request->connectionId = 'gently';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->application->removeAtsApplication($request);
@@ -332,17 +332,17 @@ try {
     $request = new UpdateAtsApplicationRequest();
     $request->atsApplication = new AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-22T07:14:38.941Z');
-    $request->atsApplication->candidateId = 'Rosie';
-    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-16T12:20:07.563Z');
+    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-04T09:23:07.789Z');
     $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'tangible';
+    $request->atsApplication->jobId = 'string';
     $request->atsApplication->raw = new PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-25T18:54:45.418Z');
-    $request->atsApplication->rejectedReason = 'repeatedly';
-    $request->atsApplication->source = 'Configurable';
-    $request->atsApplication->status = AtsApplicationStatus::BackgroundCheck;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-20T08:16:09.226Z');
-    $request->connectionId = 'emulation';
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-09T08:05:18.054Z');
+    $request->atsApplication->rejectedReason = 'string';
+    $request->atsApplication->source = 'string';
+    $request->atsApplication->status = AtsApplicationStatus::Rejected;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T16:36:33.801Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->application->updateAtsApplication($request);

@@ -53,27 +53,27 @@ try {
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-04T23:12:33.253Z');
     $request->atsJob->departments = [
-        'maroon',
+        'string',
     ];
-    $request->atsJob->description = 'Operative 24 hour methodology';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Other;
+    $request->atsJob->description = 'Secured fault-tolerant internet solution';
+    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
-        'Mini',
+        'string',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'health';
-    $request->atsJob->name = 'Ergonomic';
+    $request->atsJob->languageLocale = 'string';
+    $request->atsJob->name = 'string';
     $request->atsJob->publicJobUrls = [
-        'Customer',
+        'string',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'Loan',
+        'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Draft;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T11:13:11.642Z');
-    $request->connectionId = 'Optimization';
+    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T17:38:42.004Z');
+    $request->connectionId = 'string';
 
     $response = $sdk->job->createAtsJob($request);
 
@@ -122,9 +122,9 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new GetAtsJobRequest();
-    $request->connectionId = 'Southwest';
+    $request->connectionId = 'string';
     $request->fields = [
-        'panel',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -175,16 +175,16 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new ListAtsJobsRequest();
-    $request->connectionId = 'firmware';
+    $request->connectionId = 'string';
     $request->fields = [
-        'Praseodymium',
+        'string',
     ];
-    $request->limit = 7427.26;
-    $request->offset = 7749.91;
-    $request->order = 'teal';
-    $request->query = 'Electric';
-    $request->sort = 'ohm';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-15T18:47:12.832Z');
+    $request->limit = 3958.99;
+    $request->offset = 3223.84;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-03T15:53:00.086Z');
 
     $response = $sdk->job->listAtsJobs($request);
 
@@ -251,27 +251,27 @@ try {
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T13:38:57.141Z');
     $request->atsJob->departments = [
-        'blue',
+        'string',
     ];
-    $request->atsJob->description = 'Extended empowering middleware';
-    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
+    $request->atsJob->description = 'Seamless analyzing definition';
+    $request->atsJob->employmentType = AtsJobEmploymentType::Intern;
     $request->atsJob->hiringManagerIds = [
-        'Waldorf',
+        'string',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'firewall';
-    $request->atsJob->name = 'gold';
+    $request->atsJob->languageLocale = 'string';
+    $request->atsJob->name = 'string';
     $request->atsJob->publicJobUrls = [
-        'Principal',
+        'string',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'BMW',
+        'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Pending;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-06T03:40:01.899Z');
-    $request->connectionId = 'killer';
+    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T04:38:28.121Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->job->patchAtsJob($request);
@@ -321,7 +321,7 @@ $sdk = UnifiedTo::builder()
 
 try {
     $request = new RemoveAtsJobRequest();
-    $request->connectionId = 'Northeast';
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->job->removeAtsJob($request);
@@ -389,27 +389,27 @@ try {
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T15:51:57.038Z');
     $request->atsJob->departments = [
-        'Hydrogen',
+        'string',
     ];
-    $request->atsJob->description = 'Triple-buffered multimedia artificial intelligence';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Consultant;
+    $request->atsJob->description = 'Implemented even-keeled parallelism';
+    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
-        'Metrics',
+        'string',
     ];
     $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'withdrawal';
-    $request->atsJob->name = 'index';
+    $request->atsJob->languageLocale = 'string';
+    $request->atsJob->name = 'string';
     $request->atsJob->publicJobUrls = [
-        'visualize',
+        'string',
     ];
     $request->atsJob->raw = new PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
-        'Investor',
+        'string',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-25T23:18:21.631Z');
-    $request->connectionId = 'Orchestrator';
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T15:41:17.674Z');
+    $request->connectionId = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->job->updateAtsJob($request);
