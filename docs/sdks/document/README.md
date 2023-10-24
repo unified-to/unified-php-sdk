@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createAtsScorecard](#createatsscorecard) - Create a scorecard
-* [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
-* [listAtsScorecards](#listatsscorecards) - List all scorecards
-* [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
-* [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
-* [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
+* [createAtsDocument](#createatsdocument) - Create a document
+* [getAtsDocument](#getatsdocument) - Retrieve a document
+* [listAtsDocuments](#listatsdocuments) - List all documents
+* [patchAtsDocument](#patchatsdocument) - Update a document
+* [removeAtsDocument](#removeatsdocument) - Remove a document
+* [updateAtsDocument](#updateatsdocument) - Update a document
 
-## createAtsScorecard
+## createAtsDocument
 
-Create a scorecard
+Create a document
 
 ### Example Usage
 
@@ -24,10 +24,10 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest;
+use \Unified\Unified_to\Models\Shared\AtsDocument;
+use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
+use \Unified\Unified_to\Models\Shared\AtsDocumentType;
 
 $security = new Security();
 $security->jwt = '';
@@ -37,24 +37,24 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new CreateAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
-    $request->atsScorecard->comment = 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-24T07:49:32.768Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
+    $request = new CreateAtsDocumentRequest();
+    $request->atsDocument = new AtsDocument();
+    $request->atsDocument->applicationId = 'string';
+    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-24T22:30:56.289Z');
+    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->filename = 'mouse_per_missouri.mp4';
+    $request->atsDocument->id = '<ID>';
+    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
+    $request->atsDocument->type = AtsDocumentType::OfferPacket;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-28T09:27:32.859Z');
+    $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
 
-    $response = $sdk->document->createAtsScorecard($request);
+    $response = $sdk->document->createAtsDocument($request);
 
-    if ($response->atsScorecard !== null) {
+    if ($response->atsDocument !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -64,19 +64,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest](../../models/operations/CreateAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse](../../models/operations/CreateAtsDocumentResponse.md)**
 
 
-## getAtsScorecard
+## getAtsDocument
 
-Retrieve a scorecard
+Retrieve a document
 
 ### Example Usage
 
@@ -88,7 +88,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest;
+use \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -98,16 +98,16 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetAtsScorecardRequest();
+    $request = new GetAtsDocumentRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
     $request->id = '<ID>';
 
-    $response = $sdk->document->getAtsScorecard($request);
+    $response = $sdk->document->getAtsDocument($request);
 
-    if ($response->atsScorecard !== null) {
+    if ($response->atsDocument !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -117,19 +117,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest](../../models/operations/GetAtsDocumentRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetAtsDocumentResponse](../../models/operations/GetAtsDocumentResponse.md)**
 
 
-## listAtsScorecards
+## listAtsDocuments
 
-List all scorecards
+List all documents
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest;
+use \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -151,25 +151,22 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new ListAtsScorecardsRequest();
+    $request = new ListAtsDocumentsRequest();
     $request->applicationId = 'string';
-    $request->candidateId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->interviewId = 'string';
-    $request->jobId = 'string';
-    $request->limit = 5126.98;
-    $request->offset = 8077.44;
+    $request->limit = 9635.37;
+    $request->offset = 8402.77;
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T17:42:56.145Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-30T11:38:20.739Z');
 
-    $response = $sdk->document->listAtsScorecards($request);
+    $response = $sdk->document->listAtsDocuments($request);
 
-    if ($response->atsScorecards !== null) {
+    if ($response->atsDocuments !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -179,19 +176,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest](../../models/operations/ListAtsDocumentsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse](../../models/operations/ListAtsDocumentsResponse.md)**
 
 
-## patchAtsScorecard
+## patchAtsDocument
 
-Update a scorecard
+Update a document
 
 ### Example Usage
 
@@ -203,10 +200,10 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest;
+use \Unified\Unified_to\Models\Shared\AtsDocument;
+use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
+use \Unified\Unified_to\Models\Shared\AtsDocumentType;
 
 $security = new Security();
 $security->jwt = '';
@@ -216,25 +213,25 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new PatchAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
-    $request->atsScorecard->comment = 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-06T15:26:03.447Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
+    $request = new PatchAtsDocumentRequest();
+    $request->atsDocument = new AtsDocument();
+    $request->atsDocument->applicationId = 'string';
+    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-01T09:34:15.248Z');
+    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->filename = 'future_underpin.mp4v';
+    $request->atsDocument->id = '<ID>';
+    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
+    $request->atsDocument->type = AtsDocumentType::OfferLetter;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-14T01:39:21.030Z');
+    $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
-    $response = $sdk->document->patchAtsScorecard($request);
+    $response = $sdk->document->patchAtsDocument($request);
 
-    if ($response->atsScorecard !== null) {
+    if ($response->atsDocument !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -244,19 +241,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest](../../models/operations/PatchAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse](../../models/operations/PatchAtsDocumentResponse.md)**
 
 
-## removeAtsScorecard
+## removeAtsDocument
 
-Remove a scorecard
+Remove a document
 
 ### Example Usage
 
@@ -268,7 +265,7 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest;
+use \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest;
 
 $security = new Security();
 $security->jwt = '';
@@ -278,11 +275,11 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new RemoveAtsScorecardRequest();
+    $request = new RemoveAtsDocumentRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
-    $response = $sdk->document->removeAtsScorecard($request);
+    $response = $sdk->document->removeAtsDocument($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -294,19 +291,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest](../../models/operations/RemoveAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse](../../models/operations/RemoveAtsDocumentResponse.md)**
 
 
-## updateAtsScorecard
+## updateAtsDocument
 
-Update a scorecard
+Update a document
 
 ### Example Usage
 
@@ -318,10 +315,10 @@ require_once 'vendor/autoload.php';
 
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest;
+use \Unified\Unified_to\Models\Shared\AtsDocument;
+use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
+use \Unified\Unified_to\Models\Shared\AtsDocumentType;
 
 $security = new Security();
 $security->jwt = '';
@@ -331,25 +328,25 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new UpdateAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
-    $request->atsScorecard->comment = 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-10T12:08:12.226Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
+    $request = new UpdateAtsDocumentRequest();
+    $request->atsDocument = new AtsDocument();
+    $request->atsDocument->applicationId = 'string';
+    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-05T13:01:49.006Z');
+    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->filename = 'unbranded_reprehenderit.jpg';
+    $request->atsDocument->id = '<ID>';
+    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
+    $request->atsDocument->type = AtsDocumentType::OfferPacket;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-02T17:00:21.700Z');
+    $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
-    $response = $sdk->document->updateAtsScorecard($request);
+    $response = $sdk->document->updateAtsDocument($request);
 
-    if ($response->atsScorecard !== null) {
+    if ($response->atsDocument !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -359,12 +356,12 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest](../../models/operations/UpdateAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse](../../models/operations/UpdateAtsDocumentResponse.md)**
 

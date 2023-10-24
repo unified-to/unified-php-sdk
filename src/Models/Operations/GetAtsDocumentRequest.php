@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
-class RemoveAtsScorecardRequest
+class GetAtsDocumentRequest
 {
     /**
      * ID of the connection
@@ -20,7 +20,15 @@ class RemoveAtsScorecardRequest
     public string $connectionId;
     
     /**
-     * ID of the Scorecard
+     * Comma-delimited fields to return
+     * 
+     * @var ?array<string> $fields
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+    
+    /**
+     * ID of the Document
      * 
      * @var string $id
      */
@@ -30,6 +38,7 @@ class RemoveAtsScorecardRequest
 	public function __construct()
 	{
 		$this->connectionId = "";
+		$this->fields = null;
 		$this->id = "";
 	}
 }

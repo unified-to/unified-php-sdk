@@ -30,6 +30,7 @@ src/Note.php
 src/Passthrough.php
 src/Person.php
 src/Pipeline.php
+src/Scorecard.php
 src/Ticket.php
 src/Ticketing.php
 src/Uc.php
@@ -73,6 +74,8 @@ src/Models/Operations/UpdateAtsApplicationRequest.php
 src/Models/Operations/UpdateAtsApplicationResponse.php
 src/Models/Operations/CreateAtsCandidateRequest.php
 src/Models/Operations/CreateAtsCandidateResponse.php
+src/Models/Operations/CreateAtsDocumentRequest.php
+src/Models/Operations/CreateAtsDocumentResponse.php
 src/Models/Operations/CreateAtsInterviewRequest.php
 src/Models/Operations/CreateAtsInterviewResponse.php
 src/Models/Operations/CreateAtsJobRequest.php
@@ -81,6 +84,8 @@ src/Models/Operations/CreateAtsScorecardRequest.php
 src/Models/Operations/CreateAtsScorecardResponse.php
 src/Models/Operations/GetAtsCandidateRequest.php
 src/Models/Operations/GetAtsCandidateResponse.php
+src/Models/Operations/GetAtsDocumentRequest.php
+src/Models/Operations/GetAtsDocumentResponse.php
 src/Models/Operations/GetAtsInterviewRequest.php
 src/Models/Operations/GetAtsInterviewResponse.php
 src/Models/Operations/GetAtsJobRequest.php
@@ -89,6 +94,8 @@ src/Models/Operations/GetAtsScorecardRequest.php
 src/Models/Operations/GetAtsScorecardResponse.php
 src/Models/Operations/ListAtsCandidatesRequest.php
 src/Models/Operations/ListAtsCandidatesResponse.php
+src/Models/Operations/ListAtsDocumentsRequest.php
+src/Models/Operations/ListAtsDocumentsResponse.php
 src/Models/Operations/ListAtsInterviewsRequest.php
 src/Models/Operations/ListAtsInterviewsResponse.php
 src/Models/Operations/ListAtsJobsRequest.php
@@ -97,6 +104,8 @@ src/Models/Operations/ListAtsScorecardsRequest.php
 src/Models/Operations/ListAtsScorecardsResponse.php
 src/Models/Operations/PatchAtsCandidateRequest.php
 src/Models/Operations/PatchAtsCandidateResponse.php
+src/Models/Operations/PatchAtsDocumentRequest.php
+src/Models/Operations/PatchAtsDocumentResponse.php
 src/Models/Operations/PatchAtsInterviewRequest.php
 src/Models/Operations/PatchAtsInterviewResponse.php
 src/Models/Operations/PatchAtsJobRequest.php
@@ -105,6 +114,8 @@ src/Models/Operations/PatchAtsScorecardRequest.php
 src/Models/Operations/PatchAtsScorecardResponse.php
 src/Models/Operations/RemoveAtsCandidateRequest.php
 src/Models/Operations/RemoveAtsCandidateResponse.php
+src/Models/Operations/RemoveAtsDocumentRequest.php
+src/Models/Operations/RemoveAtsDocumentResponse.php
 src/Models/Operations/RemoveAtsInterviewRequest.php
 src/Models/Operations/RemoveAtsInterviewResponse.php
 src/Models/Operations/RemoveAtsJobRequest.php
@@ -113,6 +124,8 @@ src/Models/Operations/RemoveAtsScorecardRequest.php
 src/Models/Operations/RemoveAtsScorecardResponse.php
 src/Models/Operations/UpdateAtsCandidateRequest.php
 src/Models/Operations/UpdateAtsCandidateResponse.php
+src/Models/Operations/UpdateAtsDocumentRequest.php
+src/Models/Operations/UpdateAtsDocumentResponse.php
 src/Models/Operations/UpdateAtsInterviewRequest.php
 src/Models/Operations/UpdateAtsInterviewResponse.php
 src/Models/Operations/UpdateAtsJobRequest.php
@@ -361,6 +374,9 @@ src/Models/Shared/PropertyAtsCandidateRaw.php
 src/Models/Shared/AtsEmailType.php
 src/Models/Shared/AtsEmail.php
 src/Models/Shared/PropertyAtsCandidateAddress.php
+src/Models/Shared/AtsDocumentType.php
+src/Models/Shared/AtsDocument.php
+src/Models/Shared/PropertyAtsDocumentRaw.php
 src/Models/Shared/AtsInterviewStatus.php
 src/Models/Shared/AtsInterview.php
 src/Models/Shared/PropertyAtsInterviewRaw.php
@@ -491,6 +507,8 @@ docs/models/operations/UpdateAtsApplicationRequest.md
 docs/models/operations/UpdateAtsApplicationResponse.md
 docs/models/operations/CreateAtsCandidateRequest.md
 docs/models/operations/CreateAtsCandidateResponse.md
+docs/models/operations/CreateAtsDocumentRequest.md
+docs/models/operations/CreateAtsDocumentResponse.md
 docs/models/operations/CreateAtsInterviewRequest.md
 docs/models/operations/CreateAtsInterviewResponse.md
 docs/models/operations/CreateAtsJobRequest.md
@@ -499,6 +517,8 @@ docs/models/operations/CreateAtsScorecardRequest.md
 docs/models/operations/CreateAtsScorecardResponse.md
 docs/models/operations/GetAtsCandidateRequest.md
 docs/models/operations/GetAtsCandidateResponse.md
+docs/models/operations/GetAtsDocumentRequest.md
+docs/models/operations/GetAtsDocumentResponse.md
 docs/models/operations/GetAtsInterviewRequest.md
 docs/models/operations/GetAtsInterviewResponse.md
 docs/models/operations/GetAtsJobRequest.md
@@ -507,6 +527,8 @@ docs/models/operations/GetAtsScorecardRequest.md
 docs/models/operations/GetAtsScorecardResponse.md
 docs/models/operations/ListAtsCandidatesRequest.md
 docs/models/operations/ListAtsCandidatesResponse.md
+docs/models/operations/ListAtsDocumentsRequest.md
+docs/models/operations/ListAtsDocumentsResponse.md
 docs/models/operations/ListAtsInterviewsRequest.md
 docs/models/operations/ListAtsInterviewsResponse.md
 docs/models/operations/ListAtsJobsRequest.md
@@ -515,6 +537,8 @@ docs/models/operations/ListAtsScorecardsRequest.md
 docs/models/operations/ListAtsScorecardsResponse.md
 docs/models/operations/PatchAtsCandidateRequest.md
 docs/models/operations/PatchAtsCandidateResponse.md
+docs/models/operations/PatchAtsDocumentRequest.md
+docs/models/operations/PatchAtsDocumentResponse.md
 docs/models/operations/PatchAtsInterviewRequest.md
 docs/models/operations/PatchAtsInterviewResponse.md
 docs/models/operations/PatchAtsJobRequest.md
@@ -523,6 +547,8 @@ docs/models/operations/PatchAtsScorecardRequest.md
 docs/models/operations/PatchAtsScorecardResponse.md
 docs/models/operations/RemoveAtsCandidateRequest.md
 docs/models/operations/RemoveAtsCandidateResponse.md
+docs/models/operations/RemoveAtsDocumentRequest.md
+docs/models/operations/RemoveAtsDocumentResponse.md
 docs/models/operations/RemoveAtsInterviewRequest.md
 docs/models/operations/RemoveAtsInterviewResponse.md
 docs/models/operations/RemoveAtsJobRequest.md
@@ -531,6 +557,8 @@ docs/models/operations/RemoveAtsScorecardRequest.md
 docs/models/operations/RemoveAtsScorecardResponse.md
 docs/models/operations/UpdateAtsCandidateRequest.md
 docs/models/operations/UpdateAtsCandidateResponse.md
+docs/models/operations/UpdateAtsDocumentRequest.md
+docs/models/operations/UpdateAtsDocumentResponse.md
 docs/models/operations/UpdateAtsInterviewRequest.md
 docs/models/operations/UpdateAtsInterviewResponse.md
 docs/models/operations/UpdateAtsJobRequest.md
@@ -779,6 +807,9 @@ docs/models/shared/PropertyAtsCandidateRaw.md
 docs/models/shared/AtsEmailType.md
 docs/models/shared/AtsEmail.md
 docs/models/shared/PropertyAtsCandidateAddress.md
+docs/models/shared/AtsDocumentType.md
+docs/models/shared/AtsDocument.md
+docs/models/shared/PropertyAtsDocumentRaw.md
 docs/models/shared/AtsInterviewStatus.md
 docs/models/shared/AtsInterview.md
 docs/models/shared/PropertyAtsInterviewRaw.md
@@ -922,6 +953,7 @@ docs/sdks/note/README.md
 docs/sdks/passthrough/README.md
 docs/sdks/person/README.md
 docs/sdks/pipeline/README.md
+docs/sdks/scorecard/README.md
 docs/sdks/ticket/README.md
 docs/sdks/ticketing/README.md
 docs/sdks/uc/README.md

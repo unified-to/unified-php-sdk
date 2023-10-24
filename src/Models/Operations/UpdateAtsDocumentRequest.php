@@ -9,8 +9,11 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
-class RemoveAtsScorecardRequest
+class UpdateAtsDocumentRequest
 {
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\Unified\Unified_to\Models\Shared\AtsDocument $atsDocument = null;
+    
     /**
      * ID of the connection
      * 
@@ -20,7 +23,7 @@ class RemoveAtsScorecardRequest
     public string $connectionId;
     
     /**
-     * ID of the Scorecard
+     * ID of the Document
      * 
      * @var string $id
      */
@@ -29,6 +32,7 @@ class RemoveAtsScorecardRequest
     
 	public function __construct()
 	{
+		$this->atsDocument = null;
 		$this->connectionId = "";
 		$this->id = "";
 	}

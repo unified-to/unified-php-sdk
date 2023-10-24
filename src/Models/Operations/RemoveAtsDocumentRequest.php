@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
-class RemoveAtsScorecardRequest
+class RemoveAtsDocumentRequest
 {
     /**
      * ID of the connection
@@ -20,7 +20,7 @@ class RemoveAtsScorecardRequest
     public string $connectionId;
     
     /**
-     * ID of the Scorecard
+     * ID of the Document
      * 
      * @var string $id
      */

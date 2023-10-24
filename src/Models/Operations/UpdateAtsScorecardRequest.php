@@ -23,7 +23,7 @@ class UpdateAtsScorecardRequest
     public string $connectionId;
     
     /**
-     * ID of the Document
+     * ID of the Scorecard
      * 
      * @var string $id
      */

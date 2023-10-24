@@ -5,31 +5,37 @@
 
 * [createAtsApplication](#createatsapplication) - Create an application
 * [createAtsCandidate](#createatscandidate) - Create a candidate
+* [createAtsDocument](#createatsdocument) - Create a document
 * [createAtsInterview](#createatsinterview) - Create a interview
 * [createAtsJob](#createatsjob) - Create a job
 * [createAtsScorecard](#createatsscorecard) - Create a scorecard
 * [getAtsApplication](#getatsapplication) - Retrieve an application
 * [getAtsCandidate](#getatscandidate) - Retrieve a candidate
+* [getAtsDocument](#getatsdocument) - Retrieve a document
 * [getAtsInterview](#getatsinterview) - Retrieve a interview
 * [getAtsJob](#getatsjob) - Retrieve a job
 * [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
 * [listAtsApplications](#listatsapplications) - List all applications
 * [listAtsCandidates](#listatscandidates) - List all candidates
+* [listAtsDocuments](#listatsdocuments) - List all documents
 * [listAtsInterviews](#listatsinterviews) - List all interviews
 * [listAtsJobs](#listatsjobs) - List all jobs
 * [listAtsScorecards](#listatsscorecards) - List all scorecards
 * [patchAtsApplication](#patchatsapplication) - Update an application
 * [patchAtsCandidate](#patchatscandidate) - Update a candidate
+* [patchAtsDocument](#patchatsdocument) - Update a document
 * [patchAtsInterview](#patchatsinterview) - Update a interview
 * [patchAtsJob](#patchatsjob) - Update a job
 * [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
 * [removeAtsApplication](#removeatsapplication) - Remove an application
 * [removeAtsCandidate](#removeatscandidate) - Remove a candidate
+* [removeAtsDocument](#removeatsdocument) - Remove a document
 * [removeAtsInterview](#removeatsinterview) - Remove a interview
 * [removeAtsJob](#removeatsjob) - Remove a job
 * [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
 * [updateAtsApplication](#updateatsapplication) - Update an application
 * [updateAtsCandidate](#updateatscandidate) - Update a candidate
+* [updateAtsDocument](#updateatsdocument) - Update a document
 * [updateAtsInterview](#updateatsinterview) - Update a interview
 * [updateAtsJob](#updateatsjob) - Update a job
 * [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
@@ -180,6 +186,70 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse](../../models/operations/CreateAtsCandidateResponse.md)**
+
+
+## createAtsDocument
+
+Create a document
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest;
+use \Unified\Unified_to\Models\Shared\AtsDocument;
+use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
+use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new CreateAtsDocumentRequest();
+    $request->atsDocument = new AtsDocument();
+    $request->atsDocument->applicationId = 'string';
+    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-24T22:30:56.289Z');
+    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->filename = 'mouse_per_missouri.mp4';
+    $request->atsDocument->id = '<ID>';
+    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
+    $request->atsDocument->type = AtsDocumentType::OfferPacket;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-28T09:27:32.859Z');
+    $request->atsDocument->userId = 'string';
+    $request->connectionId = 'string';
+
+    $response = $sdk->ats->createAtsDocument($request);
+
+    if ($response->atsDocument !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest](../../models/operations/CreateAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse](../../models/operations/CreateAtsDocumentResponse.md)**
 
 
 ## createAtsInterview
@@ -507,6 +577,59 @@ try {
 **[?\Unified\Unified_to\Models\Operations\GetAtsCandidateResponse](../../models/operations/GetAtsCandidateResponse.md)**
 
 
+## getAtsDocument
+
+Retrieve a document
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetAtsDocumentRequest();
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->id = '<ID>';
+
+    $response = $sdk->ats->getAtsDocument($request);
+
+    if ($response->atsDocument !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest](../../models/operations/GetAtsDocumentRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetAtsDocumentResponse](../../models/operations/GetAtsDocumentResponse.md)**
+
+
 ## getAtsInterview
 
 Retrieve a interview
@@ -782,6 +905,65 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse](../../models/operations/ListAtsCandidatesResponse.md)**
+
+
+## listAtsDocuments
+
+List all documents
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListAtsDocumentsRequest();
+    $request->applicationId = 'string';
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->limit = 9635.37;
+    $request->offset = 8402.77;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-30T11:38:20.739Z');
+
+    $response = $sdk->ats->listAtsDocuments($request);
+
+    if ($response->atsDocuments !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest](../../models/operations/ListAtsDocumentsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse](../../models/operations/ListAtsDocumentsResponse.md)**
 
 
 ## listAtsInterviews
@@ -1113,6 +1295,71 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse](../../models/operations/PatchAtsCandidateResponse.md)**
 
 
+## patchAtsDocument
+
+Update a document
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest;
+use \Unified\Unified_to\Models\Shared\AtsDocument;
+use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
+use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new PatchAtsDocumentRequest();
+    $request->atsDocument = new AtsDocument();
+    $request->atsDocument->applicationId = 'string';
+    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-01T09:34:15.248Z');
+    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->filename = 'future_underpin.mp4v';
+    $request->atsDocument->id = '<ID>';
+    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
+    $request->atsDocument->type = AtsDocumentType::OfferLetter;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-14T01:39:21.030Z');
+    $request->atsDocument->userId = 'string';
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->ats->patchAtsDocument($request);
+
+    if ($response->atsDocument !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest](../../models/operations/PatchAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse](../../models/operations/PatchAtsDocumentResponse.md)**
+
+
 ## patchAtsInterview
 
 Update a interview
@@ -1435,6 +1682,56 @@ try {
 **[?\Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse](../../models/operations/RemoveAtsCandidateResponse.md)**
 
 
+## removeAtsDocument
+
+Remove a document
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new RemoveAtsDocumentRequest();
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->ats->removeAtsDocument($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest](../../models/operations/RemoveAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse](../../models/operations/RemoveAtsDocumentResponse.md)**
+
+
 ## removeAtsInterview
 
 Remove a interview
@@ -1733,6 +2030,71 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse](../../models/operations/UpdateAtsCandidateResponse.md)**
+
+
+## updateAtsDocument
+
+Update a document
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to\UnifiedTo;
+use \Unified\Unified_to\Models\Shared\Security;
+use \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest;
+use \Unified\Unified_to\Models\Shared\AtsDocument;
+use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
+use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+
+$security = new Security();
+$security->jwt = '';
+
+$sdk = UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateAtsDocumentRequest();
+    $request->atsDocument = new AtsDocument();
+    $request->atsDocument->applicationId = 'string';
+    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-05T13:01:49.006Z');
+    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->filename = 'unbranded_reprehenderit.jpg';
+    $request->atsDocument->id = '<ID>';
+    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
+    $request->atsDocument->type = AtsDocumentType::OfferPacket;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-02T17:00:21.700Z');
+    $request->atsDocument->userId = 'string';
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->ats->updateAtsDocument($request);
+
+    if ($response->atsDocument !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest](../../models/operations/UpdateAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse](../../models/operations/UpdateAtsDocumentResponse.md)**
 
 
 ## updateAtsInterview

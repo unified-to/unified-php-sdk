@@ -28,7 +28,7 @@ class GetAtsScorecardRequest
     public ?array $fields = null;
     
     /**
-     * ID of the Document
+     * ID of the Scorecard
      * 
      * @var string $id
      */
