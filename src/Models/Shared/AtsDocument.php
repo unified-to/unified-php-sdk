@@ -48,7 +48,8 @@ class AtsDocument
     
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw')]
-    public PropertyAtsDocumentRaw $raw;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyAtsDocumentRaw $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsDocumentType>')]
@@ -74,7 +75,7 @@ class AtsDocument
 		$this->filename = null;
 		$this->id = null;
 		$this->jobId = null;
-		$this->raw = new \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw();
+		$this->raw = null;
 		$this->type = null;
 		$this->updatedAt = null;
 		$this->userId = null;
