@@ -40,6 +40,11 @@ class TicketingNote
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw')]
     public PropertyTicketingNoteRaw $raw;
     
+	#[\JMS\Serializer\Annotation\SerializedName('ticket_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $ticketId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -53,6 +58,7 @@ class TicketingNote
 		$this->description = null;
 		$this->id = null;
 		$this->raw = new \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw();
+		$this->ticketId = null;
 		$this->updatedAt = null;
 	}
 }

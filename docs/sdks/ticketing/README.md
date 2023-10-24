@@ -126,9 +126,9 @@ try {
     $request->ticketingNote->description = 'Distributed 4th generation portal';
     $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
+    $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->connectionId = 'string';
-    $request->ticketId = 'string';
 
     $response = $sdk->ticketing->createTicketingNote($request);
 
@@ -304,7 +304,6 @@ try {
         'string',
     ];
     $request->id = '<ID>';
-    $request->ticketId = 'string';
 
     $response = $sdk->ticketing->getTicketingNote($request);
 
@@ -663,10 +662,10 @@ try {
     $request->ticketingNote->description = 'Right-sized national productivity';
     $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
+    $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->ticketId = 'string';
 
     $response = $sdk->ticketing->patchTicketingNote($request);
 
@@ -837,7 +836,6 @@ try {
     $request = new RemoveTicketingNoteRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->ticketId = 'string';
 
     $response = $sdk->ticketing->removeTicketingNote($request);
 
@@ -1016,10 +1014,10 @@ try {
     $request->ticketingNote->description = 'Versatile value-added utilisation';
     $request->ticketingNote->id = '<ID>';
     $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
+    $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->ticketId = 'string';
 
     $response = $sdk->ticketing->updateTicketingNote($request);
 

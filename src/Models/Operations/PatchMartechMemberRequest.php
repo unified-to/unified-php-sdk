@@ -35,19 +35,10 @@ class PatchMartechMemberRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
     
-    /**
-     * ID of the list
-     * 
-     * @var string $listId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=list_id')]
-    public string $listId;
-    
 	public function __construct()
 	{
 		$this->marketingMember = null;
 		$this->connectionId = "";
 		$this->id = "";
-		$this->listId = "";
 	}
 }

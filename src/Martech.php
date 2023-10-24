@@ -62,7 +62,7 @@ class Martech
     }
 	
     /**
-     * Create a member in a list
+     * Create a member
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse
@@ -72,7 +72,7 @@ class Martech
     ): \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member', \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member', \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "marketingMember", "json");
@@ -139,7 +139,7 @@ class Martech
     }
 	
     /**
-     * Retrieve a member from a list
+     * Retrieve a member
      * 
      * @param \Unified\Unified_to\Models\Operations\GetMartechMemberRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetMartechMemberResponse
@@ -149,7 +149,7 @@ class Martech
     ): \Unified\Unified_to\Models\Operations\GetMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\GetMartechMemberRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', \Unified\Unified_to\Models\Operations\GetMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetMartechMemberRequest::class, $request, null));
@@ -213,7 +213,7 @@ class Martech
     }
 	
     /**
-     * List all members in a list
+     * List all members
      * 
      * @param \Unified\Unified_to\Models\Operations\ListMartechMembersRequest $request
      * @return \Unified\Unified_to\Models\Operations\ListMartechMembersResponse
@@ -223,7 +223,7 @@ class Martech
     ): \Unified\Unified_to\Models\Operations\ListMartechMembersResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member', \Unified\Unified_to\Models\Operations\ListMartechMembersRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member', \Unified\Unified_to\Models\Operations\ListMartechMembersRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListMartechMembersRequest::class, $request, null));
@@ -290,7 +290,7 @@ class Martech
     }
 	
     /**
-     * Update a member in a list
+     * Update a member
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse
@@ -300,7 +300,7 @@ class Martech
     ): \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "marketingMember", "json");
@@ -365,7 +365,7 @@ class Martech
     }
 	
     /**
-     * Remove member from a list
+     * Remove member
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse
@@ -375,7 +375,7 @@ class Martech
     ): \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
@@ -440,7 +440,7 @@ class Martech
     }
 	
     /**
-     * Update a member in a list
+     * Update a member
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse
@@ -450,7 +450,7 @@ class Martech
     ): \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/{list_id}/member/{id}', \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "marketingMember", "json");

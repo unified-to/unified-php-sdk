@@ -4,17 +4,17 @@
 ### Available Operations
 
 * [createMartechList](#createmartechlist) - Create a list
-* [createMartechMember](#createmartechmember) - Create a member in a list
+* [createMartechMember](#createmartechmember) - Create a member
 * [getMartechList](#getmartechlist) - Retrieve a list
-* [getMartechMember](#getmartechmember) - Retrieve a member from a list
+* [getMartechMember](#getmartechmember) - Retrieve a member
 * [listMartechLists](#listmartechlists) - List all lists
-* [listMartechMembers](#listmartechmembers) - List all members in a list
+* [listMartechMembers](#listmartechmembers) - List all members
 * [patchMartechList](#patchmartechlist) - Update a list
-* [patchMartechMember](#patchmartechmember) - Update a member in a list
+* [patchMartechMember](#patchmartechmember) - Update a member
 * [removeMartechList](#removemartechlist) - Remove a list
-* [removeMartechMember](#removemartechmember) - Remove member from a list
+* [removeMartechMember](#removemartechmember) - Remove member
 * [updateMartechList](#updatemartechlist) - Update a list
-* [updateMartechMember](#updatemartechmember) - Update a member in a list
+* [updateMartechMember](#updatemartechmember) - Update a member
 
 ## createMartechList
 
@@ -75,7 +75,7 @@ try {
 
 ## createMartechMember
 
-Create a member in a list
+Create a member
 
 ### Example Usage
 
@@ -118,7 +118,6 @@ try {
     ];
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-19T04:53:01.271Z');
     $request->connectionId = 'string';
-    $request->listId = 'string';
 
     $response = $sdk->martech->createMartechMember($request);
 
@@ -197,7 +196,7 @@ try {
 
 ## getMartechMember
 
-Retrieve a member from a list
+Retrieve a member
 
 ### Example Usage
 
@@ -225,7 +224,6 @@ try {
         'string',
     ];
     $request->id = '<ID>';
-    $request->listId = 'string';
 
     $response = $sdk->martech->getMartechMember($request);
 
@@ -309,7 +307,7 @@ try {
 
 ## listMartechMembers
 
-List all members in a list
+List all members
 
 ### Example Usage
 
@@ -426,7 +424,7 @@ try {
 
 ## patchMartechMember
 
-Update a member in a list
+Update a member
 
 ### Example Usage
 
@@ -470,7 +468,6 @@ try {
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-21T13:07:32.283Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->listId = 'string';
 
     $response = $sdk->martech->patchMartechMember($request);
 
@@ -546,7 +543,7 @@ try {
 
 ## removeMartechMember
 
-Remove member from a list
+Remove member
 
 ### Example Usage
 
@@ -571,7 +568,6 @@ try {
     $request = new RemoveMartechMemberRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->listId = 'string';
 
     $response = $sdk->martech->removeMartechMember($request);
 
@@ -655,7 +651,7 @@ try {
 
 ## updateMartechMember
 
-Update a member in a list
+Update a member
 
 ### Example Usage
 
@@ -699,7 +695,6 @@ try {
     $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-20T03:26:40.111Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
-    $request->listId = 'string';
 
     $response = $sdk->martech->updateMartechMember($request);
 

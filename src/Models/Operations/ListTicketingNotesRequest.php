@@ -48,12 +48,12 @@ class ListTicketingNotesRequest
     public ?string $sort = null;
     
     /**
-     * ID of the ticket
+     * Usually required
      * 
-     * @var string $ticketId
+     * @var ?string $ticketId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=ticket_id')]
-    public string $ticketId;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=ticket_id')]
+    public ?string $ticketId = null;
     
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -72,7 +72,7 @@ class ListTicketingNotesRequest
 		$this->order = null;
 		$this->query = null;
 		$this->sort = null;
-		$this->ticketId = "";
+		$this->ticketId = null;
 		$this->updatedGte = null;
 	}
 }

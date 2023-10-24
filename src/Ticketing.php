@@ -72,7 +72,7 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note', \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");
@@ -189,7 +189,7 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note/{id}', \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingNoteRequest::class, $request, null));
@@ -300,7 +300,7 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note', \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTicketingNotesRequest::class, $request, null));
@@ -414,7 +414,7 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");
@@ -529,7 +529,7 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
@@ -639,7 +639,7 @@ class Ticketing
     ): \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/{ticket_id}/note/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "ticketingNote", "json");

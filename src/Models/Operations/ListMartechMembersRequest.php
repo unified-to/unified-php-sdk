@@ -31,12 +31,12 @@ class ListMartechMembersRequest
     public ?float $limit = null;
     
     /**
-     * ID of the list
+     * Usually required
      * 
-     * @var string $listId
+     * @var ?string $listId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=list_id')]
-    public string $listId;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=list_id')]
+    public ?string $listId = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
@@ -68,7 +68,7 @@ class ListMartechMembersRequest
 		$this->connectionId = "";
 		$this->fields = null;
 		$this->limit = null;
-		$this->listId = "";
+		$this->listId = null;
 		$this->offset = null;
 		$this->order = null;
 		$this->query = null;

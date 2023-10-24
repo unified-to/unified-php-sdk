@@ -27,18 +27,9 @@ class RemoveTicketingNoteRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
     
-    /**
-     * ID of the ticket
-     * 
-     * @var string $ticketId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=ticket_id')]
-    public string $ticketId;
-    
 	public function __construct()
 	{
 		$this->connectionId = "";
 		$this->id = "";
-		$this->ticketId = "";
 	}
 }
