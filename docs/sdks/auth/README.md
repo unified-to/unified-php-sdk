@@ -39,7 +39,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::HrisGroupRead,
+        GetUnifiedIntegrationAuthScopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';

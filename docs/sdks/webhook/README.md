@@ -50,7 +50,7 @@ try {
     $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 6142.55;
-    $request->webhook->objectType = WebhookObjectType::AtsCandidate;
+    $request->webhook->objectType = WebhookObjectType::AccountingPayment;
     $request->webhook->subscriptions = [
         'string',
     ];

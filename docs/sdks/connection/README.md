@@ -68,7 +68,7 @@ try {
     $request->auth->tokenUrl = 'string';
     $request->authAwsArn = 'string';
     $request->categories = [
-        PropertyConnectionCategories::Ats,
+        PropertyConnectionCategories::Auth,
     ];
     $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-03T20:48:03.468Z');
     $request->environment = 'string';
@@ -77,7 +77,7 @@ try {
     $request->integrationType = 'string';
     $request->isPaused = false;
     $request->permissions = [
-        PropertyConnectionPermissions::CrmCompanyRead,
+        PropertyConnectionPermissions::AtsJobRead,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
     $request->workspaceId = 'string';
@@ -180,7 +180,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListUnifiedConnectionsRequest();
     $request->categories = [
-        ListUnifiedConnectionsCategories::Crm,
+        ListUnifiedConnectionsCategories::Enrich,
     ];
     $request->env = 'string';
     $request->externalXref = 'string';
@@ -281,7 +281,7 @@ try {
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::AtsCandidateRead,
+        PropertyConnectionPermissions::AccountingPaymentRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->workspaceId = 'string';

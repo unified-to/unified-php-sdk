@@ -24,6 +24,46 @@ class Customer
     /**
      * Create a customer
      * 
+     * @param \Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCustomerResponse
+     */
+	public function createAccountingCustomer(
+        ?\Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateAccountingCustomerResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/customer', \Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "accountingCustomer", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateAccountingCustomerResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingCustomer = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingCustomer', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Create a customer
+     * 
      * @param \Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingCustomerResponse
      */
@@ -55,6 +95,43 @@ class Customer
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->ticketingCustomer = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingCustomer', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a customer
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetAccountingCustomerRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCustomerResponse
+     */
+	public function getAccountingCustomer(
+        ?\Unified\Unified_to\Models\Operations\GetAccountingCustomerRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetAccountingCustomerResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\GetAccountingCustomerRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingCustomerRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\GetAccountingCustomerResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingCustomer = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingCustomer', 'json');
             }
         }
 
@@ -101,6 +178,43 @@ class Customer
     /**
      * List all customers
      * 
+     * @param \Unified\Unified_to\Models\Operations\ListAccountingCustomersRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCustomersResponse
+     */
+	public function listAccountingCustomers(
+        ?\Unified\Unified_to\Models\Operations\ListAccountingCustomersRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListAccountingCustomersResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/customer', \Unified\Unified_to\Models\Operations\ListAccountingCustomersRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingCustomersRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\ListAccountingCustomersResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingCustomers = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AccountingCustomer>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List all customers
+     * 
      * @param \Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest $request
      * @return \Unified\Unified_to\Models\Operations\ListTicketingCustomersResponse
      */
@@ -129,6 +243,46 @@ class Customer
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->ticketingCustomers = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TicketingCustomer>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update a customer
+     * 
+     * @param \Unified\Unified_to\Models\Operations\PatchAccountingCustomerRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCustomerResponse
+     */
+	public function patchAccountingCustomer(
+        ?\Unified\Unified_to\Models\Operations\PatchAccountingCustomerRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchAccountingCustomerResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\PatchAccountingCustomerRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "accountingCustomer", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\PatchAccountingCustomerResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingCustomer = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingCustomer', 'json');
             }
         }
 
@@ -178,6 +332,41 @@ class Customer
     /**
      * Remove a customer
      * 
+     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingCustomerRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCustomerResponse
+     */
+	public function removeAccountingCustomer(
+        ?\Unified\Unified_to\Models\Operations\RemoveAccountingCustomerRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveAccountingCustomerResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingCustomerRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\RemoveAccountingCustomerResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $response->removeAccountingCustomerDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Remove a customer
+     * 
      * @param \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerResponse
      */
@@ -204,6 +393,46 @@ class Customer
         if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $response->removeTicketingCustomerDefaultApplicationJSONString = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update a customer
+     * 
+     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingCustomerRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCustomerResponse
+     */
+	public function updateAccountingCustomer(
+        ?\Unified\Unified_to\Models\Operations\UpdateAccountingCustomerRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateAccountingCustomerResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\UpdateAccountingCustomerRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "accountingCustomer", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \Unified\Unified_to\Models\Operations\UpdateAccountingCustomerResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingCustomer = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingCustomer', 'json');
             }
         }
 

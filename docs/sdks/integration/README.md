@@ -90,7 +90,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::HrisGroupRead,
+        GetUnifiedIntegrationAuthScopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -147,7 +147,7 @@ try {
     $request = new ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        ListUnifiedIntegrationWorkspacesCategories::Martech,
+        ListUnifiedIntegrationWorkspacesCategories::Ticketing,
     ];
     $request->env = 'string';
     $request->limit = 9072.99;

@@ -12,6 +12,12 @@ namespace Unified\Unified_to\Models\Shared;
 enum PropertyConnectionPermissions: string
 {
     case AuthLogin = 'auth_login';
+    case AccountingInvoiceRead = 'accounting_invoice_read';
+    case AccountingInvoiceWrite = 'accounting_invoice_write';
+    case AccountingCustomerRead = 'accounting_customer_read';
+    case AccountingCustomerWrite = 'accounting_customer_write';
+    case AccountingPaymentRead = 'accounting_payment_read';
+    case AccountingPaymentWrite = 'accounting_payment_write';
     case AtsScorecardRead = 'ats_scorecard_read';
     case AtsScorecardWrite = 'ats_scorecard_write';
     case AtsApplicationRead = 'ats_application_read';

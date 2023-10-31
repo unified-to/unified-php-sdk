@@ -102,7 +102,7 @@ class Webhook
 		$this->includeRaw = null;
 		$this->integrationType = "";
 		$this->interval = 0;
-		$this->objectType = \Unified\Unified_to\Models\Shared\WebhookObjectType::AtsApplication;
+		$this->objectType = \Unified\Unified_to\Models\Shared\WebhookObjectType::AccountingCustomer;
 		$this->subscriptions = null;
 		$this->updatedAt = null;
 		$this->workspaceId = "";

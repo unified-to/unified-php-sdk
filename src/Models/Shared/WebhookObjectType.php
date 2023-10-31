@@ -11,6 +11,9 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum WebhookObjectType: string
 {
+    case AccountingCustomer = 'accounting_customer';
+    case AccountingInvoice = 'accounting_invoice';
+    case AccountingPayment = 'accounting_payment';
     case AtsApplication = 'ats_application';
     case AtsCandidate = 'ats_candidate';
     case AtsDocument = 'ats_document';

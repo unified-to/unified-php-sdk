@@ -20,4 +20,5 @@ enum ListUnifiedIntegrationWorkspacesCategories: string
     case Martech = 'martech';
     case Ticketing = 'ticketing';
     case Uc = 'uc';
+    case Accounting = 'accounting';
 }

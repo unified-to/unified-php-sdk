@@ -1,0 +1,21 @@
+# AccountingLineitem
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `createdAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `discountAmount`                                              | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `id`                                                          | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `itemDescription`                                             | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `itemIdentifier`                                              | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `itemName`                                                    | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `notes`                                                       | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `refundedAmount`                                              | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `refundedAt`                                                  | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `taxAmount`                                                   | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `totalAmount`                                                 | *float*                                                       | :heavy_check_mark:                                            | N/A                                                           |
+| `unitAmount`                                                  | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `unitQuantity`                                                | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `updatedAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |

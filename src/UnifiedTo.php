@@ -23,6 +23,8 @@ class UnifiedTo
 		'https://api-eu.unified.to',
 	];
   	
+	public Accounting $accounting;
+	
 	public Apicall $apicall;
 	
 	public Application $application;
@@ -65,6 +67,8 @@ class UnifiedTo
 	
 	public Interview $interview;
 	
+	public Invoice $invoice;
+	
 	public Job $job;
 	
 	public Lead $lead;
@@ -80,6 +84,8 @@ class UnifiedTo
 	public Note $note;
 	
 	public Passthrough $passthrough;
+	
+	public Payment $payment;
 	
 	public Person $person;
 	
@@ -115,6 +121,8 @@ class UnifiedTo
 	public function __construct(SDKConfiguration $sdkConfiguration)
 	{
 		$this->sdkConfiguration = $sdkConfiguration;
+		
+		$this->accounting = new Accounting($this->sdkConfiguration);
 		
 		$this->apicall = new Apicall($this->sdkConfiguration);
 		
@@ -158,6 +166,8 @@ class UnifiedTo
 		
 		$this->interview = new Interview($this->sdkConfiguration);
 		
+		$this->invoice = new Invoice($this->sdkConfiguration);
+		
 		$this->job = new Job($this->sdkConfiguration);
 		
 		$this->lead = new Lead($this->sdkConfiguration);
@@ -173,6 +183,8 @@ class UnifiedTo
 		$this->note = new Note($this->sdkConfiguration);
 		
 		$this->passthrough = new Passthrough($this->sdkConfiguration);
+		
+		$this->payment = new Payment($this->sdkConfiguration);
 		
 		$this->person = new Person($this->sdkConfiguration);
 		

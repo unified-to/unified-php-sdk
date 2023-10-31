@@ -44,7 +44,16 @@ require_once 'vendor/autoload.php';
 
 use Unified\Unified_to\UnifiedTo;
 use Unified\Unified_to\Models\Shared\Security;
-use Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest;
+use Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest;
+use Unified\Unified_to\Models\Shared\AccountingCustomer;
+use Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
+use Unified\Unified_to\Models\Shared\AccountingEmail;
+use Unified\Unified_to\Models\Shared\AccountingEmailType;
+use Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
+use Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
+use Unified\Unified_to\Models\Shared\AccountingCustomerTaxExemption;
+use Unified\Unified_to\Models\Shared\AccountingTelephone;
+use Unified\Unified_to\Models\Shared\AccountingTelephoneType;
 
 $security = new Security();
 $security->jwt = '';
@@ -54,12 +63,47 @@ $sdk = UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new GetUnifiedApicallRequest();
-    $request->id = '<ID>';
+    $request = new CreateAccountingCustomerRequest();
+    $request->accountingCustomer = new AccountingCustomer();
+    $request->accountingCustomer->billingAddress = new PropertyAccountingCustomerBillingAddress();
+    $request->accountingCustomer->billingAddress->address1 = 'string';
+    $request->accountingCustomer->billingAddress->address2 = 'string';
+    $request->accountingCustomer->billingAddress->city = 'New Raulfield';
+    $request->accountingCustomer->billingAddress->country = 'Libyan Arab Jamahiriya';
+    $request->accountingCustomer->billingAddress->countryCode = 'IN';
+    $request->accountingCustomer->billingAddress->postalCode = '22232';
+    $request->accountingCustomer->billingAddress->region = 'string';
+    $request->accountingCustomer->billingAddress->regionCode = 'string';
+    $request->accountingCustomer->createdAt = DateTime::createFromFormat(
+        'Y-m-d\TH:i:s+',
+        '2021-07-22T19:16:48.798Z',
+    );
+    $request->accountingCustomer->currency = 'Dalasi';
+    $request->accountingCustomer->emails = [new AccountingEmail()];
+    $request->accountingCustomer->id = '<ID>';
+    $request->accountingCustomer->isActive = false;
+    $request->accountingCustomer->name = 'string';
+    $request->accountingCustomer->raw = new PropertyAccountingCustomerRaw();
+    $request->accountingCustomer->shippingAddress = new PropertyAccountingCustomerShippingAddress();
+    $request->accountingCustomer->shippingAddress->address1 = 'string';
+    $request->accountingCustomer->shippingAddress->address2 = 'string';
+    $request->accountingCustomer->shippingAddress->city = 'Lake Freddy';
+    $request->accountingCustomer->shippingAddress->country = 'Croatia';
+    $request->accountingCustomer->shippingAddress->countryCode = 'SC';
+    $request->accountingCustomer->shippingAddress->postalCode = '08305';
+    $request->accountingCustomer->shippingAddress->region = 'string';
+    $request->accountingCustomer->shippingAddress->regionCode = 'string';
+    $request->accountingCustomer->taxExemption = AccountingCustomerTaxExemption::LocalGov;
+    $request->accountingCustomer->telephones = [new AccountingTelephone()];
+    $request->accountingCustomer->updatedAt = DateTime::createFromFormat(
+        'Y-m-d\TH:i:s+',
+        '2021-08-06T21:49:52.773Z',
+    );
+    $request->connectionId = 'string';
 
-    $response = $sdk->apicall->getUnifiedApicall($request);
+    $response = $sdk->accounting->createAccountingCustomer($request);
 
-    if ($response->apiCall !== null) {
+    if ($response->accountingCustomer !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -72,6 +116,27 @@ try {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
+
+### [accounting](docs/sdks/accounting/README.md)
+
+* [createAccountingCustomer](docs/sdks/accounting/README.md#createaccountingcustomer) - Create a customer
+* [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
+* [createAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
+* [getAccountingCustomer](docs/sdks/accounting/README.md#getaccountingcustomer) - Retrieve a customer
+* [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
+* [getAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
+* [listAccountingCustomers](docs/sdks/accounting/README.md#listaccountingcustomers) - List all customers
+* [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
+* [listAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
+* [patchAccountingCustomer](docs/sdks/accounting/README.md#patchaccountingcustomer) - Update a customer
+* [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
+* [patchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
+* [removeAccountingCustomer](docs/sdks/accounting/README.md#removeaccountingcustomer) - Remove a customer
+* [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
+* [removeAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
+* [updateAccountingCustomer](docs/sdks/accounting/README.md#updateaccountingcustomer) - Update a customer
+* [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
+* [updateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
 
 ### [apicall](docs/sdks/apicall/README.md)
 
@@ -225,11 +290,17 @@ try {
 
 ### [customer](docs/sdks/customer/README.md)
 
+* [createAccountingCustomer](docs/sdks/customer/README.md#createaccountingcustomer) - Create a customer
 * [createTicketingCustomer](docs/sdks/customer/README.md#createticketingcustomer) - Create a customer
+* [getAccountingCustomer](docs/sdks/customer/README.md#getaccountingcustomer) - Retrieve a customer
 * [getTicketingCustomer](docs/sdks/customer/README.md#getticketingcustomer) - Retrieve a customer
+* [listAccountingCustomers](docs/sdks/customer/README.md#listaccountingcustomers) - List all customers
 * [listTicketingCustomers](docs/sdks/customer/README.md#listticketingcustomers) - List all customers
+* [patchAccountingCustomer](docs/sdks/customer/README.md#patchaccountingcustomer) - Update a customer
 * [patchTicketingCustomer](docs/sdks/customer/README.md#patchticketingcustomer) - Update a customer
+* [removeAccountingCustomer](docs/sdks/customer/README.md#removeaccountingcustomer) - Remove a customer
 * [removeTicketingCustomer](docs/sdks/customer/README.md#removeticketingcustomer) - Remove a customer
+* [updateAccountingCustomer](docs/sdks/customer/README.md#updateaccountingcustomer) - Update a customer
 * [updateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
 ### [deal](docs/sdks/deal/README.md)
@@ -322,6 +393,15 @@ try {
 * [removeAtsInterview](docs/sdks/interview/README.md#removeatsinterview) - Remove a interview
 * [updateAtsInterview](docs/sdks/interview/README.md#updateatsinterview) - Update a interview
 
+### [invoice](docs/sdks/invoice/README.md)
+
+* [createAccountingInvoice](docs/sdks/invoice/README.md#createaccountinginvoice) - Create a invoice
+* [getAccountingInvoice](docs/sdks/invoice/README.md#getaccountinginvoice) - Retrieve a invoice
+* [listAccountingInvoices](docs/sdks/invoice/README.md#listaccountinginvoices) - List all invoices
+* [patchAccountingInvoice](docs/sdks/invoice/README.md#patchaccountinginvoice) - Update a invoice
+* [removeAccountingInvoice](docs/sdks/invoice/README.md#removeaccountinginvoice) - Remove a invoice
+* [updateAccountingInvoice](docs/sdks/invoice/README.md#updateaccountinginvoice) - Update a invoice
+
 ### [job](docs/sdks/job/README.md)
 
 * [createAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
@@ -393,6 +473,15 @@ try {
 * [patchPassthrough](docs/sdks/passthrough/README.md#patchpassthrough) - Passthrough PUT
 * [removePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [updatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
+
+### [payment](docs/sdks/payment/README.md)
+
+* [createAccountingPayment](docs/sdks/payment/README.md#createaccountingpayment) - Create a payment
+* [getAccountingPayment](docs/sdks/payment/README.md#getaccountingpayment) - Retrieve a payment
+* [listAccountingPayments](docs/sdks/payment/README.md#listaccountingpayments) - List all payments
+* [patchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
+* [removeAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
+* [updateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
 
 ### [person](docs/sdks/person/README.md)
 
