@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateUnifiedWebhookRequest
 {
-    /**
-     * A webhook is used to POST new/updated information to your server.
-     * 
-     * @var ?\Unified\Unified_to\Models\Shared\Webhook $webhook
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?\Unified\Unified_to\Models\Shared\Webhook $webhook = null;
     

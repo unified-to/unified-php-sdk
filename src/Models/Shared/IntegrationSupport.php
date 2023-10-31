@@ -51,6 +51,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listDealId = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('list_invoice_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listInvoiceId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('list_job_id')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -161,6 +166,7 @@ class IntegrationSupport
 		$this->listContactId = null;
 		$this->listCustomerId = null;
 		$this->listDealId = null;
+		$this->listInvoiceId = null;
 		$this->listJobId = null;
 		$this->listLimit = null;
 		$this->listOffset = null;

@@ -61,14 +61,16 @@ try {
     ];
     $request->auth->pem = 'string';
     $request->auth->refreshToken = 'string';
+    $request->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-18T01:30:06.276Z');
+    $request->auth->refreshTokenExpiresIn = 6876.67;
     $request->auth->state = 'string';
     $request->auth->token = 'string';
     $request->auth->tokenUrl = 'string';
     $request->authAwsArn = 'string';
     $request->categories = [
-        PropertyConnectionCategories::Auth,
+        PropertyConnectionCategories::Ats,
     ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-23T23:52:45.470Z');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-03T20:48:03.468Z');
     $request->environment = 'string';
     $request->externalXref = 'string';
     $request->id = '<ID>';
@@ -77,7 +79,7 @@ try {
     $request->permissions = [
         PropertyConnectionPermissions::CrmCompanyRead,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-03T20:48:03.468Z');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
     $request->workspaceId = 'string';
 
     $response = $sdk->connection->createUnifiedConnection($request);
@@ -263,23 +265,25 @@ try {
     ];
     $request->connection->auth->pem = 'string';
     $request->connection->auth->refreshToken = 'string';
+    $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T01:22:10.837Z');
+    $request->connection->auth->refreshTokenExpiresIn = 8456.09;
     $request->connection->auth->state = 'string';
     $request->connection->auth->token = 'string';
     $request->connection->auth->tokenUrl = 'string';
     $request->connection->authAwsArn = 'string';
     $request->connection->categories = [
-        PropertyConnectionCategories::Uc,
+        PropertyConnectionCategories::Ats,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T22:36:11.466Z');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-09T04:29:35.007Z');
     $request->connection->environment = 'string';
     $request->connection->externalXref = 'string';
     $request->connection->id = '<ID>';
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::AtsJobWrite,
+        PropertyConnectionPermissions::AtsCandidateRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-09T04:29:35.007Z');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->workspaceId = 'string';
     $request->id = '<ID>';
 
@@ -407,23 +411,25 @@ try {
     ];
     $request->connection->auth->pem = 'string';
     $request->connection->auth->refreshToken = 'string';
+    $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-14T16:56:17.383Z');
+    $request->connection->auth->refreshTokenExpiresIn = 7427.91;
     $request->connection->auth->state = 'string';
     $request->connection->auth->token = 'string';
     $request->connection->auth->tokenUrl = 'string';
     $request->connection->authAwsArn = 'string';
     $request->connection->categories = [
-        PropertyConnectionCategories::Uc,
+        PropertyConnectionCategories::Crm,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-25T08:32:03.332Z');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-09T18:14:10.859Z');
     $request->connection->environment = 'string';
     $request->connection->externalXref = 'string';
     $request->connection->id = '<ID>';
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::CrmEventRead,
+        PropertyConnectionPermissions::UcCallRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-09T18:14:10.859Z');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T04:40:33.286Z');
     $request->connection->workspaceId = 'string';
     $request->id = '<ID>';
 

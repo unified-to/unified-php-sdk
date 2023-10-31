@@ -112,6 +112,16 @@ class PropertyConnectionAuth
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $refreshToken = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('refresh_token_expires_date')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $refreshTokenExpiresDate = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('refresh_token_expires_in')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $refreshTokenExpiresIn = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('state')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -146,6 +156,8 @@ class PropertyConnectionAuth
 		$this->otherAuthInfo = null;
 		$this->pem = null;
 		$this->refreshToken = null;
+		$this->refreshTokenExpiresDate = null;
+		$this->refreshTokenExpiresIn = null;
 		$this->state = null;
 		$this->token = null;
 		$this->tokenUrl = null;
