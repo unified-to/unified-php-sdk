@@ -38,16 +38,16 @@ class RemoveAtsDocumentResponse
     /**
      * Successful
      * 
-     * @var ?string $removeAtsDocumentDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeAtsDocumentDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeAtsDocumentDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

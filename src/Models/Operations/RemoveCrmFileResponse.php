@@ -38,16 +38,16 @@ class RemoveCrmFileResponse
     /**
      * Successful
      * 
-     * @var ?string $removeCrmFileDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeCrmFileDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeCrmFileDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

@@ -38,16 +38,16 @@ class RemoveUcContactResponse
     /**
      * Successful
      * 
-     * @var ?string $removeUcContactDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeUcContactDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeUcContactDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

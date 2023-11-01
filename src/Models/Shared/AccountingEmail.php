@@ -16,9 +16,9 @@ class AccountingEmail
     public string $email;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingEmailType>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Type>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AccountingEmailType $type = null;
+    public ?Type $type = null;
     
 	public function __construct()
 	{

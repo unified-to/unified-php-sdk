@@ -1,5 +1,5 @@
 # Connection
-(*connection*)
+
 
 ### Available Operations
 
@@ -168,7 +168,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest;
-use \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsCategories;
+use \Unified\Unified_to\Models\Operations\Categories;
 
 $security = new Security();
 $security->jwt = '';
@@ -180,7 +180,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListUnifiedConnectionsRequest();
     $request->categories = [
-        ListUnifiedConnectionsCategories::Enrich,
+        Categories::Enrich,
     ];
     $request->env = 'string';
     $request->externalXref = 'string';

@@ -38,16 +38,16 @@ class RemoveAtsInterviewResponse
     /**
      * Successful
      * 
-     * @var ?string $removeAtsInterviewDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeAtsInterviewDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeAtsInterviewDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

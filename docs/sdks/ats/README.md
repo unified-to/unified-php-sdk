@@ -1,5 +1,5 @@
 # Ats
-(*ats*)
+
 
 ### Available Operations
 
@@ -57,7 +57,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest;
 use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
+use \Unified\Unified_to\Models\Shared\Status;
 
 $security = new Security();
 $security->jwt = '';
@@ -78,7 +78,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-18T22:03:17.799Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = AtsApplicationStatus::FirstInterview;
+    $request->atsApplication->status = Status::FirstInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T10:02:31.440Z');
     $request->connectionId = 'string';
 
@@ -338,9 +338,9 @@ use \Unified\Unified_to\Models\Operations\CreateAtsJobRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
 use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\AtsCompensationFrequency;
+use \Unified\Unified_to\Models\Shared\Frequency;
 use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
+use \Unified\Unified_to\Models\Shared\EmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
@@ -366,7 +366,7 @@ try {
         'string',
     ];
     $request->atsJob->description = 'Secured fault-tolerant internet solution';
-    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
+    $request->atsJob->employmentType = EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -424,7 +424,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Shared\Recommendation;
 
 $security = new Security();
 $security->jwt = '';
@@ -445,7 +445,7 @@ try {
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
+    $request->atsScorecard->recommendation = Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
     $request->connectionId = 'string';
 
@@ -1162,7 +1162,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest;
 use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
+use \Unified\Unified_to\Models\Shared\Status;
 
 $security = new Security();
 $security->jwt = '';
@@ -1183,7 +1183,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-04T13:56:12.670Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = AtsApplicationStatus::Screening;
+    $request->atsApplication->status = Status::Screening;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-02T14:46:44.919Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -1447,9 +1447,9 @@ use \Unified\Unified_to\Models\Operations\PatchAtsJobRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
 use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\AtsCompensationFrequency;
+use \Unified\Unified_to\Models\Shared\Frequency;
 use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
+use \Unified\Unified_to\Models\Shared\EmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
@@ -1475,7 +1475,7 @@ try {
         'string',
     ];
     $request->atsJob->description = 'Seamless analyzing definition';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Intern;
+    $request->atsJob->employmentType = EmploymentType::Intern;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -1534,7 +1534,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Shared\Recommendation;
 
 $security = new Security();
 $security->jwt = '';
@@ -1555,7 +1555,7 @@ try {
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
+    $request->atsScorecard->recommendation = Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -1899,7 +1899,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest;
 use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
+use \Unified\Unified_to\Models\Shared\Status;
 
 $security = new Security();
 $security->jwt = '';
@@ -1920,7 +1920,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-09T08:05:18.054Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = AtsApplicationStatus::Rejected;
+    $request->atsApplication->status = Status::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T16:36:33.801Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -2184,9 +2184,9 @@ use \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
 use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\AtsCompensationFrequency;
+use \Unified\Unified_to\Models\Shared\Frequency;
 use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
+use \Unified\Unified_to\Models\Shared\EmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
@@ -2212,7 +2212,7 @@ try {
         'string',
     ];
     $request->atsJob->description = 'Implemented even-keeled parallelism';
-    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
+    $request->atsJob->employmentType = EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -2271,7 +2271,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Shared\Recommendation;
 
 $security = new Security();
 $security->jwt = '';
@@ -2292,7 +2292,7 @@ try {
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
+    $request->atsScorecard->recommendation = Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

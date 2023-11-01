@@ -13,10 +13,10 @@ use Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest;
 use Unified\Unified_to\Models\Shared\AccountingCustomer;
 use Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
 use Unified\Unified_to\Models\Shared\AccountingEmail;
-use Unified\Unified_to\Models\Shared\AccountingEmailType;
+use Unified\Unified_to\Models\Shared\Type;
 use Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
 use Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use Unified\Unified_to\Models\Shared\AccountingCustomerTaxExemption;
+use Unified\Unified_to\Models\Shared\TaxExemption;
 use Unified\Unified_to\Models\Shared\AccountingTelephone;
 use Unified\Unified_to\Models\Shared\AccountingTelephoneType;
 
@@ -58,7 +58,7 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '08305';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = AccountingCustomerTaxExemption::LocalGov;
+    $request->accountingCustomer->taxExemption = TaxExemption::LocalGov;
     $request->accountingCustomer->telephones = [new AccountingTelephone()];
     $request->accountingCustomer->updatedAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',

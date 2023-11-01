@@ -38,16 +38,16 @@ class RemoveAtsScorecardResponse
     /**
      * Successful
      * 
-     * @var ?string $removeAtsScorecardDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeAtsScorecardDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeAtsScorecardDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

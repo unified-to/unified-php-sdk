@@ -38,16 +38,16 @@ class RemoveCrmEventResponse
     /**
      * Successful
      * 
-     * @var ?string $removeCrmEventDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeCrmEventDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeCrmEventDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

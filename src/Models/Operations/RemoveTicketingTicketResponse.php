@@ -38,16 +38,16 @@ class RemoveTicketingTicketResponse
     /**
      * Successful
      * 
-     * @var ?string $removeTicketingTicketDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeTicketingTicketDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeTicketingTicketDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

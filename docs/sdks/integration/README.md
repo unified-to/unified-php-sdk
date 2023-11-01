@@ -1,5 +1,5 @@
 # Integration
-(*integration*)
+
 
 ### Available Operations
 
@@ -72,7 +72,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthScopes;
+use \Unified\Unified_to\Models\Operations\Scopes;
 
 $security = new Security();
 $security->jwt = '';
@@ -90,7 +90,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::HrisEmployeeWrite,
+        Scopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -99,7 +99,7 @@ try {
 
     $response = $sdk->integration->getUnifiedIntegrationAuth($request);
 
-    if ($response->getUnifiedIntegrationAuth200ApplicationJSONString !== null) {
+    if ($response->res !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -134,7 +134,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesCategories;
+use \Unified\Unified_to\Models\Operations\QueryParamCategories;
 
 $security = new Security();
 $security->jwt = '';
@@ -147,7 +147,7 @@ try {
     $request = new ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        ListUnifiedIntegrationWorkspacesCategories::Ticketing,
+        QueryParamCategories::Ticketing,
     ];
     $request->env = 'string';
     $request->limit = 9072.99;
@@ -193,7 +193,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsCategories;
+use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsQueryParamCategories;
 
 $security = new Security();
 $security->jwt = '';
@@ -206,7 +206,7 @@ try {
     $request = new ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
-        ListUnifiedIntegrationsCategories::Auth,
+        ListUnifiedIntegrationsQueryParamCategories::Auth,
     ];
     $request->env = 'string';
     $request->limit = 7382.58;

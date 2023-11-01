@@ -38,16 +38,16 @@ class RemoveCrmDealResponse
     /**
      * Successful
      * 
-     * @var ?string $removeCrmDealDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeCrmDealDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeCrmDealDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

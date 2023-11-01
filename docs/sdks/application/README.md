@@ -1,5 +1,5 @@
 # Application
-(*application*)
+
 
 ### Available Operations
 
@@ -27,7 +27,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest;
 use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
+use \Unified\Unified_to\Models\Shared\Status;
 
 $security = new Security();
 $security->jwt = '';
@@ -48,7 +48,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-18T22:03:17.799Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = AtsApplicationStatus::FirstInterview;
+    $request->atsApplication->status = Status::FirstInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T10:02:31.440Z');
     $request->connectionId = 'string';
 
@@ -204,7 +204,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest;
 use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
+use \Unified\Unified_to\Models\Shared\Status;
 
 $security = new Security();
 $security->jwt = '';
@@ -225,7 +225,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-04T13:56:12.670Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = AtsApplicationStatus::Screening;
+    $request->atsApplication->status = Status::Screening;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-02T14:46:44.919Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -319,7 +319,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest;
 use \Unified\Unified_to\Models\Shared\AtsApplication;
 use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\AtsApplicationStatus;
+use \Unified\Unified_to\Models\Shared\Status;
 
 $security = new Security();
 $security->jwt = '';
@@ -340,7 +340,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-09T08:05:18.054Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = AtsApplicationStatus::Rejected;
+    $request->atsApplication->status = Status::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T16:36:33.801Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

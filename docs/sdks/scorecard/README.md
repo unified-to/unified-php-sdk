@@ -1,5 +1,5 @@
 # Scorecard
-(*scorecard*)
+
 
 ### Available Operations
 
@@ -27,7 +27,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Shared\Recommendation;
 
 $security = new Security();
 $security->jwt = '';
@@ -48,7 +48,7 @@ try {
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
+    $request->atsScorecard->recommendation = Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
     $request->connectionId = 'string';
 
@@ -206,7 +206,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Shared\Recommendation;
 
 $security = new Security();
 $security->jwt = '';
@@ -227,7 +227,7 @@ try {
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::Yes;
+    $request->atsScorecard->recommendation = Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -321,7 +321,7 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest;
 use \Unified\Unified_to\Models\Shared\AtsScorecard;
 use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\AtsScorecardRecommendation;
+use \Unified\Unified_to\Models\Shared\Recommendation;
 
 $security = new Security();
 $security->jwt = '';
@@ -342,7 +342,7 @@ try {
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = AtsScorecardRecommendation::No;
+    $request->atsScorecard->recommendation = Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

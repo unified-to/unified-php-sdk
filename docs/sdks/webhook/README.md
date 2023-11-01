@@ -1,5 +1,5 @@
 # Webhook
-(*webhook*)
+
 
 ### Available Operations
 
@@ -25,8 +25,8 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest;
 use \Unified\Unified_to\Models\Shared\Webhook;
 use \Unified\Unified_to\Models\Shared\PropertyWebhookEvents;
-use \Unified\Unified_to\Models\Shared\WebhookObjectType;
-use \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookEvents;
+use \Unified\Unified_to\Models\Shared\ObjectType;
+use \Unified\Unified_to\Models\Operations\Events;
 
 $security = new Security();
 $security->jwt = '';
@@ -50,7 +50,7 @@ try {
     $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 6142.55;
-    $request->webhook->objectType = WebhookObjectType::AccountingPayment;
+    $request->webhook->objectType = ObjectType::AccountingPayment;
     $request->webhook->subscriptions = [
         'string',
     ];
@@ -58,7 +58,7 @@ try {
     $request->webhook->workspaceId = 'string';
     $request->connectionId = 'string';
     $request->events = [
-        CreateUnifiedWebhookEvents::Created,
+        Events::Created,
     ];
     $request->object = 'string';
 

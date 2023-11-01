@@ -38,16 +38,16 @@ class RemoveUnifiedWebhookResponse
     /**
      * Successful
      * 
-     * @var ?string $removeUnifiedWebhookDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeUnifiedWebhookDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeUnifiedWebhookDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

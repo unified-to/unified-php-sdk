@@ -38,16 +38,16 @@ class RemoveHrisEmployeeResponse
     /**
      * Successful
      * 
-     * @var ?string $removeHrisEmployeeDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeHrisEmployeeDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeHrisEmployeeDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

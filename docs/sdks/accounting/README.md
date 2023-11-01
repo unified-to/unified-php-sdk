@@ -1,5 +1,5 @@
 # Accounting
-(*accounting*)
+
 
 ### Available Operations
 
@@ -40,10 +40,10 @@ use \Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest;
 use \Unified\Unified_to\Models\Shared\AccountingCustomer;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
 use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\AccountingEmailType;
+use \Unified\Unified_to\Models\Shared\Type;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingCustomerTaxExemption;
+use \Unified\Unified_to\Models\Shared\TaxExemption;
 use \Unified\Unified_to\Models\Shared\AccountingTelephone;
 use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
 
@@ -84,7 +84,7 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '08305';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = AccountingCustomerTaxExemption::LocalGov;
+    $request->accountingCustomer->taxExemption = TaxExemption::LocalGov;
     $request->accountingCustomer->telephones = [
         new AccountingTelephone(),
     ];
@@ -607,10 +607,10 @@ use \Unified\Unified_to\Models\Operations\PatchAccountingCustomerRequest;
 use \Unified\Unified_to\Models\Shared\AccountingCustomer;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
 use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\AccountingEmailType;
+use \Unified\Unified_to\Models\Shared\Type;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingCustomerTaxExemption;
+use \Unified\Unified_to\Models\Shared\TaxExemption;
 use \Unified\Unified_to\Models\Shared\AccountingTelephone;
 use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
 
@@ -651,7 +651,7 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '39981-0354';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = AccountingCustomerTaxExemption::Foreign;
+    $request->accountingCustomer->taxExemption = TaxExemption::Foreign;
     $request->accountingCustomer->telephones = [
         new AccountingTelephone(),
     ];
@@ -991,10 +991,10 @@ use \Unified\Unified_to\Models\Operations\UpdateAccountingCustomerRequest;
 use \Unified\Unified_to\Models\Shared\AccountingCustomer;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
 use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\AccountingEmailType;
+use \Unified\Unified_to\Models\Shared\Type;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
 use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingCustomerTaxExemption;
+use \Unified\Unified_to\Models\Shared\TaxExemption;
 use \Unified\Unified_to\Models\Shared\AccountingTelephone;
 use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
 
@@ -1035,7 +1035,7 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '12624-4150';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = AccountingCustomerTaxExemption::CharitableOrg;
+    $request->accountingCustomer->taxExemption = TaxExemption::CharitableOrg;
     $request->accountingCustomer->telephones = [
         new AccountingTelephone(),
     ];

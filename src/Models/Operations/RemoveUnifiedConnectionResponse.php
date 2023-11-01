@@ -38,16 +38,16 @@ class RemoveUnifiedConnectionResponse
     /**
      * Successful
      * 
-     * @var ?string $removeUnifiedConnectionDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeUnifiedConnectionDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeUnifiedConnectionDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

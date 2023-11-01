@@ -38,16 +38,16 @@ class RemoveCrmLeadResponse
     /**
      * Successful
      * 
-     * @var ?string $removeCrmLeadDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeCrmLeadDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeCrmLeadDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

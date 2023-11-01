@@ -68,8 +68,8 @@ class Webhook
     public float $interval;
     
 	#[\JMS\Serializer\Annotation\SerializedName('object_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\WebhookObjectType>')]
-    public WebhookObjectType $objectType;
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ObjectType>')]
+    public ObjectType $objectType;
     
     /**
      * integration-specific subscriptions IDs
@@ -102,7 +102,7 @@ class Webhook
 		$this->includeRaw = null;
 		$this->integrationType = "";
 		$this->interval = 0;
-		$this->objectType = \Unified\Unified_to\Models\Shared\WebhookObjectType::AccountingCustomer;
+		$this->objectType = \Unified\Unified_to\Models\Shared\ObjectType::AccountingCustomer;
 		$this->subscriptions = null;
 		$this->updatedAt = null;
 		$this->workspaceId = "";

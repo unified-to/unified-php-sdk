@@ -38,16 +38,16 @@ class GetUnifiedIntegrationAuthResponse
     /**
      * Successful
      * 
-     * @var ?string $getUnifiedIntegrationAuth200ApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $getUnifiedIntegrationAuth200ApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->getUnifiedIntegrationAuth200ApplicationJSONString = null;
+		$this->res = null;
 	}
 }

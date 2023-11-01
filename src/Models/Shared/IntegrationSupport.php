@@ -152,9 +152,9 @@ class IntegrationSupport
     public ?array $webhookEvents = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('webhook_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\IntegrationSupportWebhookType>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\WebhookType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?IntegrationSupportWebhookType $webhookType = null;
+    public ?WebhookType $webhookType = null;
     
 	public function __construct()
 	{

@@ -57,9 +57,9 @@ class AtsJob
     public ?string $description = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('employment_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsJobEmploymentType>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\EmploymentType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AtsJobEmploymentType $employmentType = null;
+    public ?EmploymentType $employmentType = null;
     
     /**
      * $hiringManagerIds

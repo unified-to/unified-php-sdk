@@ -1,5 +1,5 @@
 # Auth
-(*auth*)
+
 
 ### Available Operations
 
@@ -21,7 +21,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthScopes;
+use \Unified\Unified_to\Models\Operations\Scopes;
 
 $security = new Security();
 $security->jwt = '';
@@ -39,7 +39,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::HrisEmployeeWrite,
+        Scopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -48,7 +48,7 @@ try {
 
     $response = $sdk->auth->getUnifiedIntegrationAuth($request);
 
-    if ($response->getUnifiedIntegrationAuth200ApplicationJSONString !== null) {
+    if ($response->res !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -103,7 +103,7 @@ try {
 
     $response = $sdk->auth->getUnifiedIntegrationLogin($request);
 
-    if ($response->getUnifiedIntegrationLogin200ApplicationJSONString !== null) {
+    if ($response->res !== null) {
         // handle response
     }
 } catch (Exception $e) {

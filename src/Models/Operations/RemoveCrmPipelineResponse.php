@@ -38,16 +38,16 @@ class RemoveCrmPipelineResponse
     /**
      * Successful
      * 
-     * @var ?string $removeCrmPipelineDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeCrmPipelineDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeCrmPipelineDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

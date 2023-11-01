@@ -38,16 +38,16 @@ class RemoveAccountingInvoiceResponse
     /**
      * Successful
      * 
-     * @var ?string $removeAccountingInvoiceDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeAccountingInvoiceDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeAccountingInvoiceDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

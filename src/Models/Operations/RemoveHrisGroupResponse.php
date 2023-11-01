@@ -38,16 +38,16 @@ class RemoveHrisGroupResponse
     /**
      * Successful
      * 
-     * @var ?string $removeHrisGroupDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeHrisGroupDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeHrisGroupDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

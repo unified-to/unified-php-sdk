@@ -56,9 +56,9 @@ class AtsScorecard
     public PropertyAtsScorecardRaw $raw;
     
 	#[\JMS\Serializer\Annotation\SerializedName('recommendation')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsScorecardRecommendation>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Recommendation>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AtsScorecardRecommendation $recommendation = null;
+    public ?Recommendation $recommendation = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]

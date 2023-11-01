@@ -1,5 +1,5 @@
 # Unified
-(*unified*)
+
 
 ### Available Operations
 
@@ -131,8 +131,8 @@ use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest;
 use \Unified\Unified_to\Models\Shared\Webhook;
 use \Unified\Unified_to\Models\Shared\PropertyWebhookEvents;
-use \Unified\Unified_to\Models\Shared\WebhookObjectType;
-use \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookEvents;
+use \Unified\Unified_to\Models\Shared\ObjectType;
+use \Unified\Unified_to\Models\Operations\Events;
 
 $security = new Security();
 $security->jwt = '';
@@ -156,7 +156,7 @@ try {
     $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 6142.55;
-    $request->webhook->objectType = WebhookObjectType::AccountingPayment;
+    $request->webhook->objectType = ObjectType::AccountingPayment;
     $request->webhook->subscriptions = [
         'string',
     ];
@@ -164,7 +164,7 @@ try {
     $request->webhook->workspaceId = 'string';
     $request->connectionId = 'string';
     $request->events = [
-        CreateUnifiedWebhookEvents::Created,
+        Events::Created,
     ];
     $request->object = 'string';
 
@@ -352,7 +352,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthScopes;
+use \Unified\Unified_to\Models\Operations\Scopes;
 
 $security = new Security();
 $security->jwt = '';
@@ -370,7 +370,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        GetUnifiedIntegrationAuthScopes::HrisEmployeeWrite,
+        Scopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -379,7 +379,7 @@ try {
 
     $response = $sdk->unified->getUnifiedIntegrationAuth($request);
 
-    if ($response->getUnifiedIntegrationAuth200ApplicationJSONString !== null) {
+    if ($response->res !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -522,7 +522,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest;
-use \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsCategories;
+use \Unified\Unified_to\Models\Operations\Categories;
 
 $security = new Security();
 $security->jwt = '';
@@ -534,7 +534,7 @@ $sdk = UnifiedTo::builder()
 try {
     $request = new ListUnifiedConnectionsRequest();
     $request->categories = [
-        ListUnifiedConnectionsCategories::Enrich,
+        Categories::Enrich,
     ];
     $request->env = 'string';
     $request->externalXref = 'string';
@@ -581,7 +581,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesCategories;
+use \Unified\Unified_to\Models\Operations\QueryParamCategories;
 
 $security = new Security();
 $security->jwt = '';
@@ -594,7 +594,7 @@ try {
     $request = new ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        ListUnifiedIntegrationWorkspacesCategories::Ticketing,
+        QueryParamCategories::Ticketing,
     ];
     $request->env = 'string';
     $request->limit = 9072.99;
@@ -640,7 +640,7 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to\UnifiedTo;
 use \Unified\Unified_to\Models\Shared\Security;
 use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsCategories;
+use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsQueryParamCategories;
 
 $security = new Security();
 $security->jwt = '';
@@ -653,7 +653,7 @@ try {
     $request = new ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
-        ListUnifiedIntegrationsCategories::Auth,
+        ListUnifiedIntegrationsQueryParamCategories::Auth,
     ];
     $request->env = 'string';
     $request->limit = 7382.58;

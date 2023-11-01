@@ -38,16 +38,16 @@ class RemoveCrmContactResponse
     /**
      * Successful
      * 
-     * @var ?string $removeCrmContactDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeCrmContactDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeCrmContactDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

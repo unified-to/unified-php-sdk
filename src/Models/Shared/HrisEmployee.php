@@ -57,9 +57,9 @@ class HrisEmployee
     public ?string $employeeNumber = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('employment_status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentStatus>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\EmploymentStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?HrisEmployeeEmploymentStatus $employmentStatus = null;
+    public ?EmploymentStatus $employmentStatus = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('employment_type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType>')]
@@ -102,9 +102,9 @@ class HrisEmployee
     public ?string $managerId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('marital_status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisEmployeeMaritalStatus>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\MaritalStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?HrisEmployeeMaritalStatus $maritalStatus = null;
+    public ?MaritalStatus $maritalStatus = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]

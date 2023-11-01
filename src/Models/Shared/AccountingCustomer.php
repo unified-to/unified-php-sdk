@@ -62,9 +62,9 @@ class AccountingCustomer
     public ?PropertyAccountingCustomerShippingAddress $shippingAddress = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('tax_exemption')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingCustomerTaxExemption>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\TaxExemption>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AccountingCustomerTaxExemption $taxExemption = null;
+    public ?TaxExemption $taxExemption = null;
     
     /**
      * $telephones

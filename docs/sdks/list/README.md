@@ -1,5 +1,5 @@
 # ListT
-(*list*)
+
 
 ### Available Operations
 

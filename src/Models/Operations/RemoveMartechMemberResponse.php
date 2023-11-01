@@ -38,16 +38,16 @@ class RemoveMartechMemberResponse
     /**
      * Successful
      * 
-     * @var ?string $removeMartechMemberDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeMartechMemberDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeMartechMemberDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

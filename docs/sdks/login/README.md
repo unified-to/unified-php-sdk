@@ -1,5 +1,5 @@
 # Login
-(*login*)
+
 
 ### Available Operations
 
@@ -40,7 +40,7 @@ try {
 
     $response = $sdk->login->getUnifiedIntegrationLogin($request);
 
-    if ($response->getUnifiedIntegrationLogin200ApplicationJSONString !== null) {
+    if ($response->res !== null) {
         // handle response
     }
 } catch (Exception $e) {

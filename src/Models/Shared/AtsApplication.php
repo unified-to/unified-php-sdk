@@ -57,9 +57,9 @@ class AtsApplication
     public ?string $source = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsApplicationStatus>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Status>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AtsApplicationStatus $status = null;
+    public ?Status $status = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]

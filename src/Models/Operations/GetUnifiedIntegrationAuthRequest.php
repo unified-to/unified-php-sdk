@@ -52,7 +52,7 @@ class GetUnifiedIntegrationAuthRequest
     /**
      * $scopes
      * 
-     * @var ?array<\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthScopes> $scopes
+     * @var ?array<\Unified\Unified_to\Models\Operations\Scopes> $scopes
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=scopes')]
     public ?array $scopes = null;

@@ -38,16 +38,16 @@ class RemoveAtsJobResponse
     /**
      * Successful
      * 
-     * @var ?string $removeAtsJobDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeAtsJobDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeAtsJobDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

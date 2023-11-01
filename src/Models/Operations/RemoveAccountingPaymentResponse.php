@@ -38,16 +38,16 @@ class RemoveAccountingPaymentResponse
     /**
      * Successful
      * 
-     * @var ?string $removeAccountingPaymentDefaultApplicationJSONString
+     * @var ?string $res
      */
 	
-    public ?string $removeAccountingPaymentDefaultApplicationJSONString = null;
+    public ?string $res = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->removeAccountingPaymentDefaultApplicationJSONString = null;
+		$this->res = null;
 	}
 }

@@ -1,5 +1,5 @@
 # Job
-(*job*)
+
 
 ### Available Operations
 
@@ -28,9 +28,9 @@ use \Unified\Unified_to\Models\Operations\CreateAtsJobRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
 use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\AtsCompensationFrequency;
+use \Unified\Unified_to\Models\Shared\Frequency;
 use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
+use \Unified\Unified_to\Models\Shared\EmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
@@ -56,7 +56,7 @@ try {
         'string',
     ];
     $request->atsJob->description = 'Secured fault-tolerant internet solution';
-    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
+    $request->atsJob->employmentType = EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -226,9 +226,9 @@ use \Unified\Unified_to\Models\Operations\PatchAtsJobRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
 use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\AtsCompensationFrequency;
+use \Unified\Unified_to\Models\Shared\Frequency;
 use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
+use \Unified\Unified_to\Models\Shared\EmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
@@ -254,7 +254,7 @@ try {
         'string',
     ];
     $request->atsJob->description = 'Seamless analyzing definition';
-    $request->atsJob->employmentType = AtsJobEmploymentType::Intern;
+    $request->atsJob->employmentType = EmploymentType::Intern;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -364,9 +364,9 @@ use \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest;
 use \Unified\Unified_to\Models\Shared\AtsJob;
 use \Unified\Unified_to\Models\Shared\AtsAddress;
 use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\AtsCompensationFrequency;
+use \Unified\Unified_to\Models\Shared\Frequency;
 use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\AtsJobEmploymentType;
+use \Unified\Unified_to\Models\Shared\EmploymentType;
 use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
 use \Unified\Unified_to\Models\Shared\AtsJobStatus;
 
@@ -392,7 +392,7 @@ try {
         'string',
     ];
     $request->atsJob->description = 'Implemented even-keeled parallelism';
-    $request->atsJob->employmentType = AtsJobEmploymentType::FullTime;
+    $request->atsJob->employmentType = EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];

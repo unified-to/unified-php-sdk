@@ -17,9 +17,9 @@ class AtsCompensation
     public ?string $currency = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('frequency')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsCompensationFrequency>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Frequency>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AtsCompensationFrequency $frequency = null;
+    public ?Frequency $frequency = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('max')]
     #[\JMS\Serializer\Annotation\Type('float')]

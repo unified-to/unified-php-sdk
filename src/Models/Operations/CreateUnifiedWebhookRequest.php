@@ -25,7 +25,7 @@ class CreateUnifiedWebhookRequest
     /**
      * Which events to subscribe to.
      * 
-     * @var ?array<\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookEvents> $events
+     * @var ?array<\Unified\Unified_to\Models\Operations\Events> $events
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=events')]
     public ?array $events = null;

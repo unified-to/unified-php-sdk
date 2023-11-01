@@ -22,7 +22,7 @@ class ListUnifiedIntegrationWorkspacesRequest
     /**
      * Filter the results on these categories
      * 
-     * @var ?array<\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesCategories> $categories
+     * @var ?array<\Unified\Unified_to\Models\Operations\QueryParamCategories> $categories
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=categories')]
     public ?array $categories = null;

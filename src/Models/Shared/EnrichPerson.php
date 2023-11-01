@@ -68,9 +68,9 @@ class EnrichPerson
     public ?string $facebookUrl = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('gender')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\EnrichPersonGender>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Gender>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?EnrichPersonGender $gender = null;
+    public ?Gender $gender = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('github_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
