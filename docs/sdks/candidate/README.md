@@ -22,28 +22,21 @@ Create a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest;
-use \Unified\Unified_to\Models\Shared\AtsCandidate;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
-use \Unified\Unified_to\Models\Shared\AtsEmail;
-use \Unified\Unified_to\Models\Shared\AtsEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
-use \Unified\Unified_to\Models\Shared\AtsTelephone;
-use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsCandidateRequest();
-    $request->atsCandidate = new AtsCandidate();
-    $request->atsCandidate->address = new PropertyAtsCandidateAddress();
+    $request = new Operations\CreateAtsCandidateRequest();
+    $request->atsCandidate = new Shared\AtsCandidate();
+    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
     $request->atsCandidate->address->address2 = 'string';
     $request->atsCandidate->address->city = 'South Hill';
@@ -55,18 +48,18 @@ try {
     $request->atsCandidate->companyName = 'Pollich - Lubowitz';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-05T23:23:31.487Z');
     $request->atsCandidate->emails = [
-        new AtsEmail(),
+        new Shared\AtsEmail(),
     ];
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
     $request->atsCandidate->name = 'string';
-    $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
     ];
     $request->atsCandidate->telephones = [
-        new AtsTelephone(),
+        new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T18:21:52.157Z');
@@ -106,19 +99,19 @@ Retrieve a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsCandidateRequest();
+    $request = new Operations\GetAtsCandidateRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -159,19 +152,19 @@ List all candidates
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsCandidatesRequest();
+    $request = new Operations\ListAtsCandidatesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -217,28 +210,21 @@ Update a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest;
-use \Unified\Unified_to\Models\Shared\AtsCandidate;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
-use \Unified\Unified_to\Models\Shared\AtsEmail;
-use \Unified\Unified_to\Models\Shared\AtsEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
-use \Unified\Unified_to\Models\Shared\AtsTelephone;
-use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsCandidateRequest();
-    $request->atsCandidate = new AtsCandidate();
-    $request->atsCandidate->address = new PropertyAtsCandidateAddress();
+    $request = new Operations\PatchAtsCandidateRequest();
+    $request->atsCandidate = new Shared\AtsCandidate();
+    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
     $request->atsCandidate->address->address2 = 'string';
     $request->atsCandidate->address->city = 'Fort Bridget';
@@ -250,18 +236,18 @@ try {
     $request->atsCandidate->companyName = 'Donnelly - Bartell';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-06T12:13:20.908Z');
     $request->atsCandidate->emails = [
-        new AtsEmail(),
+        new Shared\AtsEmail(),
     ];
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
     $request->atsCandidate->name = 'string';
-    $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
     ];
     $request->atsCandidate->telephones = [
-        new AtsTelephone(),
+        new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-19T12:47:03.298Z');
@@ -302,19 +288,19 @@ Remove a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsCandidateRequest();
+    $request = new Operations\RemoveAtsCandidateRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -352,28 +338,21 @@ Update a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest;
-use \Unified\Unified_to\Models\Shared\AtsCandidate;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
-use \Unified\Unified_to\Models\Shared\AtsEmail;
-use \Unified\Unified_to\Models\Shared\AtsEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
-use \Unified\Unified_to\Models\Shared\AtsTelephone;
-use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsCandidateRequest();
-    $request->atsCandidate = new AtsCandidate();
-    $request->atsCandidate->address = new PropertyAtsCandidateAddress();
+    $request = new Operations\UpdateAtsCandidateRequest();
+    $request->atsCandidate = new Shared\AtsCandidate();
+    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
     $request->atsCandidate->address->address2 = 'string';
     $request->atsCandidate->address->city = 'Hintzborough';
@@ -385,18 +364,18 @@ try {
     $request->atsCandidate->companyName = 'O\'Reilly Inc';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-30T14:37:21.726Z');
     $request->atsCandidate->emails = [
-        new AtsEmail(),
+        new Shared\AtsEmail(),
     ];
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
     $request->atsCandidate->name = 'string';
-    $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
     ];
     $request->atsCandidate->telephones = [
-        new AtsTelephone(),
+        new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-18T01:19:42.316Z');

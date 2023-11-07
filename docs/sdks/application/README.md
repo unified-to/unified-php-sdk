@@ -22,33 +22,30 @@ Create an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest;
-use \Unified\Unified_to\Models\Shared\AtsApplication;
-use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\Status;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsApplicationRequest();
-    $request->atsApplication = new AtsApplication();
+    $request = new Operations\CreateAtsApplicationRequest();
+    $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-09T11:35:08.252Z');
     $request->atsApplication->candidateId = 'string';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-22T15:02:56.144Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
-    $request->atsApplication->raw = new PropertyAtsApplicationRaw();
+    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-18T22:03:17.799Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Status::FirstInterview;
+    $request->atsApplication->status = Shared\Status::FirstInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T10:02:31.440Z');
     $request->connectionId = 'string';
 
@@ -86,19 +83,19 @@ Retrieve an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsApplicationRequest();
+    $request = new Operations\GetAtsApplicationRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -139,19 +136,19 @@ List all applications
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsApplicationsRequest();
+    $request = new Operations\ListAtsApplicationsRequest();
     $request->candidateId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -199,33 +196,30 @@ Update an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest;
-use \Unified\Unified_to\Models\Shared\AtsApplication;
-use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\Status;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsApplicationRequest();
-    $request->atsApplication = new AtsApplication();
+    $request = new Operations\PatchAtsApplicationRequest();
+    $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-15T04:58:14.527Z');
     $request->atsApplication->candidateId = 'string';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-06T05:50:03.360Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
-    $request->atsApplication->raw = new PropertyAtsApplicationRaw();
+    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-04T13:56:12.670Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Status::Screening;
+    $request->atsApplication->status = Shared\Status::Screening;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-02T14:46:44.919Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -264,19 +258,19 @@ Remove an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsApplicationRequest();
+    $request = new Operations\RemoveAtsApplicationRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -314,33 +308,30 @@ Update an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest;
-use \Unified\Unified_to\Models\Shared\AtsApplication;
-use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\Status;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsApplicationRequest();
-    $request->atsApplication = new AtsApplication();
+    $request = new Operations\UpdateAtsApplicationRequest();
+    $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-22T07:14:38.941Z');
     $request->atsApplication->candidateId = 'string';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-04T09:23:07.789Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
-    $request->atsApplication->raw = new PropertyAtsApplicationRaw();
+    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-09T08:05:18.054Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Status::Rejected;
+    $request->atsApplication->status = Shared\Status::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T16:36:33.801Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

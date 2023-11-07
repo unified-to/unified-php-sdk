@@ -18,19 +18,19 @@ Retrieve enrichment information for a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListEnrichCompaniesRequest();
+    $request = new Operations\ListEnrichCompaniesRequest();
     $request->connectionId = 'string';
     $request->domain = 'dismal-cornmeal.org';
     $request->name = 'string';
@@ -69,19 +69,19 @@ Retrieve enrichment information for a person
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListEnrichPeopleRequest();
+    $request = new Operations\ListEnrichPeopleRequest();
     $request->connectionId = 'string';
     $request->email = 'Rosendo53@gmail.com';
     $request->linkedinUrl = 'string';

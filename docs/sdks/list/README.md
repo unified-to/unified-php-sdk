@@ -22,26 +22,24 @@ Create a list
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateMartechListRequest;
-use \Unified\Unified_to\Models\Shared\MarketingList;
-use \Unified\Unified_to\Models\Shared\PropertyMarketingListRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateMartechListRequest();
-    $request->marketingList = new MarketingList();
+    $request = new Operations\CreateMartechListRequest();
+    $request->marketingList = new Shared\MarketingList();
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
     $request->marketingList->name = 'string';
-    $request->marketingList->raw = new PropertyMarketingListRaw();
+    $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-15T11:18:03.715Z');
     $request->connectionId = 'string';
 
@@ -79,19 +77,19 @@ Retrieve a list
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetMartechListRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetMartechListRequest();
+    $request = new Operations\GetMartechListRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -132,19 +130,19 @@ List all lists
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListMartechListsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListMartechListsRequest();
+    $request = new Operations\ListMartechListsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -190,26 +188,24 @@ Update a list
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchMartechListRequest;
-use \Unified\Unified_to\Models\Shared\MarketingList;
-use \Unified\Unified_to\Models\Shared\PropertyMarketingListRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchMartechListRequest();
-    $request->marketingList = new MarketingList();
+    $request = new Operations\PatchMartechListRequest();
+    $request->marketingList = new Shared\MarketingList();
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
     $request->marketingList->name = 'string';
-    $request->marketingList->raw = new PropertyMarketingListRaw();
+    $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-07T20:57:43.081Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -248,19 +244,19 @@ Remove a list
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveMartechListRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveMartechListRequest();
+    $request = new Operations\RemoveMartechListRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -298,26 +294,24 @@ Update a list
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateMartechListRequest;
-use \Unified\Unified_to\Models\Shared\MarketingList;
-use \Unified\Unified_to\Models\Shared\PropertyMarketingListRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateMartechListRequest();
-    $request->marketingList = new MarketingList();
+    $request = new Operations\UpdateMartechListRequest();
+    $request->marketingList = new Shared\MarketingList();
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
     $request->marketingList->name = 'string';
-    $request->marketingList->raw = new PropertyMarketingListRaw();
+    $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T06:01:18.792Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

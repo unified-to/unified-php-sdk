@@ -22,41 +22,33 @@ Create a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsJobRequest;
-use \Unified\Unified_to\Models\Shared\AtsJob;
-use \Unified\Unified_to\Models\Shared\AtsAddress;
-use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\Frequency;
-use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\EmploymentType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
-use \Unified\Unified_to\Models\Shared\AtsJobStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsJobRequest();
-    $request->atsJob = new AtsJob();
+    $request = new Operations\CreateAtsJobRequest();
+    $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
-        new AtsAddress(),
+        new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-14T18:13:00.731Z');
     $request->atsJob->compensation = [
-        new AtsCompensation(),
+        new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-04T23:12:33.253Z');
     $request->atsJob->departments = [
         'string',
     ];
     $request->atsJob->description = 'Secured fault-tolerant internet solution';
-    $request->atsJob->employmentType = EmploymentType::FullTime;
+    $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -66,12 +58,12 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new PropertyAtsJobRaw();
+    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T17:38:42.004Z');
     $request->connectionId = 'string';
 
@@ -109,19 +101,19 @@ Retrieve a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsJobRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsJobRequest();
+    $request = new Operations\GetAtsJobRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -162,19 +154,19 @@ List all jobs
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsJobsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsJobsRequest();
+    $request = new Operations\ListAtsJobsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -220,41 +212,33 @@ Update a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsJobRequest;
-use \Unified\Unified_to\Models\Shared\AtsJob;
-use \Unified\Unified_to\Models\Shared\AtsAddress;
-use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\Frequency;
-use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\EmploymentType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
-use \Unified\Unified_to\Models\Shared\AtsJobStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsJobRequest();
-    $request->atsJob = new AtsJob();
+    $request = new Operations\PatchAtsJobRequest();
+    $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
-        new AtsAddress(),
+        new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-09T12:54:15.288Z');
     $request->atsJob->compensation = [
-        new AtsCompensation(),
+        new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T13:38:57.141Z');
     $request->atsJob->departments = [
         'string',
     ];
     $request->atsJob->description = 'Seamless analyzing definition';
-    $request->atsJob->employmentType = EmploymentType::Intern;
+    $request->atsJob->employmentType = Shared\EmploymentType::Intern;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -264,12 +248,12 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new PropertyAtsJobRaw();
+    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T04:38:28.121Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -308,19 +292,19 @@ Remove a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsJobRequest();
+    $request = new Operations\RemoveAtsJobRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -358,41 +342,33 @@ Update a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest;
-use \Unified\Unified_to\Models\Shared\AtsJob;
-use \Unified\Unified_to\Models\Shared\AtsAddress;
-use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\Frequency;
-use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\EmploymentType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
-use \Unified\Unified_to\Models\Shared\AtsJobStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsJobRequest();
-    $request->atsJob = new AtsJob();
+    $request = new Operations\UpdateAtsJobRequest();
+    $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
-        new AtsAddress(),
+        new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-20T17:16:11.353Z');
     $request->atsJob->compensation = [
-        new AtsCompensation(),
+        new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T15:51:57.038Z');
     $request->atsJob->departments = [
         'string',
     ];
     $request->atsJob->description = 'Implemented even-keeled parallelism';
-    $request->atsJob->employmentType = EmploymentType::FullTime;
+    $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -402,12 +378,12 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new PropertyAtsJobRaw();
+    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Closed;
+    $request->atsJob->status = Shared\AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T15:41:17.674Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

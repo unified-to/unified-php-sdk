@@ -22,28 +22,26 @@ Create a note
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest;
-use \Unified\Unified_to\Models\Shared\TicketingNote;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateTicketingNoteRequest();
-    $request->ticketingNote = new TicketingNote();
+    $request = new Operations\CreateTicketingNoteRequest();
+    $request->ticketingNote = new Shared\TicketingNote();
     $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-20T19:05:27.564Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Distributed 4th generation portal';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->connectionId = 'string';
@@ -82,19 +80,19 @@ Retrieve a note
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetTicketingNoteRequest();
+    $request = new Operations\GetTicketingNoteRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -135,19 +133,19 @@ List all notes
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListTicketingNotesRequest();
+    $request = new Operations\ListTicketingNotesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -194,28 +192,26 @@ Update a note
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest;
-use \Unified\Unified_to\Models\Shared\TicketingNote;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchTicketingNoteRequest();
-    $request->ticketingNote = new TicketingNote();
+    $request = new Operations\PatchTicketingNoteRequest();
+    $request->ticketingNote = new Shared\TicketingNote();
     $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T23:33:24.591Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Right-sized national productivity';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->connectionId = 'string';
@@ -255,19 +251,19 @@ Remove a note
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveTicketingNoteRequest();
+    $request = new Operations\RemoveTicketingNoteRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -305,28 +301,26 @@ Update a note
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest;
-use \Unified\Unified_to\Models\Shared\TicketingNote;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingNoteRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateTicketingNoteRequest();
-    $request->ticketingNote = new TicketingNote();
+    $request = new Operations\UpdateTicketingNoteRequest();
+    $request->ticketingNote = new Shared\TicketingNote();
     $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-15T06:19:14.487Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Versatile value-added utilisation';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->connectionId = 'string';

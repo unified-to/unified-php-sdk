@@ -22,23 +22,20 @@ Create a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest;
-use \Unified\Unified_to\Models\Shared\AccountingInvoice;
-use \Unified\Unified_to\Models\Shared\AccountingLineitem;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingInvoiceRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAccountingInvoiceRequest();
-    $request->accountingInvoice = new AccountingInvoice();
+    $request = new Operations\CreateAccountingInvoiceRequest();
+    $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6736.06;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-27T05:21:39.307Z');
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-05T14:28:47.244Z');
@@ -49,12 +46,12 @@ try {
     $request->accountingInvoice->id = '<ID>';
     $request->accountingInvoice->invoiceNumber = 'string';
     $request->accountingInvoice->lineitems = [
-        new AccountingLineitem(),
+        new Shared\AccountingLineitem(),
     ];
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 7142.37;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-15T12:33:41.208Z');
-    $request->accountingInvoice->raw = new PropertyAccountingInvoiceRaw();
+    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
     $request->accountingInvoice->refundAmount = 6572.32;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T06:26:36.842Z');
@@ -97,19 +94,19 @@ Retrieve a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAccountingInvoiceRequest();
+    $request = new Operations\GetAccountingInvoiceRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -150,19 +147,19 @@ List all invoices
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAccountingInvoicesRequest();
+    $request = new Operations\ListAccountingInvoicesRequest();
     $request->connectionId = 'string';
     $request->customerId = 'string';
     $request->fields = [
@@ -209,23 +206,20 @@ Update a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest;
-use \Unified\Unified_to\Models\Shared\AccountingInvoice;
-use \Unified\Unified_to\Models\Shared\AccountingLineitem;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingInvoiceRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAccountingInvoiceRequest();
-    $request->accountingInvoice = new AccountingInvoice();
+    $request = new Operations\PatchAccountingInvoiceRequest();
+    $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 7374.1;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T11:43:07.271Z');
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-13T18:03:55.091Z');
@@ -236,12 +230,12 @@ try {
     $request->accountingInvoice->id = '<ID>';
     $request->accountingInvoice->invoiceNumber = 'string';
     $request->accountingInvoice->lineitems = [
-        new AccountingLineitem(),
+        new Shared\AccountingLineitem(),
     ];
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 7810.81;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-02T12:28:18.830Z');
-    $request->accountingInvoice->raw = new PropertyAccountingInvoiceRaw();
+    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
     $request->accountingInvoice->refundAmount = 1152.38;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-23T04:43:31.245Z');
@@ -285,19 +279,19 @@ Remove a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAccountingInvoiceRequest();
+    $request = new Operations\RemoveAccountingInvoiceRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -335,23 +329,20 @@ Update a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest;
-use \Unified\Unified_to\Models\Shared\AccountingInvoice;
-use \Unified\Unified_to\Models\Shared\AccountingLineitem;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingInvoiceRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAccountingInvoiceRequest();
-    $request->accountingInvoice = new AccountingInvoice();
+    $request = new Operations\UpdateAccountingInvoiceRequest();
+    $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6974.28;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-02T19:25:29.417Z');
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-10T19:18:48.997Z');
@@ -362,12 +353,12 @@ try {
     $request->accountingInvoice->id = '<ID>';
     $request->accountingInvoice->invoiceNumber = 'string';
     $request->accountingInvoice->lineitems = [
-        new AccountingLineitem(),
+        new Shared\AccountingLineitem(),
     ];
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 3682.14;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-27T11:59:19.552Z');
-    $request->accountingInvoice->raw = new PropertyAccountingInvoiceRaw();
+    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
     $request->accountingInvoice->refundAmount = 2842.49;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-05T12:20:35.409Z');

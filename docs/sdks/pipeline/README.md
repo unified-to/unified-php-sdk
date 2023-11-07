@@ -22,29 +22,27 @@ Create a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest;
-use \Unified\Unified_to\Models\Shared\CrmPipeline;
-use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmPipelineRequest();
-    $request->crmPipeline = new CrmPipeline();
+    $request = new Operations\CreateCrmPipelineRequest();
+    $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-24T14:15:54.218Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 6254.97;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
+    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-01T06:10:18.007Z');
     $request->connectionId = 'string';
 
@@ -82,19 +80,19 @@ Retrieve a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmPipelineRequest();
+    $request = new Operations\GetCrmPipelineRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -135,19 +133,19 @@ List all pipelines
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmPipelinesRequest();
+    $request = new Operations\ListCrmPipelinesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -193,29 +191,27 @@ Update a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest;
-use \Unified\Unified_to\Models\Shared\CrmPipeline;
-use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmPipelineRequest();
-    $request->crmPipeline = new CrmPipeline();
+    $request = new Operations\PatchCrmPipelineRequest();
+    $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-26T17:19:01.949Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8620.92;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
+    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T12:55:27.421Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -254,19 +250,19 @@ Remove a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmPipelineRequest();
+    $request = new Operations\RemoveCrmPipelineRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -304,29 +300,27 @@ Update a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest;
-use \Unified\Unified_to\Models\Shared\CrmPipeline;
-use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmPipelineRequest();
-    $request->crmPipeline = new CrmPipeline();
+    $request = new Operations\UpdateCrmPipelineRequest();
+    $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-27T08:28:05.275Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8923.83;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
+    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-18T01:45:20.441Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

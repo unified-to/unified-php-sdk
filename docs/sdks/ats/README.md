@@ -52,33 +52,30 @@ Create an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest;
-use \Unified\Unified_to\Models\Shared\AtsApplication;
-use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\Status;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsApplicationRequest();
-    $request->atsApplication = new AtsApplication();
+    $request = new Operations\CreateAtsApplicationRequest();
+    $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-09T11:35:08.252Z');
     $request->atsApplication->candidateId = 'string';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-22T15:02:56.144Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
-    $request->atsApplication->raw = new PropertyAtsApplicationRaw();
+    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-18T22:03:17.799Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Status::FirstInterview;
+    $request->atsApplication->status = Shared\Status::FirstInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T10:02:31.440Z');
     $request->connectionId = 'string';
 
@@ -116,28 +113,21 @@ Create a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest;
-use \Unified\Unified_to\Models\Shared\AtsCandidate;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
-use \Unified\Unified_to\Models\Shared\AtsEmail;
-use \Unified\Unified_to\Models\Shared\AtsEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
-use \Unified\Unified_to\Models\Shared\AtsTelephone;
-use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsCandidateRequest();
-    $request->atsCandidate = new AtsCandidate();
-    $request->atsCandidate->address = new PropertyAtsCandidateAddress();
+    $request = new Operations\CreateAtsCandidateRequest();
+    $request->atsCandidate = new Shared\AtsCandidate();
+    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
     $request->atsCandidate->address->address2 = 'string';
     $request->atsCandidate->address->city = 'South Hill';
@@ -149,18 +139,18 @@ try {
     $request->atsCandidate->companyName = 'Pollich - Lubowitz';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-05T23:23:31.487Z');
     $request->atsCandidate->emails = [
-        new AtsEmail(),
+        new Shared\AtsEmail(),
     ];
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
     $request->atsCandidate->name = 'string';
-    $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
     ];
     $request->atsCandidate->telephones = [
-        new AtsTelephone(),
+        new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T18:21:52.157Z');
@@ -200,23 +190,20 @@ Create a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest;
-use \Unified\Unified_to\Models\Shared\AtsDocument;
-use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
-use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsDocumentRequest();
-    $request->atsDocument = new AtsDocument();
+    $request = new Operations\CreateAtsDocumentRequest();
+    $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-24T22:30:56.289Z');
@@ -224,8 +211,8 @@ try {
     $request->atsDocument->filename = 'mouse_per_missouri.mp4';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
-    $request->atsDocument->type = AtsDocumentType::OfferPacket;
+    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
+    $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-28T09:27:32.859Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
@@ -264,23 +251,20 @@ Create a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest;
-use \Unified\Unified_to\Models\Shared\AtsInterview;
-use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
-use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsInterviewRequest();
-    $request->atsInterview = new AtsInterview();
+    $request = new Operations\CreateAtsInterviewRequest();
+    $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-10T19:55:26.926Z');
@@ -289,9 +273,9 @@ try {
     $request->atsInterview->id = '<ID>';
     $request->atsInterview->jobId = 'string';
     $request->atsInterview->location = 'string';
-    $request->atsInterview->raw = new PropertyAtsInterviewRaw();
+    $request->atsInterview->raw = new Shared\PropertyAtsInterviewRaw();
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T09:10:03.014Z');
-    $request->atsInterview->status = AtsInterviewStatus::Complete;
+    $request->atsInterview->status = Shared\AtsInterviewStatus::Complete;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-07T14:25:56.954Z');
     $request->atsInterview->userIds = [
         'string',
@@ -332,41 +316,33 @@ Create a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsJobRequest;
-use \Unified\Unified_to\Models\Shared\AtsJob;
-use \Unified\Unified_to\Models\Shared\AtsAddress;
-use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\Frequency;
-use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\EmploymentType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
-use \Unified\Unified_to\Models\Shared\AtsJobStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsJobRequest();
-    $request->atsJob = new AtsJob();
+    $request = new Operations\CreateAtsJobRequest();
+    $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
-        new AtsAddress(),
+        new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-14T18:13:00.731Z');
     $request->atsJob->compensation = [
-        new AtsCompensation(),
+        new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-04T23:12:33.253Z');
     $request->atsJob->departments = [
         'string',
     ];
     $request->atsJob->description = 'Secured fault-tolerant internet solution';
-    $request->atsJob->employmentType = EmploymentType::FullTime;
+    $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -376,12 +352,12 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new PropertyAtsJobRaw();
+    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T17:38:42.004Z');
     $request->connectionId = 'string';
 
@@ -419,23 +395,20 @@ Create a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\Recommendation;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
+    $request = new Operations\CreateAtsScorecardRequest();
+    $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J';
@@ -444,8 +417,8 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = Recommendation::No;
+    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
+    $request->atsScorecard->recommendation = Shared\Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
     $request->connectionId = 'string';
 
@@ -483,19 +456,19 @@ Retrieve an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsApplicationRequest();
+    $request = new Operations\GetAtsApplicationRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -536,19 +509,19 @@ Retrieve a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsCandidateRequest();
+    $request = new Operations\GetAtsCandidateRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -589,19 +562,19 @@ Retrieve a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsDocumentRequest();
+    $request = new Operations\GetAtsDocumentRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -642,19 +615,19 @@ Retrieve a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsInterviewRequest();
+    $request = new Operations\GetAtsInterviewRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -695,19 +668,19 @@ Retrieve a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsJobRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsJobRequest();
+    $request = new Operations\GetAtsJobRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -748,19 +721,19 @@ Retrieve a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsScorecardRequest();
+    $request = new Operations\GetAtsScorecardRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -801,19 +774,19 @@ List all applications
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsApplicationsRequest();
+    $request = new Operations\ListAtsApplicationsRequest();
     $request->candidateId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -861,19 +834,19 @@ List all candidates
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsCandidatesRequest();
+    $request = new Operations\ListAtsCandidatesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -919,19 +892,19 @@ List all documents
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsDocumentsRequest();
+    $request = new Operations\ListAtsDocumentsRequest();
     $request->applicationId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -978,19 +951,19 @@ List all interviews
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsInterviewsRequest();
+    $request = new Operations\ListAtsInterviewsRequest();
     $request->applicationId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -1037,19 +1010,19 @@ List all jobs
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsJobsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsJobsRequest();
+    $request = new Operations\ListAtsJobsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -1095,19 +1068,19 @@ List all scorecards
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsScorecardsRequest();
+    $request = new Operations\ListAtsScorecardsRequest();
     $request->applicationId = 'string';
     $request->candidateId = 'string';
     $request->connectionId = 'string';
@@ -1157,33 +1130,30 @@ Update an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest;
-use \Unified\Unified_to\Models\Shared\AtsApplication;
-use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\Status;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsApplicationRequest();
-    $request->atsApplication = new AtsApplication();
+    $request = new Operations\PatchAtsApplicationRequest();
+    $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-15T04:58:14.527Z');
     $request->atsApplication->candidateId = 'string';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-06T05:50:03.360Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
-    $request->atsApplication->raw = new PropertyAtsApplicationRaw();
+    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-04T13:56:12.670Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Status::Screening;
+    $request->atsApplication->status = Shared\Status::Screening;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-02T14:46:44.919Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -1222,28 +1192,21 @@ Update a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest;
-use \Unified\Unified_to\Models\Shared\AtsCandidate;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
-use \Unified\Unified_to\Models\Shared\AtsEmail;
-use \Unified\Unified_to\Models\Shared\AtsEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
-use \Unified\Unified_to\Models\Shared\AtsTelephone;
-use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsCandidateRequest();
-    $request->atsCandidate = new AtsCandidate();
-    $request->atsCandidate->address = new PropertyAtsCandidateAddress();
+    $request = new Operations\PatchAtsCandidateRequest();
+    $request->atsCandidate = new Shared\AtsCandidate();
+    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
     $request->atsCandidate->address->address2 = 'string';
     $request->atsCandidate->address->city = 'Fort Bridget';
@@ -1255,18 +1218,18 @@ try {
     $request->atsCandidate->companyName = 'Donnelly - Bartell';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-06T12:13:20.908Z');
     $request->atsCandidate->emails = [
-        new AtsEmail(),
+        new Shared\AtsEmail(),
     ];
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
     $request->atsCandidate->name = 'string';
-    $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
     ];
     $request->atsCandidate->telephones = [
-        new AtsTelephone(),
+        new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-19T12:47:03.298Z');
@@ -1307,23 +1270,20 @@ Update a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest;
-use \Unified\Unified_to\Models\Shared\AtsDocument;
-use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
-use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsDocumentRequest();
-    $request->atsDocument = new AtsDocument();
+    $request = new Operations\PatchAtsDocumentRequest();
+    $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-01T09:34:15.248Z');
@@ -1331,8 +1291,8 @@ try {
     $request->atsDocument->filename = 'future_underpin.mp4v';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
-    $request->atsDocument->type = AtsDocumentType::OfferLetter;
+    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
+    $request->atsDocument->type = Shared\AtsDocumentType::OfferLetter;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-14T01:39:21.030Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
@@ -1372,23 +1332,20 @@ Update a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest;
-use \Unified\Unified_to\Models\Shared\AtsInterview;
-use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
-use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsInterviewRequest();
-    $request->atsInterview = new AtsInterview();
+    $request = new Operations\PatchAtsInterviewRequest();
+    $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-11T21:35:40.790Z');
@@ -1397,9 +1354,9 @@ try {
     $request->atsInterview->id = '<ID>';
     $request->atsInterview->jobId = 'string';
     $request->atsInterview->location = 'string';
-    $request->atsInterview->raw = new PropertyAtsInterviewRaw();
+    $request->atsInterview->raw = new Shared\PropertyAtsInterviewRaw();
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-10T02:01:13.488Z');
-    $request->atsInterview->status = AtsInterviewStatus::Complete;
+    $request->atsInterview->status = Shared\AtsInterviewStatus::Complete;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-18T09:12:18.749Z');
     $request->atsInterview->userIds = [
         'string',
@@ -1441,41 +1398,33 @@ Update a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsJobRequest;
-use \Unified\Unified_to\Models\Shared\AtsJob;
-use \Unified\Unified_to\Models\Shared\AtsAddress;
-use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\Frequency;
-use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\EmploymentType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
-use \Unified\Unified_to\Models\Shared\AtsJobStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsJobRequest();
-    $request->atsJob = new AtsJob();
+    $request = new Operations\PatchAtsJobRequest();
+    $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
-        new AtsAddress(),
+        new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-09T12:54:15.288Z');
     $request->atsJob->compensation = [
-        new AtsCompensation(),
+        new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T13:38:57.141Z');
     $request->atsJob->departments = [
         'string',
     ];
     $request->atsJob->description = 'Seamless analyzing definition';
-    $request->atsJob->employmentType = EmploymentType::Intern;
+    $request->atsJob->employmentType = Shared\EmploymentType::Intern;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -1485,12 +1434,12 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new PropertyAtsJobRaw();
+    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Open;
+    $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T04:38:28.121Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -1529,23 +1478,20 @@ Update a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\Recommendation;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
+    $request = new Operations\PatchAtsScorecardRequest();
+    $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support';
@@ -1554,8 +1500,8 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = Recommendation::Yes;
+    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
+    $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -1594,19 +1540,19 @@ Remove an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsApplicationRequest();
+    $request = new Operations\RemoveAtsApplicationRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -1644,19 +1590,19 @@ Remove a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsCandidateRequest();
+    $request = new Operations\RemoveAtsCandidateRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -1694,19 +1640,19 @@ Remove a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsDocumentRequest();
+    $request = new Operations\RemoveAtsDocumentRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -1744,19 +1690,19 @@ Remove a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsInterviewRequest();
+    $request = new Operations\RemoveAtsInterviewRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -1794,19 +1740,19 @@ Remove a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsJobRequest();
+    $request = new Operations\RemoveAtsJobRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -1844,19 +1790,19 @@ Remove a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsScorecardRequest();
+    $request = new Operations\RemoveAtsScorecardRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -1894,33 +1840,30 @@ Update an application
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest;
-use \Unified\Unified_to\Models\Shared\AtsApplication;
-use \Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw;
-use \Unified\Unified_to\Models\Shared\Status;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsApplicationRequest();
-    $request->atsApplication = new AtsApplication();
+    $request = new Operations\UpdateAtsApplicationRequest();
+    $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-22T07:14:38.941Z');
     $request->atsApplication->candidateId = 'string';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-04T09:23:07.789Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
-    $request->atsApplication->raw = new PropertyAtsApplicationRaw();
+    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-09T08:05:18.054Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Status::Rejected;
+    $request->atsApplication->status = Shared\Status::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T16:36:33.801Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -1959,28 +1902,21 @@ Update a candidate
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest;
-use \Unified\Unified_to\Models\Shared\AtsCandidate;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress;
-use \Unified\Unified_to\Models\Shared\AtsEmail;
-use \Unified\Unified_to\Models\Shared\AtsEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw;
-use \Unified\Unified_to\Models\Shared\AtsTelephone;
-use \Unified\Unified_to\Models\Shared\AtsTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsCandidateRequest();
-    $request->atsCandidate = new AtsCandidate();
-    $request->atsCandidate->address = new PropertyAtsCandidateAddress();
+    $request = new Operations\UpdateAtsCandidateRequest();
+    $request->atsCandidate = new Shared\AtsCandidate();
+    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
     $request->atsCandidate->address->address2 = 'string';
     $request->atsCandidate->address->city = 'Hintzborough';
@@ -1992,18 +1928,18 @@ try {
     $request->atsCandidate->companyName = 'O\'Reilly Inc';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-30T14:37:21.726Z');
     $request->atsCandidate->emails = [
-        new AtsEmail(),
+        new Shared\AtsEmail(),
     ];
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
     $request->atsCandidate->name = 'string';
-    $request->atsCandidate->raw = new PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
     ];
     $request->atsCandidate->telephones = [
-        new AtsTelephone(),
+        new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-18T01:19:42.316Z');
@@ -2044,23 +1980,20 @@ Update a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest;
-use \Unified\Unified_to\Models\Shared\AtsDocument;
-use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
-use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsDocumentRequest();
-    $request->atsDocument = new AtsDocument();
+    $request = new Operations\UpdateAtsDocumentRequest();
+    $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-05T13:01:49.006Z');
@@ -2068,8 +2001,8 @@ try {
     $request->atsDocument->filename = 'unbranded_reprehenderit.jpg';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
-    $request->atsDocument->type = AtsDocumentType::OfferPacket;
+    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
+    $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-02T17:00:21.700Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
@@ -2109,23 +2042,20 @@ Update a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest;
-use \Unified\Unified_to\Models\Shared\AtsInterview;
-use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
-use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsInterviewRequest();
-    $request->atsInterview = new AtsInterview();
+    $request = new Operations\UpdateAtsInterviewRequest();
+    $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-06T10:37:46.574Z');
@@ -2134,9 +2064,9 @@ try {
     $request->atsInterview->id = '<ID>';
     $request->atsInterview->jobId = 'string';
     $request->atsInterview->location = 'string';
-    $request->atsInterview->raw = new PropertyAtsInterviewRaw();
+    $request->atsInterview->raw = new Shared\PropertyAtsInterviewRaw();
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-05T12:38:13.018Z');
-    $request->atsInterview->status = AtsInterviewStatus::AwaitingFeedback;
+    $request->atsInterview->status = Shared\AtsInterviewStatus::AwaitingFeedback;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-01T14:26:12.006Z');
     $request->atsInterview->userIds = [
         'string',
@@ -2178,41 +2108,33 @@ Update a job
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest;
-use \Unified\Unified_to\Models\Shared\AtsJob;
-use \Unified\Unified_to\Models\Shared\AtsAddress;
-use \Unified\Unified_to\Models\Shared\AtsCompensation;
-use \Unified\Unified_to\Models\Shared\Frequency;
-use \Unified\Unified_to\Models\Shared\AtsCompensationType;
-use \Unified\Unified_to\Models\Shared\EmploymentType;
-use \Unified\Unified_to\Models\Shared\PropertyAtsJobRaw;
-use \Unified\Unified_to\Models\Shared\AtsJobStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsJobRequest();
-    $request->atsJob = new AtsJob();
+    $request = new Operations\UpdateAtsJobRequest();
+    $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
-        new AtsAddress(),
+        new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-20T17:16:11.353Z');
     $request->atsJob->compensation = [
-        new AtsCompensation(),
+        new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T15:51:57.038Z');
     $request->atsJob->departments = [
         'string',
     ];
     $request->atsJob->description = 'Implemented even-keeled parallelism';
-    $request->atsJob->employmentType = EmploymentType::FullTime;
+    $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
         'string',
     ];
@@ -2222,12 +2144,12 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new PropertyAtsJobRaw();
+    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = AtsJobStatus::Closed;
+    $request->atsJob->status = Shared\AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T15:41:17.674Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -2266,23 +2188,20 @@ Update a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\Recommendation;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
+    $request = new Operations\UpdateAtsScorecardRequest();
+    $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive';
@@ -2291,8 +2210,8 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = Recommendation::No;
+    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
+    $request->atsScorecard->recommendation = Shared\Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

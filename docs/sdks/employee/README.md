@@ -22,32 +22,21 @@ Create an employee
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest;
-use \Unified\Unified_to\Models\Shared\HrisEmployee;
-use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress;
-use \Unified\Unified_to\Models\Shared\HrisEmail;
-use \Unified\Unified_to\Models\Shared\HrisEmailType;
-use \Unified\Unified_to\Models\Shared\EmploymentStatus;
-use \Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType;
-use \Unified\Unified_to\Models\Shared\HrisEmployeeGender;
-use \Unified\Unified_to\Models\Shared\MaritalStatus;
-use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeRaw;
-use \Unified\Unified_to\Models\Shared\HrisTelephone;
-use \Unified\Unified_to\Models\Shared\HrisTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateHrisEmployeeRequest();
-    $request->hrisEmployee = new HrisEmployee();
-    $request->hrisEmployee->address = new PropertyHrisEmployeeAddress();
+    $request = new Operations\CreateHrisEmployeeRequest();
+    $request->hrisEmployee = new Shared\HrisEmployee();
+    $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
     $request->hrisEmployee->address->address1 = 'string';
     $request->hrisEmployee->address->address2 = 'string';
     $request->hrisEmployee->address->city = 'Armstrongborough';
@@ -62,23 +51,23 @@ try {
     $request->hrisEmployee->department = 'string';
     $request->hrisEmployee->division = 'string';
     $request->hrisEmployee->emails = [
-        new HrisEmail(),
+        new Shared\HrisEmail(),
     ];
     $request->hrisEmployee->employeeNumber = 'string';
-    $request->hrisEmployee->employmentStatus = EmploymentStatus::Active;
-    $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::FullTime;
-    $request->hrisEmployee->gender = HrisEmployeeGender::NonBinary;
+    $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Active;
+    $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::FullTime;
+    $request->hrisEmployee->gender = Shared\HrisEmployeeGender::NonBinary;
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-07T18:00:42.323Z');
     $request->hrisEmployee->id = '<ID>';
     $request->hrisEmployee->imageUrl = 'string';
     $request->hrisEmployee->languageLocale = 'string';
     $request->hrisEmployee->location = 'string';
     $request->hrisEmployee->managerId = 'string';
-    $request->hrisEmployee->maritalStatus = MaritalStatus::Married;
+    $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Married;
     $request->hrisEmployee->name = 'string';
-    $request->hrisEmployee->raw = new PropertyHrisEmployeeRaw();
+    $request->hrisEmployee->raw = new Shared\PropertyHrisEmployeeRaw();
     $request->hrisEmployee->telephones = [
-        new HrisTelephone(),
+        new Shared\HrisTelephone(),
     ];
     $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-17T20:25:22.475Z');
     $request->hrisEmployee->timezone = 'Pacific/Fiji';
@@ -120,19 +109,19 @@ Retrieve an employee
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetHrisEmployeeRequest();
+    $request = new Operations\GetHrisEmployeeRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -173,19 +162,19 @@ List all employees
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListHrisEmployeesRequest();
+    $request = new Operations\ListHrisEmployeesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -231,32 +220,21 @@ Update an employee
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest;
-use \Unified\Unified_to\Models\Shared\HrisEmployee;
-use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress;
-use \Unified\Unified_to\Models\Shared\HrisEmail;
-use \Unified\Unified_to\Models\Shared\HrisEmailType;
-use \Unified\Unified_to\Models\Shared\EmploymentStatus;
-use \Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType;
-use \Unified\Unified_to\Models\Shared\HrisEmployeeGender;
-use \Unified\Unified_to\Models\Shared\MaritalStatus;
-use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeRaw;
-use \Unified\Unified_to\Models\Shared\HrisTelephone;
-use \Unified\Unified_to\Models\Shared\HrisTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchHrisEmployeeRequest();
-    $request->hrisEmployee = new HrisEmployee();
-    $request->hrisEmployee->address = new PropertyHrisEmployeeAddress();
+    $request = new Operations\PatchHrisEmployeeRequest();
+    $request->hrisEmployee = new Shared\HrisEmployee();
+    $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
     $request->hrisEmployee->address->address1 = 'string';
     $request->hrisEmployee->address->address2 = 'string';
     $request->hrisEmployee->address->city = 'Zettaland';
@@ -271,23 +249,23 @@ try {
     $request->hrisEmployee->department = 'string';
     $request->hrisEmployee->division = 'string';
     $request->hrisEmployee->emails = [
-        new HrisEmail(),
+        new Shared\HrisEmail(),
     ];
     $request->hrisEmployee->employeeNumber = 'string';
-    $request->hrisEmployee->employmentStatus = EmploymentStatus::Inactive;
-    $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::PartTime;
-    $request->hrisEmployee->gender = HrisEmployeeGender::Male;
+    $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Inactive;
+    $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::PartTime;
+    $request->hrisEmployee->gender = Shared\HrisEmployeeGender::Male;
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-20T12:09:16.775Z');
     $request->hrisEmployee->id = '<ID>';
     $request->hrisEmployee->imageUrl = 'string';
     $request->hrisEmployee->languageLocale = 'string';
     $request->hrisEmployee->location = 'string';
     $request->hrisEmployee->managerId = 'string';
-    $request->hrisEmployee->maritalStatus = MaritalStatus::Single;
+    $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
     $request->hrisEmployee->name = 'string';
-    $request->hrisEmployee->raw = new PropertyHrisEmployeeRaw();
+    $request->hrisEmployee->raw = new Shared\PropertyHrisEmployeeRaw();
     $request->hrisEmployee->telephones = [
-        new HrisTelephone(),
+        new Shared\HrisTelephone(),
     ];
     $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-01T19:39:19.867Z');
     $request->hrisEmployee->timezone = 'Asia/Krasnoyarsk';
@@ -330,19 +308,19 @@ Remove an employee
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveHrisEmployeeRequest();
+    $request = new Operations\RemoveHrisEmployeeRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -380,32 +358,21 @@ Update an employee
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest;
-use \Unified\Unified_to\Models\Shared\HrisEmployee;
-use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress;
-use \Unified\Unified_to\Models\Shared\HrisEmail;
-use \Unified\Unified_to\Models\Shared\HrisEmailType;
-use \Unified\Unified_to\Models\Shared\EmploymentStatus;
-use \Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType;
-use \Unified\Unified_to\Models\Shared\HrisEmployeeGender;
-use \Unified\Unified_to\Models\Shared\MaritalStatus;
-use \Unified\Unified_to\Models\Shared\PropertyHrisEmployeeRaw;
-use \Unified\Unified_to\Models\Shared\HrisTelephone;
-use \Unified\Unified_to\Models\Shared\HrisTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateHrisEmployeeRequest();
-    $request->hrisEmployee = new HrisEmployee();
-    $request->hrisEmployee->address = new PropertyHrisEmployeeAddress();
+    $request = new Operations\UpdateHrisEmployeeRequest();
+    $request->hrisEmployee = new Shared\HrisEmployee();
+    $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
     $request->hrisEmployee->address->address1 = 'string';
     $request->hrisEmployee->address->address2 = 'string';
     $request->hrisEmployee->address->city = 'North Alfurt';
@@ -420,23 +387,23 @@ try {
     $request->hrisEmployee->department = 'string';
     $request->hrisEmployee->division = 'string';
     $request->hrisEmployee->emails = [
-        new HrisEmail(),
+        new Shared\HrisEmail(),
     ];
     $request->hrisEmployee->employeeNumber = 'string';
-    $request->hrisEmployee->employmentStatus = EmploymentStatus::Active;
-    $request->hrisEmployee->employmentType = HrisEmployeeEmploymentType::Volunteer;
-    $request->hrisEmployee->gender = HrisEmployeeGender::NonBinary;
+    $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Active;
+    $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::Volunteer;
+    $request->hrisEmployee->gender = Shared\HrisEmployeeGender::NonBinary;
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-20T10:49:05.298Z');
     $request->hrisEmployee->id = '<ID>';
     $request->hrisEmployee->imageUrl = 'string';
     $request->hrisEmployee->languageLocale = 'string';
     $request->hrisEmployee->location = 'string';
     $request->hrisEmployee->managerId = 'string';
-    $request->hrisEmployee->maritalStatus = MaritalStatus::Single;
+    $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
     $request->hrisEmployee->name = 'string';
-    $request->hrisEmployee->raw = new PropertyHrisEmployeeRaw();
+    $request->hrisEmployee->raw = new Shared\PropertyHrisEmployeeRaw();
     $request->hrisEmployee->telephones = [
-        new HrisTelephone(),
+        new Shared\HrisTelephone(),
     ];
     $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-21T01:25:42.937Z');
     $request->hrisEmployee->timezone = 'America/Phoenix';

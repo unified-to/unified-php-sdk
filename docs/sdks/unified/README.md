@@ -32,24 +32,19 @@ Create connection
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Shared\Connection;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionAuth;
-use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new Connection();
-    $request->auth = new PropertyConnectionAuth();
+    $request = new Shared\Connection();
+    $request->auth = new Shared\PropertyConnectionAuth();
     $request->auth->accessToken = 'string';
     $request->auth->apiUrl = 'string';
     $request->auth->appId = 'string';
@@ -64,7 +59,7 @@ try {
     $request->auth->expiresIn = 9168.17;
     $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T21:22:48.918Z');
     $request->auth->key = '<key>';
-    $request->auth->meta = new PropertyPropertyConnectionAuthMeta();
+    $request->auth->meta = new Shared\PropertyPropertyConnectionAuthMeta();
     $request->auth->name = 'string';
     $request->auth->otherAuthInfo = [
         'string',
@@ -78,7 +73,7 @@ try {
     $request->auth->tokenUrl = 'string';
     $request->authAwsArn = 'string';
     $request->categories = [
-        PropertyConnectionCategories::Auth,
+        Shared\PropertyConnectionCategories::Auth,
     ];
     $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-03T20:48:03.468Z');
     $request->environment = 'string';
@@ -87,7 +82,7 @@ try {
     $request->integrationType = 'string';
     $request->isPaused = false;
     $request->permissions = [
-        PropertyConnectionPermissions::AtsJobRead,
+        Shared\PropertyConnectionPermissions::AtsJobRead,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
     $request->workspaceId = 'string';
@@ -126,37 +121,33 @@ To maintain compatibility with the webhooks specification and Zapier webhooks, o
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest;
-use \Unified\Unified_to\Models\Shared\Webhook;
-use \Unified\Unified_to\Models\Shared\PropertyWebhookEvents;
-use \Unified\Unified_to\Models\Shared\ObjectType;
-use \Unified\Unified_to\Models\Operations\Events;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateUnifiedWebhookRequest();
-    $request->webhook = new Webhook();
+    $request = new Operations\CreateUnifiedWebhookRequest();
+    $request->webhook = new Shared\Webhook();
     $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-23T11:16:21.687Z');
     $request->webhook->connectionId = 'string';
     $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-21T14:22:58.807Z');
     $request->webhook->environment = 'string';
     $request->webhook->events = [
-        PropertyWebhookEvents::Updated,
+        Shared\PropertyWebhookEvents::Updated,
     ];
     $request->webhook->hookUrl = 'string';
     $request->webhook->id = '<ID>';
     $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 6142.55;
-    $request->webhook->objectType = ObjectType::AccountingPayment;
+    $request->webhook->objectType = Shared\ObjectType::AccountingPayment;
     $request->webhook->subscriptions = [
         'string',
     ];
@@ -164,7 +155,7 @@ try {
     $request->webhook->workspaceId = 'string';
     $request->connectionId = 'string';
     $request->events = [
-        Events::Created,
+        Operations\Events::Created,
     ];
     $request->object = 'string';
 
@@ -202,19 +193,19 @@ Retrieve specific API Call by its ID
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUnifiedApicallRequest();
+    $request = new Operations\GetUnifiedApicallRequest();
     $request->id = '<ID>';
 
     $response = $sdk->unified->getUnifiedApicall($request);
@@ -251,19 +242,19 @@ Retrieve connection
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUnifiedConnectionRequest();
+    $request = new Operations\GetUnifiedConnectionRequest();
     $request->id = '<ID>';
 
     $response = $sdk->unified->getUnifiedConnection($request);
@@ -300,19 +291,19 @@ Retrieve an integration
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUnifiedIntegrationRequest();
+    $request = new Operations\GetUnifiedIntegrationRequest();
     $request->integrationType = 'string';
 
     $response = $sdk->unified->getUnifiedIntegration($request);
@@ -349,20 +340,19 @@ Returns an authorization URL for the specified integration.  Once a successful a
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest;
-use \Unified\Unified_to\Models\Operations\Scopes;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUnifiedIntegrationAuthRequest();
+    $request = new Operations\GetUnifiedIntegrationAuthRequest();
     $request->env = 'string';
     $request->externalXref = 'string';
     $request->failureRedirect = 'string';
@@ -370,7 +360,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        Scopes::HrisEmployeeWrite,
+        Operations\Scopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -411,19 +401,19 @@ Retrieve webhook by its ID
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUnifiedWebhookRequest();
+    $request = new Operations\GetUnifiedWebhookRequest();
     $request->id = '<ID>';
 
     $response = $sdk->unified->getUnifiedWebhook($request);
@@ -460,19 +450,19 @@ Returns API Calls
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUnifiedApicallsRequest();
+    $request = new Operations\ListUnifiedApicallsRequest();
     $request->connectionId = 'string';
     $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-09T20:57:25.500Z');
     $request->env = 'string';
@@ -519,22 +509,21 @@ List all connections
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest;
-use \Unified\Unified_to\Models\Operations\Categories;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUnifiedConnectionsRequest();
+    $request = new Operations\ListUnifiedConnectionsRequest();
     $request->categories = [
-        Categories::Enrich,
+        Operations\Categories::Enrich,
     ];
     $request->env = 'string';
     $request->externalXref = 'string';
@@ -578,23 +567,22 @@ No authentication required as this is to be used by front-end interface
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest;
-use \Unified\Unified_to\Models\Operations\QueryParamCategories;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUnifiedIntegrationWorkspacesRequest();
+    $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        QueryParamCategories::Ticketing,
+        Operations\QueryParamCategories::Ticketing,
     ];
     $request->env = 'string';
     $request->limit = 9072.99;
@@ -637,23 +625,22 @@ Returns all integrations
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsQueryParamCategories;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUnifiedIntegrationsRequest();
+    $request = new Operations\ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
-        ListUnifiedIntegrationsQueryParamCategories::Auth,
+        Operations\ListUnifiedIntegrationsQueryParamCategories::Auth,
     ];
     $request->env = 'string';
     $request->limit = 7382.58;
@@ -697,19 +684,19 @@ Returns all registered webhooks
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUnifiedWebhooksRequest();
+    $request = new Operations\ListUnifiedWebhooksRequest();
     $request->env = 'string';
     $request->limit = 1162.24;
     $request->object = 'string';
@@ -752,26 +739,21 @@ Update connection
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest;
-use \Unified\Unified_to\Models\Shared\Connection;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionAuth;
-use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchUnifiedConnectionRequest();
-    $request->connection = new Connection();
-    $request->connection->auth = new PropertyConnectionAuth();
+    $request = new Operations\PatchUnifiedConnectionRequest();
+    $request->connection = new Shared\Connection();
+    $request->connection->auth = new Shared\PropertyConnectionAuth();
     $request->connection->auth->accessToken = 'string';
     $request->connection->auth->apiUrl = 'string';
     $request->connection->auth->appId = 'string';
@@ -786,7 +768,7 @@ try {
     $request->connection->auth->expiresIn = 6565.39;
     $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-09T01:57:38.348Z');
     $request->connection->auth->key = '<key>';
-    $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
+    $request->connection->auth->meta = new Shared\PropertyPropertyConnectionAuthMeta();
     $request->connection->auth->name = 'string';
     $request->connection->auth->otherAuthInfo = [
         'string',
@@ -800,7 +782,7 @@ try {
     $request->connection->auth->tokenUrl = 'string';
     $request->connection->authAwsArn = 'string';
     $request->connection->categories = [
-        PropertyConnectionCategories::Ats,
+        Shared\PropertyConnectionCategories::Ats,
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-09T04:29:35.007Z');
     $request->connection->environment = 'string';
@@ -809,7 +791,7 @@ try {
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::AccountingPaymentRead,
+        Shared\PropertyConnectionPermissions::AccountingPaymentRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->workspaceId = 'string';
@@ -849,19 +831,19 @@ Remove connection
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveUnifiedConnectionRequest();
+    $request = new Operations\RemoveUnifiedConnectionRequest();
     $request->id = '<ID>';
 
     $response = $sdk->unified->removeUnifiedConnection($request);
@@ -898,19 +880,19 @@ Remove webhook subscription
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveUnifiedWebhookRequest();
+    $request = new Operations\RemoveUnifiedWebhookRequest();
     $request->id = '<ID>';
 
     $response = $sdk->unified->removeUnifiedWebhook($request);
@@ -947,26 +929,21 @@ Update connection
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest;
-use \Unified\Unified_to\Models\Shared\Connection;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionAuth;
-use \Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionCategories;
-use \Unified\Unified_to\Models\Shared\PropertyConnectionPermissions;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateUnifiedConnectionRequest();
-    $request->connection = new Connection();
-    $request->connection->auth = new PropertyConnectionAuth();
+    $request = new Operations\UpdateUnifiedConnectionRequest();
+    $request->connection = new Shared\Connection();
+    $request->connection->auth = new Shared\PropertyConnectionAuth();
     $request->connection->auth->accessToken = 'string';
     $request->connection->auth->apiUrl = 'string';
     $request->connection->auth->appId = 'string';
@@ -981,7 +958,7 @@ try {
     $request->connection->auth->expiresIn = 7910.65;
     $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-13T00:55:19.590Z');
     $request->connection->auth->key = '<key>';
-    $request->connection->auth->meta = new PropertyPropertyConnectionAuthMeta();
+    $request->connection->auth->meta = new Shared\PropertyPropertyConnectionAuthMeta();
     $request->connection->auth->name = 'string';
     $request->connection->auth->otherAuthInfo = [
         'string',
@@ -995,7 +972,7 @@ try {
     $request->connection->auth->tokenUrl = 'string';
     $request->connection->authAwsArn = 'string';
     $request->connection->categories = [
-        PropertyConnectionCategories::Crm,
+        Shared\PropertyConnectionCategories::Crm,
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-09T18:14:10.859Z');
     $request->connection->environment = 'string';
@@ -1004,7 +981,7 @@ try {
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        PropertyConnectionPermissions::UcCallRead,
+        Shared\PropertyConnectionPermissions::UcCallRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T04:40:33.286Z');
     $request->connection->workspaceId = 'string';

@@ -22,23 +22,20 @@ Create a group
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest;
-use \Unified\Unified_to\Models\Shared\HrisGroup;
-use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
-use \Unified\Unified_to\Models\Shared\HrisGroupType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateHrisGroupRequest();
-    $request->hrisGroup = new HrisGroup();
+    $request = new Operations\CreateHrisGroupRequest();
+    $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-11T13:14:46.931Z');
     $request->hrisGroup->description = 'Self-enabling system-worthy collaboration';
     $request->hrisGroup->employeeIds = [
@@ -51,8 +48,8 @@ try {
     ];
     $request->hrisGroup->name = 'string';
     $request->hrisGroup->parentId = 'string';
-    $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Team;
+    $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
+    $request->hrisGroup->type = Shared\HrisGroupType::Team;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-10T00:20:29.321Z');
     $request->connectionId = 'string';
 
@@ -90,19 +87,19 @@ Retrieve a group
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetHrisGroupRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetHrisGroupRequest();
+    $request = new Operations\GetHrisGroupRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -143,19 +140,19 @@ List all groups
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListHrisGroupsRequest();
+    $request = new Operations\ListHrisGroupsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -201,23 +198,20 @@ Update a group
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest;
-use \Unified\Unified_to\Models\Shared\HrisGroup;
-use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
-use \Unified\Unified_to\Models\Shared\HrisGroupType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchHrisGroupRequest();
-    $request->hrisGroup = new HrisGroup();
+    $request = new Operations\PatchHrisGroupRequest();
+    $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-09T20:25:35.217Z');
     $request->hrisGroup->description = 'Compatible contextually-based local area network';
     $request->hrisGroup->employeeIds = [
@@ -230,8 +224,8 @@ try {
     ];
     $request->hrisGroup->name = 'string';
     $request->hrisGroup->parentId = 'string';
-    $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Division;
+    $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
+    $request->hrisGroup->type = Shared\HrisGroupType::Division;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-23T09:49:13.425Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -270,19 +264,19 @@ Remove a group
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveHrisGroupRequest();
+    $request = new Operations\RemoveHrisGroupRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -320,23 +314,20 @@ Update a group
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest;
-use \Unified\Unified_to\Models\Shared\HrisGroup;
-use \Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw;
-use \Unified\Unified_to\Models\Shared\HrisGroupType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateHrisGroupRequest();
-    $request->hrisGroup = new HrisGroup();
+    $request = new Operations\UpdateHrisGroupRequest();
+    $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-06T17:42:02.933Z');
     $request->hrisGroup->description = 'Integrated empowering productivity';
     $request->hrisGroup->employeeIds = [
@@ -349,8 +340,8 @@ try {
     ];
     $request->hrisGroup->name = 'string';
     $request->hrisGroup->parentId = 'string';
-    $request->hrisGroup->raw = new PropertyHrisGroupRaw();
-    $request->hrisGroup->type = HrisGroupType::Team;
+    $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
+    $request->hrisGroup->type = Shared\HrisGroupType::Team;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-12T15:58:06.273Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

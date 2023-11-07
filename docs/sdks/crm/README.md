@@ -58,28 +58,21 @@ Create a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest;
-use \Unified\Unified_to\Models\Shared\CrmCompany;
-use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmCompanyRequest();
-    $request->crmCompany = new CrmCompany();
-    $request->crmCompany->address = new PropertyCrmCompanyAddress();
+    $request = new Operations\CreateCrmCompanyRequest();
+    $request->crmCompany = new Shared\CrmCompany();
+    $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
     $request->crmCompany->address->address2 = 'string';
     $request->crmCompany->address->city = 'Joanieworth';
@@ -93,17 +86,17 @@ try {
         'string',
     ];
     $request->crmCompany->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
     $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'string';
-    $request->crmCompany->raw = new PropertyCrmCompanyRaw();
+    $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
         'string',
     ];
     $request->crmCompany->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-13T01:08:44.894Z');
     $request->crmCompany->websites = [
@@ -145,28 +138,21 @@ Create a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmContactRequest;
-use \Unified\Unified_to\Models\Shared\CrmContact;
-use \Unified\Unified_to\Models\Shared\PropertyCrmContactAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmContactRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmContactRequest();
-    $request->crmContact = new CrmContact();
-    $request->crmContact->address = new PropertyCrmContactAddress();
+    $request = new Operations\CreateCrmContactRequest();
+    $request->crmContact = new Shared\CrmContact();
+    $request->crmContact->address = new Shared\PropertyCrmContactAddress();
     $request->crmContact->address->address1 = 'string';
     $request->crmContact->address->address2 = 'string';
     $request->crmContact->address->city = 'Steuberview';
@@ -184,13 +170,13 @@ try {
         'string',
     ];
     $request->crmContact->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmContact->id = '<ID>';
     $request->crmContact->name = 'string';
-    $request->crmContact->raw = new PropertyCrmContactRaw();
+    $request->crmContact->raw = new Shared\PropertyCrmContactRaw();
     $request->crmContact->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-21T23:24:52.050Z');
@@ -230,22 +216,20 @@ Create a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmDealRequest;
-use \Unified\Unified_to\Models\Shared\CrmDeal;
-use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmDealRequest();
-    $request->crmDeal = new CrmDeal();
+    $request = new Operations\CreateCrmDealRequest();
+    $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 1917.45;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-27T15:05:01.017Z');
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-23T03:04:45.267Z');
@@ -255,7 +239,7 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 1087.81;
-    $request->crmDeal->raw = new PropertyCrmDealRaw();
+    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
@@ -299,29 +283,21 @@ Create a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmEventRequest;
-use \Unified\Unified_to\Models\Shared\CrmEvent;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventCall;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventEmail;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventNote;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
-use \Unified\Unified_to\Models\Shared\CrmEventType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmEventRequest();
-    $request->crmEvent = new CrmEvent();
-    $request->crmEvent->call = new PropertyCrmEventCall();
+    $request = new Operations\CreateCrmEventRequest();
+    $request->crmEvent = new Shared\CrmEvent();
+    $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Grass-roots intangible superstructure';
     $request->crmEvent->call->duration = 6684.26;
     $request->crmEvent->companyIds = [
@@ -334,7 +310,7 @@ try {
     $request->crmEvent->dealIds = [
         'string',
     ];
-    $request->crmEvent->email = new PropertyCrmEventEmail();
+    $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -345,19 +321,19 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
-    $request->crmEvent->meeting = new PropertyCrmEventMeeting();
+    $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Synergized systemic adapter';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-19T06:42:51.348Z');
     $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-06T14:40:43.070Z');
     $request->crmEvent->meeting->title = 'string';
-    $request->crmEvent->note = new PropertyCrmEventNote();
+    $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Horizontal zero administration architecture';
-    $request->crmEvent->raw = new PropertyCrmEventRaw();
-    $request->crmEvent->task = new PropertyCrmEventTask();
+    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Extended 5th generation artificial intelligence';
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = 'string';
-    $request->crmEvent->type = CrmEventType::Task;
+    $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-14T14:31:08.257Z');
     $request->connectionId = 'string';
 
@@ -395,22 +371,20 @@ Create a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmFileRequest;
-use \Unified\Unified_to\Models\Shared\CrmFile;
-use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmFileRequest();
-    $request->crmFile = new CrmFile();
+    $request = new Operations\CreateCrmFileRequest();
+    $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
@@ -424,7 +398,7 @@ try {
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
-    $request->crmFile->raw = new PropertyCrmFileRaw();
+    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T12:27:57.377Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
@@ -463,28 +437,21 @@ Create a lead
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest;
-use \Unified\Unified_to\Models\Shared\CrmLead;
-use \Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmLeadRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmLeadRequest();
-    $request->crmLead = new CrmLead();
-    $request->crmLead->address = new PropertyCrmLeadAddress();
+    $request = new Operations\CreateCrmLeadRequest();
+    $request->crmLead = new Shared\CrmLead();
+    $request->crmLead->address = new Shared\PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'string';
     $request->crmLead->address->address2 = 'string';
     $request->crmLead->address->city = 'Lindboro';
@@ -498,15 +465,15 @@ try {
     $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-02T12:39:30.878Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
     $request->crmLead->isActive = false;
     $request->crmLead->name = 'string';
-    $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
     $request->crmLead->source = 'string';
     $request->crmLead->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-14T20:21:45.580Z');
     $request->crmLead->userId = 'string';
@@ -546,29 +513,27 @@ Create a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest;
-use \Unified\Unified_to\Models\Shared\CrmPipeline;
-use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmPipelineRequest();
-    $request->crmPipeline = new CrmPipeline();
+    $request = new Operations\CreateCrmPipelineRequest();
+    $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-24T14:15:54.218Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 6254.97;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
+    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-01T06:10:18.007Z');
     $request->connectionId = 'string';
 
@@ -606,19 +571,19 @@ Retrieve a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmCompanyRequest();
+    $request = new Operations\GetCrmCompanyRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -659,19 +624,19 @@ Retrieve a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmContactRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmContactRequest();
+    $request = new Operations\GetCrmContactRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -712,19 +677,19 @@ Retrieve a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmDealRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmDealRequest();
+    $request = new Operations\GetCrmDealRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -765,19 +730,19 @@ Retrieve a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmEventRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmEventRequest();
+    $request = new Operations\GetCrmEventRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -818,19 +783,19 @@ Retrieve a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmFileRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmFileRequest();
+    $request = new Operations\GetCrmFileRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -871,19 +836,19 @@ Retrieve a lead
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmLeadRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmLeadRequest();
+    $request = new Operations\GetCrmLeadRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -924,19 +889,19 @@ Retrieve a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmPipelineRequest();
+    $request = new Operations\GetCrmPipelineRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -977,19 +942,19 @@ List all companies
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmCompaniesRequest();
+    $request = new Operations\ListCrmCompaniesRequest();
     $request->connectionId = 'string';
     $request->contactId = 'string';
     $request->dealId = 'string';
@@ -1037,19 +1002,19 @@ List all contacts
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmContactsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmContactsRequest();
+    $request = new Operations\ListCrmContactsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->dealId = 'string';
@@ -1097,19 +1062,19 @@ List all deals
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmDealsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmDealsRequest();
+    $request = new Operations\ListCrmDealsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -1157,19 +1122,19 @@ List all events
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmEventsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmEventsRequest();
+    $request = new Operations\ListCrmEventsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -1218,19 +1183,19 @@ List all files
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmFilesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmFilesRequest();
+    $request = new Operations\ListCrmFilesRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -1279,19 +1244,19 @@ List all leads
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmLeadsRequest();
+    $request = new Operations\ListCrmLeadsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -1337,19 +1302,19 @@ List all pipelines
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmPipelinesRequest();
+    $request = new Operations\ListCrmPipelinesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -1395,28 +1360,21 @@ Update a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest;
-use \Unified\Unified_to\Models\Shared\CrmCompany;
-use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmCompanyRequest();
-    $request->crmCompany = new CrmCompany();
-    $request->crmCompany->address = new PropertyCrmCompanyAddress();
+    $request = new Operations\PatchCrmCompanyRequest();
+    $request->crmCompany = new Shared\CrmCompany();
+    $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
     $request->crmCompany->address->address2 = 'string';
     $request->crmCompany->address->city = 'Rempelchester';
@@ -1430,17 +1388,17 @@ try {
         'string',
     ];
     $request->crmCompany->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
     $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'string';
-    $request->crmCompany->raw = new PropertyCrmCompanyRaw();
+    $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
         'string',
     ];
     $request->crmCompany->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-09T20:12:23.736Z');
     $request->crmCompany->websites = [
@@ -1483,28 +1441,21 @@ Update a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmContactRequest;
-use \Unified\Unified_to\Models\Shared\CrmContact;
-use \Unified\Unified_to\Models\Shared\PropertyCrmContactAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmContactRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmContactRequest();
-    $request->crmContact = new CrmContact();
-    $request->crmContact->address = new PropertyCrmContactAddress();
+    $request = new Operations\PatchCrmContactRequest();
+    $request->crmContact = new Shared\CrmContact();
+    $request->crmContact->address = new Shared\PropertyCrmContactAddress();
     $request->crmContact->address->address1 = 'string';
     $request->crmContact->address->address2 = 'string';
     $request->crmContact->address->city = 'North Anne';
@@ -1522,13 +1473,13 @@ try {
         'string',
     ];
     $request->crmContact->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmContact->id = '<ID>';
     $request->crmContact->name = 'string';
-    $request->crmContact->raw = new PropertyCrmContactRaw();
+    $request->crmContact->raw = new Shared\PropertyCrmContactRaw();
     $request->crmContact->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T14:54:45.741Z');
@@ -1569,22 +1520,20 @@ Update a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmDealRequest;
-use \Unified\Unified_to\Models\Shared\CrmDeal;
-use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmDealRequest();
-    $request->crmDeal = new CrmDeal();
+    $request = new Operations\PatchCrmDealRequest();
+    $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 9874.05;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T08:48:03.715Z');
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T07:03:46.302Z');
@@ -1594,7 +1543,7 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 9555.58;
-    $request->crmDeal->raw = new PropertyCrmDealRaw();
+    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
@@ -1639,29 +1588,21 @@ Update a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmEventRequest;
-use \Unified\Unified_to\Models\Shared\CrmEvent;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventCall;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventEmail;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventNote;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
-use \Unified\Unified_to\Models\Shared\CrmEventType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmEventRequest();
-    $request->crmEvent = new CrmEvent();
-    $request->crmEvent->call = new PropertyCrmEventCall();
+    $request = new Operations\PatchCrmEventRequest();
+    $request->crmEvent = new Shared\CrmEvent();
+    $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Multi-layered well-modulated middleware';
     $request->crmEvent->call->duration = 8718.07;
     $request->crmEvent->companyIds = [
@@ -1674,7 +1615,7 @@ try {
     $request->crmEvent->dealIds = [
         'string',
     ];
-    $request->crmEvent->email = new PropertyCrmEventEmail();
+    $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -1685,19 +1626,19 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
-    $request->crmEvent->meeting = new PropertyCrmEventMeeting();
+    $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Horizontal uniform access';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T03:29:57.620Z');
     $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-11T20:55:56.558Z');
     $request->crmEvent->meeting->title = 'string';
-    $request->crmEvent->note = new PropertyCrmEventNote();
+    $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Exclusive non-volatile conglomeration';
-    $request->crmEvent->raw = new PropertyCrmEventRaw();
-    $request->crmEvent->task = new PropertyCrmEventTask();
+    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Cross-platform bi-directional open architecture';
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = 'string';
-    $request->crmEvent->type = CrmEventType::Task;
+    $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-30T20:46:48.999Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -1736,22 +1677,20 @@ Update a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmFileRequest;
-use \Unified\Unified_to\Models\Shared\CrmFile;
-use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmFileRequest();
-    $request->crmFile = new CrmFile();
+    $request = new Operations\PatchCrmFileRequest();
+    $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
@@ -1765,7 +1704,7 @@ try {
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
-    $request->crmFile->raw = new PropertyCrmFileRaw();
+    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-07T04:39:27.375Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
@@ -1805,28 +1744,21 @@ Update a lead
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest;
-use \Unified\Unified_to\Models\Shared\CrmLead;
-use \Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmLeadRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmLeadRequest();
-    $request->crmLead = new CrmLead();
-    $request->crmLead->address = new PropertyCrmLeadAddress();
+    $request = new Operations\PatchCrmLeadRequest();
+    $request->crmLead = new Shared\CrmLead();
+    $request->crmLead->address = new Shared\PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'string';
     $request->crmLead->address->address2 = 'string';
     $request->crmLead->address->city = 'Caseyberg';
@@ -1840,15 +1772,15 @@ try {
     $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-29T09:14:32.818Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
     $request->crmLead->isActive = false;
     $request->crmLead->name = 'string';
-    $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
     $request->crmLead->source = 'string';
     $request->crmLead->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-11T14:24:44.509Z');
     $request->crmLead->userId = 'string';
@@ -1889,29 +1821,27 @@ Update a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest;
-use \Unified\Unified_to\Models\Shared\CrmPipeline;
-use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmPipelineRequest();
-    $request->crmPipeline = new CrmPipeline();
+    $request = new Operations\PatchCrmPipelineRequest();
+    $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-26T17:19:01.949Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8620.92;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
+    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T12:55:27.421Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -1950,19 +1880,19 @@ Remove a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmCompanyRequest();
+    $request = new Operations\RemoveCrmCompanyRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -2000,19 +1930,19 @@ Remove a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmContactRequest();
+    $request = new Operations\RemoveCrmContactRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -2050,19 +1980,19 @@ Remove a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmDealRequest();
+    $request = new Operations\RemoveCrmDealRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -2100,19 +2030,19 @@ Remove a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmEventRequest();
+    $request = new Operations\RemoveCrmEventRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -2150,19 +2080,19 @@ Remove a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmFileRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmFileRequest();
+    $request = new Operations\RemoveCrmFileRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -2200,19 +2130,19 @@ Remove a lead
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmLeadRequest();
+    $request = new Operations\RemoveCrmLeadRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -2250,19 +2180,19 @@ Remove a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmPipelineRequest();
+    $request = new Operations\RemoveCrmPipelineRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -2300,28 +2230,21 @@ Update a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest;
-use \Unified\Unified_to\Models\Shared\CrmCompany;
-use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmCompanyRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmCompanyRequest();
-    $request->crmCompany = new CrmCompany();
-    $request->crmCompany->address = new PropertyCrmCompanyAddress();
+    $request = new Operations\UpdateCrmCompanyRequest();
+    $request->crmCompany = new Shared\CrmCompany();
+    $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
     $request->crmCompany->address->address2 = 'string';
     $request->crmCompany->address->city = 'Margeshire';
@@ -2335,17 +2258,17 @@ try {
         'string',
     ];
     $request->crmCompany->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmCompany->id = '<ID>';
     $request->crmCompany->isActive = false;
     $request->crmCompany->name = 'string';
-    $request->crmCompany->raw = new PropertyCrmCompanyRaw();
+    $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
         'string',
     ];
     $request->crmCompany->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-12T06:06:45.272Z');
     $request->crmCompany->websites = [
@@ -2388,28 +2311,21 @@ Update a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmContactRequest;
-use \Unified\Unified_to\Models\Shared\CrmContact;
-use \Unified\Unified_to\Models\Shared\PropertyCrmContactAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmContactRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmContactRequest();
-    $request->crmContact = new CrmContact();
-    $request->crmContact->address = new PropertyCrmContactAddress();
+    $request = new Operations\UpdateCrmContactRequest();
+    $request->crmContact = new Shared\CrmContact();
+    $request->crmContact->address = new Shared\PropertyCrmContactAddress();
     $request->crmContact->address->address1 = 'string';
     $request->crmContact->address->address2 = 'string';
     $request->crmContact->address->city = 'Fort Carlee';
@@ -2427,13 +2343,13 @@ try {
         'string',
     ];
     $request->crmContact->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmContact->id = '<ID>';
     $request->crmContact->name = 'string';
-    $request->crmContact->raw = new PropertyCrmContactRaw();
+    $request->crmContact->raw = new Shared\PropertyCrmContactRaw();
     $request->crmContact->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-02T04:38:24.473Z');
@@ -2474,22 +2390,20 @@ Update a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest;
-use \Unified\Unified_to\Models\Shared\CrmDeal;
-use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmDealRequest();
-    $request->crmDeal = new CrmDeal();
+    $request = new Operations\UpdateCrmDealRequest();
+    $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 854.3;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T07:04:58.998Z');
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-20T16:49:31.989Z');
@@ -2499,7 +2413,7 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 2970.01;
-    $request->crmDeal->raw = new PropertyCrmDealRaw();
+    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
@@ -2544,29 +2458,21 @@ Update a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest;
-use \Unified\Unified_to\Models\Shared\CrmEvent;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventCall;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventEmail;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventNote;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
-use \Unified\Unified_to\Models\Shared\CrmEventType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmEventRequest();
-    $request->crmEvent = new CrmEvent();
-    $request->crmEvent->call = new PropertyCrmEventCall();
+    $request = new Operations\UpdateCrmEventRequest();
+    $request->crmEvent = new Shared\CrmEvent();
+    $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Intuitive incremental orchestration';
     $request->crmEvent->call->duration = 4665.81;
     $request->crmEvent->companyIds = [
@@ -2579,7 +2485,7 @@ try {
     $request->crmEvent->dealIds = [
         'string',
     ];
-    $request->crmEvent->email = new PropertyCrmEventEmail();
+    $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -2590,19 +2496,19 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
-    $request->crmEvent->meeting = new PropertyCrmEventMeeting();
+    $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Optional real-time process improvement';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-22T11:59:17.612Z');
     $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-03T21:08:02.575Z');
     $request->crmEvent->meeting->title = 'string';
-    $request->crmEvent->note = new PropertyCrmEventNote();
+    $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Switchable zero defect approach';
-    $request->crmEvent->raw = new PropertyCrmEventRaw();
-    $request->crmEvent->task = new PropertyCrmEventTask();
+    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Pre-emptive system-worthy open system';
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = 'string';
-    $request->crmEvent->type = CrmEventType::Email;
+    $request->crmEvent->type = Shared\CrmEventType::Email;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-26T08:01:25.242Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -2641,22 +2547,20 @@ Update a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmFileRequest;
-use \Unified\Unified_to\Models\Shared\CrmFile;
-use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmFileRequest();
-    $request->crmFile = new CrmFile();
+    $request = new Operations\UpdateCrmFileRequest();
+    $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
@@ -2670,7 +2574,7 @@ try {
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
-    $request->crmFile->raw = new PropertyCrmFileRaw();
+    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-11T08:15:48.719Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
@@ -2710,28 +2614,21 @@ Update a lead
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest;
-use \Unified\Unified_to\Models\Shared\CrmLead;
-use \Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress;
-use \Unified\Unified_to\Models\Shared\CrmEmail;
-use \Unified\Unified_to\Models\Shared\CrmEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyCrmLeadRaw;
-use \Unified\Unified_to\Models\Shared\CrmTelephone;
-use \Unified\Unified_to\Models\Shared\CrmTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmLeadRequest();
-    $request->crmLead = new CrmLead();
-    $request->crmLead->address = new PropertyCrmLeadAddress();
+    $request = new Operations\UpdateCrmLeadRequest();
+    $request->crmLead = new Shared\CrmLead();
+    $request->crmLead->address = new Shared\PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'string';
     $request->crmLead->address->address2 = 'string';
     $request->crmLead->address->city = 'West Vernerworth';
@@ -2745,15 +2642,15 @@ try {
     $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-24T09:40:13.817Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
-        new CrmEmail(),
+        new Shared\CrmEmail(),
     ];
     $request->crmLead->id = '<ID>';
     $request->crmLead->isActive = false;
     $request->crmLead->name = 'string';
-    $request->crmLead->raw = new PropertyCrmLeadRaw();
+    $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
     $request->crmLead->source = 'string';
     $request->crmLead->telephones = [
-        new CrmTelephone(),
+        new Shared\CrmTelephone(),
     ];
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-13T01:50:20.665Z');
     $request->crmLead->userId = 'string';
@@ -2794,29 +2691,27 @@ Update a pipeline
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest;
-use \Unified\Unified_to\Models\Shared\CrmPipeline;
-use \Unified\Unified_to\Models\Shared\PropertyCrmPipelineRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmPipelineRequest();
-    $request->crmPipeline = new CrmPipeline();
+    $request = new Operations\UpdateCrmPipelineRequest();
+    $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-27T08:28:05.275Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8923.83;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new PropertyCrmPipelineRaw();
+    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-18T01:45:20.441Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

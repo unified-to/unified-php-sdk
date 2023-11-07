@@ -21,23 +21,22 @@ Passthrough POST
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreatePassthroughRequest;
-use \Unified\Unified_to\Models\Shared\Undefined;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreatePassthroughRequest();
+    $request = new Operations\CreatePassthroughRequest();
     $request->connectionId = 'string';
     $request->path = '/etc/periodic';
-    $request->undefined = new Undefined();
+    $request->undefined = new Shared\Undefined();
 
     $response = $sdk->passthrough->createPassthrough($request);
 
@@ -73,19 +72,19 @@ Passthrough GET
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListPassthroughsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListPassthroughsRequest();
+    $request = new Operations\ListPassthroughsRequest();
     $request->connectionId = 'string';
     $request->path = '/selinux';
 
@@ -123,23 +122,22 @@ Passthrough PUT
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchPassthroughRequest;
-use \Unified\Unified_to\Models\Shared\Undefined;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchPassthroughRequest();
+    $request = new Operations\PatchPassthroughRequest();
     $request->connectionId = 'string';
     $request->path = '/mnt';
-    $request->undefined = new Undefined();
+    $request->undefined = new Shared\Undefined();
 
     $response = $sdk->passthrough->patchPassthrough($request);
 
@@ -175,19 +173,19 @@ Passthrough DELETE
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemovePassthroughRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemovePassthroughRequest();
+    $request = new Operations\RemovePassthroughRequest();
     $request->connectionId = 'string';
     $request->path = '/Applications';
 
@@ -225,23 +223,22 @@ Passthrough PUT
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdatePassthroughRequest;
-use \Unified\Unified_to\Models\Shared\Undefined;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdatePassthroughRequest();
+    $request = new Operations\UpdatePassthroughRequest();
     $request->connectionId = 'string';
     $request->path = '/dev';
-    $request->undefined = new Undefined();
+    $request->undefined = new Shared\Undefined();
 
     $response = $sdk->passthrough->updatePassthrough($request);
 

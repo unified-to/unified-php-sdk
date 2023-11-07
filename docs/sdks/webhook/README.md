@@ -20,37 +20,33 @@ To maintain compatibility with the webhooks specification and Zapier webhooks, o
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest;
-use \Unified\Unified_to\Models\Shared\Webhook;
-use \Unified\Unified_to\Models\Shared\PropertyWebhookEvents;
-use \Unified\Unified_to\Models\Shared\ObjectType;
-use \Unified\Unified_to\Models\Operations\Events;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateUnifiedWebhookRequest();
-    $request->webhook = new Webhook();
+    $request = new Operations\CreateUnifiedWebhookRequest();
+    $request->webhook = new Shared\Webhook();
     $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-23T11:16:21.687Z');
     $request->webhook->connectionId = 'string';
     $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-21T14:22:58.807Z');
     $request->webhook->environment = 'string';
     $request->webhook->events = [
-        PropertyWebhookEvents::Updated,
+        Shared\PropertyWebhookEvents::Updated,
     ];
     $request->webhook->hookUrl = 'string';
     $request->webhook->id = '<ID>';
     $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 6142.55;
-    $request->webhook->objectType = ObjectType::AccountingPayment;
+    $request->webhook->objectType = Shared\ObjectType::AccountingPayment;
     $request->webhook->subscriptions = [
         'string',
     ];
@@ -58,7 +54,7 @@ try {
     $request->webhook->workspaceId = 'string';
     $request->connectionId = 'string';
     $request->events = [
-        Events::Created,
+        Operations\Events::Created,
     ];
     $request->object = 'string';
 
@@ -96,19 +92,19 @@ Retrieve webhook by its ID
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUnifiedWebhookRequest();
+    $request = new Operations\GetUnifiedWebhookRequest();
     $request->id = '<ID>';
 
     $response = $sdk->webhook->getUnifiedWebhook($request);
@@ -145,19 +141,19 @@ Returns all registered webhooks
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUnifiedWebhooksRequest();
+    $request = new Operations\ListUnifiedWebhooksRequest();
     $request->env = 'string';
     $request->limit = 1162.24;
     $request->object = 'string';
@@ -200,19 +196,19 @@ Remove webhook subscription
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveUnifiedWebhookRequest();
+    $request = new Operations\RemoveUnifiedWebhookRequest();
     $request->id = '<ID>';
 
     $response = $sdk->webhook->removeUnifiedWebhook($request);

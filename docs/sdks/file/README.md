@@ -22,22 +22,20 @@ Create a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmFileRequest;
-use \Unified\Unified_to\Models\Shared\CrmFile;
-use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmFileRequest();
-    $request->crmFile = new CrmFile();
+    $request = new Operations\CreateCrmFileRequest();
+    $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
@@ -51,7 +49,7 @@ try {
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
-    $request->crmFile->raw = new PropertyCrmFileRaw();
+    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T12:27:57.377Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
@@ -90,19 +88,19 @@ Retrieve a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmFileRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmFileRequest();
+    $request = new Operations\GetCrmFileRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -143,19 +141,19 @@ List all files
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmFilesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmFilesRequest();
+    $request = new Operations\ListCrmFilesRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -204,22 +202,20 @@ Update a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmFileRequest;
-use \Unified\Unified_to\Models\Shared\CrmFile;
-use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmFileRequest();
-    $request->crmFile = new CrmFile();
+    $request = new Operations\PatchCrmFileRequest();
+    $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
@@ -233,7 +229,7 @@ try {
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
-    $request->crmFile->raw = new PropertyCrmFileRaw();
+    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-07T04:39:27.375Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
@@ -273,19 +269,19 @@ Remove a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmFileRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmFileRequest();
+    $request = new Operations\RemoveCrmFileRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -323,22 +319,20 @@ Update a file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmFileRequest;
-use \Unified\Unified_to\Models\Shared\CrmFile;
-use \Unified\Unified_to\Models\Shared\PropertyCrmFileRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmFileRequest();
-    $request->crmFile = new CrmFile();
+    $request = new Operations\UpdateCrmFileRequest();
+    $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
@@ -352,7 +346,7 @@ try {
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
-    $request->crmFile->raw = new PropertyCrmFileRaw();
+    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-11T08:15:48.719Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';

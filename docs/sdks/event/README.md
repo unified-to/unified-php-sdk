@@ -22,29 +22,21 @@ Create a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmEventRequest;
-use \Unified\Unified_to\Models\Shared\CrmEvent;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventCall;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventEmail;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventNote;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
-use \Unified\Unified_to\Models\Shared\CrmEventType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmEventRequest();
-    $request->crmEvent = new CrmEvent();
-    $request->crmEvent->call = new PropertyCrmEventCall();
+    $request = new Operations\CreateCrmEventRequest();
+    $request->crmEvent = new Shared\CrmEvent();
+    $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Grass-roots intangible superstructure';
     $request->crmEvent->call->duration = 6684.26;
     $request->crmEvent->companyIds = [
@@ -57,7 +49,7 @@ try {
     $request->crmEvent->dealIds = [
         'string',
     ];
-    $request->crmEvent->email = new PropertyCrmEventEmail();
+    $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -68,19 +60,19 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
-    $request->crmEvent->meeting = new PropertyCrmEventMeeting();
+    $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Synergized systemic adapter';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-19T06:42:51.348Z');
     $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-06T14:40:43.070Z');
     $request->crmEvent->meeting->title = 'string';
-    $request->crmEvent->note = new PropertyCrmEventNote();
+    $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Horizontal zero administration architecture';
-    $request->crmEvent->raw = new PropertyCrmEventRaw();
-    $request->crmEvent->task = new PropertyCrmEventTask();
+    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Extended 5th generation artificial intelligence';
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = 'string';
-    $request->crmEvent->type = CrmEventType::Task;
+    $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-14T14:31:08.257Z');
     $request->connectionId = 'string';
 
@@ -118,19 +110,19 @@ Retrieve a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmEventRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmEventRequest();
+    $request = new Operations\GetCrmEventRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -171,19 +163,19 @@ List all events
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmEventsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmEventsRequest();
+    $request = new Operations\ListCrmEventsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -232,29 +224,21 @@ Update a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmEventRequest;
-use \Unified\Unified_to\Models\Shared\CrmEvent;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventCall;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventEmail;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventNote;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
-use \Unified\Unified_to\Models\Shared\CrmEventType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmEventRequest();
-    $request->crmEvent = new CrmEvent();
-    $request->crmEvent->call = new PropertyCrmEventCall();
+    $request = new Operations\PatchCrmEventRequest();
+    $request->crmEvent = new Shared\CrmEvent();
+    $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Multi-layered well-modulated middleware';
     $request->crmEvent->call->duration = 8718.07;
     $request->crmEvent->companyIds = [
@@ -267,7 +251,7 @@ try {
     $request->crmEvent->dealIds = [
         'string',
     ];
-    $request->crmEvent->email = new PropertyCrmEventEmail();
+    $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -278,19 +262,19 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
-    $request->crmEvent->meeting = new PropertyCrmEventMeeting();
+    $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Horizontal uniform access';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T03:29:57.620Z');
     $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-11T20:55:56.558Z');
     $request->crmEvent->meeting->title = 'string';
-    $request->crmEvent->note = new PropertyCrmEventNote();
+    $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Exclusive non-volatile conglomeration';
-    $request->crmEvent->raw = new PropertyCrmEventRaw();
-    $request->crmEvent->task = new PropertyCrmEventTask();
+    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Cross-platform bi-directional open architecture';
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = 'string';
-    $request->crmEvent->type = CrmEventType::Task;
+    $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-30T20:46:48.999Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -329,19 +313,19 @@ Remove a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmEventRequest();
+    $request = new Operations\RemoveCrmEventRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -379,29 +363,21 @@ Update a event
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest;
-use \Unified\Unified_to\Models\Shared\CrmEvent;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventCall;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventEmail;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventNote;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventRaw;
-use \Unified\Unified_to\Models\Shared\PropertyCrmEventTask;
-use \Unified\Unified_to\Models\Shared\CrmEventType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmEventRequest();
-    $request->crmEvent = new CrmEvent();
-    $request->crmEvent->call = new PropertyCrmEventCall();
+    $request = new Operations\UpdateCrmEventRequest();
+    $request->crmEvent = new Shared\CrmEvent();
+    $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Intuitive incremental orchestration';
     $request->crmEvent->call->duration = 4665.81;
     $request->crmEvent->companyIds = [
@@ -414,7 +390,7 @@ try {
     $request->crmEvent->dealIds = [
         'string',
     ];
-    $request->crmEvent->email = new PropertyCrmEventEmail();
+    $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -425,19 +401,19 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
-    $request->crmEvent->meeting = new PropertyCrmEventMeeting();
+    $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Optional real-time process improvement';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-22T11:59:17.612Z');
     $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-03T21:08:02.575Z');
     $request->crmEvent->meeting->title = 'string';
-    $request->crmEvent->note = new PropertyCrmEventNote();
+    $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Switchable zero defect approach';
-    $request->crmEvent->raw = new PropertyCrmEventRaw();
-    $request->crmEvent->task = new PropertyCrmEventTask();
+    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Pre-emptive system-worthy open system';
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = 'string';
-    $request->crmEvent->type = CrmEventType::Email;
+    $request->crmEvent->type = Shared\CrmEventType::Email;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-26T08:01:25.242Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

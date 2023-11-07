@@ -22,22 +22,20 @@ Create a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateCrmDealRequest;
-use \Unified\Unified_to\Models\Shared\CrmDeal;
-use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCrmDealRequest();
-    $request->crmDeal = new CrmDeal();
+    $request = new Operations\CreateCrmDealRequest();
+    $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 1917.45;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-27T15:05:01.017Z');
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-23T03:04:45.267Z');
@@ -47,7 +45,7 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 1087.81;
-    $request->crmDeal->raw = new PropertyCrmDealRaw();
+    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
@@ -91,19 +89,19 @@ Retrieve a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetCrmDealRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCrmDealRequest();
+    $request = new Operations\GetCrmDealRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -144,19 +142,19 @@ List all deals
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListCrmDealsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCrmDealsRequest();
+    $request = new Operations\ListCrmDealsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -204,22 +202,20 @@ Update a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchCrmDealRequest;
-use \Unified\Unified_to\Models\Shared\CrmDeal;
-use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchCrmDealRequest();
-    $request->crmDeal = new CrmDeal();
+    $request = new Operations\PatchCrmDealRequest();
+    $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 9874.05;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T08:48:03.715Z');
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T07:03:46.302Z');
@@ -229,7 +225,7 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 9555.58;
-    $request->crmDeal->raw = new PropertyCrmDealRaw();
+    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
@@ -274,19 +270,19 @@ Remove a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveCrmDealRequest();
+    $request = new Operations\RemoveCrmDealRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -324,22 +320,20 @@ Update a deal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest;
-use \Unified\Unified_to\Models\Shared\CrmDeal;
-use \Unified\Unified_to\Models\Shared\PropertyCrmDealRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateCrmDealRequest();
-    $request->crmDeal = new CrmDeal();
+    $request = new Operations\UpdateCrmDealRequest();
+    $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 854.3;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T07:04:58.998Z');
     $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-20T16:49:31.989Z');
@@ -349,7 +343,7 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 2970.01;
-    $request->crmDeal->raw = new PropertyCrmDealRaw();
+    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [

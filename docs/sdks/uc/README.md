@@ -23,36 +23,30 @@ Create a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateUcContactRequest;
-use \Unified\Unified_to\Models\Shared\UcContact;
-use \Unified\Unified_to\Models\Shared\UcEmail;
-use \Unified\Unified_to\Models\Shared\UcEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyUcContactRaw;
-use \Unified\Unified_to\Models\Shared\UcTelephone;
-use \Unified\Unified_to\Models\Shared\UcTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateUcContactRequest();
-    $request->ucContact = new UcContact();
+    $request = new Operations\CreateUcContactRequest();
+    $request->ucContact = new Shared\UcContact();
     $request->ucContact->company = 'Gottlieb - Becker';
     $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-20T18:36:15.437Z');
     $request->ucContact->emails = [
-        new UcEmail(),
+        new Shared\UcEmail(),
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new PropertyUcContactRaw();
+    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
     $request->ucContact->telephones = [
-        new UcTelephone(),
+        new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T08:51:50.425Z');
@@ -92,19 +86,19 @@ Retrieve a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUcContactRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUcContactRequest();
+    $request = new Operations\GetUcContactRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -145,19 +139,19 @@ List all calls
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUcCallsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUcCallsRequest();
+    $request = new Operations\ListUcCallsRequest();
     $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -205,19 +199,19 @@ List all contacts
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUcContactsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUcContactsRequest();
+    $request = new Operations\ListUcContactsRequest();
     $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -264,36 +258,30 @@ Update a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchUcContactRequest;
-use \Unified\Unified_to\Models\Shared\UcContact;
-use \Unified\Unified_to\Models\Shared\UcEmail;
-use \Unified\Unified_to\Models\Shared\UcEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyUcContactRaw;
-use \Unified\Unified_to\Models\Shared\UcTelephone;
-use \Unified\Unified_to\Models\Shared\UcTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchUcContactRequest();
-    $request->ucContact = new UcContact();
+    $request = new Operations\PatchUcContactRequest();
+    $request->ucContact = new Shared\UcContact();
     $request->ucContact->company = 'Runolfsdottir, Boehm and Toy';
     $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-28T14:51:42.138Z');
     $request->ucContact->emails = [
-        new UcEmail(),
+        new Shared\UcEmail(),
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new PropertyUcContactRaw();
+    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
     $request->ucContact->telephones = [
-        new UcTelephone(),
+        new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-29T10:49:56.119Z');
@@ -334,19 +322,19 @@ Remove a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveUcContactRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveUcContactRequest();
+    $request = new Operations\RemoveUcContactRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -384,36 +372,30 @@ Update a contact
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateUcContactRequest;
-use \Unified\Unified_to\Models\Shared\UcContact;
-use \Unified\Unified_to\Models\Shared\UcEmail;
-use \Unified\Unified_to\Models\Shared\UcEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyUcContactRaw;
-use \Unified\Unified_to\Models\Shared\UcTelephone;
-use \Unified\Unified_to\Models\Shared\UcTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateUcContactRequest();
-    $request->ucContact = new UcContact();
+    $request = new Operations\UpdateUcContactRequest();
+    $request->ucContact = new Shared\UcContact();
     $request->ucContact->company = 'Marquardt Group';
     $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T01:40:47.681Z');
     $request->ucContact->emails = [
-        new UcEmail(),
+        new Shared\UcEmail(),
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new PropertyUcContactRaw();
+    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
     $request->ucContact->telephones = [
-        new UcTelephone(),
+        new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-14T09:25:29.060Z');

@@ -20,19 +20,19 @@ Retrieve an integration
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUnifiedIntegrationRequest();
+    $request = new Operations\GetUnifiedIntegrationRequest();
     $request->integrationType = 'string';
 
     $response = $sdk->integration->getUnifiedIntegration($request);
@@ -69,20 +69,19 @@ Returns an authorization URL for the specified integration.  Once a successful a
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest;
-use \Unified\Unified_to\Models\Operations\Scopes;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetUnifiedIntegrationAuthRequest();
+    $request = new Operations\GetUnifiedIntegrationAuthRequest();
     $request->env = 'string';
     $request->externalXref = 'string';
     $request->failureRedirect = 'string';
@@ -90,7 +89,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        Scopes::HrisEmployeeWrite,
+        Operations\Scopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -131,23 +130,22 @@ No authentication required as this is to be used by front-end interface
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest;
-use \Unified\Unified_to\Models\Operations\QueryParamCategories;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUnifiedIntegrationWorkspacesRequest();
+    $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        QueryParamCategories::Ticketing,
+        Operations\QueryParamCategories::Ticketing,
     ];
     $request->env = 'string';
     $request->limit = 9072.99;
@@ -190,23 +188,22 @@ Returns all integrations
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest;
-use \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsQueryParamCategories;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUnifiedIntegrationsRequest();
+    $request = new Operations\ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
-        ListUnifiedIntegrationsQueryParamCategories::Auth,
+        Operations\ListUnifiedIntegrationsQueryParamCategories::Auth,
     ];
     $request->env = 'string';
     $request->limit = 7382.58;

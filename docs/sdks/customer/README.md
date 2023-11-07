@@ -28,30 +28,21 @@ Create a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\AccountingCustomer;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\Type;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\TaxExemption;
-use \Unified\Unified_to\Models\Shared\AccountingTelephone;
-use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAccountingCustomerRequest();
-    $request->accountingCustomer = new AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new PropertyAccountingCustomerBillingAddress();
+    $request = new Operations\CreateAccountingCustomerRequest();
+    $request->accountingCustomer = new Shared\AccountingCustomer();
+    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
     $request->accountingCustomer->billingAddress->address1 = 'string';
     $request->accountingCustomer->billingAddress->address2 = 'string';
     $request->accountingCustomer->billingAddress->city = 'New Raulfield';
@@ -63,13 +54,13 @@ try {
     $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-22T19:16:48.798Z');
     $request->accountingCustomer->currency = 'Dalasi';
     $request->accountingCustomer->emails = [
-        new AccountingEmail(),
+        new Shared\AccountingEmail(),
     ];
     $request->accountingCustomer->id = '<ID>';
     $request->accountingCustomer->isActive = false;
     $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new PropertyAccountingCustomerShippingAddress();
+    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
+    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
     $request->accountingCustomer->shippingAddress->address1 = 'string';
     $request->accountingCustomer->shippingAddress->address2 = 'string';
     $request->accountingCustomer->shippingAddress->city = 'Lake Freddy';
@@ -78,9 +69,9 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '08305';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = TaxExemption::LocalGov;
+    $request->accountingCustomer->taxExemption = Shared\TaxExemption::LocalGov;
     $request->accountingCustomer->telephones = [
-        new AccountingTelephone(),
+        new Shared\AccountingTelephone(),
     ];
     $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-06T21:49:52.773Z');
     $request->connectionId = 'string';
@@ -119,38 +110,32 @@ Create a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\TicketingCustomer;
-use \Unified\Unified_to\Models\Shared\TicketingEmail;
-use \Unified\Unified_to\Models\Shared\TicketingEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTelephone;
-use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateTicketingCustomerRequest();
-    $request->ticketingCustomer = new TicketingCustomer();
+    $request = new Operations\CreateTicketingCustomerRequest();
+    $request->ticketingCustomer = new Shared\TicketingCustomer();
     $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-19T07:03:19.095Z');
     $request->ticketingCustomer->emails = [
-        new TicketingEmail(),
+        new Shared\TicketingEmail(),
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
-        new TicketingTelephone(),
+        new Shared\TicketingTelephone(),
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T02:54:36.234Z');
     $request->connectionId = 'string';
@@ -189,19 +174,19 @@ Retrieve a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAccountingCustomerRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAccountingCustomerRequest();
+    $request = new Operations\GetAccountingCustomerRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -242,19 +227,19 @@ Retrieve a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetTicketingCustomerRequest();
+    $request = new Operations\GetTicketingCustomerRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -295,19 +280,19 @@ List all customers
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAccountingCustomersRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAccountingCustomersRequest();
+    $request = new Operations\ListAccountingCustomersRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -353,19 +338,19 @@ List all customers
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListTicketingCustomersRequest();
+    $request = new Operations\ListTicketingCustomersRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -411,30 +396,21 @@ Update a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAccountingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\AccountingCustomer;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\Type;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\TaxExemption;
-use \Unified\Unified_to\Models\Shared\AccountingTelephone;
-use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAccountingCustomerRequest();
-    $request->accountingCustomer = new AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new PropertyAccountingCustomerBillingAddress();
+    $request = new Operations\PatchAccountingCustomerRequest();
+    $request->accountingCustomer = new Shared\AccountingCustomer();
+    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
     $request->accountingCustomer->billingAddress->address1 = 'string';
     $request->accountingCustomer->billingAddress->address2 = 'string';
     $request->accountingCustomer->billingAddress->city = 'Visalia';
@@ -446,13 +422,13 @@ try {
     $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-27T01:00:12.169Z');
     $request->accountingCustomer->currency = 'Kina';
     $request->accountingCustomer->emails = [
-        new AccountingEmail(),
+        new Shared\AccountingEmail(),
     ];
     $request->accountingCustomer->id = '<ID>';
     $request->accountingCustomer->isActive = false;
     $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new PropertyAccountingCustomerShippingAddress();
+    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
+    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
     $request->accountingCustomer->shippingAddress->address1 = 'string';
     $request->accountingCustomer->shippingAddress->address2 = 'string';
     $request->accountingCustomer->shippingAddress->city = 'Imaniburgh';
@@ -461,9 +437,9 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '39981-0354';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = TaxExemption::Foreign;
+    $request->accountingCustomer->taxExemption = Shared\TaxExemption::Foreign;
     $request->accountingCustomer->telephones = [
-        new AccountingTelephone(),
+        new Shared\AccountingTelephone(),
     ];
     $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T15:57:30.865Z');
     $request->connectionId = 'string';
@@ -503,38 +479,32 @@ Update a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\TicketingCustomer;
-use \Unified\Unified_to\Models\Shared\TicketingEmail;
-use \Unified\Unified_to\Models\Shared\TicketingEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTelephone;
-use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchTicketingCustomerRequest();
-    $request->ticketingCustomer = new TicketingCustomer();
+    $request = new Operations\PatchTicketingCustomerRequest();
+    $request->ticketingCustomer = new Shared\TicketingCustomer();
     $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-30T19:19:15.782Z');
     $request->ticketingCustomer->emails = [
-        new TicketingEmail(),
+        new Shared\TicketingEmail(),
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
-        new TicketingTelephone(),
+        new Shared\TicketingTelephone(),
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T00:30:27.085Z');
     $request->connectionId = 'string';
@@ -574,19 +544,19 @@ Remove a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAccountingCustomerRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAccountingCustomerRequest();
+    $request = new Operations\RemoveAccountingCustomerRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -624,19 +594,19 @@ Remove a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveTicketingCustomerRequest();
+    $request = new Operations\RemoveTicketingCustomerRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -674,30 +644,21 @@ Update a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAccountingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\AccountingCustomer;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\Type;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\TaxExemption;
-use \Unified\Unified_to\Models\Shared\AccountingTelephone;
-use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAccountingCustomerRequest();
-    $request->accountingCustomer = new AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new PropertyAccountingCustomerBillingAddress();
+    $request = new Operations\UpdateAccountingCustomerRequest();
+    $request->accountingCustomer = new Shared\AccountingCustomer();
+    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
     $request->accountingCustomer->billingAddress->address1 = 'string';
     $request->accountingCustomer->billingAddress->address2 = 'string';
     $request->accountingCustomer->billingAddress->city = 'Renton';
@@ -709,13 +670,13 @@ try {
     $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-08T08:34:01.295Z');
     $request->accountingCustomer->currency = 'Guinea Franc';
     $request->accountingCustomer->emails = [
-        new AccountingEmail(),
+        new Shared\AccountingEmail(),
     ];
     $request->accountingCustomer->id = '<ID>';
     $request->accountingCustomer->isActive = false;
     $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new PropertyAccountingCustomerShippingAddress();
+    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
+    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
     $request->accountingCustomer->shippingAddress->address1 = 'string';
     $request->accountingCustomer->shippingAddress->address2 = 'string';
     $request->accountingCustomer->shippingAddress->city = 'Langworthstead';
@@ -724,9 +685,9 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '12624-4150';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = TaxExemption::CharitableOrg;
+    $request->accountingCustomer->taxExemption = Shared\TaxExemption::CharitableOrg;
     $request->accountingCustomer->telephones = [
-        new AccountingTelephone(),
+        new Shared\AccountingTelephone(),
     ];
     $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-26T10:11:07.824Z');
     $request->connectionId = 'string';
@@ -766,38 +727,32 @@ Update a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\TicketingCustomer;
-use \Unified\Unified_to\Models\Shared\TicketingEmail;
-use \Unified\Unified_to\Models\Shared\TicketingEmailType;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTelephone;
-use \Unified\Unified_to\Models\Shared\TicketingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateTicketingCustomerRequest();
-    $request->ticketingCustomer = new TicketingCustomer();
+    $request = new Operations\UpdateTicketingCustomerRequest();
+    $request->ticketingCustomer = new Shared\TicketingCustomer();
     $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T13:29:08.944Z');
     $request->ticketingCustomer->emails = [
-        new TicketingEmail(),
+        new Shared\TicketingEmail(),
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
-        new TicketingTelephone(),
+        new Shared\TicketingTelephone(),
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-05T21:33:56.024Z');
     $request->connectionId = 'string';

@@ -22,23 +22,20 @@ Create a ticket
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest;
-use \Unified\Unified_to\Models\Shared\TicketingTicket;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateTicketingTicketRequest();
-    $request->ticketingTicket = new TicketingTicket();
+    $request = new Operations\CreateTicketingTicketRequest();
+    $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-28T11:20:21.005Z');
     $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-19T22:26:35.479Z');
@@ -46,10 +43,10 @@ try {
     $request->ticketingTicket->description = 'Automated composite productivity';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
-    $request->ticketingTicket->status = TicketingTicketStatus::Closed;
+    $request->ticketingTicket->status = Shared\TicketingTicketStatus::Closed;
     $request->ticketingTicket->subject = 'string';
     $request->ticketingTicket->tags = [
         'string',
@@ -91,19 +88,19 @@ Retrieve a ticket
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetTicketingTicketRequest();
+    $request = new Operations\GetTicketingTicketRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -144,19 +141,19 @@ List all tickets
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListTicketingTicketsRequest();
+    $request = new Operations\ListTicketingTicketsRequest();
     $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->customerId = 'string';
@@ -204,23 +201,20 @@ Update a ticket
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest;
-use \Unified\Unified_to\Models\Shared\TicketingTicket;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchTicketingTicketRequest();
-    $request->ticketingTicket = new TicketingTicket();
+    $request = new Operations\PatchTicketingTicketRequest();
+    $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-14T12:10:45.667Z');
     $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-29T23:22:13.568Z');
@@ -228,10 +222,10 @@ try {
     $request->ticketingTicket->description = 'Operative composite strategy';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
-    $request->ticketingTicket->status = TicketingTicketStatus::Closed;
+    $request->ticketingTicket->status = Shared\TicketingTicketStatus::Closed;
     $request->ticketingTicket->subject = 'string';
     $request->ticketingTicket->tags = [
         'string',
@@ -274,19 +268,19 @@ Remove a ticket
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveTicketingTicketRequest();
+    $request = new Operations\RemoveTicketingTicketRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -324,23 +318,20 @@ Update a ticket
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest;
-use \Unified\Unified_to\Models\Shared\TicketingTicket;
-use \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw;
-use \Unified\Unified_to\Models\Shared\TicketingTicketStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateTicketingTicketRequest();
-    $request->ticketingTicket = new TicketingTicket();
+    $request = new Operations\UpdateTicketingTicketRequest();
+    $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-30T22:19:31.995Z');
     $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-29T18:27:57.571Z');
@@ -348,10 +339,10 @@ try {
     $request->ticketingTicket->description = 'Configurable user-facing middleware';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
-    $request->ticketingTicket->status = TicketingTicketStatus::Active;
+    $request->ticketingTicket->status = Shared\TicketingTicketStatus::Active;
     $request->ticketingTicket->subject = 'string';
     $request->ticketingTicket->tags = [
         'string',

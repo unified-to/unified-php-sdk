@@ -22,23 +22,20 @@ Create a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest;
-use \Unified\Unified_to\Models\Shared\AtsDocument;
-use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
-use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsDocumentRequest();
-    $request->atsDocument = new AtsDocument();
+    $request = new Operations\CreateAtsDocumentRequest();
+    $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-24T22:30:56.289Z');
@@ -46,8 +43,8 @@ try {
     $request->atsDocument->filename = 'mouse_per_missouri.mp4';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
-    $request->atsDocument->type = AtsDocumentType::OfferPacket;
+    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
+    $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-28T09:27:32.859Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
@@ -86,19 +83,19 @@ Retrieve a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsDocumentRequest();
+    $request = new Operations\GetAtsDocumentRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -139,19 +136,19 @@ List all documents
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsDocumentsRequest();
+    $request = new Operations\ListAtsDocumentsRequest();
     $request->applicationId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -198,23 +195,20 @@ Update a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest;
-use \Unified\Unified_to\Models\Shared\AtsDocument;
-use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
-use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsDocumentRequest();
-    $request->atsDocument = new AtsDocument();
+    $request = new Operations\PatchAtsDocumentRequest();
+    $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-01T09:34:15.248Z');
@@ -222,8 +216,8 @@ try {
     $request->atsDocument->filename = 'future_underpin.mp4v';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
-    $request->atsDocument->type = AtsDocumentType::OfferLetter;
+    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
+    $request->atsDocument->type = Shared\AtsDocumentType::OfferLetter;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-14T01:39:21.030Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
@@ -263,19 +257,19 @@ Remove a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsDocumentRequest();
+    $request = new Operations\RemoveAtsDocumentRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -313,23 +307,20 @@ Update a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest;
-use \Unified\Unified_to\Models\Shared\AtsDocument;
-use \Unified\Unified_to\Models\Shared\PropertyAtsDocumentRaw;
-use \Unified\Unified_to\Models\Shared\AtsDocumentType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsDocumentRequest();
-    $request->atsDocument = new AtsDocument();
+    $request = new Operations\UpdateAtsDocumentRequest();
+    $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-05T13:01:49.006Z');
@@ -337,8 +328,8 @@ try {
     $request->atsDocument->filename = 'unbranded_reprehenderit.jpg';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new PropertyAtsDocumentRaw();
-    $request->atsDocument->type = AtsDocumentType::OfferPacket;
+    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
+    $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-02T17:00:21.700Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';

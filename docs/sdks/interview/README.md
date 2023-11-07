@@ -22,23 +22,20 @@ Create a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest;
-use \Unified\Unified_to\Models\Shared\AtsInterview;
-use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
-use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsInterviewRequest();
-    $request->atsInterview = new AtsInterview();
+    $request = new Operations\CreateAtsInterviewRequest();
+    $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-10T19:55:26.926Z');
@@ -47,9 +44,9 @@ try {
     $request->atsInterview->id = '<ID>';
     $request->atsInterview->jobId = 'string';
     $request->atsInterview->location = 'string';
-    $request->atsInterview->raw = new PropertyAtsInterviewRaw();
+    $request->atsInterview->raw = new Shared\PropertyAtsInterviewRaw();
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T09:10:03.014Z');
-    $request->atsInterview->status = AtsInterviewStatus::Complete;
+    $request->atsInterview->status = Shared\AtsInterviewStatus::Complete;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-07T14:25:56.954Z');
     $request->atsInterview->userIds = [
         'string',
@@ -90,19 +87,19 @@ Retrieve a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsInterviewRequest();
+    $request = new Operations\GetAtsInterviewRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -143,19 +140,19 @@ List all interviews
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsInterviewsRequest();
+    $request = new Operations\ListAtsInterviewsRequest();
     $request->applicationId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -202,23 +199,20 @@ Update a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest;
-use \Unified\Unified_to\Models\Shared\AtsInterview;
-use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
-use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsInterviewRequest();
-    $request->atsInterview = new AtsInterview();
+    $request = new Operations\PatchAtsInterviewRequest();
+    $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-11T21:35:40.790Z');
@@ -227,9 +221,9 @@ try {
     $request->atsInterview->id = '<ID>';
     $request->atsInterview->jobId = 'string';
     $request->atsInterview->location = 'string';
-    $request->atsInterview->raw = new PropertyAtsInterviewRaw();
+    $request->atsInterview->raw = new Shared\PropertyAtsInterviewRaw();
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-10T02:01:13.488Z');
-    $request->atsInterview->status = AtsInterviewStatus::Complete;
+    $request->atsInterview->status = Shared\AtsInterviewStatus::Complete;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-18T09:12:18.749Z');
     $request->atsInterview->userIds = [
         'string',
@@ -271,19 +265,19 @@ Remove a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsInterviewRequest();
+    $request = new Operations\RemoveAtsInterviewRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -321,23 +315,20 @@ Update a interview
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest;
-use \Unified\Unified_to\Models\Shared\AtsInterview;
-use \Unified\Unified_to\Models\Shared\PropertyAtsInterviewRaw;
-use \Unified\Unified_to\Models\Shared\AtsInterviewStatus;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsInterviewRequest();
-    $request->atsInterview = new AtsInterview();
+    $request = new Operations\UpdateAtsInterviewRequest();
+    $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-06T10:37:46.574Z');
@@ -346,9 +337,9 @@ try {
     $request->atsInterview->id = '<ID>';
     $request->atsInterview->jobId = 'string';
     $request->atsInterview->location = 'string';
-    $request->atsInterview->raw = new PropertyAtsInterviewRaw();
+    $request->atsInterview->raw = new Shared\PropertyAtsInterviewRaw();
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-05T12:38:13.018Z');
-    $request->atsInterview->status = AtsInterviewStatus::AwaitingFeedback;
+    $request->atsInterview->status = Shared\AtsInterviewStatus::AwaitingFeedback;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-01T14:26:12.006Z');
     $request->atsInterview->userIds = [
         'string',

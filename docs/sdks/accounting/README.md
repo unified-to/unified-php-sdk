@@ -34,30 +34,21 @@ Create a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\AccountingCustomer;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\Type;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\TaxExemption;
-use \Unified\Unified_to\Models\Shared\AccountingTelephone;
-use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAccountingCustomerRequest();
-    $request->accountingCustomer = new AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new PropertyAccountingCustomerBillingAddress();
+    $request = new Operations\CreateAccountingCustomerRequest();
+    $request->accountingCustomer = new Shared\AccountingCustomer();
+    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
     $request->accountingCustomer->billingAddress->address1 = 'string';
     $request->accountingCustomer->billingAddress->address2 = 'string';
     $request->accountingCustomer->billingAddress->city = 'New Raulfield';
@@ -69,13 +60,13 @@ try {
     $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-22T19:16:48.798Z');
     $request->accountingCustomer->currency = 'Dalasi';
     $request->accountingCustomer->emails = [
-        new AccountingEmail(),
+        new Shared\AccountingEmail(),
     ];
     $request->accountingCustomer->id = '<ID>';
     $request->accountingCustomer->isActive = false;
     $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new PropertyAccountingCustomerShippingAddress();
+    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
+    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
     $request->accountingCustomer->shippingAddress->address1 = 'string';
     $request->accountingCustomer->shippingAddress->address2 = 'string';
     $request->accountingCustomer->shippingAddress->city = 'Lake Freddy';
@@ -84,9 +75,9 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '08305';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = TaxExemption::LocalGov;
+    $request->accountingCustomer->taxExemption = Shared\TaxExemption::LocalGov;
     $request->accountingCustomer->telephones = [
-        new AccountingTelephone(),
+        new Shared\AccountingTelephone(),
     ];
     $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-06T21:49:52.773Z');
     $request->connectionId = 'string';
@@ -125,23 +116,20 @@ Create a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest;
-use \Unified\Unified_to\Models\Shared\AccountingInvoice;
-use \Unified\Unified_to\Models\Shared\AccountingLineitem;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingInvoiceRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAccountingInvoiceRequest();
-    $request->accountingInvoice = new AccountingInvoice();
+    $request = new Operations\CreateAccountingInvoiceRequest();
+    $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6736.06;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-27T05:21:39.307Z');
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-05T14:28:47.244Z');
@@ -152,12 +140,12 @@ try {
     $request->accountingInvoice->id = '<ID>';
     $request->accountingInvoice->invoiceNumber = 'string';
     $request->accountingInvoice->lineitems = [
-        new AccountingLineitem(),
+        new Shared\AccountingLineitem(),
     ];
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 7142.37;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-15T12:33:41.208Z');
-    $request->accountingInvoice->raw = new PropertyAccountingInvoiceRaw();
+    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
     $request->accountingInvoice->refundAmount = 6572.32;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T06:26:36.842Z');
@@ -200,22 +188,20 @@ Create a payment
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAccountingPaymentRequest;
-use \Unified\Unified_to\Models\Shared\AccountingPayment;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingPaymentRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAccountingPaymentRequest();
-    $request->accountingPayment = new AccountingPayment();
+    $request = new Operations\CreateAccountingPaymentRequest();
+    $request->accountingPayment = new Shared\AccountingPayment();
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-27T20:38:27.181Z');
     $request->accountingPayment->currency = 'Lari';
     $request->accountingPayment->customerId = 'string';
@@ -225,7 +211,7 @@ try {
     ];
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
     $request->accountingPayment->reference = 'string';
     $request->accountingPayment->totalAmount = 291.36;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-30T13:35:20.411Z');
@@ -265,19 +251,19 @@ Retrieve a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAccountingCustomerRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAccountingCustomerRequest();
+    $request = new Operations\GetAccountingCustomerRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -318,19 +304,19 @@ Retrieve a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAccountingInvoiceRequest();
+    $request = new Operations\GetAccountingInvoiceRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -371,19 +357,19 @@ Retrieve a payment
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAccountingPaymentRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAccountingPaymentRequest();
+    $request = new Operations\GetAccountingPaymentRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -424,19 +410,19 @@ List all customers
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAccountingCustomersRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAccountingCustomersRequest();
+    $request = new Operations\ListAccountingCustomersRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -482,19 +468,19 @@ List all invoices
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAccountingInvoicesRequest();
+    $request = new Operations\ListAccountingInvoicesRequest();
     $request->connectionId = 'string';
     $request->customerId = 'string';
     $request->fields = [
@@ -541,19 +527,19 @@ List all payments
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAccountingPaymentsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAccountingPaymentsRequest();
+    $request = new Operations\ListAccountingPaymentsRequest();
     $request->connectionId = 'string';
     $request->customerId = 'string';
     $request->fields = [
@@ -601,30 +587,21 @@ Update a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAccountingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\AccountingCustomer;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\Type;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\TaxExemption;
-use \Unified\Unified_to\Models\Shared\AccountingTelephone;
-use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAccountingCustomerRequest();
-    $request->accountingCustomer = new AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new PropertyAccountingCustomerBillingAddress();
+    $request = new Operations\PatchAccountingCustomerRequest();
+    $request->accountingCustomer = new Shared\AccountingCustomer();
+    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
     $request->accountingCustomer->billingAddress->address1 = 'string';
     $request->accountingCustomer->billingAddress->address2 = 'string';
     $request->accountingCustomer->billingAddress->city = 'Visalia';
@@ -636,13 +613,13 @@ try {
     $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-27T01:00:12.169Z');
     $request->accountingCustomer->currency = 'Kina';
     $request->accountingCustomer->emails = [
-        new AccountingEmail(),
+        new Shared\AccountingEmail(),
     ];
     $request->accountingCustomer->id = '<ID>';
     $request->accountingCustomer->isActive = false;
     $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new PropertyAccountingCustomerShippingAddress();
+    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
+    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
     $request->accountingCustomer->shippingAddress->address1 = 'string';
     $request->accountingCustomer->shippingAddress->address2 = 'string';
     $request->accountingCustomer->shippingAddress->city = 'Imaniburgh';
@@ -651,9 +628,9 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '39981-0354';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = TaxExemption::Foreign;
+    $request->accountingCustomer->taxExemption = Shared\TaxExemption::Foreign;
     $request->accountingCustomer->telephones = [
-        new AccountingTelephone(),
+        new Shared\AccountingTelephone(),
     ];
     $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T15:57:30.865Z');
     $request->connectionId = 'string';
@@ -693,23 +670,20 @@ Update a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest;
-use \Unified\Unified_to\Models\Shared\AccountingInvoice;
-use \Unified\Unified_to\Models\Shared\AccountingLineitem;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingInvoiceRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAccountingInvoiceRequest();
-    $request->accountingInvoice = new AccountingInvoice();
+    $request = new Operations\PatchAccountingInvoiceRequest();
+    $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 7374.1;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T11:43:07.271Z');
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-13T18:03:55.091Z');
@@ -720,12 +694,12 @@ try {
     $request->accountingInvoice->id = '<ID>';
     $request->accountingInvoice->invoiceNumber = 'string';
     $request->accountingInvoice->lineitems = [
-        new AccountingLineitem(),
+        new Shared\AccountingLineitem(),
     ];
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 7810.81;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-02T12:28:18.830Z');
-    $request->accountingInvoice->raw = new PropertyAccountingInvoiceRaw();
+    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
     $request->accountingInvoice->refundAmount = 1152.38;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-23T04:43:31.245Z');
@@ -769,22 +743,20 @@ Update a payment
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAccountingPaymentRequest;
-use \Unified\Unified_to\Models\Shared\AccountingPayment;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingPaymentRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAccountingPaymentRequest();
-    $request->accountingPayment = new AccountingPayment();
+    $request = new Operations\PatchAccountingPaymentRequest();
+    $request->accountingPayment = new Shared\AccountingPayment();
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-25T01:44:17.944Z');
     $request->accountingPayment->currency = 'Boliviano boliviano';
     $request->accountingPayment->customerId = 'string';
@@ -794,7 +766,7 @@ try {
     ];
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
     $request->accountingPayment->reference = 'string';
     $request->accountingPayment->totalAmount = 8698.74;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-07T21:51:56.510Z');
@@ -835,19 +807,19 @@ Remove a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAccountingCustomerRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAccountingCustomerRequest();
+    $request = new Operations\RemoveAccountingCustomerRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -885,19 +857,19 @@ Remove a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAccountingInvoiceRequest();
+    $request = new Operations\RemoveAccountingInvoiceRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -935,19 +907,19 @@ Remove a payment
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAccountingPaymentRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAccountingPaymentRequest();
+    $request = new Operations\RemoveAccountingPaymentRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -985,30 +957,21 @@ Update a customer
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAccountingCustomerRequest;
-use \Unified\Unified_to\Models\Shared\AccountingCustomer;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerBillingAddress;
-use \Unified\Unified_to\Models\Shared\AccountingEmail;
-use \Unified\Unified_to\Models\Shared\Type;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerRaw;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingCustomerShippingAddress;
-use \Unified\Unified_to\Models\Shared\TaxExemption;
-use \Unified\Unified_to\Models\Shared\AccountingTelephone;
-use \Unified\Unified_to\Models\Shared\AccountingTelephoneType;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAccountingCustomerRequest();
-    $request->accountingCustomer = new AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new PropertyAccountingCustomerBillingAddress();
+    $request = new Operations\UpdateAccountingCustomerRequest();
+    $request->accountingCustomer = new Shared\AccountingCustomer();
+    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
     $request->accountingCustomer->billingAddress->address1 = 'string';
     $request->accountingCustomer->billingAddress->address2 = 'string';
     $request->accountingCustomer->billingAddress->city = 'Renton';
@@ -1020,13 +983,13 @@ try {
     $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-08T08:34:01.295Z');
     $request->accountingCustomer->currency = 'Guinea Franc';
     $request->accountingCustomer->emails = [
-        new AccountingEmail(),
+        new Shared\AccountingEmail(),
     ];
     $request->accountingCustomer->id = '<ID>';
     $request->accountingCustomer->isActive = false;
     $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new PropertyAccountingCustomerShippingAddress();
+    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
+    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
     $request->accountingCustomer->shippingAddress->address1 = 'string';
     $request->accountingCustomer->shippingAddress->address2 = 'string';
     $request->accountingCustomer->shippingAddress->city = 'Langworthstead';
@@ -1035,9 +998,9 @@ try {
     $request->accountingCustomer->shippingAddress->postalCode = '12624-4150';
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = TaxExemption::CharitableOrg;
+    $request->accountingCustomer->taxExemption = Shared\TaxExemption::CharitableOrg;
     $request->accountingCustomer->telephones = [
-        new AccountingTelephone(),
+        new Shared\AccountingTelephone(),
     ];
     $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-26T10:11:07.824Z');
     $request->connectionId = 'string';
@@ -1077,23 +1040,20 @@ Update a invoice
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest;
-use \Unified\Unified_to\Models\Shared\AccountingInvoice;
-use \Unified\Unified_to\Models\Shared\AccountingLineitem;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingInvoiceRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAccountingInvoiceRequest();
-    $request->accountingInvoice = new AccountingInvoice();
+    $request = new Operations\UpdateAccountingInvoiceRequest();
+    $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6974.28;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-02T19:25:29.417Z');
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-10T19:18:48.997Z');
@@ -1104,12 +1064,12 @@ try {
     $request->accountingInvoice->id = '<ID>';
     $request->accountingInvoice->invoiceNumber = 'string';
     $request->accountingInvoice->lineitems = [
-        new AccountingLineitem(),
+        new Shared\AccountingLineitem(),
     ];
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 3682.14;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-27T11:59:19.552Z');
-    $request->accountingInvoice->raw = new PropertyAccountingInvoiceRaw();
+    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
     $request->accountingInvoice->refundAmount = 2842.49;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-05T12:20:35.409Z');
@@ -1153,22 +1113,20 @@ Update a payment
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAccountingPaymentRequest;
-use \Unified\Unified_to\Models\Shared\AccountingPayment;
-use \Unified\Unified_to\Models\Shared\PropertyAccountingPaymentRaw;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAccountingPaymentRequest();
-    $request->accountingPayment = new AccountingPayment();
+    $request = new Operations\UpdateAccountingPaymentRequest();
+    $request->accountingPayment = new Shared\AccountingPayment();
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-04T17:25:22.482Z');
     $request->accountingPayment->currency = 'Sudanese Pound';
     $request->accountingPayment->customerId = 'string';
@@ -1178,7 +1136,7 @@ try {
     ];
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
     $request->accountingPayment->reference = 'string';
     $request->accountingPayment->totalAmount = 1869.63;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-14T15:37:22.784Z');

@@ -22,23 +22,20 @@ Create a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\Recommendation;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
+    $request = new Operations\CreateAtsScorecardRequest();
+    $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J';
@@ -47,8 +44,8 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = Recommendation::No;
+    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
+    $request->atsScorecard->recommendation = Shared\Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
     $request->connectionId = 'string';
 
@@ -86,19 +83,19 @@ Retrieve a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAtsScorecardRequest();
+    $request = new Operations\GetAtsScorecardRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -139,19 +136,19 @@ List all scorecards
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAtsScorecardsRequest();
+    $request = new Operations\ListAtsScorecardsRequest();
     $request->applicationId = 'string';
     $request->candidateId = 'string';
     $request->connectionId = 'string';
@@ -201,23 +198,20 @@ Update a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\Recommendation;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PatchAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
+    $request = new Operations\PatchAtsScorecardRequest();
+    $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support';
@@ -226,8 +220,8 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = Recommendation::Yes;
+    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
+    $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -266,19 +260,19 @@ Remove a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RemoveAtsScorecardRequest();
+    $request = new Operations\RemoveAtsScorecardRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';
 
@@ -316,23 +310,20 @@ Update a scorecard
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Unified\Unified_to\UnifiedTo;
-use \Unified\Unified_to\Models\Shared\Security;
-use \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest;
-use \Unified\Unified_to\Models\Shared\AtsScorecard;
-use \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw;
-use \Unified\Unified_to\Models\Shared\Recommendation;
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = UnifiedTo::builder()
+$sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAtsScorecardRequest();
-    $request->atsScorecard = new AtsScorecard();
+    $request = new Operations\UpdateAtsScorecardRequest();
+    $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive';
@@ -341,8 +332,8 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = Recommendation::No;
+    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
+    $request->atsScorecard->recommendation = Shared\Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
