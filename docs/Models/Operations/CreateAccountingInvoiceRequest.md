@@ -1,0 +1,9 @@
+# CreateAccountingInvoiceRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `accountingInvoice`                                                                              | [?\Unified\Unified_to\Models\Shared\AccountingInvoice](../../Models/Shared/AccountingInvoice.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `connectionId`                                                                                   | *string*                                                                                         | :heavy_check_mark:                                                                               | ID of the connection                                                                             |

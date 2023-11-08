@@ -26,6 +26,11 @@ class AtsDocument
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('document_data')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $documentData = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('document_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -71,6 +76,7 @@ class AtsDocument
 		$this->applicationId = null;
 		$this->candidateId = null;
 		$this->createdAt = null;
+		$this->documentData = null;
 		$this->documentUrl = null;
 		$this->filename = null;
 		$this->id = null;

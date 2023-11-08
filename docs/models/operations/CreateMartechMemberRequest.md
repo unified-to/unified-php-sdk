@@ -1,9 +1,0 @@
-# CreateMartechMemberRequest
-
-
-## Fields
-
-| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `marketingMember`                                                                            | [?\Unified\Unified_to\Models\Shared\MarketingMember](../../models/shared/MarketingMember.md) | :heavy_minus_sign:                                                                           | A member represents a person                                                                 |
-| `connectionId`                                                                               | *string*                                                                                     | :heavy_check_mark:                                                                           | ID of the connection                                                                         |

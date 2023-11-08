@@ -1,9 +1,0 @@
-# CreateTicketingTicketRequest
-
-
-## Fields
-
-| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ticketingTicket`                                                                            | [?\Unified\Unified_to\Models\Shared\TicketingTicket](../../models/shared/TicketingTicket.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
-| `connectionId`                                                                               | *string*                                                                                     | :heavy_check_mark:                                                                           | ID of the connection                                                                         |

@@ -1,0 +1,9 @@
+# CreateAtsInterviewRequest
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `atsInterview`                                                                         | [?\Unified\Unified_to\Models\Shared\AtsInterview](../../Models/Shared/AtsInterview.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `connectionId`                                                                         | *string*                                                                               | :heavy_check_mark:                                                                     | ID of the connection                                                                   |
