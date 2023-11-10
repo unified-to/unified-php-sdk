@@ -36,6 +36,8 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+### Example
+
 ```php
 <?php
 

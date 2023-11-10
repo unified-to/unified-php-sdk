@@ -71,6 +71,11 @@ class CrmLead
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $source = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('status')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $status = null;
+    
     /**
      * $telephones
      * 
@@ -104,6 +109,7 @@ class CrmLead
 		$this->name = null;
 		$this->raw = null;
 		$this->source = null;
+		$this->status = null;
 		$this->telephones = null;
 		$this->updatedAt = null;
 		$this->userId = null;

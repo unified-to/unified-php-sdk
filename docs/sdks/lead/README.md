@@ -57,6 +57,7 @@ try {
     $request->crmLead->name = 'string';
     $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
     $request->crmLead->source = 'string';
+    $request->crmLead->status = 'string';
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
@@ -244,6 +245,7 @@ try {
     $request->crmLead->name = 'string';
     $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
     $request->crmLead->source = 'string';
+    $request->crmLead->status = 'string';
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
@@ -371,6 +373,7 @@ try {
     $request->crmLead->name = 'string';
     $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
     $request->crmLead->source = 'string';
+    $request->crmLead->status = 'string';
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
