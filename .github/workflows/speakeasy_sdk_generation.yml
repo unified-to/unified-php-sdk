@@ -21,9 +21,9 @@ jobs:
       languages: |
         - php
       mode: direct
-      openapi_doc_auth_header: ""
       openapi_docs: |
         - https://api-eu.unified.to/openapi.json
+      publish_php: true
       speakeasy_version: latest
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
