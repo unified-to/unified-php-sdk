@@ -207,3 +207,13 @@ Based on:
 - Speakeasy CLI 1.118.3 (2.187.7) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [php v0.8.2] .
+
+## 2023-11-14 17:49:47
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.119.2 (2.188.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.8.3] .
+### Releases
+- [Composer v0.8.3] https://packagist.org/packages/unified/unified-to#v0.8.3 - .
