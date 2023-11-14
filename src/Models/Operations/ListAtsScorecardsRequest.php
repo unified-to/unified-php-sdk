@@ -52,7 +52,7 @@ class ListAtsScorecardsRequest
     public ?string $interviewId = null;
     
     /**
-     * The job ID to filter results
+     * The job ID
      * 
      * @var ?string $jobId
      */

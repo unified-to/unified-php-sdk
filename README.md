@@ -11,26 +11,8 @@
 
 ### Composer
 
-To install the SDK first add the below to your `composer.json` file:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "github",
-            "url": "https://github.com/unified-to/unified-php-sdk.git"
-        }
-    ],
-    "require": {
-        "unified/unified-to": "*"
-    }
-}
-```
-
-Then run the following command:
-
 ```bash
-composer update
+composer require "unified/unified-to"
 ```
 <!-- End SDK Installation -->
 
