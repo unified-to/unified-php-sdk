@@ -42,9 +42,9 @@ class Integration
     public ?string $color = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?\DateTime $createdAt = null;
+    public ?string $createdAt = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('fa_icon')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -118,9 +118,9 @@ class Integration
     public string $type;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?\DateTime $updatedAt = null;
+    public ?string $updatedAt = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('web_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
