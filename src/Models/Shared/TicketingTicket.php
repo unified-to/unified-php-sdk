@@ -48,7 +48,8 @@ class TicketingTicket
     
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw')]
-    public PropertyTicketingTicketRaw $raw;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyTicketingTicketRaw $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('source')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -94,7 +95,7 @@ class TicketingTicket
 		$this->description = null;
 		$this->id = null;
 		$this->priority = null;
-		$this->raw = new \Unified\Unified_to\Models\Shared\PropertyTicketingTicketRaw();
+		$this->raw = null;
 		$this->source = null;
 		$this->sourceRef = null;
 		$this->status = null;

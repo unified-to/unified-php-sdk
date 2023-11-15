@@ -105,11 +105,12 @@ class EnrichCompany
     /**
      * The raw data returned by the integration for this company
      * 
-     * @var \Unified\Unified_to\Models\Shared\PropertyEnrichCompanyRaw $raw
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyRaw $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyEnrichCompanyRaw')]
-    public PropertyEnrichCompanyRaw $raw;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyEnrichCompanyRaw $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('revenue')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -184,7 +185,7 @@ class EnrichCompany
 		$this->logoUrl = null;
 		$this->naicsCode = null;
 		$this->name = null;
-		$this->raw = new \Unified\Unified_to\Models\Shared\PropertyEnrichCompanyRaw();
+		$this->raw = null;
 		$this->revenue = null;
 		$this->sicCode = null;
 		$this->stock = null;

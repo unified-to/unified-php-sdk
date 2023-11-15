@@ -53,7 +53,8 @@ class AtsScorecard
     
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw')]
-    public PropertyAtsScorecardRaw $raw;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyAtsScorecardRaw $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('recommendation')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Recommendation>')]
@@ -75,7 +76,7 @@ class AtsScorecard
 		$this->interviewId = null;
 		$this->interviewerId = null;
 		$this->jobId = null;
-		$this->raw = new \Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw();
+		$this->raw = null;
 		$this->recommendation = null;
 		$this->updatedAt = null;
 	}

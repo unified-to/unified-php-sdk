@@ -105,11 +105,12 @@ class EnrichPerson
     /**
      * The raw data returned by the integration for this person
      * 
-     * @var \Unified\Unified_to\Models\Shared\PropertyEnrichPersonRaw $raw
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyEnrichPersonRaw $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyEnrichPersonRaw')]
-    public PropertyEnrichPersonRaw $raw;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyEnrichPersonRaw $raw = null;
     
     /**
      * An array of telephones for this person
@@ -178,7 +179,7 @@ class EnrichPerson
 		$this->imageUrl = null;
 		$this->linkedinUrl = null;
 		$this->name = null;
-		$this->raw = new \Unified\Unified_to\Models\Shared\PropertyEnrichPersonRaw();
+		$this->raw = null;
 		$this->telephones = null;
 		$this->timezone = null;
 		$this->title = null;

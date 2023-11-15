@@ -38,11 +38,12 @@ class UcCall
     /**
      * The raw data returned by the integration for this call
      * 
-     * @var \Unified\Unified_to\Models\Shared\PropertyUcCallRaw $raw
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyUcCallRaw $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyUcCallRaw')]
-    public PropertyUcCallRaw $raw;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyUcCallRaw $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('start_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
@@ -71,7 +72,7 @@ class UcCall
 		$this->createdAt = null;
 		$this->endAt = null;
 		$this->id = null;
-		$this->raw = new \Unified\Unified_to\Models\Shared\PropertyUcCallRaw();
+		$this->raw = null;
 		$this->startAt = null;
 		$this->telephone = null;
 		$this->updatedAt = null;

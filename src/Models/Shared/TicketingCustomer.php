@@ -38,7 +38,8 @@ class TicketingCustomer
     
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw')]
-    public PropertyTicketingCustomerRaw $raw;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyTicketingCustomerRaw $raw = null;
     
     /**
      * $tags
@@ -71,7 +72,7 @@ class TicketingCustomer
 		$this->emails = null;
 		$this->id = null;
 		$this->name = null;
-		$this->raw = new \Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw();
+		$this->raw = null;
 		$this->tags = null;
 		$this->telephones = null;
 		$this->updatedAt = null;
