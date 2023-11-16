@@ -78,6 +78,16 @@ class CrmEvent
     public ?string $id = null;
     
     /**
+     * $leadIds
+     * 
+     * @var ?array<string> $leadIds
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('lead_ids')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $leadIds = null;
+    
+    /**
      * The meeting object, when type = meeting
      * 
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting $meeting
@@ -136,6 +146,7 @@ class CrmEvent
 		$this->dealIds = null;
 		$this->email = null;
 		$this->id = null;
+		$this->leadIds = null;
 		$this->meeting = null;
 		$this->note = null;
 		$this->raw = null;

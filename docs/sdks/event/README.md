@@ -56,6 +56,9 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
+    $request->crmEvent->leadIds = [
+        'string',
+    ];
     $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Synergized systemic adapter';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-19T06:42:51.348Z');
@@ -246,6 +249,9 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
+    $request->crmEvent->leadIds = [
+        'string',
+    ];
     $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Horizontal uniform access';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T03:29:57.620Z');
@@ -377,6 +383,9 @@ try {
         'string',
     ];
     $request->crmEvent->id = '<ID>';
+    $request->crmEvent->leadIds = [
+        'string',
+    ];
     $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Optional real-time process improvement';
     $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-22T11:59:17.612Z');
