@@ -165,7 +165,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 try {
     $request = new Operations\ListCrmLeadsRequest();
+    $request->companyId = 'string';
     $request->connectionId = 'string';
+    $request->contactId = 'string';
     $request->fields = [
         'string',
     ];

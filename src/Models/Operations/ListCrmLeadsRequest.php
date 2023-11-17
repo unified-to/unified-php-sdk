@@ -12,12 +12,28 @@ use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListCrmLeadsRequest
 {
     /**
+     * The company ID to filter results
+     * 
+     * @var ?string $companyId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
+    public ?string $companyId = null;
+    
+    /**
      * ID of the connection
      * 
      * @var string $connectionId
      */
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+    
+    /**
+     * The contact ID to filter results
+     * 
+     * @var ?string $contactId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
+    public ?string $contactId = null;
     
     /**
      * Comma-delimited fields to return
@@ -57,7 +73,9 @@ class ListCrmLeadsRequest
     
 	public function __construct()
 	{
+		$this->companyId = null;
 		$this->connectionId = "";
+		$this->contactId = null;
 		$this->fields = null;
 		$this->limit = null;
 		$this->offset = null;
