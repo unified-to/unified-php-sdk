@@ -35,7 +35,11 @@ require_once 'vendor/autoload.php';
 use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -121,7 +125,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -189,7 +197,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -234,7 +246,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -279,7 +295,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -385,7 +405,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -430,7 +454,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -485,7 +513,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -597,7 +629,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -652,7 +688,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -703,7 +743,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -791,7 +835,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -836,7 +884,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -881,7 +933,11 @@ use \Unified\Unified_to;
 use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
+$security = new Shared\Security();
+$security->jwt = '';
+
 $sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

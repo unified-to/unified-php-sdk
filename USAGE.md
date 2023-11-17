@@ -9,7 +9,12 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
 
 try {
     $request = new Operations\CreateAccountingCustomerRequest();
