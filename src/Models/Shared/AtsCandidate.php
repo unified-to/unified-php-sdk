@@ -51,6 +51,16 @@ class AtsCandidate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $imageUrl = null;
     
+    /**
+     * a list of social media links associated with the candidate. eg. LinkedIn URL
+     * 
+     * @var ?array<string> $linkUrls
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('link_urls')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $linkUrls = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -100,6 +110,7 @@ class AtsCandidate
 		$this->externalId = null;
 		$this->id = null;
 		$this->imageUrl = null;
+		$this->linkUrls = null;
 		$this->name = null;
 		$this->raw = null;
 		$this->tags = null;

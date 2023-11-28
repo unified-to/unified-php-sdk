@@ -53,6 +53,9 @@ try {
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->linkUrls = [
+        'string',
+    ];
     $request->atsCandidate->name = 'string';
     $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
@@ -241,6 +244,9 @@ try {
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->linkUrls = [
+        'string',
+    ];
     $request->atsCandidate->name = 'string';
     $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
@@ -369,6 +375,9 @@ try {
     $request->atsCandidate->externalId = 'string';
     $request->atsCandidate->id = '<ID>';
     $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->linkUrls = [
+        'string',
+    ];
     $request->atsCandidate->name = 'string';
     $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [

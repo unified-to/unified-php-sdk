@@ -21,6 +21,11 @@ class CrmLead
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyId = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('company_name')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $companyName = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('contact_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -100,6 +105,7 @@ class CrmLead
 	{
 		$this->address = null;
 		$this->companyId = null;
+		$this->companyName = null;
 		$this->contactId = null;
 		$this->createdAt = null;
 		$this->creatorUserId = null;

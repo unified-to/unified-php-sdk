@@ -1,13 +1,13 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 6142e7308fba693989851ddb6236529e
+  docChecksum: f070c99c2158d59a655dbe110588384f
   docVersion: "1.0"
-  speakeasyVersion: 1.121.0
-  generationVersion: 2.194.0
+  speakeasyVersion: 1.123.0
+  generationVersion: 2.202.2
 generation:
   comments: {}
   sdkClassName: Unified-to
-  repoURL: https://github.com/unified-to/unified-go-sdk.git
+  repoURL: https://github.com/unified-to/unified-php-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
   baseServerURL: ""
@@ -18,7 +18,7 @@ features:
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.1
 php:
-  version: 0.8.8
+  version: 0.8.9
   imports:
     option: openapi
     paths:

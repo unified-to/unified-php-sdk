@@ -38,7 +38,7 @@ class Auth
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
@@ -53,7 +53,7 @@ class Auth
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $response->res = $httpResponse->getBody()->getContents();
             }
         }
@@ -78,7 +78,7 @@ class Auth
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
@@ -93,7 +93,7 @@ class Auth
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $response->res = $httpResponse->getBody()->getContents();
             }
         }
