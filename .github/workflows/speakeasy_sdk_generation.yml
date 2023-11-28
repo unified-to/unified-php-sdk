@@ -22,7 +22,7 @@ jobs:
         - php
       mode: direct
       openapi_docs: |
-        - https://api-eu.unified.to/openapi.json
+        - https://api.unified.to/openapi.json
       publish_php: true
       speakeasy_version: latest
     secrets:
