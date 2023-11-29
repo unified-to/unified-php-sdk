@@ -17,47 +17,31 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new Operations\CreateAccountingCustomerRequest();
-    $request->accountingCustomer = new Shared\AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
-    $request->accountingCustomer->billingAddress->address1 = 'string';
-    $request->accountingCustomer->billingAddress->address2 = 'string';
-    $request->accountingCustomer->billingAddress->city = 'New Raulfield';
-    $request->accountingCustomer->billingAddress->country = 'Libyan Arab Jamahiriya';
-    $request->accountingCustomer->billingAddress->countryCode = 'IN';
-    $request->accountingCustomer->billingAddress->postalCode = '22232';
-    $request->accountingCustomer->billingAddress->region = 'string';
-    $request->accountingCustomer->billingAddress->regionCode = 'string';
-    $request->accountingCustomer->createdAt = DateTime::createFromFormat(
+    $request = new Operations\CreateAccountingAccountRequest();
+    $request->accountingAccount = new Shared\AccountingAccount();
+    $request->accountingAccount->balance = 6602.56;
+    $request->accountingAccount->bankAccountNumber = 'string';
+    $request->accountingAccount->createdAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
-        '2021-07-22T19:16:48.798Z',
+        '2022-09-02T08:51:10.063Z',
     );
-    $request->accountingCustomer->currency = 'Dalasi';
-    $request->accountingCustomer->emails = [new Shared\AccountingEmail()];
-    $request->accountingCustomer->id = '<ID>';
-    $request->accountingCustomer->isActive = false;
-    $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
-    $request->accountingCustomer->shippingAddress->address1 = 'string';
-    $request->accountingCustomer->shippingAddress->address2 = 'string';
-    $request->accountingCustomer->shippingAddress->city = 'Lake Freddy';
-    $request->accountingCustomer->shippingAddress->country = 'Croatia';
-    $request->accountingCustomer->shippingAddress->countryCode = 'SC';
-    $request->accountingCustomer->shippingAddress->postalCode = '08305';
-    $request->accountingCustomer->shippingAddress->region = 'string';
-    $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = Shared\TaxExemption::LocalGov;
-    $request->accountingCustomer->telephones = [new Shared\AccountingTelephone()];
-    $request->accountingCustomer->updatedAt = DateTime::createFromFormat(
+    $request->accountingAccount->currency = 'Saint Helena Pound';
+    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->description = 'Cross-group zero defect task-force';
+    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->status = Shared\Status::Active;
+    $request->accountingAccount->type = Shared\Type::Equity;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
-        '2021-08-06T21:49:52.773Z',
+        '2022-09-09T10:11:13.258Z',
     );
     $request->connectionId = 'string';
 
-    $response = $sdk->accounting->createAccountingCustomer($request);
+    $response = $sdk->accounting->createAccountingAccount($request);
 
-    if ($response->accountingCustomer !== null) {
+    if ($response->accountingAccount !== null) {
         // handle response
     }
 } catch (Exception $e) {

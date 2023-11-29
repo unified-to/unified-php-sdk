@@ -11,7 +11,14 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum Type: string
 {
-    case Work = 'WORK';
-    case Home = 'HOME';
+    case AccountsPayable = 'ACCOUNTS_PAYABLE';
+    case AccountsReceivable = 'ACCOUNTS_RECEIVABLE';
+    case Bank = 'BANK';
+    case CreditCard = 'CREDIT_CARD';
+    case FixedAsset = 'FIXED_ASSET';
+    case Liability = 'LIABILITY';
+    case Equity = 'EQUITY';
+    case Expense = 'EXPENSE';
+    case Revenue = 'REVENUE';
     case Other = 'OTHER';
 }

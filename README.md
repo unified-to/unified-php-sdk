@@ -39,47 +39,31 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 try {
-    $request = new Operations\CreateAccountingCustomerRequest();
-    $request->accountingCustomer = new Shared\AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
-    $request->accountingCustomer->billingAddress->address1 = 'string';
-    $request->accountingCustomer->billingAddress->address2 = 'string';
-    $request->accountingCustomer->billingAddress->city = 'New Raulfield';
-    $request->accountingCustomer->billingAddress->country = 'Libyan Arab Jamahiriya';
-    $request->accountingCustomer->billingAddress->countryCode = 'IN';
-    $request->accountingCustomer->billingAddress->postalCode = '22232';
-    $request->accountingCustomer->billingAddress->region = 'string';
-    $request->accountingCustomer->billingAddress->regionCode = 'string';
-    $request->accountingCustomer->createdAt = DateTime::createFromFormat(
+    $request = new Operations\CreateAccountingAccountRequest();
+    $request->accountingAccount = new Shared\AccountingAccount();
+    $request->accountingAccount->balance = 6602.56;
+    $request->accountingAccount->bankAccountNumber = 'string';
+    $request->accountingAccount->createdAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
-        '2021-07-22T19:16:48.798Z',
+        '2022-09-02T08:51:10.063Z',
     );
-    $request->accountingCustomer->currency = 'Dalasi';
-    $request->accountingCustomer->emails = [new Shared\AccountingEmail()];
-    $request->accountingCustomer->id = '<ID>';
-    $request->accountingCustomer->isActive = false;
-    $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
-    $request->accountingCustomer->shippingAddress->address1 = 'string';
-    $request->accountingCustomer->shippingAddress->address2 = 'string';
-    $request->accountingCustomer->shippingAddress->city = 'Lake Freddy';
-    $request->accountingCustomer->shippingAddress->country = 'Croatia';
-    $request->accountingCustomer->shippingAddress->countryCode = 'SC';
-    $request->accountingCustomer->shippingAddress->postalCode = '08305';
-    $request->accountingCustomer->shippingAddress->region = 'string';
-    $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = Shared\TaxExemption::LocalGov;
-    $request->accountingCustomer->telephones = [new Shared\AccountingTelephone()];
-    $request->accountingCustomer->updatedAt = DateTime::createFromFormat(
+    $request->accountingAccount->currency = 'Saint Helena Pound';
+    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->description = 'Cross-group zero defect task-force';
+    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->status = Shared\Status::Active;
+    $request->accountingAccount->type = Shared\Type::Equity;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
-        '2021-08-06T21:49:52.773Z',
+        '2022-09-09T10:11:13.258Z',
     );
     $request->connectionId = 'string';
 
-    $response = $sdk->accounting->createAccountingCustomer($request);
+    $response = $sdk->accounting->createAccountingAccount($request);
 
-    if ($response->accountingCustomer !== null) {
+    if ($response->accountingAccount !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -94,24 +78,45 @@ try {
 
 ### [Accounting](docs/sdks/accounting/README.md)
 
+* [createAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [createAccountingCustomer](docs/sdks/accounting/README.md#createaccountingcustomer) - Create a customer
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
 * [createAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
+* [createAccountingTransaction](docs/sdks/accounting/README.md#createaccountingtransaction) - Create a transaction
+* [getAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [getAccountingCustomer](docs/sdks/accounting/README.md#getaccountingcustomer) - Retrieve a customer
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
 * [getAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
+* [getAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
+* [listAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [listAccountingCustomers](docs/sdks/accounting/README.md#listaccountingcustomers) - List all customers
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
+* [listAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
+* [patchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
 * [patchAccountingCustomer](docs/sdks/accounting/README.md#patchaccountingcustomer) - Update a customer
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
 * [patchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
+* [patchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
+* [removeAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [removeAccountingCustomer](docs/sdks/accounting/README.md#removeaccountingcustomer) - Remove a customer
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
 * [removeAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
+* [removeAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
+* [updateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [updateAccountingCustomer](docs/sdks/accounting/README.md#updateaccountingcustomer) - Update a customer
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
 * [updateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
+* [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
+
+### [Account](docs/sdks/account/README.md)
+
+* [createAccountingAccount](docs/sdks/account/README.md#createaccountingaccount) - Create an account
+* [getAccountingAccount](docs/sdks/account/README.md#getaccountingaccount) - Retrieve an account
+* [listAccountingAccounts](docs/sdks/account/README.md#listaccountingaccounts) - List all accounts
+* [patchAccountingAccount](docs/sdks/account/README.md#patchaccountingaccount) - Update an account
+* [removeAccountingAccount](docs/sdks/account/README.md#removeaccountingaccount) - Remove an account
+* [updateAccountingAccount](docs/sdks/account/README.md#updateaccountingaccount) - Update an account
 
 ### [Customer](docs/sdks/customer/README.md)
 
@@ -145,6 +150,15 @@ try {
 * [patchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
 * [removeAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
 * [updateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
+
+### [Transaction](docs/sdks/transaction/README.md)
+
+* [createAccountingTransaction](docs/sdks/transaction/README.md#createaccountingtransaction) - Create a transaction
+* [getAccountingTransaction](docs/sdks/transaction/README.md#getaccountingtransaction) - Retrieve a transaction
+* [listAccountingTransactions](docs/sdks/transaction/README.md#listaccountingtransactions) - List all transactions
+* [patchAccountingTransaction](docs/sdks/transaction/README.md#patchaccountingtransaction) - Update a transaction
+* [removeAccountingTransaction](docs/sdks/transaction/README.md#removeaccountingtransaction) - Remove a transaction
+* [updateAccountingTransaction](docs/sdks/transaction/README.md#updateaccountingtransaction) - Update a transaction
 
 ### [Ats](docs/sdks/ats/README.md)
 

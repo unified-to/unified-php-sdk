@@ -3,24 +3,98 @@
 
 ### Available Operations
 
+* [createAccountingAccount](#createaccountingaccount) - Create an account
 * [createAccountingCustomer](#createaccountingcustomer) - Create a customer
 * [createAccountingInvoice](#createaccountinginvoice) - Create a invoice
 * [createAccountingPayment](#createaccountingpayment) - Create a payment
+* [createAccountingTransaction](#createaccountingtransaction) - Create a transaction
+* [getAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [getAccountingCustomer](#getaccountingcustomer) - Retrieve a customer
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve a invoice
 * [getAccountingPayment](#getaccountingpayment) - Retrieve a payment
+* [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
+* [listAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [listAccountingCustomers](#listaccountingcustomers) - List all customers
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [listAccountingPayments](#listaccountingpayments) - List all payments
+* [listAccountingTransactions](#listaccountingtransactions) - List all transactions
+* [patchAccountingAccount](#patchaccountingaccount) - Update an account
 * [patchAccountingCustomer](#patchaccountingcustomer) - Update a customer
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update a invoice
 * [patchAccountingPayment](#patchaccountingpayment) - Update a payment
+* [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
+* [removeAccountingAccount](#removeaccountingaccount) - Remove an account
 * [removeAccountingCustomer](#removeaccountingcustomer) - Remove a customer
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove a invoice
 * [removeAccountingPayment](#removeaccountingpayment) - Remove a payment
+* [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
+* [updateAccountingAccount](#updateaccountingaccount) - Update an account
 * [updateAccountingCustomer](#updateaccountingcustomer) - Update a customer
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update a invoice
 * [updateAccountingPayment](#updateaccountingpayment) - Update a payment
+* [updateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
+
+## createAccountingAccount
+
+Create an account
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\CreateAccountingAccountRequest();
+    $request->accountingAccount = new Shared\AccountingAccount();
+    $request->accountingAccount->balance = 6602.56;
+    $request->accountingAccount->bankAccountNumber = 'string';
+    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-02T08:51:10.063Z');
+    $request->accountingAccount->currency = 'Saint Helena Pound';
+    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->description = 'Cross-group zero defect task-force';
+    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->status = Shared\Status::Active;
+    $request->accountingAccount->type = Shared\Type::Equity;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-09T10:11:13.258Z');
+    $request->connectionId = 'string';
+
+    $response = $sdk->accounting->createAccountingAccount($request);
+
+    if ($response->accountingAccount !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateAccountingAccountRequest](../../Models/Operations/CreateAccountingAccountRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\CreateAccountingAccountResponse](../../Models/Operations/CreateAccountingAccountResponse.md)**
+
 
 ## createAccountingCustomer
 
@@ -239,6 +313,123 @@ try {
 **[?\Unified\Unified_to\Models\Operations\CreateAccountingPaymentResponse](../../Models/Operations/CreateAccountingPaymentResponse.md)**
 
 
+## createAccountingTransaction
+
+Create a transaction
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\CreateAccountingTransactionRequest();
+    $request->accountingTransaction = new Shared\AccountingTransaction();
+    $request->accountingTransaction->accountId = 'string';
+    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->currency = 'Libyan Dinar';
+    $request->accountingTransaction->description = 'Pre-emptive multimedia benchmark';
+    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->lineItems = [
+        new Shared\AccountingTransactionLineitem(),
+    ];
+    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->taxAmount = 2477.45;
+    $request->accountingTransaction->totalAmount = 7389.88;
+    $request->accountingTransaction->type = Shared\AccountingTransactionType::Spend;
+    $request->accountingTransaction->updatedAt = 'string';
+    $request->connectionId = 'string';
+
+    $response = $sdk->accounting->createAccountingTransaction($request);
+
+    if ($response->accountingTransaction !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest](../../Models/Operations/CreateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse](../../Models/Operations/CreateAccountingTransactionResponse.md)**
+
+
+## getAccountingAccount
+
+Retrieve an account
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\GetAccountingAccountRequest();
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->id = '<ID>';
+
+    $response = $sdk->accounting->getAccountingAccount($request);
+
+    if ($response->accountingAccount !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAccountingAccountRequest](../../Models/Operations/GetAccountingAccountRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetAccountingAccountResponse](../../Models/Operations/GetAccountingAccountResponse.md)**
+
+
 ## getAccountingCustomer
 
 Retrieve a customer
@@ -396,6 +587,117 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\GetAccountingPaymentResponse](../../Models/Operations/GetAccountingPaymentResponse.md)**
+
+
+## getAccountingTransaction
+
+Retrieve a transaction
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\GetAccountingTransactionRequest();
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->id = '<ID>';
+
+    $response = $sdk->accounting->getAccountingTransaction($request);
+
+    if ($response->accountingTransaction !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest](../../Models/Operations/GetAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse](../../Models/Operations/GetAccountingTransactionResponse.md)**
+
+
+## listAccountingAccounts
+
+List all accounts
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\ListAccountingAccountsRequest();
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->limit = 9476.86;
+    $request->offset = 5444.77;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-20T03:09:57.234Z');
+
+    $response = $sdk->accounting->listAccountingAccounts($request);
+
+    if ($response->accountingAccounts !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListAccountingAccountsRequest](../../Models/Operations/ListAccountingAccountsRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListAccountingAccountsResponse](../../Models/Operations/ListAccountingAccountsResponse.md)**
 
 
 ## listAccountingCustomers
@@ -573,6 +875,127 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\ListAccountingPaymentsResponse](../../Models/Operations/ListAccountingPaymentsResponse.md)**
+
+
+## listAccountingTransactions
+
+List all transactions
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\ListAccountingTransactionsRequest();
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->limit = 7894.5;
+    $request->offset = 4597.84;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-02T12:59:27.985Z');
+
+    $response = $sdk->accounting->listAccountingTransactions($request);
+
+    if ($response->accountingTransactions !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest](../../Models/Operations/ListAccountingTransactionsRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse](../../Models/Operations/ListAccountingTransactionsResponse.md)**
+
+
+## patchAccountingAccount
+
+Update an account
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\PatchAccountingAccountRequest();
+    $request->accountingAccount = new Shared\AccountingAccount();
+    $request->accountingAccount->balance = 1931.26;
+    $request->accountingAccount->bankAccountNumber = 'string';
+    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T05:24:17.966Z');
+    $request->accountingAccount->currency = 'Won';
+    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->description = 'Quality-focused multimedia implementation';
+    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->status = Shared\Status::Archived;
+    $request->accountingAccount->type = Shared\Type::Revenue;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-10T11:14:55.383Z');
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->accounting->patchAccountingAccount($request);
+
+    if ($response->accountingAccount !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchAccountingAccountRequest](../../Models/Operations/PatchAccountingAccountRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\PatchAccountingAccountResponse](../../Models/Operations/PatchAccountingAccountResponse.md)**
 
 
 ## patchAccountingCustomer
@@ -795,6 +1218,121 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PatchAccountingPaymentResponse](../../Models/Operations/PatchAccountingPaymentResponse.md)**
 
 
+## patchAccountingTransaction
+
+Update a transaction
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\PatchAccountingTransactionRequest();
+    $request->accountingTransaction = new Shared\AccountingTransaction();
+    $request->accountingTransaction->accountId = 'string';
+    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->currency = 'Kwacha';
+    $request->accountingTransaction->description = 'Multi-channelled transitional function';
+    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->lineItems = [
+        new Shared\AccountingTransactionLineitem(),
+    ];
+    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->taxAmount = 535.65;
+    $request->accountingTransaction->totalAmount = 3153.09;
+    $request->accountingTransaction->type = Shared\AccountingTransactionType::Receive;
+    $request->accountingTransaction->updatedAt = 'string';
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->accounting->patchAccountingTransaction($request);
+
+    if ($response->accountingTransaction !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest](../../Models/Operations/PatchAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse](../../Models/Operations/PatchAccountingTransactionResponse.md)**
+
+
+## removeAccountingAccount
+
+Remove an account
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\RemoveAccountingAccountRequest();
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->accounting->removeAccountingAccount($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveAccountingAccountRequest](../../Models/Operations/RemoveAccountingAccountRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveAccountingAccountResponse](../../Models/Operations/RemoveAccountingAccountResponse.md)**
+
+
 ## removeAccountingCustomer
 
 Remove a customer
@@ -943,6 +1481,119 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\RemoveAccountingPaymentResponse](../../Models/Operations/RemoveAccountingPaymentResponse.md)**
+
+
+## removeAccountingTransaction
+
+Remove a transaction
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\RemoveAccountingTransactionRequest();
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->accounting->removeAccountingTransaction($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest](../../Models/Operations/RemoveAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse](../../Models/Operations/RemoveAccountingTransactionResponse.md)**
+
+
+## updateAccountingAccount
+
+Update an account
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\UpdateAccountingAccountRequest();
+    $request->accountingAccount = new Shared\AccountingAccount();
+    $request->accountingAccount->balance = 5954.09;
+    $request->accountingAccount->bankAccountNumber = 'string';
+    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-21T20:36:10.841Z');
+    $request->accountingAccount->currency = 'Tanzanian Shilling';
+    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->description = 'Stand-alone grid-enabled model';
+    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->status = Shared\Status::Active;
+    $request->accountingAccount->type = Shared\Type::Bank;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-02T17:59:24.345Z');
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->accounting->updateAccountingAccount($request);
+
+    if ($response->accountingAccount !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateAccountingAccountRequest](../../Models/Operations/UpdateAccountingAccountRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateAccountingAccountResponse](../../Models/Operations/UpdateAccountingAccountResponse.md)**
 
 
 ## updateAccountingCustomer
@@ -1163,4 +1814,69 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\UpdateAccountingPaymentResponse](../../Models/Operations/UpdateAccountingPaymentResponse.md)**
+
+
+## updateAccountingTransaction
+
+Update a transaction
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '';
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new Operations\UpdateAccountingTransactionRequest();
+    $request->accountingTransaction = new Shared\AccountingTransaction();
+    $request->accountingTransaction->accountId = 'string';
+    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->currency = 'Zloty';
+    $request->accountingTransaction->description = 'Organic web-enabled orchestration';
+    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->lineItems = [
+        new Shared\AccountingTransactionLineitem(),
+    ];
+    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->taxAmount = 2397.73;
+    $request->accountingTransaction->totalAmount = 1897.48;
+    $request->accountingTransaction->type = Shared\AccountingTransactionType::Receive;
+    $request->accountingTransaction->updatedAt = 'string';
+    $request->connectionId = 'string';
+    $request->id = '<ID>';
+
+    $response = $sdk->accounting->updateAccountingTransaction($request);
+
+    if ($response->accountingTransaction !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest](../../Models/Operations/UpdateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse](../../Models/Operations/UpdateAccountingTransactionResponse.md)**
 

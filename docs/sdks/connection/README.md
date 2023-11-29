@@ -72,7 +72,7 @@ try {
     $request->integrationType = 'string';
     $request->isPaused = false;
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::AtsJobRead,
+        Shared\PropertyConnectionPermissions::AtsCandidateWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
     $request->workspaceId = 'string';
@@ -270,7 +270,7 @@ try {
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AccountingPaymentRead,
+        Shared\PropertyConnectionPermissions::AccountingInvoiceWrite,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->workspaceId = 'string';

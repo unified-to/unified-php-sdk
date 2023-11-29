@@ -45,7 +45,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-18T22:03:17.799Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Shared\Status::FirstInterview;
+    $request->atsApplication->status = Shared\AtsApplicationStatus::FirstInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T10:02:31.440Z');
     $request->connectionId = 'string';
 
@@ -219,7 +219,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-04T13:56:12.670Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Shared\Status::Screening;
+    $request->atsApplication->status = Shared\AtsApplicationStatus::Screening;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-02T14:46:44.919Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';
@@ -331,7 +331,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-09T08:05:18.054Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Shared\Status::Rejected;
+    $request->atsApplication->status = Shared\AtsApplicationStatus::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T16:36:33.801Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';

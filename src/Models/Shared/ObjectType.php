@@ -11,6 +11,8 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum ObjectType: string
 {
+    case AccountingAccount = 'accounting_account';
+    case AccountingTransaction = 'accounting_transaction';
     case AccountingCustomer = 'accounting_customer';
     case AccountingInvoice = 'accounting_invoice';
     case AccountingPayment = 'accounting_payment';

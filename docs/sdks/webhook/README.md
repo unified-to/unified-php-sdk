@@ -46,7 +46,7 @@ try {
     $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 6142.55;
-    $request->webhook->objectType = Shared\ObjectType::AccountingPayment;
+    $request->webhook->objectType = Shared\ObjectType::AccountingCustomer;
     $request->webhook->subscriptions = [
         'string',
     ];
