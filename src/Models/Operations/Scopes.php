@@ -13,6 +13,8 @@ enum Scopes: string
 {
     case AuthLogin = 'auth_login';
     case AccountingAccountRead = 'accounting_account_read';
+    case AccountingAccountWrite = 'accounting_account_write';
+    case AccountingTransactionRead = 'accounting_transaction_read';
     case AccountingTransactionWrite = 'accounting_transaction_write';
     case AccountingInvoiceRead = 'accounting_invoice_read';
     case AccountingInvoiceWrite = 'accounting_invoice_write';
