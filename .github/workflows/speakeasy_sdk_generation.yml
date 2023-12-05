@@ -30,4 +30,5 @@ jobs:
       openapi_doc_auth_token: ${{ secrets.SPEC_TOKEN }}
       packagist_token: ${{ secrets.PACKAGIST_TOKEN }}
       packagist_username: ${{ secrets.PACKAGIST_USERNAME }}
+      slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
