@@ -65,12 +65,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmCompanyRequest();
+        $request = new Operations\CreateCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
@@ -102,7 +100,7 @@ try {
     $request->crmCompany->websites = [
         'string',
     ];
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmCompany($request);
 
@@ -145,12 +143,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmContactRequest();
+        $request = new Operations\CreateCrmContactRequest();
     $request->crmContact = new Shared\CrmContact();
     $request->crmContact->address = new Shared\PropertyCrmContactAddress();
     $request->crmContact->address->address1 = 'string';
@@ -180,7 +176,7 @@ try {
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-21T23:24:52.050Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmContact($request);
 
@@ -223,12 +219,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmDealRequest();
+        $request = new Operations\CreateCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 1917.45;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-27T15:05:01.017Z');
@@ -247,7 +241,7 @@ try {
     ];
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-13T05:28:26.663Z');
     $request->crmDeal->wonReason = 'string';
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmDeal($request);
 
@@ -290,12 +284,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmEventRequest();
+        $request = new Operations\CreateCrmEventRequest();
     $request->crmEvent = new Shared\CrmEvent();
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Grass-roots intangible superstructure';
@@ -338,7 +330,7 @@ try {
     $request->crmEvent->task->status = 'string';
     $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-14T14:31:08.257Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmEvent($request);
 
@@ -381,12 +373,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmFileRequest();
+        $request = new Operations\CreateCrmFileRequest();
     $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
@@ -404,7 +394,7 @@ try {
     $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T12:27:57.377Z');
     $request->crmFile->userId = 'string';
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmFile($request);
 
@@ -447,12 +437,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmLeadRequest();
+        $request = new Operations\CreateCrmLeadRequest();
     $request->crmLead = new Shared\CrmLead();
     $request->crmLead->address = new Shared\PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'string';
@@ -482,7 +470,7 @@ try {
     ];
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-01T21:13:09.210Z');
     $request->crmLead->userId = 'string';
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmLead($request);
 
@@ -525,12 +513,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmPipelineRequest();
+        $request = new Operations\CreateCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-24T14:15:54.218Z');
     $request->crmPipeline->dealProbability = false;
@@ -540,7 +526,7 @@ try {
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-01T06:10:18.007Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmPipeline($request);
 
@@ -583,17 +569,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmCompanyRequest();
+        $request = new Operations\GetCrmCompanyRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->getCrmCompany($request);
 
@@ -636,17 +620,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmContactRequest();
+        $request = new Operations\GetCrmContactRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->getCrmContact($request);
 
@@ -689,17 +671,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmDealRequest();
+        $request = new Operations\GetCrmDealRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->getCrmDeal($request);
 
@@ -742,17 +722,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmEventRequest();
+        $request = new Operations\GetCrmEventRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->getCrmEvent($request);
 
@@ -795,17 +773,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmFileRequest();
+        $request = new Operations\GetCrmFileRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->getCrmFile($request);
 
@@ -848,17 +824,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmLeadRequest();
+        $request = new Operations\GetCrmLeadRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->getCrmLead($request);
 
@@ -901,17 +875,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmPipelineRequest();
+        $request = new Operations\GetCrmPipelineRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->getCrmPipeline($request);
 
@@ -954,12 +926,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmCompaniesRequest();
+        $request = new Operations\ListCrmCompaniesRequest();
     $request->connectionId = 'string';
     $request->contactId = 'string';
     $request->dealId = 'string';
@@ -971,7 +941,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-02T07:12:37.628Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-02T07:12:37.628Z');;
 
     $response = $sdk->crm->listCrmCompanies($request);
 
@@ -1014,12 +984,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmContactsRequest();
+        $request = new Operations\ListCrmContactsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->dealId = 'string';
@@ -1031,7 +999,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-15T04:38:32.631Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-15T04:38:32.631Z');;
 
     $response = $sdk->crm->listCrmContacts($request);
 
@@ -1074,12 +1042,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmDealsRequest();
+        $request = new Operations\ListCrmDealsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -1091,7 +1057,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-03T12:16:34.604Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-03T12:16:34.604Z');;
 
     $response = $sdk->crm->listCrmDeals($request);
 
@@ -1134,12 +1100,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmEventsRequest();
+        $request = new Operations\ListCrmEventsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -1152,7 +1116,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T09:02:38.779Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T09:02:38.779Z');;
 
     $response = $sdk->crm->listCrmEvents($request);
 
@@ -1195,12 +1159,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmFilesRequest();
+        $request = new Operations\ListCrmFilesRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -1213,7 +1175,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-04T18:55:22.126Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-04T18:55:22.126Z');;
 
     $response = $sdk->crm->listCrmFiles($request);
 
@@ -1256,12 +1218,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmLeadsRequest();
+        $request = new Operations\ListCrmLeadsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -1273,7 +1233,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-11T15:13:29.920Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-11T15:13:29.920Z');;
 
     $response = $sdk->crm->listCrmLeads($request);
 
@@ -1316,12 +1276,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmPipelinesRequest();
+        $request = new Operations\ListCrmPipelinesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -1331,7 +1289,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-29T15:47:27.871Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-29T15:47:27.871Z');;
 
     $response = $sdk->crm->listCrmPipelines($request);
 
@@ -1374,12 +1332,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmCompanyRequest();
+        $request = new Operations\PatchCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
@@ -1412,7 +1368,7 @@ try {
         'string',
     ];
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->patchCrmCompany($request);
 
@@ -1455,12 +1411,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmContactRequest();
+        $request = new Operations\PatchCrmContactRequest();
     $request->crmContact = new Shared\CrmContact();
     $request->crmContact->address = new Shared\PropertyCrmContactAddress();
     $request->crmContact->address->address1 = 'string';
@@ -1491,7 +1445,7 @@ try {
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T14:54:45.741Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->patchCrmContact($request);
 
@@ -1534,12 +1488,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmDealRequest();
+        $request = new Operations\PatchCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 9874.05;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T08:48:03.715Z');
@@ -1559,7 +1511,7 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T14:41:27.897Z');
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->patchCrmDeal($request);
 
@@ -1602,12 +1554,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmEventRequest();
+        $request = new Operations\PatchCrmEventRequest();
     $request->crmEvent = new Shared\CrmEvent();
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Multi-layered well-modulated middleware';
@@ -1651,7 +1601,7 @@ try {
     $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-30T20:46:48.999Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->patchCrmEvent($request);
 
@@ -1694,12 +1644,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmFileRequest();
+        $request = new Operations\PatchCrmFileRequest();
     $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
@@ -1718,7 +1666,7 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-07T04:39:27.375Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->patchCrmFile($request);
 
@@ -1761,12 +1709,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmLeadRequest();
+        $request = new Operations\PatchCrmLeadRequest();
     $request->crmLead = new Shared\CrmLead();
     $request->crmLead->address = new Shared\PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'string';
@@ -1797,7 +1743,7 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-10T05:25:00.043Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->patchCrmLead($request);
 
@@ -1840,12 +1786,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmPipelineRequest();
+        $request = new Operations\PatchCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-26T17:19:01.949Z');
     $request->crmPipeline->dealProbability = false;
@@ -1856,7 +1800,7 @@ try {
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T12:55:27.421Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->patchCrmPipeline($request);
 
@@ -1899,14 +1843,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmCompanyRequest();
+        $request = new Operations\RemoveCrmCompanyRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->removeCrmCompany($request);
 
@@ -1949,14 +1891,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmContactRequest();
+        $request = new Operations\RemoveCrmContactRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->removeCrmContact($request);
 
@@ -1999,14 +1939,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmDealRequest();
+        $request = new Operations\RemoveCrmDealRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->removeCrmDeal($request);
 
@@ -2049,14 +1987,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmEventRequest();
+        $request = new Operations\RemoveCrmEventRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->removeCrmEvent($request);
 
@@ -2099,14 +2035,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmFileRequest();
+        $request = new Operations\RemoveCrmFileRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->removeCrmFile($request);
 
@@ -2149,14 +2083,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmLeadRequest();
+        $request = new Operations\RemoveCrmLeadRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->removeCrmLead($request);
 
@@ -2199,14 +2131,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmPipelineRequest();
+        $request = new Operations\RemoveCrmPipelineRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->removeCrmPipeline($request);
 
@@ -2249,12 +2179,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmCompanyRequest();
+        $request = new Operations\UpdateCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
@@ -2287,7 +2215,7 @@ try {
         'string',
     ];
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->updateCrmCompany($request);
 
@@ -2330,12 +2258,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmContactRequest();
+        $request = new Operations\UpdateCrmContactRequest();
     $request->crmContact = new Shared\CrmContact();
     $request->crmContact->address = new Shared\PropertyCrmContactAddress();
     $request->crmContact->address->address1 = 'string';
@@ -2366,7 +2292,7 @@ try {
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-02T04:38:24.473Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->updateCrmContact($request);
 
@@ -2409,12 +2335,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmDealRequest();
+        $request = new Operations\UpdateCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 854.3;
     $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T07:04:58.998Z');
@@ -2434,7 +2358,7 @@ try {
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-31T15:37:01.475Z');
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->updateCrmDeal($request);
 
@@ -2477,12 +2401,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmEventRequest();
+        $request = new Operations\UpdateCrmEventRequest();
     $request->crmEvent = new Shared\CrmEvent();
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Intuitive incremental orchestration';
@@ -2526,7 +2448,7 @@ try {
     $request->crmEvent->type = Shared\CrmEventType::Email;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-26T08:01:25.242Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->updateCrmEvent($request);
 
@@ -2569,12 +2491,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmFileRequest();
+        $request = new Operations\UpdateCrmFileRequest();
     $request->crmFile = new Shared\CrmFile();
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
@@ -2593,7 +2513,7 @@ try {
     $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-11T08:15:48.719Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->updateCrmFile($request);
 
@@ -2636,12 +2556,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmLeadRequest();
+        $request = new Operations\UpdateCrmLeadRequest();
     $request->crmLead = new Shared\CrmLead();
     $request->crmLead->address = new Shared\PropertyCrmLeadAddress();
     $request->crmLead->address->address1 = 'string';
@@ -2672,7 +2590,7 @@ try {
     $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-13T22:33:13.952Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->updateCrmLead($request);
 
@@ -2715,12 +2633,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmPipelineRequest();
+        $request = new Operations\UpdateCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-27T08:28:05.275Z');
     $request->crmPipeline->dealProbability = false;
@@ -2731,7 +2647,7 @@ try {
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-18T01:45:20.441Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->crm->updateCrmPipeline($request);
 

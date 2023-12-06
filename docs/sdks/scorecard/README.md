@@ -29,12 +29,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsScorecardRequest();
+        $request = new Operations\CreateAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
@@ -47,7 +45,7 @@ try {
     $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = Shared\Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->scorecard->createAtsScorecard($request);
 
@@ -90,17 +88,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsScorecardRequest();
+        $request = new Operations\GetAtsScorecardRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->scorecard->getAtsScorecard($request);
 
@@ -143,12 +139,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsScorecardsRequest();
+        $request = new Operations\ListAtsScorecardsRequest();
     $request->applicationId = 'string';
     $request->candidateId = 'string';
     $request->connectionId = 'string';
@@ -162,7 +156,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T17:42:56.145Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T17:42:56.145Z');;
 
     $response = $sdk->scorecard->listAtsScorecards($request);
 
@@ -205,12 +199,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsScorecardRequest();
+        $request = new Operations\PatchAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
@@ -224,7 +216,7 @@ try {
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->scorecard->patchAtsScorecard($request);
 
@@ -267,14 +259,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsScorecardRequest();
+        $request = new Operations\RemoveAtsScorecardRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->scorecard->removeAtsScorecard($request);
 
@@ -317,12 +307,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsScorecardRequest();
+        $request = new Operations\UpdateAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
@@ -336,7 +324,7 @@ try {
     $request->atsScorecard->recommendation = Shared\Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->scorecard->updateAtsScorecard($request);
 

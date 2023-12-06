@@ -25,15 +25,13 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListEnrichCompaniesRequest();
+        $request = new Operations\ListEnrichCompaniesRequest();
     $request->connectionId = 'string';
     $request->domain = 'dismal-cornmeal.org';
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->enrich->listEnrichCompanies($request);
 
@@ -76,17 +74,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListEnrichPeopleRequest();
+        $request = new Operations\ListEnrichPeopleRequest();
     $request->connectionId = 'string';
     $request->email = 'Rosendo53@gmail.com';
     $request->linkedinUrl = 'string';
     $request->name = 'string';
-    $request->twitter = 'string';
+    $request->twitter = 'string';;
 
     $response = $sdk->enrich->listEnrichPeople($request);
 

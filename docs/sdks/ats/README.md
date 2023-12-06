@@ -59,12 +59,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsApplicationRequest();
+        $request = new Operations\CreateAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-09T11:35:08.252Z');
     $request->atsApplication->candidateId = 'string';
@@ -77,7 +75,7 @@ try {
     $request->atsApplication->source = 'string';
     $request->atsApplication->status = Shared\AtsApplicationStatus::FirstInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T10:02:31.440Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->ats->createAtsApplication($request);
 
@@ -120,12 +118,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsCandidateRequest();
+        $request = new Operations\CreateAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
@@ -157,7 +153,7 @@ try {
     ];
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T18:21:52.157Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->ats->createAtsCandidate($request);
 
@@ -200,12 +196,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsDocumentRequest();
+        $request = new Operations\CreateAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
@@ -219,7 +213,7 @@ try {
     $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-28T09:27:32.859Z');
     $request->atsDocument->userId = 'string';
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->ats->createAtsDocument($request);
 
@@ -262,12 +256,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsInterviewRequest();
+        $request = new Operations\CreateAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
@@ -284,7 +276,7 @@ try {
     $request->atsInterview->userIds = [
         'string',
     ];
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->ats->createAtsInterview($request);
 
@@ -327,12 +319,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsJobRequest();
+        $request = new Operations\CreateAtsJobRequest();
     $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
@@ -363,7 +353,7 @@ try {
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T17:38:42.004Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->ats->createAtsJob($request);
 
@@ -406,12 +396,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsScorecardRequest();
+        $request = new Operations\CreateAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
@@ -424,7 +412,7 @@ try {
     $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = Shared\Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->ats->createAtsScorecard($request);
 
@@ -467,17 +455,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsApplicationRequest();
+        $request = new Operations\GetAtsApplicationRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->getAtsApplication($request);
 
@@ -520,17 +506,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsCandidateRequest();
+        $request = new Operations\GetAtsCandidateRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->getAtsCandidate($request);
 
@@ -573,17 +557,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsDocumentRequest();
+        $request = new Operations\GetAtsDocumentRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->getAtsDocument($request);
 
@@ -626,17 +608,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsInterviewRequest();
+        $request = new Operations\GetAtsInterviewRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->getAtsInterview($request);
 
@@ -679,17 +659,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsJobRequest();
+        $request = new Operations\GetAtsJobRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->getAtsJob($request);
 
@@ -732,17 +710,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsScorecardRequest();
+        $request = new Operations\GetAtsScorecardRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->getAtsScorecard($request);
 
@@ -785,12 +761,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsApplicationsRequest();
+        $request = new Operations\ListAtsApplicationsRequest();
     $request->candidateId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -802,7 +776,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-21T12:43:47.690Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-21T12:43:47.690Z');;
 
     $response = $sdk->ats->listAtsApplications($request);
 
@@ -845,12 +819,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsCandidatesRequest();
+        $request = new Operations\ListAtsCandidatesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -860,7 +832,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-17T23:18:31.102Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-17T23:18:31.102Z');;
 
     $response = $sdk->ats->listAtsCandidates($request);
 
@@ -903,12 +875,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsDocumentsRequest();
+        $request = new Operations\ListAtsDocumentsRequest();
     $request->applicationId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -919,7 +889,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-30T11:38:20.739Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-30T11:38:20.739Z');;
 
     $response = $sdk->ats->listAtsDocuments($request);
 
@@ -962,12 +932,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsInterviewsRequest();
+        $request = new Operations\ListAtsInterviewsRequest();
     $request->applicationId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -978,7 +946,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T09:19:25.744Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T09:19:25.744Z');;
 
     $response = $sdk->ats->listAtsInterviews($request);
 
@@ -1021,12 +989,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsJobsRequest();
+        $request = new Operations\ListAtsJobsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -1036,7 +1002,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-03T15:53:00.086Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-03T15:53:00.086Z');;
 
     $response = $sdk->ats->listAtsJobs($request);
 
@@ -1079,12 +1045,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsScorecardsRequest();
+        $request = new Operations\ListAtsScorecardsRequest();
     $request->applicationId = 'string';
     $request->candidateId = 'string';
     $request->connectionId = 'string';
@@ -1098,7 +1062,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T17:42:56.145Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T17:42:56.145Z');;
 
     $response = $sdk->ats->listAtsScorecards($request);
 
@@ -1141,12 +1105,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsApplicationRequest();
+        $request = new Operations\PatchAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-15T04:58:14.527Z');
     $request->atsApplication->candidateId = 'string';
@@ -1160,7 +1122,7 @@ try {
     $request->atsApplication->status = Shared\AtsApplicationStatus::Screening;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-02T14:46:44.919Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->patchAtsApplication($request);
 
@@ -1203,12 +1165,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsCandidateRequest();
+        $request = new Operations\PatchAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
@@ -1241,7 +1201,7 @@ try {
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-19T12:47:03.298Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->patchAtsCandidate($request);
 
@@ -1284,12 +1244,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsDocumentRequest();
+        $request = new Operations\PatchAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
@@ -1304,7 +1262,7 @@ try {
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-14T01:39:21.030Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->patchAtsDocument($request);
 
@@ -1347,12 +1305,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsInterviewRequest();
+        $request = new Operations\PatchAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
@@ -1370,7 +1326,7 @@ try {
         'string',
     ];
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->patchAtsInterview($request);
 
@@ -1413,12 +1369,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsJobRequest();
+        $request = new Operations\PatchAtsJobRequest();
     $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
@@ -1450,7 +1404,7 @@ try {
     $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T04:38:28.121Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->patchAtsJob($request);
 
@@ -1493,12 +1447,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsScorecardRequest();
+        $request = new Operations\PatchAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
@@ -1512,7 +1464,7 @@ try {
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->patchAtsScorecard($request);
 
@@ -1555,14 +1507,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsApplicationRequest();
+        $request = new Operations\RemoveAtsApplicationRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->removeAtsApplication($request);
 
@@ -1605,14 +1555,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsCandidateRequest();
+        $request = new Operations\RemoveAtsCandidateRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->removeAtsCandidate($request);
 
@@ -1655,14 +1603,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsDocumentRequest();
+        $request = new Operations\RemoveAtsDocumentRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->removeAtsDocument($request);
 
@@ -1705,14 +1651,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsInterviewRequest();
+        $request = new Operations\RemoveAtsInterviewRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->removeAtsInterview($request);
 
@@ -1755,14 +1699,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsJobRequest();
+        $request = new Operations\RemoveAtsJobRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->removeAtsJob($request);
 
@@ -1805,14 +1747,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsScorecardRequest();
+        $request = new Operations\RemoveAtsScorecardRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->removeAtsScorecard($request);
 
@@ -1855,12 +1795,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsApplicationRequest();
+        $request = new Operations\UpdateAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-22T07:14:38.941Z');
     $request->atsApplication->candidateId = 'string';
@@ -1874,7 +1812,7 @@ try {
     $request->atsApplication->status = Shared\AtsApplicationStatus::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T16:36:33.801Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->updateAtsApplication($request);
 
@@ -1917,12 +1855,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsCandidateRequest();
+        $request = new Operations\UpdateAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
     $request->atsCandidate->address->address1 = 'string';
@@ -1955,7 +1891,7 @@ try {
     $request->atsCandidate->title = 'string';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-18T01:19:42.316Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->updateAtsCandidate($request);
 
@@ -1998,12 +1934,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsDocumentRequest();
+        $request = new Operations\UpdateAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
     $request->atsDocument->applicationId = 'string';
     $request->atsDocument->candidateId = 'string';
@@ -2018,7 +1952,7 @@ try {
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-02T17:00:21.700Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->updateAtsDocument($request);
 
@@ -2061,12 +1995,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsInterviewRequest();
+        $request = new Operations\UpdateAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
@@ -2084,7 +2016,7 @@ try {
         'string',
     ];
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->updateAtsInterview($request);
 
@@ -2127,12 +2059,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsJobRequest();
+        $request = new Operations\UpdateAtsJobRequest();
     $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
@@ -2164,7 +2094,7 @@ try {
     $request->atsJob->status = Shared\AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T15:41:17.674Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->updateAtsJob($request);
 
@@ -2207,12 +2137,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsScorecardRequest();
+        $request = new Operations\UpdateAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
@@ -2226,7 +2154,7 @@ try {
     $request->atsScorecard->recommendation = Shared\Recommendation::No;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ats->updateAtsScorecard($request);
 

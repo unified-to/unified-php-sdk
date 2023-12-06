@@ -25,13 +25,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedApicallRequest();
-    $request->id = '<ID>';
+        $request = new Operations\GetUnifiedApicallRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->apicall->getUnifiedApicall($request);
 
@@ -74,12 +72,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedApicallsRequest();
+        $request = new Operations\ListUnifiedApicallsRequest();
     $request->connectionId = 'string';
     $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-09T20:57:25.500Z');
     $request->env = 'string';
@@ -90,7 +86,7 @@ try {
     $request->offset = 5267.27;
     $request->order = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T10:22:39.053Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T10:22:39.053Z');;
 
     $response = $sdk->apicall->listUnifiedApicalls($request);
 

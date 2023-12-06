@@ -29,12 +29,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAccountingInvoiceRequest();
+        $request = new Operations\CreateAccountingInvoiceRequest();
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6736.06;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-27T05:21:39.307Z');
@@ -58,7 +56,7 @@ try {
     $request->accountingInvoice->taxAmount = 1578.89;
     $request->accountingInvoice->totalAmount = 5503.49;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-02T06:50:07.075Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->invoice->createAccountingInvoice($request);
 
@@ -101,17 +99,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAccountingInvoiceRequest();
+        $request = new Operations\GetAccountingInvoiceRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->invoice->getAccountingInvoice($request);
 
@@ -154,12 +150,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAccountingInvoicesRequest();
+        $request = new Operations\ListAccountingInvoicesRequest();
     $request->connectionId = 'string';
     $request->customerId = 'string';
     $request->fields = [
@@ -170,7 +164,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-23T15:55:15.727Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-23T15:55:15.727Z');;
 
     $response = $sdk->invoice->listAccountingInvoices($request);
 
@@ -213,12 +207,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAccountingInvoiceRequest();
+        $request = new Operations\PatchAccountingInvoiceRequest();
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 7374.1;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T11:43:07.271Z');
@@ -243,7 +235,7 @@ try {
     $request->accountingInvoice->totalAmount = 2117.25;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T14:04:43.902Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->invoice->patchAccountingInvoice($request);
 
@@ -286,14 +278,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAccountingInvoiceRequest();
+        $request = new Operations\RemoveAccountingInvoiceRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->invoice->removeAccountingInvoice($request);
 
@@ -336,12 +326,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAccountingInvoiceRequest();
+        $request = new Operations\UpdateAccountingInvoiceRequest();
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6974.28;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-02T19:25:29.417Z');
@@ -366,7 +354,7 @@ try {
     $request->accountingInvoice->totalAmount = 7535.06;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-25T22:43:40.071Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->invoice->updateAccountingInvoice($request);
 

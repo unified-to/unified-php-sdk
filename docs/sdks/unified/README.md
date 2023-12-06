@@ -38,12 +38,10 @@ use \Unified\Unified_to\Models\Shared;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\Connection();
+        $request = new Shared\Connection();
     $request->auth = new Shared\PropertyConnectionAuth();
     $request->auth->accessToken = 'string';
     $request->auth->apiUrl = 'string';
@@ -85,7 +83,7 @@ try {
         Shared\PropertyConnectionPermissions::AtsCandidateWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
-    $request->workspaceId = 'string';
+    $request->workspaceId = 'string';;
 
     $response = $sdk->unified->createUnifiedConnection($request);
 
@@ -111,7 +109,7 @@ try {
 
 ## createUnifiedWebhook
 
-To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
+To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>. The data payload received by your server is described at https://docs.unified.to/unified/overview
 
 ### Example Usage
 
@@ -128,12 +126,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateUnifiedWebhookRequest();
+        $request = new Operations\CreateUnifiedWebhookRequest();
     $request->webhook = new Shared\Webhook();
     $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-23T11:16:21.687Z');
     $request->webhook->connectionId = 'string';
@@ -157,7 +153,7 @@ try {
     $request->events = [
         Operations\Events::Created,
     ];
-    $request->object = 'string';
+    $request->object = 'string';;
 
     $response = $sdk->unified->createUnifiedWebhook($request);
 
@@ -200,13 +196,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedApicallRequest();
-    $request->id = '<ID>';
+        $request = new Operations\GetUnifiedApicallRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->unified->getUnifiedApicall($request);
 
@@ -249,13 +243,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedConnectionRequest();
-    $request->id = '<ID>';
+        $request = new Operations\GetUnifiedConnectionRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->unified->getUnifiedConnection($request);
 
@@ -298,13 +290,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedIntegrationRequest();
-    $request->integrationType = 'string';
+        $request = new Operations\GetUnifiedIntegrationRequest();
+    $request->integrationType = 'string';;
 
     $response = $sdk->unified->getUnifiedIntegration($request);
 
@@ -347,12 +337,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedIntegrationAuthRequest();
+        $request = new Operations\GetUnifiedIntegrationAuthRequest();
     $request->env = 'string';
     $request->externalXref = 'string';
     $request->failureRedirect = 'string';
@@ -365,7 +353,7 @@ try {
     $request->state = 'string';
     $request->subdomain = 'string';
     $request->successRedirect = 'string';
-    $request->workspaceId = 'string';
+    $request->workspaceId = 'string';;
 
     $response = $sdk->unified->getUnifiedIntegrationAuth($request);
 
@@ -408,13 +396,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedWebhookRequest();
-    $request->id = '<ID>';
+        $request = new Operations\GetUnifiedWebhookRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->unified->getUnifiedWebhook($request);
 
@@ -457,12 +443,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedApicallsRequest();
+        $request = new Operations\ListUnifiedApicallsRequest();
     $request->connectionId = 'string';
     $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-09T20:57:25.500Z');
     $request->env = 'string';
@@ -473,7 +457,7 @@ try {
     $request->offset = 5267.27;
     $request->order = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T10:22:39.053Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T10:22:39.053Z');;
 
     $response = $sdk->unified->listUnifiedApicalls($request);
 
@@ -516,12 +500,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedConnectionsRequest();
+        $request = new Operations\ListUnifiedConnectionsRequest();
     $request->categories = [
         Operations\Categories::Enrich,
     ];
@@ -531,7 +513,7 @@ try {
     $request->offset = 15.12;
     $request->order = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-20T10:15:04.986Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-20T10:15:04.986Z');;
 
     $response = $sdk->unified->listUnifiedConnections($request);
 
@@ -574,12 +556,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
+        $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
         Operations\QueryParamCategories::Ticketing,
@@ -589,7 +569,7 @@ try {
     $request->offset = 5948.93;
     $request->summary = false;
     $request->updatedGte = 'string';
-    $request->workspaceId = 'string';
+    $request->workspaceId = 'string';;
 
     $response = $sdk->unified->listUnifiedIntegrationWorkspaces($request);
 
@@ -632,12 +612,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedIntegrationsRequest();
+        $request = new Operations\ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
         Operations\ListUnifiedIntegrationsQueryParamCategories::Auth,
@@ -648,7 +626,7 @@ try {
     $request->order = 'string';
     $request->sort = 'string';
     $request->summary = false;
-    $request->updatedGte = 'string';
+    $request->updatedGte = 'string';;
 
     $response = $sdk->unified->listUnifiedIntegrations($request);
 
@@ -691,19 +669,17 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedWebhooksRequest();
+        $request = new Operations\ListUnifiedWebhooksRequest();
     $request->env = 'string';
     $request->limit = 1162.24;
     $request->object = 'string';
     $request->offset = 5094.7;
     $request->order = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-20T14:39:47.451Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-20T14:39:47.451Z');;
 
     $response = $sdk->unified->listUnifiedWebhooks($request);
 
@@ -746,12 +722,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchUnifiedConnectionRequest();
+        $request = new Operations\PatchUnifiedConnectionRequest();
     $request->connection = new Shared\Connection();
     $request->connection->auth = new Shared\PropertyConnectionAuth();
     $request->connection->auth->accessToken = 'string';
@@ -795,7 +769,7 @@ try {
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->workspaceId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->unified->patchUnifiedConnection($request);
 
@@ -838,13 +812,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveUnifiedConnectionRequest();
-    $request->id = '<ID>';
+        $request = new Operations\RemoveUnifiedConnectionRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->unified->removeUnifiedConnection($request);
 
@@ -887,13 +859,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveUnifiedWebhookRequest();
-    $request->id = '<ID>';
+        $request = new Operations\RemoveUnifiedWebhookRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->unified->removeUnifiedWebhook($request);
 
@@ -936,12 +906,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateUnifiedConnectionRequest();
+        $request = new Operations\UpdateUnifiedConnectionRequest();
     $request->connection = new Shared\Connection();
     $request->connection->auth = new Shared\PropertyConnectionAuth();
     $request->connection->auth->accessToken = 'string';
@@ -985,7 +953,7 @@ try {
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T04:40:33.286Z');
     $request->connection->workspaceId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->unified->updateUnifiedConnection($request);
 

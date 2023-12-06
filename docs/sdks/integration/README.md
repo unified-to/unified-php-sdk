@@ -27,13 +27,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedIntegrationRequest();
-    $request->integrationType = 'string';
+        $request = new Operations\GetUnifiedIntegrationRequest();
+    $request->integrationType = 'string';;
 
     $response = $sdk->integration->getUnifiedIntegration($request);
 
@@ -76,12 +74,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedIntegrationAuthRequest();
+        $request = new Operations\GetUnifiedIntegrationAuthRequest();
     $request->env = 'string';
     $request->externalXref = 'string';
     $request->failureRedirect = 'string';
@@ -94,7 +90,7 @@ try {
     $request->state = 'string';
     $request->subdomain = 'string';
     $request->successRedirect = 'string';
-    $request->workspaceId = 'string';
+    $request->workspaceId = 'string';;
 
     $response = $sdk->integration->getUnifiedIntegrationAuth($request);
 
@@ -137,12 +133,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
+        $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
         Operations\QueryParamCategories::Ticketing,
@@ -152,7 +146,7 @@ try {
     $request->offset = 5948.93;
     $request->summary = false;
     $request->updatedGte = 'string';
-    $request->workspaceId = 'string';
+    $request->workspaceId = 'string';;
 
     $response = $sdk->integration->listUnifiedIntegrationWorkspaces($request);
 
@@ -195,12 +189,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedIntegrationsRequest();
+        $request = new Operations\ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
         Operations\ListUnifiedIntegrationsQueryParamCategories::Auth,
@@ -211,7 +203,7 @@ try {
     $request->order = 'string';
     $request->sort = 'string';
     $request->summary = false;
-    $request->updatedGte = 'string';
+    $request->updatedGte = 'string';;
 
     $response = $sdk->integration->listUnifiedIntegrations($request);
 

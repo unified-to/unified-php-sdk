@@ -25,12 +25,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedIntegrationAuthRequest();
+        $request = new Operations\GetUnifiedIntegrationAuthRequest();
     $request->env = 'string';
     $request->externalXref = 'string';
     $request->failureRedirect = 'string';
@@ -43,7 +41,7 @@ try {
     $request->state = 'string';
     $request->subdomain = 'string';
     $request->successRedirect = 'string';
-    $request->workspaceId = 'string';
+    $request->workspaceId = 'string';;
 
     $response = $sdk->auth->getUnifiedIntegrationAuth($request);
 
@@ -86,19 +84,17 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedIntegrationLoginRequest();
+        $request = new Operations\GetUnifiedIntegrationLoginRequest();
     $request->env = 'string';
     $request->failureRedirect = 'string';
     $request->integrationType = 'string';
     $request->redirect = false;
     $request->state = 'string';
     $request->successRedirect = 'string';
-    $request->workspaceId = 'string';
+    $request->workspaceId = 'string';;
 
     $response = $sdk->auth->getUnifiedIntegrationLogin($request);
 

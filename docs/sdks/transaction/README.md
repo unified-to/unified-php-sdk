@@ -29,12 +29,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAccountingTransactionRequest();
+        $request = new Operations\CreateAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
     $request->accountingTransaction->accountId = 'string';
     $request->accountingTransaction->createdAt = 'string';
@@ -50,7 +48,7 @@ try {
     $request->accountingTransaction->totalAmount = 7389.88;
     $request->accountingTransaction->type = Shared\AccountingTransactionType::Spend;
     $request->accountingTransaction->updatedAt = 'string';
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->transaction->createAccountingTransaction($request);
 
@@ -93,17 +91,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAccountingTransactionRequest();
+        $request = new Operations\GetAccountingTransactionRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->transaction->getAccountingTransaction($request);
 
@@ -146,12 +142,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAccountingTransactionsRequest();
+        $request = new Operations\ListAccountingTransactionsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -161,7 +155,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-02T12:59:27.985Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-02T12:59:27.985Z');;
 
     $response = $sdk->transaction->listAccountingTransactions($request);
 
@@ -204,12 +198,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAccountingTransactionRequest();
+        $request = new Operations\PatchAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
     $request->accountingTransaction->accountId = 'string';
     $request->accountingTransaction->createdAt = 'string';
@@ -226,7 +218,7 @@ try {
     $request->accountingTransaction->type = Shared\AccountingTransactionType::Receive;
     $request->accountingTransaction->updatedAt = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->transaction->patchAccountingTransaction($request);
 
@@ -269,14 +261,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAccountingTransactionRequest();
+        $request = new Operations\RemoveAccountingTransactionRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->transaction->removeAccountingTransaction($request);
 
@@ -319,12 +309,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAccountingTransactionRequest();
+        $request = new Operations\UpdateAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
     $request->accountingTransaction->accountId = 'string';
     $request->accountingTransaction->createdAt = 'string';
@@ -341,7 +329,7 @@ try {
     $request->accountingTransaction->type = Shared\AccountingTransactionType::Receive;
     $request->accountingTransaction->updatedAt = 'string';
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->transaction->updateAccountingTransaction($request);
 

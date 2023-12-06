@@ -29,12 +29,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAccountingAccountRequest();
+        $request = new Operations\CreateAccountingAccountRequest();
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 6602.56;
     $request->accountingAccount->bankAccountNumber = 'string';
@@ -48,7 +46,7 @@ try {
     $request->accountingAccount->status = Shared\Status::Active;
     $request->accountingAccount->type = Shared\Type::Equity;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-09T10:11:13.258Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->account->createAccountingAccount($request);
 
@@ -91,17 +89,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAccountingAccountRequest();
+        $request = new Operations\GetAccountingAccountRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->account->getAccountingAccount($request);
 
@@ -144,12 +140,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAccountingAccountsRequest();
+        $request = new Operations\ListAccountingAccountsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -159,7 +153,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-20T03:09:57.234Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-20T03:09:57.234Z');;
 
     $response = $sdk->account->listAccountingAccounts($request);
 
@@ -202,12 +196,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAccountingAccountRequest();
+        $request = new Operations\PatchAccountingAccountRequest();
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 1931.26;
     $request->accountingAccount->bankAccountNumber = 'string';
@@ -222,7 +214,7 @@ try {
     $request->accountingAccount->type = Shared\Type::Revenue;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-10T11:14:55.383Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->account->patchAccountingAccount($request);
 
@@ -265,14 +257,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAccountingAccountRequest();
+        $request = new Operations\RemoveAccountingAccountRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->account->removeAccountingAccount($request);
 
@@ -315,12 +305,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAccountingAccountRequest();
+        $request = new Operations\UpdateAccountingAccountRequest();
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 5954.09;
     $request->accountingAccount->bankAccountNumber = 'string';
@@ -335,7 +323,7 @@ try {
     $request->accountingAccount->type = Shared\Type::Bank;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-02T17:59:24.345Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->account->updateAccountingAccount($request);
 

@@ -30,12 +30,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmCompanyRequest();
+        $request = new Operations\CreateCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
@@ -67,7 +65,7 @@ try {
     $request->crmCompany->websites = [
         'string',
     ];
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->company->createCrmCompany($request);
 
@@ -110,17 +108,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmCompanyRequest();
+        $request = new Operations\GetCrmCompanyRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->company->getCrmCompany($request);
 
@@ -163,12 +159,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmCompaniesRequest();
+        $request = new Operations\ListCrmCompaniesRequest();
     $request->connectionId = 'string';
     $request->contactId = 'string';
     $request->dealId = 'string';
@@ -180,7 +174,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-02T07:12:37.628Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-02T07:12:37.628Z');;
 
     $response = $sdk->company->listCrmCompanies($request);
 
@@ -223,15 +217,13 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListEnrichCompaniesRequest();
+        $request = new Operations\ListEnrichCompaniesRequest();
     $request->connectionId = 'string';
     $request->domain = 'dismal-cornmeal.org';
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->company->listEnrichCompanies($request);
 
@@ -274,12 +266,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmCompanyRequest();
+        $request = new Operations\PatchCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
@@ -312,7 +302,7 @@ try {
         'string',
     ];
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->company->patchCrmCompany($request);
 
@@ -355,14 +345,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmCompanyRequest();
+        $request = new Operations\RemoveCrmCompanyRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->company->removeCrmCompany($request);
 
@@ -405,12 +393,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmCompanyRequest();
+        $request = new Operations\UpdateCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
     $request->crmCompany->address->address1 = 'string';
@@ -443,7 +429,7 @@ try {
         'string',
     ];
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->company->updateCrmCompany($request);
 

@@ -10,7 +10,7 @@
 
 ## createUnifiedWebhook
 
-To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
+To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>. The data payload received by your server is described at https://docs.unified.to/unified/overview
 
 ### Example Usage
 
@@ -27,12 +27,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateUnifiedWebhookRequest();
+        $request = new Operations\CreateUnifiedWebhookRequest();
     $request->webhook = new Shared\Webhook();
     $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-23T11:16:21.687Z');
     $request->webhook->connectionId = 'string';
@@ -56,7 +54,7 @@ try {
     $request->events = [
         Operations\Events::Created,
     ];
-    $request->object = 'string';
+    $request->object = 'string';;
 
     $response = $sdk->webhook->createUnifiedWebhook($request);
 
@@ -99,13 +97,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedWebhookRequest();
-    $request->id = '<ID>';
+        $request = new Operations\GetUnifiedWebhookRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->webhook->getUnifiedWebhook($request);
 
@@ -148,19 +144,17 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedWebhooksRequest();
+        $request = new Operations\ListUnifiedWebhooksRequest();
     $request->env = 'string';
     $request->limit = 1162.24;
     $request->object = 'string';
     $request->offset = 5094.7;
     $request->order = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-20T14:39:47.451Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-20T14:39:47.451Z');;
 
     $response = $sdk->webhook->listUnifiedWebhooks($request);
 
@@ -203,13 +197,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveUnifiedWebhookRequest();
-    $request->id = '<ID>';
+        $request = new Operations\RemoveUnifiedWebhookRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->webhook->removeUnifiedWebhook($request);
 

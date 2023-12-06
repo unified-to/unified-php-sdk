@@ -28,15 +28,13 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreatePassthroughRequest();
+        $request = new Operations\CreatePassthroughRequest();
     $request->connectionId = 'string';
     $request->path = '/etc/periodic';
-    $request->undefined = new Shared\Undefined();
+    $request->undefined = new Shared\Undefined();;
 
     $response = $sdk->passthrough->createPassthrough($request);
 
@@ -79,14 +77,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListPassthroughsRequest();
+        $request = new Operations\ListPassthroughsRequest();
     $request->connectionId = 'string';
-    $request->path = '/selinux';
+    $request->path = '/selinux';;
 
     $response = $sdk->passthrough->listPassthroughs($request);
 
@@ -129,15 +125,13 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchPassthroughRequest();
+        $request = new Operations\PatchPassthroughRequest();
     $request->connectionId = 'string';
     $request->path = '/mnt';
-    $request->undefined = new Shared\Undefined();
+    $request->undefined = new Shared\Undefined();;
 
     $response = $sdk->passthrough->patchPassthrough($request);
 
@@ -180,14 +174,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemovePassthroughRequest();
+        $request = new Operations\RemovePassthroughRequest();
     $request->connectionId = 'string';
-    $request->path = '/Applications';
+    $request->path = '/Applications';;
 
     $response = $sdk->passthrough->removePassthrough($request);
 
@@ -230,15 +222,13 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdatePassthroughRequest();
+        $request = new Operations\UpdatePassthroughRequest();
     $request->connectionId = 'string';
     $request->path = '/dev';
-    $request->undefined = new Shared\Undefined();
+    $request->undefined = new Shared\Undefined();;
 
     $response = $sdk->passthrough->updatePassthrough($request);
 

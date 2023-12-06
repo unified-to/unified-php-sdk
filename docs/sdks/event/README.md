@@ -29,12 +29,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCrmEventRequest();
+        $request = new Operations\CreateCrmEventRequest();
     $request->crmEvent = new Shared\CrmEvent();
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Grass-roots intangible superstructure';
@@ -77,7 +75,7 @@ try {
     $request->crmEvent->task->status = 'string';
     $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-14T14:31:08.257Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->event->createCrmEvent($request);
 
@@ -120,17 +118,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetCrmEventRequest();
+        $request = new Operations\GetCrmEventRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->event->getCrmEvent($request);
 
@@ -173,12 +169,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListCrmEventsRequest();
+        $request = new Operations\ListCrmEventsRequest();
     $request->companyId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -191,7 +185,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T09:02:38.779Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T09:02:38.779Z');;
 
     $response = $sdk->event->listCrmEvents($request);
 
@@ -234,12 +228,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchCrmEventRequest();
+        $request = new Operations\PatchCrmEventRequest();
     $request->crmEvent = new Shared\CrmEvent();
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Multi-layered well-modulated middleware';
@@ -283,7 +275,7 @@ try {
     $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-30T20:46:48.999Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->event->patchCrmEvent($request);
 
@@ -326,14 +318,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveCrmEventRequest();
+        $request = new Operations\RemoveCrmEventRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->event->removeCrmEvent($request);
 
@@ -376,12 +366,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateCrmEventRequest();
+        $request = new Operations\UpdateCrmEventRequest();
     $request->crmEvent = new Shared\CrmEvent();
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Intuitive incremental orchestration';
@@ -425,7 +413,7 @@ try {
     $request->crmEvent->type = Shared\CrmEventType::Email;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-26T08:01:25.242Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->event->updateCrmEvent($request);
 

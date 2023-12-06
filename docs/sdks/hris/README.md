@@ -35,12 +35,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateHrisEmployeeRequest();
+        $request = new Operations\CreateHrisEmployeeRequest();
     $request->hrisEmployee = new Shared\HrisEmployee();
     $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
     $request->hrisEmployee->address->address1 = 'string';
@@ -79,7 +77,7 @@ try {
     $request->hrisEmployee->timezone = 'Pacific/Fiji';
     $request->hrisEmployee->title = 'string';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-19T11:29:09.519Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->hris->createHrisEmployee($request);
 
@@ -122,12 +120,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateHrisGroupRequest();
+        $request = new Operations\CreateHrisGroupRequest();
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-11T13:14:46.931Z');
     $request->hrisGroup->description = 'Self-enabling system-worthy collaboration';
@@ -144,7 +140,7 @@ try {
     $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
     $request->hrisGroup->type = Shared\HrisGroupType::Team;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-10T00:20:29.321Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->hris->createHrisGroup($request);
 
@@ -187,17 +183,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetHrisEmployeeRequest();
+        $request = new Operations\GetHrisEmployeeRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->hris->getHrisEmployee($request);
 
@@ -240,17 +234,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetHrisGroupRequest();
+        $request = new Operations\GetHrisGroupRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->hris->getHrisGroup($request);
 
@@ -293,12 +285,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListHrisEmployeesRequest();
+        $request = new Operations\ListHrisEmployeesRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -308,7 +298,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-09T14:44:59.888Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-09T14:44:59.888Z');;
 
     $response = $sdk->hris->listHrisEmployees($request);
 
@@ -351,12 +341,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListHrisGroupsRequest();
+        $request = new Operations\ListHrisGroupsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -366,7 +354,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-29T22:04:03.121Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-29T22:04:03.121Z');;
 
     $response = $sdk->hris->listHrisGroups($request);
 
@@ -409,12 +397,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchHrisEmployeeRequest();
+        $request = new Operations\PatchHrisEmployeeRequest();
     $request->hrisEmployee = new Shared\HrisEmployee();
     $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
     $request->hrisEmployee->address->address1 = 'string';
@@ -454,7 +440,7 @@ try {
     $request->hrisEmployee->title = 'string';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-11T04:58:47.103Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->hris->patchHrisEmployee($request);
 
@@ -497,12 +483,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchHrisGroupRequest();
+        $request = new Operations\PatchHrisGroupRequest();
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-09T20:25:35.217Z');
     $request->hrisGroup->description = 'Compatible contextually-based local area network';
@@ -520,7 +504,7 @@ try {
     $request->hrisGroup->type = Shared\HrisGroupType::Division;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-23T09:49:13.425Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->hris->patchHrisGroup($request);
 
@@ -563,14 +547,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveHrisEmployeeRequest();
+        $request = new Operations\RemoveHrisEmployeeRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->hris->removeHrisEmployee($request);
 
@@ -613,14 +595,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveHrisGroupRequest();
+        $request = new Operations\RemoveHrisGroupRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->hris->removeHrisGroup($request);
 
@@ -663,12 +643,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateHrisEmployeeRequest();
+        $request = new Operations\UpdateHrisEmployeeRequest();
     $request->hrisEmployee = new Shared\HrisEmployee();
     $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
     $request->hrisEmployee->address->address1 = 'string';
@@ -708,7 +686,7 @@ try {
     $request->hrisEmployee->title = 'string';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-08T15:27:20.252Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->hris->updateHrisEmployee($request);
 
@@ -751,12 +729,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateHrisGroupRequest();
+        $request = new Operations\UpdateHrisGroupRequest();
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-06T17:42:02.933Z');
     $request->hrisGroup->description = 'Integrated empowering productivity';
@@ -774,7 +750,7 @@ try {
     $request->hrisGroup->type = Shared\HrisGroupType::Team;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-12T15:58:06.273Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->hris->updateHrisGroup($request);
 

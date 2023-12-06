@@ -28,12 +28,10 @@ use \Unified\Unified_to\Models\Shared;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\Connection();
+        $request = new Shared\Connection();
     $request->auth = new Shared\PropertyConnectionAuth();
     $request->auth->accessToken = 'string';
     $request->auth->apiUrl = 'string';
@@ -75,7 +73,7 @@ try {
         Shared\PropertyConnectionPermissions::AtsCandidateWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
-    $request->workspaceId = 'string';
+    $request->workspaceId = 'string';;
 
     $response = $sdk->connection->createUnifiedConnection($request);
 
@@ -118,13 +116,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetUnifiedConnectionRequest();
-    $request->id = '<ID>';
+        $request = new Operations\GetUnifiedConnectionRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->connection->getUnifiedConnection($request);
 
@@ -167,12 +163,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedConnectionsRequest();
+        $request = new Operations\ListUnifiedConnectionsRequest();
     $request->categories = [
         Operations\Categories::Enrich,
     ];
@@ -182,7 +176,7 @@ try {
     $request->offset = 15.12;
     $request->order = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-20T10:15:04.986Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-20T10:15:04.986Z');;
 
     $response = $sdk->connection->listUnifiedConnections($request);
 
@@ -225,12 +219,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchUnifiedConnectionRequest();
+        $request = new Operations\PatchUnifiedConnectionRequest();
     $request->connection = new Shared\Connection();
     $request->connection->auth = new Shared\PropertyConnectionAuth();
     $request->connection->auth->accessToken = 'string';
@@ -274,7 +266,7 @@ try {
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->workspaceId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->connection->patchUnifiedConnection($request);
 
@@ -317,13 +309,11 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveUnifiedConnectionRequest();
-    $request->id = '<ID>';
+        $request = new Operations\RemoveUnifiedConnectionRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->connection->removeUnifiedConnection($request);
 
@@ -366,12 +356,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateUnifiedConnectionRequest();
+        $request = new Operations\UpdateUnifiedConnectionRequest();
     $request->connection = new Shared\Connection();
     $request->connection->auth = new Shared\PropertyConnectionAuth();
     $request->connection->auth->accessToken = 'string';
@@ -415,7 +403,7 @@ try {
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T04:40:33.286Z');
     $request->connection->workspaceId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->connection->updateUnifiedConnection($request);
 

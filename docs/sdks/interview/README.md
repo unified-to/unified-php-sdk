@@ -29,12 +29,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsInterviewRequest();
+        $request = new Operations\CreateAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
@@ -51,7 +49,7 @@ try {
     $request->atsInterview->userIds = [
         'string',
     ];
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->interview->createAtsInterview($request);
 
@@ -94,17 +92,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsInterviewRequest();
+        $request = new Operations\GetAtsInterviewRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->interview->getAtsInterview($request);
 
@@ -147,12 +143,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsInterviewsRequest();
+        $request = new Operations\ListAtsInterviewsRequest();
     $request->applicationId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
@@ -163,7 +157,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T09:19:25.744Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T09:19:25.744Z');;
 
     $response = $sdk->interview->listAtsInterviews($request);
 
@@ -206,12 +200,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsInterviewRequest();
+        $request = new Operations\PatchAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
@@ -229,7 +221,7 @@ try {
         'string',
     ];
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->interview->patchAtsInterview($request);
 
@@ -272,14 +264,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsInterviewRequest();
+        $request = new Operations\RemoveAtsInterviewRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->interview->removeAtsInterview($request);
 
@@ -322,12 +312,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsInterviewRequest();
+        $request = new Operations\UpdateAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
     $request->atsInterview->applicationId = 'string';
     $request->atsInterview->candidateId = 'string';
@@ -345,7 +333,7 @@ try {
         'string',
     ];
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->interview->updateAtsInterview($request);
 

@@ -24,12 +24,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUcCallsRequest();
+        $request = new Operations\ListUcCallsRequest();
     $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
@@ -41,7 +39,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T02:48:36.966Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T02:48:36.966Z');;
 
     $response = $sdk->call->listUcCalls($request);
 

@@ -29,19 +29,17 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateMartechListRequest();
+        $request = new Operations\CreateMartechListRequest();
     $request->marketingList = new Shared\MarketingList();
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
     $request->marketingList->name = 'string';
     $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-15T11:18:03.715Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->list->createMartechList($request);
 
@@ -84,17 +82,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetMartechListRequest();
+        $request = new Operations\GetMartechListRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->list->getMartechList($request);
 
@@ -137,12 +133,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListMartechListsRequest();
+        $request = new Operations\ListMartechListsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -152,7 +146,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-12T06:44:44.684Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-12T06:44:44.684Z');;
 
     $response = $sdk->list->listMartechLists($request);
 
@@ -195,12 +189,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchMartechListRequest();
+        $request = new Operations\PatchMartechListRequest();
     $request->marketingList = new Shared\MarketingList();
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
@@ -208,7 +200,7 @@ try {
     $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-07T20:57:43.081Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->list->patchMartechList($request);
 
@@ -251,14 +243,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveMartechListRequest();
+        $request = new Operations\RemoveMartechListRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->list->removeMartechList($request);
 
@@ -301,12 +291,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateMartechListRequest();
+        $request = new Operations\UpdateMartechListRequest();
     $request->marketingList = new Shared\MarketingList();
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
@@ -314,7 +302,7 @@ try {
     $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T06:01:18.792Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->list->updateMartechList($request);
 

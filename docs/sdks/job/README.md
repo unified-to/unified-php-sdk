@@ -29,12 +29,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAtsJobRequest();
+        $request = new Operations\CreateAtsJobRequest();
     $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
@@ -65,7 +63,7 @@ try {
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T17:38:42.004Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->job->createAtsJob($request);
 
@@ -108,17 +106,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAtsJobRequest();
+        $request = new Operations\GetAtsJobRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->job->getAtsJob($request);
 
@@ -161,12 +157,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAtsJobsRequest();
+        $request = new Operations\ListAtsJobsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -176,7 +170,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-03T15:53:00.086Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-03T15:53:00.086Z');;
 
     $response = $sdk->job->listAtsJobs($request);
 
@@ -219,12 +213,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchAtsJobRequest();
+        $request = new Operations\PatchAtsJobRequest();
     $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
@@ -256,7 +248,7 @@ try {
     $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T04:38:28.121Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->job->patchAtsJob($request);
 
@@ -299,14 +291,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveAtsJobRequest();
+        $request = new Operations\RemoveAtsJobRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->job->removeAtsJob($request);
 
@@ -349,12 +339,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAtsJobRequest();
+        $request = new Operations\UpdateAtsJobRequest();
     $request->atsJob = new Shared\AtsJob();
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
@@ -386,7 +374,7 @@ try {
     $request->atsJob->status = Shared\AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T15:41:17.674Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->job->updateAtsJob($request);
 

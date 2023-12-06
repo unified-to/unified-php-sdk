@@ -29,12 +29,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateTicketingTicketRequest();
+        $request = new Operations\CreateTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-28T11:20:21.005Z');
@@ -52,7 +50,7 @@ try {
         'string',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-07T02:01:09.815Z');
-    $request->connectionId = 'string';
+    $request->connectionId = 'string';;
 
     $response = $sdk->ticket->createTicketingTicket($request);
 
@@ -95,17 +93,15 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetTicketingTicketRequest();
+        $request = new Operations\GetTicketingTicketRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ticket->getTicketingTicket($request);
 
@@ -148,12 +144,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListTicketingTicketsRequest();
+        $request = new Operations\ListTicketingTicketsRequest();
     $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->customerId = 'string';
@@ -165,7 +159,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-28T14:14:11.846Z');
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-28T14:14:11.846Z');;
 
     $response = $sdk->ticket->listTicketingTickets($request);
 
@@ -208,12 +202,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchTicketingTicketRequest();
+        $request = new Operations\PatchTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-14T12:10:45.667Z');
@@ -232,7 +224,7 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-06T16:05:08.020Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ticket->patchTicketingTicket($request);
 
@@ -275,14 +267,12 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RemoveTicketingTicketRequest();
+        $request = new Operations\RemoveTicketingTicketRequest();
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ticket->removeTicketingTicket($request);
 
@@ -325,12 +315,10 @@ use \Unified\Unified_to\Models\Operations;
 $security = new Shared\Security();
 $security->jwt = '';
 
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateTicketingTicketRequest();
+        $request = new Operations\UpdateTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-30T22:19:31.995Z');
@@ -349,7 +337,7 @@ try {
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-16T17:18:07.743Z');
     $request->connectionId = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->ticket->updateTicketingTicket($request);
 
