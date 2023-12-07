@@ -46,6 +46,16 @@ class Connection
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
     
+    /**
+     * $cursorsCache
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\Undefined> $cursorsCache
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('cursors_cache')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\Undefined>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $cursorsCache = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('environment')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -69,6 +79,16 @@ class Connection
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isPaused = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('last_healthy_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $lastHealthyAt = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('last_unhealthy_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $lastUnhealthyAt = null;
     
     /**
      * $permissions
@@ -95,11 +115,14 @@ class Connection
 		$this->authAwsArn = null;
 		$this->categories = [];
 		$this->createdAt = null;
+		$this->cursorsCache = null;
 		$this->environment = null;
 		$this->externalXref = null;
 		$this->id = null;
 		$this->integrationType = "";
 		$this->isPaused = null;
+		$this->lastHealthyAt = null;
+		$this->lastUnhealthyAt = null;
 		$this->permissions = [];
 		$this->updatedAt = null;
 		$this->workspaceId = null;

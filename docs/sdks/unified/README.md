@@ -74,15 +74,20 @@ try {
         Shared\PropertyConnectionCategories::Auth,
     ];
     $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-03T20:48:03.468Z');
+    $request->cursorsCache = [
+        new Shared\Undefined(),
+    ];
     $request->environment = 'string';
     $request->externalXref = 'string';
     $request->id = '<ID>';
     $request->integrationType = 'string';
     $request->isPaused = false;
+    $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-11T09:33:42.804Z');
+    $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::AtsCandidateWrite,
+        Shared\PropertyConnectionPermissions::CrmLeadWrite,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-04T22:51:39.532Z');
     $request->workspaceId = 'string';;
 
     $response = $sdk->unified->createUnifiedConnection($request);
@@ -759,15 +764,20 @@ try {
         Shared\PropertyConnectionCategories::Ats,
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-09T04:29:35.007Z');
+    $request->connection->cursorsCache = [
+        new Shared\Undefined(),
+    ];
     $request->connection->environment = 'string';
     $request->connection->externalXref = 'string';
     $request->connection->id = '<ID>';
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
+    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-14T09:50:52.127Z');
+    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AccountingInvoiceWrite,
+        Shared\PropertyConnectionPermissions::AtsJobRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T17:57:56.069Z');
     $request->connection->workspaceId = 'string';
     $request->id = '<ID>';;
 
@@ -943,15 +953,20 @@ try {
         Shared\PropertyConnectionCategories::Crm,
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-09T18:14:10.859Z');
+    $request->connection->cursorsCache = [
+        new Shared\Undefined(),
+    ];
     $request->connection->environment = 'string';
     $request->connection->externalXref = 'string';
     $request->connection->id = '<ID>';
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
+    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-26T11:58:40.326Z');
+    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T04:40:33.286Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::UcCallRead,
+        Shared\PropertyConnectionPermissions::AccountingTransactionRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T04:40:33.286Z');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T08:00:07.180Z');
     $request->connection->workspaceId = 'string';
     $request->id = '<ID>';;
 
