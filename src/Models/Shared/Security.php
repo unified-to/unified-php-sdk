@@ -12,10 +12,10 @@ use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class Security
 {
 	#[SpeakeasyMetadata('security:scheme=true,type=apiKey,subtype=header,name=authorization')]
-    public string $jwt;
+    public ?string $jwt = null;
     
 	public function __construct()
 	{
-		$this->jwt = "";
+		$this->jwt = null;
 	}
 }

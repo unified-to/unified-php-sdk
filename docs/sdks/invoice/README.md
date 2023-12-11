@@ -27,7 +27,7 @@ use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
 $security = new Shared\Security();
-$security->jwt = '';
+$security->jwt = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -97,7 +97,7 @@ use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
 $security = new Shared\Security();
-$security->jwt = '';
+$security->jwt = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -148,7 +148,7 @@ use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
 $security = new Shared\Security();
-$security->jwt = '';
+$security->jwt = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -205,7 +205,7 @@ use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
 $security = new Shared\Security();
-$security->jwt = '';
+$security->jwt = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -276,7 +276,7 @@ use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
 $security = new Shared\Security();
-$security->jwt = '';
+$security->jwt = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -324,7 +324,7 @@ use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
 $security = new Shared\Security();
-$security->jwt = '';
+$security->jwt = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
