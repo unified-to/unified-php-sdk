@@ -26,6 +26,11 @@ class AtsApplication
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('hired_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $hiredAt = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -71,6 +76,7 @@ class AtsApplication
 		$this->appliedAt = null;
 		$this->candidateId = null;
 		$this->createdAt = null;
+		$this->hiredAt = null;
 		$this->id = null;
 		$this->jobId = null;
 		$this->raw = null;
