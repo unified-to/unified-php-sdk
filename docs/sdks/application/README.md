@@ -40,6 +40,7 @@ try {
     $request->atsApplication->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-18T22:03:17.799Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
+    $request->atsApplication->originalStatus = 'string';
     $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-29T22:20:11.749Z');
     $request->atsApplication->rejectedReason = 'string';
@@ -209,6 +210,7 @@ try {
     $request->atsApplication->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-04T13:56:12.670Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
+    $request->atsApplication->originalStatus = 'string';
     $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-12T22:20:57.326Z');
     $request->atsApplication->rejectedReason = 'string';
@@ -318,6 +320,7 @@ try {
     $request->atsApplication->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-09T08:05:18.054Z');
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
+    $request->atsApplication->originalStatus = 'string';
     $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-19T08:25:10.616Z');
     $request->atsApplication->rejectedReason = 'string';

@@ -75,7 +75,7 @@ try {
     $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-11T09:33:42.804Z');
     $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::CrmLeadWrite,
+        Shared\PropertyConnectionPermissions::CrmLeadRead,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-04T22:51:39.532Z');
     $request->workspaceId = 'string';;

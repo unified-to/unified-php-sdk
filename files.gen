@@ -7,6 +7,7 @@ src/Payment.php
 src/Transaction.php
 src/Ats.php
 src/Application.php
+src/Applicationstatus.php
 src/Candidate.php
 src/Document.php
 src/Interview.php
@@ -159,6 +160,8 @@ src/Models/Operations/GetAtsScorecardRequest.php
 src/Models/Operations/GetAtsScorecardResponse.php
 src/Models/Operations/ListAtsApplicationsRequest.php
 src/Models/Operations/ListAtsApplicationsResponse.php
+src/Models/Operations/ListAtsApplicationstatusesRequest.php
+src/Models/Operations/ListAtsApplicationstatusesResponse.php
 src/Models/Operations/ListAtsCandidatesRequest.php
 src/Models/Operations/ListAtsCandidatesResponse.php
 src/Models/Operations/ListAtsDocumentsRequest.php
@@ -482,6 +485,9 @@ src/Models/Shared/AtsAddress.php
 src/Models/Shared/Recommendation.php
 src/Models/Shared/AtsScorecard.php
 src/Models/Shared/PropertyAtsScorecardRaw.php
+src/Models/Shared/AtsStatusStatus.php
+src/Models/Shared/AtsStatus.php
+src/Models/Shared/PropertyAtsStatusRaw.php
 src/Models/Shared/CrmCompany.php
 src/Models/Shared/CrmTelephoneType.php
 src/Models/Shared/CrmTelephone.php
@@ -673,6 +679,8 @@ docs/Models/Operations/GetAtsScorecardRequest.md
 docs/Models/Operations/GetAtsScorecardResponse.md
 docs/Models/Operations/ListAtsApplicationsRequest.md
 docs/Models/Operations/ListAtsApplicationsResponse.md
+docs/Models/Operations/ListAtsApplicationstatusesRequest.md
+docs/Models/Operations/ListAtsApplicationstatusesResponse.md
 docs/Models/Operations/ListAtsCandidatesRequest.md
 docs/Models/Operations/ListAtsCandidatesResponse.md
 docs/Models/Operations/ListAtsDocumentsRequest.md
@@ -996,6 +1004,9 @@ docs/Models/Shared/AtsAddress.md
 docs/Models/Shared/Recommendation.md
 docs/Models/Shared/AtsScorecard.md
 docs/Models/Shared/PropertyAtsScorecardRaw.md
+docs/Models/Shared/AtsStatusStatus.md
+docs/Models/Shared/AtsStatus.md
+docs/Models/Shared/PropertyAtsStatusRaw.md
 docs/Models/Shared/CrmCompany.md
 docs/Models/Shared/CrmTelephoneType.md
 docs/Models/Shared/CrmTelephone.md
@@ -1098,6 +1109,7 @@ docs/sdks/payment/README.md
 docs/sdks/transaction/README.md
 docs/sdks/ats/README.md
 docs/sdks/application/README.md
+docs/sdks/applicationstatus/README.md
 docs/sdks/candidate/README.md
 docs/sdks/document/README.md
 docs/sdks/interview/README.md

@@ -17,6 +17,7 @@ enum ObjectType: string
     case AccountingInvoice = 'accounting_invoice';
     case AccountingPayment = 'accounting_payment';
     case AtsApplication = 'ats_application';
+    case AtsApplicationstatus = 'ats_applicationstatus';
     case AtsCandidate = 'ats_candidate';
     case AtsDocument = 'ats_document';
     case AtsInterview = 'ats_interview';

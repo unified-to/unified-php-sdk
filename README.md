@@ -175,6 +175,7 @@ try {
 * [getAtsJob](docs/sdks/ats/README.md#getatsjob) - Retrieve a job
 * [getAtsScorecard](docs/sdks/ats/README.md#getatsscorecard) - Retrieve a scorecard
 * [listAtsApplications](docs/sdks/ats/README.md#listatsapplications) - List all applications
+* [listAtsApplicationstatuses](docs/sdks/ats/README.md#listatsapplicationstatuses) - List all application statuss
 * [listAtsCandidates](docs/sdks/ats/README.md#listatscandidates) - List all candidates
 * [listAtsDocuments](docs/sdks/ats/README.md#listatsdocuments) - List all documents
 * [listAtsInterviews](docs/sdks/ats/README.md#listatsinterviews) - List all interviews
@@ -207,6 +208,10 @@ try {
 * [patchAtsApplication](docs/sdks/application/README.md#patchatsapplication) - Update an application
 * [removeAtsApplication](docs/sdks/application/README.md#removeatsapplication) - Remove an application
 * [updateAtsApplication](docs/sdks/application/README.md#updateatsapplication) - Update an application
+
+### [Applicationstatus](docs/sdks/applicationstatus/README.md)
+
+* [listAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all application statuss
 
 ### [Candidate](docs/sdks/candidate/README.md)
 

@@ -41,6 +41,11 @@ class AtsApplication
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $jobId = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('original_status')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $originalStatus = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsApplicationRaw')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -79,6 +84,7 @@ class AtsApplication
 		$this->hiredAt = null;
 		$this->id = null;
 		$this->jobId = null;
+		$this->originalStatus = null;
 		$this->raw = null;
 		$this->rejectedAt = null;
 		$this->rejectedReason = null;
