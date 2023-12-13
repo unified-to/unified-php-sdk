@@ -547,7 +547,7 @@ class Ats
     }
 	
     /**
-     * List all application statuss
+     * List all application statuses
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
