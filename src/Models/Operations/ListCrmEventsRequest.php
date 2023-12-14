@@ -71,6 +71,9 @@ class ListCrmEventsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
     public ?string $sort = null;
     
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+    
     /**
      * Return only results whose updated date is equal or greater to this value
      * 
@@ -91,6 +94,7 @@ class ListCrmEventsRequest
 		$this->order = null;
 		$this->query = null;
 		$this->sort = null;
+		$this->type = null;
 		$this->updatedGte = null;
 	}
 }

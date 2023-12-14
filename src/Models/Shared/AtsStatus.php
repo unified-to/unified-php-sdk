@@ -23,7 +23,8 @@ class AtsStatus
     
 	#[\JMS\Serializer\Annotation\SerializedName('original_status')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $originalStatus;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $originalStatus = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsStatusRaw')]
@@ -39,7 +40,7 @@ class AtsStatus
 	{
 		$this->description = null;
 		$this->id = null;
-		$this->originalStatus = "";
+		$this->originalStatus = null;
 		$this->raw = null;
 		$this->status = null;
 	}

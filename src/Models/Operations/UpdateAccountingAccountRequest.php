@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAccountingAccountRequest
 {
+    /**
+     * A user's bank account
+     * 
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingAccount $accountingAccount
+     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?\Unified\Unified_to\Models\Shared\AccountingAccount $accountingAccount = null;
     

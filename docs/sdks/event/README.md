@@ -185,6 +185,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
+    $request->type = 'string';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T09:02:38.779Z');;
 
     $response = $sdk->event->listCrmEvents($request);

@@ -23,7 +23,8 @@ class AccountingTransactionLineitem
     
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $id;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $id = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('invoice_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -48,7 +49,7 @@ class AccountingTransactionLineitem
 	{
 		$this->customerId = null;
 		$this->description = null;
-		$this->id = "";
+		$this->id = null;
 		$this->invoiceId = null;
 		$this->paymentId = null;
 		$this->taxAmount = null;
