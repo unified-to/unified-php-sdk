@@ -68,6 +68,7 @@ try {
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
     $request->accountingCustomer->taxExemption = Shared\TaxExemption::LocalGov;
+    $request->accountingCustomer->taxNumber = 'string';
     $request->accountingCustomer->telephones = [
         new Shared\AccountingTelephone(),
     ];
@@ -424,6 +425,7 @@ try {
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
     $request->accountingCustomer->taxExemption = Shared\TaxExemption::Foreign;
+    $request->accountingCustomer->taxNumber = 'string';
     $request->accountingCustomer->telephones = [
         new Shared\AccountingTelephone(),
     ];
@@ -664,6 +666,7 @@ try {
     $request->accountingCustomer->shippingAddress->region = 'string';
     $request->accountingCustomer->shippingAddress->regionCode = 'string';
     $request->accountingCustomer->taxExemption = Shared\TaxExemption::CharitableOrg;
+    $request->accountingCustomer->taxNumber = 'string';
     $request->accountingCustomer->telephones = [
         new Shared\AccountingTelephone(),
     ];

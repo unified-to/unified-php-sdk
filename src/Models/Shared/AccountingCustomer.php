@@ -66,6 +66,11 @@ class AccountingCustomer
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?TaxExemption $taxExemption = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('tax_number')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $taxNumber = null;
+    
     /**
      * $telephones
      * 
@@ -93,6 +98,7 @@ class AccountingCustomer
 		$this->raw = null;
 		$this->shippingAddress = null;
 		$this->taxExemption = null;
+		$this->taxNumber = null;
 		$this->telephones = null;
 		$this->updatedAt = null;
 	}

@@ -377,3 +377,13 @@ Based on:
 - [php v0.10.4] .
 ### Releases
 - [Composer v0.10.4] https://packagist.org/packages/unified/unified-to#v0.10.4 - .
+
+## 2023-12-14 15:28:05
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.126.3 (2.214.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.10.5] .
+### Releases
+- [Composer v0.10.5] https://packagist.org/packages/unified/unified-to#v0.10.5 - .
