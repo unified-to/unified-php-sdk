@@ -24,7 +24,8 @@ class Webhook
     
 	#[\JMS\Serializer\Annotation\SerializedName('connection_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $connectionId;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $connectionId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
@@ -36,6 +37,10 @@ class Webhook
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $environment = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('event')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Event>')]
+    public Event $event;
+    
     /**
      * $events
      * 
@@ -44,6 +49,11 @@ class Webhook
 	#[\JMS\Serializer\Annotation\SerializedName('events')]
     #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyWebhookEvents>>')]
     public array $events;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('fields')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $fields = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('hook_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -61,15 +71,31 @@ class Webhook
     
 	#[\JMS\Serializer\Annotation\SerializedName('integration_type')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $integrationType;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $integrationType = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('interval')]
     #[\JMS\Serializer\Annotation\Type('float')]
     public float $interval;
     
+	#[\JMS\Serializer\Annotation\SerializedName('meta')]
+    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyWebhookMeta')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyWebhookMeta $meta = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('object_type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ObjectType>')]
     public ObjectType $objectType;
+    
+    /**
+     * An array of the most revent virtual webhook runs
+     * 
+     * @var ?array<string> $runs
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('runs')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $runs = null;
     
     /**
      * integration-specific subscriptions IDs
@@ -86,25 +112,36 @@ class Webhook
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('webhook_type')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\WebhookWebhookType>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?WebhookWebhookType $webhookType = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $workspaceId;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $workspaceId = null;
     
 	public function __construct()
 	{
 		$this->checkedAt = null;
-		$this->connectionId = "";
+		$this->connectionId = null;
 		$this->createdAt = null;
 		$this->environment = null;
+		$this->event = \Unified\Unified_to\Models\Shared\Event::Updated;
 		$this->events = [];
+		$this->fields = null;
 		$this->hookUrl = "";
 		$this->id = null;
 		$this->includeRaw = null;
-		$this->integrationType = "";
+		$this->integrationType = null;
 		$this->interval = 0;
+		$this->meta = null;
 		$this->objectType = \Unified\Unified_to\Models\Shared\ObjectType::AccountingAccount;
+		$this->runs = null;
 		$this->subscriptions = null;
 		$this->updatedAt = null;
-		$this->workspaceId = "";
+		$this->webhookType = null;
+		$this->workspaceId = null;
 	}
 }

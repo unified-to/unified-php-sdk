@@ -568,8 +568,11 @@ src/Models/Shared/PropertyConnectionPermissions.php
 src/Models/Shared/PropertyConnectionCategories.php
 src/Models/Shared/PropertyConnectionAuth.php
 src/Models/Shared/PropertyPropertyConnectionAuthMeta.php
+src/Models/Shared/Event.php
 src/Models/Shared/ObjectType.php
+src/Models/Shared/WebhookWebhookType.php
 src/Models/Shared/Webhook.php
+src/Models/Shared/PropertyWebhookMeta.php
 src/Models/Shared/PropertyWebhookEvents.php
 src/Models/Shared/ApiCallType.php
 src/Models/Shared/ApiCall.php
@@ -1087,8 +1090,11 @@ docs/Models/Shared/PropertyConnectionPermissions.md
 docs/Models/Shared/PropertyConnectionCategories.md
 docs/Models/Shared/PropertyConnectionAuth.md
 docs/Models/Shared/PropertyPropertyConnectionAuthMeta.md
+docs/Models/Shared/Event.md
 docs/Models/Shared/ObjectType.md
+docs/Models/Shared/WebhookWebhookType.md
 docs/Models/Shared/Webhook.md
+docs/Models/Shared/PropertyWebhookMeta.md
 docs/Models/Shared/PropertyWebhookEvents.md
 docs/Models/Shared/ApiCallType.md
 docs/Models/Shared/ApiCall.md
