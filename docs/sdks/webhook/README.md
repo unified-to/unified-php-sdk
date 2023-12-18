@@ -47,7 +47,7 @@ try {
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 738.04;
     $request->webhook->meta = new Shared\PropertyWebhookMeta();
-    $request->webhook->objectType = Shared\ObjectType::CrmFile;
+    $request->webhook->objectType = Shared\ObjectType::CrmEvent;
     $request->webhook->runs = [
         'string',
     ];

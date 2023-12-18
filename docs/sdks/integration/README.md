@@ -85,7 +85,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisEmployeeWrite,
+        Operations\Scopes::HrisEmployeeRead,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';

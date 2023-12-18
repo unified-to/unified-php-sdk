@@ -85,7 +85,7 @@ try {
     $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-11T09:33:42.804Z');
     $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::CrmLeadRead,
+        Shared\PropertyConnectionPermissions::CrmEventWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-04T22:51:39.532Z');
     $request->workspaceId = 'string';;
@@ -151,7 +151,7 @@ try {
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 738.04;
     $request->webhook->meta = new Shared\PropertyWebhookMeta();
-    $request->webhook->objectType = Shared\ObjectType::CrmFile;
+    $request->webhook->objectType = Shared\ObjectType::CrmEvent;
     $request->webhook->runs = [
         'string',
     ];
@@ -360,7 +360,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisEmployeeWrite,
+        Operations\Scopes::HrisEmployeeRead,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -782,7 +782,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-14T09:50:52.127Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AtsJobRead,
+        Shared\PropertyConnectionPermissions::AtsInterviewRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T17:57:56.069Z');
     $request->connection->workspaceId = 'string';

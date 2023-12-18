@@ -61,6 +61,11 @@ class AccountingLineitem
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $taxAmount = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('taxrate_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $taxrateId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('total_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     public float $totalAmount;
@@ -92,6 +97,7 @@ class AccountingLineitem
 		$this->refundedAmount = null;
 		$this->refundedAt = null;
 		$this->taxAmount = null;
+		$this->taxrateId = null;
 		$this->totalAmount = 0;
 		$this->unitAmount = null;
 		$this->unitQuantity = null;

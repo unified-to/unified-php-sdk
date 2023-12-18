@@ -31,7 +31,11 @@ class UnifiedTo
 	
 	public Invoice $invoice;
 	
+	public Organization $organization;
+	
 	public Payment $payment;
+	
+	public Taxrate $taxrate;
 	
 	public Transaction $transaction;
 	
@@ -136,7 +140,11 @@ class UnifiedTo
 		
 		$this->invoice = new Invoice($this->sdkConfiguration);
 		
+		$this->organization = new Organization($this->sdkConfiguration);
+		
 		$this->payment = new Payment($this->sdkConfiguration);
+		
+		$this->taxrate = new Taxrate($this->sdkConfiguration);
 		
 		$this->transaction = new Transaction($this->sdkConfiguration);
 		
