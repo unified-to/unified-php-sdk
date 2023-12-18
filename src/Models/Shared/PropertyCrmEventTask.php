@@ -22,6 +22,11 @@ class PropertyCrmEventTask
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('due_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $dueAt = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -35,6 +40,7 @@ class PropertyCrmEventTask
 	public function __construct()
 	{
 		$this->description = null;
+		$this->dueAt = null;
 		$this->name = null;
 		$this->status = null;
 	}

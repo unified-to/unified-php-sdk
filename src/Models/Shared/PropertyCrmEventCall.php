@@ -27,9 +27,15 @@ class PropertyCrmEventCall
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $duration = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('start_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $startAt = null;
+    
 	public function __construct()
 	{
 		$this->description = null;
 		$this->duration = null;
+		$this->startAt = null;
 	}
 }

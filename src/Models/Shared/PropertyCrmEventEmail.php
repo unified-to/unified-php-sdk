@@ -32,6 +32,11 @@ class PropertyCrmEventEmail
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $cc = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $createdAt = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('from')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -56,6 +61,7 @@ class PropertyCrmEventEmail
 	{
 		$this->body = null;
 		$this->cc = null;
+		$this->createdAt = null;
 		$this->from = null;
 		$this->subject = null;
 		$this->to = null;
