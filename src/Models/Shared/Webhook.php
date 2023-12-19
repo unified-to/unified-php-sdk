@@ -78,6 +78,11 @@ class Webhook
     #[\JMS\Serializer\Annotation\Type('float')]
     public float $interval;
     
+	#[\JMS\Serializer\Annotation\SerializedName('is_healthy')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isHealthy = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('meta')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyWebhookMeta')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -136,6 +141,7 @@ class Webhook
 		$this->includeRaw = null;
 		$this->integrationType = null;
 		$this->interval = 0;
+		$this->isHealthy = null;
 		$this->meta = null;
 		$this->objectType = \Unified\Unified_to\Models\Shared\ObjectType::AccountingAccount;
 		$this->runs = null;

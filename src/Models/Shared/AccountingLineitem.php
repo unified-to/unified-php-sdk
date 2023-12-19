@@ -31,15 +31,20 @@ class AccountingLineitem
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $itemDescription = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('item_identifier')]
+	#[\JMS\Serializer\Annotation\SerializedName('item_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $itemIdentifier = null;
+    public ?string $itemId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('item_name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $itemName = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('item_sku')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $itemSku = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('notes')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -91,8 +96,9 @@ class AccountingLineitem
 		$this->discountAmount = null;
 		$this->id = null;
 		$this->itemDescription = null;
-		$this->itemIdentifier = null;
+		$this->itemId = null;
 		$this->itemName = null;
+		$this->itemSku = null;
 		$this->notes = null;
 		$this->refundedAmount = null;
 		$this->refundedAt = null;
