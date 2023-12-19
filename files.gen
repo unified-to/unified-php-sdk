@@ -3,6 +3,7 @@ src/Accounting.php
 src/Account.php
 src/Customer.php
 src/Invoice.php
+src/Item.php
 src/Organization.php
 src/Payment.php
 src/Taxrate.php
@@ -70,6 +71,8 @@ src/Models/Operations/CreateAccountingCustomerRequest.php
 src/Models/Operations/CreateAccountingCustomerResponse.php
 src/Models/Operations/CreateAccountingInvoiceRequest.php
 src/Models/Operations/CreateAccountingInvoiceResponse.php
+src/Models/Operations/CreateAccountingItemRequest.php
+src/Models/Operations/CreateAccountingItemResponse.php
 src/Models/Operations/CreateAccountingPaymentRequest.php
 src/Models/Operations/CreateAccountingPaymentResponse.php
 src/Models/Operations/CreateAccountingTaxrateRequest.php
@@ -82,6 +85,8 @@ src/Models/Operations/GetAccountingCustomerRequest.php
 src/Models/Operations/GetAccountingCustomerResponse.php
 src/Models/Operations/GetAccountingInvoiceRequest.php
 src/Models/Operations/GetAccountingInvoiceResponse.php
+src/Models/Operations/GetAccountingItemRequest.php
+src/Models/Operations/GetAccountingItemResponse.php
 src/Models/Operations/GetAccountingOrganizationRequest.php
 src/Models/Operations/GetAccountingOrganizationResponse.php
 src/Models/Operations/GetAccountingPaymentRequest.php
@@ -96,6 +101,8 @@ src/Models/Operations/ListAccountingCustomersRequest.php
 src/Models/Operations/ListAccountingCustomersResponse.php
 src/Models/Operations/ListAccountingInvoicesRequest.php
 src/Models/Operations/ListAccountingInvoicesResponse.php
+src/Models/Operations/ListAccountingItemsRequest.php
+src/Models/Operations/ListAccountingItemsResponse.php
 src/Models/Operations/ListAccountingOrganizationsRequest.php
 src/Models/Operations/ListAccountingOrganizationsResponse.php
 src/Models/Operations/ListAccountingPaymentsRequest.php
@@ -110,6 +117,8 @@ src/Models/Operations/PatchAccountingCustomerRequest.php
 src/Models/Operations/PatchAccountingCustomerResponse.php
 src/Models/Operations/PatchAccountingInvoiceRequest.php
 src/Models/Operations/PatchAccountingInvoiceResponse.php
+src/Models/Operations/PatchAccountingItemRequest.php
+src/Models/Operations/PatchAccountingItemResponse.php
 src/Models/Operations/PatchAccountingPaymentRequest.php
 src/Models/Operations/PatchAccountingPaymentResponse.php
 src/Models/Operations/PatchAccountingTaxrateRequest.php
@@ -122,6 +131,8 @@ src/Models/Operations/RemoveAccountingCustomerRequest.php
 src/Models/Operations/RemoveAccountingCustomerResponse.php
 src/Models/Operations/RemoveAccountingInvoiceRequest.php
 src/Models/Operations/RemoveAccountingInvoiceResponse.php
+src/Models/Operations/RemoveAccountingItemRequest.php
+src/Models/Operations/RemoveAccountingItemResponse.php
 src/Models/Operations/RemoveAccountingPaymentRequest.php
 src/Models/Operations/RemoveAccountingPaymentResponse.php
 src/Models/Operations/RemoveAccountingTaxrateRequest.php
@@ -134,6 +145,8 @@ src/Models/Operations/UpdateAccountingCustomerRequest.php
 src/Models/Operations/UpdateAccountingCustomerResponse.php
 src/Models/Operations/UpdateAccountingInvoiceRequest.php
 src/Models/Operations/UpdateAccountingInvoiceResponse.php
+src/Models/Operations/UpdateAccountingItemRequest.php
+src/Models/Operations/UpdateAccountingItemResponse.php
 src/Models/Operations/UpdateAccountingPaymentRequest.php
 src/Models/Operations/UpdateAccountingPaymentResponse.php
 src/Models/Operations/UpdateAccountingTaxrateRequest.php
@@ -464,6 +477,8 @@ src/Models/Shared/PropertyAccountingCustomerBillingAddress.php
 src/Models/Shared/AccountingInvoice.php
 src/Models/Shared/PropertyAccountingInvoiceRaw.php
 src/Models/Shared/AccountingLineitem.php
+src/Models/Shared/AccountingItem.php
+src/Models/Shared/PropertyAccountingItemRaw.php
 src/Models/Shared/AccountingPayment.php
 src/Models/Shared/PropertyAccountingPaymentRaw.php
 src/Models/Shared/AccountingTaxrate.php
@@ -613,6 +628,8 @@ docs/Models/Operations/CreateAccountingCustomerRequest.md
 docs/Models/Operations/CreateAccountingCustomerResponse.md
 docs/Models/Operations/CreateAccountingInvoiceRequest.md
 docs/Models/Operations/CreateAccountingInvoiceResponse.md
+docs/Models/Operations/CreateAccountingItemRequest.md
+docs/Models/Operations/CreateAccountingItemResponse.md
 docs/Models/Operations/CreateAccountingPaymentRequest.md
 docs/Models/Operations/CreateAccountingPaymentResponse.md
 docs/Models/Operations/CreateAccountingTaxrateRequest.md
@@ -625,6 +642,8 @@ docs/Models/Operations/GetAccountingCustomerRequest.md
 docs/Models/Operations/GetAccountingCustomerResponse.md
 docs/Models/Operations/GetAccountingInvoiceRequest.md
 docs/Models/Operations/GetAccountingInvoiceResponse.md
+docs/Models/Operations/GetAccountingItemRequest.md
+docs/Models/Operations/GetAccountingItemResponse.md
 docs/Models/Operations/GetAccountingOrganizationRequest.md
 docs/Models/Operations/GetAccountingOrganizationResponse.md
 docs/Models/Operations/GetAccountingPaymentRequest.md
@@ -639,6 +658,8 @@ docs/Models/Operations/ListAccountingCustomersRequest.md
 docs/Models/Operations/ListAccountingCustomersResponse.md
 docs/Models/Operations/ListAccountingInvoicesRequest.md
 docs/Models/Operations/ListAccountingInvoicesResponse.md
+docs/Models/Operations/ListAccountingItemsRequest.md
+docs/Models/Operations/ListAccountingItemsResponse.md
 docs/Models/Operations/ListAccountingOrganizationsRequest.md
 docs/Models/Operations/ListAccountingOrganizationsResponse.md
 docs/Models/Operations/ListAccountingPaymentsRequest.md
@@ -653,6 +674,8 @@ docs/Models/Operations/PatchAccountingCustomerRequest.md
 docs/Models/Operations/PatchAccountingCustomerResponse.md
 docs/Models/Operations/PatchAccountingInvoiceRequest.md
 docs/Models/Operations/PatchAccountingInvoiceResponse.md
+docs/Models/Operations/PatchAccountingItemRequest.md
+docs/Models/Operations/PatchAccountingItemResponse.md
 docs/Models/Operations/PatchAccountingPaymentRequest.md
 docs/Models/Operations/PatchAccountingPaymentResponse.md
 docs/Models/Operations/PatchAccountingTaxrateRequest.md
@@ -665,6 +688,8 @@ docs/Models/Operations/RemoveAccountingCustomerRequest.md
 docs/Models/Operations/RemoveAccountingCustomerResponse.md
 docs/Models/Operations/RemoveAccountingInvoiceRequest.md
 docs/Models/Operations/RemoveAccountingInvoiceResponse.md
+docs/Models/Operations/RemoveAccountingItemRequest.md
+docs/Models/Operations/RemoveAccountingItemResponse.md
 docs/Models/Operations/RemoveAccountingPaymentRequest.md
 docs/Models/Operations/RemoveAccountingPaymentResponse.md
 docs/Models/Operations/RemoveAccountingTaxrateRequest.md
@@ -677,6 +702,8 @@ docs/Models/Operations/UpdateAccountingCustomerRequest.md
 docs/Models/Operations/UpdateAccountingCustomerResponse.md
 docs/Models/Operations/UpdateAccountingInvoiceRequest.md
 docs/Models/Operations/UpdateAccountingInvoiceResponse.md
+docs/Models/Operations/UpdateAccountingItemRequest.md
+docs/Models/Operations/UpdateAccountingItemResponse.md
 docs/Models/Operations/UpdateAccountingPaymentRequest.md
 docs/Models/Operations/UpdateAccountingPaymentResponse.md
 docs/Models/Operations/UpdateAccountingTaxrateRequest.md
@@ -1007,6 +1034,8 @@ docs/Models/Shared/PropertyAccountingCustomerBillingAddress.md
 docs/Models/Shared/AccountingInvoice.md
 docs/Models/Shared/PropertyAccountingInvoiceRaw.md
 docs/Models/Shared/AccountingLineitem.md
+docs/Models/Shared/AccountingItem.md
+docs/Models/Shared/PropertyAccountingItemRaw.md
 docs/Models/Shared/AccountingPayment.md
 docs/Models/Shared/PropertyAccountingPaymentRaw.md
 docs/Models/Shared/AccountingTaxrate.md
@@ -1155,6 +1184,7 @@ docs/sdks/accounting/README.md
 docs/sdks/account/README.md
 docs/sdks/customer/README.md
 docs/sdks/invoice/README.md
+docs/sdks/item/README.md
 docs/sdks/organization/README.md
 docs/sdks/payment/README.md
 docs/sdks/taxrate/README.md

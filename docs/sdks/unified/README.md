@@ -783,7 +783,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-14T09:50:52.127Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AtsInterviewRead,
+        Shared\PropertyConnectionPermissions::AtsCandidateWrite,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T17:57:56.069Z');
     $request->connection->workspaceId = 'string';

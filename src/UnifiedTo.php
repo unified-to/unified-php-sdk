@@ -31,6 +31,8 @@ class UnifiedTo
 	
 	public Invoice $invoice;
 	
+	public Item $item;
+	
 	public Organization $organization;
 	
 	public Payment $payment;
@@ -139,6 +141,8 @@ class UnifiedTo
 		$this->customer = new Customer($this->sdkConfiguration);
 		
 		$this->invoice = new Invoice($this->sdkConfiguration);
+		
+		$this->item = new Item($this->sdkConfiguration);
 		
 		$this->organization = new Organization($this->sdkConfiguration);
 		
