@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/**
- * AccountingAccount - A user's bank account
- * 
- * @package Unified\Unified_to\Models\Shared
- * @access public
- */
 class AccountingAccount
 {
 	#[\JMS\Serializer\Annotation\SerializedName('balance')]

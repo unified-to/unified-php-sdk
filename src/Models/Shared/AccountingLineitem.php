@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingLineitem
 {
+	#[\JMS\Serializer\Annotation\SerializedName('account_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $accountId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -50,6 +55,11 @@ class AccountingLineitem
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $notes = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAccountingLineitemRaw')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyAccountingLineitemRaw $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('refunded_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
@@ -92,6 +102,7 @@ class AccountingLineitem
     
 	public function __construct()
 	{
+		$this->accountId = null;
 		$this->createdAt = null;
 		$this->discountAmount = null;
 		$this->id = null;
@@ -100,6 +111,7 @@ class AccountingLineitem
 		$this->itemName = null;
 		$this->itemSku = null;
 		$this->notes = null;
+		$this->raw = null;
 		$this->refundedAmount = null;
 		$this->refundedAt = null;
 		$this->taxAmount = null;

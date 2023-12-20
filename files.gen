@@ -424,9 +424,6 @@ src/Models/Operations/UpdateTicketingTicketResponse.php
 src/Models/Operations/ListUcCallsRequest.php
 src/Models/Operations/ListUcCallsResponse.php
 src/Models/Operations/CreateUnifiedConnectionResponse.php
-src/Models/Operations/Events.php
-src/Models/Operations/CreateUnifiedWebhookRequest.php
-src/Models/Operations/CreateUnifiedWebhookResponse.php
 src/Models/Operations/GetUnifiedApicallRequest.php
 src/Models/Operations/GetUnifiedApicallResponse.php
 src/Models/Operations/GetUnifiedConnectionRequest.php
@@ -477,6 +474,7 @@ src/Models/Shared/PropertyAccountingCustomerBillingAddress.php
 src/Models/Shared/AccountingInvoice.php
 src/Models/Shared/PropertyAccountingInvoiceRaw.php
 src/Models/Shared/AccountingLineitem.php
+src/Models/Shared/PropertyAccountingLineitemRaw.php
 src/Models/Shared/AccountingItem.php
 src/Models/Shared/PropertyAccountingItemRaw.php
 src/Models/Shared/AccountingPayment.php
@@ -606,12 +604,6 @@ src/Models/Shared/PropertyConnectionPermissions.php
 src/Models/Shared/PropertyConnectionCategories.php
 src/Models/Shared/PropertyConnectionAuth.php
 src/Models/Shared/PropertyPropertyConnectionAuthMeta.php
-src/Models/Shared/Event.php
-src/Models/Shared/ObjectType.php
-src/Models/Shared/WebhookWebhookType.php
-src/Models/Shared/Webhook.php
-src/Models/Shared/PropertyWebhookMeta.php
-src/Models/Shared/PropertyWebhookEvents.php
 src/Models/Shared/ApiCallType.php
 src/Models/Shared/ApiCall.php
 src/Models/Shared/Integration.php
@@ -621,6 +613,12 @@ src/Models/Shared/PropertyIntegrationSupportWebhookEvents.php
 src/Models/Shared/PropertyIntegrationSupportOutboundFields.php
 src/Models/Shared/PropertyIntegrationSupportInboundFields.php
 src/Models/Shared/PropertyIntegrationCategories.php
+src/Models/Shared/Event.php
+src/Models/Shared/ObjectType.php
+src/Models/Shared/WebhookWebhookType.php
+src/Models/Shared/Webhook.php
+src/Models/Shared/PropertyWebhookMeta.php
+src/Models/Shared/PropertyWebhookEvents.php
 src/Models/Shared/Security.php
 docs/Models/Operations/CreateAccountingAccountRequest.md
 docs/Models/Operations/CreateAccountingAccountResponse.md
@@ -981,9 +979,6 @@ docs/Models/Operations/UpdateTicketingTicketResponse.md
 docs/Models/Operations/ListUcCallsRequest.md
 docs/Models/Operations/ListUcCallsResponse.md
 docs/Models/Operations/CreateUnifiedConnectionResponse.md
-docs/Models/Operations/Events.md
-docs/Models/Operations/CreateUnifiedWebhookRequest.md
-docs/Models/Operations/CreateUnifiedWebhookResponse.md
 docs/Models/Operations/GetUnifiedApicallRequest.md
 docs/Models/Operations/GetUnifiedApicallResponse.md
 docs/Models/Operations/GetUnifiedConnectionRequest.md
@@ -1034,6 +1029,7 @@ docs/Models/Shared/PropertyAccountingCustomerBillingAddress.md
 docs/Models/Shared/AccountingInvoice.md
 docs/Models/Shared/PropertyAccountingInvoiceRaw.md
 docs/Models/Shared/AccountingLineitem.md
+docs/Models/Shared/PropertyAccountingLineitemRaw.md
 docs/Models/Shared/AccountingItem.md
 docs/Models/Shared/PropertyAccountingItemRaw.md
 docs/Models/Shared/AccountingPayment.md
@@ -1163,12 +1159,6 @@ docs/Models/Shared/PropertyConnectionPermissions.md
 docs/Models/Shared/PropertyConnectionCategories.md
 docs/Models/Shared/PropertyConnectionAuth.md
 docs/Models/Shared/PropertyPropertyConnectionAuthMeta.md
-docs/Models/Shared/Event.md
-docs/Models/Shared/ObjectType.md
-docs/Models/Shared/WebhookWebhookType.md
-docs/Models/Shared/Webhook.md
-docs/Models/Shared/PropertyWebhookMeta.md
-docs/Models/Shared/PropertyWebhookEvents.md
 docs/Models/Shared/ApiCallType.md
 docs/Models/Shared/ApiCall.md
 docs/Models/Shared/Integration.md
@@ -1178,6 +1168,12 @@ docs/Models/Shared/PropertyIntegrationSupportWebhookEvents.md
 docs/Models/Shared/PropertyIntegrationSupportOutboundFields.md
 docs/Models/Shared/PropertyIntegrationSupportInboundFields.md
 docs/Models/Shared/PropertyIntegrationCategories.md
+docs/Models/Shared/Event.md
+docs/Models/Shared/ObjectType.md
+docs/Models/Shared/WebhookWebhookType.md
+docs/Models/Shared/Webhook.md
+docs/Models/Shared/PropertyWebhookMeta.md
+docs/Models/Shared/PropertyWebhookEvents.md
 docs/Models/Shared/Security.md
 docs/sdks/unifiedto/README.md
 docs/sdks/accounting/README.md
