@@ -3,9 +3,84 @@
 
 ### Available Operations
 
+* [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
+
+## createUnifiedWebhook
+
+The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\CreateUnifiedWebhookRequest();
+    $request->webhook = new Shared\Webhook();
+    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-23T11:16:21.687Z');
+    $request->webhook->connectionId = 'string';
+    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-21T14:22:58.807Z');
+    $request->webhook->environment = 'string';
+    $request->webhook->event = Shared\Event::Updated;
+    $request->webhook->events = [
+        Shared\PropertyWebhookEvents::Created,
+    ];
+    $request->webhook->fields = 'string';
+    $request->webhook->hookUrl = 'string';
+    $request->webhook->id = '<ID>';
+    $request->webhook->includeRaw = false;
+    $request->webhook->integrationType = 'string';
+    $request->webhook->interval = 738.04;
+    $request->webhook->isHealthy = false;
+    $request->webhook->meta = new Shared\PropertyWebhookMeta();
+    $request->webhook->objectType = Shared\ObjectType::CrmEvent;
+    $request->webhook->runs = [
+        'string',
+    ];
+    $request->webhook->subscriptions = [
+        'string',
+    ];
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-16T07:35:44.253Z');
+    $request->webhook->webhookType = Shared\WebhookWebhookType::Native;
+    $request->webhook->workspaceId = 'string';
+    $request->includeAll = false;;
+
+    $response = $sdk->webhook->createUnifiedWebhook($request);
+
+    if ($response->webhook !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest](../../Models/Operations/CreateUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse](../../Models/Operations/CreateUnifiedWebhookResponse.md)**
+
 
 ## getUnifiedWebhook
 

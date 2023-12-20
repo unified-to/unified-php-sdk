@@ -549,6 +549,7 @@ try {
 ### [Unified](docs/sdks/unified/README.md)
 
 * [createUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
+* [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegration](docs/sdks/unified/README.md#getunifiedintegration) - Retrieve an integration
@@ -596,6 +597,7 @@ try {
 
 ### [Webhook](docs/sdks/webhook/README.md)
 
+* [createUnifiedWebhook](docs/sdks/webhook/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedWebhooks](docs/sdks/webhook/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [removeUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription

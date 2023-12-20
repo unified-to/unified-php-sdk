@@ -22,6 +22,51 @@ class Webhook
 	}
 	
     /**
+     * Create webhook subscription
+     * 
+     * The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
+     * 
+     * @param \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
+     */
+	public function createUnifiedWebhook(
+        ?\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "webhook", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->webhook = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Retrieve webhook by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request
