@@ -44,11 +44,12 @@ class Webhook
     /**
      * $events
      * 
-     * @var array<\Unified\Unified_to\Models\Shared\PropertyWebhookEvents> $events
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyWebhookEvents> $events
      */
 	#[\JMS\Serializer\Annotation\SerializedName('events')]
     #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyWebhookEvents>>')]
-    public array $events;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $events = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('fields')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -134,7 +135,7 @@ class Webhook
 		$this->createdAt = null;
 		$this->environment = null;
 		$this->event = \Unified\Unified_to\Models\Shared\Event::Updated;
-		$this->events = [];
+		$this->events = null;
 		$this->fields = null;
 		$this->hookUrl = "";
 		$this->id = null;
