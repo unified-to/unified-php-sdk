@@ -24,8 +24,7 @@ class Webhook
     
 	#[\JMS\Serializer\Annotation\SerializedName('connection_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $connectionId = null;
+    public string $connectionId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
@@ -41,16 +40,6 @@ class Webhook
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Event>')]
     public Event $event;
     
-    /**
-     * $events
-     * 
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyWebhookEvents> $events
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('events')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyWebhookEvents>>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $events = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('fields')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -64,11 +53,6 @@ class Webhook
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('include_raw')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $includeRaw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('integration_type')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -103,16 +87,6 @@ class Webhook
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $runs = null;
     
-    /**
-     * integration-specific subscriptions IDs
-     * 
-     * @var ?array<string> $subscriptions
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('subscriptions')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $subscriptions = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -131,22 +105,19 @@ class Webhook
 	public function __construct()
 	{
 		$this->checkedAt = null;
-		$this->connectionId = null;
+		$this->connectionId = "";
 		$this->createdAt = null;
 		$this->environment = null;
 		$this->event = \Unified\Unified_to\Models\Shared\Event::Updated;
-		$this->events = null;
 		$this->fields = null;
 		$this->hookUrl = "";
 		$this->id = null;
-		$this->includeRaw = null;
 		$this->integrationType = null;
 		$this->interval = 0;
 		$this->isHealthy = null;
 		$this->meta = null;
 		$this->objectType = \Unified\Unified_to\Models\Shared\ObjectType::AccountingAccount;
 		$this->runs = null;
-		$this->subscriptions = null;
 		$this->updatedAt = null;
 		$this->webhookType = null;
 		$this->workspaceId = null;

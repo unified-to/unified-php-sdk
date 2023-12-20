@@ -37,25 +37,18 @@ try {
     $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-21T14:22:58.807Z');
     $request->webhook->environment = 'string';
     $request->webhook->event = Shared\Event::Updated;
-    $request->webhook->events = [
-        Shared\PropertyWebhookEvents::Created,
-    ];
     $request->webhook->fields = 'string';
     $request->webhook->hookUrl = 'string';
     $request->webhook->id = '<ID>';
-    $request->webhook->includeRaw = false;
     $request->webhook->integrationType = 'string';
-    $request->webhook->interval = 738.04;
+    $request->webhook->interval = 6142.55;
     $request->webhook->isHealthy = false;
     $request->webhook->meta = new Shared\PropertyWebhookMeta();
-    $request->webhook->objectType = Shared\ObjectType::CrmEvent;
+    $request->webhook->objectType = Shared\ObjectType::AccountingCustomer;
     $request->webhook->runs = [
         'string',
     ];
-    $request->webhook->subscriptions = [
-        'string',
-    ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-16T07:35:44.253Z');
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T17:23:28.216Z');
     $request->webhook->webhookType = Shared\WebhookWebhookType::Native;
     $request->webhook->workspaceId = 'string';
     $request->includeAll = false;;

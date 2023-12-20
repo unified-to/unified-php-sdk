@@ -611,7 +611,6 @@ src/Models/Shared/ObjectType.php
 src/Models/Shared/WebhookWebhookType.php
 src/Models/Shared/Webhook.php
 src/Models/Shared/PropertyWebhookMeta.php
-src/Models/Shared/PropertyWebhookEvents.php
 src/Models/Shared/ApiCallType.php
 src/Models/Shared/ApiCall.php
 src/Models/Shared/Integration.php
@@ -1168,7 +1167,6 @@ docs/Models/Shared/ObjectType.md
 docs/Models/Shared/WebhookWebhookType.md
 docs/Models/Shared/Webhook.md
 docs/Models/Shared/PropertyWebhookMeta.md
-docs/Models/Shared/PropertyWebhookEvents.md
 docs/Models/Shared/ApiCallType.md
 docs/Models/Shared/ApiCall.md
 docs/Models/Shared/Integration.md
