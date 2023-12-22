@@ -45,4 +45,5 @@ enum ObjectType: string
     case UcCall = 'uc_call';
     case EnrichPerson = 'enrich_person';
     case EnrichCompany = 'enrich_company';
+    case StorageFile = 'storage_file';
 }

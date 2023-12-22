@@ -21,4 +21,5 @@ enum PropertyIntegrationCategories: string
     case Ticketing = 'ticketing';
     case Uc = 'uc';
     case Accounting = 'accounting';
+    case Storage = 'storage';
 }

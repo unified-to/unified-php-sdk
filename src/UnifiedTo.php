@@ -91,6 +91,8 @@ class UnifiedTo
 	
 	public Passthrough $passthrough;
 	
+	public Storage $storage;
+	
 	public Ticketing $ticketing;
 	
 	public Note $note;
@@ -201,6 +203,8 @@ class UnifiedTo
 		$this->member = new Member($this->sdkConfiguration);
 		
 		$this->passthrough = new Passthrough($this->sdkConfiguration);
+		
+		$this->storage = new Storage($this->sdkConfiguration);
 		
 		$this->ticketing = new Ticketing($this->sdkConfiguration);
 		

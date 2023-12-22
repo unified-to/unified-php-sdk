@@ -85,7 +85,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisEmployeeRead,
+        Operations\Scopes::HrisGroupRead,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -139,7 +139,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        Operations\QueryParamCategories::Ticketing,
+        Operations\QueryParamCategories::Uc,
     ];
     $request->env = 'string';
     $request->limit = 9072.99;

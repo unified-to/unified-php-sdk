@@ -76,6 +76,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listOrder = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('list_parent_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listParentId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('list_query')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -171,6 +176,7 @@ class IntegrationSupport
 		$this->listLimit = null;
 		$this->listOffset = null;
 		$this->listOrder = null;
+		$this->listParentId = null;
 		$this->listQuery = null;
 		$this->listSortByCreatedAt = null;
 		$this->listSortByName = null;

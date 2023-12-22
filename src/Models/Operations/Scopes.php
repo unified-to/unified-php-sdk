@@ -68,5 +68,7 @@ enum Scopes: string
     case HrisGroupRead = 'hris_group_read';
     case HrisGroupWrite = 'hris_group_write';
     case UcCallRead = 'uc_call_read';
+    case StorageFileRead = 'storage_file_read';
+    case StorageFileWrite = 'storage_file_write';
     case Webhook = 'webhook';
 }
