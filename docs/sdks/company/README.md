@@ -48,11 +48,17 @@ try {
     $request->crmCompany->dealIds = [
         'string',
     ];
+    $request->crmCompany->description = 'Pre-emptive responsive task-force';
     $request->crmCompany->emails = [
         new Shared\CrmEmail(),
     ];
+    $request->crmCompany->employees = 4175.89;
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->industry = 'string';
     $request->crmCompany->isActive = false;
+    $request->crmCompany->linkUrls = [
+        'string',
+    ];
     $request->crmCompany->name = 'string';
     $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
@@ -61,7 +67,8 @@ try {
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-13T01:08:44.894Z');
+    $request->crmCompany->timezone = 'Europe/Bucharest';
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-03T05:30:56.861Z');
     $request->crmCompany->websites = [
         'string',
     ];
@@ -284,11 +291,17 @@ try {
     $request->crmCompany->dealIds = [
         'string',
     ];
+    $request->crmCompany->description = 'Diverse mission-critical project';
     $request->crmCompany->emails = [
         new Shared\CrmEmail(),
     ];
+    $request->crmCompany->employees = 4128.78;
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->industry = 'string';
     $request->crmCompany->isActive = false;
+    $request->crmCompany->linkUrls = [
+        'string',
+    ];
     $request->crmCompany->name = 'string';
     $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
@@ -297,7 +310,8 @@ try {
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-09T20:12:23.736Z');
+    $request->crmCompany->timezone = 'Europe/Skopje';
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-08T06:12:00.839Z');
     $request->crmCompany->websites = [
         'string',
     ];
@@ -411,11 +425,17 @@ try {
     $request->crmCompany->dealIds = [
         'string',
     ];
+    $request->crmCompany->description = 'Future-proofed zero defect instruction set';
     $request->crmCompany->emails = [
         new Shared\CrmEmail(),
     ];
+    $request->crmCompany->employees = 1100.41;
     $request->crmCompany->id = '<ID>';
+    $request->crmCompany->industry = 'string';
     $request->crmCompany->isActive = false;
+    $request->crmCompany->linkUrls = [
+        'string',
+    ];
     $request->crmCompany->name = 'string';
     $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
     $request->crmCompany->tags = [
@@ -424,7 +444,8 @@ try {
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-12T06:06:45.272Z');
+    $request->crmCompany->timezone = 'Africa/Harare';
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-13T00:13:39.786Z');
     $request->crmCompany->websites = [
         'string',
     ];

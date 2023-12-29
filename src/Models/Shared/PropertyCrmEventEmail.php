@@ -48,7 +48,7 @@ class PropertyCrmEventEmail
     public ?string $subject = null;
     
     /**
-     * The event email's to name & email (name <test@test.com>)
+     * The event email's "to" name & email (name <test@test.com>)
      * 
      * @var ?array<string> $to
      */

@@ -553,6 +553,7 @@ src/Models/Shared/CrmDeal.php
 src/Models/Shared/PropertyCrmDealRaw.php
 src/Models/Shared/CrmEventType.php
 src/Models/Shared/CrmEvent.php
+src/Models/Shared/PropertyCrmEventTaskStatus.php
 src/Models/Shared/PropertyCrmEventTask.php
 src/Models/Shared/PropertyCrmEventRaw.php
 src/Models/Shared/PropertyCrmEventNote.php
@@ -1126,6 +1127,7 @@ docs/Models/Shared/CrmDeal.md
 docs/Models/Shared/PropertyCrmDealRaw.md
 docs/Models/Shared/CrmEventType.md
 docs/Models/Shared/CrmEvent.md
+docs/Models/Shared/PropertyCrmEventTaskStatus.md
 docs/Models/Shared/PropertyCrmEventTask.md
 docs/Models/Shared/PropertyCrmEventRaw.md
 docs/Models/Shared/PropertyCrmEventNote.md

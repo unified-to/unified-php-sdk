@@ -33,9 +33,9 @@ class PropertyCrmEventTask
     public ?string $name = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $status = null;
+    public ?PropertyCrmEventTaskStatus $status = null;
     
 	public function __construct()
 	{
