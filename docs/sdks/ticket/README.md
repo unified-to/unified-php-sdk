@@ -35,8 +35,8 @@ try {
         $request = new Operations\CreateTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-28T11:20:21.005Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-19T22:26:35.479Z');
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-28T15:15:03.216Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-20T11:30:17.210Z');
     $request->ticketingTicket->customerId = 'string';
     $request->ticketingTicket->description = 'Automated composite productivity';
     $request->ticketingTicket->id = '<ID>';
@@ -49,7 +49,7 @@ try {
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-07T02:01:09.815Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-06T20:46:58.372Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->ticket->createTicketingTicket($request);
@@ -159,7 +159,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-28T14:14:11.846Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-28T23:31:15.090Z');;
 
     $response = $sdk->ticket->listTicketingTickets($request);
 
@@ -208,8 +208,8 @@ try {
         $request = new Operations\PatchTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-14T12:10:45.667Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-29T23:22:13.568Z');
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-14T17:48:05.161Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-30T13:19:53.416Z');
     $request->ticketingTicket->customerId = 'string';
     $request->ticketingTicket->description = 'Operative composite strategy';
     $request->ticketingTicket->id = '<ID>';
@@ -222,7 +222,7 @@ try {
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-06T16:05:08.020Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-06T12:10:37.068Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -321,8 +321,8 @@ try {
         $request = new Operations\UpdateTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
     $request->ticketingTicket->category = 'string';
-    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-30T22:19:31.995Z');
-    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-29T18:27:57.571Z');
+    $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-31T01:36:42.106Z');
+    $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-29T13:04:08.966Z');
     $request->ticketingTicket->customerId = 'string';
     $request->ticketingTicket->description = 'Configurable user-facing middleware';
     $request->ticketingTicket->id = '<ID>';
@@ -335,7 +335,7 @@ try {
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-16T17:18:07.743Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-17T01:38:48.188Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

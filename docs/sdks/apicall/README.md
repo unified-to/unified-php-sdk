@@ -77,7 +77,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListUnifiedApicallsRequest();
     $request->connectionId = 'string';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-09T20:57:25.500Z');
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T17:47:53.304Z');
     $request->env = 'string';
     $request->error = false;
     $request->externalXref = 'string';
@@ -86,7 +86,7 @@ try {
     $request->offset = 5267.27;
     $request->order = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T10:22:39.053Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-10T02:33:44.403Z');;
 
     $response = $sdk->apicall->listUnifiedApicalls($request);
 

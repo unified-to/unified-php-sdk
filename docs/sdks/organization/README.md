@@ -89,7 +89,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-02T08:55:00.055Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-02T18:55:09.644Z');;
 
     $response = $sdk->organization->listAccountingOrganizations($request);
 

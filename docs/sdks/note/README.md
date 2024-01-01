@@ -35,7 +35,7 @@ try {
         $request = new Operations\CreateTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
     $request->ticketingNote->agentId = 'string';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-20T19:05:27.564Z');
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-20T13:29:50.877Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Distributed 4th generation portal';
     $request->ticketingNote->id = '<ID>';
@@ -150,7 +150,7 @@ try {
     $request->query = 'string';
     $request->sort = 'string';
     $request->ticketId = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-20T18:22:08.785Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-20T16:07:42.054Z');;
 
     $response = $sdk->note->listTicketingNotes($request);
 
@@ -199,7 +199,7 @@ try {
         $request = new Operations\PatchTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
     $request->ticketingNote->agentId = 'string';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T23:33:24.591Z');
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-04T20:58:12.449Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Right-sized national productivity';
     $request->ticketingNote->id = '<ID>';
@@ -304,7 +304,7 @@ try {
         $request = new Operations\UpdateTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
     $request->ticketingNote->agentId = 'string';
-    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-15T06:19:14.487Z');
+    $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-15T01:15:48.418Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Versatile value-added utilisation';
     $request->ticketingNote->id = '<ID>';

@@ -37,14 +37,14 @@ try {
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-24T07:49:32.768Z');
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-24T10:18:34.661Z');
     $request->atsScorecard->id = '<ID>';
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = Shared\Recommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T17:31:47.454Z');
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-02T03:31:06.456Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->scorecard->createAtsScorecard($request);
@@ -156,7 +156,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T17:42:56.145Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-19T14:46:22.333Z');;
 
     $response = $sdk->scorecard->listAtsScorecards($request);
 
@@ -207,14 +207,14 @@ try {
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-06T15:26:03.447Z');
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-06T13:32:29.533Z');
     $request->atsScorecard->id = '<ID>';
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T07:58:12.100Z');
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T15:13:55.563Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -315,14 +315,14 @@ try {
     $request->atsScorecard->applicationId = 'string';
     $request->atsScorecard->candidateId = 'string';
     $request->atsScorecard->comment = 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive';
-    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-10T12:08:12.226Z');
+    $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T16:18:43.908Z');
     $request->atsScorecard->id = '<ID>';
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
     $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
     $request->atsScorecard->recommendation = Shared\Recommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-26T04:45:45.856Z');
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-26T09:16:55.761Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

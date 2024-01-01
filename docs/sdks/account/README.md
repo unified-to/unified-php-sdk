@@ -36,7 +36,7 @@ try {
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 6602.56;
     $request->accountingAccount->bankAccountNumber = 'string';
-    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-02T08:51:10.063Z');
+    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T22:12:31.771Z');
     $request->accountingAccount->currency = 'Saint Helena Pound';
     $request->accountingAccount->customerDefinedCode = 'string';
     $request->accountingAccount->description = 'Cross-group zero defect task-force';
@@ -45,7 +45,7 @@ try {
     $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
     $request->accountingAccount->status = Shared\Status::Active;
     $request->accountingAccount->type = Shared\Type::Equity;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-09T10:11:13.258Z');
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-09T23:41:51.681Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->account->createAccountingAccount($request);
@@ -153,7 +153,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-20T03:09:57.234Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-19T21:33:28.191Z');;
 
     $response = $sdk->account->listAccountingAccounts($request);
 
@@ -203,7 +203,7 @@ try {
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 1931.26;
     $request->accountingAccount->bankAccountNumber = 'string';
-    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T05:24:17.966Z');
+    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T13:35:06.969Z');
     $request->accountingAccount->currency = 'Won';
     $request->accountingAccount->customerDefinedCode = 'string';
     $request->accountingAccount->description = 'Quality-focused multimedia implementation';
@@ -212,7 +212,7 @@ try {
     $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
     $request->accountingAccount->status = Shared\Status::Archived;
     $request->accountingAccount->type = Shared\Type::Revenue;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-10T11:14:55.383Z');
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-10T10:46:36.474Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -312,7 +312,7 @@ try {
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 5954.09;
     $request->accountingAccount->bankAccountNumber = 'string';
-    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-21T20:36:10.841Z');
+    $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-21T23:41:25.152Z');
     $request->accountingAccount->currency = 'Tanzanian Shilling';
     $request->accountingAccount->customerDefinedCode = 'string';
     $request->accountingAccount->description = 'Stand-alone grid-enabled model';
@@ -321,7 +321,7 @@ try {
     $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
     $request->accountingAccount->status = Shared\Status::Active;
     $request->accountingAccount->type = Shared\Type::Bank;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-02T17:59:24.345Z');
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-02T20:00:03.765Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

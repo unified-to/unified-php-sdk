@@ -46,7 +46,7 @@ try {
     $request->crmLead->companyId = 'string';
     $request->crmLead->companyName = 'Langosh - Fritsch';
     $request->crmLead->contactId = 'string';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-22T23:40:58.272Z');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-23T15:29:07.093Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
         new Shared\CrmEmail(),
@@ -60,7 +60,7 @@ try {
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-01T21:13:09.210Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-01T18:33:52.670Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -171,7 +171,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-11T15:13:29.920Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T07:27:29.016Z');;
 
     $response = $sdk->lead->listCrmLeads($request);
 
@@ -231,7 +231,7 @@ try {
     $request->crmLead->companyId = 'string';
     $request->crmLead->companyName = 'Altenwerth, Lebsack and Wintheiser';
     $request->crmLead->contactId = 'string';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-15T21:54:30.872Z');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-16T13:33:21.530Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
         new Shared\CrmEmail(),
@@ -245,7 +245,7 @@ try {
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-10T05:25:00.043Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-10T11:36:08.811Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -356,7 +356,7 @@ try {
     $request->crmLead->companyId = 'string';
     $request->crmLead->companyName = 'Gibson - Cummings';
     $request->crmLead->contactId = 'string';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-12T09:21:19.873Z');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-12T08:55:32.549Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
         new Shared\CrmEmail(),
@@ -370,7 +370,7 @@ try {
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-13T22:33:13.952Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T10:08:49.472Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

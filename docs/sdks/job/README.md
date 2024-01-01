@@ -37,11 +37,11 @@ try {
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-14T18:13:00.731Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-14T18:31:06.376Z');
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-04T23:12:33.253Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T09:16:07.639Z');
     $request->atsJob->departments = [
         'string',
     ];
@@ -62,7 +62,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Open;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T17:38:42.004Z');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-26T15:32:06.316Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->job->createAtsJob($request);
@@ -170,7 +170,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-03T15:53:00.086Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-04T01:14:05.456Z');;
 
     $response = $sdk->job->listAtsJobs($request);
 
@@ -221,11 +221,11 @@ try {
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-09T12:54:15.288Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T17:44:16.617Z');
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T13:38:57.141Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T17:48:14.891Z');
     $request->atsJob->departments = [
         'string',
     ];
@@ -246,7 +246,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Open;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T04:38:28.121Z');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-14T06:54:10.503Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -347,11 +347,11 @@ try {
     $request->atsJob->addresses = [
         new Shared\AtsAddress(),
     ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-20T17:16:11.353Z');
+    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T07:41:08.131Z');
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-28T15:51:57.038Z');
+    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-28T21:47:53.309Z');
     $request->atsJob->departments = [
         'string',
     ];
@@ -372,7 +372,7 @@ try {
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T15:41:17.674Z');
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-13T07:15:51.170Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

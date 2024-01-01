@@ -37,7 +37,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-26T00:21:04.080Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-25T18:11:33.180Z');;
 
     $response = $sdk->applicationstatus->listAtsApplicationstatuses($request);
 

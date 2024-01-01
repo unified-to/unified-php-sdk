@@ -34,7 +34,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAccountingItemRequest();
     $request->accountingItem = new Shared\AccountingItem();
-    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-04T15:00:45.309Z');
+    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-04T21:45:18.227Z');
     $request->accountingItem->description = 'Team-oriented grid-enabled open system';
     $request->accountingItem->id = '<ID>';
     $request->accountingItem->isActive = false;
@@ -45,7 +45,7 @@ try {
     $request->accountingItem->quantityOnHand = 9042.97;
     $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T14:16:42.877Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-05T08:21:06.807Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->item->createAccountingItem($request);
@@ -153,7 +153,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-10T02:16:10.814Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-10T17:07:55.262Z');;
 
     $response = $sdk->item->listAccountingItems($request);
 
@@ -201,7 +201,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAccountingItemRequest();
     $request->accountingItem = new Shared\AccountingItem();
-    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-11T19:48:47.302Z');
+    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-12T01:22:35.181Z');
     $request->accountingItem->description = 'Operative coherent forecast';
     $request->accountingItem->id = '<ID>';
     $request->accountingItem->isActive = false;
@@ -212,7 +212,7 @@ try {
     $request->accountingItem->quantityOnHand = 3510.34;
     $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T10:09:49.214Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T01:12:30.848Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -310,7 +310,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAccountingItemRequest();
     $request->accountingItem = new Shared\AccountingItem();
-    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-31T21:33:39.658Z');
+    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-31T23:31:53.009Z');
     $request->accountingItem->description = 'Programmable modular artificial intelligence';
     $request->accountingItem->id = '<ID>';
     $request->accountingItem->isActive = false;
@@ -321,7 +321,7 @@ try {
     $request->accountingItem->quantityOnHand = 9226.47;
     $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-08T23:08:08.961Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-09T06:37:51.326Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

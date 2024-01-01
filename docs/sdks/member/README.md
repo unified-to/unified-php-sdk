@@ -34,7 +34,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateMartechMemberRequest();
     $request->marketingMember = new Shared\MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-29T12:25:04.271Z');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-29T17:00:36.055Z');
     $request->marketingMember->emails = [
         new Shared\MarketingEmail(),
     ];
@@ -47,7 +47,7 @@ try {
     $request->marketingMember->tags = [
         'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-19T04:53:01.271Z');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T11:56:44.450Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->member->createMartechMember($request);
@@ -156,7 +156,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-09T03:38:53.799Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-09T12:30:23.054Z');;
 
     $response = $sdk->member->listMartechMembers($request);
 
@@ -204,7 +204,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchMartechMemberRequest();
     $request->marketingMember = new Shared\MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-02T06:23:45.231Z');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-02T21:05:12.012Z');
     $request->marketingMember->emails = [
         new Shared\MarketingEmail(),
     ];
@@ -217,7 +217,7 @@ try {
     $request->marketingMember->tags = [
         'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-21T13:07:32.283Z');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-21T10:13:21.189Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -315,7 +315,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateMartechMemberRequest();
     $request->marketingMember = new Shared\MarketingMember();
-    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-24T11:56:04.469Z');
+    $request->marketingMember->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-24T06:25:19.871Z');
     $request->marketingMember->emails = [
         new Shared\MarketingEmail(),
     ];
@@ -328,7 +328,7 @@ try {
     $request->marketingMember->tags = [
         'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-20T03:26:40.111Z');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-20T05:09:25.955Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

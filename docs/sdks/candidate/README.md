@@ -44,7 +44,7 @@ try {
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
     $request->atsCandidate->companyName = 'Pollich - Lubowitz';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-05T23:23:31.487Z');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-06T00:47:39.352Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
@@ -63,7 +63,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T18:21:52.157Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T09:25:00.753Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->candidate->createAtsCandidate($request);
@@ -171,7 +171,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-17T23:18:31.102Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T00:58:25.541Z');;
 
     $response = $sdk->candidate->listAtsCandidates($request);
 
@@ -229,7 +229,7 @@ try {
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
     $request->atsCandidate->companyName = 'Donnelly - Bartell';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-06T12:13:20.908Z');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-07T04:20:35.612Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
@@ -248,7 +248,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-19T12:47:03.298Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-20T03:10:26.424Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -356,7 +356,7 @@ try {
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
     $request->atsCandidate->companyName = 'O\'Reilly Inc';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-30T14:37:21.726Z');
+    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T03:55:05.691Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
@@ -375,7 +375,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-18T01:19:42.316Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T17:01:22.026Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

@@ -45,7 +45,7 @@ try {
         'string',
     ];
     $request->auth->expiresIn = 9168.17;
-    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T21:22:48.918Z');
+    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-11T07:34:10.716Z');
     $request->auth->key = '<key>';
     $request->auth->meta = new Shared\PropertyPropertyConnectionAuthMeta();
     $request->auth->name = 'string';
@@ -54,7 +54,7 @@ try {
     ];
     $request->auth->pem = 'string';
     $request->auth->refreshToken = 'string';
-    $request->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-18T01:30:06.276Z');
+    $request->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-18T11:50:53.953Z');
     $request->auth->refreshTokenExpiresIn = 6876.67;
     $request->auth->state = 'string';
     $request->auth->token = 'string';
@@ -63,7 +63,7 @@ try {
     $request->categories = [
         Shared\PropertyConnectionCategories::Auth,
     ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-03T20:48:03.468Z');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-04T08:49:51.307Z');
     $request->cursorsCache = [
         new Shared\Undefined(),
     ];
@@ -72,12 +72,12 @@ try {
     $request->id = '<ID>';
     $request->integrationType = 'string';
     $request->isPaused = false;
-    $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-11T09:33:42.804Z');
-    $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-29T03:45:15.691Z');
+    $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-11T17:06:37.254Z');
+    $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-28T23:40:51.869Z');
     $request->permissions = [
         Shared\PropertyConnectionPermissions::CrmLeadRead,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-04T22:51:39.532Z');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-05T07:37:37.431Z');
     $request->workspaceId = 'string';;
 
     $response = $sdk->connection->createUnifiedConnection($request);
@@ -181,7 +181,7 @@ try {
     $request->offset = 15.12;
     $request->order = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-20T10:15:04.986Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-20T13:59:12.388Z');;
 
     $response = $sdk->connection->listUnifiedConnections($request);
 
@@ -242,7 +242,7 @@ try {
         'string',
     ];
     $request->connection->auth->expiresIn = 6565.39;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-09T01:57:38.348Z');
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-09T18:49:02.054Z');
     $request->connection->auth->key = '<key>';
     $request->connection->auth->meta = new Shared\PropertyPropertyConnectionAuthMeta();
     $request->connection->auth->name = 'string';
@@ -251,7 +251,7 @@ try {
     ];
     $request->connection->auth->pem = 'string';
     $request->connection->auth->refreshToken = 'string';
-    $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T01:22:10.837Z');
+    $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-29T01:18:18.628Z');
     $request->connection->auth->refreshTokenExpiresIn = 8456.09;
     $request->connection->auth->state = 'string';
     $request->connection->auth->token = 'string';
@@ -260,7 +260,7 @@ try {
     $request->connection->categories = [
         Shared\PropertyConnectionCategories::Ats,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-09T04:29:35.007Z');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-09T07:18:09.504Z');
     $request->connection->cursorsCache = [
         new Shared\Undefined(),
     ];
@@ -269,12 +269,12 @@ try {
     $request->connection->id = '<ID>';
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
-    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-05-14T09:50:52.127Z');
-    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T00:35:16.005Z');
+    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-14T12:46:18.750Z');
+    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-09T12:43:50.814Z');
     $request->connection->permissions = [
         Shared\PropertyConnectionPermissions::AtsInterviewRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T17:57:56.069Z');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-03T13:20:07.463Z');
     $request->connection->workspaceId = 'string';
     $request->id = '<ID>';;
 
@@ -384,7 +384,7 @@ try {
         'string',
     ];
     $request->connection->auth->expiresIn = 7910.65;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-13T00:55:19.590Z');
+    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-13T13:09:11.114Z');
     $request->connection->auth->key = '<key>';
     $request->connection->auth->meta = new Shared\PropertyPropertyConnectionAuthMeta();
     $request->connection->auth->name = 'string';
@@ -393,7 +393,7 @@ try {
     ];
     $request->connection->auth->pem = 'string';
     $request->connection->auth->refreshToken = 'string';
-    $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-14T16:56:17.383Z');
+    $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-14T16:33:32.796Z');
     $request->connection->auth->refreshTokenExpiresIn = 7427.91;
     $request->connection->auth->state = 'string';
     $request->connection->auth->token = 'string';
@@ -402,7 +402,7 @@ try {
     $request->connection->categories = [
         Shared\PropertyConnectionCategories::Enrich,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-09T18:14:10.859Z');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-09T19:43:17.389Z');
     $request->connection->cursorsCache = [
         new Shared\Undefined(),
     ];
@@ -411,12 +411,12 @@ try {
     $request->connection->id = '<ID>';
     $request->connection->integrationType = 'string';
     $request->connection->isPaused = false;
-    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-26T11:58:40.326Z');
-    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T04:40:33.286Z');
+    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-26T11:11:59.157Z');
+    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-09T16:09:54.412Z');
     $request->connection->permissions = [
         Shared\PropertyConnectionPermissions::AccountingTransactionRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-09T08:00:07.180Z');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T16:11:04.721Z');
     $request->connection->workspaceId = 'string';
     $request->id = '<ID>';;
 

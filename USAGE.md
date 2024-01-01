@@ -23,7 +23,7 @@ try {
     $request->accountingAccount->bankAccountNumber = 'string';
     $request->accountingAccount->createdAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
-        '2022-09-02T08:51:10.063Z',
+        '2023-09-02T22:12:31.771Z',
     );
     $request->accountingAccount->currency = 'Saint Helena Pound';
     $request->accountingAccount->customerDefinedCode = 'string';
@@ -35,7 +35,7 @@ try {
     $request->accountingAccount->type = Shared\Type::Equity;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
-        '2022-09-09T10:11:13.258Z',
+        '2023-09-09T23:41:51.681Z',
     );
     $request->connectionId = 'string';
 

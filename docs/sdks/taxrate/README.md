@@ -34,14 +34,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAccountingTaxrateRequest();
     $request->accountingTaxrate = new Shared\AccountingTaxrate();
-    $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-08T05:47:47.208Z');
+    $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-08T09:55:20.238Z');
     $request->accountingTaxrate->description = 'Enterprise-wide content-based productivity';
     $request->accountingTaxrate->id = '<ID>';
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 6789.7;
     $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-27T07:12:37.927Z');
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-27T23:06:27.112Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->taxrate->createAccountingTaxrate($request);
@@ -149,7 +149,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-14T02:55:23.362Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T14:31:13.247Z');;
 
     $response = $sdk->taxrate->listAccountingTaxrates($request);
 
@@ -197,14 +197,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAccountingTaxrateRequest();
     $request->accountingTaxrate = new Shared\AccountingTaxrate();
-    $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-19T01:34:17.469Z');
+    $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-19T15:57:03.731Z');
     $request->accountingTaxrate->description = 'Quality-focused user-facing complexity';
     $request->accountingTaxrate->id = '<ID>';
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 220.78;
     $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-16T18:23:47.556Z');
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-17T10:44:31.599Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -302,14 +302,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAccountingTaxrateRequest();
     $request->accountingTaxrate = new Shared\AccountingTaxrate();
-    $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T09:57:32.737Z');
+    $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-06T18:04:39.999Z');
     $request->accountingTaxrate->description = 'Switchable intangible initiative';
     $request->accountingTaxrate->id = '<ID>';
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 2580.61;
     $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-21T09:13:35.294Z');
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-21T10:57:59.053Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

@@ -34,14 +34,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-24T14:15:54.218Z');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-24T10:05:30.432Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 6254.97;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-01T06:10:18.007Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-01T13:29:52.270Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->pipeline->createCrmPipeline($request);
@@ -149,7 +149,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-29T15:47:27.871Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-29T18:23:30.472Z');;
 
     $response = $sdk->pipeline->listCrmPipelines($request);
 
@@ -197,14 +197,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-26T17:19:01.949Z');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-26T14:31:39.156Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8620.92;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T12:55:27.421Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-03T22:57:09.090Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -302,14 +302,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-27T08:28:05.275Z');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-27T16:21:58.595Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8923.83;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-18T01:45:20.441Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-18T14:05:49.227Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

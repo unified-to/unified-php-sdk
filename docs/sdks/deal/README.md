@@ -35,8 +35,8 @@ try {
         $request = new Operations\CreateCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 1917.45;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-27T15:05:01.017Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-23T03:04:45.267Z');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-28T04:18:49.785Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-23T15:31:52.925Z');
     $request->crmDeal->currency = 'Cuban Peso';
     $request->crmDeal->id = '<ID>';
     $request->crmDeal->lostReason = 'string';
@@ -49,7 +49,7 @@ try {
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-13T05:28:26.663Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T19:43:32.331Z');
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';;
 
@@ -160,7 +160,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-03T12:16:34.604Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T01:39:26.472Z');;
 
     $response = $sdk->deal->listCrmDeals($request);
 
@@ -209,8 +209,8 @@ try {
         $request = new Operations\PatchCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 9874.05;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T08:48:03.715Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T07:03:46.302Z');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T12:57:05.527Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T17:40:39.112Z');
     $request->crmDeal->currency = 'Riel';
     $request->crmDeal->id = '<ID>';
     $request->crmDeal->lostReason = 'string';
@@ -223,7 +223,7 @@ try {
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T14:41:27.897Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-22T07:49:20.306Z');
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -323,8 +323,8 @@ try {
         $request = new Operations\UpdateCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 854.3;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T07:04:58.998Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-20T16:49:31.989Z');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-13T15:21:09.134Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-20T23:55:13.334Z');
     $request->crmDeal->currency = 'Pound Sterling';
     $request->crmDeal->id = '<ID>';
     $request->crmDeal->lostReason = 'string';
@@ -337,7 +337,7 @@ try {
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-31T15:37:01.475Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-01T00:17:19.942Z');
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

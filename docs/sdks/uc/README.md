@@ -36,7 +36,7 @@ try {
         $request = new Operations\CreateUcContactRequest();
     $request->ucContact = new Shared\UcContact();
     $request->ucContact->company = 'Gottlieb - Becker';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-20T18:36:15.437Z');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-20T15:00:17.424Z');
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
@@ -47,7 +47,7 @@ try {
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T08:51:50.425Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-29T08:48:22.854Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->uc->createUcContact($request);
@@ -157,7 +157,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T02:48:36.966Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-24T23:18:21.548Z');;
 
     $response = $sdk->uc->listUcCalls($request);
 
@@ -214,7 +214,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-25T15:03:37.771Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-26T05:35:01.805Z');;
 
     $response = $sdk->uc->listUcContacts($request);
 
@@ -263,7 +263,7 @@ try {
         $request = new Operations\PatchUcContactRequest();
     $request->ucContact = new Shared\UcContact();
     $request->ucContact->company = 'Runolfsdottir, Boehm and Toy';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-28T14:51:42.138Z');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-28T10:05:49.902Z');
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
@@ -274,7 +274,7 @@ try {
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-29T10:49:56.119Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-29T10:07:07.897Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -373,7 +373,7 @@ try {
         $request = new Operations\UpdateUcContactRequest();
     $request->ucContact = new Shared\UcContact();
     $request->ucContact->company = 'Marquardt Group';
-    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T01:40:47.681Z');
+    $request->ucContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-21T18:47:57.314Z');
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
@@ -384,7 +384,7 @@ try {
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-14T09:25:29.060Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-14T19:41:27.169Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

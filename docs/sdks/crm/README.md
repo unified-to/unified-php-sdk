@@ -79,7 +79,7 @@ try {
     $request->crmCompany->address->postalCode = '39571';
     $request->crmCompany->address->region = 'string';
     $request->crmCompany->address->regionCode = 'string';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-02T17:21:10.729Z');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-03T10:04:12.712Z');
     $request->crmCompany->dealIds = [
         'string',
     ];
@@ -103,7 +103,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'Europe/Bucharest';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-03T05:30:56.861Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-03T19:32:53.625Z');
     $request->crmCompany->websites = [
         'string',
     ];
@@ -168,7 +168,7 @@ try {
     $request->crmContact->companyIds = [
         'string',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-07T16:46:57.366Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-07T10:13:21.309Z');
     $request->crmContact->dealIds = [
         'string',
     ];
@@ -182,7 +182,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-21T23:24:52.050Z');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-21T17:10:02.454Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmContact($request);
@@ -232,8 +232,8 @@ try {
         $request = new Operations\CreateCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 1917.45;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-27T15:05:01.017Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-23T03:04:45.267Z');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-28T04:18:49.785Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-23T15:31:52.925Z');
     $request->crmDeal->currency = 'Cuban Peso';
     $request->crmDeal->id = '<ID>';
     $request->crmDeal->lostReason = 'string';
@@ -246,7 +246,7 @@ try {
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-13T05:28:26.663Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T19:43:32.331Z');
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';;
 
@@ -299,14 +299,14 @@ try {
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Grass-roots intangible superstructure';
     $request->crmEvent->call->duration = 6684.26;
-    $request->crmEvent->call->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T01:49:08.083Z');
+    $request->crmEvent->call->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-14T22:05:40.365Z');
     $request->crmEvent->companyIds = [
         'string',
     ];
     $request->crmEvent->contactIds = [
         'string',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-20T22:53:04.600Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-20T19:58:06.686Z');
     $request->crmEvent->dealIds = [
         'string',
     ];
@@ -315,7 +315,7 @@ try {
     $request->crmEvent->email->cc = [
         'string',
     ];
-    $request->crmEvent->email->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-07T10:54:17.524Z');
+    $request->crmEvent->email->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-07T07:41:34.472Z');
     $request->crmEvent->email->from = 'string';
     $request->crmEvent->email->subject = 'string';
     $request->crmEvent->email->to = [
@@ -327,20 +327,20 @@ try {
     ];
     $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Ameliorated bottom-line internet solution';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-08T19:04:07.609Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-30T18:01:57.751Z');
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-09T03:55:08.657Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-30T17:20:52.105Z');
     $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
-    $request->crmEvent->note->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-29T05:15:10.995Z');
+    $request->crmEvent->note->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-29T07:09:52.923Z');
     $request->crmEvent->note->description = 'Extended 5th generation artificial intelligence';
     $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
     $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Multi-tiered impactful attitude';
-    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-26T03:42:01.335Z');
+    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-26T13:32:41.446Z');
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
     $request->crmEvent->type = Shared\CrmEventType::Note;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-09T05:59:05.742Z');
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-09T05:29:10.624Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmEvent($request);
@@ -392,7 +392,7 @@ try {
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-23T16:58:07.247Z');
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-23T14:06:46.596Z');
     $request->crmFile->dealId = 'string';
     $request->crmFile->description = 'Multi-lateral background database';
     $request->crmFile->fileName = 'the.mp4v';
@@ -403,7 +403,7 @@ try {
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
     $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-03T12:27:57.377Z');
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-03T23:09:04.663Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -465,7 +465,7 @@ try {
     $request->crmLead->companyId = 'string';
     $request->crmLead->companyName = 'Langosh - Fritsch';
     $request->crmLead->contactId = 'string';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-22T23:40:58.272Z');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-23T15:29:07.093Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
         new Shared\CrmEmail(),
@@ -479,7 +479,7 @@ try {
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-01T21:13:09.210Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-01T18:33:52.670Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -529,14 +529,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-24T14:15:54.218Z');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-24T10:05:30.432Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 6254.97;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-01T06:10:18.007Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-01T13:29:52.270Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmPipeline($request);
@@ -952,7 +952,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-02T07:12:37.628Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');;
 
     $response = $sdk->crm->listCrmCompanies($request);
 
@@ -1010,7 +1010,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-15T04:38:32.631Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:36:59.401Z');;
 
     $response = $sdk->crm->listCrmContacts($request);
 
@@ -1068,7 +1068,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-03T12:16:34.604Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T01:39:26.472Z');;
 
     $response = $sdk->crm->listCrmDeals($request);
 
@@ -1128,7 +1128,7 @@ try {
     $request->query = 'string';
     $request->sort = 'string';
     $request->type = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T09:02:38.779Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-30T03:39:38.103Z');;
 
     $response = $sdk->crm->listCrmEvents($request);
 
@@ -1187,7 +1187,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-04T18:55:22.126Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-04T17:40:07.899Z');;
 
     $response = $sdk->crm->listCrmFiles($request);
 
@@ -1245,7 +1245,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-11T15:13:29.920Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T07:27:29.016Z');;
 
     $response = $sdk->crm->listCrmLeads($request);
 
@@ -1301,7 +1301,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-29T15:47:27.871Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-29T18:23:30.472Z');;
 
     $response = $sdk->crm->listCrmPipelines($request);
 
@@ -1358,7 +1358,7 @@ try {
     $request->crmCompany->address->postalCode = '53644';
     $request->crmCompany->address->region = 'string';
     $request->crmCompany->address->regionCode = 'string';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-19T16:28:56.295Z');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-19T16:53:30.758Z');
     $request->crmCompany->dealIds = [
         'string',
     ];
@@ -1382,7 +1382,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'Europe/Skopje';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-08T06:12:00.839Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-08T08:19:54.922Z');
     $request->crmCompany->websites = [
         'string',
     ];
@@ -1448,7 +1448,7 @@ try {
     $request->crmContact->companyIds = [
         'string',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-11T20:03:30.520Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-12T00:15:47.150Z');
     $request->crmContact->dealIds = [
         'string',
     ];
@@ -1462,7 +1462,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-28T14:54:45.741Z');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T22:10:52.030Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1513,8 +1513,8 @@ try {
         $request = new Operations\PatchCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 9874.05;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-09T08:48:03.715Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T07:03:46.302Z');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T12:57:05.527Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T17:40:39.112Z');
     $request->crmDeal->currency = 'Riel';
     $request->crmDeal->id = '<ID>';
     $request->crmDeal->lostReason = 'string';
@@ -1527,7 +1527,7 @@ try {
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-21T14:41:27.897Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-22T07:49:20.306Z');
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -1581,14 +1581,14 @@ try {
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Multi-layered well-modulated middleware';
     $request->crmEvent->call->duration = 8718.07;
-    $request->crmEvent->call->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-20T20:04:26.682Z');
+    $request->crmEvent->call->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-21T08:28:33.501Z');
     $request->crmEvent->companyIds = [
         'string',
     ];
     $request->crmEvent->contactIds = [
         'string',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-07T22:00:21.638Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-08T06:50:13.439Z');
     $request->crmEvent->dealIds = [
         'string',
     ];
@@ -1597,7 +1597,7 @@ try {
     $request->crmEvent->email->cc = [
         'string',
     ];
-    $request->crmEvent->email->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-27T22:24:14.342Z');
+    $request->crmEvent->email->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-27T20:19:13.205Z');
     $request->crmEvent->email->from = 'string';
     $request->crmEvent->email->subject = 'string';
     $request->crmEvent->email->to = [
@@ -1609,20 +1609,20 @@ try {
     ];
     $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Advanced modular attitude';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-10T20:03:27.454Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-23T14:52:55.729Z');
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-11T02:15:24.355Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-24T08:03:26.575Z');
     $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
-    $request->crmEvent->note->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-25T21:43:17.031Z');
+    $request->crmEvent->note->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-26T02:54:49.814Z');
     $request->crmEvent->note->description = 'Cross-platform bi-directional open architecture';
     $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
     $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Intuitive zero administration complexity';
-    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-27T16:02:13.626Z');
+    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T21:56:51.556Z');
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
     $request->crmEvent->type = Shared\CrmEventType::Call;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-23T05:51:18.046Z');
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-23T20:19:34.007Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1675,7 +1675,7 @@ try {
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-02T16:08:30.860Z');
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-02T20:49:30.505Z');
     $request->crmFile->dealId = 'string';
     $request->crmFile->description = 'Networked multimedia database';
     $request->crmFile->fileName = 'country.wav';
@@ -1686,7 +1686,7 @@ try {
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
     $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-07T04:39:27.375Z');
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-07T00:06:10.633Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -1749,7 +1749,7 @@ try {
     $request->crmLead->companyId = 'string';
     $request->crmLead->companyName = 'Altenwerth, Lebsack and Wintheiser';
     $request->crmLead->contactId = 'string';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-15T21:54:30.872Z');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-16T13:33:21.530Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
         new Shared\CrmEmail(),
@@ -1763,7 +1763,7 @@ try {
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-10-10T05:25:00.043Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-10T11:36:08.811Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -1814,14 +1814,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-26T17:19:01.949Z');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-26T14:31:39.156Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8620.92;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T12:55:27.421Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-03T22:57:09.090Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2216,7 +2216,7 @@ try {
     $request->crmCompany->address->postalCode = '27563';
     $request->crmCompany->address->region = 'string';
     $request->crmCompany->address->regionCode = 'string';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-18T22:28:27.597Z');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-19T10:10:37.376Z');
     $request->crmCompany->dealIds = [
         'string',
     ];
@@ -2240,7 +2240,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'Africa/Harare';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-13T00:13:39.786Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-13T13:49:01.082Z');
     $request->crmCompany->websites = [
         'string',
     ];
@@ -2306,7 +2306,7 @@ try {
     $request->crmContact->companyIds = [
         'string',
     ];
-    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-12T11:36:07.720Z');
+    $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-12T12:31:59.837Z');
     $request->crmContact->dealIds = [
         'string',
     ];
@@ -2320,7 +2320,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-02T04:38:24.473Z');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T17:59:32.331Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2371,8 +2371,8 @@ try {
         $request = new Operations\UpdateCrmDealRequest();
     $request->crmDeal = new Shared\CrmDeal();
     $request->crmDeal->amount = 854.3;
-    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-13T07:04:58.998Z');
-    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-20T16:49:31.989Z');
+    $request->crmDeal->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-13T15:21:09.134Z');
+    $request->crmDeal->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-20T23:55:13.334Z');
     $request->crmDeal->currency = 'Pound Sterling';
     $request->crmDeal->id = '<ID>';
     $request->crmDeal->lostReason = 'string';
@@ -2385,7 +2385,7 @@ try {
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-31T15:37:01.475Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-01T00:17:19.942Z');
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -2439,14 +2439,14 @@ try {
     $request->crmEvent->call = new Shared\PropertyCrmEventCall();
     $request->crmEvent->call->description = 'Intuitive incremental orchestration';
     $request->crmEvent->call->duration = 4665.81;
-    $request->crmEvent->call->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-01T00:40:18.553Z');
+    $request->crmEvent->call->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-01T05:59:54.461Z');
     $request->crmEvent->companyIds = [
         'string',
     ];
     $request->crmEvent->contactIds = [
         'string',
     ];
-    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-31T19:24:42.330Z');
+    $request->crmEvent->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-01T08:44:00.944Z');
     $request->crmEvent->dealIds = [
         'string',
     ];
@@ -2455,7 +2455,7 @@ try {
     $request->crmEvent->email->cc = [
         'string',
     ];
-    $request->crmEvent->email->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-26T09:24:21.940Z');
+    $request->crmEvent->email->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-26T03:56:06.837Z');
     $request->crmEvent->email->from = 'string';
     $request->crmEvent->email->subject = 'string';
     $request->crmEvent->email->to = [
@@ -2467,20 +2467,20 @@ try {
     ];
     $request->crmEvent->meeting = new Shared\PropertyCrmEventMeeting();
     $request->crmEvent->meeting->description = 'Right-sized user-facing moratorium';
-    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-14T23:23:37.626Z');
-    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-12T17:40:29.095Z');
+    $request->crmEvent->meeting->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-14T19:40:01.934Z');
+    $request->crmEvent->meeting->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-12T17:15:09.122Z');
     $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
-    $request->crmEvent->note->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-16T20:16:04.654Z');
+    $request->crmEvent->note->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-16T21:54:30.192Z');
     $request->crmEvent->note->description = 'Pre-emptive system-worthy open system';
     $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
     $request->crmEvent->task = new Shared\PropertyCrmEventTask();
     $request->crmEvent->task->description = 'Diverse clear-thinking success';
-    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-10T23:10:51.860Z');
+    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-10T18:42:32.729Z');
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::NotStarted;
     $request->crmEvent->type = Shared\CrmEventType::Task;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-12T06:51:37.177Z');
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-12T06:25:41.650Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2533,7 +2533,7 @@ try {
     $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-02-11T14:36:52.051Z');
+    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-11T15:31:35.167Z');
     $request->crmFile->dealId = 'string';
     $request->crmFile->description = 'Quality-focused mobile orchestration';
     $request->crmFile->fileName = 'circuit_extended.jpe';
@@ -2544,7 +2544,7 @@ try {
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
     $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-09-11T08:15:48.719Z');
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-11T13:48:58.626Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -2607,7 +2607,7 @@ try {
     $request->crmLead->companyId = 'string';
     $request->crmLead->companyName = 'Gibson - Cummings';
     $request->crmLead->contactId = 'string';
-    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-12T09:21:19.873Z');
+    $request->crmLead->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-12T08:55:32.549Z');
     $request->crmLead->creatorUserId = 'string';
     $request->crmLead->emails = [
         new Shared\CrmEmail(),
@@ -2621,7 +2621,7 @@ try {
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-13T22:33:13.952Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T10:08:49.472Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -2672,14 +2672,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
-    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-12-27T08:28:05.275Z');
+    $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-27T16:21:58.595Z');
     $request->crmPipeline->dealProbability = false;
     $request->crmPipeline->displayOrder = 8923.83;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-18T01:45:20.441Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-18T14:05:49.227Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

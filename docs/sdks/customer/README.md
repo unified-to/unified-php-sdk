@@ -49,7 +49,7 @@ try {
     $request->accountingCustomer->billingAddress->postalCode = '22232';
     $request->accountingCustomer->billingAddress->region = 'string';
     $request->accountingCustomer->billingAddress->regionCode = 'string';
-    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-22T19:16:48.798Z');
+    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-22T23:43:30.815Z');
     $request->accountingCustomer->currency = 'Dalasi';
     $request->accountingCustomer->emails = [
         new Shared\AccountingEmail(),
@@ -72,7 +72,7 @@ try {
     $request->accountingCustomer->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-06T21:49:52.773Z');
+    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-07T02:36:26.739Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->customer->createAccountingCustomer($request);
@@ -121,7 +121,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateTicketingCustomerRequest();
     $request->ticketingCustomer = new Shared\TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-19T07:03:19.095Z');
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-19T18:45:57.085Z');
     $request->ticketingCustomer->emails = [
         new Shared\TicketingEmail(),
     ];
@@ -134,7 +134,7 @@ try {
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T02:54:36.234Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-18T12:34:42.514Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->customer->createTicketingCustomer($request);
@@ -293,7 +293,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-08-23T13:14:33.970Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-23T18:23:01.069Z');;
 
     $response = $sdk->customer->listAccountingCustomers($request);
 
@@ -349,7 +349,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-06-05T16:20:32.808Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-05T19:45:16.674Z');;
 
     $response = $sdk->customer->listTicketingCustomers($request);
 
@@ -406,7 +406,7 @@ try {
     $request->accountingCustomer->billingAddress->postalCode = '50996-7347';
     $request->accountingCustomer->billingAddress->region = 'string';
     $request->accountingCustomer->billingAddress->regionCode = 'string';
-    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-27T01:00:12.169Z');
+    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-26T22:13:14.646Z');
     $request->accountingCustomer->currency = 'Kina';
     $request->accountingCustomer->emails = [
         new Shared\AccountingEmail(),
@@ -429,7 +429,7 @@ try {
     $request->accountingCustomer->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-14T15:57:30.865Z');
+    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-14T18:13:50.455Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -479,7 +479,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchTicketingCustomerRequest();
     $request->ticketingCustomer = new Shared\TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-30T19:19:15.782Z');
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-30T15:17:02.043Z');
     $request->ticketingCustomer->emails = [
         new Shared\TicketingEmail(),
     ];
@@ -492,7 +492,7 @@ try {
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T00:30:27.085Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-13T20:06:09.027Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -647,7 +647,7 @@ try {
     $request->accountingCustomer->billingAddress->postalCode = '77223-4340';
     $request->accountingCustomer->billingAddress->region = 'string';
     $request->accountingCustomer->billingAddress->regionCode = 'string';
-    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-08T08:34:01.295Z');
+    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-08T03:21:30.283Z');
     $request->accountingCustomer->currency = 'Guinea Franc';
     $request->accountingCustomer->emails = [
         new Shared\AccountingEmail(),
@@ -670,7 +670,7 @@ try {
     $request->accountingCustomer->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-26T10:11:07.824Z');
+    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-26T22:42:35.557Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -720,7 +720,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateTicketingCustomerRequest();
     $request->ticketingCustomer = new Shared\TicketingCustomer();
-    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T13:29:08.944Z');
+    $request->ticketingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-13T11:44:40.953Z');
     $request->ticketingCustomer->emails = [
         new Shared\TicketingEmail(),
     ];
@@ -733,7 +733,7 @@ try {
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-05T21:33:56.024Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-05T14:57:57.883Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

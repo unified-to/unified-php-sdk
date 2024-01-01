@@ -44,7 +44,7 @@ try {
     $request->crmCompany->address->postalCode = '39571';
     $request->crmCompany->address->region = 'string';
     $request->crmCompany->address->regionCode = 'string';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-02T17:21:10.729Z');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-03T10:04:12.712Z');
     $request->crmCompany->dealIds = [
         'string',
     ];
@@ -68,7 +68,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'Europe/Bucharest';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-03T05:30:56.861Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-03T19:32:53.625Z');
     $request->crmCompany->websites = [
         'string',
     ];
@@ -181,7 +181,7 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-02T07:12:37.628Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');;
 
     $response = $sdk->company->listCrmCompanies($request);
 
@@ -287,7 +287,7 @@ try {
     $request->crmCompany->address->postalCode = '53644';
     $request->crmCompany->address->region = 'string';
     $request->crmCompany->address->regionCode = 'string';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-19T16:28:56.295Z');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-19T16:53:30.758Z');
     $request->crmCompany->dealIds = [
         'string',
     ];
@@ -311,7 +311,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'Europe/Skopje';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-08T06:12:00.839Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-08T08:19:54.922Z');
     $request->crmCompany->websites = [
         'string',
     ];
@@ -421,7 +421,7 @@ try {
     $request->crmCompany->address->postalCode = '27563';
     $request->crmCompany->address->region = 'string';
     $request->crmCompany->address->regionCode = 'string';
-    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-18T22:28:27.597Z');
+    $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-19T10:10:37.376Z');
     $request->crmCompany->dealIds = [
         'string',
     ];
@@ -445,7 +445,7 @@ try {
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'Africa/Harare';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-13T00:13:39.786Z');
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-13T13:49:01.082Z');
     $request->crmCompany->websites = [
         'string',
     ];
