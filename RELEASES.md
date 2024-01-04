@@ -507,3 +507,13 @@ Based on:
 - [php v0.10.17] .
 ### Releases
 - [Composer v0.10.17] https://packagist.org/packages/unified/unified-to#v0.10.17 - .
+
+## 2024-01-04 00:19:18
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.129.1 (2.223.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.10.18] .
+### Releases
+- [Composer v0.10.18] https://packagist.org/packages/unified/unified-to#v0.10.18 - .

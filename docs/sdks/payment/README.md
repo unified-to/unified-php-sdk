@@ -38,9 +38,7 @@ try {
     $request->accountingPayment->currency = 'Lari';
     $request->accountingPayment->customerId = 'string';
     $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceIds = [
-        'string',
-    ];
+    $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
     $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
@@ -208,9 +206,7 @@ try {
     $request->accountingPayment->currency = 'Boliviano boliviano';
     $request->accountingPayment->customerId = 'string';
     $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceIds = [
-        'string',
-    ];
+    $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
     $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
@@ -318,9 +314,7 @@ try {
     $request->accountingPayment->currency = 'Sudanese Pound';
     $request->accountingPayment->customerId = 'string';
     $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceIds = [
-        'string',
-    ];
+    $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
     $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();

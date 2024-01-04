@@ -31,15 +31,10 @@ class AccountingPayment
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
-    /**
-     * $invoiceIds
-     * 
-     * @var ?array<string> $invoiceIds
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('invoice_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+	#[\JMS\Serializer\Annotation\SerializedName('invoice_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $invoiceIds = null;
+    public ?string $invoiceId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('notes')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -77,7 +72,7 @@ class AccountingPayment
 		$this->currency = null;
 		$this->customerId = null;
 		$this->id = null;
-		$this->invoiceIds = null;
+		$this->invoiceId = null;
 		$this->notes = null;
 		$this->paymentMethod = null;
 		$this->raw = null;
