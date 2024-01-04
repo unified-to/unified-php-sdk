@@ -3,57 +3,9 @@
 
 ### Available Operations
 
-* [getUnifiedIntegration](#getunifiedintegration) - Retrieve an integration
 * [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Create connection indirectly
 * [listUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
-
-## getUnifiedIntegration
-
-Retrieve an integration
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\GetUnifiedIntegrationRequest();
-    $request->integrationType = 'string';;
-
-    $response = $sdk->integration->getUnifiedIntegration($request);
-
-    if ($response->integration !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest](../../Models/Operations/GetUnifiedIntegrationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse](../../Models/Operations/GetUnifiedIntegrationResponse.md)**
-
 
 ## getUnifiedIntegrationAuth
 
@@ -203,6 +155,7 @@ try {
     $request->order = 'string';
     $request->sort = 'string';
     $request->summary = false;
+    $request->type = 'string';
     $request->updatedGte = 'string';;
 
     $response = $sdk->integration->listUnifiedIntegrations($request);

@@ -22,44 +22,6 @@ class Integration
 	}
 	
     /**
-     * Retrieve an integration
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
-     */
-	public function getUnifiedIntegration(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse
-    {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->integration = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Integration', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Create connection indirectly
      * 
      * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.

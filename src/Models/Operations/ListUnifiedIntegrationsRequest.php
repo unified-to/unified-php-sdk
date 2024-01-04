@@ -45,6 +45,14 @@ class ListUnifiedIntegrationsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=summary')]
     public ?bool $summary = null;
     
+    /**
+     * Filter the results for only this integration type
+     * 
+     * @var ?string $type
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+    
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
     public ?string $updatedGte = null;
     
@@ -58,6 +66,7 @@ class ListUnifiedIntegrationsRequest
 		$this->order = null;
 		$this->sort = null;
 		$this->summary = null;
+		$this->type = null;
 		$this->updatedGte = null;
 	}
 }
