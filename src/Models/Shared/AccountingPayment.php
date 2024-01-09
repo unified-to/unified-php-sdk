@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingPayment
 {
+	#[\JMS\Serializer\Annotation\SerializedName('account_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $accountId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -68,6 +73,7 @@ class AccountingPayment
     
 	public function __construct()
 	{
+		$this->accountId = null;
 		$this->createdAt = null;
 		$this->currency = null;
 		$this->customerId = null;
