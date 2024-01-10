@@ -144,6 +144,43 @@ class Webhook
     }
 	
     /**
+     * Trigger webhook
+     * 
+     * @param \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
+     */
+	public function patchUnifiedWebhookTrigger(
+        ?\Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $response->res = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Remove webhook subscription
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request
@@ -167,6 +204,43 @@ class Webhook
         $statusCode = $httpResponse->getStatusCode();
 
         $response = new \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $response->res = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Trigger webhook
+     * 
+     * @param \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
+     */
+	public function updateUnifiedWebhookTrigger(
+        ?\Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

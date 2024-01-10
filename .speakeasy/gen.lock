@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 01195f78bbf8ee1be66b14db611dedcf
+  docChecksum: 950b786dbc2a674691ac70d56758142c
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.230.1
-  releaseVersion: 0.10.20
-  configChecksum: d6012e8d73caa59edb8764f11ba9bae5
+  generationVersion: 2.230.3
+  releaseVersion: 0.10.21
+  configChecksum: 87554fc1a3a886775e3ac9f9b17dea3d
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -482,12 +482,16 @@ generatedFiles:
   - src/Models/Operations/ListUnifiedWebhooksResponse.php
   - src/Models/Operations/PatchUnifiedConnectionRequest.php
   - src/Models/Operations/PatchUnifiedConnectionResponse.php
+  - src/Models/Operations/PatchUnifiedWebhookTriggerRequest.php
+  - src/Models/Operations/PatchUnifiedWebhookTriggerResponse.php
   - src/Models/Operations/RemoveUnifiedConnectionRequest.php
   - src/Models/Operations/RemoveUnifiedConnectionResponse.php
   - src/Models/Operations/RemoveUnifiedWebhookRequest.php
   - src/Models/Operations/RemoveUnifiedWebhookResponse.php
   - src/Models/Operations/UpdateUnifiedConnectionRequest.php
   - src/Models/Operations/UpdateUnifiedConnectionResponse.php
+  - src/Models/Operations/UpdateUnifiedWebhookTriggerRequest.php
+  - src/Models/Operations/UpdateUnifiedWebhookTriggerResponse.php
   - src/Models/Operations/GetUnifiedIntegrationLoginRequest.php
   - src/Models/Operations/GetUnifiedIntegrationLoginResponse.php
   - src/Models/Shared/Status.php
@@ -1054,12 +1058,16 @@ generatedFiles:
   - docs/Models/Operations/ListUnifiedWebhooksResponse.md
   - docs/Models/Operations/PatchUnifiedConnectionRequest.md
   - docs/Models/Operations/PatchUnifiedConnectionResponse.md
+  - docs/Models/Operations/PatchUnifiedWebhookTriggerRequest.md
+  - docs/Models/Operations/PatchUnifiedWebhookTriggerResponse.md
   - docs/Models/Operations/RemoveUnifiedConnectionRequest.md
   - docs/Models/Operations/RemoveUnifiedConnectionResponse.md
   - docs/Models/Operations/RemoveUnifiedWebhookRequest.md
   - docs/Models/Operations/RemoveUnifiedWebhookResponse.md
   - docs/Models/Operations/UpdateUnifiedConnectionRequest.md
   - docs/Models/Operations/UpdateUnifiedConnectionResponse.md
+  - docs/Models/Operations/UpdateUnifiedWebhookTriggerRequest.md
+  - docs/Models/Operations/UpdateUnifiedWebhookTriggerResponse.md
   - docs/Models/Operations/GetUnifiedIntegrationLoginRequest.md
   - docs/Models/Operations/GetUnifiedIntegrationLoginResponse.md
   - docs/Models/Shared/Status.md
