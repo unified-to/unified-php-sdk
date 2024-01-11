@@ -101,6 +101,11 @@ class AccountingInvoice
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $refundedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('status')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingInvoiceStatus>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?AccountingInvoiceStatus $status = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -135,6 +140,7 @@ class AccountingInvoice
 		$this->refundAmount = null;
 		$this->refundReason = null;
 		$this->refundedAt = null;
+		$this->status = null;
 		$this->taxAmount = null;
 		$this->totalAmount = null;
 		$this->updatedAt = null;

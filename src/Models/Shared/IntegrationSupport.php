@@ -16,11 +16,6 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyIntegrationSupportInboundFields $inboundFields = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('list_agent_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listAgentId = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('list_application_id')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -106,6 +101,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listUpdatedGte = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('list_user_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listUserId = null;
+    
     /**
      * $methods
      * 
@@ -164,7 +164,6 @@ class IntegrationSupport
 	public function __construct()
 	{
 		$this->inboundFields = null;
-		$this->listAgentId = null;
 		$this->listApplicationId = null;
 		$this->listCandidateId = null;
 		$this->listCompanyId = null;
@@ -182,6 +181,7 @@ class IntegrationSupport
 		$this->listSortByName = null;
 		$this->listSortByUpdatedAt = null;
 		$this->listUpdatedGte = null;
+		$this->listUserId = null;
 		$this->methods = null;
 		$this->outboundFields = null;
 		$this->searchDomain = null;

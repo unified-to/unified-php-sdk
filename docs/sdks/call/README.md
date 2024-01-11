@@ -28,7 +28,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUcCallsRequest();
-    $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->contactId = 'string';
     $request->fields = [
@@ -39,7 +38,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-24T23:18:21.548Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-24T23:18:21.548Z');
+    $request->userId = 'string';;
 
     $response = $sdk->call->listUcCalls($request);
 

@@ -50,6 +50,7 @@ try {
         'string',
     ];
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T19:43:32.331Z');
+    $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';;
 
@@ -160,7 +161,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T01:39:26.472Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T01:39:26.472Z');
+    $request->userId = 'string';;
 
     $response = $sdk->deal->listCrmDeals($request);
 
@@ -224,6 +226,7 @@ try {
         'string',
     ];
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-22T07:49:20.306Z');
+    $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -338,6 +341,7 @@ try {
         'string',
     ];
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-01T00:17:19.942Z');
+    $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

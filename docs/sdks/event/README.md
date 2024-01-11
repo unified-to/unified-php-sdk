@@ -79,6 +79,7 @@ try {
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
     $request->crmEvent->type = Shared\CrmEventType::Note;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-09T05:29:10.624Z');
+    $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';;
 
     $response = $sdk->event->createCrmEvent($request);
@@ -190,7 +191,8 @@ try {
     $request->query = 'string';
     $request->sort = 'string';
     $request->type = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-30T03:39:38.103Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-30T03:39:38.103Z');
+    $request->userId = 'string';;
 
     $response = $sdk->event->listCrmEvents($request);
 
@@ -283,6 +285,7 @@ try {
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
     $request->crmEvent->type = Shared\CrmEventType::Call;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-23T20:19:34.007Z');
+    $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -425,6 +428,7 @@ try {
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::NotStarted;
     $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-12T06:25:41.650Z');
+    $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

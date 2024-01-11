@@ -108,7 +108,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
-    $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-20T13:29:50.877Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Distributed 4th generation portal';
@@ -116,6 +115,7 @@ try {
     $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
+    $request->ticketingNote->userId = 'string';
     $request->connectionId = 'string';;
 
     $response = $sdk->ticketing->createTicketingNote($request);
@@ -180,6 +180,7 @@ try {
         'string',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-06T20:46:58.372Z');
+    $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';;
 
     $response = $sdk->ticketing->createTicketingTicket($request);
@@ -493,7 +494,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListTicketingTicketsRequest();
-    $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->customerId = 'string';
     $request->fields = [
@@ -504,7 +504,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-28T23:31:15.090Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-28T23:31:15.090Z');
+    $request->userId = 'string';;
 
     $response = $sdk->ticketing->listTicketingTickets($request);
 
@@ -615,7 +616,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
-    $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-04T20:58:12.449Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Right-sized national productivity';
@@ -623,6 +623,7 @@ try {
     $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
+    $request->ticketingNote->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -688,6 +689,7 @@ try {
         'string',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-06T12:10:37.068Z');
+    $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -944,7 +946,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
-    $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-15T01:15:48.418Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Versatile value-added utilisation';
@@ -952,6 +953,7 @@ try {
     $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
+    $request->ticketingNote->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1017,6 +1019,7 @@ try {
         'string',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-17T01:38:48.188Z');
+    $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

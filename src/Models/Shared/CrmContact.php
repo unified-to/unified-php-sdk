@@ -102,6 +102,11 @@ class CrmContact
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
 		$this->address = null;
@@ -116,5 +121,6 @@ class CrmContact
 		$this->telephones = null;
 		$this->title = null;
 		$this->updatedAt = null;
+		$this->userId = null;
 	}
 }

@@ -34,7 +34,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
-    $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-20T13:29:50.877Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Distributed 4th generation portal';
@@ -42,6 +41,7 @@ try {
     $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
+    $request->ticketingNote->userId = 'string';
     $request->connectionId = 'string';;
 
     $response = $sdk->note->createTicketingNote($request);
@@ -198,7 +198,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
-    $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-04T20:58:12.449Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Right-sized national productivity';
@@ -206,6 +205,7 @@ try {
     $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
+    $request->ticketingNote->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -303,7 +303,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateTicketingNoteRequest();
     $request->ticketingNote = new Shared\TicketingNote();
-    $request->ticketingNote->agentId = 'string';
     $request->ticketingNote->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-15T01:15:48.418Z');
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Versatile value-added utilisation';
@@ -311,6 +310,7 @@ try {
     $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
+    $request->ticketingNote->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

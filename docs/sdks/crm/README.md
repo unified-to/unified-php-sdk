@@ -104,6 +104,7 @@ try {
     ];
     $request->crmCompany->timezone = 'Europe/Bucharest';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-03T19:32:53.625Z');
+    $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',
     ];
@@ -183,6 +184,7 @@ try {
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-21T17:10:02.454Z');
+    $request->crmContact->userId = 'string';
     $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmContact($request);
@@ -247,6 +249,7 @@ try {
         'string',
     ];
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T19:43:32.331Z');
+    $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';;
 
@@ -341,6 +344,7 @@ try {
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
     $request->crmEvent->type = Shared\CrmEventType::Note;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-09T05:29:10.624Z');
+    $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmEvent($request);
@@ -952,7 +956,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');
+    $request->userId = 'string';;
 
     $response = $sdk->crm->listCrmCompanies($request);
 
@@ -1010,7 +1015,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:36:59.401Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:36:59.401Z');
+    $request->userId = 'string';;
 
     $response = $sdk->crm->listCrmContacts($request);
 
@@ -1068,7 +1074,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T01:39:26.472Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T01:39:26.472Z');
+    $request->userId = 'string';;
 
     $response = $sdk->crm->listCrmDeals($request);
 
@@ -1128,7 +1135,8 @@ try {
     $request->query = 'string';
     $request->sort = 'string';
     $request->type = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-30T03:39:38.103Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-30T03:39:38.103Z');
+    $request->userId = 'string';;
 
     $response = $sdk->crm->listCrmEvents($request);
 
@@ -1245,7 +1253,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T07:27:29.016Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T07:27:29.016Z');
+    $request->userId = 'string';;
 
     $response = $sdk->crm->listCrmLeads($request);
 
@@ -1383,6 +1392,7 @@ try {
     ];
     $request->crmCompany->timezone = 'Europe/Skopje';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-08T08:19:54.922Z');
+    $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',
     ];
@@ -1463,6 +1473,7 @@ try {
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T22:10:52.030Z');
+    $request->crmContact->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1528,6 +1539,7 @@ try {
         'string',
     ];
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-22T07:49:20.306Z');
+    $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -1623,6 +1635,7 @@ try {
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
     $request->crmEvent->type = Shared\CrmEventType::Call;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-23T20:19:34.007Z');
+    $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2241,6 +2254,7 @@ try {
     ];
     $request->crmCompany->timezone = 'Africa/Harare';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-13T13:49:01.082Z');
+    $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',
     ];
@@ -2321,6 +2335,7 @@ try {
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T17:59:32.331Z');
+    $request->crmContact->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2386,6 +2401,7 @@ try {
         'string',
     ];
     $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-01T00:17:19.942Z');
+    $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -2481,6 +2497,7 @@ try {
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::NotStarted;
     $request->crmEvent->type = Shared\CrmEventType::Task;
     $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-12T06:25:41.650Z');
+    $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

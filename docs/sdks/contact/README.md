@@ -68,6 +68,7 @@ try {
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-21T17:10:02.454Z');
+    $request->crmContact->userId = 'string';
     $request->connectionId = 'string';;
 
     $response = $sdk->contact->createCrmContact($request);
@@ -289,7 +290,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:36:59.401Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:36:59.401Z');
+    $request->userId = 'string';;
 
     $response = $sdk->contact->listCrmContacts($request);
 
@@ -336,7 +338,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUcContactsRequest();
-    $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->fields = [
         'string',
@@ -346,7 +347,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-26T05:35:01.805Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-26T05:35:01.805Z');
+    $request->userId = 'string';;
 
     $response = $sdk->contact->listUcContacts($request);
 
@@ -422,6 +424,7 @@ try {
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T22:10:52.030Z');
+    $request->crmContact->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -657,6 +660,7 @@ try {
     ];
     $request->crmContact->title = 'string';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T17:59:32.331Z');
+    $request->crmContact->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

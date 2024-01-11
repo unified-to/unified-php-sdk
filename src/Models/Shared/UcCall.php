@@ -11,10 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 class UcCall
 {
-	#[\JMS\Serializer\Annotation\SerializedName('agency_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $agencyId;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('contact_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -65,9 +61,13 @@ class UcCall
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
-		$this->agencyId = "";
 		$this->contactId = null;
 		$this->createdAt = null;
 		$this->endAt = null;
@@ -76,5 +76,6 @@ class UcCall
 		$this->startAt = null;
 		$this->telephone = null;
 		$this->updatedAt = null;
+		$this->userId = null;
 	}
 }

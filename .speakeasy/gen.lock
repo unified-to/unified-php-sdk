@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 950b786dbc2a674691ac70d56758142c
+  docChecksum: 354896ac4fb0afd646aa3e018c90dfd9
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.230.3
-  releaseVersion: 0.10.21
-  configChecksum: 87554fc1a3a886775e3ac9f9b17dea3d
+  releaseVersion: 0.10.22
+  configChecksum: 8876a0a914f6a5455217bec574e169de
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -507,6 +507,7 @@ generatedFiles:
   - src/Models/Shared/AccountingEmailType.php
   - src/Models/Shared/AccountingEmail.php
   - src/Models/Shared/PropertyAccountingCustomerBillingAddress.php
+  - src/Models/Shared/AccountingInvoiceStatus.php
   - src/Models/Shared/AccountingInvoice.php
   - src/Models/Shared/PropertyAccountingInvoiceRaw.php
   - src/Models/Shared/AccountingLineitem.php
@@ -1083,6 +1084,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingEmailType.md
   - docs/Models/Shared/AccountingEmail.md
   - docs/Models/Shared/PropertyAccountingCustomerBillingAddress.md
+  - docs/Models/Shared/AccountingInvoiceStatus.md
   - docs/Models/Shared/AccountingInvoice.md
   - docs/Models/Shared/PropertyAccountingInvoiceRaw.md
   - docs/Models/Shared/AccountingLineitem.md

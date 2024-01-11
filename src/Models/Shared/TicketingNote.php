@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 class TicketingNote
 {
-	#[\JMS\Serializer\Annotation\SerializedName('agent_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $agentId = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -51,9 +46,13 @@ class TicketingNote
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
-		$this->agentId = null;
 		$this->createdAt = null;
 		$this->customerId = null;
 		$this->description = null;
@@ -61,5 +60,6 @@ class TicketingNote
 		$this->raw = null;
 		$this->ticketId = null;
 		$this->updatedAt = null;
+		$this->userId = null;
 	}
 }

@@ -11,9 +11,6 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListUcContactsRequest
 {
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=agent_id')]
-    public ?string $agentId = null;
-    
     /**
      * ID of the connection
      * 
@@ -58,9 +55,11 @@ class ListUcContactsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
     
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
-		$this->agentId = null;
 		$this->connectionId = "";
 		$this->fields = null;
 		$this->limit = null;
@@ -69,5 +68,6 @@ class ListUcContactsRequest
 		$this->query = null;
 		$this->sort = null;
 		$this->updatedGte = null;
+		$this->userId = null;
 	}
 }

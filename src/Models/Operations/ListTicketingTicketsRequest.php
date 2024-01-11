@@ -12,14 +12,6 @@ use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListTicketingTicketsRequest
 {
     /**
-     * The agent ID to filter results
-     * 
-     * @var ?string $agentId
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=agent_id')]
-    public ?string $agentId = null;
-    
-    /**
      * ID of the connection
      * 
      * @var string $connectionId
@@ -71,9 +63,16 @@ class ListTicketingTicketsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
     
+    /**
+     * The user/agent ID to filter results
+     * 
+     * @var ?string $userId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
-		$this->agentId = null;
 		$this->connectionId = "";
 		$this->customerId = null;
 		$this->fields = null;
@@ -83,5 +82,6 @@ class ListTicketingTicketsRequest
 		$this->query = null;
 		$this->sort = null;
 		$this->updatedGte = null;
+		$this->userId = null;
 	}
 }

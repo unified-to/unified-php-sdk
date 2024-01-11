@@ -137,6 +137,11 @@ class CrmEvent
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
 		$this->call = null;
@@ -153,5 +158,6 @@ class CrmEvent
 		$this->task = null;
 		$this->type = null;
 		$this->updatedAt = null;
+		$this->userId = null;
 	}
 }

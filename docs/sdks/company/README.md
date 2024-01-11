@@ -69,6 +69,7 @@ try {
     ];
     $request->crmCompany->timezone = 'Europe/Bucharest';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-03T19:32:53.625Z');
+    $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',
     ];
@@ -181,7 +182,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');
+    $request->userId = 'string';;
 
     $response = $sdk->company->listCrmCompanies($request);
 
@@ -312,6 +314,7 @@ try {
     ];
     $request->crmCompany->timezone = 'Europe/Skopje';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-08T08:19:54.922Z');
+    $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',
     ];
@@ -446,6 +449,7 @@ try {
     ];
     $request->crmCompany->timezone = 'Africa/Harare';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-13T13:49:01.082Z');
+    $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',
     ];

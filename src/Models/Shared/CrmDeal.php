@@ -97,6 +97,11 @@ class CrmDeal
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $userId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('won_reason')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -118,6 +123,7 @@ class CrmDeal
 		$this->stage = null;
 		$this->tags = null;
 		$this->updatedAt = null;
+		$this->userId = null;
 		$this->wonReason = null;
 	}
 }

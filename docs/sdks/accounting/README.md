@@ -232,9 +232,10 @@ try {
     $request->accountingInvoice->refundAmount = 6572.32;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-10T18:36:49.807Z');
-    $request->accountingInvoice->taxAmount = 1578.89;
-    $request->accountingInvoice->totalAmount = 5503.49;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-02T02:10:22.972Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
+    $request->accountingInvoice->taxAmount = 5503.49;
+    $request->accountingInvoice->totalAmount = 8057.4;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-23T07:04:07.074Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->accounting->createAccountingInvoice($request);
@@ -1542,9 +1543,10 @@ try {
     $request->accountingInvoice->refundAmount = 1152.38;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-23T14:30:18.013Z');
-    $request->accountingInvoice->taxAmount = 6443.77;
-    $request->accountingInvoice->totalAmount = 2117.25;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T21:20:47.449Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Voided;
+    $request->accountingInvoice->taxAmount = 2117.25;
+    $request->accountingInvoice->totalAmount = 3028.19;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T22:52:23.132Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2334,9 +2336,10 @@ try {
     $request->accountingInvoice->refundAmount = 2842.49;
     $request->accountingInvoice->refundReason = 'string';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-05T15:45:06.127Z');
-    $request->accountingInvoice->taxAmount = 3314.72;
-    $request->accountingInvoice->totalAmount = 7535.06;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-25T17:14:49.861Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
+    $request->accountingInvoice->taxAmount = 7535.06;
+    $request->accountingInvoice->totalAmount = 7716.41;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-24T03:16:51.155Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

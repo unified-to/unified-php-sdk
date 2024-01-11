@@ -50,6 +50,7 @@ try {
         'string',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-06T20:46:58.372Z');
+    $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';;
 
     $response = $sdk->ticket->createTicketingTicket($request);
@@ -148,7 +149,6 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListTicketingTicketsRequest();
-    $request->agentId = 'string';
     $request->connectionId = 'string';
     $request->customerId = 'string';
     $request->fields = [
@@ -159,7 +159,8 @@ try {
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-28T23:31:15.090Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-28T23:31:15.090Z');
+    $request->userId = 'string';;
 
     $response = $sdk->ticket->listTicketingTickets($request);
 
@@ -223,6 +224,7 @@ try {
         'string',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-06T12:10:37.068Z');
+    $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -336,6 +338,7 @@ try {
         'string',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-17T01:38:48.188Z');
+    $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

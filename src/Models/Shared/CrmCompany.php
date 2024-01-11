@@ -127,6 +127,11 @@ class CrmCompany
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $userId = null;
+    
     /**
      * $websites
      * 
@@ -155,6 +160,7 @@ class CrmCompany
 		$this->telephones = null;
 		$this->timezone = null;
 		$this->updatedAt = null;
+		$this->userId = null;
 		$this->websites = null;
 	}
 }
