@@ -17,6 +17,16 @@ namespace Unified\Unified_to\Models\Shared;
  */
 class PropertyCrmEventEmail
 {
+    /**
+     * $attachmentFileIds
+     * 
+     * @var ?array<string> $attachmentFileIds
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('attachment_file_ids')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $attachmentFileIds = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('body')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -59,6 +69,7 @@ class PropertyCrmEventEmail
     
 	public function __construct()
 	{
+		$this->attachmentFileIds = null;
 		$this->body = null;
 		$this->cc = null;
 		$this->createdAt = null;

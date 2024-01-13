@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmFile
 {
-	#[\JMS\Serializer\Annotation\SerializedName('activity_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $activityId = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('company_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -41,25 +36,15 @@ class CrmFile
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('file_name')]
+	#[\JMS\Serializer\Annotation\SerializedName('download_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $fileName = null;
+    public ?string $downloadUrl = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('file_size')]
-    #[\JMS\Serializer\Annotation\Type('float')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?float $fileSize = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('file_type')]
+	#[\JMS\Serializer\Annotation\SerializedName('event_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $fileType = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('file_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $fileUrl = null;
+    public ?string $eventId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -76,10 +61,25 @@ class CrmFile
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $leadId = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('mime_type')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $mimeType = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('name')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $name = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmFileRaw')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmFileRaw $raw = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('size')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $size = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
@@ -93,20 +93,20 @@ class CrmFile
     
 	public function __construct()
 	{
-		$this->activityId = null;
 		$this->companyId = null;
 		$this->contactId = null;
 		$this->createdAt = null;
 		$this->dealId = null;
 		$this->description = null;
-		$this->fileName = null;
-		$this->fileSize = null;
-		$this->fileType = null;
-		$this->fileUrl = null;
+		$this->downloadUrl = null;
+		$this->eventId = null;
 		$this->id = null;
 		$this->isActive = null;
 		$this->leadId = null;
+		$this->mimeType = null;
+		$this->name = null;
 		$this->raw = null;
+		$this->size = null;
 		$this->updatedAt = null;
 		$this->userId = null;
 	}

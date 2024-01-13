@@ -314,6 +314,9 @@ try {
         'string',
     ];
     $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
+    $request->crmEvent->email->attachmentFileIds = [
+        'string',
+    ];
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -393,21 +396,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateCrmFileRequest();
     $request->crmFile = new Shared\CrmFile();
-    $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
     $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-23T14:06:46.596Z');
     $request->crmFile->dealId = 'string';
     $request->crmFile->description = 'Multi-lateral background database';
-    $request->crmFile->fileName = 'the.mp4v';
-    $request->crmFile->fileSize = 3460.69;
-    $request->crmFile->fileType = 'text';
-    $request->crmFile->fileUrl = 'string';
+    $request->crmFile->downloadUrl = 'string';
+    $request->crmFile->eventId = 'string';
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
+    $request->crmFile->mimeType = 'string';
+    $request->crmFile->name = 'string';
     $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-03T23:09:04.663Z');
+    $request->crmFile->size = 2318.83;
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-27T09:12:07.889Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -1605,6 +1608,9 @@ try {
         'string',
     ];
     $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
+    $request->crmEvent->email->attachmentFileIds = [
+        'string',
+    ];
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -1685,21 +1691,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchCrmFileRequest();
     $request->crmFile = new Shared\CrmFile();
-    $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
     $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-02T20:49:30.505Z');
     $request->crmFile->dealId = 'string';
     $request->crmFile->description = 'Networked multimedia database';
-    $request->crmFile->fileName = 'country.wav';
-    $request->crmFile->fileSize = 7551.13;
-    $request->crmFile->fileType = 'image';
-    $request->crmFile->fileUrl = 'string';
+    $request->crmFile->downloadUrl = 'string';
+    $request->crmFile->eventId = 'string';
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
+    $request->crmFile->mimeType = 'string';
+    $request->crmFile->name = 'string';
     $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-07T00:06:10.633Z');
+    $request->crmFile->size = 1185.84;
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-10T22:21:44.295Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -2467,6 +2473,9 @@ try {
         'string',
     ];
     $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
+    $request->crmEvent->email->attachmentFileIds = [
+        'string',
+    ];
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -2547,21 +2556,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateCrmFileRequest();
     $request->crmFile = new Shared\CrmFile();
-    $request->crmFile->activityId = 'string';
     $request->crmFile->companyId = 'string';
     $request->crmFile->contactId = 'string';
     $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-11T15:31:35.167Z');
     $request->crmFile->dealId = 'string';
     $request->crmFile->description = 'Quality-focused mobile orchestration';
-    $request->crmFile->fileName = 'circuit_extended.jpe';
-    $request->crmFile->fileSize = 2826.44;
-    $request->crmFile->fileType = 'text';
-    $request->crmFile->fileUrl = 'string';
+    $request->crmFile->downloadUrl = 'string';
+    $request->crmFile->eventId = 'string';
     $request->crmFile->id = '<ID>';
     $request->crmFile->isActive = false;
     $request->crmFile->leadId = 'string';
+    $request->crmFile->mimeType = 'string';
+    $request->crmFile->name = 'string';
     $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-11T13:48:58.626Z');
+    $request->crmFile->size = 5501.47;
+    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T13:19:41.584Z');
     $request->crmFile->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

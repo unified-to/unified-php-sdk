@@ -49,6 +49,9 @@ try {
         'string',
     ];
     $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
+    $request->crmEvent->email->attachmentFileIds = [
+        'string',
+    ];
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -255,6 +258,9 @@ try {
         'string',
     ];
     $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
+    $request->crmEvent->email->attachmentFileIds = [
+        'string',
+    ];
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
@@ -398,6 +404,9 @@ try {
         'string',
     ];
     $request->crmEvent->email = new Shared\PropertyCrmEventEmail();
+    $request->crmEvent->email->attachmentFileIds = [
+        'string',
+    ];
     $request->crmEvent->email->body = 'string';
     $request->crmEvent->email->cc = [
         'string',
