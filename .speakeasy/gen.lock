@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 29f95fd1d0aeeb2782c0567274e0a0c3
+  docChecksum: fcf38ba1245f7399c1338dc1ef8df2e7
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.231.0
-  releaseVersion: 0.10.23
-  configChecksum: a242c79b6bcffb7f82948843dac70f1c
+  generationVersion: 2.234.3
+  releaseVersion: 0.10.24
+  configChecksum: de18c07aa8db05b342c2772899fe7390
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk

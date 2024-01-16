@@ -17,11 +17,6 @@ namespace Unified\Unified_to\Models\Shared;
  */
 class PropertyCrmEventNote
 {
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?\DateTime $createdAt = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -29,7 +24,6 @@ class PropertyCrmEventNote
     
 	public function __construct()
 	{
-		$this->createdAt = null;
 		$this->description = null;
 	}
 }
