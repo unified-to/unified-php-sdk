@@ -30,7 +30,6 @@ enum ObjectType: string
     case CrmContact = 'crm_contact';
     case CrmDeal = 'crm_deal';
     case CrmEvent = 'crm_event';
-    case CrmFile = 'crm_file';
     case CrmLead = 'crm_lead';
     case CrmPipeline = 'crm_pipeline';
     case HrisEmployee = 'hris_employee';

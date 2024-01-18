@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: fcf38ba1245f7399c1338dc1ef8df2e7
+  docChecksum: ede9055e4403162b0dc1469530be3da9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.234.3
-  releaseVersion: 0.10.24
-  configChecksum: de18c07aa8db05b342c2772899fe7390
+  generationVersion: 2.235.3
+  releaseVersion: 0.10.25
+  configChecksum: 5e6fa8b9abb82f1eb41ed71ddab9b64f
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -40,7 +40,6 @@ generatedFiles:
   - src/Contact.php
   - src/Deal.php
   - src/Event.php
-  - src/File.php
   - src/Lead.php
   - src/Pipeline.php
   - src/Enrich.php
@@ -53,6 +52,7 @@ generatedFiles:
   - src/Member.php
   - src/Passthrough.php
   - src/Storage.php
+  - src/File.php
   - src/Ticketing.php
   - src/Note.php
   - src/Ticket.php
@@ -267,8 +267,6 @@ generatedFiles:
   - src/Models/Operations/CreateCrmDealResponse.php
   - src/Models/Operations/CreateCrmEventRequest.php
   - src/Models/Operations/CreateCrmEventResponse.php
-  - src/Models/Operations/CreateCrmFileRequest.php
-  - src/Models/Operations/CreateCrmFileResponse.php
   - src/Models/Operations/CreateCrmLeadRequest.php
   - src/Models/Operations/CreateCrmLeadResponse.php
   - src/Models/Operations/CreateCrmPipelineRequest.php
@@ -281,8 +279,6 @@ generatedFiles:
   - src/Models/Operations/GetCrmDealResponse.php
   - src/Models/Operations/GetCrmEventRequest.php
   - src/Models/Operations/GetCrmEventResponse.php
-  - src/Models/Operations/GetCrmFileRequest.php
-  - src/Models/Operations/GetCrmFileResponse.php
   - src/Models/Operations/GetCrmLeadRequest.php
   - src/Models/Operations/GetCrmLeadResponse.php
   - src/Models/Operations/GetCrmPipelineRequest.php
@@ -295,8 +291,6 @@ generatedFiles:
   - src/Models/Operations/ListCrmDealsResponse.php
   - src/Models/Operations/ListCrmEventsRequest.php
   - src/Models/Operations/ListCrmEventsResponse.php
-  - src/Models/Operations/ListCrmFilesRequest.php
-  - src/Models/Operations/ListCrmFilesResponse.php
   - src/Models/Operations/ListCrmLeadsRequest.php
   - src/Models/Operations/ListCrmLeadsResponse.php
   - src/Models/Operations/ListCrmPipelinesRequest.php
@@ -309,8 +303,6 @@ generatedFiles:
   - src/Models/Operations/PatchCrmDealResponse.php
   - src/Models/Operations/PatchCrmEventRequest.php
   - src/Models/Operations/PatchCrmEventResponse.php
-  - src/Models/Operations/PatchCrmFileRequest.php
-  - src/Models/Operations/PatchCrmFileResponse.php
   - src/Models/Operations/PatchCrmLeadRequest.php
   - src/Models/Operations/PatchCrmLeadResponse.php
   - src/Models/Operations/PatchCrmPipelineRequest.php
@@ -323,8 +315,6 @@ generatedFiles:
   - src/Models/Operations/RemoveCrmDealResponse.php
   - src/Models/Operations/RemoveCrmEventRequest.php
   - src/Models/Operations/RemoveCrmEventResponse.php
-  - src/Models/Operations/RemoveCrmFileRequest.php
-  - src/Models/Operations/RemoveCrmFileResponse.php
   - src/Models/Operations/RemoveCrmLeadRequest.php
   - src/Models/Operations/RemoveCrmLeadResponse.php
   - src/Models/Operations/RemoveCrmPipelineRequest.php
@@ -337,8 +327,6 @@ generatedFiles:
   - src/Models/Operations/UpdateCrmDealResponse.php
   - src/Models/Operations/UpdateCrmEventRequest.php
   - src/Models/Operations/UpdateCrmEventResponse.php
-  - src/Models/Operations/UpdateCrmFileRequest.php
-  - src/Models/Operations/UpdateCrmFileResponse.php
   - src/Models/Operations/UpdateCrmLeadRequest.php
   - src/Models/Operations/UpdateCrmLeadResponse.php
   - src/Models/Operations/UpdateCrmPipelineRequest.php
@@ -357,18 +345,6 @@ generatedFiles:
   - src/Models/Operations/RemoveUcContactResponse.php
   - src/Models/Operations/UpdateUcContactRequest.php
   - src/Models/Operations/UpdateUcContactResponse.php
-  - src/Models/Operations/CreateStorageFileRequest.php
-  - src/Models/Operations/CreateStorageFileResponse.php
-  - src/Models/Operations/GetStorageFileRequest.php
-  - src/Models/Operations/GetStorageFileResponse.php
-  - src/Models/Operations/ListStorageFilesRequest.php
-  - src/Models/Operations/ListStorageFilesResponse.php
-  - src/Models/Operations/PatchStorageFileRequest.php
-  - src/Models/Operations/PatchStorageFileResponse.php
-  - src/Models/Operations/RemoveStorageFileRequest.php
-  - src/Models/Operations/RemoveStorageFileResponse.php
-  - src/Models/Operations/UpdateStorageFileRequest.php
-  - src/Models/Operations/UpdateStorageFileResponse.php
   - src/Models/Operations/ListEnrichPeopleRequest.php
   - src/Models/Operations/ListEnrichPeopleResponse.php
   - src/Models/Operations/CreateHrisEmployeeRequest.php
@@ -429,6 +405,18 @@ generatedFiles:
   - src/Models/Operations/RemovePassthroughResponse.php
   - src/Models/Operations/UpdatePassthroughRequest.php
   - src/Models/Operations/UpdatePassthroughResponse.php
+  - src/Models/Operations/CreateStorageFileRequest.php
+  - src/Models/Operations/CreateStorageFileResponse.php
+  - src/Models/Operations/GetStorageFileRequest.php
+  - src/Models/Operations/GetStorageFileResponse.php
+  - src/Models/Operations/ListStorageFilesRequest.php
+  - src/Models/Operations/ListStorageFilesResponse.php
+  - src/Models/Operations/PatchStorageFileRequest.php
+  - src/Models/Operations/PatchStorageFileResponse.php
+  - src/Models/Operations/RemoveStorageFileRequest.php
+  - src/Models/Operations/RemoveStorageFileResponse.php
+  - src/Models/Operations/UpdateStorageFileRequest.php
+  - src/Models/Operations/UpdateStorageFileResponse.php
   - src/Models/Operations/CreateTicketingNoteRequest.php
   - src/Models/Operations/CreateTicketingNoteResponse.php
   - src/Models/Operations/CreateTicketingTicketRequest.php
@@ -582,8 +570,6 @@ generatedFiles:
   - src/Models/Shared/PropertyCrmEventMeeting.php
   - src/Models/Shared/PropertyCrmEventEmail.php
   - src/Models/Shared/PropertyCrmEventCall.php
-  - src/Models/Shared/CrmFile.php
-  - src/Models/Shared/PropertyCrmFileRaw.php
   - src/Models/Shared/CrmLead.php
   - src/Models/Shared/PropertyCrmLeadRaw.php
   - src/Models/Shared/PropertyCrmLeadAddress.php
@@ -600,11 +586,6 @@ generatedFiles:
   - src/Models/Shared/PropertyUcContactRaw.php
   - src/Models/Shared/UcEmailType.php
   - src/Models/Shared/UcEmail.php
-  - src/Models/Shared/StorageFileType.php
-  - src/Models/Shared/StorageFile.php
-  - src/Models/Shared/PropertyStorageFileRaw.php
-  - src/Models/Shared/StoragePermission.php
-  - src/Models/Shared/PropertyStoragePermissionRoles.php
   - src/Models/Shared/Gender.php
   - src/Models/Shared/EnrichPerson.php
   - src/Models/Shared/EnrichPersonWorkHistory.php
@@ -633,6 +614,11 @@ generatedFiles:
   - src/Models/Shared/MarketingEmailType.php
   - src/Models/Shared/MarketingEmail.php
   - src/Models/Shared/Undefined.php
+  - src/Models/Shared/StorageFileType.php
+  - src/Models/Shared/StorageFile.php
+  - src/Models/Shared/PropertyStorageFileRaw.php
+  - src/Models/Shared/StoragePermission.php
+  - src/Models/Shared/PropertyStoragePermissionRoles.php
   - src/Models/Shared/TicketingNote.php
   - src/Models/Shared/PropertyTicketingNoteRaw.php
   - src/Models/Shared/TicketingTicketStatus.php
@@ -844,8 +830,6 @@ generatedFiles:
   - docs/Models/Operations/CreateCrmDealResponse.md
   - docs/Models/Operations/CreateCrmEventRequest.md
   - docs/Models/Operations/CreateCrmEventResponse.md
-  - docs/Models/Operations/CreateCrmFileRequest.md
-  - docs/Models/Operations/CreateCrmFileResponse.md
   - docs/Models/Operations/CreateCrmLeadRequest.md
   - docs/Models/Operations/CreateCrmLeadResponse.md
   - docs/Models/Operations/CreateCrmPipelineRequest.md
@@ -858,8 +842,6 @@ generatedFiles:
   - docs/Models/Operations/GetCrmDealResponse.md
   - docs/Models/Operations/GetCrmEventRequest.md
   - docs/Models/Operations/GetCrmEventResponse.md
-  - docs/Models/Operations/GetCrmFileRequest.md
-  - docs/Models/Operations/GetCrmFileResponse.md
   - docs/Models/Operations/GetCrmLeadRequest.md
   - docs/Models/Operations/GetCrmLeadResponse.md
   - docs/Models/Operations/GetCrmPipelineRequest.md
@@ -872,8 +854,6 @@ generatedFiles:
   - docs/Models/Operations/ListCrmDealsResponse.md
   - docs/Models/Operations/ListCrmEventsRequest.md
   - docs/Models/Operations/ListCrmEventsResponse.md
-  - docs/Models/Operations/ListCrmFilesRequest.md
-  - docs/Models/Operations/ListCrmFilesResponse.md
   - docs/Models/Operations/ListCrmLeadsRequest.md
   - docs/Models/Operations/ListCrmLeadsResponse.md
   - docs/Models/Operations/ListCrmPipelinesRequest.md
@@ -886,8 +866,6 @@ generatedFiles:
   - docs/Models/Operations/PatchCrmDealResponse.md
   - docs/Models/Operations/PatchCrmEventRequest.md
   - docs/Models/Operations/PatchCrmEventResponse.md
-  - docs/Models/Operations/PatchCrmFileRequest.md
-  - docs/Models/Operations/PatchCrmFileResponse.md
   - docs/Models/Operations/PatchCrmLeadRequest.md
   - docs/Models/Operations/PatchCrmLeadResponse.md
   - docs/Models/Operations/PatchCrmPipelineRequest.md
@@ -900,8 +878,6 @@ generatedFiles:
   - docs/Models/Operations/RemoveCrmDealResponse.md
   - docs/Models/Operations/RemoveCrmEventRequest.md
   - docs/Models/Operations/RemoveCrmEventResponse.md
-  - docs/Models/Operations/RemoveCrmFileRequest.md
-  - docs/Models/Operations/RemoveCrmFileResponse.md
   - docs/Models/Operations/RemoveCrmLeadRequest.md
   - docs/Models/Operations/RemoveCrmLeadResponse.md
   - docs/Models/Operations/RemoveCrmPipelineRequest.md
@@ -914,8 +890,6 @@ generatedFiles:
   - docs/Models/Operations/UpdateCrmDealResponse.md
   - docs/Models/Operations/UpdateCrmEventRequest.md
   - docs/Models/Operations/UpdateCrmEventResponse.md
-  - docs/Models/Operations/UpdateCrmFileRequest.md
-  - docs/Models/Operations/UpdateCrmFileResponse.md
   - docs/Models/Operations/UpdateCrmLeadRequest.md
   - docs/Models/Operations/UpdateCrmLeadResponse.md
   - docs/Models/Operations/UpdateCrmPipelineRequest.md
@@ -934,18 +908,6 @@ generatedFiles:
   - docs/Models/Operations/RemoveUcContactResponse.md
   - docs/Models/Operations/UpdateUcContactRequest.md
   - docs/Models/Operations/UpdateUcContactResponse.md
-  - docs/Models/Operations/CreateStorageFileRequest.md
-  - docs/Models/Operations/CreateStorageFileResponse.md
-  - docs/Models/Operations/GetStorageFileRequest.md
-  - docs/Models/Operations/GetStorageFileResponse.md
-  - docs/Models/Operations/ListStorageFilesRequest.md
-  - docs/Models/Operations/ListStorageFilesResponse.md
-  - docs/Models/Operations/PatchStorageFileRequest.md
-  - docs/Models/Operations/PatchStorageFileResponse.md
-  - docs/Models/Operations/RemoveStorageFileRequest.md
-  - docs/Models/Operations/RemoveStorageFileResponse.md
-  - docs/Models/Operations/UpdateStorageFileRequest.md
-  - docs/Models/Operations/UpdateStorageFileResponse.md
   - docs/Models/Operations/ListEnrichPeopleRequest.md
   - docs/Models/Operations/ListEnrichPeopleResponse.md
   - docs/Models/Operations/CreateHrisEmployeeRequest.md
@@ -1006,6 +968,18 @@ generatedFiles:
   - docs/Models/Operations/RemovePassthroughResponse.md
   - docs/Models/Operations/UpdatePassthroughRequest.md
   - docs/Models/Operations/UpdatePassthroughResponse.md
+  - docs/Models/Operations/CreateStorageFileRequest.md
+  - docs/Models/Operations/CreateStorageFileResponse.md
+  - docs/Models/Operations/GetStorageFileRequest.md
+  - docs/Models/Operations/GetStorageFileResponse.md
+  - docs/Models/Operations/ListStorageFilesRequest.md
+  - docs/Models/Operations/ListStorageFilesResponse.md
+  - docs/Models/Operations/PatchStorageFileRequest.md
+  - docs/Models/Operations/PatchStorageFileResponse.md
+  - docs/Models/Operations/RemoveStorageFileRequest.md
+  - docs/Models/Operations/RemoveStorageFileResponse.md
+  - docs/Models/Operations/UpdateStorageFileRequest.md
+  - docs/Models/Operations/UpdateStorageFileResponse.md
   - docs/Models/Operations/CreateTicketingNoteRequest.md
   - docs/Models/Operations/CreateTicketingNoteResponse.md
   - docs/Models/Operations/CreateTicketingTicketRequest.md
@@ -1159,8 +1133,6 @@ generatedFiles:
   - docs/Models/Shared/PropertyCrmEventMeeting.md
   - docs/Models/Shared/PropertyCrmEventEmail.md
   - docs/Models/Shared/PropertyCrmEventCall.md
-  - docs/Models/Shared/CrmFile.md
-  - docs/Models/Shared/PropertyCrmFileRaw.md
   - docs/Models/Shared/CrmLead.md
   - docs/Models/Shared/PropertyCrmLeadRaw.md
   - docs/Models/Shared/PropertyCrmLeadAddress.md
@@ -1177,11 +1149,6 @@ generatedFiles:
   - docs/Models/Shared/PropertyUcContactRaw.md
   - docs/Models/Shared/UcEmailType.md
   - docs/Models/Shared/UcEmail.md
-  - docs/Models/Shared/StorageFileType.md
-  - docs/Models/Shared/StorageFile.md
-  - docs/Models/Shared/PropertyStorageFileRaw.md
-  - docs/Models/Shared/StoragePermission.md
-  - docs/Models/Shared/PropertyStoragePermissionRoles.md
   - docs/Models/Shared/Gender.md
   - docs/Models/Shared/EnrichPerson.md
   - docs/Models/Shared/EnrichPersonWorkHistory.md
@@ -1210,6 +1177,11 @@ generatedFiles:
   - docs/Models/Shared/MarketingEmailType.md
   - docs/Models/Shared/MarketingEmail.md
   - docs/Models/Shared/Undefined.md
+  - docs/Models/Shared/StorageFileType.md
+  - docs/Models/Shared/StorageFile.md
+  - docs/Models/Shared/PropertyStorageFileRaw.md
+  - docs/Models/Shared/StoragePermission.md
+  - docs/Models/Shared/PropertyStoragePermissionRoles.md
   - docs/Models/Shared/TicketingNote.md
   - docs/Models/Shared/PropertyTicketingNoteRaw.md
   - docs/Models/Shared/TicketingTicketStatus.md
@@ -1262,7 +1234,6 @@ generatedFiles:
   - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
-  - docs/sdks/file/README.md
   - docs/sdks/lead/README.md
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
@@ -1275,6 +1246,7 @@ generatedFiles:
   - docs/sdks/member/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/storage/README.md
+  - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md

@@ -86,7 +86,7 @@ try {
     $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-11T17:06:37.254Z');
     $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-28T23:40:51.869Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::CrmLeadRead,
+        Shared\PropertyConnectionPermissions::CrmEventWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-05T07:37:37.431Z');
     $request->workspaceId = 'string';;
@@ -727,7 +727,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-14T12:46:18.750Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-09T12:43:50.814Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AtsInterviewRead,
+        Shared\PropertyConnectionPermissions::AtsCandidateWrite,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-03T13:20:07.463Z');
     $request->connection->workspaceId = 'string';

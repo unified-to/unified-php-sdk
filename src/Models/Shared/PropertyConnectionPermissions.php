@@ -49,8 +49,6 @@ enum PropertyConnectionPermissions: string
     case CrmEventWrite = 'crm_event_write';
     case CrmLeadRead = 'crm_lead_read';
     case CrmLeadWrite = 'crm_lead_write';
-    case CrmFileRead = 'crm_file_read';
-    case CrmFileWrite = 'crm_file_write';
     case CrmPipelineRead = 'crm_pipeline_read';
     case CrmPipelineWrite = 'crm_pipeline_write';
     case MartechListRead = 'martech_list_read';

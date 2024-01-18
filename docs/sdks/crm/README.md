@@ -7,42 +7,36 @@
 * [createCrmContact](#createcrmcontact) - Create a contact
 * [createCrmDeal](#createcrmdeal) - Create a deal
 * [createCrmEvent](#createcrmevent) - Create a event
-* [createCrmFile](#createcrmfile) - Create a file
 * [createCrmLead](#createcrmlead) - Create a lead
 * [createCrmPipeline](#createcrmpipeline) - Create a pipeline
 * [getCrmCompany](#getcrmcompany) - Retrieve a company
 * [getCrmContact](#getcrmcontact) - Retrieve a contact
 * [getCrmDeal](#getcrmdeal) - Retrieve a deal
 * [getCrmEvent](#getcrmevent) - Retrieve a event
-* [getCrmFile](#getcrmfile) - Retrieve a file
 * [getCrmLead](#getcrmlead) - Retrieve a lead
 * [getCrmPipeline](#getcrmpipeline) - Retrieve a pipeline
 * [listCrmCompanies](#listcrmcompanies) - List all companies
 * [listCrmContacts](#listcrmcontacts) - List all contacts
 * [listCrmDeals](#listcrmdeals) - List all deals
 * [listCrmEvents](#listcrmevents) - List all events
-* [listCrmFiles](#listcrmfiles) - List all files
 * [listCrmLeads](#listcrmleads) - List all leads
 * [listCrmPipelines](#listcrmpipelines) - List all pipelines
 * [patchCrmCompany](#patchcrmcompany) - Update a company
 * [patchCrmContact](#patchcrmcontact) - Update a contact
 * [patchCrmDeal](#patchcrmdeal) - Update a deal
 * [patchCrmEvent](#patchcrmevent) - Update a event
-* [patchCrmFile](#patchcrmfile) - Update a file
 * [patchCrmLead](#patchcrmlead) - Update a lead
 * [patchCrmPipeline](#patchcrmpipeline) - Update a pipeline
 * [removeCrmCompany](#removecrmcompany) - Remove a company
 * [removeCrmContact](#removecrmcontact) - Remove a contact
 * [removeCrmDeal](#removecrmdeal) - Remove a deal
 * [removeCrmEvent](#removecrmevent) - Remove a event
-* [removeCrmFile](#removecrmfile) - Remove a file
 * [removeCrmLead](#removecrmlead) - Remove a lead
 * [removeCrmPipeline](#removecrmpipeline) - Remove a pipeline
 * [updateCrmCompany](#updatecrmcompany) - Update a company
 * [updateCrmContact](#updatecrmcontact) - Update a contact
 * [updateCrmDeal](#updatecrmdeal) - Update a deal
 * [updateCrmEvent](#updatecrmevent) - Update a event
-* [updateCrmFile](#updatecrmfile) - Update a file
 * [updateCrmLead](#updatecrmlead) - Update a lead
 * [updateCrmPipeline](#updatecrmpipeline) - Update a pipeline
 
@@ -368,70 +362,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\CreateCrmEventResponse](../../Models/Operations/CreateCrmEventResponse.md)**
-
-
-## createCrmFile
-
-Create a file
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\CreateCrmFileRequest();
-    $request->crmFile = new Shared\CrmFile();
-    $request->crmFile->companyId = 'string';
-    $request->crmFile->contactId = 'string';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-23T14:06:46.596Z');
-    $request->crmFile->dealId = 'string';
-    $request->crmFile->description = 'Multi-lateral background database';
-    $request->crmFile->downloadUrl = 'string';
-    $request->crmFile->eventId = 'string';
-    $request->crmFile->id = '<ID>';
-    $request->crmFile->isActive = false;
-    $request->crmFile->leadId = 'string';
-    $request->crmFile->mimeType = 'string';
-    $request->crmFile->name = 'string';
-    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->size = 2318.83;
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-27T09:12:07.889Z');
-    $request->crmFile->userId = 'string';
-    $request->connectionId = 'string';;
-
-    $response = $sdk->crm->createCrmFile($request);
-
-    if ($response->crmFile !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\CreateCrmFileRequest](../../Models/Operations/CreateCrmFileRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\CreateCrmFileResponse](../../Models/Operations/CreateCrmFileResponse.md)**
 
 
 ## createCrmLead
@@ -768,57 +698,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\GetCrmEventResponse](../../Models/Operations/GetCrmEventResponse.md)**
-
-
-## getCrmFile
-
-Retrieve a file
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\GetCrmFileRequest();
-    $request->connectionId = 'string';
-    $request->fields = [
-        'string',
-    ];
-    $request->id = '<ID>';;
-
-    $response = $sdk->crm->getCrmFile($request);
-
-    if ($response->crmFile !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                              | [\Unified\Unified_to\Models\Operations\GetCrmFileRequest](../../Models/Operations/GetCrmFileRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetCrmFileResponse](../../Models/Operations/GetCrmFileResponse.md)**
 
 
 ## getCrmLead
@@ -1159,65 +1038,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\ListCrmEventsResponse](../../Models/Operations/ListCrmEventsResponse.md)**
-
-
-## listCrmFiles
-
-List all files
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\ListCrmFilesRequest();
-    $request->companyId = 'string';
-    $request->connectionId = 'string';
-    $request->contactId = 'string';
-    $request->dealId = 'string';
-    $request->fields = [
-        'string',
-    ];
-    $request->limit = 7725.49;
-    $request->offset = 1697.5;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-04T17:40:07.899Z');;
-
-    $response = $sdk->crm->listCrmFiles($request);
-
-    if ($response->crmFiles !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListCrmFilesRequest](../../Models/Operations/ListCrmFilesRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\ListCrmFilesResponse](../../Models/Operations/ListCrmFilesResponse.md)**
 
 
 ## listCrmLeads
@@ -1663,71 +1483,6 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PatchCrmEventResponse](../../Models/Operations/PatchCrmEventResponse.md)**
 
 
-## patchCrmFile
-
-Update a file
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\PatchCrmFileRequest();
-    $request->crmFile = new Shared\CrmFile();
-    $request->crmFile->companyId = 'string';
-    $request->crmFile->contactId = 'string';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-02T20:49:30.505Z');
-    $request->crmFile->dealId = 'string';
-    $request->crmFile->description = 'Networked multimedia database';
-    $request->crmFile->downloadUrl = 'string';
-    $request->crmFile->eventId = 'string';
-    $request->crmFile->id = '<ID>';
-    $request->crmFile->isActive = false;
-    $request->crmFile->leadId = 'string';
-    $request->crmFile->mimeType = 'string';
-    $request->crmFile->name = 'string';
-    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->size = 1185.84;
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-10T22:21:44.295Z');
-    $request->crmFile->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
-
-    $response = $sdk->crm->patchCrmFile($request);
-
-    if ($response->crmFile !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchCrmFileRequest](../../Models/Operations/PatchCrmFileRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchCrmFileResponse](../../Models/Operations/PatchCrmFileResponse.md)**
-
-
 ## patchCrmLead
 
 Update a lead
@@ -2052,54 +1807,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\RemoveCrmEventResponse](../../Models/Operations/RemoveCrmEventResponse.md)**
-
-
-## removeCrmFile
-
-Remove a file
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\RemoveCrmFileRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
-
-    $response = $sdk->crm->removeCrmFile($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\RemoveCrmFileRequest](../../Models/Operations/RemoveCrmFileRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\RemoveCrmFileResponse](../../Models/Operations/RemoveCrmFileResponse.md)**
 
 
 ## removeCrmLead
@@ -2524,71 +2231,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\UpdateCrmEventResponse](../../Models/Operations/UpdateCrmEventResponse.md)**
-
-
-## updateCrmFile
-
-Update a file
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\UpdateCrmFileRequest();
-    $request->crmFile = new Shared\CrmFile();
-    $request->crmFile->companyId = 'string';
-    $request->crmFile->contactId = 'string';
-    $request->crmFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-11T15:31:35.167Z');
-    $request->crmFile->dealId = 'string';
-    $request->crmFile->description = 'Quality-focused mobile orchestration';
-    $request->crmFile->downloadUrl = 'string';
-    $request->crmFile->eventId = 'string';
-    $request->crmFile->id = '<ID>';
-    $request->crmFile->isActive = false;
-    $request->crmFile->leadId = 'string';
-    $request->crmFile->mimeType = 'string';
-    $request->crmFile->name = 'string';
-    $request->crmFile->raw = new Shared\PropertyCrmFileRaw();
-    $request->crmFile->size = 5501.47;
-    $request->crmFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-25T13:19:41.584Z');
-    $request->crmFile->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
-
-    $response = $sdk->crm->updateCrmFile($request);
-
-    if ($response->crmFile !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\UpdateCrmFileRequest](../../Models/Operations/UpdateCrmFileRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\UpdateCrmFileResponse](../../Models/Operations/UpdateCrmFileResponse.md)**
 
 
 ## updateCrmLead
