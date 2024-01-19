@@ -111,6 +111,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listSortByUpdatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('list_ticket_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listTicketId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('list_updated_gte')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -198,6 +203,7 @@ class IntegrationSupport
 		$this->listSortByCreatedAt = null;
 		$this->listSortByName = null;
 		$this->listSortByUpdatedAt = null;
+		$this->listTicketId = null;
 		$this->listUpdatedGte = null;
 		$this->listUserId = null;
 		$this->methods = null;
