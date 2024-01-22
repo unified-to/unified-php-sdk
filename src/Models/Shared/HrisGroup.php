@@ -21,16 +21,6 @@ class HrisGroup
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
     
-    /**
-     * $employeeIds
-     * 
-     * @var ?array<string> $employeeIds
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('employee_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $employeeIds = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -76,11 +66,20 @@ class HrisGroup
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+    /**
+     * $userIds
+     * 
+     * @var ?array<string> $userIds
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('user_ids')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $userIds = null;
+    
 	public function __construct()
 	{
 		$this->createdAt = null;
 		$this->description = null;
-		$this->employeeIds = null;
 		$this->id = null;
 		$this->isActive = null;
 		$this->managerIds = null;
@@ -89,5 +88,6 @@ class HrisGroup
 		$this->raw = null;
 		$this->type = null;
 		$this->updatedAt = null;
+		$this->userIds = null;
 	}
 }

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 87ac93817bed9842e1b2eb20030d9710
+  docChecksum: 7d5b03724fae01f8b6071020b3d073d9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.237.2
-  releaseVersion: 0.10.27
-  configChecksum: d0afe270be66688c8195cad424ac7ae9
+  generationVersion: 2.237.3
+  releaseVersion: 0.10.28
+  configChecksum: 150aab177af5be88300e6bbfc308327d
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -506,7 +506,6 @@ generatedFiles:
   - src/Models/Shared/PropertyAccountingPaymentRaw.php
   - src/Models/Shared/AccountingTaxrate.php
   - src/Models/Shared/PropertyAccountingTaxrateRaw.php
-  - src/Models/Shared/AccountingTransactionType.php
   - src/Models/Shared/AccountingTransaction.php
   - src/Models/Shared/PropertyAccountingTransactionRaw.php
   - src/Models/Shared/AccountingTransactionLineitem.php
@@ -1069,7 +1068,6 @@ generatedFiles:
   - docs/Models/Shared/PropertyAccountingPaymentRaw.md
   - docs/Models/Shared/AccountingTaxrate.md
   - docs/Models/Shared/PropertyAccountingTaxrateRaw.md
-  - docs/Models/Shared/AccountingTransactionType.md
   - docs/Models/Shared/AccountingTransaction.md
   - docs/Models/Shared/PropertyAccountingTransactionRaw.md
   - docs/Models/Shared/AccountingTransactionLineitem.md

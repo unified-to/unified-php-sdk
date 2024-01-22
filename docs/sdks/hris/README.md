@@ -127,9 +127,6 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-12T02:07:27.193Z');
     $request->hrisGroup->description = 'Self-enabling system-worthy collaboration';
-    $request->hrisGroup->employeeIds = [
-        'string',
-    ];
     $request->hrisGroup->id = '<ID>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
@@ -140,6 +137,9 @@ try {
     $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
     $request->hrisGroup->type = Shared\HrisGroupType::Team;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T17:49:55.923Z');
+    $request->hrisGroup->userIds = [
+        'string',
+    ];
     $request->connectionId = 'string';;
 
     $response = $sdk->hris->createHrisGroup($request);
@@ -490,9 +490,6 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-10T03:17:00.454Z');
     $request->hrisGroup->description = 'Compatible contextually-based local area network';
-    $request->hrisGroup->employeeIds = [
-        'string',
-    ];
     $request->hrisGroup->id = '<ID>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
@@ -503,6 +500,9 @@ try {
     $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
     $request->hrisGroup->type = Shared\HrisGroupType::Division;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-23T21:37:16.122Z');
+    $request->hrisGroup->userIds = [
+        'string',
+    ];
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -736,9 +736,6 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-07T01:08:49.621Z');
     $request->hrisGroup->description = 'Integrated empowering productivity';
-    $request->hrisGroup->employeeIds = [
-        'string',
-    ];
     $request->hrisGroup->id = '<ID>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
@@ -749,6 +746,9 @@ try {
     $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
     $request->hrisGroup->type = Shared\HrisGroupType::Team;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T13:33:00.416Z');
+    $request->hrisGroup->userIds = [
+        'string',
+    ];
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

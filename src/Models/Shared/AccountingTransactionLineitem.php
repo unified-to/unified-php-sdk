@@ -11,6 +11,10 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingTransactionLineitem
 {
+	#[\JMS\Serializer\Annotation\SerializedName('account_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $accountId;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('customer_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -47,6 +51,7 @@ class AccountingTransactionLineitem
     
 	public function __construct()
 	{
+		$this->accountId = "";
 		$this->customerId = null;
 		$this->description = null;
 		$this->id = null;

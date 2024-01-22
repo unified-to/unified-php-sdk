@@ -11,10 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingTransaction
 {
-	#[\JMS\Serializer\Annotation\SerializedName('account_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $accountId;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -59,13 +55,10 @@ class AccountingTransaction
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $taxAmount = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
-    public float $totalAmount;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingTransactionType>')]
-    public AccountingTransactionType $type;
+	#[\JMS\Serializer\Annotation\SerializedName('taxrate_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $taxrateId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -74,7 +67,6 @@ class AccountingTransaction
     
 	public function __construct()
 	{
-		$this->accountId = "";
 		$this->createdAt = null;
 		$this->currency = null;
 		$this->description = null;
@@ -83,8 +75,7 @@ class AccountingTransaction
 		$this->raw = null;
 		$this->reference = null;
 		$this->taxAmount = null;
-		$this->totalAmount = 0;
-		$this->type = \Unified\Unified_to\Models\Shared\AccountingTransactionType::Receive;
+		$this->taxrateId = null;
 		$this->updatedAt = null;
 	}
 }

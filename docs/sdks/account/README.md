@@ -35,7 +35,6 @@ try {
         $request = new Operations\CreateAccountingAccountRequest();
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 6602.56;
-    $request->accountingAccount->bankAccountNumber = 'string';
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T22:12:31.771Z');
     $request->accountingAccount->currency = 'Saint Helena Pound';
     $request->accountingAccount->customerDefinedCode = 'string';
@@ -202,7 +201,6 @@ try {
         $request = new Operations\PatchAccountingAccountRequest();
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 1931.26;
-    $request->accountingAccount->bankAccountNumber = 'string';
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T13:35:06.969Z');
     $request->accountingAccount->currency = 'Won';
     $request->accountingAccount->customerDefinedCode = 'string';
@@ -311,7 +309,6 @@ try {
         $request = new Operations\UpdateAccountingAccountRequest();
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 5954.09;
-    $request->accountingAccount->bankAccountNumber = 'string';
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-21T23:41:25.152Z');
     $request->accountingAccount->currency = 'Tanzanian Shilling';
     $request->accountingAccount->customerDefinedCode = 'string';

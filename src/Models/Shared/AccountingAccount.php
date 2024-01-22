@@ -16,11 +16,6 @@ class AccountingAccount
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $balance = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('bank_account_number')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $bankAccountNumber = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -73,7 +68,6 @@ class AccountingAccount
 	public function __construct()
 	{
 		$this->balance = null;
-		$this->bankAccountNumber = null;
 		$this->createdAt = null;
 		$this->currency = null;
 		$this->customerDefinedCode = null;

@@ -42,7 +42,6 @@ try {
     $request = new Operations\CreateAccountingAccountRequest();
     $request->accountingAccount = new Shared\AccountingAccount();
     $request->accountingAccount->balance = 6602.56;
-    $request->accountingAccount->bankAccountNumber = 'string';
     $request->accountingAccount->createdAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
         '2023-09-02T22:12:31.771Z',
