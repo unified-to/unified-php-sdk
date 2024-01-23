@@ -13,7 +13,7 @@ enum ObjectType: string
 {
     case AccountingAccount = 'accounting_account';
     case AccountingTransaction = 'accounting_transaction';
-    case AccountingCustomer = 'accounting_customer';
+    case AccountingContact = 'accounting_contact';
     case AccountingInvoice = 'accounting_invoice';
     case AccountingPayment = 'accounting_payment';
     case AccountingTaxrate = 'accounting_taxrate';

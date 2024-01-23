@@ -16,6 +16,11 @@ class AccountingPayment
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $accountId = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('contact_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $contactId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -25,11 +30,6 @@ class AccountingPayment
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('customer_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $customerId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -74,9 +74,9 @@ class AccountingPayment
 	public function __construct()
 	{
 		$this->accountId = null;
+		$this->contactId = null;
 		$this->createdAt = null;
 		$this->currency = null;
-		$this->customerId = null;
 		$this->id = null;
 		$this->invoiceId = null;
 		$this->notes = null;

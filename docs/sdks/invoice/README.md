@@ -36,9 +36,9 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6736.06;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-27T09:14:42.959Z');
+    $request->accountingInvoice->contactId = 'string';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-05T18:32:52.109Z');
     $request->accountingInvoice->currency = 'Uzbekistan Sum';
-    $request->accountingInvoice->customerId = 'string';
     $request->accountingInvoice->discountAmount = 259.66;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T15:54:59.455Z');
     $request->accountingInvoice->id = '<ID>';
@@ -156,7 +156,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListAccountingInvoicesRequest();
     $request->connectionId = 'string';
-    $request->customerId = 'string';
+    $request->contactId = 'string';
     $request->fields = [
         'string',
     ];
@@ -215,9 +215,9 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 7374.1;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-18T11:25:21.140Z');
+    $request->accountingInvoice->contactId = 'string';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T05:39:15.854Z');
     $request->accountingInvoice->currency = 'Gold';
-    $request->accountingInvoice->customerId = 'string';
     $request->accountingInvoice->discountAmount = 9127.96;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-05T05:55:55.560Z');
     $request->accountingInvoice->id = '<ID>';
@@ -335,9 +335,9 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6974.28;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T06:46:26.704Z');
+    $request->accountingInvoice->contactId = 'string';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T23:29:44.275Z');
     $request->accountingInvoice->currency = 'Forint';
-    $request->accountingInvoice->customerId = 'string';
     $request->accountingInvoice->discountAmount = 2579.09;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-25T16:24:30.030Z');
     $request->accountingInvoice->id = '<ID>';

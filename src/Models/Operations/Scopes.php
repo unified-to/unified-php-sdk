@@ -18,8 +18,8 @@ enum Scopes: string
     case AccountingTransactionWrite = 'accounting_transaction_write';
     case AccountingInvoiceRead = 'accounting_invoice_read';
     case AccountingInvoiceWrite = 'accounting_invoice_write';
-    case AccountingCustomerRead = 'accounting_customer_read';
-    case AccountingCustomerWrite = 'accounting_customer_write';
+    case AccountingContactRead = 'accounting_contact_read';
+    case AccountingContactWrite = 'accounting_contact_write';
     case AccountingPaymentRead = 'accounting_payment_read';
     case AccountingPaymentWrite = 'accounting_payment_write';
     case AccountingTaxrateRead = 'accounting_taxrate_read';

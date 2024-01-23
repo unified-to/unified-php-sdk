@@ -15,10 +15,10 @@ class AccountingTransactionLineitem
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $accountId;
     
-	#[\JMS\Serializer\Annotation\SerializedName('customer_id')]
+	#[\JMS\Serializer\Annotation\SerializedName('contact_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $customerId = null;
+    public ?string $contactId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('description')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -52,7 +52,7 @@ class AccountingTransactionLineitem
 	public function __construct()
 	{
 		$this->accountId = "";
-		$this->customerId = null;
+		$this->contactId = null;
 		$this->description = null;
 		$this->id = null;
 		$this->invoiceId = null;

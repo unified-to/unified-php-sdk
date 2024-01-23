@@ -21,6 +21,11 @@ class AccountingInvoice
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $cancelledAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('contact_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $contactId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -30,11 +35,6 @@ class AccountingInvoice
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('customer_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $customerId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('discount_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
@@ -125,9 +125,9 @@ class AccountingInvoice
 	{
 		$this->balanceAmount = null;
 		$this->cancelledAt = null;
+		$this->contactId = null;
 		$this->createdAt = null;
 		$this->currency = null;
-		$this->customerId = null;
 		$this->discountAmount = null;
 		$this->dueAt = null;
 		$this->id = null;

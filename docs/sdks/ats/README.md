@@ -147,6 +147,7 @@ try {
         'string',
     ];
     $request->atsCandidate->name = 'string';
+    $request->atsCandidate->origin = Shared\Origin::Referred;
     $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
@@ -155,7 +156,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T09:25:00.753Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-09T09:42:20.690Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->ats->createAtsCandidate($request);
@@ -1252,6 +1253,7 @@ try {
         'string',
     ];
     $request->atsCandidate->name = 'string';
+    $request->atsCandidate->origin = Shared\Origin::Referred;
     $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
@@ -1260,7 +1262,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-20T03:10:26.424Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-27T23:11:11.032Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1944,6 +1946,7 @@ try {
         'string',
     ];
     $request->atsCandidate->name = 'string';
+    $request->atsCandidate->origin = Shared\Origin::Referred;
     $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
     $request->atsCandidate->tags = [
         'string',
@@ -1952,7 +1955,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T17:01:22.026Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-29T02:14:15.792Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

@@ -46,7 +46,7 @@ try {
     $request->webhook->interval = 6142.55;
     $request->webhook->isHealthy = false;
     $request->webhook->meta = new Shared\PropertyWebhookMeta();
-    $request->webhook->objectType = Shared\ObjectType::AccountingCustomer;
+    $request->webhook->objectType = Shared\ObjectType::AccountingContact;
     $request->webhook->runs = [
         'string',
     ];

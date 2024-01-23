@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 74c9cb4660cb247c06eff86dea00135b
+  docChecksum: 981c0e1adf4c484c9cc54a29b1e6b7a6
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.237.3
-  releaseVersion: 0.10.29
-  configChecksum: 598d6725d5358121e9cffd0f643b1b2a
+  releaseVersion: 0.10.30
+  configChecksum: 1a3ce9c1657dd20bc32d0669e6fce353
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -20,7 +20,7 @@ generatedFiles:
   - src/SDKConfiguration.php
   - src/Accounting.php
   - src/Account.php
-  - src/Customer.php
+  - src/Contact.php
   - src/Invoice.php
   - src/Item.php
   - src/Organization.php
@@ -37,7 +37,6 @@ generatedFiles:
   - src/Scorecard.php
   - src/Crm.php
   - src/Company.php
-  - src/Contact.php
   - src/Deal.php
   - src/Event.php
   - src/Lead.php
@@ -54,6 +53,7 @@ generatedFiles:
   - src/Storage.php
   - src/File.php
   - src/Ticketing.php
+  - src/Customer.php
   - src/Note.php
   - src/Ticket.php
   - src/Uc.php
@@ -87,8 +87,8 @@ generatedFiles:
   - src/Utils/Utils.php
   - src/Models/Operations/CreateAccountingAccountRequest.php
   - src/Models/Operations/CreateAccountingAccountResponse.php
-  - src/Models/Operations/CreateAccountingCustomerRequest.php
-  - src/Models/Operations/CreateAccountingCustomerResponse.php
+  - src/Models/Operations/CreateAccountingContactRequest.php
+  - src/Models/Operations/CreateAccountingContactResponse.php
   - src/Models/Operations/CreateAccountingInvoiceRequest.php
   - src/Models/Operations/CreateAccountingInvoiceResponse.php
   - src/Models/Operations/CreateAccountingItemRequest.php
@@ -101,8 +101,8 @@ generatedFiles:
   - src/Models/Operations/CreateAccountingTransactionResponse.php
   - src/Models/Operations/GetAccountingAccountRequest.php
   - src/Models/Operations/GetAccountingAccountResponse.php
-  - src/Models/Operations/GetAccountingCustomerRequest.php
-  - src/Models/Operations/GetAccountingCustomerResponse.php
+  - src/Models/Operations/GetAccountingContactRequest.php
+  - src/Models/Operations/GetAccountingContactResponse.php
   - src/Models/Operations/GetAccountingInvoiceRequest.php
   - src/Models/Operations/GetAccountingInvoiceResponse.php
   - src/Models/Operations/GetAccountingItemRequest.php
@@ -117,8 +117,8 @@ generatedFiles:
   - src/Models/Operations/GetAccountingTransactionResponse.php
   - src/Models/Operations/ListAccountingAccountsRequest.php
   - src/Models/Operations/ListAccountingAccountsResponse.php
-  - src/Models/Operations/ListAccountingCustomersRequest.php
-  - src/Models/Operations/ListAccountingCustomersResponse.php
+  - src/Models/Operations/ListAccountingContactsRequest.php
+  - src/Models/Operations/ListAccountingContactsResponse.php
   - src/Models/Operations/ListAccountingInvoicesRequest.php
   - src/Models/Operations/ListAccountingInvoicesResponse.php
   - src/Models/Operations/ListAccountingItemsRequest.php
@@ -133,8 +133,8 @@ generatedFiles:
   - src/Models/Operations/ListAccountingTransactionsResponse.php
   - src/Models/Operations/PatchAccountingAccountRequest.php
   - src/Models/Operations/PatchAccountingAccountResponse.php
-  - src/Models/Operations/PatchAccountingCustomerRequest.php
-  - src/Models/Operations/PatchAccountingCustomerResponse.php
+  - src/Models/Operations/PatchAccountingContactRequest.php
+  - src/Models/Operations/PatchAccountingContactResponse.php
   - src/Models/Operations/PatchAccountingInvoiceRequest.php
   - src/Models/Operations/PatchAccountingInvoiceResponse.php
   - src/Models/Operations/PatchAccountingItemRequest.php
@@ -147,8 +147,8 @@ generatedFiles:
   - src/Models/Operations/PatchAccountingTransactionResponse.php
   - src/Models/Operations/RemoveAccountingAccountRequest.php
   - src/Models/Operations/RemoveAccountingAccountResponse.php
-  - src/Models/Operations/RemoveAccountingCustomerRequest.php
-  - src/Models/Operations/RemoveAccountingCustomerResponse.php
+  - src/Models/Operations/RemoveAccountingContactRequest.php
+  - src/Models/Operations/RemoveAccountingContactResponse.php
   - src/Models/Operations/RemoveAccountingInvoiceRequest.php
   - src/Models/Operations/RemoveAccountingInvoiceResponse.php
   - src/Models/Operations/RemoveAccountingItemRequest.php
@@ -161,8 +161,8 @@ generatedFiles:
   - src/Models/Operations/RemoveAccountingTransactionResponse.php
   - src/Models/Operations/UpdateAccountingAccountRequest.php
   - src/Models/Operations/UpdateAccountingAccountResponse.php
-  - src/Models/Operations/UpdateAccountingCustomerRequest.php
-  - src/Models/Operations/UpdateAccountingCustomerResponse.php
+  - src/Models/Operations/UpdateAccountingContactRequest.php
+  - src/Models/Operations/UpdateAccountingContactResponse.php
   - src/Models/Operations/UpdateAccountingInvoiceRequest.php
   - src/Models/Operations/UpdateAccountingInvoiceResponse.php
   - src/Models/Operations/UpdateAccountingItemRequest.php
@@ -173,18 +173,30 @@ generatedFiles:
   - src/Models/Operations/UpdateAccountingTaxrateResponse.php
   - src/Models/Operations/UpdateAccountingTransactionRequest.php
   - src/Models/Operations/UpdateAccountingTransactionResponse.php
-  - src/Models/Operations/CreateTicketingCustomerRequest.php
-  - src/Models/Operations/CreateTicketingCustomerResponse.php
-  - src/Models/Operations/GetTicketingCustomerRequest.php
-  - src/Models/Operations/GetTicketingCustomerResponse.php
-  - src/Models/Operations/ListTicketingCustomersRequest.php
-  - src/Models/Operations/ListTicketingCustomersResponse.php
-  - src/Models/Operations/PatchTicketingCustomerRequest.php
-  - src/Models/Operations/PatchTicketingCustomerResponse.php
-  - src/Models/Operations/RemoveTicketingCustomerRequest.php
-  - src/Models/Operations/RemoveTicketingCustomerResponse.php
-  - src/Models/Operations/UpdateTicketingCustomerRequest.php
-  - src/Models/Operations/UpdateTicketingCustomerResponse.php
+  - src/Models/Operations/CreateCrmContactRequest.php
+  - src/Models/Operations/CreateCrmContactResponse.php
+  - src/Models/Operations/CreateUcContactRequest.php
+  - src/Models/Operations/CreateUcContactResponse.php
+  - src/Models/Operations/GetCrmContactRequest.php
+  - src/Models/Operations/GetCrmContactResponse.php
+  - src/Models/Operations/GetUcContactRequest.php
+  - src/Models/Operations/GetUcContactResponse.php
+  - src/Models/Operations/ListCrmContactsRequest.php
+  - src/Models/Operations/ListCrmContactsResponse.php
+  - src/Models/Operations/ListUcContactsRequest.php
+  - src/Models/Operations/ListUcContactsResponse.php
+  - src/Models/Operations/PatchCrmContactRequest.php
+  - src/Models/Operations/PatchCrmContactResponse.php
+  - src/Models/Operations/PatchUcContactRequest.php
+  - src/Models/Operations/PatchUcContactResponse.php
+  - src/Models/Operations/RemoveCrmContactRequest.php
+  - src/Models/Operations/RemoveCrmContactResponse.php
+  - src/Models/Operations/RemoveUcContactRequest.php
+  - src/Models/Operations/RemoveUcContactResponse.php
+  - src/Models/Operations/UpdateCrmContactRequest.php
+  - src/Models/Operations/UpdateCrmContactResponse.php
+  - src/Models/Operations/UpdateUcContactRequest.php
+  - src/Models/Operations/UpdateUcContactResponse.php
   - src/Models/Operations/CreateAtsApplicationRequest.php
   - src/Models/Operations/CreateAtsApplicationResponse.php
   - src/Models/Operations/CreateAtsCandidateRequest.php
@@ -261,8 +273,6 @@ generatedFiles:
   - src/Models/Operations/UpdateAtsScorecardResponse.php
   - src/Models/Operations/CreateCrmCompanyRequest.php
   - src/Models/Operations/CreateCrmCompanyResponse.php
-  - src/Models/Operations/CreateCrmContactRequest.php
-  - src/Models/Operations/CreateCrmContactResponse.php
   - src/Models/Operations/CreateCrmDealRequest.php
   - src/Models/Operations/CreateCrmDealResponse.php
   - src/Models/Operations/CreateCrmEventRequest.php
@@ -273,8 +283,6 @@ generatedFiles:
   - src/Models/Operations/CreateCrmPipelineResponse.php
   - src/Models/Operations/GetCrmCompanyRequest.php
   - src/Models/Operations/GetCrmCompanyResponse.php
-  - src/Models/Operations/GetCrmContactRequest.php
-  - src/Models/Operations/GetCrmContactResponse.php
   - src/Models/Operations/GetCrmDealRequest.php
   - src/Models/Operations/GetCrmDealResponse.php
   - src/Models/Operations/GetCrmEventRequest.php
@@ -285,8 +293,6 @@ generatedFiles:
   - src/Models/Operations/GetCrmPipelineResponse.php
   - src/Models/Operations/ListCrmCompaniesRequest.php
   - src/Models/Operations/ListCrmCompaniesResponse.php
-  - src/Models/Operations/ListCrmContactsRequest.php
-  - src/Models/Operations/ListCrmContactsResponse.php
   - src/Models/Operations/ListCrmDealsRequest.php
   - src/Models/Operations/ListCrmDealsResponse.php
   - src/Models/Operations/ListCrmEventsRequest.php
@@ -297,8 +303,6 @@ generatedFiles:
   - src/Models/Operations/ListCrmPipelinesResponse.php
   - src/Models/Operations/PatchCrmCompanyRequest.php
   - src/Models/Operations/PatchCrmCompanyResponse.php
-  - src/Models/Operations/PatchCrmContactRequest.php
-  - src/Models/Operations/PatchCrmContactResponse.php
   - src/Models/Operations/PatchCrmDealRequest.php
   - src/Models/Operations/PatchCrmDealResponse.php
   - src/Models/Operations/PatchCrmEventRequest.php
@@ -309,8 +313,6 @@ generatedFiles:
   - src/Models/Operations/PatchCrmPipelineResponse.php
   - src/Models/Operations/RemoveCrmCompanyRequest.php
   - src/Models/Operations/RemoveCrmCompanyResponse.php
-  - src/Models/Operations/RemoveCrmContactRequest.php
-  - src/Models/Operations/RemoveCrmContactResponse.php
   - src/Models/Operations/RemoveCrmDealRequest.php
   - src/Models/Operations/RemoveCrmDealResponse.php
   - src/Models/Operations/RemoveCrmEventRequest.php
@@ -321,8 +323,6 @@ generatedFiles:
   - src/Models/Operations/RemoveCrmPipelineResponse.php
   - src/Models/Operations/UpdateCrmCompanyRequest.php
   - src/Models/Operations/UpdateCrmCompanyResponse.php
-  - src/Models/Operations/UpdateCrmContactRequest.php
-  - src/Models/Operations/UpdateCrmContactResponse.php
   - src/Models/Operations/UpdateCrmDealRequest.php
   - src/Models/Operations/UpdateCrmDealResponse.php
   - src/Models/Operations/UpdateCrmEventRequest.php
@@ -333,18 +333,6 @@ generatedFiles:
   - src/Models/Operations/UpdateCrmPipelineResponse.php
   - src/Models/Operations/ListEnrichCompaniesRequest.php
   - src/Models/Operations/ListEnrichCompaniesResponse.php
-  - src/Models/Operations/CreateUcContactRequest.php
-  - src/Models/Operations/CreateUcContactResponse.php
-  - src/Models/Operations/GetUcContactRequest.php
-  - src/Models/Operations/GetUcContactResponse.php
-  - src/Models/Operations/ListUcContactsRequest.php
-  - src/Models/Operations/ListUcContactsResponse.php
-  - src/Models/Operations/PatchUcContactRequest.php
-  - src/Models/Operations/PatchUcContactResponse.php
-  - src/Models/Operations/RemoveUcContactRequest.php
-  - src/Models/Operations/RemoveUcContactResponse.php
-  - src/Models/Operations/UpdateUcContactRequest.php
-  - src/Models/Operations/UpdateUcContactResponse.php
   - src/Models/Operations/ListEnrichPeopleRequest.php
   - src/Models/Operations/ListEnrichPeopleResponse.php
   - src/Models/Operations/CreateHrisEmployeeRequest.php
@@ -417,26 +405,38 @@ generatedFiles:
   - src/Models/Operations/RemoveStorageFileResponse.php
   - src/Models/Operations/UpdateStorageFileRequest.php
   - src/Models/Operations/UpdateStorageFileResponse.php
+  - src/Models/Operations/CreateTicketingCustomerRequest.php
+  - src/Models/Operations/CreateTicketingCustomerResponse.php
   - src/Models/Operations/CreateTicketingNoteRequest.php
   - src/Models/Operations/CreateTicketingNoteResponse.php
   - src/Models/Operations/CreateTicketingTicketRequest.php
   - src/Models/Operations/CreateTicketingTicketResponse.php
+  - src/Models/Operations/GetTicketingCustomerRequest.php
+  - src/Models/Operations/GetTicketingCustomerResponse.php
   - src/Models/Operations/GetTicketingNoteRequest.php
   - src/Models/Operations/GetTicketingNoteResponse.php
   - src/Models/Operations/GetTicketingTicketRequest.php
   - src/Models/Operations/GetTicketingTicketResponse.php
+  - src/Models/Operations/ListTicketingCustomersRequest.php
+  - src/Models/Operations/ListTicketingCustomersResponse.php
   - src/Models/Operations/ListTicketingNotesRequest.php
   - src/Models/Operations/ListTicketingNotesResponse.php
   - src/Models/Operations/ListTicketingTicketsRequest.php
   - src/Models/Operations/ListTicketingTicketsResponse.php
+  - src/Models/Operations/PatchTicketingCustomerRequest.php
+  - src/Models/Operations/PatchTicketingCustomerResponse.php
   - src/Models/Operations/PatchTicketingNoteRequest.php
   - src/Models/Operations/PatchTicketingNoteResponse.php
   - src/Models/Operations/PatchTicketingTicketRequest.php
   - src/Models/Operations/PatchTicketingTicketResponse.php
+  - src/Models/Operations/RemoveTicketingCustomerRequest.php
+  - src/Models/Operations/RemoveTicketingCustomerResponse.php
   - src/Models/Operations/RemoveTicketingNoteRequest.php
   - src/Models/Operations/RemoveTicketingNoteResponse.php
   - src/Models/Operations/RemoveTicketingTicketRequest.php
   - src/Models/Operations/RemoveTicketingTicketResponse.php
+  - src/Models/Operations/UpdateTicketingCustomerRequest.php
+  - src/Models/Operations/UpdateTicketingCustomerResponse.php
   - src/Models/Operations/UpdateTicketingNoteRequest.php
   - src/Models/Operations/UpdateTicketingNoteResponse.php
   - src/Models/Operations/UpdateTicketingTicketRequest.php
@@ -487,14 +487,14 @@ generatedFiles:
   - src/Models/Shared/AccountingAccount.php
   - src/Models/Shared/PropertyAccountingAccountRaw.php
   - src/Models/Shared/TaxExemption.php
-  - src/Models/Shared/AccountingCustomer.php
+  - src/Models/Shared/AccountingContact.php
   - src/Models/Shared/AccountingTelephoneType.php
   - src/Models/Shared/AccountingTelephone.php
-  - src/Models/Shared/PropertyAccountingCustomerShippingAddress.php
-  - src/Models/Shared/PropertyAccountingCustomerRaw.php
+  - src/Models/Shared/PropertyAccountingContactShippingAddress.php
+  - src/Models/Shared/PropertyAccountingContactRaw.php
   - src/Models/Shared/AccountingEmailType.php
   - src/Models/Shared/AccountingEmail.php
-  - src/Models/Shared/PropertyAccountingCustomerBillingAddress.php
+  - src/Models/Shared/PropertyAccountingContactBillingAddress.php
   - src/Models/Shared/AccountingInvoiceStatus.php
   - src/Models/Shared/AccountingInvoice.php
   - src/Models/Shared/PropertyAccountingInvoiceRaw.php
@@ -512,15 +512,23 @@ generatedFiles:
   - src/Models/Shared/AccountingOrganization.php
   - src/Models/Shared/PropertyAccountingOrganizationRaw.php
   - src/Models/Shared/PropertyAccountingOrganizationAddress.php
-  - src/Models/Shared/TicketingCustomer.php
-  - src/Models/Shared/TicketingTelephoneType.php
-  - src/Models/Shared/TicketingTelephone.php
-  - src/Models/Shared/PropertyTicketingCustomerRaw.php
-  - src/Models/Shared/TicketingEmailType.php
-  - src/Models/Shared/TicketingEmail.php
+  - src/Models/Shared/CrmContact.php
+  - src/Models/Shared/CrmTelephoneType.php
+  - src/Models/Shared/CrmTelephone.php
+  - src/Models/Shared/PropertyCrmContactRaw.php
+  - src/Models/Shared/CrmEmailType.php
+  - src/Models/Shared/CrmEmail.php
+  - src/Models/Shared/PropertyCrmContactAddress.php
+  - src/Models/Shared/UcContact.php
+  - src/Models/Shared/UcTelephoneType.php
+  - src/Models/Shared/UcTelephone.php
+  - src/Models/Shared/PropertyUcContactRaw.php
+  - src/Models/Shared/UcEmailType.php
+  - src/Models/Shared/UcEmail.php
   - src/Models/Shared/AtsApplicationStatus.php
   - src/Models/Shared/AtsApplication.php
   - src/Models/Shared/PropertyAtsApplicationRaw.php
+  - src/Models/Shared/Origin.php
   - src/Models/Shared/AtsCandidate.php
   - src/Models/Shared/AtsTelephoneType.php
   - src/Models/Shared/AtsTelephone.php
@@ -549,15 +557,8 @@ generatedFiles:
   - src/Models/Shared/AtsStatus.php
   - src/Models/Shared/PropertyAtsStatusRaw.php
   - src/Models/Shared/CrmCompany.php
-  - src/Models/Shared/CrmTelephoneType.php
-  - src/Models/Shared/CrmTelephone.php
   - src/Models/Shared/PropertyCrmCompanyRaw.php
-  - src/Models/Shared/CrmEmailType.php
-  - src/Models/Shared/CrmEmail.php
   - src/Models/Shared/PropertyCrmCompanyAddress.php
-  - src/Models/Shared/CrmContact.php
-  - src/Models/Shared/PropertyCrmContactRaw.php
-  - src/Models/Shared/PropertyCrmContactAddress.php
   - src/Models/Shared/CrmDeal.php
   - src/Models/Shared/PropertyCrmDealRaw.php
   - src/Models/Shared/CrmEventType.php
@@ -579,12 +580,6 @@ generatedFiles:
   - src/Models/Shared/EnrichTelephone.php
   - src/Models/Shared/PropertyEnrichCompanyRaw.php
   - src/Models/Shared/PropertyEnrichCompanyAddress.php
-  - src/Models/Shared/UcContact.php
-  - src/Models/Shared/UcTelephoneType.php
-  - src/Models/Shared/UcTelephone.php
-  - src/Models/Shared/PropertyUcContactRaw.php
-  - src/Models/Shared/UcEmailType.php
-  - src/Models/Shared/UcEmail.php
   - src/Models/Shared/Gender.php
   - src/Models/Shared/EnrichPerson.php
   - src/Models/Shared/EnrichPersonWorkHistory.php
@@ -618,6 +613,12 @@ generatedFiles:
   - src/Models/Shared/PropertyStorageFileRaw.php
   - src/Models/Shared/StoragePermission.php
   - src/Models/Shared/PropertyStoragePermissionRoles.php
+  - src/Models/Shared/TicketingCustomer.php
+  - src/Models/Shared/TicketingTelephoneType.php
+  - src/Models/Shared/TicketingTelephone.php
+  - src/Models/Shared/PropertyTicketingCustomerRaw.php
+  - src/Models/Shared/TicketingEmailType.php
+  - src/Models/Shared/TicketingEmail.php
   - src/Models/Shared/TicketingNote.php
   - src/Models/Shared/PropertyTicketingNoteRaw.php
   - src/Models/Shared/TicketingTicketStatus.php
@@ -649,8 +650,8 @@ generatedFiles:
   - src/Models/Shared/Security.php
   - docs/Models/Operations/CreateAccountingAccountRequest.md
   - docs/Models/Operations/CreateAccountingAccountResponse.md
-  - docs/Models/Operations/CreateAccountingCustomerRequest.md
-  - docs/Models/Operations/CreateAccountingCustomerResponse.md
+  - docs/Models/Operations/CreateAccountingContactRequest.md
+  - docs/Models/Operations/CreateAccountingContactResponse.md
   - docs/Models/Operations/CreateAccountingInvoiceRequest.md
   - docs/Models/Operations/CreateAccountingInvoiceResponse.md
   - docs/Models/Operations/CreateAccountingItemRequest.md
@@ -663,8 +664,8 @@ generatedFiles:
   - docs/Models/Operations/CreateAccountingTransactionResponse.md
   - docs/Models/Operations/GetAccountingAccountRequest.md
   - docs/Models/Operations/GetAccountingAccountResponse.md
-  - docs/Models/Operations/GetAccountingCustomerRequest.md
-  - docs/Models/Operations/GetAccountingCustomerResponse.md
+  - docs/Models/Operations/GetAccountingContactRequest.md
+  - docs/Models/Operations/GetAccountingContactResponse.md
   - docs/Models/Operations/GetAccountingInvoiceRequest.md
   - docs/Models/Operations/GetAccountingInvoiceResponse.md
   - docs/Models/Operations/GetAccountingItemRequest.md
@@ -679,8 +680,8 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingTransactionResponse.md
   - docs/Models/Operations/ListAccountingAccountsRequest.md
   - docs/Models/Operations/ListAccountingAccountsResponse.md
-  - docs/Models/Operations/ListAccountingCustomersRequest.md
-  - docs/Models/Operations/ListAccountingCustomersResponse.md
+  - docs/Models/Operations/ListAccountingContactsRequest.md
+  - docs/Models/Operations/ListAccountingContactsResponse.md
   - docs/Models/Operations/ListAccountingInvoicesRequest.md
   - docs/Models/Operations/ListAccountingInvoicesResponse.md
   - docs/Models/Operations/ListAccountingItemsRequest.md
@@ -695,8 +696,8 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingTransactionsResponse.md
   - docs/Models/Operations/PatchAccountingAccountRequest.md
   - docs/Models/Operations/PatchAccountingAccountResponse.md
-  - docs/Models/Operations/PatchAccountingCustomerRequest.md
-  - docs/Models/Operations/PatchAccountingCustomerResponse.md
+  - docs/Models/Operations/PatchAccountingContactRequest.md
+  - docs/Models/Operations/PatchAccountingContactResponse.md
   - docs/Models/Operations/PatchAccountingInvoiceRequest.md
   - docs/Models/Operations/PatchAccountingInvoiceResponse.md
   - docs/Models/Operations/PatchAccountingItemRequest.md
@@ -709,8 +710,8 @@ generatedFiles:
   - docs/Models/Operations/PatchAccountingTransactionResponse.md
   - docs/Models/Operations/RemoveAccountingAccountRequest.md
   - docs/Models/Operations/RemoveAccountingAccountResponse.md
-  - docs/Models/Operations/RemoveAccountingCustomerRequest.md
-  - docs/Models/Operations/RemoveAccountingCustomerResponse.md
+  - docs/Models/Operations/RemoveAccountingContactRequest.md
+  - docs/Models/Operations/RemoveAccountingContactResponse.md
   - docs/Models/Operations/RemoveAccountingInvoiceRequest.md
   - docs/Models/Operations/RemoveAccountingInvoiceResponse.md
   - docs/Models/Operations/RemoveAccountingItemRequest.md
@@ -723,8 +724,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveAccountingTransactionResponse.md
   - docs/Models/Operations/UpdateAccountingAccountRequest.md
   - docs/Models/Operations/UpdateAccountingAccountResponse.md
-  - docs/Models/Operations/UpdateAccountingCustomerRequest.md
-  - docs/Models/Operations/UpdateAccountingCustomerResponse.md
+  - docs/Models/Operations/UpdateAccountingContactRequest.md
+  - docs/Models/Operations/UpdateAccountingContactResponse.md
   - docs/Models/Operations/UpdateAccountingInvoiceRequest.md
   - docs/Models/Operations/UpdateAccountingInvoiceResponse.md
   - docs/Models/Operations/UpdateAccountingItemRequest.md
@@ -735,18 +736,30 @@ generatedFiles:
   - docs/Models/Operations/UpdateAccountingTaxrateResponse.md
   - docs/Models/Operations/UpdateAccountingTransactionRequest.md
   - docs/Models/Operations/UpdateAccountingTransactionResponse.md
-  - docs/Models/Operations/CreateTicketingCustomerRequest.md
-  - docs/Models/Operations/CreateTicketingCustomerResponse.md
-  - docs/Models/Operations/GetTicketingCustomerRequest.md
-  - docs/Models/Operations/GetTicketingCustomerResponse.md
-  - docs/Models/Operations/ListTicketingCustomersRequest.md
-  - docs/Models/Operations/ListTicketingCustomersResponse.md
-  - docs/Models/Operations/PatchTicketingCustomerRequest.md
-  - docs/Models/Operations/PatchTicketingCustomerResponse.md
-  - docs/Models/Operations/RemoveTicketingCustomerRequest.md
-  - docs/Models/Operations/RemoveTicketingCustomerResponse.md
-  - docs/Models/Operations/UpdateTicketingCustomerRequest.md
-  - docs/Models/Operations/UpdateTicketingCustomerResponse.md
+  - docs/Models/Operations/CreateCrmContactRequest.md
+  - docs/Models/Operations/CreateCrmContactResponse.md
+  - docs/Models/Operations/CreateUcContactRequest.md
+  - docs/Models/Operations/CreateUcContactResponse.md
+  - docs/Models/Operations/GetCrmContactRequest.md
+  - docs/Models/Operations/GetCrmContactResponse.md
+  - docs/Models/Operations/GetUcContactRequest.md
+  - docs/Models/Operations/GetUcContactResponse.md
+  - docs/Models/Operations/ListCrmContactsRequest.md
+  - docs/Models/Operations/ListCrmContactsResponse.md
+  - docs/Models/Operations/ListUcContactsRequest.md
+  - docs/Models/Operations/ListUcContactsResponse.md
+  - docs/Models/Operations/PatchCrmContactRequest.md
+  - docs/Models/Operations/PatchCrmContactResponse.md
+  - docs/Models/Operations/PatchUcContactRequest.md
+  - docs/Models/Operations/PatchUcContactResponse.md
+  - docs/Models/Operations/RemoveCrmContactRequest.md
+  - docs/Models/Operations/RemoveCrmContactResponse.md
+  - docs/Models/Operations/RemoveUcContactRequest.md
+  - docs/Models/Operations/RemoveUcContactResponse.md
+  - docs/Models/Operations/UpdateCrmContactRequest.md
+  - docs/Models/Operations/UpdateCrmContactResponse.md
+  - docs/Models/Operations/UpdateUcContactRequest.md
+  - docs/Models/Operations/UpdateUcContactResponse.md
   - docs/Models/Operations/CreateAtsApplicationRequest.md
   - docs/Models/Operations/CreateAtsApplicationResponse.md
   - docs/Models/Operations/CreateAtsCandidateRequest.md
@@ -823,8 +836,6 @@ generatedFiles:
   - docs/Models/Operations/UpdateAtsScorecardResponse.md
   - docs/Models/Operations/CreateCrmCompanyRequest.md
   - docs/Models/Operations/CreateCrmCompanyResponse.md
-  - docs/Models/Operations/CreateCrmContactRequest.md
-  - docs/Models/Operations/CreateCrmContactResponse.md
   - docs/Models/Operations/CreateCrmDealRequest.md
   - docs/Models/Operations/CreateCrmDealResponse.md
   - docs/Models/Operations/CreateCrmEventRequest.md
@@ -835,8 +846,6 @@ generatedFiles:
   - docs/Models/Operations/CreateCrmPipelineResponse.md
   - docs/Models/Operations/GetCrmCompanyRequest.md
   - docs/Models/Operations/GetCrmCompanyResponse.md
-  - docs/Models/Operations/GetCrmContactRequest.md
-  - docs/Models/Operations/GetCrmContactResponse.md
   - docs/Models/Operations/GetCrmDealRequest.md
   - docs/Models/Operations/GetCrmDealResponse.md
   - docs/Models/Operations/GetCrmEventRequest.md
@@ -847,8 +856,6 @@ generatedFiles:
   - docs/Models/Operations/GetCrmPipelineResponse.md
   - docs/Models/Operations/ListCrmCompaniesRequest.md
   - docs/Models/Operations/ListCrmCompaniesResponse.md
-  - docs/Models/Operations/ListCrmContactsRequest.md
-  - docs/Models/Operations/ListCrmContactsResponse.md
   - docs/Models/Operations/ListCrmDealsRequest.md
   - docs/Models/Operations/ListCrmDealsResponse.md
   - docs/Models/Operations/ListCrmEventsRequest.md
@@ -859,8 +866,6 @@ generatedFiles:
   - docs/Models/Operations/ListCrmPipelinesResponse.md
   - docs/Models/Operations/PatchCrmCompanyRequest.md
   - docs/Models/Operations/PatchCrmCompanyResponse.md
-  - docs/Models/Operations/PatchCrmContactRequest.md
-  - docs/Models/Operations/PatchCrmContactResponse.md
   - docs/Models/Operations/PatchCrmDealRequest.md
   - docs/Models/Operations/PatchCrmDealResponse.md
   - docs/Models/Operations/PatchCrmEventRequest.md
@@ -871,8 +876,6 @@ generatedFiles:
   - docs/Models/Operations/PatchCrmPipelineResponse.md
   - docs/Models/Operations/RemoveCrmCompanyRequest.md
   - docs/Models/Operations/RemoveCrmCompanyResponse.md
-  - docs/Models/Operations/RemoveCrmContactRequest.md
-  - docs/Models/Operations/RemoveCrmContactResponse.md
   - docs/Models/Operations/RemoveCrmDealRequest.md
   - docs/Models/Operations/RemoveCrmDealResponse.md
   - docs/Models/Operations/RemoveCrmEventRequest.md
@@ -883,8 +886,6 @@ generatedFiles:
   - docs/Models/Operations/RemoveCrmPipelineResponse.md
   - docs/Models/Operations/UpdateCrmCompanyRequest.md
   - docs/Models/Operations/UpdateCrmCompanyResponse.md
-  - docs/Models/Operations/UpdateCrmContactRequest.md
-  - docs/Models/Operations/UpdateCrmContactResponse.md
   - docs/Models/Operations/UpdateCrmDealRequest.md
   - docs/Models/Operations/UpdateCrmDealResponse.md
   - docs/Models/Operations/UpdateCrmEventRequest.md
@@ -895,18 +896,6 @@ generatedFiles:
   - docs/Models/Operations/UpdateCrmPipelineResponse.md
   - docs/Models/Operations/ListEnrichCompaniesRequest.md
   - docs/Models/Operations/ListEnrichCompaniesResponse.md
-  - docs/Models/Operations/CreateUcContactRequest.md
-  - docs/Models/Operations/CreateUcContactResponse.md
-  - docs/Models/Operations/GetUcContactRequest.md
-  - docs/Models/Operations/GetUcContactResponse.md
-  - docs/Models/Operations/ListUcContactsRequest.md
-  - docs/Models/Operations/ListUcContactsResponse.md
-  - docs/Models/Operations/PatchUcContactRequest.md
-  - docs/Models/Operations/PatchUcContactResponse.md
-  - docs/Models/Operations/RemoveUcContactRequest.md
-  - docs/Models/Operations/RemoveUcContactResponse.md
-  - docs/Models/Operations/UpdateUcContactRequest.md
-  - docs/Models/Operations/UpdateUcContactResponse.md
   - docs/Models/Operations/ListEnrichPeopleRequest.md
   - docs/Models/Operations/ListEnrichPeopleResponse.md
   - docs/Models/Operations/CreateHrisEmployeeRequest.md
@@ -979,26 +968,38 @@ generatedFiles:
   - docs/Models/Operations/RemoveStorageFileResponse.md
   - docs/Models/Operations/UpdateStorageFileRequest.md
   - docs/Models/Operations/UpdateStorageFileResponse.md
+  - docs/Models/Operations/CreateTicketingCustomerRequest.md
+  - docs/Models/Operations/CreateTicketingCustomerResponse.md
   - docs/Models/Operations/CreateTicketingNoteRequest.md
   - docs/Models/Operations/CreateTicketingNoteResponse.md
   - docs/Models/Operations/CreateTicketingTicketRequest.md
   - docs/Models/Operations/CreateTicketingTicketResponse.md
+  - docs/Models/Operations/GetTicketingCustomerRequest.md
+  - docs/Models/Operations/GetTicketingCustomerResponse.md
   - docs/Models/Operations/GetTicketingNoteRequest.md
   - docs/Models/Operations/GetTicketingNoteResponse.md
   - docs/Models/Operations/GetTicketingTicketRequest.md
   - docs/Models/Operations/GetTicketingTicketResponse.md
+  - docs/Models/Operations/ListTicketingCustomersRequest.md
+  - docs/Models/Operations/ListTicketingCustomersResponse.md
   - docs/Models/Operations/ListTicketingNotesRequest.md
   - docs/Models/Operations/ListTicketingNotesResponse.md
   - docs/Models/Operations/ListTicketingTicketsRequest.md
   - docs/Models/Operations/ListTicketingTicketsResponse.md
+  - docs/Models/Operations/PatchTicketingCustomerRequest.md
+  - docs/Models/Operations/PatchTicketingCustomerResponse.md
   - docs/Models/Operations/PatchTicketingNoteRequest.md
   - docs/Models/Operations/PatchTicketingNoteResponse.md
   - docs/Models/Operations/PatchTicketingTicketRequest.md
   - docs/Models/Operations/PatchTicketingTicketResponse.md
+  - docs/Models/Operations/RemoveTicketingCustomerRequest.md
+  - docs/Models/Operations/RemoveTicketingCustomerResponse.md
   - docs/Models/Operations/RemoveTicketingNoteRequest.md
   - docs/Models/Operations/RemoveTicketingNoteResponse.md
   - docs/Models/Operations/RemoveTicketingTicketRequest.md
   - docs/Models/Operations/RemoveTicketingTicketResponse.md
+  - docs/Models/Operations/UpdateTicketingCustomerRequest.md
+  - docs/Models/Operations/UpdateTicketingCustomerResponse.md
   - docs/Models/Operations/UpdateTicketingNoteRequest.md
   - docs/Models/Operations/UpdateTicketingNoteResponse.md
   - docs/Models/Operations/UpdateTicketingTicketRequest.md
@@ -1049,14 +1050,14 @@ generatedFiles:
   - docs/Models/Shared/AccountingAccount.md
   - docs/Models/Shared/PropertyAccountingAccountRaw.md
   - docs/Models/Shared/TaxExemption.md
-  - docs/Models/Shared/AccountingCustomer.md
+  - docs/Models/Shared/AccountingContact.md
   - docs/Models/Shared/AccountingTelephoneType.md
   - docs/Models/Shared/AccountingTelephone.md
-  - docs/Models/Shared/PropertyAccountingCustomerShippingAddress.md
-  - docs/Models/Shared/PropertyAccountingCustomerRaw.md
+  - docs/Models/Shared/PropertyAccountingContactShippingAddress.md
+  - docs/Models/Shared/PropertyAccountingContactRaw.md
   - docs/Models/Shared/AccountingEmailType.md
   - docs/Models/Shared/AccountingEmail.md
-  - docs/Models/Shared/PropertyAccountingCustomerBillingAddress.md
+  - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
   - docs/Models/Shared/AccountingInvoiceStatus.md
   - docs/Models/Shared/AccountingInvoice.md
   - docs/Models/Shared/PropertyAccountingInvoiceRaw.md
@@ -1074,15 +1075,23 @@ generatedFiles:
   - docs/Models/Shared/AccountingOrganization.md
   - docs/Models/Shared/PropertyAccountingOrganizationRaw.md
   - docs/Models/Shared/PropertyAccountingOrganizationAddress.md
-  - docs/Models/Shared/TicketingCustomer.md
-  - docs/Models/Shared/TicketingTelephoneType.md
-  - docs/Models/Shared/TicketingTelephone.md
-  - docs/Models/Shared/PropertyTicketingCustomerRaw.md
-  - docs/Models/Shared/TicketingEmailType.md
-  - docs/Models/Shared/TicketingEmail.md
+  - docs/Models/Shared/CrmContact.md
+  - docs/Models/Shared/CrmTelephoneType.md
+  - docs/Models/Shared/CrmTelephone.md
+  - docs/Models/Shared/PropertyCrmContactRaw.md
+  - docs/Models/Shared/CrmEmailType.md
+  - docs/Models/Shared/CrmEmail.md
+  - docs/Models/Shared/PropertyCrmContactAddress.md
+  - docs/Models/Shared/UcContact.md
+  - docs/Models/Shared/UcTelephoneType.md
+  - docs/Models/Shared/UcTelephone.md
+  - docs/Models/Shared/PropertyUcContactRaw.md
+  - docs/Models/Shared/UcEmailType.md
+  - docs/Models/Shared/UcEmail.md
   - docs/Models/Shared/AtsApplicationStatus.md
   - docs/Models/Shared/AtsApplication.md
   - docs/Models/Shared/PropertyAtsApplicationRaw.md
+  - docs/Models/Shared/Origin.md
   - docs/Models/Shared/AtsCandidate.md
   - docs/Models/Shared/AtsTelephoneType.md
   - docs/Models/Shared/AtsTelephone.md
@@ -1111,15 +1120,8 @@ generatedFiles:
   - docs/Models/Shared/AtsStatus.md
   - docs/Models/Shared/PropertyAtsStatusRaw.md
   - docs/Models/Shared/CrmCompany.md
-  - docs/Models/Shared/CrmTelephoneType.md
-  - docs/Models/Shared/CrmTelephone.md
   - docs/Models/Shared/PropertyCrmCompanyRaw.md
-  - docs/Models/Shared/CrmEmailType.md
-  - docs/Models/Shared/CrmEmail.md
   - docs/Models/Shared/PropertyCrmCompanyAddress.md
-  - docs/Models/Shared/CrmContact.md
-  - docs/Models/Shared/PropertyCrmContactRaw.md
-  - docs/Models/Shared/PropertyCrmContactAddress.md
   - docs/Models/Shared/CrmDeal.md
   - docs/Models/Shared/PropertyCrmDealRaw.md
   - docs/Models/Shared/CrmEventType.md
@@ -1141,12 +1143,6 @@ generatedFiles:
   - docs/Models/Shared/EnrichTelephone.md
   - docs/Models/Shared/PropertyEnrichCompanyRaw.md
   - docs/Models/Shared/PropertyEnrichCompanyAddress.md
-  - docs/Models/Shared/UcContact.md
-  - docs/Models/Shared/UcTelephoneType.md
-  - docs/Models/Shared/UcTelephone.md
-  - docs/Models/Shared/PropertyUcContactRaw.md
-  - docs/Models/Shared/UcEmailType.md
-  - docs/Models/Shared/UcEmail.md
   - docs/Models/Shared/Gender.md
   - docs/Models/Shared/EnrichPerson.md
   - docs/Models/Shared/EnrichPersonWorkHistory.md
@@ -1180,6 +1176,12 @@ generatedFiles:
   - docs/Models/Shared/PropertyStorageFileRaw.md
   - docs/Models/Shared/StoragePermission.md
   - docs/Models/Shared/PropertyStoragePermissionRoles.md
+  - docs/Models/Shared/TicketingCustomer.md
+  - docs/Models/Shared/TicketingTelephoneType.md
+  - docs/Models/Shared/TicketingTelephone.md
+  - docs/Models/Shared/PropertyTicketingCustomerRaw.md
+  - docs/Models/Shared/TicketingEmailType.md
+  - docs/Models/Shared/TicketingEmail.md
   - docs/Models/Shared/TicketingNote.md
   - docs/Models/Shared/PropertyTicketingNoteRaw.md
   - docs/Models/Shared/TicketingTicketStatus.md
@@ -1212,7 +1214,7 @@ generatedFiles:
   - docs/sdks/unifiedto/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md
-  - docs/sdks/customer/README.md
+  - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
   - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
@@ -1229,7 +1231,6 @@ generatedFiles:
   - docs/sdks/scorecard/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
-  - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
   - docs/sdks/lead/README.md
@@ -1246,6 +1247,7 @@ generatedFiles:
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
+  - docs/sdks/customer/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md
   - docs/sdks/uc/README.md

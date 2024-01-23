@@ -20,12 +20,12 @@ class ListAccountingInvoicesRequest
     public string $connectionId;
     
     /**
-     * The customer ID to filter results
+     * The customer/supplier ID to filter results
      * 
-     * @var ?string $customerId
+     * @var ?string $contactId
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=customer_id')]
-    public ?string $customerId = null;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
+    public ?string $contactId = null;
     
     /**
      * Comma-delimited fields to return
@@ -66,7 +66,7 @@ class ListAccountingInvoicesRequest
 	public function __construct()
 	{
 		$this->connectionId = "";
-		$this->customerId = null;
+		$this->contactId = null;
 		$this->fields = null;
 		$this->limit = null;
 		$this->offset = null;

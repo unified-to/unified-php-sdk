@@ -66,6 +66,11 @@ class AtsCandidate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('origin')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Origin>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?Origin $origin = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -112,6 +117,7 @@ class AtsCandidate
 		$this->imageUrl = null;
 		$this->linkUrls = null;
 		$this->name = null;
+		$this->origin = null;
 		$this->raw = null;
 		$this->tags = null;
 		$this->telephones = null;

@@ -4,14 +4,14 @@
 ### Available Operations
 
 * [createAccountingAccount](#createaccountingaccount) - Create an account
-* [createAccountingCustomer](#createaccountingcustomer) - Create a customer
+* [createAccountingContact](#createaccountingcontact) - Create a contact
 * [createAccountingInvoice](#createaccountinginvoice) - Create a invoice
 * [createAccountingItem](#createaccountingitem) - Create an item
 * [createAccountingPayment](#createaccountingpayment) - Create a payment
 * [createAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
 * [createAccountingTransaction](#createaccountingtransaction) - Create a transaction
 * [getAccountingAccount](#getaccountingaccount) - Retrieve an account
-* [getAccountingCustomer](#getaccountingcustomer) - Retrieve a customer
+* [getAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve a invoice
 * [getAccountingItem](#getaccountingitem) - Retrieve an item
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
@@ -19,7 +19,7 @@
 * [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
-* [listAccountingCustomers](#listaccountingcustomers) - List all customers
+* [listAccountingContacts](#listaccountingcontacts) - List all contacts
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [listAccountingItems](#listaccountingitems) - List all items
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
@@ -27,21 +27,21 @@
 * [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
-* [patchAccountingCustomer](#patchaccountingcustomer) - Update a customer
+* [patchAccountingContact](#patchaccountingcontact) - Update a contact
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update a invoice
 * [patchAccountingItem](#patchaccountingitem) - Update an item
 * [patchAccountingPayment](#patchaccountingpayment) - Update a payment
 * [patchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
 * [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [removeAccountingAccount](#removeaccountingaccount) - Remove an account
-* [removeAccountingCustomer](#removeaccountingcustomer) - Remove a customer
+* [removeAccountingContact](#removeaccountingcontact) - Remove a contact
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove a invoice
 * [removeAccountingItem](#removeaccountingitem) - Remove an item
 * [removeAccountingPayment](#removeaccountingpayment) - Remove a payment
 * [removeAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
 * [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingAccount](#updateaccountingaccount) - Update an account
-* [updateAccountingCustomer](#updateaccountingcustomer) - Update a customer
+* [updateAccountingContact](#updateaccountingcontact) - Update a contact
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update a invoice
 * [updateAccountingItem](#updateaccountingitem) - Update an item
 * [updateAccountingPayment](#updateaccountingpayment) - Update a payment
@@ -107,9 +107,9 @@ try {
 **[?\Unified\Unified_to\Models\Operations\CreateAccountingAccountResponse](../../Models/Operations/CreateAccountingAccountResponse.md)**
 
 
-## createAccountingCustomer
+## createAccountingContact
 
-Create a customer
+Create a contact
 
 ### Example Usage
 
@@ -129,46 +129,48 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateAccountingCustomerRequest();
-    $request->accountingCustomer = new Shared\AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
-    $request->accountingCustomer->billingAddress->address1 = 'string';
-    $request->accountingCustomer->billingAddress->address2 = 'string';
-    $request->accountingCustomer->billingAddress->city = 'New Raulfield';
-    $request->accountingCustomer->billingAddress->country = 'Libyan Arab Jamahiriya';
-    $request->accountingCustomer->billingAddress->countryCode = 'IN';
-    $request->accountingCustomer->billingAddress->postalCode = '22232';
-    $request->accountingCustomer->billingAddress->region = 'string';
-    $request->accountingCustomer->billingAddress->regionCode = 'string';
-    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-22T23:43:30.815Z');
-    $request->accountingCustomer->currency = 'Dalasi';
-    $request->accountingCustomer->emails = [
+        $request = new Operations\CreateAccountingContactRequest();
+    $request->accountingContact = new Shared\AccountingContact();
+    $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
+    $request->accountingContact->billingAddress->address1 = 'string';
+    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->city = 'Lake Benny';
+    $request->accountingContact->billingAddress->country = 'Azerbaijan';
+    $request->accountingContact->billingAddress->countryCode = 'GT';
+    $request->accountingContact->billingAddress->postalCode = '48359-3238';
+    $request->accountingContact->billingAddress->region = 'string';
+    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-19T03:22:44.048Z');
+    $request->accountingContact->currency = 'Peso Uruguayo';
+    $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingCustomer->id = '<ID>';
-    $request->accountingCustomer->isActive = false;
-    $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
-    $request->accountingCustomer->shippingAddress->address1 = 'string';
-    $request->accountingCustomer->shippingAddress->address2 = 'string';
-    $request->accountingCustomer->shippingAddress->city = 'Lake Freddy';
-    $request->accountingCustomer->shippingAddress->country = 'Croatia';
-    $request->accountingCustomer->shippingAddress->countryCode = 'SC';
-    $request->accountingCustomer->shippingAddress->postalCode = '08305';
-    $request->accountingCustomer->shippingAddress->region = 'string';
-    $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = Shared\TaxExemption::LocalGov;
-    $request->accountingCustomer->taxNumber = 'string';
-    $request->accountingCustomer->telephones = [
+    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->isActive = false;
+    $request->accountingContact->isCustomer = false;
+    $request->accountingContact->isSupplier = false;
+    $request->accountingContact->name = 'string';
+    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
+    $request->accountingContact->shippingAddress->address1 = 'string';
+    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->city = 'Warren';
+    $request->accountingContact->shippingAddress->country = 'Cayman Islands';
+    $request->accountingContact->shippingAddress->countryCode = 'ST';
+    $request->accountingContact->shippingAddress->postalCode = '81046-2093';
+    $request->accountingContact->shippingAddress->region = 'string';
+    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->taxExemption = Shared\TaxExemption::EducationalOrg;
+    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-07T02:36:26.739Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-29T11:32:51.059Z');
     $request->connectionId = 'string';;
 
-    $response = $sdk->accounting->createAccountingCustomer($request);
+    $response = $sdk->accounting->createAccountingContact($request);
 
-    if ($response->accountingCustomer !== null) {
+    if ($response->accountingContact !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -178,14 +180,14 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateAccountingCustomerRequest](../../Models/Operations/CreateAccountingCustomerRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateAccountingContactRequest](../../Models/Operations/CreateAccountingContactRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateAccountingCustomerResponse](../../Models/Operations/CreateAccountingCustomerResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateAccountingContactResponse](../../Models/Operations/CreateAccountingContactResponse.md)**
 
 
 ## createAccountingInvoice
@@ -214,9 +216,9 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6736.06;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-27T09:14:42.959Z');
+    $request->accountingInvoice->contactId = 'string';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-05T18:32:52.109Z');
     $request->accountingInvoice->currency = 'Uzbekistan Sum';
-    $request->accountingInvoice->customerId = 'string';
     $request->accountingInvoice->discountAmount = 259.66;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T15:54:59.455Z');
     $request->accountingInvoice->id = '<ID>';
@@ -344,9 +346,9 @@ try {
         $request = new Operations\CreateAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
     $request->accountingPayment->accountId = 'string';
+    $request->accountingPayment->contactId = 'string';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-28T13:13:46.548Z');
     $request->accountingPayment->currency = 'Lari';
-    $request->accountingPayment->customerId = 'string';
     $request->accountingPayment->id = '<ID>';
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
@@ -546,9 +548,9 @@ try {
 **[?\Unified\Unified_to\Models\Operations\GetAccountingAccountResponse](../../Models/Operations/GetAccountingAccountResponse.md)**
 
 
-## getAccountingCustomer
+## getAccountingContact
 
-Retrieve a customer
+Retrieve a contact
 
 ### Example Usage
 
@@ -568,16 +570,16 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetAccountingCustomerRequest();
+        $request = new Operations\GetAccountingContactRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
     $request->id = '<ID>';;
 
-    $response = $sdk->accounting->getAccountingCustomer($request);
+    $response = $sdk->accounting->getAccountingContact($request);
 
-    if ($response->accountingCustomer !== null) {
+    if ($response->accountingContact !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -587,14 +589,14 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetAccountingCustomerRequest](../../Models/Operations/GetAccountingCustomerRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAccountingContactRequest](../../Models/Operations/GetAccountingContactRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAccountingCustomerResponse](../../Models/Operations/GetAccountingCustomerResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetAccountingContactResponse](../../Models/Operations/GetAccountingContactResponse.md)**
 
 
 ## getAccountingInvoice
@@ -959,9 +961,9 @@ try {
 **[?\Unified\Unified_to\Models\Operations\ListAccountingAccountsResponse](../../Models/Operations/ListAccountingAccountsResponse.md)**
 
 
-## listAccountingCustomers
+## listAccountingContacts
 
-List all customers
+List all contacts
 
 ### Example Usage
 
@@ -981,21 +983,22 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListAccountingCustomersRequest();
+        $request = new Operations\ListAccountingContactsRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
-    $request->limit = 7844.09;
-    $request->offset = 4439.53;
+    $request->limit = 4596.32;
+    $request->offset = 8881.9;
     $request->order = 'string';
     $request->query = 'string';
     $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-23T18:23:01.069Z');;
+    $request->type = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T14:00:38.736Z');;
 
-    $response = $sdk->accounting->listAccountingCustomers($request);
+    $response = $sdk->accounting->listAccountingContacts($request);
 
-    if ($response->accountingCustomers !== null) {
+    if ($response->accountingContacts !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -1005,14 +1008,14 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\ListAccountingCustomersRequest](../../Models/Operations/ListAccountingCustomersRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListAccountingContactsRequest](../../Models/Operations/ListAccountingContactsRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListAccountingCustomersResponse](../../Models/Operations/ListAccountingCustomersResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\ListAccountingContactsResponse](../../Models/Operations/ListAccountingContactsResponse.md)**
 
 
 ## listAccountingInvoices
@@ -1039,7 +1042,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListAccountingInvoicesRequest();
     $request->connectionId = 'string';
-    $request->customerId = 'string';
+    $request->contactId = 'string';
     $request->fields = [
         'string',
     ];
@@ -1208,7 +1211,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListAccountingPaymentsRequest();
     $request->connectionId = 'string';
-    $request->customerId = 'string';
+    $request->contactId = 'string';
     $request->fields = [
         'string',
     ];
@@ -1414,9 +1417,9 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PatchAccountingAccountResponse](../../Models/Operations/PatchAccountingAccountResponse.md)**
 
 
-## patchAccountingCustomer
+## patchAccountingContact
 
-Update a customer
+Update a contact
 
 ### Example Usage
 
@@ -1436,47 +1439,49 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchAccountingCustomerRequest();
-    $request->accountingCustomer = new Shared\AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
-    $request->accountingCustomer->billingAddress->address1 = 'string';
-    $request->accountingCustomer->billingAddress->address2 = 'string';
-    $request->accountingCustomer->billingAddress->city = 'Visalia';
-    $request->accountingCustomer->billingAddress->country = 'Norway';
-    $request->accountingCustomer->billingAddress->countryCode = 'LY';
-    $request->accountingCustomer->billingAddress->postalCode = '50996-7347';
-    $request->accountingCustomer->billingAddress->region = 'string';
-    $request->accountingCustomer->billingAddress->regionCode = 'string';
-    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-26T22:13:14.646Z');
-    $request->accountingCustomer->currency = 'Kina';
-    $request->accountingCustomer->emails = [
+        $request = new Operations\PatchAccountingContactRequest();
+    $request->accountingContact = new Shared\AccountingContact();
+    $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
+    $request->accountingContact->billingAddress->address1 = 'string';
+    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->city = 'Sylvestermouth';
+    $request->accountingContact->billingAddress->country = 'Norfolk Island';
+    $request->accountingContact->billingAddress->countryCode = 'BN';
+    $request->accountingContact->billingAddress->postalCode = '34531-3519';
+    $request->accountingContact->billingAddress->region = 'string';
+    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-14T18:48:39.369Z');
+    $request->accountingContact->currency = 'Singapore Dollar';
+    $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingCustomer->id = '<ID>';
-    $request->accountingCustomer->isActive = false;
-    $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
-    $request->accountingCustomer->shippingAddress->address1 = 'string';
-    $request->accountingCustomer->shippingAddress->address2 = 'string';
-    $request->accountingCustomer->shippingAddress->city = 'Imaniburgh';
-    $request->accountingCustomer->shippingAddress->country = 'Barbados';
-    $request->accountingCustomer->shippingAddress->countryCode = 'MH';
-    $request->accountingCustomer->shippingAddress->postalCode = '39981-0354';
-    $request->accountingCustomer->shippingAddress->region = 'string';
-    $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = Shared\TaxExemption::Foreign;
-    $request->accountingCustomer->taxNumber = 'string';
-    $request->accountingCustomer->telephones = [
+    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->isActive = false;
+    $request->accountingContact->isCustomer = false;
+    $request->accountingContact->isSupplier = false;
+    $request->accountingContact->name = 'string';
+    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
+    $request->accountingContact->shippingAddress->address1 = 'string';
+    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->city = 'Anyafurt';
+    $request->accountingContact->shippingAddress->country = 'Kiribati';
+    $request->accountingContact->shippingAddress->countryCode = 'SE';
+    $request->accountingContact->shippingAddress->postalCode = '62367-9125';
+    $request->accountingContact->shippingAddress->region = 'string';
+    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->taxExemption = Shared\TaxExemption::RegionGov;
+    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-14T18:13:50.455Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T14:47:27.816Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
-    $response = $sdk->accounting->patchAccountingCustomer($request);
+    $response = $sdk->accounting->patchAccountingContact($request);
 
-    if ($response->accountingCustomer !== null) {
+    if ($response->accountingContact !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -1486,14 +1491,14 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchAccountingCustomerRequest](../../Models/Operations/PatchAccountingCustomerRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchAccountingContactRequest](../../Models/Operations/PatchAccountingContactRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchAccountingCustomerResponse](../../Models/Operations/PatchAccountingCustomerResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchAccountingContactResponse](../../Models/Operations/PatchAccountingContactResponse.md)**
 
 
 ## patchAccountingInvoice
@@ -1522,9 +1527,9 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 7374.1;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-18T11:25:21.140Z');
+    $request->accountingInvoice->contactId = 'string';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T05:39:15.854Z');
     $request->accountingInvoice->currency = 'Gold';
-    $request->accountingInvoice->customerId = 'string';
     $request->accountingInvoice->discountAmount = 9127.96;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-05T05:55:55.560Z');
     $request->accountingInvoice->id = '<ID>';
@@ -1654,9 +1659,9 @@ try {
         $request = new Operations\PatchAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
     $request->accountingPayment->accountId = 'string';
+    $request->accountingPayment->contactId = 'string';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-25T02:56:43.385Z');
     $request->accountingPayment->currency = 'Boliviano boliviano';
-    $request->accountingPayment->customerId = 'string';
     $request->accountingPayment->id = '<ID>';
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
@@ -1856,9 +1861,9 @@ try {
 **[?\Unified\Unified_to\Models\Operations\RemoveAccountingAccountResponse](../../Models/Operations/RemoveAccountingAccountResponse.md)**
 
 
-## removeAccountingCustomer
+## removeAccountingContact
 
-Remove a customer
+Remove a contact
 
 ### Example Usage
 
@@ -1878,11 +1883,11 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveAccountingCustomerRequest();
+        $request = new Operations\RemoveAccountingContactRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
-    $response = $sdk->accounting->removeAccountingCustomer($request);
+    $response = $sdk->accounting->removeAccountingContact($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -1894,14 +1899,14 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveAccountingCustomerRequest](../../Models/Operations/RemoveAccountingCustomerRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest](../../Models/Operations/RemoveAccountingContactRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveAccountingCustomerResponse](../../Models/Operations/RemoveAccountingCustomerResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\RemoveAccountingContactResponse](../../Models/Operations/RemoveAccountingContactResponse.md)**
 
 
 ## removeAccountingInvoice
@@ -2204,9 +2209,9 @@ try {
 **[?\Unified\Unified_to\Models\Operations\UpdateAccountingAccountResponse](../../Models/Operations/UpdateAccountingAccountResponse.md)**
 
 
-## updateAccountingCustomer
+## updateAccountingContact
 
-Update a customer
+Update a contact
 
 ### Example Usage
 
@@ -2226,47 +2231,49 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateAccountingCustomerRequest();
-    $request->accountingCustomer = new Shared\AccountingCustomer();
-    $request->accountingCustomer->billingAddress = new Shared\PropertyAccountingCustomerBillingAddress();
-    $request->accountingCustomer->billingAddress->address1 = 'string';
-    $request->accountingCustomer->billingAddress->address2 = 'string';
-    $request->accountingCustomer->billingAddress->city = 'Renton';
-    $request->accountingCustomer->billingAddress->country = 'Iceland';
-    $request->accountingCustomer->billingAddress->countryCode = 'VN';
-    $request->accountingCustomer->billingAddress->postalCode = '77223-4340';
-    $request->accountingCustomer->billingAddress->region = 'string';
-    $request->accountingCustomer->billingAddress->regionCode = 'string';
-    $request->accountingCustomer->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-08T03:21:30.283Z');
-    $request->accountingCustomer->currency = 'Guinea Franc';
-    $request->accountingCustomer->emails = [
+        $request = new Operations\UpdateAccountingContactRequest();
+    $request->accountingContact = new Shared\AccountingContact();
+    $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
+    $request->accountingContact->billingAddress->address1 = 'string';
+    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->city = 'Mayaguez';
+    $request->accountingContact->billingAddress->country = 'Ghana';
+    $request->accountingContact->billingAddress->countryCode = 'JE';
+    $request->accountingContact->billingAddress->postalCode = '16521-4269';
+    $request->accountingContact->billingAddress->region = 'string';
+    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T04:27:23.372Z');
+    $request->accountingContact->currency = 'European Monetary Unit (E.M.U.-6)';
+    $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingCustomer->id = '<ID>';
-    $request->accountingCustomer->isActive = false;
-    $request->accountingCustomer->name = 'string';
-    $request->accountingCustomer->raw = new Shared\PropertyAccountingCustomerRaw();
-    $request->accountingCustomer->shippingAddress = new Shared\PropertyAccountingCustomerShippingAddress();
-    $request->accountingCustomer->shippingAddress->address1 = 'string';
-    $request->accountingCustomer->shippingAddress->address2 = 'string';
-    $request->accountingCustomer->shippingAddress->city = 'Langworthstead';
-    $request->accountingCustomer->shippingAddress->country = 'Anguilla';
-    $request->accountingCustomer->shippingAddress->countryCode = 'LU';
-    $request->accountingCustomer->shippingAddress->postalCode = '12624-4150';
-    $request->accountingCustomer->shippingAddress->region = 'string';
-    $request->accountingCustomer->shippingAddress->regionCode = 'string';
-    $request->accountingCustomer->taxExemption = Shared\TaxExemption::CharitableOrg;
-    $request->accountingCustomer->taxNumber = 'string';
-    $request->accountingCustomer->telephones = [
+    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->isActive = false;
+    $request->accountingContact->isCustomer = false;
+    $request->accountingContact->isSupplier = false;
+    $request->accountingContact->name = 'string';
+    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
+    $request->accountingContact->shippingAddress->address1 = 'string';
+    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->city = 'New Judgestead';
+    $request->accountingContact->shippingAddress->country = 'Kuwait';
+    $request->accountingContact->shippingAddress->countryCode = 'DO';
+    $request->accountingContact->shippingAddress->postalCode = '06389-9093';
+    $request->accountingContact->shippingAddress->region = 'string';
+    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->taxExemption = Shared\TaxExemption::Other;
+    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-26T22:42:35.557Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-24T15:10:44.676Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
-    $response = $sdk->accounting->updateAccountingCustomer($request);
+    $response = $sdk->accounting->updateAccountingContact($request);
 
-    if ($response->accountingCustomer !== null) {
+    if ($response->accountingContact !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -2276,14 +2283,14 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateAccountingCustomerRequest](../../Models/Operations/UpdateAccountingCustomerRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateAccountingContactRequest](../../Models/Operations/UpdateAccountingContactRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateAccountingCustomerResponse](../../Models/Operations/UpdateAccountingCustomerResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\UpdateAccountingContactResponse](../../Models/Operations/UpdateAccountingContactResponse.md)**
 
 
 ## updateAccountingInvoice
@@ -2312,9 +2319,9 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6974.28;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T06:46:26.704Z');
+    $request->accountingInvoice->contactId = 'string';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T23:29:44.275Z');
     $request->accountingInvoice->currency = 'Forint';
-    $request->accountingInvoice->customerId = 'string';
     $request->accountingInvoice->discountAmount = 2579.09;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-25T16:24:30.030Z');
     $request->accountingInvoice->id = '<ID>';
@@ -2444,9 +2451,9 @@ try {
         $request = new Operations\UpdateAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
     $request->accountingPayment->accountId = 'string';
+    $request->accountingPayment->contactId = 'string';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-04T17:30:16.475Z');
     $request->accountingPayment->currency = 'Sudanese Pound';
-    $request->accountingPayment->customerId = 'string';
     $request->accountingPayment->id = '<ID>';
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';

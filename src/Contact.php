@@ -24,6 +24,48 @@ class Contact
     /**
      * Create a contact
      * 
+     * @param \Unified\Unified_to\Models\Operations\CreateAccountingContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingContactResponse
+     */
+	public function createAccountingContact(
+        ?\Unified\Unified_to\Models\Operations\CreateAccountingContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateAccountingContactResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact', \Unified\Unified_to\Models\Operations\CreateAccountingContactRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "accountingContact", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateAccountingContactResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingContact', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Create a contact
+     * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmContactRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmContactResponse
      */
@@ -99,6 +141,45 @@ class Contact
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->ucContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\UcContact', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a contact
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetAccountingContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingContactResponse
+     */
+	public function getAccountingContact(
+        ?\Unified\Unified_to\Models\Operations\GetAccountingContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetAccountingContactResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\GetAccountingContactRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingContactRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\GetAccountingContactResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingContact', 'json');
             }
         }
 
@@ -186,6 +267,45 @@ class Contact
     /**
      * List all contacts
      * 
+     * @param \Unified\Unified_to\Models\Operations\ListAccountingContactsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingContactsResponse
+     */
+	public function listAccountingContacts(
+        ?\Unified\Unified_to\Models\Operations\ListAccountingContactsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListAccountingContactsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact', \Unified\Unified_to\Models\Operations\ListAccountingContactsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingContactsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\ListAccountingContactsResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingContacts = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AccountingContact>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List all contacts
+     * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmContactsRequest $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmContactsResponse
      */
@@ -255,6 +375,48 @@ class Contact
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->ucContacts = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\UcContact>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update a contact
+     * 
+     * @param \Unified\Unified_to\Models\Operations\PatchAccountingContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingContactResponse
+     */
+	public function patchAccountingContact(
+        ?\Unified\Unified_to\Models\Operations\PatchAccountingContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchAccountingContactResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\PatchAccountingContactRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "accountingContact", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\PatchAccountingContactResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingContact', 'json');
             }
         }
 
@@ -348,6 +510,43 @@ class Contact
     /**
      * Remove a contact
      * 
+     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingContactResponse
+     */
+	public function removeAccountingContact(
+        ?\Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveAccountingContactResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\RemoveAccountingContactResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $response->res = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Remove a contact
+     * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmContactResponse
      */
@@ -413,6 +612,48 @@ class Contact
         if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $response->res = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update a contact
+     * 
+     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingContactRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingContactResponse
+     */
+	public function updateAccountingContact(
+        ?\Unified\Unified_to\Models\Operations\UpdateAccountingContactRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateAccountingContactResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\UpdateAccountingContactRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "accountingContact", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\UpdateAccountingContactResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accountingContact = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingContact', 'json');
             }
         }
 

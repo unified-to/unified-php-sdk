@@ -27,7 +27,7 @@ class UnifiedTo
 	
 	public Account $account;
 	
-	public Customer $customer;
+	public Contact $contact;
 	
 	public Invoice $invoice;
 	
@@ -61,8 +61,6 @@ class UnifiedTo
 	
 	public Company $company;
 	
-	public Contact $contact;
-	
 	public Deal $deal;
 	
 	public Event $event;
@@ -94,6 +92,8 @@ class UnifiedTo
 	public File $file;
 	
 	public Ticketing $ticketing;
+	
+	public Customer $customer;
 	
 	public Note $note;
 	
@@ -140,7 +140,7 @@ class UnifiedTo
 		
 		$this->account = new Account($this->sdkConfiguration);
 		
-		$this->customer = new Customer($this->sdkConfiguration);
+		$this->contact = new Contact($this->sdkConfiguration);
 		
 		$this->invoice = new Invoice($this->sdkConfiguration);
 		
@@ -174,8 +174,6 @@ class UnifiedTo
 		
 		$this->company = new Company($this->sdkConfiguration);
 		
-		$this->contact = new Contact($this->sdkConfiguration);
-		
 		$this->deal = new Deal($this->sdkConfiguration);
 		
 		$this->event = new Event($this->sdkConfiguration);
@@ -207,6 +205,8 @@ class UnifiedTo
 		$this->file = new File($this->sdkConfiguration);
 		
 		$this->ticketing = new Ticketing($this->sdkConfiguration);
+		
+		$this->customer = new Customer($this->sdkConfiguration);
 		
 		$this->note = new Note($this->sdkConfiguration);
 		
