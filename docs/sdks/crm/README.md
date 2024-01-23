@@ -465,13 +465,13 @@ try {
         $request = new Operations\CreateCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-24T10:05:30.432Z');
-    $request->crmPipeline->dealProbability = false;
-    $request->crmPipeline->displayOrder = 6254.97;
+    $request->crmPipeline->dealProbability = 6254.97;
+    $request->crmPipeline->displayOrder = 3052.57;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-01T13:29:52.270Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-06T17:15:48.268Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->crm->createCrmPipeline($request);
@@ -1585,13 +1585,13 @@ try {
         $request = new Operations\PatchCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-26T14:31:39.156Z');
-    $request->crmPipeline->dealProbability = false;
-    $request->crmPipeline->displayOrder = 8620.92;
+    $request->crmPipeline->dealProbability = 8620.92;
+    $request->crmPipeline->displayOrder = 4178.43;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-03T22:57:09.090Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-25T13:09:02.644Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2335,13 +2335,13 @@ try {
         $request = new Operations\UpdateCrmPipelineRequest();
     $request->crmPipeline = new Shared\CrmPipeline();
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-27T16:21:58.595Z');
-    $request->crmPipeline->dealProbability = false;
-    $request->crmPipeline->displayOrder = 8923.83;
+    $request->crmPipeline->dealProbability = 8923.83;
+    $request->crmPipeline->displayOrder = 5142.22;
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
     $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-18T14:05:49.227Z');
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-03T02:41:03.928Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

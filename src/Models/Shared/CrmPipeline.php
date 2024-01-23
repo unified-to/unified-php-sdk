@@ -17,9 +17,9 @@ class CrmPipeline
     public ?\DateTime $createdAt = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('deal_probability')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $dealProbability = null;
+    public ?float $dealProbability = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('display_order')]
     #[\JMS\Serializer\Annotation\Type('float')]
