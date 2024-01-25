@@ -41,6 +41,11 @@ class AccountingAccount
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('is_payable')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isPayable = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
@@ -73,6 +78,7 @@ class AccountingAccount
 		$this->customerDefinedCode = null;
 		$this->description = null;
 		$this->id = null;
+		$this->isPayable = null;
 		$this->name = "";
 		$this->raw = null;
 		$this->status = null;

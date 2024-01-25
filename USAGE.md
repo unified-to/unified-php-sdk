@@ -28,6 +28,7 @@ try {
     $request->accountingAccount->customerDefinedCode = 'string';
     $request->accountingAccount->description = 'Cross-group zero defect task-force';
     $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = 'string';
     $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
     $request->accountingAccount->status = Shared\Status::Active;
