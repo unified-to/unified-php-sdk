@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 5160b83a94b66b2e0ad89d7f5d90cf8c
+  docChecksum: e6d7bb30e178bd0903f2f07c8ad4601f
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.239.4
-  releaseVersion: 0.10.31
-  configChecksum: c9a6cc1b1ae56be38a153f010ac6720c
+  releaseVersion: 0.10.32
+  configChecksum: 8086b6a73ae0f637b772de4eee647944
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -499,7 +499,6 @@ generatedFiles:
   - src/Models/Shared/AccountingInvoice.php
   - src/Models/Shared/PropertyAccountingInvoiceRaw.php
   - src/Models/Shared/AccountingLineitem.php
-  - src/Models/Shared/PropertyAccountingLineitemRaw.php
   - src/Models/Shared/AccountingItem.php
   - src/Models/Shared/PropertyAccountingItemRaw.php
   - src/Models/Shared/AccountingPayment.php
@@ -1062,7 +1061,6 @@ generatedFiles:
   - docs/Models/Shared/AccountingInvoice.md
   - docs/Models/Shared/PropertyAccountingInvoiceRaw.md
   - docs/Models/Shared/AccountingLineitem.md
-  - docs/Models/Shared/PropertyAccountingLineitemRaw.md
   - docs/Models/Shared/AccountingItem.md
   - docs/Models/Shared/PropertyAccountingItemRaw.md
   - docs/Models/Shared/AccountingPayment.md

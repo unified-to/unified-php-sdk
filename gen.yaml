@@ -9,7 +9,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 0.10.31
+  version: 0.10.32
   imports:
     option: openapi
     paths:
