@@ -44,10 +44,12 @@ try {
     $request->storageFile->permissions = [
         new Shared\StoragePermission(),
     ];
-    $request->storageFile->raw = new Shared\PropertyStorageFileRaw();
-    $request->storageFile->size = 9689.19;
-    $request->storageFile->type = Shared\StorageFileType::File;
-    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-15T09:11:45.919Z');
+    $request->storageFile->raw = [
+        'astride' => 'string',
+    ];
+    $request->storageFile->size = 3999.85;
+    $request->storageFile->type = Shared\StorageFileType::Folder;
+    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-07T14:24:08.441Z');
     $request->storageFile->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -215,10 +217,12 @@ try {
     $request->storageFile->permissions = [
         new Shared\StoragePermission(),
     ];
-    $request->storageFile->raw = new Shared\PropertyStorageFileRaw();
-    $request->storageFile->size = 1796.14;
+    $request->storageFile->raw = [
+        'green' => 'string',
+    ];
+    $request->storageFile->size = 2253.31;
     $request->storageFile->type = Shared\StorageFileType::File;
-    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-04T23:06:28.459Z');
+    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-03T15:19:05.454Z');
     $request->storageFile->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -327,10 +331,12 @@ try {
     $request->storageFile->permissions = [
         new Shared\StoragePermission(),
     ];
-    $request->storageFile->raw = new Shared\PropertyStorageFileRaw();
-    $request->storageFile->size = 7112.02;
+    $request->storageFile->raw = [
+        'male' => 'string',
+    ];
+    $request->storageFile->size = 4091;
     $request->storageFile->type = Shared\StorageFileType::Folder;
-    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-25T08:58:39.877Z');
+    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-25T21:16:43.994Z');
     $request->storageFile->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

@@ -82,10 +82,15 @@ class PropertyConnectionAuth
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $key = null;
     
+    /**
+     * $meta
+     * 
+     * @var ?array<string, mixed> $meta
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('meta')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyPropertyConnectionAuthMeta')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyPropertyConnectionAuthMeta $meta = null;
+    public ?array $meta = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]

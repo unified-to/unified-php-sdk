@@ -43,9 +43,11 @@ try {
     $request->accountingItem->price = 8182.36;
     $request->accountingItem->publicDescription = 'string';
     $request->accountingItem->quantityOnHand = 9042.97;
-    $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
+    $request->accountingItem->raw = [
+        'ampere' => 'string',
+    ];
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-05T08:21:06.807Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-12T17:24:47.315Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->item->createAccountingItem($request);
@@ -210,9 +212,11 @@ try {
     $request->accountingItem->price = 1007.53;
     $request->accountingItem->publicDescription = 'string';
     $request->accountingItem->quantityOnHand = 3510.34;
-    $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
+    $request->accountingItem->raw = [
+        'Quality' => 'string',
+    ];
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T01:12:30.848Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-28T04:23:01.953Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -319,9 +323,11 @@ try {
     $request->accountingItem->price = 3314.34;
     $request->accountingItem->publicDescription = 'string';
     $request->accountingItem->quantityOnHand = 9226.47;
-    $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
+    $request->accountingItem->raw = [
+        'revolutionize' => 'string',
+    ];
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-09T06:37:51.326Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-25T00:46:46.096Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

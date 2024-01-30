@@ -35,12 +35,12 @@ class MarketingList
     /**
      * The raw data returned by the integration for this list
      * 
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyMarketingListRaw $raw
+     * @var ?array<string, mixed> $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyMarketingListRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyMarketingListRaw $raw = null;
+    public ?array $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]

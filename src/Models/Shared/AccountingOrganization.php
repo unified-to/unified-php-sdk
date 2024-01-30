@@ -45,10 +45,15 @@ class AccountingOrganization
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAccountingOrganizationRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyAccountingOrganizationRaw $raw = null;
+    public ?array $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('tax_number')]
     #[\JMS\Serializer\Annotation\Type('string')]

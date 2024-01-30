@@ -43,13 +43,15 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 1087.81;
-    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
+    $request->crmDeal->raw = [
+        'Rap' => 'string',
+    ];
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-13T19:43:32.331Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-27T11:42:30.109Z');
     $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';;
@@ -219,13 +221,15 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 9555.58;
-    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
+    $request->crmDeal->raw = [
+        'female' => 'string',
+    ];
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-22T07:49:20.306Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-27T20:50:19.120Z');
     $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';
@@ -334,13 +338,15 @@ try {
     $request->crmDeal->name = 'string';
     $request->crmDeal->pipeline = 'string';
     $request->crmDeal->probability = 2970.01;
-    $request->crmDeal->raw = new Shared\PropertyCrmDealRaw();
+    $request->crmDeal->raw = [
+        'female' => 'string',
+    ];
     $request->crmDeal->source = 'string';
     $request->crmDeal->stage = 'string';
     $request->crmDeal->tags = [
         'string',
     ];
-    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-01T00:17:19.942Z');
+    $request->crmDeal->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-17T14:35:26.124Z');
     $request->crmDeal->userId = 'string';
     $request->crmDeal->wonReason = 'string';
     $request->connectionId = 'string';

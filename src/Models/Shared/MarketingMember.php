@@ -55,12 +55,12 @@ class MarketingMember
     /**
      * The raw data returned by the integration for this member
      * 
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyMarketingMemberRaw $raw
+     * @var ?array<string, mixed> $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyMarketingMemberRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyMarketingMemberRaw $raw = null;
+    public ?array $raw = null;
     
     /**
      * An array of tags associated with this member

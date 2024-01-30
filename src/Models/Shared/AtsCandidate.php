@@ -71,10 +71,15 @@ class AtsCandidate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Origin $origin = null;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsCandidateRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyAtsCandidateRaw $raw = null;
+    public ?array $raw = null;
     
     /**
      * $tags

@@ -38,7 +38,9 @@ try {
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Distributed 4th generation portal';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = [
+        'Sausages' => 'string',
+    ];
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->ticketingNote->userId = 'string';
@@ -202,7 +204,9 @@ try {
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Right-sized national productivity';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = [
+        'Southwest' => 'string',
+    ];
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->ticketingNote->userId = 'string';
@@ -307,7 +311,9 @@ try {
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Versatile value-added utilisation';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = [
+        'York' => 'string',
+    ];
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->ticketingNote->userId = 'string';

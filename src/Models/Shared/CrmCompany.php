@@ -90,12 +90,12 @@ class CrmCompany
     /**
      * The raw data returned by the integration for this company
      * 
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmCompanyRaw $raw
+     * @var ?array<string, mixed> $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmCompanyRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyCrmCompanyRaw $raw = null;
+    public ?array $raw = null;
     
     /**
      * $tags

@@ -65,12 +65,12 @@ class CrmDeal
     /**
      * The raw data returned by the integration for this deal
      * 
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmDealRaw $raw
+     * @var ?array<string, mixed> $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmDealRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyCrmDealRaw $raw = null;
+    public ?array $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('source')]
     #[\JMS\Serializer\Annotation\Type('string')]

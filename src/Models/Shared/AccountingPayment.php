@@ -51,10 +51,15 @@ class AccountingPayment
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $paymentMethod = null;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAccountingPaymentRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyAccountingPaymentRaw $raw = null;
+    public ?array $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('reference')]
     #[\JMS\Serializer\Annotation\Type('string')]

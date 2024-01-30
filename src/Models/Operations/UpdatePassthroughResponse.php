@@ -38,10 +38,10 @@ class UpdatePassthroughResponse
     /**
      * Successful
      * 
-     * @var ?\Unified\Unified_to\Models\Shared\Undefined $undefined
+     * @var ?array<string, mixed> $undefined
      */
 	
-    public ?\Unified\Unified_to\Models\Shared\Undefined $undefined = null;
+    public ?array $undefined = null;
     
 	public function __construct()
 	{

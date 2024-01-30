@@ -40,8 +40,10 @@ try {
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 6789.7;
-    $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-27T23:06:27.112Z');
+    $request->accountingTaxrate->raw = [
+        'Human' => 'string',
+    ];
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-06T04:09:12.755Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->taxrate->createAccountingTaxrate($request);
@@ -203,8 +205,10 @@ try {
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 220.78;
-    $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-17T10:44:31.599Z');
+    $request->accountingTaxrate->raw = [
+        'Facilitator' => 'string',
+    ];
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-17T14:16:26.961Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -308,8 +312,10 @@ try {
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 2580.61;
-    $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-21T10:57:59.053Z');
+    $request->accountingTaxrate->raw = [
+        'Buckinghamshire' => 'string',
+    ];
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-25T16:43:20.981Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

@@ -81,10 +81,15 @@ class AccountingInvoice
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $paidAt = null;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAccountingInvoiceRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyAccountingInvoiceRaw $raw = null;
+    public ?array $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('refund_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]

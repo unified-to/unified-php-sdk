@@ -51,10 +51,15 @@ class HrisGroup
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentId = null;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyHrisGroupRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyHrisGroupRaw $raw = null;
+    public ?array $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisGroupType>')]

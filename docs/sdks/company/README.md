@@ -60,15 +60,17 @@ try {
         'string',
     ];
     $request->crmCompany->name = 'string';
-    $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
+    $request->crmCompany->raw = [
+        'payment' => 'string',
+    ];
     $request->crmCompany->tags = [
         'string',
     ];
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmCompany->timezone = 'Europe/Bucharest';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-03T19:32:53.625Z');
+    $request->crmCompany->timezone = 'Africa/Johannesburg';
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-19T06:50:49.294Z');
     $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',
@@ -305,15 +307,17 @@ try {
         'string',
     ];
     $request->crmCompany->name = 'string';
-    $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
+    $request->crmCompany->raw = [
+        'Cloned' => 'string',
+    ];
     $request->crmCompany->tags = [
         'string',
     ];
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmCompany->timezone = 'Europe/Skopje';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-08T08:19:54.922Z');
+    $request->crmCompany->timezone = 'America/Regina';
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-28T13:26:17.184Z');
     $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',
@@ -440,15 +444,17 @@ try {
         'string',
     ];
     $request->crmCompany->name = 'string';
-    $request->crmCompany->raw = new Shared\PropertyCrmCompanyRaw();
+    $request->crmCompany->raw = [
+        'quantify' => 'string',
+    ];
     $request->crmCompany->tags = [
         'string',
     ];
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmCompany->timezone = 'Africa/Harare';
-    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-13T13:49:01.082Z');
+    $request->crmCompany->timezone = 'Europe/Ljubljana';
+    $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-16T08:11:17.577Z');
     $request->crmCompany->userId = 'string';
     $request->crmCompany->websites = [
         'string',

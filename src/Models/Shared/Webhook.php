@@ -68,10 +68,15 @@ class Webhook
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isHealthy = null;
     
+    /**
+     * $meta
+     * 
+     * @var ?array<string, mixed> $meta
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('meta')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyWebhookMeta')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyWebhookMeta $meta = null;
+    public ?array $meta = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('object_type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ObjectType>')]

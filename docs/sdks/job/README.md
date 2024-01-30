@@ -56,13 +56,15 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
+    $request->atsJob->raw = [
+        'Transmasculine' => 'string',
+    ];
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = Shared\AtsJobStatus::Open;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-26T15:32:06.316Z');
+    $request->atsJob->status = Shared\AtsJobStatus::Closed;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-25T02:40:27.531Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->job->createAtsJob($request);
@@ -240,13 +242,15 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
+    $request->atsJob->raw = [
+        'Cis' => 'string',
+    ];
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = Shared\AtsJobStatus::Open;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-14T06:54:10.503Z');
+    $request->atsJob->status = Shared\AtsJobStatus::Closed;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T17:34:59.133Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -366,13 +370,15 @@ try {
     $request->atsJob->publicJobUrls = [
         'string',
     ];
-    $request->atsJob->raw = new Shared\PropertyAtsJobRaw();
+    $request->atsJob->raw = [
+        'though' => 'string',
+    ];
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = Shared\AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-13T07:15:51.170Z');
+    $request->atsJob->status = Shared\AtsJobStatus::Archived;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T07:16:42.656Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

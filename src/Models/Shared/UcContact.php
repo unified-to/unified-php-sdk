@@ -50,12 +50,12 @@ class UcContact
     /**
      * The raw data returned by the integration for this contact
      * 
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyUcContactRaw $raw
+     * @var ?array<string, mixed> $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyUcContactRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyUcContactRaw $raw = null;
+    public ?array $raw = null;
     
     /**
      * An array of telephones for this contact

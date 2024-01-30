@@ -37,8 +37,10 @@ try {
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
     $request->marketingList->name = 'string';
-    $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-16T01:36:06.349Z');
+    $request->marketingList->raw = [
+        'Latin' => 'string',
+    ];
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-06T07:01:10.618Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->list->createMartechList($request);
@@ -197,8 +199,10 @@ try {
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
     $request->marketingList->name = 'string';
-    $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-08T11:05:46.244Z');
+    $request->marketingList->raw = [
+        'Classical' => 'string',
+    ];
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-26T04:11:57.641Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -299,8 +303,10 @@ try {
     $request->marketingList->createdAt = 'string';
     $request->marketingList->id = '<ID>';
     $request->marketingList->name = 'string';
-    $request->marketingList->raw = new Shared\PropertyMarketingListRaw();
-    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-02T03:22:31.192Z');
+    $request->marketingList->raw = [
+        'innocently' => 'string',
+    ];
+    $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-18T20:36:47.001Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

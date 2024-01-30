@@ -96,10 +96,15 @@ class AtsJob
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $publicJobUrls = null;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsJobRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyAtsJobRaw $raw = null;
+    public ?array $raw = null;
     
     /**
      * $recruiterIds

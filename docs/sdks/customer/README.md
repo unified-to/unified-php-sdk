@@ -40,14 +40,16 @@ try {
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = [
+        'Investment' => 'string',
+    ];
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-18T12:34:42.514Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-12T01:01:03.120Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->customer->createTicketingCustomer($request);
@@ -209,14 +211,16 @@ try {
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = [
+        'Hybrid' => 'string',
+    ];
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-13T20:06:09.027Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T09:16:54.349Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -320,14 +324,16 @@ try {
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = [
+        'Zinc' => 'string',
+    ];
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-05T14:57:57.883Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-29T08:49:38.630Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

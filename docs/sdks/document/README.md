@@ -42,9 +42,11 @@ try {
     $request->atsDocument->filename = 'mouse_per_missouri.mp4';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
-    $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
-    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-28T17:22:48.342Z');
+    $request->atsDocument->raw = [
+        'empowering' => 'string',
+    ];
+    $request->atsDocument->type = Shared\AtsDocumentType::CoverLetter;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T09:03:14.368Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -210,9 +212,11 @@ try {
     $request->atsDocument->filename = 'future_underpin.mp4v';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
-    $request->atsDocument->type = Shared\AtsDocumentType::OfferLetter;
-    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T10:37:18.255Z');
+    $request->atsDocument->raw = [
+        'ipsam' => 'string',
+    ];
+    $request->atsDocument->type = Shared\AtsDocumentType::Other;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-04T16:17:46.270Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -319,9 +323,11 @@ try {
     $request->atsDocument->filename = 'unbranded_reprehenderit.jpg';
     $request->atsDocument->id = '<ID>';
     $request->atsDocument->jobId = 'string';
-    $request->atsDocument->raw = new Shared\PropertyAtsDocumentRaw();
+    $request->atsDocument->raw = [
+        'GB' => 'string',
+    ];
     $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
-    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-03T00:21:50.487Z');
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-21T13:20:57.007Z');
     $request->atsDocument->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

@@ -42,10 +42,12 @@ try {
     $request->accountingAccount->id = '<ID>';
     $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = 'string';
-    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->raw = [
+        'Ruble' => 'string',
+    ];
     $request->accountingAccount->status = Shared\Status::Active;
-    $request->accountingAccount->type = Shared\Type::Equity;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-09T23:41:51.681Z');
+    $request->accountingAccount->type = Shared\Type::FixedAsset;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T23:54:12.882Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->account->createAccountingAccount($request);
@@ -209,10 +211,12 @@ try {
     $request->accountingAccount->id = '<ID>';
     $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = 'string';
-    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->raw = [
+        'male' => 'string',
+    ];
     $request->accountingAccount->status = Shared\Status::Archived;
-    $request->accountingAccount->type = Shared\Type::Revenue;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-10T10:46:36.474Z');
+    $request->accountingAccount->type = Shared\Type::Expense;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-01T20:09:00.405Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -318,10 +322,12 @@ try {
     $request->accountingAccount->id = '<ID>';
     $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = 'string';
-    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
-    $request->accountingAccount->status = Shared\Status::Active;
-    $request->accountingAccount->type = Shared\Type::Bank;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-02T20:00:03.765Z');
+    $request->accountingAccount->raw = [
+        'Costa' => 'string',
+    ];
+    $request->accountingAccount->status = Shared\Status::Archived;
+    $request->accountingAccount->type = Shared\Type::Liability;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-16T10:15:08.356Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

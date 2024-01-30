@@ -42,9 +42,11 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = Shared\Recommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-02T03:31:06.456Z');
+    $request->atsScorecard->raw = [
+        'Inverse' => 'string',
+    ];
+    $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-16T16:10:16.235Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->scorecard->createAtsScorecard($request);
@@ -212,9 +214,11 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
+    $request->atsScorecard->raw = [
+        'World' => 'string',
+    ];
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T15:13:55.563Z');
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-07T14:14:42.219Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -320,9 +324,11 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
-    $request->atsScorecard->raw = new Shared\PropertyAtsScorecardRaw();
-    $request->atsScorecard->recommendation = Shared\Recommendation::No;
-    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-26T09:16:55.761Z');
+    $request->atsScorecard->raw = [
+        'Digitized' => 'string',
+    ];
+    $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
+    $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-16T12:20:06.330Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

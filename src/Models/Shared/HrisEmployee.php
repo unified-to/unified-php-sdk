@@ -111,10 +111,15 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyHrisEmployeeRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyHrisEmployeeRaw $raw = null;
+    public ?array $raw = null;
     
     /**
      * $telephones

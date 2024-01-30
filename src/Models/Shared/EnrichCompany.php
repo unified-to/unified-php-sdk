@@ -105,12 +105,12 @@ class EnrichCompany
     /**
      * The raw data returned by the integration for this company
      * 
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyRaw $raw
+     * @var ?array<string, mixed> $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyEnrichCompanyRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyEnrichCompanyRaw $raw = null;
+    public ?array $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('revenue')]
     #[\JMS\Serializer\Annotation\Type('string')]

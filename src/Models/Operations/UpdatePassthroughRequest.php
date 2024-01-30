@@ -12,6 +12,14 @@ use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdatePassthroughRequest
 {
     /**
+     * integration-specific payload
+     * 
+     * @var ?array<string, mixed> $requestBody
+     */
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?array $requestBody = null;
+    
+    /**
      * ID of the connection
      * 
      * @var string $connectionId
@@ -22,18 +30,10 @@ class UpdatePassthroughRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=path')]
     public string $path;
     
-    /**
-     * integration-specific payload
-     * 
-     * @var ?\Unified\Unified_to\Models\Shared\Undefined $undefined
-     */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\Undefined $undefined = null;
-    
 	public function __construct()
 	{
+		$this->requestBody = null;
 		$this->connectionId = "";
 		$this->path = "";
-		$this->undefined = null;
 	}
 }

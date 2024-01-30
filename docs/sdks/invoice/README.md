@@ -49,14 +49,16 @@ try {
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 7142.37;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T02:12:20.862Z');
-    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
-    $request->accountingInvoice->refundAmount = 6572.32;
+    $request->accountingInvoice->raw = [
+        'Central' => 'string',
+    ];
+    $request->accountingInvoice->refundAmount = 1578.89;
     $request->accountingInvoice->refundReason = 'string';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-10T18:36:49.807Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
-    $request->accountingInvoice->taxAmount = 5503.49;
-    $request->accountingInvoice->totalAmount = 8057.4;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-23T07:04:07.074Z');
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-27T04:22:20.182Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
+    $request->accountingInvoice->taxAmount = 6864;
+    $request->accountingInvoice->totalAmount = 6873.46;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T22:49:02.835Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->invoice->createAccountingInvoice($request);
@@ -228,14 +230,16 @@ try {
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 7810.81;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-02T21:47:54.080Z');
-    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
-    $request->accountingInvoice->refundAmount = 1152.38;
+    $request->accountingInvoice->raw = [
+        'Northwest' => 'string',
+    ];
+    $request->accountingInvoice->refundAmount = 6443.77;
     $request->accountingInvoice->refundReason = 'string';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-23T14:30:18.013Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Voided;
-    $request->accountingInvoice->taxAmount = 2117.25;
-    $request->accountingInvoice->totalAmount = 3028.19;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T22:52:23.132Z');
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-21T01:13:52.344Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
+    $request->accountingInvoice->taxAmount = 1140.08;
+    $request->accountingInvoice->totalAmount = 4543.48;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-02T12:10:13.037Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -348,14 +352,16 @@ try {
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 3682.14;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-27T09:53:44.172Z');
-    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
-    $request->accountingInvoice->refundAmount = 2842.49;
+    $request->accountingInvoice->raw = [
+        'intuitive' => 'string',
+    ];
+    $request->accountingInvoice->refundAmount = 3314.72;
     $request->accountingInvoice->refundReason = 'string';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-05T15:45:06.127Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
-    $request->accountingInvoice->taxAmount = 7535.06;
-    $request->accountingInvoice->totalAmount = 7716.41;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-24T03:16:51.155Z');
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-05T20:13:33.419Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
+    $request->accountingInvoice->taxAmount = 3824.24;
+    $request->accountingInvoice->totalAmount = 2939.97;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T18:41:11.569Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

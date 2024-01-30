@@ -45,12 +45,14 @@ try {
     $request->webhook->integrationType = 'string';
     $request->webhook->interval = 6142.55;
     $request->webhook->isHealthy = false;
-    $request->webhook->meta = new Shared\PropertyWebhookMeta();
-    $request->webhook->objectType = Shared\ObjectType::AccountingContact;
+    $request->webhook->meta = [
+        'Borders' => 'string',
+    ];
+    $request->webhook->objectType = Shared\ObjectType::MartechList;
     $request->webhook->runs = [
         'string',
     ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-10T06:13:44.297Z');
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-07T19:59:37.485Z');
     $request->webhook->webhookType = Shared\WebhookWebhookType::Native;
     $request->webhook->workspaceId = 'string';
     $request->includeAll = false;;

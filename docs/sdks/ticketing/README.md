@@ -52,14 +52,16 @@ try {
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = [
+        'Investment' => 'string',
+    ];
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-18T12:34:42.514Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-12T01:01:03.120Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->ticketing->createTicketingCustomer($request);
@@ -112,7 +114,9 @@ try {
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Distributed 4th generation portal';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = [
+        'Sausages' => 'string',
+    ];
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->ticketingNote->userId = 'string';
@@ -171,7 +175,9 @@ try {
     $request->ticketingTicket->description = 'Automated composite productivity';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = [
+        'indigo' => 'string',
+    ];
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
     $request->ticketingTicket->status = Shared\TicketingTicketStatus::Closed;
@@ -179,7 +185,7 @@ try {
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-06T20:46:58.372Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-31T16:32:54.987Z');
     $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -559,14 +565,16 @@ try {
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = [
+        'Hybrid' => 'string',
+    ];
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-13T20:06:09.027Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T09:16:54.349Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -620,7 +628,9 @@ try {
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Right-sized national productivity';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = [
+        'Southwest' => 'string',
+    ];
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->ticketingNote->userId = 'string';
@@ -680,15 +690,17 @@ try {
     $request->ticketingTicket->description = 'Operative composite strategy';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = [
+        'Concrete' => 'string',
+    ];
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
-    $request->ticketingTicket->status = Shared\TicketingTicketStatus::Closed;
+    $request->ticketingTicket->status = Shared\TicketingTicketStatus::Active;
     $request->ticketingTicket->subject = 'string';
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-06T12:10:37.068Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-08T14:40:04.177Z');
     $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -889,14 +901,16 @@ try {
     ];
     $request->ticketingCustomer->id = '<ID>';
     $request->ticketingCustomer->name = 'string';
-    $request->ticketingCustomer->raw = new Shared\PropertyTicketingCustomerRaw();
+    $request->ticketingCustomer->raw = [
+        'Zinc' => 'string',
+    ];
     $request->ticketingCustomer->tags = [
         'string',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
-    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-05T14:57:57.883Z');
+    $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-29T08:49:38.630Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -950,7 +964,9 @@ try {
     $request->ticketingNote->customerId = 'string';
     $request->ticketingNote->description = 'Versatile value-added utilisation';
     $request->ticketingNote->id = '<ID>';
-    $request->ticketingNote->raw = new Shared\PropertyTicketingNoteRaw();
+    $request->ticketingNote->raw = [
+        'York' => 'string',
+    ];
     $request->ticketingNote->ticketId = 'string';
     $request->ticketingNote->updatedAt = 'string';
     $request->ticketingNote->userId = 'string';
@@ -1010,7 +1026,9 @@ try {
     $request->ticketingTicket->description = 'Configurable user-facing middleware';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = [
+        'East' => 'string',
+    ];
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
     $request->ticketingTicket->status = Shared\TicketingTicketStatus::Active;
@@ -1018,7 +1036,7 @@ try {
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-17T01:38:48.188Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-17T20:35:00.553Z');
     $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

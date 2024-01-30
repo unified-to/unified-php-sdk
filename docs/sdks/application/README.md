@@ -41,12 +41,14 @@ try {
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
     $request->atsApplication->originalStatus = 'string';
-    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-30T06:58:14.500Z');
+    $request->atsApplication->raw = [
+        'Mandatory' => 'string',
+    ];
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-21T21:31:42.360Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
     $request->atsApplication->status = Shared\AtsApplicationStatus::SecondInterview;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-21T21:31:42.360Z');
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T22:56:51.478Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->application->createAtsApplication($request);
@@ -211,12 +213,14 @@ try {
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
     $request->atsApplication->originalStatus = 'string';
-    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-13T02:34:40.392Z');
+    $request->atsApplication->raw = [
+        'grey' => 'string',
+    ];
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-24T17:35:54.628Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Shared\AtsApplicationStatus::FirstInterview;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-24T17:35:54.628Z');
+    $request->atsApplication->status = Shared\AtsApplicationStatus::Offered;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T16:36:51.738Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -321,12 +325,14 @@ try {
     $request->atsApplication->id = '<ID>';
     $request->atsApplication->jobId = 'string';
     $request->atsApplication->originalStatus = 'string';
-    $request->atsApplication->raw = new Shared\PropertyAtsApplicationRaw();
-    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-19T04:47:20.215Z');
+    $request->atsApplication->raw = [
+        'Minivan' => 'string',
+    ];
+    $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-17T03:12:00.865Z');
     $request->atsApplication->rejectedReason = 'string';
     $request->atsApplication->source = 'string';
-    $request->atsApplication->status = Shared\AtsApplicationStatus::Offered;
-    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-17T03:12:00.865Z');
+    $request->atsApplication->status = Shared\AtsApplicationStatus::Rejected;
+    $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T12:26:06.546Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

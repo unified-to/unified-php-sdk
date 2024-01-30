@@ -30,12 +30,14 @@ try {
     $request->accountingAccount->id = '<ID>';
     $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = 'string';
-    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->raw = [
+        'Ruble' => 'string',
+    ];
     $request->accountingAccount->status = Shared\Status::Active;
-    $request->accountingAccount->type = Shared\Type::Equity;
+    $request->accountingAccount->type = Shared\Type::FixedAsset;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat(
         'Y-m-d\TH:i:s+',
-        '2023-09-09T23:41:51.681Z',
+        '2024-10-01T23:54:12.882Z',
     );
     $request->connectionId = 'string';
 

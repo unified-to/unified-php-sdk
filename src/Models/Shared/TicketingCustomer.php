@@ -36,10 +36,15 @@ class TicketingCustomer
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyTicketingCustomerRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyTicketingCustomerRaw $raw = null;
+    public ?array $raw = null;
     
     /**
      * $tags

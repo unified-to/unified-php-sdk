@@ -56,7 +56,9 @@ try {
     ];
     $request->atsCandidate->name = 'string';
     $request->atsCandidate->origin = Shared\Origin::Referred;
-    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = [
+        'Gasoline' => 'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -64,7 +66,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-09T09:42:20.690Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-10T16:56:06.147Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->candidate->createAtsCandidate($request);
@@ -242,7 +244,9 @@ try {
     ];
     $request->atsCandidate->name = 'string';
     $request->atsCandidate->origin = Shared\Origin::Referred;
-    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = [
+        'generate' => 'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -250,7 +254,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-27T23:11:11.032Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-12T20:46:24.084Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -370,7 +374,9 @@ try {
     ];
     $request->atsCandidate->name = 'string';
     $request->atsCandidate->origin = Shared\Origin::Referred;
-    $request->atsCandidate->raw = new Shared\PropertyAtsCandidateRaw();
+    $request->atsCandidate->raw = [
+        'lime' => 'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -378,7 +384,7 @@ try {
         new Shared\AtsTelephone(),
     ];
     $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-29T02:14:15.792Z');
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-18T10:50:29.862Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

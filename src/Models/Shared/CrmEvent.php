@@ -110,12 +110,12 @@ class CrmEvent
     /**
      * The raw data returned by the integration for this event.
      * 
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventRaw $raw
+     * @var ?array<string, mixed> $raw
      */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyCrmEventRaw $raw = null;
+    public ?array $raw = null;
     
     /**
      * The task object, when type = task

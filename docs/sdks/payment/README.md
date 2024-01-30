@@ -42,10 +42,12 @@ try {
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = [
+        'Mount' => 'string',
+    ];
     $request->accountingPayment->reference = 'string';
-    $request->accountingPayment->totalAmount = 291.36;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-01T03:33:47.004Z');
+    $request->accountingPayment->totalAmount = 1821.1;
+    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-22T09:20:36.660Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->payment->createAccountingPayment($request);
@@ -211,10 +213,12 @@ try {
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = [
+        'periodic' => 'string',
+    ];
     $request->accountingPayment->reference = 'string';
-    $request->accountingPayment->totalAmount = 8698.74;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-08T12:40:48.671Z');
+    $request->accountingPayment->totalAmount = 9979.6;
+    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-15T02:06:02.492Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -320,10 +324,12 @@ try {
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = [
+        'Music' => 'string',
+    ];
     $request->accountingPayment->reference = 'string';
-    $request->accountingPayment->totalAmount = 1869.63;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-14T18:33:08.394Z');
+    $request->accountingPayment->totalAmount = 4734;
+    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-26T21:11:42.893Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

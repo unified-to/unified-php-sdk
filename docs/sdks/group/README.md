@@ -43,9 +43,11 @@ try {
     ];
     $request->hrisGroup->name = 'string';
     $request->hrisGroup->parentId = 'string';
-    $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
-    $request->hrisGroup->type = Shared\HrisGroupType::Team;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T17:49:55.923Z');
+    $request->hrisGroup->raw = [
+        'South' => 'string',
+    ];
+    $request->hrisGroup->type = Shared\HrisGroupType::Department;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-28T15:45:30.103Z');
     $request->hrisGroup->userIds = [
         'string',
     ];
@@ -213,9 +215,11 @@ try {
     ];
     $request->hrisGroup->name = 'string';
     $request->hrisGroup->parentId = 'string';
-    $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
-    $request->hrisGroup->type = Shared\HrisGroupType::Division;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-23T21:37:16.122Z');
+    $request->hrisGroup->raw = [
+        'indexing' => 'string',
+    ];
+    $request->hrisGroup->type = Shared\HrisGroupType::BusinessUnit;
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T11:47:16.863Z');
     $request->hrisGroup->userIds = [
         'string',
     ];
@@ -325,9 +329,11 @@ try {
     ];
     $request->hrisGroup->name = 'string';
     $request->hrisGroup->parentId = 'string';
-    $request->hrisGroup->raw = new Shared\PropertyHrisGroupRaw();
+    $request->hrisGroup->raw = [
+        'Southwest' => 'string',
+    ];
     $request->hrisGroup->type = Shared\HrisGroupType::Team;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T13:33:00.416Z');
+    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-09T14:54:15.549Z');
     $request->hrisGroup->userIds = [
         'string',
     ];

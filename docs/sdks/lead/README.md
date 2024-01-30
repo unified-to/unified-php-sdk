@@ -54,13 +54,15 @@ try {
     $request->crmLead->id = '<ID>';
     $request->crmLead->isActive = false;
     $request->crmLead->name = 'string';
-    $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
+    $request->crmLead->raw = [
+        'loyally' => 'string',
+    ];
     $request->crmLead->source = 'string';
     $request->crmLead->status = 'string';
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-01T18:33:52.670Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-02T07:48:01.587Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -240,13 +242,15 @@ try {
     $request->crmLead->id = '<ID>';
     $request->crmLead->isActive = false;
     $request->crmLead->name = 'string';
-    $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
+    $request->crmLead->raw = [
+        'Cotton' => 'string',
+    ];
     $request->crmLead->source = 'string';
     $request->crmLead->status = 'string';
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-10T11:36:08.811Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-03T12:44:18.120Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -365,13 +369,15 @@ try {
     $request->crmLead->id = '<ID>';
     $request->crmLead->isActive = false;
     $request->crmLead->name = 'string';
-    $request->crmLead->raw = new Shared\PropertyCrmLeadRaw();
+    $request->crmLead->raw = [
+        'auxiliary' => 'string',
+    ];
     $request->crmLead->source = 'string';
     $request->crmLead->status = 'string';
     $request->crmLead->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T10:08:49.472Z');
+    $request->crmLead->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-06T14:50:33.716Z');
     $request->crmLead->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

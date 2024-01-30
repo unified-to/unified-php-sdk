@@ -41,9 +41,11 @@ try {
     $request->accountingTransaction->lineItems = [
         new Shared\AccountingTransactionLineitem(),
     ];
-    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->raw = [
+        'Metal' => 'string',
+    ];
     $request->accountingTransaction->reference = 'string';
-    $request->accountingTransaction->taxAmount = 2477.45;
+    $request->accountingTransaction->taxAmount = 8276.07;
     $request->accountingTransaction->taxrateId = 'string';
     $request->accountingTransaction->updatedAt = 'string';
     $request->connectionId = 'string';;
@@ -208,9 +210,11 @@ try {
     $request->accountingTransaction->lineItems = [
         new Shared\AccountingTransactionLineitem(),
     ];
-    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->raw = [
+        'Gambia' => 'string',
+    ];
     $request->accountingTransaction->reference = 'string';
-    $request->accountingTransaction->taxAmount = 535.65;
+    $request->accountingTransaction->taxAmount = 259.82;
     $request->accountingTransaction->taxrateId = 'string';
     $request->accountingTransaction->updatedAt = 'string';
     $request->connectionId = 'string';
@@ -317,9 +321,11 @@ try {
     $request->accountingTransaction->lineItems = [
         new Shared\AccountingTransactionLineitem(),
     ];
-    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->raw = [
+        'Intelligent' => 'string',
+    ];
     $request->accountingTransaction->reference = 'string';
-    $request->accountingTransaction->taxAmount = 2397.73;
+    $request->accountingTransaction->taxAmount = 421.84;
     $request->accountingTransaction->taxrateId = 'string';
     $request->accountingTransaction->updatedAt = 'string';
     $request->connectionId = 'string';

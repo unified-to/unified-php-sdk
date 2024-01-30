@@ -65,14 +65,16 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = 'string';
-    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->raw = [
+        'unfold' => 'string',
+    ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = 'string';
     $request->accountingContact->shippingAddress->address2 = 'string';
-    $request->accountingContact->shippingAddress->city = 'Warren';
-    $request->accountingContact->shippingAddress->country = 'Cayman Islands';
-    $request->accountingContact->shippingAddress->countryCode = 'ST';
-    $request->accountingContact->shippingAddress->postalCode = '81046-2093';
+    $request->accountingContact->shippingAddress->city = 'Port Wilberfield';
+    $request->accountingContact->shippingAddress->country = 'Bouvet Island (Bouvetoya)';
+    $request->accountingContact->shippingAddress->countryCode = 'AM';
+    $request->accountingContact->shippingAddress->postalCode = '62093';
     $request->accountingContact->shippingAddress->region = 'string';
     $request->accountingContact->shippingAddress->regionCode = 'string';
     $request->accountingContact->taxExemption = Shared\TaxExemption::EducationalOrg;
@@ -151,12 +153,14 @@ try {
     ];
     $request->crmContact->id = '<ID>';
     $request->crmContact->name = 'string';
-    $request->crmContact->raw = new Shared\PropertyCrmContactRaw();
+    $request->crmContact->raw = [
+        'Krypton' => 'string',
+    ];
     $request->crmContact->telephones = [
         new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-21T17:10:02.454Z');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-24T18:29:57.646Z');
     $request->crmContact->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -213,12 +217,14 @@ try {
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
+    $request->ucContact->raw = [
+        'enhance' => 'string',
+    ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-29T08:48:22.854Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-27T10:35:00.674Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->contact->createUcContact($request);
@@ -612,22 +618,24 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = 'string';
-    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->raw = [
+        'bypass' => 'string',
+    ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = 'string';
     $request->accountingContact->shippingAddress->address2 = 'string';
-    $request->accountingContact->shippingAddress->city = 'Anyafurt';
-    $request->accountingContact->shippingAddress->country = 'Kiribati';
-    $request->accountingContact->shippingAddress->countryCode = 'SE';
-    $request->accountingContact->shippingAddress->postalCode = '62367-9125';
+    $request->accountingContact->shippingAddress->city = 'Koeppfield';
+    $request->accountingContact->shippingAddress->country = 'Netherlands Antilles';
+    $request->accountingContact->shippingAddress->countryCode = 'NE';
+    $request->accountingContact->shippingAddress->postalCode = '36791';
     $request->accountingContact->shippingAddress->region = 'string';
     $request->accountingContact->shippingAddress->regionCode = 'string';
-    $request->accountingContact->taxExemption = Shared\TaxExemption::RegionGov;
+    $request->accountingContact->taxExemption = Shared\TaxExemption::TribalGov;
     $request->accountingContact->taxNumber = 'string';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T14:47:27.816Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T21:20:14.932Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -699,12 +707,14 @@ try {
     ];
     $request->crmContact->id = '<ID>';
     $request->crmContact->name = 'string';
-    $request->crmContact->raw = new Shared\PropertyCrmContactRaw();
+    $request->crmContact->raw = [
+        'syndicate' => 'string',
+    ];
     $request->crmContact->telephones = [
         new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-28T22:10:52.030Z');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T14:32:12.826Z');
     $request->crmContact->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -762,12 +772,14 @@ try {
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
+    $request->ucContact->raw = [
+        'after' => 'string',
+    ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-29T10:07:07.897Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T22:08:30.034Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -980,22 +992,24 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = 'string';
-    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->raw = [
+        'salmon' => 'string',
+    ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = 'string';
     $request->accountingContact->shippingAddress->address2 = 'string';
-    $request->accountingContact->shippingAddress->city = 'New Judgestead';
-    $request->accountingContact->shippingAddress->country = 'Kuwait';
-    $request->accountingContact->shippingAddress->countryCode = 'DO';
-    $request->accountingContact->shippingAddress->postalCode = '06389-9093';
+    $request->accountingContact->shippingAddress->city = 'Lelahport';
+    $request->accountingContact->shippingAddress->country = 'Dominica';
+    $request->accountingContact->shippingAddress->countryCode = 'SJ';
+    $request->accountingContact->shippingAddress->postalCode = '63899';
     $request->accountingContact->shippingAddress->region = 'string';
     $request->accountingContact->shippingAddress->regionCode = 'string';
-    $request->accountingContact->taxExemption = Shared\TaxExemption::Other;
+    $request->accountingContact->taxExemption = Shared\TaxExemption::FederalGov;
     $request->accountingContact->taxNumber = 'string';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-24T15:10:44.676Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-28T03:42:59.577Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1067,12 +1081,14 @@ try {
     ];
     $request->crmContact->id = '<ID>';
     $request->crmContact->name = 'string';
-    $request->crmContact->raw = new Shared\PropertyCrmContactRaw();
+    $request->crmContact->raw = [
+        'quantify' => 'string',
+    ];
     $request->crmContact->telephones = [
         new Shared\CrmTelephone(),
     ];
     $request->crmContact->title = 'string';
-    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T17:59:32.331Z');
+    $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-31T22:36:38.040Z');
     $request->crmContact->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -1130,12 +1146,14 @@ try {
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
+    $request->ucContact->raw = [
+        'Convertible' => 'string',
+    ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-14T19:41:27.169Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-11T10:56:34.889Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

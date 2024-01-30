@@ -40,8 +40,10 @@ try {
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-06T17:15:48.268Z');
+    $request->crmPipeline->raw = [
+        'Vista' => 'string',
+    ];
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-13T04:30:34.696Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->pipeline->createCrmPipeline($request);
@@ -203,8 +205,10 @@ try {
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-25T13:09:02.644Z');
+    $request->crmPipeline->raw = [
+        'Costa' => 'string',
+    ];
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T20:45:57.138Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -308,8 +312,10 @@ try {
     $request->crmPipeline->id = '<ID>';
     $request->crmPipeline->isActive = false;
     $request->crmPipeline->name = 'string';
-    $request->crmPipeline->raw = new Shared\PropertyCrmPipelineRaw();
-    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-03T02:41:03.928Z');
+    $request->crmPipeline->raw = [
+        'Androgyne' => 'string',
+    ];
+    $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-08T17:12:56.773Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

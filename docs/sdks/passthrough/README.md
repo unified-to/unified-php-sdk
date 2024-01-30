@@ -32,9 +32,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CreatePassthroughRequest();
+    $request->requestBody = [
+        'turquoise' => 'string',
+    ];
     $request->connectionId = 'string';
-    $request->path = '/etc/periodic';
-    $request->undefined = new Shared\Undefined();;
+    $request->path = '/var';;
 
     $response = $sdk->passthrough->createPassthrough($request);
 
@@ -129,9 +131,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PatchPassthroughRequest();
+    $request->requestBody = [
+        'brand' => 'string',
+    ];
     $request->connectionId = 'string';
-    $request->path = '/mnt';
-    $request->undefined = new Shared\Undefined();;
+    $request->path = '/var/mail';;
 
     $response = $sdk->passthrough->patchPassthrough($request);
 
@@ -226,9 +230,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\UpdatePassthroughRequest();
+    $request->requestBody = [
+        'Northwest' => 'string',
+    ];
     $request->connectionId = 'string';
-    $request->path = '/dev';
-    $request->undefined = new Shared\Undefined();;
+    $request->path = '/var/mail';;
 
     $response = $sdk->passthrough->updatePassthrough($request);
 

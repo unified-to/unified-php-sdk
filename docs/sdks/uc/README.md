@@ -42,12 +42,14 @@ try {
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
+    $request->ucContact->raw = [
+        'enhance' => 'string',
+    ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-29T08:48:22.854Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-27T10:35:00.674Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->uc->createUcContact($request);
@@ -269,12 +271,14 @@ try {
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
+    $request->ucContact->raw = [
+        'after' => 'string',
+    ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-29T10:07:07.897Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T22:08:30.034Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -379,12 +383,14 @@ try {
     ];
     $request->ucContact->id = '<ID>';
     $request->ucContact->name = 'string';
-    $request->ucContact->raw = new Shared\PropertyUcContactRaw();
+    $request->ucContact->raw = [
+        'Convertible' => 'string',
+    ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
     $request->ucContact->title = 'string';
-    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-14T19:41:27.169Z');
+    $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-11T10:56:34.889Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

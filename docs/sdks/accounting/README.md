@@ -80,10 +80,12 @@ try {
     $request->accountingAccount->id = '<ID>';
     $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = 'string';
-    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->raw = [
+        'Ruble' => 'string',
+    ];
     $request->accountingAccount->status = Shared\Status::Active;
-    $request->accountingAccount->type = Shared\Type::Equity;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-09T23:41:51.681Z');
+    $request->accountingAccount->type = Shared\Type::FixedAsset;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T23:54:12.882Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->accounting->createAccountingAccount($request);
@@ -151,14 +153,16 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = 'string';
-    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->raw = [
+        'unfold' => 'string',
+    ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = 'string';
     $request->accountingContact->shippingAddress->address2 = 'string';
-    $request->accountingContact->shippingAddress->city = 'Warren';
-    $request->accountingContact->shippingAddress->country = 'Cayman Islands';
-    $request->accountingContact->shippingAddress->countryCode = 'ST';
-    $request->accountingContact->shippingAddress->postalCode = '81046-2093';
+    $request->accountingContact->shippingAddress->city = 'Port Wilberfield';
+    $request->accountingContact->shippingAddress->country = 'Bouvet Island (Bouvetoya)';
+    $request->accountingContact->shippingAddress->countryCode = 'AM';
+    $request->accountingContact->shippingAddress->postalCode = '62093';
     $request->accountingContact->shippingAddress->region = 'string';
     $request->accountingContact->shippingAddress->regionCode = 'string';
     $request->accountingContact->taxExemption = Shared\TaxExemption::EducationalOrg;
@@ -230,14 +234,16 @@ try {
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 7142.37;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T02:12:20.862Z');
-    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
-    $request->accountingInvoice->refundAmount = 6572.32;
+    $request->accountingInvoice->raw = [
+        'Central' => 'string',
+    ];
+    $request->accountingInvoice->refundAmount = 1578.89;
     $request->accountingInvoice->refundReason = 'string';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-10T18:36:49.807Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
-    $request->accountingInvoice->taxAmount = 5503.49;
-    $request->accountingInvoice->totalAmount = 8057.4;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-23T07:04:07.074Z');
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-27T04:22:20.182Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
+    $request->accountingInvoice->taxAmount = 6864;
+    $request->accountingInvoice->totalAmount = 6873.46;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T22:49:02.835Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->accounting->createAccountingInvoice($request);
@@ -295,9 +301,11 @@ try {
     $request->accountingItem->price = 8182.36;
     $request->accountingItem->publicDescription = 'string';
     $request->accountingItem->quantityOnHand = 9042.97;
-    $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
+    $request->accountingItem->raw = [
+        'ampere' => 'string',
+    ];
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-05T08:21:06.807Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-12T17:24:47.315Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->accounting->createAccountingItem($request);
@@ -354,10 +362,12 @@ try {
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = [
+        'Mount' => 'string',
+    ];
     $request->accountingPayment->reference = 'string';
-    $request->accountingPayment->totalAmount = 291.36;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-01T03:33:47.004Z');
+    $request->accountingPayment->totalAmount = 1821.1;
+    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-22T09:20:36.660Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->accounting->createAccountingPayment($request);
@@ -412,8 +422,10 @@ try {
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 6789.7;
-    $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-27T23:06:27.112Z');
+    $request->accountingTaxrate->raw = [
+        'Human' => 'string',
+    ];
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-06T04:09:12.755Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->accounting->createAccountingTaxrate($request);
@@ -469,9 +481,11 @@ try {
     $request->accountingTransaction->lineItems = [
         new Shared\AccountingTransactionLineitem(),
     ];
-    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->raw = [
+        'Metal' => 'string',
+    ];
     $request->accountingTransaction->reference = 'string';
-    $request->accountingTransaction->taxAmount = 2477.45;
+    $request->accountingTransaction->taxAmount = 8276.07;
     $request->accountingTransaction->taxrateId = 'string';
     $request->accountingTransaction->updatedAt = 'string';
     $request->connectionId = 'string';;
@@ -1390,10 +1404,12 @@ try {
     $request->accountingAccount->id = '<ID>';
     $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = 'string';
-    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
+    $request->accountingAccount->raw = [
+        'male' => 'string',
+    ];
     $request->accountingAccount->status = Shared\Status::Archived;
-    $request->accountingAccount->type = Shared\Type::Revenue;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-10T10:46:36.474Z');
+    $request->accountingAccount->type = Shared\Type::Expense;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-01T20:09:00.405Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1462,22 +1478,24 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = 'string';
-    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->raw = [
+        'bypass' => 'string',
+    ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = 'string';
     $request->accountingContact->shippingAddress->address2 = 'string';
-    $request->accountingContact->shippingAddress->city = 'Anyafurt';
-    $request->accountingContact->shippingAddress->country = 'Kiribati';
-    $request->accountingContact->shippingAddress->countryCode = 'SE';
-    $request->accountingContact->shippingAddress->postalCode = '62367-9125';
+    $request->accountingContact->shippingAddress->city = 'Koeppfield';
+    $request->accountingContact->shippingAddress->country = 'Netherlands Antilles';
+    $request->accountingContact->shippingAddress->countryCode = 'NE';
+    $request->accountingContact->shippingAddress->postalCode = '36791';
     $request->accountingContact->shippingAddress->region = 'string';
     $request->accountingContact->shippingAddress->regionCode = 'string';
-    $request->accountingContact->taxExemption = Shared\TaxExemption::RegionGov;
+    $request->accountingContact->taxExemption = Shared\TaxExemption::TribalGov;
     $request->accountingContact->taxNumber = 'string';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T14:47:27.816Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T21:20:14.932Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1542,14 +1560,16 @@ try {
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 7810.81;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-02T21:47:54.080Z');
-    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
-    $request->accountingInvoice->refundAmount = 1152.38;
+    $request->accountingInvoice->raw = [
+        'Northwest' => 'string',
+    ];
+    $request->accountingInvoice->refundAmount = 6443.77;
     $request->accountingInvoice->refundReason = 'string';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-23T14:30:18.013Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Voided;
-    $request->accountingInvoice->taxAmount = 2117.25;
-    $request->accountingInvoice->totalAmount = 3028.19;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T22:52:23.132Z');
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-21T01:13:52.344Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
+    $request->accountingInvoice->taxAmount = 1140.08;
+    $request->accountingInvoice->totalAmount = 4543.48;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-02T12:10:13.037Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1608,9 +1628,11 @@ try {
     $request->accountingItem->price = 1007.53;
     $request->accountingItem->publicDescription = 'string';
     $request->accountingItem->quantityOnHand = 3510.34;
-    $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
+    $request->accountingItem->raw = [
+        'Quality' => 'string',
+    ];
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T01:12:30.848Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-28T04:23:01.953Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1668,10 +1690,12 @@ try {
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = [
+        'periodic' => 'string',
+    ];
     $request->accountingPayment->reference = 'string';
-    $request->accountingPayment->totalAmount = 8698.74;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-08T12:40:48.671Z');
+    $request->accountingPayment->totalAmount = 9979.6;
+    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-15T02:06:02.492Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1727,8 +1751,10 @@ try {
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 220.78;
-    $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-17T10:44:31.599Z');
+    $request->accountingTaxrate->raw = [
+        'Facilitator' => 'string',
+    ];
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-17T14:16:26.961Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -1785,9 +1811,11 @@ try {
     $request->accountingTransaction->lineItems = [
         new Shared\AccountingTransactionLineitem(),
     ];
-    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->raw = [
+        'Gambia' => 'string',
+    ];
     $request->accountingTransaction->reference = 'string';
-    $request->accountingTransaction->taxAmount = 535.65;
+    $request->accountingTransaction->taxAmount = 259.82;
     $request->accountingTransaction->taxrateId = 'string';
     $request->accountingTransaction->updatedAt = 'string';
     $request->connectionId = 'string';
@@ -2183,10 +2211,12 @@ try {
     $request->accountingAccount->id = '<ID>';
     $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = 'string';
-    $request->accountingAccount->raw = new Shared\PropertyAccountingAccountRaw();
-    $request->accountingAccount->status = Shared\Status::Active;
-    $request->accountingAccount->type = Shared\Type::Bank;
-    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-02T20:00:03.765Z');
+    $request->accountingAccount->raw = [
+        'Costa' => 'string',
+    ];
+    $request->accountingAccount->status = Shared\Status::Archived;
+    $request->accountingAccount->type = Shared\Type::Liability;
+    $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-16T10:15:08.356Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2255,22 +2285,24 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = 'string';
-    $request->accountingContact->raw = new Shared\PropertyAccountingContactRaw();
+    $request->accountingContact->raw = [
+        'salmon' => 'string',
+    ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = 'string';
     $request->accountingContact->shippingAddress->address2 = 'string';
-    $request->accountingContact->shippingAddress->city = 'New Judgestead';
-    $request->accountingContact->shippingAddress->country = 'Kuwait';
-    $request->accountingContact->shippingAddress->countryCode = 'DO';
-    $request->accountingContact->shippingAddress->postalCode = '06389-9093';
+    $request->accountingContact->shippingAddress->city = 'Lelahport';
+    $request->accountingContact->shippingAddress->country = 'Dominica';
+    $request->accountingContact->shippingAddress->countryCode = 'SJ';
+    $request->accountingContact->shippingAddress->postalCode = '63899';
     $request->accountingContact->shippingAddress->region = 'string';
     $request->accountingContact->shippingAddress->regionCode = 'string';
-    $request->accountingContact->taxExemption = Shared\TaxExemption::Other;
+    $request->accountingContact->taxExemption = Shared\TaxExemption::FederalGov;
     $request->accountingContact->taxNumber = 'string';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-24T15:10:44.676Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-28T03:42:59.577Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2335,14 +2367,16 @@ try {
     $request->accountingInvoice->notes = 'string';
     $request->accountingInvoice->paidAmount = 3682.14;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-27T09:53:44.172Z');
-    $request->accountingInvoice->raw = new Shared\PropertyAccountingInvoiceRaw();
-    $request->accountingInvoice->refundAmount = 2842.49;
+    $request->accountingInvoice->raw = [
+        'intuitive' => 'string',
+    ];
+    $request->accountingInvoice->refundAmount = 3314.72;
     $request->accountingInvoice->refundReason = 'string';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-05T15:45:06.127Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
-    $request->accountingInvoice->taxAmount = 7535.06;
-    $request->accountingInvoice->totalAmount = 7716.41;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-24T03:16:51.155Z');
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-05T20:13:33.419Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
+    $request->accountingInvoice->taxAmount = 3824.24;
+    $request->accountingInvoice->totalAmount = 2939.97;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T18:41:11.569Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2401,9 +2435,11 @@ try {
     $request->accountingItem->price = 3314.34;
     $request->accountingItem->publicDescription = 'string';
     $request->accountingItem->quantityOnHand = 9226.47;
-    $request->accountingItem->raw = new Shared\PropertyAccountingItemRaw();
+    $request->accountingItem->raw = [
+        'revolutionize' => 'string',
+    ];
     $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-09T06:37:51.326Z');
+    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-25T00:46:46.096Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2461,10 +2497,12 @@ try {
     $request->accountingPayment->invoiceId = 'string';
     $request->accountingPayment->notes = 'string';
     $request->accountingPayment->paymentMethod = 'string';
-    $request->accountingPayment->raw = new Shared\PropertyAccountingPaymentRaw();
+    $request->accountingPayment->raw = [
+        'Music' => 'string',
+    ];
     $request->accountingPayment->reference = 'string';
-    $request->accountingPayment->totalAmount = 1869.63;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-14T18:33:08.394Z');
+    $request->accountingPayment->totalAmount = 4734;
+    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-26T21:11:42.893Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2520,8 +2558,10 @@ try {
     $request->accountingTaxrate->isActive = false;
     $request->accountingTaxrate->name = 'string';
     $request->accountingTaxrate->rate = 2580.61;
-    $request->accountingTaxrate->raw = new Shared\PropertyAccountingTaxrateRaw();
-    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-21T10:57:59.053Z');
+    $request->accountingTaxrate->raw = [
+        'Buckinghamshire' => 'string',
+    ];
+    $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-25T16:43:20.981Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -2578,9 +2618,11 @@ try {
     $request->accountingTransaction->lineItems = [
         new Shared\AccountingTransactionLineitem(),
     ];
-    $request->accountingTransaction->raw = new Shared\PropertyAccountingTransactionRaw();
+    $request->accountingTransaction->raw = [
+        'Intelligent' => 'string',
+    ];
     $request->accountingTransaction->reference = 'string';
-    $request->accountingTransaction->taxAmount = 2397.73;
+    $request->accountingTransaction->taxAmount = 421.84;
     $request->accountingTransaction->taxrateId = 'string';
     $request->accountingTransaction->updatedAt = 'string';
     $request->connectionId = 'string';

@@ -72,14 +72,16 @@ try {
     $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Virtual asymmetric definition';
-    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->raw = [
+        'Bhutan' => 'string',
+    ];
     $request->crmEvent->task = new Shared\PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'Automated attitude-oriented info-mediaries';
-    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T02:47:03.388Z');
+    $request->crmEvent->task->description = 'Multi-tiered impactful attitude';
+    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-26T13:32:41.446Z');
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
-    $request->crmEvent->type = Shared\CrmEventType::Task;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-19T04:33:06.810Z');
+    $request->crmEvent->type = Shared\CrmEventType::Note;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-09T05:29:10.624Z');
     $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -279,14 +281,16 @@ try {
     $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Realigned composite benchmark';
-    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->raw = [
+        'Ohio' => 'string',
+    ];
     $request->crmEvent->task = new Shared\PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'Customer-focused needs-based groupware';
-    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-30T20:05:52.386Z');
+    $request->crmEvent->task->description = 'Intuitive zero administration complexity';
+    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T21:56:51.556Z');
     $request->crmEvent->task->name = 'string';
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
-    $request->crmEvent->type = Shared\CrmEventType::Email;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-15T05:10:26.446Z');
+    $request->crmEvent->type = Shared\CrmEventType::Call;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-23T20:19:34.007Z');
     $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -423,14 +427,16 @@ try {
     $request->crmEvent->meeting->title = 'string';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Visionary actuating migration';
-    $request->crmEvent->raw = new Shared\PropertyCrmEventRaw();
+    $request->crmEvent->raw = [
+        'rich' => 'string',
+    ];
     $request->crmEvent->task = new Shared\PropertyCrmEventTask();
-    $request->crmEvent->task->description = 'Synergized neutral complexity';
-    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-26T11:53:18.745Z');
+    $request->crmEvent->task->description = 'Diverse clear-thinking success';
+    $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-10T18:42:32.729Z');
     $request->crmEvent->task->name = 'string';
-    $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Deferred;
-    $request->crmEvent->type = Shared\CrmEventType::Call;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-13T22:59:19.685Z');
+    $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::NotStarted;
+    $request->crmEvent->type = Shared\CrmEventType::Task;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-12T06:25:41.650Z');
     $request->crmEvent->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

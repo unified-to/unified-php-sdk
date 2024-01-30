@@ -11,10 +11,15 @@ namespace Unified\Unified_to\Models\Shared;
 
 class IntegrationSupport
 {
+    /**
+     * $inboundFields
+     * 
+     * @var ?array<string, mixed> $inboundFields
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('inbound_fields')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyIntegrationSupportInboundFields')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyIntegrationSupportInboundFields $inboundFields = null;
+    public ?array $inboundFields = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('list_account_id')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -136,10 +141,15 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $methods = null;
     
+    /**
+     * $outboundFields
+     * 
+     * @var ?array<string, mixed> $outboundFields
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('outbound_fields')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyIntegrationSupportOutboundFields')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyIntegrationSupportOutboundFields $outboundFields = null;
+    public ?array $outboundFields = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('search_domain')]
     #[\JMS\Serializer\Annotation\Type('bool')]

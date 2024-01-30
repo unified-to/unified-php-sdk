@@ -35,7 +35,7 @@ class Passthrough
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\CreatePassthroughRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "undefined", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -56,7 +56,7 @@ class Passthrough
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Undefined', 'json');
+                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -94,7 +94,7 @@ class Passthrough
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Undefined', 'json');
+                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -115,7 +115,7 @@ class Passthrough
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\PatchPassthroughRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "undefined", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -136,7 +136,7 @@ class Passthrough
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Undefined', 'json');
+                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -174,7 +174,7 @@ class Passthrough
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Undefined', 'json');
+                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -195,7 +195,7 @@ class Passthrough
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\UpdatePassthroughRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "undefined", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -216,7 +216,7 @@ class Passthrough
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Undefined', 'json');
+                $response->undefined = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 

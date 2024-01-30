@@ -51,10 +51,15 @@ class AtsScorecard
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $jobId = null;
     
+    /**
+     * $raw
+     * 
+     * @var ?array<string, mixed> $raw
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsScorecardRaw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PropertyAtsScorecardRaw $raw = null;
+    public ?array $raw = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('recommendation')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Recommendation>')]

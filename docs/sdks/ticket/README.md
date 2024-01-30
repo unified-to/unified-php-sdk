@@ -41,7 +41,9 @@ try {
     $request->ticketingTicket->description = 'Automated composite productivity';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = [
+        'indigo' => 'string',
+    ];
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
     $request->ticketingTicket->status = Shared\TicketingTicketStatus::Closed;
@@ -49,7 +51,7 @@ try {
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-06T20:46:58.372Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-31T16:32:54.987Z');
     $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';;
 
@@ -215,15 +217,17 @@ try {
     $request->ticketingTicket->description = 'Operative composite strategy';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = [
+        'Concrete' => 'string',
+    ];
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
-    $request->ticketingTicket->status = Shared\TicketingTicketStatus::Closed;
+    $request->ticketingTicket->status = Shared\TicketingTicketStatus::Active;
     $request->ticketingTicket->subject = 'string';
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-06T12:10:37.068Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-08T14:40:04.177Z');
     $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
@@ -329,7 +333,9 @@ try {
     $request->ticketingTicket->description = 'Configurable user-facing middleware';
     $request->ticketingTicket->id = '<ID>';
     $request->ticketingTicket->priority = 'string';
-    $request->ticketingTicket->raw = new Shared\PropertyTicketingTicketRaw();
+    $request->ticketingTicket->raw = [
+        'East' => 'string',
+    ];
     $request->ticketingTicket->source = 'string';
     $request->ticketingTicket->sourceRef = 'string';
     $request->ticketingTicket->status = Shared\TicketingTicketStatus::Active;
@@ -337,7 +343,7 @@ try {
     $request->ticketingTicket->tags = [
         'string',
     ];
-    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-17T01:38:48.188Z');
+    $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-17T20:35:00.553Z');
     $request->ticketingTicket->userId = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;

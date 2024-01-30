@@ -63,14 +63,16 @@ try {
     $request->hrisEmployee->managerId = 'string';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Married;
     $request->hrisEmployee->name = 'string';
-    $request->hrisEmployee->raw = new Shared\PropertyHrisEmployeeRaw();
+    $request->hrisEmployee->raw = [
+        'Deckow' => 'string',
+    ];
     $request->hrisEmployee->telephones = [
         new Shared\HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-18T00:06:06.605Z');
-    $request->hrisEmployee->timezone = 'Pacific/Fiji';
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-06T17:06:15.004Z');
+    $request->hrisEmployee->timezone = 'Australia/Melbourne';
     $request->hrisEmployee->title = 'string';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-19T15:51:29.198Z');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-26T16:14:34.561Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->employee->createHrisEmployee($request);
@@ -255,14 +257,16 @@ try {
     $request->hrisEmployee->managerId = 'string';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
     $request->hrisEmployee->name = 'string';
-    $request->hrisEmployee->raw = new Shared\PropertyHrisEmployeeRaw();
+    $request->hrisEmployee->raw = [
+        'Nissan' => 'string',
+    ];
     $request->hrisEmployee->telephones = [
         new Shared\HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-01T15:38:26.132Z');
-    $request->hrisEmployee->timezone = 'Asia/Krasnoyarsk';
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-11T17:51:00.187Z');
+    $request->hrisEmployee->timezone = 'Europe/Lisbon';
     $request->hrisEmployee->title = 'string';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-11T17:51:00.187Z');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-01T15:09:08.937Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -389,14 +393,16 @@ try {
     $request->hrisEmployee->managerId = 'string';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
     $request->hrisEmployee->name = 'string';
-    $request->hrisEmployee->raw = new Shared\PropertyHrisEmployeeRaw();
+    $request->hrisEmployee->raw = [
+        'Senior' => 'string',
+    ];
     $request->hrisEmployee->telephones = [
         new Shared\HrisTelephone(),
     ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-21T17:11:19.689Z');
-    $request->hrisEmployee->timezone = 'America/Phoenix';
+    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-09T06:17:10.243Z');
+    $request->hrisEmployee->timezone = 'Africa/Casablanca';
     $request->hrisEmployee->title = 'string';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-09T06:17:10.243Z');
+    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-13T20:08:58.858Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

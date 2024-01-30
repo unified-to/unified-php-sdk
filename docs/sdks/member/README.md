@@ -43,11 +43,13 @@ try {
         'string',
     ];
     $request->marketingMember->name = 'string';
-    $request->marketingMember->raw = new Shared\PropertyMarketingMemberRaw();
+    $request->marketingMember->raw = [
+        'deposit' => 'string',
+    ];
     $request->marketingMember->tags = [
         'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-19T11:56:44.450Z');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-29T11:20:30.541Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->member->createMartechMember($request);
@@ -213,11 +215,13 @@ try {
         'string',
     ];
     $request->marketingMember->name = 'string';
-    $request->marketingMember->raw = new Shared\PropertyMarketingMemberRaw();
+    $request->marketingMember->raw = [
+        'bumpy' => 'string',
+    ];
     $request->marketingMember->tags = [
         'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-21T10:13:21.189Z');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-03T01:03:21.772Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
@@ -324,11 +328,13 @@ try {
         'string',
     ];
     $request->marketingMember->name = 'string';
-    $request->marketingMember->raw = new Shared\PropertyMarketingMemberRaw();
+    $request->marketingMember->raw = [
+        'Berkshire' => 'string',
+    ];
     $request->marketingMember->tags = [
         'string',
     ];
-    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-20T05:09:25.955Z');
+    $request->marketingMember->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-23T04:05:41.384Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
