@@ -481,6 +481,9 @@ try {
     $request->accountingTransaction->lineItems = [
         new Shared\AccountingTransactionLineitem(),
     ];
+    $request->accountingTransaction->lineitems = [
+        new Shared\AccountingTransactionLineitem(),
+    ];
     $request->accountingTransaction->raw = [
         'Metal' => 'string',
     ];
@@ -1811,6 +1814,9 @@ try {
     $request->accountingTransaction->lineItems = [
         new Shared\AccountingTransactionLineitem(),
     ];
+    $request->accountingTransaction->lineitems = [
+        new Shared\AccountingTransactionLineitem(),
+    ];
     $request->accountingTransaction->raw = [
         'Gambia' => 'string',
     ];
@@ -2616,6 +2622,9 @@ try {
     $request->accountingTransaction->description = 'Organic web-enabled orchestration';
     $request->accountingTransaction->id = '<ID>';
     $request->accountingTransaction->lineItems = [
+        new Shared\AccountingTransactionLineitem(),
+    ];
+    $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
     $request->accountingTransaction->raw = [

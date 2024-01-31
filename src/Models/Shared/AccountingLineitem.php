@@ -56,6 +56,11 @@ class AccountingLineitem
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $notes = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('refund_amount')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $refundAmount = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('refunded_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -106,6 +111,7 @@ class AccountingLineitem
 		$this->itemName = null;
 		$this->itemSku = null;
 		$this->notes = null;
+		$this->refundAmount = null;
 		$this->refundedAmount = null;
 		$this->refundedAt = null;
 		$this->taxAmount = null;

@@ -41,6 +41,16 @@ class AccountingTransaction
     public ?array $lineItems = null;
     
     /**
+     * new field name
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineitem> $lineitems
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('lineitems')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingTransactionLineitem>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $lineitems = null;
+    
+    /**
      * $raw
      * 
      * @var ?array<string, mixed> $raw
@@ -77,6 +87,7 @@ class AccountingTransaction
 		$this->description = null;
 		$this->id = "";
 		$this->lineItems = null;
+		$this->lineitems = null;
 		$this->raw = null;
 		$this->reference = null;
 		$this->taxAmount = null;
