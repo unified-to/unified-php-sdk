@@ -355,18 +355,19 @@ try {
     $request->atsJob->id = '<ID>';
     $request->atsJob->languageLocale = 'string';
     $request->atsJob->name = 'string';
+    $request->atsJob->numberOfOpenings = 6151.12;
     $request->atsJob->publicJobUrls = [
         'string',
     ];
     $request->atsJob->raw = [
-        'Transmasculine' => 'string',
+        'wherever' => 'string',
     ];
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = Shared\AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-25T02:40:27.531Z');
+    $request->atsJob->status = Shared\AtsJobStatus::Open;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-18T02:03:06.250Z');
     $request->connectionId = 'string';;
 
     $response = $sdk->ats->createAtsJob($request);
@@ -1476,11 +1477,12 @@ try {
     $request->atsJob->id = '<ID>';
     $request->atsJob->languageLocale = 'string';
     $request->atsJob->name = 'string';
+    $request->atsJob->numberOfOpenings = 6182.06;
     $request->atsJob->publicJobUrls = [
         'string',
     ];
     $request->atsJob->raw = [
-        'Cis' => 'string',
+        'North' => 'string',
     ];
     $request->atsJob->recruiterIds = [
         'string',
@@ -2181,18 +2183,19 @@ try {
     $request->atsJob->id = '<ID>';
     $request->atsJob->languageLocale = 'string';
     $request->atsJob->name = 'string';
+    $request->atsJob->numberOfOpenings = 9080.02;
     $request->atsJob->publicJobUrls = [
         'string',
     ];
     $request->atsJob->raw = [
-        'though' => 'string',
+        'Direct' => 'string',
     ];
     $request->atsJob->recruiterIds = [
         'string',
     ];
     $request->atsJob->remote = false;
-    $request->atsJob->status = Shared\AtsJobStatus::Archived;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T07:16:42.656Z');
+    $request->atsJob->status = Shared\AtsJobStatus::Draft;
+    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-04T04:44:52.139Z');
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 

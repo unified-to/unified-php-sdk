@@ -79,7 +79,7 @@ try {
     $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T14:41:39.477Z');
     $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-12T21:34:55.584Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::HrisGroupRead,
+        Shared\PropertyConnectionPermissions::HrisEmployeeWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T09:01:24.591Z');
     $request->workspaceId = 'string';;
@@ -177,7 +177,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListUnifiedConnectionsRequest();
     $request->categories = [
-        Operations\Categories::Enrich,
+        Operations\Categories::Martech,
     ];
     $request->env = 'string';
     $request->externalXref = 'string';
@@ -280,7 +280,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T11:43:14.112Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-24T01:15:30.014Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::CrmCompanyRead,
+        Shared\PropertyConnectionPermissions::AtsJobRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-02T09:40:32.883Z');
     $request->connection->workspaceId = 'string';
@@ -410,7 +410,7 @@ try {
     $request->connection->auth->tokenUrl = 'string';
     $request->connection->authAwsArn = 'string';
     $request->connection->categories = [
-        Shared\PropertyConnectionCategories::Storage,
+        Shared\PropertyConnectionCategories::Commerce,
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-09T16:09:54.412Z');
     $request->connection->cursorsCache = [

@@ -1,0 +1,10 @@
+# PatchCommerceLocationRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `commerceLocation`                                                                             | [?\Unified\Unified_to\Models\Shared\CommerceLocation](../../Models/Shared/CommerceLocation.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `connectionId`                                                                                 | *string*                                                                                       | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
+| `id`                                                                                           | *string*                                                                                       | :heavy_check_mark:                                                                             | ID of the Location                                                                             |

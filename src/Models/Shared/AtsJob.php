@@ -86,6 +86,11 @@ class AtsJob
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('number_of_openings')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $numberOfOpenings = null;
+    
     /**
      * $publicJobUrls
      * 
@@ -144,6 +149,7 @@ class AtsJob
 		$this->id = null;
 		$this->languageLocale = null;
 		$this->name = null;
+		$this->numberOfOpenings = null;
 		$this->publicJobUrls = null;
 		$this->raw = null;
 		$this->recruiterIds = null;

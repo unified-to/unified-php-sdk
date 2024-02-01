@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createAccountingItem](#createaccountingitem) - Create an item
-* [getAccountingItem](#getaccountingitem) - Retrieve an item
-* [listAccountingItems](#listaccountingitems) - List all items
-* [patchAccountingItem](#patchaccountingitem) - Update an item
-* [removeAccountingItem](#removeaccountingitem) - Remove an item
-* [updateAccountingItem](#updateaccountingitem) - Update an item
+* [createCommerceItem](#createcommerceitem) - Create an item/product
+* [getCommerceItem](#getcommerceitem) - Retrieve an item/product
+* [listCommerceItems](#listcommerceitems) - List all items/products
+* [patchCommerceItem](#patchcommerceitem) - Update an item/product
+* [removeCommerceItem](#removecommerceitem) - Remove an item/product
+* [updateCommerceItem](#updatecommerceitem) - Update an item/product
 
-## createAccountingItem
+## createCommerceItem
 
-Create an item
+Create an item/product
 
 ### Example Usage
 
@@ -32,27 +32,36 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateAccountingItemRequest();
-    $request->accountingItem = new Shared\AccountingItem();
-    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-04T21:45:18.227Z');
-    $request->accountingItem->description = 'Team-oriented grid-enabled open system';
-    $request->accountingItem->id = '<ID>';
-    $request->accountingItem->isActive = false;
-    $request->accountingItem->isTaxable = false;
-    $request->accountingItem->name = 'string';
-    $request->accountingItem->price = 8182.36;
-    $request->accountingItem->publicDescription = 'string';
-    $request->accountingItem->quantityOnHand = 9042.97;
-    $request->accountingItem->raw = [
-        'ampere' => 'string',
+        $request = new Operations\CreateCommerceItemRequest();
+    $request->commerceItem = new Shared\CommerceItem();
+    $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-27T05:28:51.414Z');
+    $request->commerceItem->description = 'Object-based local intranet';
+    $request->commerceItem->id = '<ID>';
+    $request->commerceItem->isActive = false;
+    $request->commerceItem->isTaxable = false;
+    $request->commerceItem->media = [
+        new Shared\CommerceItemMedia(),
     ];
-    $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-12T17:24:47.315Z');
+    $request->commerceItem->name = 'string';
+    $request->commerceItem->publicDescription = 'string';
+    $request->commerceItem->publicName = 'string';
+    $request->commerceItem->raw = [
+        'Awesome' => 'string',
+    ];
+    $request->commerceItem->tags = [
+        'string',
+    ];
+    $request->commerceItem->type = 'string';
+    $request->commerceItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-06T06:18:58.093Z');
+    $request->commerceItem->variants = [
+        new Shared\CommerceItemVariant(),
+    ];
+    $request->commerceItem->vendorName = 'string';
     $request->connectionId = 'string';;
 
-    $response = $sdk->item->createAccountingItem($request);
+    $response = $sdk->item->createCommerceItem($request);
 
-    if ($response->accountingItem !== null) {
+    if ($response->commerceItem !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -62,19 +71,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\CreateAccountingItemRequest](../../Models/Operations/CreateAccountingItemRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateCommerceItemRequest](../../Models/Operations/CreateCommerceItemRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateAccountingItemResponse](../../Models/Operations/CreateAccountingItemResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreateCommerceItemResponse](../../Models/Operations/CreateCommerceItemResponse.md)**
 
 
-## getAccountingItem
+## getCommerceItem
 
-Retrieve an item
+Retrieve an item/product
 
 ### Example Usage
 
@@ -94,16 +103,72 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetAccountingItemRequest();
+        $request = new Operations\GetCommerceItemRequest();
     $request->connectionId = 'string';
     $request->fields = [
         'string',
     ];
     $request->id = '<ID>';;
 
-    $response = $sdk->item->getAccountingItem($request);
+    $response = $sdk->item->getCommerceItem($request);
 
-    if ($response->accountingItem !== null) {
+    if ($response->commerceItem !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetCommerceItemRequest](../../Models/Operations/GetCommerceItemRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetCommerceItemResponse](../../Models/Operations/GetCommerceItemResponse.md)**
+
+
+## listCommerceItems
+
+List all items/products
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListCommerceItemsRequest();
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->limit = 2553.93;
+    $request->offset = 4072.28;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-10T19:08:09.923Z');;
+
+    $response = $sdk->item->listCommerceItems($request);
+
+    if ($response->commerceItems !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -115,17 +180,17 @@ try {
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetAccountingItemRequest](../../Models/Operations/GetAccountingItemRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest](../../Models/Operations/ListCommerceItemsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAccountingItemResponse](../../Models/Operations/GetAccountingItemResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\ListCommerceItemsResponse](../../Models/Operations/ListCommerceItemsResponse.md)**
 
 
-## listAccountingItems
+## patchCommerceItem
 
-List all items
+Update an item/product
 
 ### Example Usage
 
@@ -145,84 +210,37 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListAccountingItemsRequest();
-    $request->connectionId = 'string';
-    $request->fields = [
+        $request = new Operations\PatchCommerceItemRequest();
+    $request->commerceItem = new Shared\CommerceItem();
+    $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-21T03:47:22.544Z');
+    $request->commerceItem->description = 'Front-line explicit circuit';
+    $request->commerceItem->id = '<ID>';
+    $request->commerceItem->isActive = false;
+    $request->commerceItem->isTaxable = false;
+    $request->commerceItem->media = [
+        new Shared\CommerceItemMedia(),
+    ];
+    $request->commerceItem->name = 'string';
+    $request->commerceItem->publicDescription = 'string';
+    $request->commerceItem->publicName = 'string';
+    $request->commerceItem->raw = [
+        'Dollar' => 'string',
+    ];
+    $request->commerceItem->tags = [
         'string',
     ];
-    $request->limit = 5739.49;
-    $request->offset = 6744.69;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-10T17:07:55.262Z');;
-
-    $response = $sdk->item->listAccountingItems($request);
-
-    if ($response->accountingItems !== null) {
-        // handle response
-    }
-} catch (Exception $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListAccountingItemsRequest](../../Models/Operations/ListAccountingItemsRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\ListAccountingItemsResponse](../../Models/Operations/ListAccountingItemsResponse.md)**
-
-
-## patchAccountingItem
-
-Update an item
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-require_once 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\PatchAccountingItemRequest();
-    $request->accountingItem = new Shared\AccountingItem();
-    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-12T01:22:35.181Z');
-    $request->accountingItem->description = 'Operative coherent forecast';
-    $request->accountingItem->id = '<ID>';
-    $request->accountingItem->isActive = false;
-    $request->accountingItem->isTaxable = false;
-    $request->accountingItem->name = 'string';
-    $request->accountingItem->price = 1007.53;
-    $request->accountingItem->publicDescription = 'string';
-    $request->accountingItem->quantityOnHand = 3510.34;
-    $request->accountingItem->raw = [
-        'Quality' => 'string',
+    $request->commerceItem->type = 'string';
+    $request->commerceItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-26T15:20:36.769Z');
+    $request->commerceItem->variants = [
+        new Shared\CommerceItemVariant(),
     ];
-    $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-28T04:23:01.953Z');
+    $request->commerceItem->vendorName = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
-    $response = $sdk->item->patchAccountingItem($request);
+    $response = $sdk->item->patchCommerceItem($request);
 
-    if ($response->accountingItem !== null) {
+    if ($response->commerceItem !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -232,19 +250,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchAccountingItemRequest](../../Models/Operations/PatchAccountingItemRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchCommerceItemRequest](../../Models/Operations/PatchCommerceItemRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchAccountingItemResponse](../../Models/Operations/PatchAccountingItemResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchCommerceItemResponse](../../Models/Operations/PatchCommerceItemResponse.md)**
 
 
-## removeAccountingItem
+## removeCommerceItem
 
-Remove an item
+Remove an item/product
 
 ### Example Usage
 
@@ -264,11 +282,11 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveAccountingItemRequest();
+        $request = new Operations\RemoveCommerceItemRequest();
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
-    $response = $sdk->item->removeAccountingItem($request);
+    $response = $sdk->item->removeCommerceItem($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -280,19 +298,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\RemoveAccountingItemRequest](../../Models/Operations/RemoveAccountingItemRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest](../../Models/Operations/RemoveCommerceItemRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveAccountingItemResponse](../../Models/Operations/RemoveAccountingItemResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse](../../Models/Operations/RemoveCommerceItemResponse.md)**
 
 
-## updateAccountingItem
+## updateCommerceItem
 
-Update an item
+Update an item/product
 
 ### Example Usage
 
@@ -312,28 +330,37 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateAccountingItemRequest();
-    $request->accountingItem = new Shared\AccountingItem();
-    $request->accountingItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-31T23:31:53.009Z');
-    $request->accountingItem->description = 'Programmable modular artificial intelligence';
-    $request->accountingItem->id = '<ID>';
-    $request->accountingItem->isActive = false;
-    $request->accountingItem->isTaxable = false;
-    $request->accountingItem->name = 'string';
-    $request->accountingItem->price = 3314.34;
-    $request->accountingItem->publicDescription = 'string';
-    $request->accountingItem->quantityOnHand = 9226.47;
-    $request->accountingItem->raw = [
-        'revolutionize' => 'string',
+        $request = new Operations\UpdateCommerceItemRequest();
+    $request->commerceItem = new Shared\CommerceItem();
+    $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-27T01:13:33.758Z');
+    $request->commerceItem->description = 'Advanced intangible toolset';
+    $request->commerceItem->id = '<ID>';
+    $request->commerceItem->isActive = false;
+    $request->commerceItem->isTaxable = false;
+    $request->commerceItem->media = [
+        new Shared\CommerceItemMedia(),
     ];
-    $request->accountingItem->sku = 'string';
-    $request->accountingItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-25T00:46:46.096Z');
+    $request->commerceItem->name = 'string';
+    $request->commerceItem->publicDescription = 'string';
+    $request->commerceItem->publicName = 'string';
+    $request->commerceItem->raw = [
+        'fuga' => 'string',
+    ];
+    $request->commerceItem->tags = [
+        'string',
+    ];
+    $request->commerceItem->type = 'string';
+    $request->commerceItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-30T16:38:52.346Z');
+    $request->commerceItem->variants = [
+        new Shared\CommerceItemVariant(),
+    ];
+    $request->commerceItem->vendorName = 'string';
     $request->connectionId = 'string';
     $request->id = '<ID>';;
 
-    $response = $sdk->item->updateAccountingItem($request);
+    $response = $sdk->item->updateCommerceItem($request);
 
-    if ($response->accountingItem !== null) {
+    if ($response->commerceItem !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -343,12 +370,12 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\UpdateAccountingItemRequest](../../Models/Operations/UpdateAccountingItemRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest](../../Models/Operations/UpdateCommerceItemRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateAccountingItemResponse](../../Models/Operations/UpdateAccountingItemResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse](../../Models/Operations/UpdateCommerceItemResponse.md)**
 

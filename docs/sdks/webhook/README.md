@@ -48,7 +48,7 @@ try {
     $request->webhook->meta = [
         'Borders' => 'string',
     ];
-    $request->webhook->objectType = Shared\ObjectType::MartechList;
+    $request->webhook->objectType = Shared\ObjectType::HrisGroup;
     $request->webhook->runs = [
         'string',
     ];

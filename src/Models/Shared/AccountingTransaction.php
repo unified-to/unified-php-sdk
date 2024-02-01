@@ -31,16 +31,6 @@ class AccountingTransaction
     public string $id;
     
     /**
-     * $lineItems
-     * 
-     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineitem> $lineItems
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('line_items')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingTransactionLineitem>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $lineItems = null;
-    
-    /**
      * new field name
      * 
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineitem> $lineitems
@@ -86,7 +76,6 @@ class AccountingTransaction
 		$this->currency = null;
 		$this->description = null;
 		$this->id = "";
-		$this->lineItems = null;
 		$this->lineitems = null;
 		$this->raw = null;
 		$this->reference = null;

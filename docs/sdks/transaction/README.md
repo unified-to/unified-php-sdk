@@ -38,9 +38,6 @@ try {
     $request->accountingTransaction->currency = 'Libyan Dinar';
     $request->accountingTransaction->description = 'Pre-emptive multimedia benchmark';
     $request->accountingTransaction->id = '<ID>';
-    $request->accountingTransaction->lineItems = [
-        new Shared\AccountingTransactionLineitem(),
-    ];
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
@@ -210,9 +207,6 @@ try {
     $request->accountingTransaction->currency = 'Kwacha';
     $request->accountingTransaction->description = 'Multi-channelled transitional function';
     $request->accountingTransaction->id = '<ID>';
-    $request->accountingTransaction->lineItems = [
-        new Shared\AccountingTransactionLineitem(),
-    ];
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
@@ -324,9 +318,6 @@ try {
     $request->accountingTransaction->currency = 'Zloty';
     $request->accountingTransaction->description = 'Organic web-enabled orchestration';
     $request->accountingTransaction->id = '<ID>';
-    $request->accountingTransaction->lineItems = [
-        new Shared\AccountingTransactionLineitem(),
-    ];
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: dd7e435592a9ea6528f806cf1e9e4701
+  docChecksum: a19ba4935c486a523296da7841502792
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.239.4
-  releaseVersion: 0.10.34
-  configChecksum: 4ea202e06fc2f9a7fc26c62adc83cffe
+  generationVersion: 2.246.3
+  releaseVersion: 0.10.35
+  configChecksum: ae1f7cfa1a232a9a8a07e212e642b312
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -22,7 +22,6 @@ generatedFiles:
   - src/Account.php
   - src/Contact.php
   - src/Invoice.php
-  - src/Item.php
   - src/Organization.php
   - src/Payment.php
   - src/Taxrate.php
@@ -35,6 +34,11 @@ generatedFiles:
   - src/Interview.php
   - src/Job.php
   - src/Scorecard.php
+  - src/Commerce.php
+  - src/Collection.php
+  - src/Inventory.php
+  - src/Item.php
+  - src/Location.php
   - src/Crm.php
   - src/Company.php
   - src/Deal.php
@@ -91,8 +95,6 @@ generatedFiles:
   - src/Models/Operations/CreateAccountingContactResponse.php
   - src/Models/Operations/CreateAccountingInvoiceRequest.php
   - src/Models/Operations/CreateAccountingInvoiceResponse.php
-  - src/Models/Operations/CreateAccountingItemRequest.php
-  - src/Models/Operations/CreateAccountingItemResponse.php
   - src/Models/Operations/CreateAccountingPaymentRequest.php
   - src/Models/Operations/CreateAccountingPaymentResponse.php
   - src/Models/Operations/CreateAccountingTaxrateRequest.php
@@ -105,8 +107,6 @@ generatedFiles:
   - src/Models/Operations/GetAccountingContactResponse.php
   - src/Models/Operations/GetAccountingInvoiceRequest.php
   - src/Models/Operations/GetAccountingInvoiceResponse.php
-  - src/Models/Operations/GetAccountingItemRequest.php
-  - src/Models/Operations/GetAccountingItemResponse.php
   - src/Models/Operations/GetAccountingOrganizationRequest.php
   - src/Models/Operations/GetAccountingOrganizationResponse.php
   - src/Models/Operations/GetAccountingPaymentRequest.php
@@ -121,8 +121,6 @@ generatedFiles:
   - src/Models/Operations/ListAccountingContactsResponse.php
   - src/Models/Operations/ListAccountingInvoicesRequest.php
   - src/Models/Operations/ListAccountingInvoicesResponse.php
-  - src/Models/Operations/ListAccountingItemsRequest.php
-  - src/Models/Operations/ListAccountingItemsResponse.php
   - src/Models/Operations/ListAccountingOrganizationsRequest.php
   - src/Models/Operations/ListAccountingOrganizationsResponse.php
   - src/Models/Operations/ListAccountingPaymentsRequest.php
@@ -137,8 +135,6 @@ generatedFiles:
   - src/Models/Operations/PatchAccountingContactResponse.php
   - src/Models/Operations/PatchAccountingInvoiceRequest.php
   - src/Models/Operations/PatchAccountingInvoiceResponse.php
-  - src/Models/Operations/PatchAccountingItemRequest.php
-  - src/Models/Operations/PatchAccountingItemResponse.php
   - src/Models/Operations/PatchAccountingPaymentRequest.php
   - src/Models/Operations/PatchAccountingPaymentResponse.php
   - src/Models/Operations/PatchAccountingTaxrateRequest.php
@@ -151,8 +147,6 @@ generatedFiles:
   - src/Models/Operations/RemoveAccountingContactResponse.php
   - src/Models/Operations/RemoveAccountingInvoiceRequest.php
   - src/Models/Operations/RemoveAccountingInvoiceResponse.php
-  - src/Models/Operations/RemoveAccountingItemRequest.php
-  - src/Models/Operations/RemoveAccountingItemResponse.php
   - src/Models/Operations/RemoveAccountingPaymentRequest.php
   - src/Models/Operations/RemoveAccountingPaymentResponse.php
   - src/Models/Operations/RemoveAccountingTaxrateRequest.php
@@ -165,8 +159,6 @@ generatedFiles:
   - src/Models/Operations/UpdateAccountingContactResponse.php
   - src/Models/Operations/UpdateAccountingInvoiceRequest.php
   - src/Models/Operations/UpdateAccountingInvoiceResponse.php
-  - src/Models/Operations/UpdateAccountingItemRequest.php
-  - src/Models/Operations/UpdateAccountingItemResponse.php
   - src/Models/Operations/UpdateAccountingPaymentRequest.php
   - src/Models/Operations/UpdateAccountingPaymentResponse.php
   - src/Models/Operations/UpdateAccountingTaxrateRequest.php
@@ -271,6 +263,54 @@ generatedFiles:
   - src/Models/Operations/UpdateAtsJobResponse.php
   - src/Models/Operations/UpdateAtsScorecardRequest.php
   - src/Models/Operations/UpdateAtsScorecardResponse.php
+  - src/Models/Operations/CreateCommerceCollectionRequest.php
+  - src/Models/Operations/CreateCommerceCollectionResponse.php
+  - src/Models/Operations/CreateCommerceInventoryRequest.php
+  - src/Models/Operations/CreateCommerceInventoryResponse.php
+  - src/Models/Operations/CreateCommerceItemRequest.php
+  - src/Models/Operations/CreateCommerceItemResponse.php
+  - src/Models/Operations/CreateCommerceLocationRequest.php
+  - src/Models/Operations/CreateCommerceLocationResponse.php
+  - src/Models/Operations/GetCommerceCollectionRequest.php
+  - src/Models/Operations/GetCommerceCollectionResponse.php
+  - src/Models/Operations/GetCommerceInventoryRequest.php
+  - src/Models/Operations/GetCommerceInventoryResponse.php
+  - src/Models/Operations/GetCommerceItemRequest.php
+  - src/Models/Operations/GetCommerceItemResponse.php
+  - src/Models/Operations/GetCommerceLocationRequest.php
+  - src/Models/Operations/GetCommerceLocationResponse.php
+  - src/Models/Operations/ListCommerceCollectionsRequest.php
+  - src/Models/Operations/ListCommerceCollectionsResponse.php
+  - src/Models/Operations/ListCommerceInventoriesRequest.php
+  - src/Models/Operations/ListCommerceInventoriesResponse.php
+  - src/Models/Operations/ListCommerceItemsRequest.php
+  - src/Models/Operations/ListCommerceItemsResponse.php
+  - src/Models/Operations/ListCommerceLocationsRequest.php
+  - src/Models/Operations/ListCommerceLocationsResponse.php
+  - src/Models/Operations/PatchCommerceCollectionRequest.php
+  - src/Models/Operations/PatchCommerceCollectionResponse.php
+  - src/Models/Operations/PatchCommerceInventoryRequest.php
+  - src/Models/Operations/PatchCommerceInventoryResponse.php
+  - src/Models/Operations/PatchCommerceItemRequest.php
+  - src/Models/Operations/PatchCommerceItemResponse.php
+  - src/Models/Operations/PatchCommerceLocationRequest.php
+  - src/Models/Operations/PatchCommerceLocationResponse.php
+  - src/Models/Operations/RemoveCommerceCollectionRequest.php
+  - src/Models/Operations/RemoveCommerceCollectionResponse.php
+  - src/Models/Operations/RemoveCommerceInventoryRequest.php
+  - src/Models/Operations/RemoveCommerceInventoryResponse.php
+  - src/Models/Operations/RemoveCommerceItemRequest.php
+  - src/Models/Operations/RemoveCommerceItemResponse.php
+  - src/Models/Operations/RemoveCommerceLocationRequest.php
+  - src/Models/Operations/RemoveCommerceLocationResponse.php
+  - src/Models/Operations/UpdateCommerceCollectionRequest.php
+  - src/Models/Operations/UpdateCommerceCollectionResponse.php
+  - src/Models/Operations/UpdateCommerceInventoryRequest.php
+  - src/Models/Operations/UpdateCommerceInventoryResponse.php
+  - src/Models/Operations/UpdateCommerceItemRequest.php
+  - src/Models/Operations/UpdateCommerceItemResponse.php
+  - src/Models/Operations/UpdateCommerceLocationRequest.php
+  - src/Models/Operations/UpdateCommerceLocationResponse.php
   - src/Models/Operations/CreateCrmCompanyRequest.php
   - src/Models/Operations/CreateCrmCompanyResponse.php
   - src/Models/Operations/CreateCrmDealRequest.php
@@ -496,7 +536,6 @@ generatedFiles:
   - src/Models/Shared/AccountingInvoiceStatus.php
   - src/Models/Shared/AccountingInvoice.php
   - src/Models/Shared/AccountingLineitem.php
-  - src/Models/Shared/AccountingItem.php
   - src/Models/Shared/AccountingPayment.php
   - src/Models/Shared/AccountingTaxrate.php
   - src/Models/Shared/AccountingTransaction.php
@@ -538,6 +577,18 @@ generatedFiles:
   - src/Models/Shared/AtsScorecard.php
   - src/Models/Shared/AtsStatusStatus.php
   - src/Models/Shared/AtsStatus.php
+  - src/Models/Shared/CommerceCollection.php
+  - src/Models/Shared/CommerceItemMediaType.php
+  - src/Models/Shared/CommerceItemMedia.php
+  - src/Models/Shared/CommerceInventory.php
+  - src/Models/Shared/CommerceItem.php
+  - src/Models/Shared/SizeUnit.php
+  - src/Models/Shared/WeightUnit.php
+  - src/Models/Shared/CommerceItemVariant.php
+  - src/Models/Shared/CommerceItemPrice.php
+  - src/Models/Shared/CommerceItemOption.php
+  - src/Models/Shared/CommerceLocation.php
+  - src/Models/Shared/PropertyCommerceLocationAddress.php
   - src/Models/Shared/CrmCompany.php
   - src/Models/Shared/PropertyCrmCompanyAddress.php
   - src/Models/Shared/CrmDeal.php
@@ -615,8 +666,6 @@ generatedFiles:
   - docs/Models/Operations/CreateAccountingContactResponse.md
   - docs/Models/Operations/CreateAccountingInvoiceRequest.md
   - docs/Models/Operations/CreateAccountingInvoiceResponse.md
-  - docs/Models/Operations/CreateAccountingItemRequest.md
-  - docs/Models/Operations/CreateAccountingItemResponse.md
   - docs/Models/Operations/CreateAccountingPaymentRequest.md
   - docs/Models/Operations/CreateAccountingPaymentResponse.md
   - docs/Models/Operations/CreateAccountingTaxrateRequest.md
@@ -629,8 +678,6 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingContactResponse.md
   - docs/Models/Operations/GetAccountingInvoiceRequest.md
   - docs/Models/Operations/GetAccountingInvoiceResponse.md
-  - docs/Models/Operations/GetAccountingItemRequest.md
-  - docs/Models/Operations/GetAccountingItemResponse.md
   - docs/Models/Operations/GetAccountingOrganizationRequest.md
   - docs/Models/Operations/GetAccountingOrganizationResponse.md
   - docs/Models/Operations/GetAccountingPaymentRequest.md
@@ -645,8 +692,6 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingContactsResponse.md
   - docs/Models/Operations/ListAccountingInvoicesRequest.md
   - docs/Models/Operations/ListAccountingInvoicesResponse.md
-  - docs/Models/Operations/ListAccountingItemsRequest.md
-  - docs/Models/Operations/ListAccountingItemsResponse.md
   - docs/Models/Operations/ListAccountingOrganizationsRequest.md
   - docs/Models/Operations/ListAccountingOrganizationsResponse.md
   - docs/Models/Operations/ListAccountingPaymentsRequest.md
@@ -661,8 +706,6 @@ generatedFiles:
   - docs/Models/Operations/PatchAccountingContactResponse.md
   - docs/Models/Operations/PatchAccountingInvoiceRequest.md
   - docs/Models/Operations/PatchAccountingInvoiceResponse.md
-  - docs/Models/Operations/PatchAccountingItemRequest.md
-  - docs/Models/Operations/PatchAccountingItemResponse.md
   - docs/Models/Operations/PatchAccountingPaymentRequest.md
   - docs/Models/Operations/PatchAccountingPaymentResponse.md
   - docs/Models/Operations/PatchAccountingTaxrateRequest.md
@@ -675,8 +718,6 @@ generatedFiles:
   - docs/Models/Operations/RemoveAccountingContactResponse.md
   - docs/Models/Operations/RemoveAccountingInvoiceRequest.md
   - docs/Models/Operations/RemoveAccountingInvoiceResponse.md
-  - docs/Models/Operations/RemoveAccountingItemRequest.md
-  - docs/Models/Operations/RemoveAccountingItemResponse.md
   - docs/Models/Operations/RemoveAccountingPaymentRequest.md
   - docs/Models/Operations/RemoveAccountingPaymentResponse.md
   - docs/Models/Operations/RemoveAccountingTaxrateRequest.md
@@ -689,8 +730,6 @@ generatedFiles:
   - docs/Models/Operations/UpdateAccountingContactResponse.md
   - docs/Models/Operations/UpdateAccountingInvoiceRequest.md
   - docs/Models/Operations/UpdateAccountingInvoiceResponse.md
-  - docs/Models/Operations/UpdateAccountingItemRequest.md
-  - docs/Models/Operations/UpdateAccountingItemResponse.md
   - docs/Models/Operations/UpdateAccountingPaymentRequest.md
   - docs/Models/Operations/UpdateAccountingPaymentResponse.md
   - docs/Models/Operations/UpdateAccountingTaxrateRequest.md
@@ -795,6 +834,54 @@ generatedFiles:
   - docs/Models/Operations/UpdateAtsJobResponse.md
   - docs/Models/Operations/UpdateAtsScorecardRequest.md
   - docs/Models/Operations/UpdateAtsScorecardResponse.md
+  - docs/Models/Operations/CreateCommerceCollectionRequest.md
+  - docs/Models/Operations/CreateCommerceCollectionResponse.md
+  - docs/Models/Operations/CreateCommerceInventoryRequest.md
+  - docs/Models/Operations/CreateCommerceInventoryResponse.md
+  - docs/Models/Operations/CreateCommerceItemRequest.md
+  - docs/Models/Operations/CreateCommerceItemResponse.md
+  - docs/Models/Operations/CreateCommerceLocationRequest.md
+  - docs/Models/Operations/CreateCommerceLocationResponse.md
+  - docs/Models/Operations/GetCommerceCollectionRequest.md
+  - docs/Models/Operations/GetCommerceCollectionResponse.md
+  - docs/Models/Operations/GetCommerceInventoryRequest.md
+  - docs/Models/Operations/GetCommerceInventoryResponse.md
+  - docs/Models/Operations/GetCommerceItemRequest.md
+  - docs/Models/Operations/GetCommerceItemResponse.md
+  - docs/Models/Operations/GetCommerceLocationRequest.md
+  - docs/Models/Operations/GetCommerceLocationResponse.md
+  - docs/Models/Operations/ListCommerceCollectionsRequest.md
+  - docs/Models/Operations/ListCommerceCollectionsResponse.md
+  - docs/Models/Operations/ListCommerceInventoriesRequest.md
+  - docs/Models/Operations/ListCommerceInventoriesResponse.md
+  - docs/Models/Operations/ListCommerceItemsRequest.md
+  - docs/Models/Operations/ListCommerceItemsResponse.md
+  - docs/Models/Operations/ListCommerceLocationsRequest.md
+  - docs/Models/Operations/ListCommerceLocationsResponse.md
+  - docs/Models/Operations/PatchCommerceCollectionRequest.md
+  - docs/Models/Operations/PatchCommerceCollectionResponse.md
+  - docs/Models/Operations/PatchCommerceInventoryRequest.md
+  - docs/Models/Operations/PatchCommerceInventoryResponse.md
+  - docs/Models/Operations/PatchCommerceItemRequest.md
+  - docs/Models/Operations/PatchCommerceItemResponse.md
+  - docs/Models/Operations/PatchCommerceLocationRequest.md
+  - docs/Models/Operations/PatchCommerceLocationResponse.md
+  - docs/Models/Operations/RemoveCommerceCollectionRequest.md
+  - docs/Models/Operations/RemoveCommerceCollectionResponse.md
+  - docs/Models/Operations/RemoveCommerceInventoryRequest.md
+  - docs/Models/Operations/RemoveCommerceInventoryResponse.md
+  - docs/Models/Operations/RemoveCommerceItemRequest.md
+  - docs/Models/Operations/RemoveCommerceItemResponse.md
+  - docs/Models/Operations/RemoveCommerceLocationRequest.md
+  - docs/Models/Operations/RemoveCommerceLocationResponse.md
+  - docs/Models/Operations/UpdateCommerceCollectionRequest.md
+  - docs/Models/Operations/UpdateCommerceCollectionResponse.md
+  - docs/Models/Operations/UpdateCommerceInventoryRequest.md
+  - docs/Models/Operations/UpdateCommerceInventoryResponse.md
+  - docs/Models/Operations/UpdateCommerceItemRequest.md
+  - docs/Models/Operations/UpdateCommerceItemResponse.md
+  - docs/Models/Operations/UpdateCommerceLocationRequest.md
+  - docs/Models/Operations/UpdateCommerceLocationResponse.md
   - docs/Models/Operations/CreateCrmCompanyRequest.md
   - docs/Models/Operations/CreateCrmCompanyResponse.md
   - docs/Models/Operations/CreateCrmDealRequest.md
@@ -1020,7 +1107,6 @@ generatedFiles:
   - docs/Models/Shared/AccountingInvoiceStatus.md
   - docs/Models/Shared/AccountingInvoice.md
   - docs/Models/Shared/AccountingLineitem.md
-  - docs/Models/Shared/AccountingItem.md
   - docs/Models/Shared/AccountingPayment.md
   - docs/Models/Shared/AccountingTaxrate.md
   - docs/Models/Shared/AccountingTransaction.md
@@ -1062,6 +1148,18 @@ generatedFiles:
   - docs/Models/Shared/AtsScorecard.md
   - docs/Models/Shared/AtsStatusStatus.md
   - docs/Models/Shared/AtsStatus.md
+  - docs/Models/Shared/CommerceCollection.md
+  - docs/Models/Shared/CommerceItemMediaType.md
+  - docs/Models/Shared/CommerceItemMedia.md
+  - docs/Models/Shared/CommerceInventory.md
+  - docs/Models/Shared/CommerceItem.md
+  - docs/Models/Shared/SizeUnit.md
+  - docs/Models/Shared/WeightUnit.md
+  - docs/Models/Shared/CommerceItemVariant.md
+  - docs/Models/Shared/CommerceItemPrice.md
+  - docs/Models/Shared/CommerceItemOption.md
+  - docs/Models/Shared/CommerceLocation.md
+  - docs/Models/Shared/PropertyCommerceLocationAddress.md
   - docs/Models/Shared/CrmCompany.md
   - docs/Models/Shared/PropertyCrmCompanyAddress.md
   - docs/Models/Shared/CrmDeal.md
@@ -1138,7 +1236,6 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
-  - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/payment/README.md
   - docs/sdks/taxrate/README.md
@@ -1151,6 +1248,11 @@ generatedFiles:
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
   - docs/sdks/scorecard/README.md
+  - docs/sdks/commerce/README.md
+  - docs/sdks/collection/README.md
+  - docs/sdks/inventory/README.md
+  - docs/sdks/item/README.md
+  - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
   - docs/sdks/deal/README.md

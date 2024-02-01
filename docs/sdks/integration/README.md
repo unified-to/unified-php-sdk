@@ -91,7 +91,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        Operations\QueryParamCategories::Uc,
+        Operations\QueryParamCategories::Accounting,
     ];
     $request->env = 'string';
     $request->limit = 9072.99;
@@ -147,7 +147,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
-        Operations\ListUnifiedIntegrationsQueryParamCategories::Auth,
+        Operations\ListUnifiedIntegrationsQueryParamCategories::Crm,
     ];
     $request->env = 'string';
     $request->limit = 7382.58;

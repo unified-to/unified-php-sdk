@@ -1,9 +1,0 @@
-# CreateAccountingItemRequest
-
-
-## Fields
-
-| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `accountingItem`                                                                           | [?\Unified\Unified_to\Models\Shared\AccountingItem](../../Models/Shared/AccountingItem.md) | :heavy_minus_sign:                                                                         | An item or product                                                                         |
-| `connectionId`                                                                             | *string*                                                                                   | :heavy_check_mark:                                                                         | ID of the connection                                                                       |

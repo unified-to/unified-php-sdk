@@ -22,4 +22,5 @@ enum QueryParamCategories: string
     case Uc = 'uc';
     case Accounting = 'accounting';
     case Storage = 'storage';
+    case Commerce = 'commerce';
 }

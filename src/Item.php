@@ -22,20 +22,20 @@ class Item
 	}
 	
     /**
-     * Create an item
+     * Create an item/product
      * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAccountingItemRequest $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingItemResponse
+     * @param \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      */
-	public function createAccountingItem(
-        ?\Unified\Unified_to\Models\Operations\CreateAccountingItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAccountingItemResponse
+	public function createCommerceItem(
+        ?\Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/item', \Unified\Unified_to\Models\Operations\CreateAccountingItemRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item', \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingItem", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "commerceItem", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -48,7 +48,7 @@ class Item
 
         $statusCode = $httpResponse->getStatusCode();
 
-        $response = new \Unified\Unified_to\Models\Operations\CreateAccountingItemResponse();
+        $response = new \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -56,7 +56,7 @@ class Item
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingItem', 'json');
+                $response->commerceItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
             }
         }
 
@@ -64,20 +64,20 @@ class Item
     }
 	
     /**
-     * Retrieve an item
+     * Retrieve an item/product
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetAccountingItemRequest $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingItemResponse
+     * @param \Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      */
-	public function getAccountingItem(
-        ?\Unified\Unified_to\Models\Operations\GetAccountingItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAccountingItemResponse
+	public function getCommerceItem(
+        ?\Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\GetAccountingItemRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\GetCommerceItemRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingItemRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceItemRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -87,7 +87,7 @@ class Item
 
         $statusCode = $httpResponse->getStatusCode();
 
-        $response = new \Unified\Unified_to\Models\Operations\GetAccountingItemResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetCommerceItemResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -95,7 +95,7 @@ class Item
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingItem', 'json');
+                $response->commerceItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
             }
         }
 
@@ -103,20 +103,20 @@ class Item
     }
 	
     /**
-     * List all items
+     * List all items/products
      * 
-     * @param \Unified\Unified_to\Models\Operations\ListAccountingItemsRequest $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingItemsResponse
+     * @param \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
      */
-	public function listAccountingItems(
-        ?\Unified\Unified_to\Models\Operations\ListAccountingItemsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAccountingItemsResponse
+	public function listCommerceItems(
+        ?\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/item', \Unified\Unified_to\Models\Operations\ListAccountingItemsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item', \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingItemsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
@@ -126,7 +126,7 @@ class Item
 
         $statusCode = $httpResponse->getStatusCode();
 
-        $response = new \Unified\Unified_to\Models\Operations\ListAccountingItemsResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -134,7 +134,7 @@ class Item
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingItems = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AccountingItem>', 'json');
+                $response->commerceItems = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceItem>', 'json');
             }
         }
 
@@ -142,20 +142,20 @@ class Item
     }
 	
     /**
-     * Update an item
+     * Update an item/product
      * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAccountingItemRequest $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingItemResponse
+     * @param \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
      */
-	public function patchAccountingItem(
-        ?\Unified\Unified_to\Models\Operations\PatchAccountingItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAccountingItemResponse
+	public function patchCommerceItem(
+        ?\Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\PatchAccountingItemRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingItem", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "commerceItem", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -168,7 +168,7 @@ class Item
 
         $statusCode = $httpResponse->getStatusCode();
 
-        $response = new \Unified\Unified_to\Models\Operations\PatchAccountingItemResponse();
+        $response = new \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -176,7 +176,7 @@ class Item
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingItem', 'json');
+                $response->commerceItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
             }
         }
 
@@ -184,17 +184,17 @@ class Item
     }
 	
     /**
-     * Remove an item
+     * Remove an item/product
      * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingItemRequest $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingItemResponse
+     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      */
-	public function removeAccountingItem(
-        ?\Unified\Unified_to\Models\Operations\RemoveAccountingItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAccountingItemResponse
+	public function removeCommerceItem(
+        ?\Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingItemRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest::class, $request);
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
@@ -206,7 +206,7 @@ class Item
 
         $statusCode = $httpResponse->getStatusCode();
 
-        $response = new \Unified\Unified_to\Models\Operations\RemoveAccountingItemResponse();
+        $response = new \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -221,20 +221,20 @@ class Item
     }
 	
     /**
-     * Update an item
+     * Update an item/product
      * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingItemRequest $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingItemResponse
+     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
      */
-	public function updateAccountingItem(
-        ?\Unified\Unified_to\Models\Operations\UpdateAccountingItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAccountingItemResponse
+	public function updateCommerceItem(
+        ?\Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\UpdateAccountingItemRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingItem", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "commerceItem", "json");
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -247,7 +247,7 @@ class Item
 
         $statusCode = $httpResponse->getStatusCode();
 
-        $response = new \Unified\Unified_to\Models\Operations\UpdateAccountingItemResponse();
+        $response = new \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -255,7 +255,7 @@ class Item
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingItem', 'json');
+                $response->commerceItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
             }
         }
 

@@ -1,0 +1,10 @@
+# PatchCommerceInventoryRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `commerceInventory`                                                                              | [?\Unified\Unified_to\Models\Shared\CommerceInventory](../../Models/Shared/CommerceInventory.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `connectionId`                                                                                   | *string*                                                                                         | :heavy_check_mark:                                                                               | ID of the connection                                                                             |
+| `id`                                                                                             | *string*                                                                                         | :heavy_check_mark:                                                                               | ID of the Inventory                                                                              |
