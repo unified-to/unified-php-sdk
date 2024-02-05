@@ -36,7 +36,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisGroupRead,
+        Operations\Scopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';

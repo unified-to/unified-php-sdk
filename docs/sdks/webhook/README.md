@@ -48,7 +48,7 @@ try {
     $request->webhook->meta = [
         'Borders' => 'string',
     ];
-    $request->webhook->objectType = Shared\ObjectType::HrisGroup;
+    $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
     $request->webhook->runs = [
         'string',
     ];

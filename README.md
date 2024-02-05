@@ -198,6 +198,7 @@ try {
 * [createAtsScorecard](docs/sdks/ats/README.md#createatsscorecard) - Create a scorecard
 * [getAtsApplication](docs/sdks/ats/README.md#getatsapplication) - Retrieve an application
 * [getAtsCandidate](docs/sdks/ats/README.md#getatscandidate) - Retrieve a candidate
+* [getAtsCompany](docs/sdks/ats/README.md#getatscompany) - Retrieve a company
 * [getAtsDocument](docs/sdks/ats/README.md#getatsdocument) - Retrieve a document
 * [getAtsInterview](docs/sdks/ats/README.md#getatsinterview) - Retrieve a interview
 * [getAtsJob](docs/sdks/ats/README.md#getatsjob) - Retrieve a job
@@ -205,6 +206,7 @@ try {
 * [listAtsApplications](docs/sdks/ats/README.md#listatsapplications) - List all applications
 * [listAtsApplicationstatuses](docs/sdks/ats/README.md#listatsapplicationstatuses) - List all application statuses
 * [listAtsCandidates](docs/sdks/ats/README.md#listatscandidates) - List all candidates
+* [listAtsCompanies](docs/sdks/ats/README.md#listatscompanies) - List all companies
 * [listAtsDocuments](docs/sdks/ats/README.md#listatsdocuments) - List all documents
 * [listAtsInterviews](docs/sdks/ats/README.md#listatsinterviews) - List all interviews
 * [listAtsJobs](docs/sdks/ats/README.md#listatsjobs) - List all jobs
@@ -249,6 +251,18 @@ try {
 * [patchAtsCandidate](docs/sdks/candidate/README.md#patchatscandidate) - Update a candidate
 * [removeAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [updateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
+
+### [Company](docs/sdks/company/README.md)
+
+* [createCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
+* [getAtsCompany](docs/sdks/company/README.md#getatscompany) - Retrieve a company
+* [getCrmCompany](docs/sdks/company/README.md#getcrmcompany) - Retrieve a company
+* [listAtsCompanies](docs/sdks/company/README.md#listatscompanies) - List all companies
+* [listCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
+* [listEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
+* [patchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
+* [removeCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
+* [updateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 
 ### [Document](docs/sdks/document/README.md)
 
@@ -387,16 +401,6 @@ try {
 * [updateCrmEvent](docs/sdks/crm/README.md#updatecrmevent) - Update a event
 * [updateCrmLead](docs/sdks/crm/README.md#updatecrmlead) - Update a lead
 * [updateCrmPipeline](docs/sdks/crm/README.md#updatecrmpipeline) - Update a pipeline
-
-### [Company](docs/sdks/company/README.md)
-
-* [createCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
-* [getCrmCompany](docs/sdks/company/README.md#getcrmcompany) - Retrieve a company
-* [listCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
-* [listEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
-* [patchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
-* [removeCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
-* [updateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 
 ### [Deal](docs/sdks/deal/README.md)
 

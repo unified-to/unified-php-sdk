@@ -155,7 +155,7 @@ try {
     $request->webhook->meta = [
         'Borders' => 'string',
     ];
-    $request->webhook->objectType = Shared\ObjectType::HrisGroup;
+    $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
     $request->webhook->runs = [
         'string',
     ];
@@ -310,7 +310,7 @@ try {
     $request->lang = 'string';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisGroupRead,
+        Operations\Scopes::HrisEmployeeWrite,
     ];
     $request->state = 'string';
     $request->subdomain = 'string';
@@ -737,7 +737,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T11:43:14.112Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-24T01:15:30.014Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AtsJobRead,
+        Shared\PropertyConnectionPermissions::AtsJobWrite,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-02T09:40:32.883Z');
     $request->connection->workspaceId = 'string';

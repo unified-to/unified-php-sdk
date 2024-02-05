@@ -16,6 +16,11 @@ class AtsCandidate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyAtsCandidateAddress $address = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('company_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $companyId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('company_name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -114,6 +119,7 @@ class AtsCandidate
 	public function __construct()
 	{
 		$this->address = null;
+		$this->companyId = null;
 		$this->companyName = null;
 		$this->createdAt = null;
 		$this->emails = null;

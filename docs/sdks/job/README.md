@@ -38,6 +38,7 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-14T18:31:06.376Z');
+    $request->atsJob->companyId = 'string';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
@@ -225,6 +226,7 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T17:44:16.617Z');
+    $request->atsJob->companyId = 'string';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
@@ -354,6 +356,7 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T07:41:08.131Z');
+    $request->atsJob->companyId = 'string';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];

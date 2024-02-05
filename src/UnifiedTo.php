@@ -47,6 +47,8 @@ class UnifiedTo
 	
 	public Candidate $candidate;
 	
+	public Company $company;
+	
 	public Document $document;
 	
 	public Interview $interview;
@@ -66,8 +68,6 @@ class UnifiedTo
 	public Location $location;
 	
 	public Crm $crm;
-	
-	public Company $company;
 	
 	public Deal $deal;
 	
@@ -168,6 +168,8 @@ class UnifiedTo
 		
 		$this->candidate = new Candidate($this->sdkConfiguration);
 		
+		$this->company = new Company($this->sdkConfiguration);
+		
 		$this->document = new Document($this->sdkConfiguration);
 		
 		$this->interview = new Interview($this->sdkConfiguration);
@@ -187,8 +189,6 @@ class UnifiedTo
 		$this->location = new Location($this->sdkConfiguration);
 		
 		$this->crm = new Crm($this->sdkConfiguration);
-		
-		$this->company = new Company($this->sdkConfiguration);
 		
 		$this->deal = new Deal($this->sdkConfiguration);
 		

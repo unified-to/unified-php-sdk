@@ -44,6 +44,7 @@ enum Scopes: string
     case AtsInterviewWrite = 'ats_interview_write';
     case AtsJobRead = 'ats_job_read';
     case AtsJobWrite = 'ats_job_write';
+    case AtsCompanyRead = 'ats_company_read';
     case AtsDocumentRead = 'ats_document_read';
     case AtsDocumentWrite = 'ats_document_write';
     case CrmCompanyRead = 'crm_company_read';

@@ -26,6 +26,11 @@ class AtsJob
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $closedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('company_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $companyId = null;
+    
     /**
      * $compensation
      * 
@@ -140,6 +145,7 @@ class AtsJob
 	{
 		$this->addresses = null;
 		$this->closedAt = null;
+		$this->companyId = null;
 		$this->compensation = null;
 		$this->createdAt = null;
 		$this->departments = null;

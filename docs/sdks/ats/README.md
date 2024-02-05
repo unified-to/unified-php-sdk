@@ -11,6 +11,7 @@
 * [createAtsScorecard](#createatsscorecard) - Create a scorecard
 * [getAtsApplication](#getatsapplication) - Retrieve an application
 * [getAtsCandidate](#getatscandidate) - Retrieve a candidate
+* [getAtsCompany](#getatscompany) - Retrieve a company
 * [getAtsDocument](#getatsdocument) - Retrieve a document
 * [getAtsInterview](#getatsinterview) - Retrieve a interview
 * [getAtsJob](#getatsjob) - Retrieve a job
@@ -18,6 +19,7 @@
 * [listAtsApplications](#listatsapplications) - List all applications
 * [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all application statuses
 * [listAtsCandidates](#listatscandidates) - List all candidates
+* [listAtsCompanies](#listatscompanies) - List all companies
 * [listAtsDocuments](#listatsdocuments) - List all documents
 * [listAtsInterviews](#listatsinterviews) - List all interviews
 * [listAtsJobs](#listatsjobs) - List all jobs
@@ -137,6 +139,7 @@ try {
     $request->atsCandidate->address->postalCode = '72991-5163';
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyId = 'string';
     $request->atsCandidate->companyName = 'Pollich - Lubowitz';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-06T00:47:39.352Z');
     $request->atsCandidate->emails = [
@@ -340,6 +343,7 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-14T18:31:06.376Z');
+    $request->atsJob->companyId = 'string';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
@@ -553,6 +557,57 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\GetAtsCandidateResponse](../../Models/Operations/GetAtsCandidateResponse.md)**
+
+
+## getAtsCompany
+
+Retrieve a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\GetAtsCompanyRequest();
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->id = '<ID>';;
+
+    $response = $sdk->ats->getAtsCompany($request);
+
+    if ($response->atsCompany !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\GetAtsCompanyRequest](../../Models/Operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetAtsCompanyResponse](../../Models/Operations/GetAtsCompanyResponse.md)**
 
 
 ## getAtsDocument
@@ -929,6 +984,62 @@ try {
 **[?\Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse](../../Models/Operations/ListAtsCandidatesResponse.md)**
 
 
+## listAtsCompanies
+
+List all companies
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListAtsCompaniesRequest();
+    $request->connectionId = 'string';
+    $request->fields = [
+        'string',
+    ];
+    $request->limit = 6933.84;
+    $request->offset = 7946.52;
+    $request->order = 'string';
+    $request->query = 'string';
+    $request->sort = 'string';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T21:39:38.971Z');;
+
+    $response = $sdk->ats->listAtsCompanies($request);
+
+    if ($response->atsCompanies !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest](../../Models/Operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse](../../Models/Operations/ListAtsCompaniesResponse.md)**
+
+
 ## listAtsDocuments
 
 List all documents
@@ -1256,6 +1367,7 @@ try {
     $request->atsCandidate->address->postalCode = '46054';
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyId = 'string';
     $request->atsCandidate->companyName = 'Donnelly - Bartell';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-07T04:20:35.612Z');
     $request->atsCandidate->emails = [
@@ -1462,6 +1574,7 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T17:44:16.617Z');
+    $request->atsJob->companyId = 'string';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
@@ -1962,6 +2075,7 @@ try {
     $request->atsCandidate->address->postalCode = '39423';
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyId = 'string';
     $request->atsCandidate->companyName = 'O\'Reilly Inc';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T03:55:05.691Z');
     $request->atsCandidate->emails = [
@@ -2168,6 +2282,7 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T07:41:08.131Z');
+    $request->atsJob->companyId = 'string';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];

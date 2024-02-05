@@ -43,6 +43,7 @@ try {
     $request->atsCandidate->address->postalCode = '72991-5163';
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyId = 'string';
     $request->atsCandidate->companyName = 'Pollich - Lubowitz';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-06T00:47:39.352Z');
     $request->atsCandidate->emails = [
@@ -231,6 +232,7 @@ try {
     $request->atsCandidate->address->postalCode = '46054';
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyId = 'string';
     $request->atsCandidate->companyName = 'Donnelly - Bartell';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-07T04:20:35.612Z');
     $request->atsCandidate->emails = [
@@ -361,6 +363,7 @@ try {
     $request->atsCandidate->address->postalCode = '39423';
     $request->atsCandidate->address->region = 'string';
     $request->atsCandidate->address->regionCode = 'string';
+    $request->atsCandidate->companyId = 'string';
     $request->atsCandidate->companyName = 'O\'Reilly Inc';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T03:55:05.691Z');
     $request->atsCandidate->emails = [

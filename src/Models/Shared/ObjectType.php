@@ -29,6 +29,7 @@ enum ObjectType: string
     case AtsInterview = 'ats_interview';
     case AtsJob = 'ats_job';
     case AtsScorecard = 'ats_scorecard';
+    case AtsCompany = 'ats_company';
     case CrmCompany = 'crm_company';
     case CrmContact = 'crm_contact';
     case CrmDeal = 'crm_deal';

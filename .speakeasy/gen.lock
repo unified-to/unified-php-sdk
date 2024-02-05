@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: a19ba4935c486a523296da7841502792
+  docChecksum: 18ccf953df89af94fa8ee7505288f024
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.246.3
-  releaseVersion: 0.10.35
-  configChecksum: ae1f7cfa1a232a9a8a07e212e642b312
+  generationVersion: 2.249.1
+  releaseVersion: 0.11.0
+  configChecksum: c946146eeca1aa8eddab4767c3c143c1
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -30,6 +30,7 @@ generatedFiles:
   - src/Application.php
   - src/Applicationstatus.php
   - src/Candidate.php
+  - src/Company.php
   - src/Document.php
   - src/Interview.php
   - src/Job.php
@@ -40,7 +41,6 @@ generatedFiles:
   - src/Item.php
   - src/Location.php
   - src/Crm.php
-  - src/Company.php
   - src/Deal.php
   - src/Event.php
   - src/Lead.php
@@ -205,6 +205,8 @@ generatedFiles:
   - src/Models/Operations/GetAtsApplicationResponse.php
   - src/Models/Operations/GetAtsCandidateRequest.php
   - src/Models/Operations/GetAtsCandidateResponse.php
+  - src/Models/Operations/GetAtsCompanyRequest.php
+  - src/Models/Operations/GetAtsCompanyResponse.php
   - src/Models/Operations/GetAtsDocumentRequest.php
   - src/Models/Operations/GetAtsDocumentResponse.php
   - src/Models/Operations/GetAtsInterviewRequest.php
@@ -219,6 +221,8 @@ generatedFiles:
   - src/Models/Operations/ListAtsApplicationstatusesResponse.php
   - src/Models/Operations/ListAtsCandidatesRequest.php
   - src/Models/Operations/ListAtsCandidatesResponse.php
+  - src/Models/Operations/ListAtsCompaniesRequest.php
+  - src/Models/Operations/ListAtsCompaniesResponse.php
   - src/Models/Operations/ListAtsDocumentsRequest.php
   - src/Models/Operations/ListAtsDocumentsResponse.php
   - src/Models/Operations/ListAtsInterviewsRequest.php
@@ -263,6 +267,20 @@ generatedFiles:
   - src/Models/Operations/UpdateAtsJobResponse.php
   - src/Models/Operations/UpdateAtsScorecardRequest.php
   - src/Models/Operations/UpdateAtsScorecardResponse.php
+  - src/Models/Operations/CreateCrmCompanyRequest.php
+  - src/Models/Operations/CreateCrmCompanyResponse.php
+  - src/Models/Operations/GetCrmCompanyRequest.php
+  - src/Models/Operations/GetCrmCompanyResponse.php
+  - src/Models/Operations/ListCrmCompaniesRequest.php
+  - src/Models/Operations/ListCrmCompaniesResponse.php
+  - src/Models/Operations/ListEnrichCompaniesRequest.php
+  - src/Models/Operations/ListEnrichCompaniesResponse.php
+  - src/Models/Operations/PatchCrmCompanyRequest.php
+  - src/Models/Operations/PatchCrmCompanyResponse.php
+  - src/Models/Operations/RemoveCrmCompanyRequest.php
+  - src/Models/Operations/RemoveCrmCompanyResponse.php
+  - src/Models/Operations/UpdateCrmCompanyRequest.php
+  - src/Models/Operations/UpdateCrmCompanyResponse.php
   - src/Models/Operations/CreateCommerceCollectionRequest.php
   - src/Models/Operations/CreateCommerceCollectionResponse.php
   - src/Models/Operations/CreateCommerceInventoryRequest.php
@@ -311,8 +329,6 @@ generatedFiles:
   - src/Models/Operations/UpdateCommerceItemResponse.php
   - src/Models/Operations/UpdateCommerceLocationRequest.php
   - src/Models/Operations/UpdateCommerceLocationResponse.php
-  - src/Models/Operations/CreateCrmCompanyRequest.php
-  - src/Models/Operations/CreateCrmCompanyResponse.php
   - src/Models/Operations/CreateCrmDealRequest.php
   - src/Models/Operations/CreateCrmDealResponse.php
   - src/Models/Operations/CreateCrmEventRequest.php
@@ -321,8 +337,6 @@ generatedFiles:
   - src/Models/Operations/CreateCrmLeadResponse.php
   - src/Models/Operations/CreateCrmPipelineRequest.php
   - src/Models/Operations/CreateCrmPipelineResponse.php
-  - src/Models/Operations/GetCrmCompanyRequest.php
-  - src/Models/Operations/GetCrmCompanyResponse.php
   - src/Models/Operations/GetCrmDealRequest.php
   - src/Models/Operations/GetCrmDealResponse.php
   - src/Models/Operations/GetCrmEventRequest.php
@@ -331,8 +345,6 @@ generatedFiles:
   - src/Models/Operations/GetCrmLeadResponse.php
   - src/Models/Operations/GetCrmPipelineRequest.php
   - src/Models/Operations/GetCrmPipelineResponse.php
-  - src/Models/Operations/ListCrmCompaniesRequest.php
-  - src/Models/Operations/ListCrmCompaniesResponse.php
   - src/Models/Operations/ListCrmDealsRequest.php
   - src/Models/Operations/ListCrmDealsResponse.php
   - src/Models/Operations/ListCrmEventsRequest.php
@@ -341,8 +353,6 @@ generatedFiles:
   - src/Models/Operations/ListCrmLeadsResponse.php
   - src/Models/Operations/ListCrmPipelinesRequest.php
   - src/Models/Operations/ListCrmPipelinesResponse.php
-  - src/Models/Operations/PatchCrmCompanyRequest.php
-  - src/Models/Operations/PatchCrmCompanyResponse.php
   - src/Models/Operations/PatchCrmDealRequest.php
   - src/Models/Operations/PatchCrmDealResponse.php
   - src/Models/Operations/PatchCrmEventRequest.php
@@ -351,8 +361,6 @@ generatedFiles:
   - src/Models/Operations/PatchCrmLeadResponse.php
   - src/Models/Operations/PatchCrmPipelineRequest.php
   - src/Models/Operations/PatchCrmPipelineResponse.php
-  - src/Models/Operations/RemoveCrmCompanyRequest.php
-  - src/Models/Operations/RemoveCrmCompanyResponse.php
   - src/Models/Operations/RemoveCrmDealRequest.php
   - src/Models/Operations/RemoveCrmDealResponse.php
   - src/Models/Operations/RemoveCrmEventRequest.php
@@ -361,8 +369,6 @@ generatedFiles:
   - src/Models/Operations/RemoveCrmLeadResponse.php
   - src/Models/Operations/RemoveCrmPipelineRequest.php
   - src/Models/Operations/RemoveCrmPipelineResponse.php
-  - src/Models/Operations/UpdateCrmCompanyRequest.php
-  - src/Models/Operations/UpdateCrmCompanyResponse.php
   - src/Models/Operations/UpdateCrmDealRequest.php
   - src/Models/Operations/UpdateCrmDealResponse.php
   - src/Models/Operations/UpdateCrmEventRequest.php
@@ -371,8 +377,6 @@ generatedFiles:
   - src/Models/Operations/UpdateCrmLeadResponse.php
   - src/Models/Operations/UpdateCrmPipelineRequest.php
   - src/Models/Operations/UpdateCrmPipelineResponse.php
-  - src/Models/Operations/ListEnrichCompaniesRequest.php
-  - src/Models/Operations/ListEnrichCompaniesResponse.php
   - src/Models/Operations/ListEnrichPeopleRequest.php
   - src/Models/Operations/ListEnrichPeopleResponse.php
   - src/Models/Operations/CreateHrisEmployeeRequest.php
@@ -575,8 +579,16 @@ generatedFiles:
   - src/Models/Shared/AtsAddress.php
   - src/Models/Shared/Recommendation.php
   - src/Models/Shared/AtsScorecard.php
+  - src/Models/Shared/AtsCompany.php
+  - src/Models/Shared/PropertyAtsCompanyAddress.php
   - src/Models/Shared/AtsStatusStatus.php
   - src/Models/Shared/AtsStatus.php
+  - src/Models/Shared/CrmCompany.php
+  - src/Models/Shared/PropertyCrmCompanyAddress.php
+  - src/Models/Shared/EnrichCompany.php
+  - src/Models/Shared/EnrichTelephoneType.php
+  - src/Models/Shared/EnrichTelephone.php
+  - src/Models/Shared/PropertyEnrichCompanyAddress.php
   - src/Models/Shared/CommerceCollection.php
   - src/Models/Shared/CommerceItemMediaType.php
   - src/Models/Shared/CommerceItemMedia.php
@@ -589,8 +601,6 @@ generatedFiles:
   - src/Models/Shared/CommerceItemOption.php
   - src/Models/Shared/CommerceLocation.php
   - src/Models/Shared/PropertyCommerceLocationAddress.php
-  - src/Models/Shared/CrmCompany.php
-  - src/Models/Shared/PropertyCrmCompanyAddress.php
   - src/Models/Shared/CrmDeal.php
   - src/Models/Shared/CrmEventType.php
   - src/Models/Shared/CrmEvent.php
@@ -603,10 +613,6 @@ generatedFiles:
   - src/Models/Shared/CrmLead.php
   - src/Models/Shared/PropertyCrmLeadAddress.php
   - src/Models/Shared/CrmPipeline.php
-  - src/Models/Shared/EnrichCompany.php
-  - src/Models/Shared/EnrichTelephoneType.php
-  - src/Models/Shared/EnrichTelephone.php
-  - src/Models/Shared/PropertyEnrichCompanyAddress.php
   - src/Models/Shared/Gender.php
   - src/Models/Shared/EnrichPerson.php
   - src/Models/Shared/EnrichPersonWorkHistory.php
@@ -776,6 +782,8 @@ generatedFiles:
   - docs/Models/Operations/GetAtsApplicationResponse.md
   - docs/Models/Operations/GetAtsCandidateRequest.md
   - docs/Models/Operations/GetAtsCandidateResponse.md
+  - docs/Models/Operations/GetAtsCompanyRequest.md
+  - docs/Models/Operations/GetAtsCompanyResponse.md
   - docs/Models/Operations/GetAtsDocumentRequest.md
   - docs/Models/Operations/GetAtsDocumentResponse.md
   - docs/Models/Operations/GetAtsInterviewRequest.md
@@ -790,6 +798,8 @@ generatedFiles:
   - docs/Models/Operations/ListAtsApplicationstatusesResponse.md
   - docs/Models/Operations/ListAtsCandidatesRequest.md
   - docs/Models/Operations/ListAtsCandidatesResponse.md
+  - docs/Models/Operations/ListAtsCompaniesRequest.md
+  - docs/Models/Operations/ListAtsCompaniesResponse.md
   - docs/Models/Operations/ListAtsDocumentsRequest.md
   - docs/Models/Operations/ListAtsDocumentsResponse.md
   - docs/Models/Operations/ListAtsInterviewsRequest.md
@@ -834,6 +844,20 @@ generatedFiles:
   - docs/Models/Operations/UpdateAtsJobResponse.md
   - docs/Models/Operations/UpdateAtsScorecardRequest.md
   - docs/Models/Operations/UpdateAtsScorecardResponse.md
+  - docs/Models/Operations/CreateCrmCompanyRequest.md
+  - docs/Models/Operations/CreateCrmCompanyResponse.md
+  - docs/Models/Operations/GetCrmCompanyRequest.md
+  - docs/Models/Operations/GetCrmCompanyResponse.md
+  - docs/Models/Operations/ListCrmCompaniesRequest.md
+  - docs/Models/Operations/ListCrmCompaniesResponse.md
+  - docs/Models/Operations/ListEnrichCompaniesRequest.md
+  - docs/Models/Operations/ListEnrichCompaniesResponse.md
+  - docs/Models/Operations/PatchCrmCompanyRequest.md
+  - docs/Models/Operations/PatchCrmCompanyResponse.md
+  - docs/Models/Operations/RemoveCrmCompanyRequest.md
+  - docs/Models/Operations/RemoveCrmCompanyResponse.md
+  - docs/Models/Operations/UpdateCrmCompanyRequest.md
+  - docs/Models/Operations/UpdateCrmCompanyResponse.md
   - docs/Models/Operations/CreateCommerceCollectionRequest.md
   - docs/Models/Operations/CreateCommerceCollectionResponse.md
   - docs/Models/Operations/CreateCommerceInventoryRequest.md
@@ -882,8 +906,6 @@ generatedFiles:
   - docs/Models/Operations/UpdateCommerceItemResponse.md
   - docs/Models/Operations/UpdateCommerceLocationRequest.md
   - docs/Models/Operations/UpdateCommerceLocationResponse.md
-  - docs/Models/Operations/CreateCrmCompanyRequest.md
-  - docs/Models/Operations/CreateCrmCompanyResponse.md
   - docs/Models/Operations/CreateCrmDealRequest.md
   - docs/Models/Operations/CreateCrmDealResponse.md
   - docs/Models/Operations/CreateCrmEventRequest.md
@@ -892,8 +914,6 @@ generatedFiles:
   - docs/Models/Operations/CreateCrmLeadResponse.md
   - docs/Models/Operations/CreateCrmPipelineRequest.md
   - docs/Models/Operations/CreateCrmPipelineResponse.md
-  - docs/Models/Operations/GetCrmCompanyRequest.md
-  - docs/Models/Operations/GetCrmCompanyResponse.md
   - docs/Models/Operations/GetCrmDealRequest.md
   - docs/Models/Operations/GetCrmDealResponse.md
   - docs/Models/Operations/GetCrmEventRequest.md
@@ -902,8 +922,6 @@ generatedFiles:
   - docs/Models/Operations/GetCrmLeadResponse.md
   - docs/Models/Operations/GetCrmPipelineRequest.md
   - docs/Models/Operations/GetCrmPipelineResponse.md
-  - docs/Models/Operations/ListCrmCompaniesRequest.md
-  - docs/Models/Operations/ListCrmCompaniesResponse.md
   - docs/Models/Operations/ListCrmDealsRequest.md
   - docs/Models/Operations/ListCrmDealsResponse.md
   - docs/Models/Operations/ListCrmEventsRequest.md
@@ -912,8 +930,6 @@ generatedFiles:
   - docs/Models/Operations/ListCrmLeadsResponse.md
   - docs/Models/Operations/ListCrmPipelinesRequest.md
   - docs/Models/Operations/ListCrmPipelinesResponse.md
-  - docs/Models/Operations/PatchCrmCompanyRequest.md
-  - docs/Models/Operations/PatchCrmCompanyResponse.md
   - docs/Models/Operations/PatchCrmDealRequest.md
   - docs/Models/Operations/PatchCrmDealResponse.md
   - docs/Models/Operations/PatchCrmEventRequest.md
@@ -922,8 +938,6 @@ generatedFiles:
   - docs/Models/Operations/PatchCrmLeadResponse.md
   - docs/Models/Operations/PatchCrmPipelineRequest.md
   - docs/Models/Operations/PatchCrmPipelineResponse.md
-  - docs/Models/Operations/RemoveCrmCompanyRequest.md
-  - docs/Models/Operations/RemoveCrmCompanyResponse.md
   - docs/Models/Operations/RemoveCrmDealRequest.md
   - docs/Models/Operations/RemoveCrmDealResponse.md
   - docs/Models/Operations/RemoveCrmEventRequest.md
@@ -932,8 +946,6 @@ generatedFiles:
   - docs/Models/Operations/RemoveCrmLeadResponse.md
   - docs/Models/Operations/RemoveCrmPipelineRequest.md
   - docs/Models/Operations/RemoveCrmPipelineResponse.md
-  - docs/Models/Operations/UpdateCrmCompanyRequest.md
-  - docs/Models/Operations/UpdateCrmCompanyResponse.md
   - docs/Models/Operations/UpdateCrmDealRequest.md
   - docs/Models/Operations/UpdateCrmDealResponse.md
   - docs/Models/Operations/UpdateCrmEventRequest.md
@@ -942,8 +954,6 @@ generatedFiles:
   - docs/Models/Operations/UpdateCrmLeadResponse.md
   - docs/Models/Operations/UpdateCrmPipelineRequest.md
   - docs/Models/Operations/UpdateCrmPipelineResponse.md
-  - docs/Models/Operations/ListEnrichCompaniesRequest.md
-  - docs/Models/Operations/ListEnrichCompaniesResponse.md
   - docs/Models/Operations/ListEnrichPeopleRequest.md
   - docs/Models/Operations/ListEnrichPeopleResponse.md
   - docs/Models/Operations/CreateHrisEmployeeRequest.md
@@ -1146,8 +1156,16 @@ generatedFiles:
   - docs/Models/Shared/AtsAddress.md
   - docs/Models/Shared/Recommendation.md
   - docs/Models/Shared/AtsScorecard.md
+  - docs/Models/Shared/AtsCompany.md
+  - docs/Models/Shared/PropertyAtsCompanyAddress.md
   - docs/Models/Shared/AtsStatusStatus.md
   - docs/Models/Shared/AtsStatus.md
+  - docs/Models/Shared/CrmCompany.md
+  - docs/Models/Shared/PropertyCrmCompanyAddress.md
+  - docs/Models/Shared/EnrichCompany.md
+  - docs/Models/Shared/EnrichTelephoneType.md
+  - docs/Models/Shared/EnrichTelephone.md
+  - docs/Models/Shared/PropertyEnrichCompanyAddress.md
   - docs/Models/Shared/CommerceCollection.md
   - docs/Models/Shared/CommerceItemMediaType.md
   - docs/Models/Shared/CommerceItemMedia.md
@@ -1160,8 +1178,6 @@ generatedFiles:
   - docs/Models/Shared/CommerceItemOption.md
   - docs/Models/Shared/CommerceLocation.md
   - docs/Models/Shared/PropertyCommerceLocationAddress.md
-  - docs/Models/Shared/CrmCompany.md
-  - docs/Models/Shared/PropertyCrmCompanyAddress.md
   - docs/Models/Shared/CrmDeal.md
   - docs/Models/Shared/CrmEventType.md
   - docs/Models/Shared/CrmEvent.md
@@ -1174,10 +1190,6 @@ generatedFiles:
   - docs/Models/Shared/CrmLead.md
   - docs/Models/Shared/PropertyCrmLeadAddress.md
   - docs/Models/Shared/CrmPipeline.md
-  - docs/Models/Shared/EnrichCompany.md
-  - docs/Models/Shared/EnrichTelephoneType.md
-  - docs/Models/Shared/EnrichTelephone.md
-  - docs/Models/Shared/PropertyEnrichCompanyAddress.md
   - docs/Models/Shared/Gender.md
   - docs/Models/Shared/EnrichPerson.md
   - docs/Models/Shared/EnrichPersonWorkHistory.md
@@ -1244,6 +1256,7 @@ generatedFiles:
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/company/README.md
   - docs/sdks/document/README.md
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
@@ -1254,7 +1267,6 @@ generatedFiles:
   - docs/sdks/item/README.md
   - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
-  - docs/sdks/company/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
   - docs/sdks/lead/README.md
