@@ -40,7 +40,7 @@ try {
 
     $response = $sdk->passthrough->createPassthrough($request);
 
-    if ($response->undefined !== null) {
+    if ($response->result !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -88,7 +88,7 @@ try {
 
     $response = $sdk->passthrough->listPassthroughs($request);
 
-    if ($response->undefined !== null) {
+    if ($response->result !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -139,7 +139,7 @@ try {
 
     $response = $sdk->passthrough->patchPassthrough($request);
 
-    if ($response->undefined !== null) {
+    if ($response->result !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -187,7 +187,7 @@ try {
 
     $response = $sdk->passthrough->removePassthrough($request);
 
-    if ($response->undefined !== null) {
+    if ($response->result !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -238,7 +238,7 @@ try {
 
     $response = $sdk->passthrough->updatePassthrough($request);
 
-    if ($response->undefined !== null) {
+    if ($response->result !== null) {
         // handle response
     }
 } catch (Exception $e) {

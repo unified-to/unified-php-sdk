@@ -7,10 +7,11 @@ generation:
   fixes:
     nameResolutionDec2023: false
     parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 0.11.0
+  version: 0.12.0
   imports:
     option: openapi
     paths:

@@ -20,6 +20,14 @@ class ListPassthroughsResponse
     public string $contentType;
     
     /**
+     * Successful
+     * 
+     * @var ?array<string, mixed> $result
+     */
+	
+    public ?array $result = null;
+    
+    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -35,19 +43,11 @@ class ListPassthroughsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
-    /**
-     * Successful
-     * 
-     * @var ?array<string, mixed> $undefined
-     */
-	
-    public ?array $undefined = null;
-    
 	public function __construct()
 	{
 		$this->contentType = "";
+		$this->result = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->undefined = null;
 	}
 }
