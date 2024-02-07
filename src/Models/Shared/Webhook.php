@@ -82,6 +82,11 @@ class Webhook
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ObjectType>')]
     public ObjectType $objectType;
     
+	#[\JMS\Serializer\Annotation\SerializedName('page_max_limit')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $pageMaxLimit = null;
+    
     /**
      * An array of the most revent virtual webhook runs
      * 
@@ -122,6 +127,7 @@ class Webhook
 		$this->isHealthy = null;
 		$this->meta = null;
 		$this->objectType = \Unified\Unified_to\Models\Shared\ObjectType::AccountingAccount;
+		$this->pageMaxLimit = null;
 		$this->runs = null;
 		$this->updatedAt = null;
 		$this->webhookType = null;

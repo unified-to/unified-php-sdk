@@ -156,11 +156,12 @@ try {
         'Borders' => 'string',
     ];
     $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
+    $request->webhook->pageMaxLimit = 9505.78;
     $request->webhook->runs = [
         'string',
     ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-07T19:59:37.485Z');
-    $request->webhook->webhookType = Shared\WebhookWebhookType::Native;
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-20T21:50:16.199Z');
+    $request->webhook->webhookType = Shared\WebhookWebhookType::Virtual;
     $request->webhook->workspaceId = 'string';
     $request->includeAll = false;;
 
