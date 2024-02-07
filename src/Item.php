@@ -22,7 +22,7 @@ class Item
 	}
 	
     /**
-     * Create an item/product
+     * Create an item
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
@@ -64,7 +64,7 @@ class Item
     }
 	
     /**
-     * Retrieve an item/product
+     * Retrieve an item
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
@@ -103,7 +103,7 @@ class Item
     }
 	
     /**
-     * List all items/products
+     * List all items
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
@@ -142,7 +142,7 @@ class Item
     }
 	
     /**
-     * Update an item/product
+     * Update an item
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
@@ -184,7 +184,7 @@ class Item
     }
 	
     /**
-     * Remove an item/product
+     * Remove an item
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
@@ -221,7 +221,7 @@ class Item
     }
 	
     /**
-     * Update an item/product
+     * Update an item
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse

@@ -42,6 +42,9 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->questions = [
+        new Shared\AtsScorecardQuestion(),
+    ];
     $request->atsScorecard->raw = [
         'Inverse' => 'string',
     ];
@@ -214,6 +217,9 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->questions = [
+        new Shared\AtsScorecardQuestion(),
+    ];
     $request->atsScorecard->raw = [
         'World' => 'string',
     ];
@@ -324,6 +330,9 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->questions = [
+        new Shared\AtsScorecardQuestion(),
+    ];
     $request->atsScorecard->raw = [
         'Digitized' => 'string',
     ];

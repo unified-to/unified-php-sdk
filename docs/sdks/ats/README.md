@@ -286,7 +286,7 @@ try {
         'Metrics' => 'string',
     ];
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-07T15:15:23.855Z');
-    $request->atsInterview->status = Shared\AtsInterviewStatus::Scheduled;
+    $request->atsInterview->status = Shared\AtsInterviewStatus::AwaitingFeedback;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-20T08:44:17.279Z');
     $request->atsInterview->userIds = [
         'string',
@@ -428,6 +428,9 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->questions = [
+        new Shared\AtsScorecardQuestion(),
+    ];
     $request->atsScorecard->raw = [
         'Inverse' => 'string',
     ];
@@ -1660,6 +1663,9 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->questions = [
+        new Shared\AtsScorecardQuestion(),
+    ];
     $request->atsScorecard->raw = [
         'World' => 'string',
     ];
@@ -2224,7 +2230,7 @@ try {
         'maroon' => 'string',
     ];
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-01T17:04:47.962Z');
-    $request->atsInterview->status = Shared\AtsInterviewStatus::AwaitingFeedback;
+    $request->atsInterview->status = Shared\AtsInterviewStatus::Complete;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-27T22:37:40.818Z');
     $request->atsInterview->userIds = [
         'string',
@@ -2368,6 +2374,9 @@ try {
     $request->atsScorecard->interviewId = 'string';
     $request->atsScorecard->interviewerId = 'string';
     $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->questions = [
+        new Shared\AtsScorecardQuestion(),
+    ];
     $request->atsScorecard->raw = [
         'Digitized' => 'string',
     ];

@@ -52,6 +52,16 @@ class AtsScorecard
     public ?string $jobId = null;
     
     /**
+     * $questions
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion> $questions
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('questions')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsScorecardQuestion>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $questions = null;
+    
+    /**
      * $raw
      * 
      * @var ?array<string, mixed> $raw
@@ -81,6 +91,7 @@ class AtsScorecard
 		$this->interviewId = null;
 		$this->interviewerId = null;
 		$this->jobId = null;
+		$this->questions = null;
 		$this->raw = null;
 		$this->recommendation = null;
 		$this->updatedAt = null;

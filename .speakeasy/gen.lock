@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: e16aa34043cd80d620a23e298a14e5c0
+  docChecksum: 6de3144fa3dee858558168257bc841a5
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.250.12
-  releaseVersion: 0.12.1
-  configChecksum: fef4a5d6ec6c46cd245aea3c0497a245
+  generationVersion: 2.250.16
+  releaseVersion: 0.12.2
+  configChecksum: 92662d952f60b28edde98e5d05d2222e
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -579,6 +579,7 @@ generatedFiles:
   - src/Models/Shared/AtsAddress.php
   - src/Models/Shared/Recommendation.php
   - src/Models/Shared/AtsScorecard.php
+  - src/Models/Shared/AtsScorecardQuestion.php
   - src/Models/Shared/AtsCompany.php
   - src/Models/Shared/PropertyAtsCompanyAddress.php
   - src/Models/Shared/AtsStatusStatus.php
@@ -1156,6 +1157,7 @@ generatedFiles:
   - docs/Models/Shared/AtsAddress.md
   - docs/Models/Shared/Recommendation.md
   - docs/Models/Shared/AtsScorecard.md
+  - docs/Models/Shared/AtsScorecardQuestion.md
   - docs/Models/Shared/AtsCompany.md
   - docs/Models/Shared/PropertyAtsCompanyAddress.md
   - docs/Models/Shared/AtsStatusStatus.md

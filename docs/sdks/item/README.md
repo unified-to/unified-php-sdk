@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createCommerceItem](#createcommerceitem) - Create an item/product
-* [getCommerceItem](#getcommerceitem) - Retrieve an item/product
-* [listCommerceItems](#listcommerceitems) - List all items/products
-* [patchCommerceItem](#patchcommerceitem) - Update an item/product
-* [removeCommerceItem](#removecommerceitem) - Remove an item/product
-* [updateCommerceItem](#updatecommerceitem) - Update an item/product
+* [createCommerceItem](#createcommerceitem) - Create an item
+* [getCommerceItem](#getcommerceitem) - Retrieve an item
+* [listCommerceItems](#listcommerceitems) - List all items
+* [patchCommerceItem](#patchcommerceitem) - Update an item
+* [removeCommerceItem](#removecommerceitem) - Remove an item
+* [updateCommerceItem](#updatecommerceitem) - Update an item
 
 ## createCommerceItem
 
-Create an item/product
+Create an item
 
 ### Example Usage
 
@@ -83,7 +83,7 @@ try {
 
 ## getCommerceItem
 
-Retrieve an item/product
+Retrieve an item
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ try {
 
 ## listCommerceItems
 
-List all items/products
+List all items
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ try {
 
 ## patchCommerceItem
 
-Update an item/product
+Update an item
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ try {
 
 ## removeCommerceItem
 
-Remove an item/product
+Remove an item
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ try {
 
 ## updateCommerceItem
 
-Update an item/product
+Update an item
 
 ### Example Usage
 

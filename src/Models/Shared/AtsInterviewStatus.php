@@ -14,4 +14,6 @@ enum AtsInterviewStatus: string
     case Scheduled = 'SCHEDULED';
     case AwaitingFeedback = 'AWAITING_FEEDBACK';
     case Complete = 'COMPLETE';
+    case Canceled = 'CANCELED';
+    case NeedsScheduling = 'NEEDS_SCHEDULING';
 }
