@@ -60,6 +60,9 @@ try {
     $request->atsCandidate->raw = [
         'Gasoline' => 'string',
     ];
+    $request->atsCandidate->sources = [
+        'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -75,7 +78,7 @@ try {
     if ($response->atsCandidate !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -126,7 +129,7 @@ try {
     if ($response->atsCandidate !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -182,7 +185,7 @@ try {
     if ($response->atsCandidates !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -249,6 +252,9 @@ try {
     $request->atsCandidate->raw = [
         'generate' => 'string',
     ];
+    $request->atsCandidate->sources = [
+        'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -265,7 +271,7 @@ try {
     if ($response->atsCandidate !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -313,7 +319,7 @@ try {
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -380,6 +386,9 @@ try {
     $request->atsCandidate->raw = [
         'lime' => 'string',
     ];
+    $request->atsCandidate->sources = [
+        'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -396,7 +405,7 @@ try {
     if ($response->atsCandidate !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

@@ -40,7 +40,7 @@ try {
     if ($response->accountingRefund !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -97,7 +97,7 @@ try {
     if ($response->accountingRefunds !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

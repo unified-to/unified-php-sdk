@@ -36,7 +36,7 @@ try {
     if ($response->apiCall !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -93,7 +93,7 @@ try {
     if ($response->apiCalls !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

@@ -39,7 +39,7 @@ try {
     if ($response->enrichPerson !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

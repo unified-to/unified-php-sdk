@@ -25,10 +25,8 @@ enum Scopes: string
     case AccountingTaxrateRead = 'accounting_taxrate_read';
     case AccountingTaxrateWrite = 'accounting_taxrate_write';
     case AccountingOrganizationRead = 'accounting_organization_read';
-    case AccountingRefundRead = 'accounting_refund_read';
-    case AccountingRefundWrite = 'accounting_refund_write';
     case AccountingPayoutRead = 'accounting_payout_read';
-    case AccountingPayoutWrite = 'accounting_payout_write';
+    case AccountingRefundRead = 'accounting_refund_read';
     case CommerceItemRead = 'commerce_item_read';
     case CommerceItemWrite = 'commerce_item_write';
     case CommerceCollectionRead = 'commerce_collection_read';

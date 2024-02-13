@@ -46,7 +46,7 @@ try {
     if ($response->ucCalls !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

@@ -89,7 +89,7 @@ try {
     if ($response->atsApplication !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -156,6 +156,9 @@ try {
     $request->atsCandidate->raw = [
         'Gasoline' => 'string',
     ];
+    $request->atsCandidate->sources = [
+        'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -171,7 +174,7 @@ try {
     if ($response->atsCandidate !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -233,7 +236,7 @@ try {
     if ($response->atsDocument !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -298,7 +301,7 @@ try {
     if ($response->atsInterview !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -379,7 +382,7 @@ try {
     if ($response->atsJob !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -443,7 +446,7 @@ try {
     if ($response->atsScorecard !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -494,7 +497,7 @@ try {
     if ($response->atsApplication !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -545,7 +548,7 @@ try {
     if ($response->atsCandidate !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -596,7 +599,7 @@ try {
     if ($response->atsCompany !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -647,7 +650,7 @@ try {
     if ($response->atsDocument !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -698,7 +701,7 @@ try {
     if ($response->atsInterview !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -749,7 +752,7 @@ try {
     if ($response->atsJob !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -800,7 +803,7 @@ try {
     if ($response->atsScorecard !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -858,7 +861,7 @@ try {
     if ($response->atsApplications !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -914,7 +917,7 @@ try {
     if ($response->atsStatuses !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -970,7 +973,7 @@ try {
     if ($response->atsCandidates !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1026,7 +1029,7 @@ try {
     if ($response->atsCompanies !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1083,7 +1086,7 @@ try {
     if ($response->atsDocuments !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1140,7 +1143,7 @@ try {
     if ($response->atsInterviews !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1196,7 +1199,7 @@ try {
     if ($response->atsJobs !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1256,7 +1259,7 @@ try {
     if ($response->atsScorecards !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1320,7 +1323,7 @@ try {
     if ($response->atsApplication !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1387,6 +1390,9 @@ try {
     $request->atsCandidate->raw = [
         'generate' => 'string',
     ];
+    $request->atsCandidate->sources = [
+        'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -1403,7 +1409,7 @@ try {
     if ($response->atsCandidate !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1466,7 +1472,7 @@ try {
     if ($response->atsDocument !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1532,7 +1538,7 @@ try {
     if ($response->atsInterview !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1614,7 +1620,7 @@ try {
     if ($response->atsJob !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1679,7 +1685,7 @@ try {
     if ($response->atsScorecard !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1727,7 +1733,7 @@ try {
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1775,7 +1781,7 @@ try {
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1823,7 +1829,7 @@ try {
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1871,7 +1877,7 @@ try {
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1919,7 +1925,7 @@ try {
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -1967,7 +1973,7 @@ try {
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -2031,7 +2037,7 @@ try {
     if ($response->atsApplication !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -2098,6 +2104,9 @@ try {
     $request->atsCandidate->raw = [
         'lime' => 'string',
     ];
+    $request->atsCandidate->sources = [
+        'string',
+    ];
     $request->atsCandidate->tags = [
         'string',
     ];
@@ -2114,7 +2123,7 @@ try {
     if ($response->atsCandidate !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -2177,7 +2186,7 @@ try {
     if ($response->atsDocument !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -2243,7 +2252,7 @@ try {
     if ($response->atsInterview !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -2325,7 +2334,7 @@ try {
     if ($response->atsJob !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -2390,7 +2399,7 @@ try {
     if ($response->atsScorecard !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

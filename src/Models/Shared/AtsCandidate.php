@@ -87,6 +87,16 @@ class AtsCandidate
     public ?array $raw = null;
     
     /**
+     * $sources
+     * 
+     * @var ?array<string> $sources
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sources')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $sources = null;
+    
+    /**
      * $tags
      * 
      * @var ?array<string> $tags
@@ -130,6 +140,7 @@ class AtsCandidate
 		$this->name = null;
 		$this->origin = null;
 		$this->raw = null;
+		$this->sources = null;
 		$this->tags = null;
 		$this->telephones = null;
 		$this->title = null;

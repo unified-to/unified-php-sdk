@@ -40,7 +40,7 @@ try {
     if ($response->accountingOrganization !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -96,7 +96,7 @@ try {
     if ($response->accountingOrganizations !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

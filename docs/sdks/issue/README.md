@@ -39,7 +39,7 @@ try {
     if ($response->issues !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

@@ -40,7 +40,7 @@ try {
     if ($response->accountingPayout !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -96,7 +96,7 @@ try {
     if ($response->accountingPayouts !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
