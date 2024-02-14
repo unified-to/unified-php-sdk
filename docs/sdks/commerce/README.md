@@ -579,7 +579,9 @@ try {
     $request->fields = [
         'string',
     ];
+    $request->itemId = 'string';
     $request->limit = 2481.16;
+    $request->locationId = 'string';
     $request->offset = 9476.38;
     $request->order = 'string';
     $request->query = 'string';
