@@ -45,56 +45,56 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Shared\Connection();
     $request->auth = new Shared\PropertyConnectionAuth();
-    $request->auth->accessToken = 'string';
-    $request->auth->apiUrl = 'string';
-    $request->auth->appId = 'string';
-    $request->auth->authorizeUrl = 'string';
-    $request->auth->clientId = 'string';
-    $request->auth->clientSecret = 'string';
-    $request->auth->consumerKey = 'string';
-    $request->auth->consumerSecret = 'string';
+    $request->auth->accessToken = '<value>';
+    $request->auth->apiUrl = '<value>';
+    $request->auth->appId = '<value>';
+    $request->auth->authorizeUrl = '<value>';
+    $request->auth->clientId = '<value>';
+    $request->auth->clientSecret = '<value>';
+    $request->auth->consumerKey = '<value>';
+    $request->auth->consumerSecret = '<value>';
     $request->auth->emails = [
-        'string',
+        '<value>',
     ];
     $request->auth->expiresIn = 9168.17;
     $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-11T07:34:10.716Z');
     $request->auth->key = '<key>';
     $request->auth->meta = [
-        'Rwanda' => 'string',
+        'Rwanda' => '<value>',
     ];
-    $request->auth->name = 'string';
+    $request->auth->name = '<value>';
     $request->auth->otherAuthInfo = [
-        'string',
+        '<value>',
     ];
-    $request->auth->pem = 'string';
-    $request->auth->refreshToken = 'string';
+    $request->auth->pem = '<value>';
+    $request->auth->refreshToken = '<value>';
     $request->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-04T08:49:51.307Z');
     $request->auth->refreshTokenExpiresIn = 3145.19;
-    $request->auth->state = 'string';
-    $request->auth->token = 'string';
-    $request->auth->tokenUrl = 'string';
-    $request->authAwsArn = 'string';
+    $request->auth->state = 'Tennessee';
+    $request->auth->token = '<value>';
+    $request->auth->tokenUrl = '<value>';
+    $request->authAwsArn = '<value>';
     $request->categories = [
-        Shared\PropertyConnectionCategories::Accounting,
+        Shared\PropertyConnectionCategories::Ticketing,
     ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-01T09:09:15.633Z');
+    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-05T07:37:37.431Z');
     $request->cursorsCache = [
         [
-            'static' => 'string',
+            'Van' => '<value>',
         ],
     ];
-    $request->environment = 'string';
-    $request->externalXref = 'string';
-    $request->id = '<ID>';
-    $request->integrationType = 'string';
+    $request->environment = '<value>';
+    $request->externalXref = '<value>';
+    $request->id = '<id>';
+    $request->integrationType = '<value>';
     $request->isPaused = false;
-    $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T14:41:39.477Z');
-    $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-12T21:34:55.584Z');
+    $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T14:19:55.077Z');
+    $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T09:01:24.591Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::HrisEmployeeWrite,
+        Shared\PropertyConnectionPermissions::TicketingCustomerWrite,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T09:01:24.591Z');
-    $request->workspaceId = 'string';;
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-22T10:28:46.343Z');
+    $request->workspaceId = '<value>';;
 
     $response = $sdk->unified->createUnifiedConnection($request);
 
@@ -143,27 +143,27 @@ try {
         $request = new Operations\CreateUnifiedWebhookRequest();
     $request->webhook = new Shared\Webhook();
     $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-24T03:05:08.611Z');
-    $request->webhook->connectionId = 'string';
+    $request->webhook->connectionId = '<value>';
     $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T14:50:04.176Z');
-    $request->webhook->environment = 'string';
+    $request->webhook->environment = '<value>';
     $request->webhook->event = Shared\Event::Updated;
-    $request->webhook->fields = 'string';
-    $request->webhook->hookUrl = 'string';
-    $request->webhook->id = '<ID>';
-    $request->webhook->integrationType = 'string';
+    $request->webhook->fields = '<value>';
+    $request->webhook->hookUrl = '<value>';
+    $request->webhook->id = '<id>';
+    $request->webhook->integrationType = '<value>';
     $request->webhook->interval = 6142.55;
     $request->webhook->isHealthy = false;
     $request->webhook->meta = [
-        'Borders' => 'string',
+        'Borders' => '<value>',
     ];
     $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
     $request->webhook->pageMaxLimit = 9505.78;
     $request->webhook->runs = [
-        'string',
+        '<value>',
     ];
     $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-20T21:50:16.199Z');
     $request->webhook->webhookType = Shared\WebhookWebhookType::Virtual;
-    $request->webhook->workspaceId = 'string';
+    $request->webhook->workspaceId = '<value>';
     $request->includeAll = false;;
 
     $response = $sdk->unified->createUnifiedWebhook($request);
@@ -211,7 +211,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedApicallRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->unified->getUnifiedApicall($request);
 
@@ -258,7 +258,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedConnectionRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->unified->getUnifiedConnection($request);
 
@@ -305,19 +305,19 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedIntegrationAuthRequest();
-    $request->env = 'string';
-    $request->externalXref = 'string';
-    $request->failureRedirect = 'string';
-    $request->integrationType = 'string';
-    $request->lang = 'string';
+    $request->env = '<value>';
+    $request->externalXref = '<value>';
+    $request->failureRedirect = '<value>';
+    $request->integrationType = '<value>';
+    $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
         Operations\Scopes::HrisEmployeeWrite,
     ];
-    $request->state = 'string';
-    $request->subdomain = 'string';
-    $request->successRedirect = 'string';
-    $request->workspaceId = 'string';;
+    $request->state = 'New Jersey';
+    $request->subdomain = '<value>';
+    $request->successRedirect = '<value>';
+    $request->workspaceId = '<value>';;
 
     $response = $sdk->unified->getUnifiedIntegrationAuth($request);
 
@@ -364,7 +364,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedWebhookRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->unified->getUnifiedWebhook($request);
 
@@ -411,16 +411,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUnifiedApicallsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T17:47:53.304Z');
-    $request->env = 'string';
+    $request->env = '<value>';
     $request->error = false;
-    $request->externalXref = 'string';
-    $request->integrationType = 'string';
+    $request->externalXref = '<value>';
+    $request->integrationType = '<value>';
     $request->limit = 494.66;
     $request->offset = 5267.27;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-10T02:33:44.403Z');;
 
     $response = $sdk->unified->listUnifiedApicalls($request);
@@ -471,12 +471,12 @@ try {
     $request->categories = [
         Operations\Categories::Martech,
     ];
-    $request->env = 'string';
-    $request->externalXref = 'string';
+    $request->env = '<value>';
+    $request->externalXref = '<value>';
     $request->limit = 9638.08;
     $request->offset = 15.12;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-20T13:59:12.388Z');;
 
     $response = $sdk->unified->listUnifiedConnections($request);
@@ -528,12 +528,12 @@ try {
     $request->categories = [
         Operations\QueryParamCategories::Accounting,
     ];
-    $request->env = 'string';
+    $request->env = '<value>';
     $request->limit = 9072.99;
     $request->offset = 5948.93;
     $request->summary = false;
-    $request->updatedGte = 'string';
-    $request->workspaceId = 'string';;
+    $request->updatedGte = '<value>';
+    $request->workspaceId = '<value>';;
 
     $response = $sdk->unified->listUnifiedIntegrationWorkspaces($request);
 
@@ -584,14 +584,14 @@ try {
     $request->categories = [
         Operations\ListUnifiedIntegrationsQueryParamCategories::Crm,
     ];
-    $request->env = 'string';
+    $request->env = '<value>';
     $request->limit = 7382.58;
     $request->offset = 353.99;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->summary = false;
-    $request->type = 'string';
-    $request->updatedGte = 'string';;
+    $request->type = '<value>';
+    $request->updatedGte = '<value>';;
 
     $response = $sdk->unified->listUnifiedIntegrations($request);
 
@@ -640,8 +640,8 @@ try {
         $request = new Operations\ListUnifiedIssuesRequest();
     $request->limit = 7069.08;
     $request->offset = 7461.37;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T01:55:24.746Z');;
 
     $response = $sdk->unified->listUnifiedIssues($request);
@@ -689,12 +689,12 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUnifiedWebhooksRequest();
-    $request->env = 'string';
+    $request->env = '<value>';
     $request->limit = 1162.24;
-    $request->object = 'string';
+    $request->object = '<value>';
     $request->offset = 5094.7;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-20T17:03:56.207Z');;
 
     $response = $sdk->unified->listUnifiedWebhooks($request);
@@ -744,57 +744,57 @@ try {
         $request = new Operations\PatchUnifiedConnectionRequest();
     $request->connection = new Shared\Connection();
     $request->connection->auth = new Shared\PropertyConnectionAuth();
-    $request->connection->auth->accessToken = 'string';
-    $request->connection->auth->apiUrl = 'string';
-    $request->connection->auth->appId = 'string';
-    $request->connection->auth->authorizeUrl = 'string';
-    $request->connection->auth->clientId = 'string';
-    $request->connection->auth->clientSecret = 'string';
-    $request->connection->auth->consumerKey = 'string';
-    $request->connection->auth->consumerSecret = 'string';
+    $request->connection->auth->accessToken = '<value>';
+    $request->connection->auth->apiUrl = '<value>';
+    $request->connection->auth->appId = '<value>';
+    $request->connection->auth->authorizeUrl = '<value>';
+    $request->connection->auth->clientId = '<value>';
+    $request->connection->auth->clientSecret = '<value>';
+    $request->connection->auth->consumerKey = '<value>';
+    $request->connection->auth->consumerSecret = '<value>';
     $request->connection->auth->emails = [
-        'string',
+        '<value>',
     ];
     $request->connection->auth->expiresIn = 6565.39;
     $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-09T18:49:02.054Z');
     $request->connection->auth->key = '<key>';
     $request->connection->auth->meta = [
-        'square' => 'string',
+        'square' => '<value>',
     ];
-    $request->connection->auth->name = 'string';
+    $request->connection->auth->name = '<value>';
     $request->connection->auth->otherAuthInfo = [
-        'string',
+        '<value>',
     ];
-    $request->connection->auth->pem = 'string';
-    $request->connection->auth->refreshToken = 'string';
+    $request->connection->auth->pem = '<value>';
+    $request->connection->auth->refreshToken = '<value>';
     $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-17T17:15:40.563Z');
     $request->connection->auth->refreshTokenExpiresIn = 1170.66;
-    $request->connection->auth->state = 'string';
-    $request->connection->auth->token = 'string';
-    $request->connection->auth->tokenUrl = 'string';
-    $request->connection->authAwsArn = 'string';
+    $request->connection->auth->state = 'Connecticut';
+    $request->connection->auth->token = '<value>';
+    $request->connection->auth->tokenUrl = '<value>';
+    $request->connection->authAwsArn = '<value>';
     $request->connection->categories = [
-        Shared\PropertyConnectionCategories::Hris,
+        Shared\PropertyConnectionCategories::Martech,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-09T12:43:50.814Z');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T05:49:12.923Z');
     $request->connection->cursorsCache = [
         [
-            'scalable' => 'string',
+            'Gasoline' => '<value>',
         ],
     ];
-    $request->connection->environment = 'string';
-    $request->connection->externalXref = 'string';
-    $request->connection->id = '<ID>';
-    $request->connection->integrationType = 'string';
+    $request->connection->environment = '<value>';
+    $request->connection->externalXref = '<value>';
+    $request->connection->id = '<id>';
+    $request->connection->integrationType = '<value>';
     $request->connection->isPaused = false;
-    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T11:43:14.112Z');
-    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-24T01:15:30.014Z');
+    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-24T01:15:30.014Z');
+    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-20T21:38:39.955Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AtsJobRead,
+        Shared\PropertyConnectionPermissions::AtsInterviewWrite,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-02T09:40:32.883Z');
-    $request->connection->workspaceId = 'string';
-    $request->id = '<ID>';;
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T02:30:18.551Z');
+    $request->connection->workspaceId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->unified->patchUnifiedConnection($request);
 
@@ -841,7 +841,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PatchUnifiedWebhookTriggerRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->unified->patchUnifiedWebhookTrigger($request);
 
@@ -888,7 +888,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveUnifiedConnectionRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->unified->removeUnifiedConnection($request);
 
@@ -935,7 +935,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveUnifiedWebhookRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->unified->removeUnifiedWebhook($request);
 
@@ -984,57 +984,57 @@ try {
         $request = new Operations\UpdateUnifiedConnectionRequest();
     $request->connection = new Shared\Connection();
     $request->connection->auth = new Shared\PropertyConnectionAuth();
-    $request->connection->auth->accessToken = 'string';
-    $request->connection->auth->apiUrl = 'string';
-    $request->connection->auth->appId = 'string';
-    $request->connection->auth->authorizeUrl = 'string';
-    $request->connection->auth->clientId = 'string';
-    $request->connection->auth->clientSecret = 'string';
-    $request->connection->auth->consumerKey = 'string';
-    $request->connection->auth->consumerSecret = 'string';
+    $request->connection->auth->accessToken = '<value>';
+    $request->connection->auth->apiUrl = '<value>';
+    $request->connection->auth->appId = '<value>';
+    $request->connection->auth->authorizeUrl = '<value>';
+    $request->connection->auth->clientId = '<value>';
+    $request->connection->auth->clientSecret = '<value>';
+    $request->connection->auth->consumerKey = '<value>';
+    $request->connection->auth->consumerSecret = '<value>';
     $request->connection->auth->emails = [
-        'string',
+        '<value>',
     ];
     $request->connection->auth->expiresIn = 7910.65;
     $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-13T13:09:11.114Z');
     $request->connection->auth->key = '<key>';
     $request->connection->auth->meta = [
-        'revitalize' => 'string',
+        'revitalize' => '<value>',
     ];
-    $request->connection->auth->name = 'string';
+    $request->connection->auth->name = '<value>';
     $request->connection->auth->otherAuthInfo = [
-        'string',
+        '<value>',
     ];
-    $request->connection->auth->pem = 'string';
-    $request->connection->auth->refreshToken = 'string';
+    $request->connection->auth->pem = '<value>';
+    $request->connection->auth->refreshToken = '<value>';
     $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-18T23:31:20.256Z');
     $request->connection->auth->refreshTokenExpiresIn = 618.81;
-    $request->connection->auth->state = 'string';
-    $request->connection->auth->token = 'string';
-    $request->connection->auth->tokenUrl = 'string';
-    $request->connection->authAwsArn = 'string';
+    $request->connection->auth->state = 'Wisconsin';
+    $request->connection->auth->token = '<value>';
+    $request->connection->auth->tokenUrl = '<value>';
+    $request->connection->authAwsArn = '<value>';
     $request->connection->categories = [
-        Shared\PropertyConnectionCategories::Commerce,
+        Shared\PropertyConnectionCategories::Enrich,
     ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-09T16:09:54.412Z');
+    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-08T19:30:51.046Z');
     $request->connection->cursorsCache = [
         [
-            'Berkshire' => 'string',
+            'Intuitive' => '<value>',
         ],
     ];
-    $request->connection->environment = 'string';
-    $request->connection->externalXref = 'string';
-    $request->connection->id = '<ID>';
-    $request->connection->integrationType = 'string';
+    $request->connection->environment = '<value>';
+    $request->connection->externalXref = '<value>';
+    $request->connection->id = '<id>';
+    $request->connection->integrationType = '<value>';
     $request->connection->isPaused = false;
-    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-20T19:30:15.010Z');
-    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-19T21:47:47.558Z');
+    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-19T21:47:47.558Z');
+    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T13:28:25.633Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::Webhook,
+        Shared\PropertyConnectionPermissions::AccountingRefundRead,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-02T00:03:31.866Z');
-    $request->connection->workspaceId = 'string';
-    $request->id = '<ID>';;
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-11T02:04:24.912Z');
+    $request->connection->workspaceId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->unified->updateUnifiedConnection($request);
 
@@ -1081,7 +1081,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\UpdateUnifiedWebhookTriggerRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->unified->updateUnifiedWebhookTrigger($request);
 

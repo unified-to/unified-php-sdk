@@ -34,26 +34,26 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
-    $request->ticketingTicket->category = 'string';
+    $request->ticketingTicket->category = '<value>';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-28T15:15:03.216Z');
     $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-20T11:30:17.210Z');
-    $request->ticketingTicket->customerId = 'string';
+    $request->ticketingTicket->customerId = '<value>';
     $request->ticketingTicket->description = 'Automated composite productivity';
-    $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'string';
+    $request->ticketingTicket->id = '<id>';
+    $request->ticketingTicket->priority = '<value>';
     $request->ticketingTicket->raw = [
-        'indigo' => 'string',
+        'indigo' => '<value>',
     ];
-    $request->ticketingTicket->source = 'string';
-    $request->ticketingTicket->sourceRef = 'string';
+    $request->ticketingTicket->source = '<value>';
+    $request->ticketingTicket->sourceRef = '<value>';
     $request->ticketingTicket->status = Shared\TicketingTicketStatus::Closed;
-    $request->ticketingTicket->subject = 'string';
+    $request->ticketingTicket->subject = '<value>';
     $request->ticketingTicket->tags = [
-        'string',
+        '<value>',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-31T16:32:54.987Z');
-    $request->ticketingTicket->userId = 'string';
-    $request->connectionId = 'string';;
+    $request->ticketingTicket->userId = '<value>';
+    $request->connectionId = '<value>';;
 
     $response = $sdk->ticket->createTicketingTicket($request);
 
@@ -100,11 +100,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetTicketingTicketRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->ticket->getTicketingTicket($request);
 
@@ -151,18 +151,18 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListTicketingTicketsRequest();
-    $request->connectionId = 'string';
-    $request->customerId = 'string';
+    $request->connectionId = '<value>';
+    $request->customerId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 6139.39;
     $request->offset = 1839.22;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-28T23:31:15.090Z');
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->ticket->listTicketingTickets($request);
 
@@ -210,27 +210,27 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
-    $request->ticketingTicket->category = 'string';
+    $request->ticketingTicket->category = '<value>';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-14T17:48:05.161Z');
     $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-30T13:19:53.416Z');
-    $request->ticketingTicket->customerId = 'string';
+    $request->ticketingTicket->customerId = '<value>';
     $request->ticketingTicket->description = 'Operative composite strategy';
-    $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'string';
+    $request->ticketingTicket->id = '<id>';
+    $request->ticketingTicket->priority = '<value>';
     $request->ticketingTicket->raw = [
-        'Concrete' => 'string',
+        'Concrete' => '<value>',
     ];
-    $request->ticketingTicket->source = 'string';
-    $request->ticketingTicket->sourceRef = 'string';
+    $request->ticketingTicket->source = '<value>';
+    $request->ticketingTicket->sourceRef = '<value>';
     $request->ticketingTicket->status = Shared\TicketingTicketStatus::Active;
-    $request->ticketingTicket->subject = 'string';
+    $request->ticketingTicket->subject = '<value>';
     $request->ticketingTicket->tags = [
-        'string',
+        '<value>',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-08T14:40:04.177Z');
-    $request->ticketingTicket->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->ticketingTicket->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ticket->patchTicketingTicket($request);
 
@@ -277,8 +277,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveTicketingTicketRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ticket->removeTicketingTicket($request);
 
@@ -326,27 +326,27 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateTicketingTicketRequest();
     $request->ticketingTicket = new Shared\TicketingTicket();
-    $request->ticketingTicket->category = 'string';
+    $request->ticketingTicket->category = '<value>';
     $request->ticketingTicket->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-31T01:36:42.106Z');
     $request->ticketingTicket->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-29T13:04:08.966Z');
-    $request->ticketingTicket->customerId = 'string';
+    $request->ticketingTicket->customerId = '<value>';
     $request->ticketingTicket->description = 'Configurable user-facing middleware';
-    $request->ticketingTicket->id = '<ID>';
-    $request->ticketingTicket->priority = 'string';
+    $request->ticketingTicket->id = '<id>';
+    $request->ticketingTicket->priority = '<value>';
     $request->ticketingTicket->raw = [
-        'East' => 'string',
+        'East' => '<value>',
     ];
-    $request->ticketingTicket->source = 'string';
-    $request->ticketingTicket->sourceRef = 'string';
+    $request->ticketingTicket->source = '<value>';
+    $request->ticketingTicket->sourceRef = '<value>';
     $request->ticketingTicket->status = Shared\TicketingTicketStatus::Active;
-    $request->ticketingTicket->subject = 'string';
+    $request->ticketingTicket->subject = '<value>';
     $request->ticketingTicket->tags = [
-        'string',
+        '<value>',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-17T20:35:00.553Z');
-    $request->ticketingTicket->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->ticketingTicket->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ticket->updateTicketingTicket($request);
 

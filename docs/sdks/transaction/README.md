@@ -34,21 +34,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->createdAt = '<value>';
     $request->accountingTransaction->currency = 'Libyan Dinar';
     $request->accountingTransaction->description = 'Pre-emptive multimedia benchmark';
-    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->id = '<id>';
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
     $request->accountingTransaction->raw = [
-        'Metal' => 'string',
+        'Metal' => '<value>',
     ];
-    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->reference = '<value>';
     $request->accountingTransaction->taxAmount = 8276.07;
-    $request->accountingTransaction->taxrateId = 'string';
-    $request->accountingTransaction->updatedAt = 'string';
-    $request->connectionId = 'string';;
+    $request->accountingTransaction->taxrateId = '<value>';
+    $request->accountingTransaction->updatedAt = '<value>';
+    $request->connectionId = '<value>';;
 
     $response = $sdk->transaction->createAccountingTransaction($request);
 
@@ -95,11 +95,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingTransactionRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->transaction->getAccountingTransaction($request);
 
@@ -146,15 +146,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingTransactionsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 7894.5;
     $request->offset = 4597.84;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-02T12:20:43.572Z');;
 
     $response = $sdk->transaction->listAccountingTransactions($request);
@@ -203,22 +203,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->createdAt = '<value>';
     $request->accountingTransaction->currency = 'Kwacha';
     $request->accountingTransaction->description = 'Multi-channelled transitional function';
-    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->id = '<id>';
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
     $request->accountingTransaction->raw = [
-        'Gambia' => 'string',
+        'Gambia' => '<value>',
     ];
-    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->reference = '<value>';
     $request->accountingTransaction->taxAmount = 259.82;
-    $request->accountingTransaction->taxrateId = 'string';
-    $request->accountingTransaction->updatedAt = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->accountingTransaction->taxrateId = '<value>';
+    $request->accountingTransaction->updatedAt = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->transaction->patchAccountingTransaction($request);
 
@@ -265,8 +265,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingTransactionRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->transaction->removeAccountingTransaction($request);
 
@@ -314,22 +314,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->createdAt = '<value>';
     $request->accountingTransaction->currency = 'Zloty';
     $request->accountingTransaction->description = 'Organic web-enabled orchestration';
-    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->id = '<id>';
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
     $request->accountingTransaction->raw = [
-        'Intelligent' => 'string',
+        'Intelligent' => '<value>',
     ];
-    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->reference = '<value>';
     $request->accountingTransaction->taxAmount = 421.84;
-    $request->accountingTransaction->taxrateId = 'string';
-    $request->accountingTransaction->updatedAt = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->accountingTransaction->taxrateId = '<value>';
+    $request->accountingTransaction->updatedAt = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->transaction->updateAccountingTransaction($request);
 

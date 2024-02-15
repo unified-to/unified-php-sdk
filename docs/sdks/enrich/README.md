@@ -29,9 +29,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListEnrichCompaniesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->domain = 'dismal-cornmeal.org';
-    $request->name = 'string';;
+    $request->name = '<value>';;
 
     $response = $sdk->enrich->listEnrichCompanies($request);
 
@@ -78,11 +78,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListEnrichPeopleRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->email = 'Rosendo53@gmail.com';
-    $request->linkedinUrl = 'string';
-    $request->name = 'string';
-    $request->twitter = 'string';;
+    $request->linkedinUrl = '<value>';
+    $request->name = '<value>';
+    $request->twitter = '<value>';;
 
     $response = $sdk->enrich->listEnrichPeople($request);
 

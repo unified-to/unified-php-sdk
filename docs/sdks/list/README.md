@@ -34,14 +34,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateMartechListRequest();
     $request->marketingList = new Shared\MarketingList();
-    $request->marketingList->createdAt = 'string';
-    $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'string';
+    $request->marketingList->createdAt = '<value>';
+    $request->marketingList->id = '<id>';
+    $request->marketingList->name = '<value>';
     $request->marketingList->raw = [
-        'Latin' => 'string',
+        'Latin' => '<value>',
     ];
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-06T07:01:10.618Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->list->createMartechList($request);
 
@@ -88,11 +88,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetMartechListRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->list->getMartechList($request);
 
@@ -139,15 +139,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListMartechListsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 9665.22;
     $request->offset = 367.94;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-12T12:19:08.506Z');;
 
     $response = $sdk->list->listMartechLists($request);
@@ -196,15 +196,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchMartechListRequest();
     $request->marketingList = new Shared\MarketingList();
-    $request->marketingList->createdAt = 'string';
-    $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'string';
+    $request->marketingList->createdAt = '<value>';
+    $request->marketingList->id = '<id>';
+    $request->marketingList->name = '<value>';
     $request->marketingList->raw = [
-        'Classical' => 'string',
+        'Classical' => '<value>',
     ];
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-26T04:11:57.641Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->list->patchMartechList($request);
 
@@ -251,8 +251,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveMartechListRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->list->removeMartechList($request);
 
@@ -300,15 +300,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateMartechListRequest();
     $request->marketingList = new Shared\MarketingList();
-    $request->marketingList->createdAt = 'string';
-    $request->marketingList->id = '<ID>';
-    $request->marketingList->name = 'string';
+    $request->marketingList->createdAt = '<value>';
+    $request->marketingList->id = '<id>';
+    $request->marketingList->name = '<value>';
     $request->marketingList->raw = [
-        'innocently' => 'string',
+        'innocently' => '<value>',
     ];
     $request->marketingList->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-18T20:36:47.001Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->list->updateMartechList($request);
 

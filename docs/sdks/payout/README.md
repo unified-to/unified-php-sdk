@@ -29,11 +29,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingPayoutRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->payout->getAccountingPayout($request);
 
@@ -80,15 +80,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingPayoutsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 6876.93;
     $request->offset = 5.2;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-08T08:07:55.044Z');;
 
     $response = $sdk->payout->listAccountingPayouts($request);

@@ -47,43 +47,43 @@ try {
         $request = new Operations\CreateAccountingContactRequest();
     $request->accountingContact = new Shared\AccountingContact();
     $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
-    $request->accountingContact->billingAddress->address1 = 'string';
-    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->address1 = '<value>';
+    $request->accountingContact->billingAddress->address2 = '<value>';
     $request->accountingContact->billingAddress->city = 'Lake Benny';
     $request->accountingContact->billingAddress->country = 'Azerbaijan';
     $request->accountingContact->billingAddress->countryCode = 'GT';
     $request->accountingContact->billingAddress->postalCode = '48359-3238';
-    $request->accountingContact->billingAddress->region = 'string';
-    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->billingAddress->region = '<value>';
+    $request->accountingContact->billingAddress->regionCode = '<value>';
     $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-19T03:22:44.048Z');
     $request->accountingContact->currency = 'Peso Uruguayo';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->id = '<id>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
-    $request->accountingContact->name = 'string';
+    $request->accountingContact->name = '<value>';
     $request->accountingContact->raw = [
-        'unfold' => 'string',
+        'unfold' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
-    $request->accountingContact->shippingAddress->address1 = 'string';
-    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->address1 = '<value>';
+    $request->accountingContact->shippingAddress->address2 = '<value>';
     $request->accountingContact->shippingAddress->city = 'Port Wilberfield';
     $request->accountingContact->shippingAddress->country = 'Bouvet Island (Bouvetoya)';
     $request->accountingContact->shippingAddress->countryCode = 'AM';
     $request->accountingContact->shippingAddress->postalCode = '62093';
-    $request->accountingContact->shippingAddress->region = 'string';
-    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->shippingAddress->region = '<value>';
+    $request->accountingContact->shippingAddress->regionCode = '<value>';
     $request->accountingContact->taxExemption = Shared\TaxExemption::EducationalOrg;
-    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
     $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-29T11:32:51.059Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->contact->createAccountingContact($request);
 
@@ -132,37 +132,37 @@ try {
         $request = new Operations\CreateCrmContactRequest();
     $request->crmContact = new Shared\CrmContact();
     $request->crmContact->address = new Shared\PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'string';
-    $request->crmContact->address->address2 = 'string';
+    $request->crmContact->address->address1 = '<value>';
+    $request->crmContact->address->address2 = '<value>';
     $request->crmContact->address->city = 'Steuberview';
     $request->crmContact->address->country = 'Bulgaria';
     $request->crmContact->address->countryCode = 'QA';
     $request->crmContact->address->postalCode = '98809';
-    $request->crmContact->address->region = 'string';
-    $request->crmContact->address->regionCode = 'string';
+    $request->crmContact->address->region = '<value>';
+    $request->crmContact->address->regionCode = '<value>';
     $request->crmContact->company = 'Pollich, Emard and Parker';
     $request->crmContact->companyIds = [
-        'string',
+        '<value>',
     ];
     $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-07T10:13:21.309Z');
     $request->crmContact->dealIds = [
-        'string',
+        '<value>',
     ];
     $request->crmContact->emails = [
         new Shared\CrmEmail(),
     ];
-    $request->crmContact->id = '<ID>';
-    $request->crmContact->name = 'string';
+    $request->crmContact->id = '<id>';
+    $request->crmContact->name = '<value>';
     $request->crmContact->raw = [
-        'Krypton' => 'string',
+        'Krypton' => '<value>',
     ];
     $request->crmContact->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmContact->title = 'string';
+    $request->crmContact->title = '<value>';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-24T18:29:57.646Z');
-    $request->crmContact->userId = 'string';
-    $request->connectionId = 'string';;
+    $request->crmContact->userId = '<value>';
+    $request->connectionId = '<value>';;
 
     $response = $sdk->contact->createCrmContact($request);
 
@@ -215,17 +215,17 @@ try {
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
-    $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'string';
+    $request->ucContact->id = '<id>';
+    $request->ucContact->name = '<value>';
     $request->ucContact->raw = [
-        'enhance' => 'string',
+        'enhance' => '<value>',
     ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
-    $request->ucContact->title = 'string';
+    $request->ucContact->title = '<value>';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-27T10:35:00.674Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->contact->createUcContact($request);
 
@@ -272,11 +272,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingContactRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->contact->getAccountingContact($request);
 
@@ -323,11 +323,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetCrmContactRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->contact->getCrmContact($request);
 
@@ -374,11 +374,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUcContactRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->contact->getUcContact($request);
 
@@ -425,16 +425,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingContactsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 4596.32;
     $request->offset = 8881.9;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
-    $request->type = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->type = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T14:00:38.736Z');;
 
     $response = $sdk->contact->listAccountingContacts($request);
@@ -482,19 +482,19 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCrmContactsRequest();
-    $request->companyId = 'string';
-    $request->connectionId = 'string';
-    $request->dealId = 'string';
+    $request->companyId = '<value>';
+    $request->connectionId = '<value>';
+    $request->dealId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 7110.24;
     $request->offset = 2657.43;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:36:59.401Z');
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->contact->listCrmContacts($request);
 
@@ -541,17 +541,17 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUcContactsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 5333.71;
     $request->offset = 7775.9;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-26T05:35:01.805Z');
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->contact->listUcContacts($request);
 
@@ -600,44 +600,44 @@ try {
         $request = new Operations\PatchAccountingContactRequest();
     $request->accountingContact = new Shared\AccountingContact();
     $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
-    $request->accountingContact->billingAddress->address1 = 'string';
-    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->address1 = '<value>';
+    $request->accountingContact->billingAddress->address2 = '<value>';
     $request->accountingContact->billingAddress->city = 'Sylvestermouth';
     $request->accountingContact->billingAddress->country = 'Norfolk Island';
     $request->accountingContact->billingAddress->countryCode = 'BN';
     $request->accountingContact->billingAddress->postalCode = '34531-3519';
-    $request->accountingContact->billingAddress->region = 'string';
-    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->billingAddress->region = '<value>';
+    $request->accountingContact->billingAddress->regionCode = '<value>';
     $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-14T18:48:39.369Z');
     $request->accountingContact->currency = 'Singapore Dollar';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->id = '<id>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
-    $request->accountingContact->name = 'string';
+    $request->accountingContact->name = '<value>';
     $request->accountingContact->raw = [
-        'bypass' => 'string',
+        'bypass' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
-    $request->accountingContact->shippingAddress->address1 = 'string';
-    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->address1 = '<value>';
+    $request->accountingContact->shippingAddress->address2 = '<value>';
     $request->accountingContact->shippingAddress->city = 'Koeppfield';
     $request->accountingContact->shippingAddress->country = 'Netherlands Antilles';
     $request->accountingContact->shippingAddress->countryCode = 'NE';
     $request->accountingContact->shippingAddress->postalCode = '36791';
-    $request->accountingContact->shippingAddress->region = 'string';
-    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->shippingAddress->region = '<value>';
+    $request->accountingContact->shippingAddress->regionCode = '<value>';
     $request->accountingContact->taxExemption = Shared\TaxExemption::TribalGov;
-    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
     $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T21:20:14.932Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->patchAccountingContact($request);
 
@@ -686,38 +686,38 @@ try {
         $request = new Operations\PatchCrmContactRequest();
     $request->crmContact = new Shared\CrmContact();
     $request->crmContact->address = new Shared\PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'string';
-    $request->crmContact->address->address2 = 'string';
+    $request->crmContact->address->address1 = '<value>';
+    $request->crmContact->address->address2 = '<value>';
     $request->crmContact->address->city = 'North Anne';
     $request->crmContact->address->country = 'Puerto Rico';
     $request->crmContact->address->countryCode = 'GD';
     $request->crmContact->address->postalCode = '31015';
-    $request->crmContact->address->region = 'string';
-    $request->crmContact->address->regionCode = 'string';
+    $request->crmContact->address->region = '<value>';
+    $request->crmContact->address->regionCode = '<value>';
     $request->crmContact->company = 'Goyette - Schultz';
     $request->crmContact->companyIds = [
-        'string',
+        '<value>',
     ];
     $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-12T00:15:47.150Z');
     $request->crmContact->dealIds = [
-        'string',
+        '<value>',
     ];
     $request->crmContact->emails = [
         new Shared\CrmEmail(),
     ];
-    $request->crmContact->id = '<ID>';
-    $request->crmContact->name = 'string';
+    $request->crmContact->id = '<id>';
+    $request->crmContact->name = '<value>';
     $request->crmContact->raw = [
-        'syndicate' => 'string',
+        'syndicate' => '<value>',
     ];
     $request->crmContact->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmContact->title = 'string';
+    $request->crmContact->title = '<value>';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T14:32:12.826Z');
-    $request->crmContact->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->crmContact->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->patchCrmContact($request);
 
@@ -770,18 +770,18 @@ try {
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
-    $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'string';
+    $request->ucContact->id = '<id>';
+    $request->ucContact->name = '<value>';
     $request->ucContact->raw = [
-        'after' => 'string',
+        'after' => '<value>',
     ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
-    $request->ucContact->title = 'string';
+    $request->ucContact->title = '<value>';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T22:08:30.034Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->patchUcContact($request);
 
@@ -828,8 +828,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingContactRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->removeAccountingContact($request);
 
@@ -876,8 +876,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveCrmContactRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->removeCrmContact($request);
 
@@ -924,8 +924,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveUcContactRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->removeUcContact($request);
 
@@ -974,44 +974,44 @@ try {
         $request = new Operations\UpdateAccountingContactRequest();
     $request->accountingContact = new Shared\AccountingContact();
     $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
-    $request->accountingContact->billingAddress->address1 = 'string';
-    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->address1 = '<value>';
+    $request->accountingContact->billingAddress->address2 = '<value>';
     $request->accountingContact->billingAddress->city = 'Mayaguez';
     $request->accountingContact->billingAddress->country = 'Ghana';
     $request->accountingContact->billingAddress->countryCode = 'JE';
     $request->accountingContact->billingAddress->postalCode = '16521-4269';
-    $request->accountingContact->billingAddress->region = 'string';
-    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->billingAddress->region = '<value>';
+    $request->accountingContact->billingAddress->regionCode = '<value>';
     $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T04:27:23.372Z');
     $request->accountingContact->currency = 'European Monetary Unit (E.M.U.-6)';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->id = '<id>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
-    $request->accountingContact->name = 'string';
+    $request->accountingContact->name = '<value>';
     $request->accountingContact->raw = [
-        'salmon' => 'string',
+        'salmon' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
-    $request->accountingContact->shippingAddress->address1 = 'string';
-    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->address1 = '<value>';
+    $request->accountingContact->shippingAddress->address2 = '<value>';
     $request->accountingContact->shippingAddress->city = 'Lelahport';
     $request->accountingContact->shippingAddress->country = 'Dominica';
     $request->accountingContact->shippingAddress->countryCode = 'SJ';
     $request->accountingContact->shippingAddress->postalCode = '63899';
-    $request->accountingContact->shippingAddress->region = 'string';
-    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->shippingAddress->region = '<value>';
+    $request->accountingContact->shippingAddress->regionCode = '<value>';
     $request->accountingContact->taxExemption = Shared\TaxExemption::FederalGov;
-    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
     $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-28T03:42:59.577Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->updateAccountingContact($request);
 
@@ -1060,38 +1060,38 @@ try {
         $request = new Operations\UpdateCrmContactRequest();
     $request->crmContact = new Shared\CrmContact();
     $request->crmContact->address = new Shared\PropertyCrmContactAddress();
-    $request->crmContact->address->address1 = 'string';
-    $request->crmContact->address->address2 = 'string';
+    $request->crmContact->address->address1 = '<value>';
+    $request->crmContact->address->address2 = '<value>';
     $request->crmContact->address->city = 'Fort Carlee';
     $request->crmContact->address->country = 'Greenland';
     $request->crmContact->address->countryCode = 'AQ';
     $request->crmContact->address->postalCode = '88650';
-    $request->crmContact->address->region = 'string';
-    $request->crmContact->address->regionCode = 'string';
+    $request->crmContact->address->region = '<value>';
+    $request->crmContact->address->regionCode = '<value>';
     $request->crmContact->company = 'Hoeger Group';
     $request->crmContact->companyIds = [
-        'string',
+        '<value>',
     ];
     $request->crmContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-12T12:31:59.837Z');
     $request->crmContact->dealIds = [
-        'string',
+        '<value>',
     ];
     $request->crmContact->emails = [
         new Shared\CrmEmail(),
     ];
-    $request->crmContact->id = '<ID>';
-    $request->crmContact->name = 'string';
+    $request->crmContact->id = '<id>';
+    $request->crmContact->name = '<value>';
     $request->crmContact->raw = [
-        'quantify' => 'string',
+        'quantify' => '<value>',
     ];
     $request->crmContact->telephones = [
         new Shared\CrmTelephone(),
     ];
-    $request->crmContact->title = 'string';
+    $request->crmContact->title = '<value>';
     $request->crmContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-31T22:36:38.040Z');
-    $request->crmContact->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->crmContact->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->updateCrmContact($request);
 
@@ -1144,18 +1144,18 @@ try {
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
-    $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'string';
+    $request->ucContact->id = '<id>';
+    $request->ucContact->name = '<value>';
     $request->ucContact->raw = [
-        'Convertible' => 'string',
+        'Convertible' => '<value>',
     ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
-    $request->ucContact->title = 'string';
+    $request->ucContact->title = '<value>';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-11T10:56:34.889Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->contact->updateUcContact($request);
 

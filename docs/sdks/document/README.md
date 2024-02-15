@@ -34,21 +34,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
-    $request->atsDocument->applicationId = 'string';
-    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->applicationId = '<value>';
+    $request->atsDocument->candidateId = '<value>';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-25T01:00:46.478Z');
-    $request->atsDocument->documentData = 'string';
-    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->documentData = '<value>';
+    $request->atsDocument->documentUrl = '<value>';
     $request->atsDocument->filename = 'mouse_per_missouri.mp4';
-    $request->atsDocument->id = '<ID>';
-    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->id = '<id>';
+    $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'empowering' => 'string',
+        'empowering' => '<value>',
     ];
     $request->atsDocument->type = Shared\AtsDocumentType::CoverLetter;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T09:03:14.368Z');
-    $request->atsDocument->userId = 'string';
-    $request->connectionId = 'string';;
+    $request->atsDocument->userId = '<value>';
+    $request->connectionId = '<value>';;
 
     $response = $sdk->document->createAtsDocument($request);
 
@@ -95,11 +95,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsDocumentRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->document->getAtsDocument($request);
 
@@ -146,16 +146,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsDocumentsRequest();
-    $request->applicationId = 'string';
-    $request->connectionId = 'string';
+    $request->applicationId = '<value>';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 9635.37;
     $request->offset = 8402.77;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T00:55:54.895Z');;
 
     $response = $sdk->document->listAtsDocuments($request);
@@ -204,22 +204,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
-    $request->atsDocument->applicationId = 'string';
-    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->applicationId = '<value>';
+    $request->atsDocument->candidateId = '<value>';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T11:33:08.084Z');
-    $request->atsDocument->documentData = 'string';
-    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->documentData = '<value>';
+    $request->atsDocument->documentUrl = '<value>';
     $request->atsDocument->filename = 'future_underpin.mp4v';
-    $request->atsDocument->id = '<ID>';
-    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->id = '<id>';
+    $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'ipsam' => 'string',
+        'ipsam' => '<value>',
     ];
     $request->atsDocument->type = Shared\AtsDocumentType::Other;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-04T16:17:46.270Z');
-    $request->atsDocument->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->atsDocument->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->document->patchAtsDocument($request);
 
@@ -266,8 +266,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsDocumentRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->document->removeAtsDocument($request);
 
@@ -315,22 +315,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
-    $request->atsDocument->applicationId = 'string';
-    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->applicationId = '<value>';
+    $request->atsDocument->candidateId = '<value>';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-05T17:05:49.106Z');
-    $request->atsDocument->documentData = 'string';
-    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->documentData = '<value>';
+    $request->atsDocument->documentUrl = '<value>';
     $request->atsDocument->filename = 'unbranded_reprehenderit.jpg';
-    $request->atsDocument->id = '<ID>';
-    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->id = '<id>';
+    $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'GB' => 'string',
+        'GB' => '<value>',
     ];
     $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-21T13:20:57.007Z');
-    $request->atsDocument->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->atsDocument->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->document->updateAtsDocument($request);
 

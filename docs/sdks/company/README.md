@@ -38,46 +38,46 @@ try {
         $request = new Operations\CreateCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'string';
-    $request->crmCompany->address->address2 = 'string';
+    $request->crmCompany->address->address1 = '<value>';
+    $request->crmCompany->address->address2 = '<value>';
     $request->crmCompany->address->city = 'Joanieworth';
     $request->crmCompany->address->country = 'Brazil';
     $request->crmCompany->address->countryCode = 'CW';
     $request->crmCompany->address->postalCode = '39571';
-    $request->crmCompany->address->region = 'string';
-    $request->crmCompany->address->regionCode = 'string';
+    $request->crmCompany->address->region = '<value>';
+    $request->crmCompany->address->regionCode = '<value>';
     $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-03T10:04:12.712Z');
     $request->crmCompany->dealIds = [
-        'string',
+        '<value>',
     ];
     $request->crmCompany->description = 'Pre-emptive responsive task-force';
     $request->crmCompany->emails = [
         new Shared\CrmEmail(),
     ];
     $request->crmCompany->employees = 4175.89;
-    $request->crmCompany->id = '<ID>';
-    $request->crmCompany->industry = 'string';
+    $request->crmCompany->id = '<id>';
+    $request->crmCompany->industry = '<value>';
     $request->crmCompany->isActive = false;
     $request->crmCompany->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->crmCompany->name = 'string';
+    $request->crmCompany->name = '<value>';
     $request->crmCompany->raw = [
-        'payment' => 'string',
+        'payment' => '<value>',
     ];
     $request->crmCompany->tags = [
-        'string',
+        '<value>',
     ];
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'Africa/Johannesburg';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-19T06:50:49.294Z');
-    $request->crmCompany->userId = 'string';
+    $request->crmCompany->userId = '<value>';
     $request->crmCompany->websites = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->company->createCrmCompany($request);
 
@@ -124,11 +124,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsCompanyRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->company->getAtsCompany($request);
 
@@ -175,11 +175,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetCrmCompanyRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->company->getCrmCompany($request);
 
@@ -226,15 +226,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsCompaniesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 6933.84;
     $request->offset = 7946.52;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T21:39:38.971Z');;
 
     $response = $sdk->company->listAtsCompanies($request);
@@ -282,19 +282,19 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCrmCompaniesRequest();
-    $request->connectionId = 'string';
-    $request->contactId = 'string';
-    $request->dealId = 'string';
+    $request->connectionId = '<value>';
+    $request->contactId = '<value>';
+    $request->dealId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 9883.97;
     $request->offset = 5913.88;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->company->listCrmCompanies($request);
 
@@ -341,9 +341,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListEnrichCompaniesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->domain = 'dismal-cornmeal.org';
-    $request->name = 'string';;
+    $request->name = '<value>';;
 
     $response = $sdk->company->listEnrichCompanies($request);
 
@@ -392,47 +392,47 @@ try {
         $request = new Operations\PatchCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'string';
-    $request->crmCompany->address->address2 = 'string';
+    $request->crmCompany->address->address1 = '<value>';
+    $request->crmCompany->address->address2 = '<value>';
     $request->crmCompany->address->city = 'Rempelchester';
     $request->crmCompany->address->country = 'Christmas Island';
     $request->crmCompany->address->countryCode = 'LA';
     $request->crmCompany->address->postalCode = '53644';
-    $request->crmCompany->address->region = 'string';
-    $request->crmCompany->address->regionCode = 'string';
+    $request->crmCompany->address->region = '<value>';
+    $request->crmCompany->address->regionCode = '<value>';
     $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-19T16:53:30.758Z');
     $request->crmCompany->dealIds = [
-        'string',
+        '<value>',
     ];
     $request->crmCompany->description = 'Diverse mission-critical project';
     $request->crmCompany->emails = [
         new Shared\CrmEmail(),
     ];
     $request->crmCompany->employees = 4128.78;
-    $request->crmCompany->id = '<ID>';
-    $request->crmCompany->industry = 'string';
+    $request->crmCompany->id = '<id>';
+    $request->crmCompany->industry = '<value>';
     $request->crmCompany->isActive = false;
     $request->crmCompany->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->crmCompany->name = 'string';
+    $request->crmCompany->name = '<value>';
     $request->crmCompany->raw = [
-        'Cloned' => 'string',
+        'Cloned' => '<value>',
     ];
     $request->crmCompany->tags = [
-        'string',
+        '<value>',
     ];
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'America/Regina';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-28T13:26:17.184Z');
-    $request->crmCompany->userId = 'string';
+    $request->crmCompany->userId = '<value>';
     $request->crmCompany->websites = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->company->patchCrmCompany($request);
 
@@ -479,8 +479,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveCrmCompanyRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->company->removeCrmCompany($request);
 
@@ -529,47 +529,47 @@ try {
         $request = new Operations\UpdateCrmCompanyRequest();
     $request->crmCompany = new Shared\CrmCompany();
     $request->crmCompany->address = new Shared\PropertyCrmCompanyAddress();
-    $request->crmCompany->address->address1 = 'string';
-    $request->crmCompany->address->address2 = 'string';
+    $request->crmCompany->address->address1 = '<value>';
+    $request->crmCompany->address->address2 = '<value>';
     $request->crmCompany->address->city = 'Margeshire';
     $request->crmCompany->address->country = 'Bahrain';
     $request->crmCompany->address->countryCode = 'WS';
     $request->crmCompany->address->postalCode = '27563';
-    $request->crmCompany->address->region = 'string';
-    $request->crmCompany->address->regionCode = 'string';
+    $request->crmCompany->address->region = '<value>';
+    $request->crmCompany->address->regionCode = '<value>';
     $request->crmCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-19T10:10:37.376Z');
     $request->crmCompany->dealIds = [
-        'string',
+        '<value>',
     ];
     $request->crmCompany->description = 'Future-proofed zero defect instruction set';
     $request->crmCompany->emails = [
         new Shared\CrmEmail(),
     ];
     $request->crmCompany->employees = 1100.41;
-    $request->crmCompany->id = '<ID>';
-    $request->crmCompany->industry = 'string';
+    $request->crmCompany->id = '<id>';
+    $request->crmCompany->industry = '<value>';
     $request->crmCompany->isActive = false;
     $request->crmCompany->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->crmCompany->name = 'string';
+    $request->crmCompany->name = '<value>';
     $request->crmCompany->raw = [
-        'quantify' => 'string',
+        'quantify' => '<value>',
     ];
     $request->crmCompany->tags = [
-        'string',
+        '<value>',
     ];
     $request->crmCompany->telephones = [
         new Shared\CrmTelephone(),
     ];
     $request->crmCompany->timezone = 'Europe/Ljubljana';
     $request->crmCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-16T08:11:17.577Z');
-    $request->crmCompany->userId = 'string';
+    $request->crmCompany->userId = '<value>';
     $request->crmCompany->websites = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->company->updateCrmCompany($request);
 

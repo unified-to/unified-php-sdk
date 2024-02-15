@@ -30,19 +30,19 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedIntegrationAuthRequest();
-    $request->env = 'string';
-    $request->externalXref = 'string';
-    $request->failureRedirect = 'string';
-    $request->integrationType = 'string';
-    $request->lang = 'string';
+    $request->env = '<value>';
+    $request->externalXref = '<value>';
+    $request->failureRedirect = '<value>';
+    $request->integrationType = '<value>';
+    $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
         Operations\Scopes::HrisEmployeeWrite,
     ];
-    $request->state = 'string';
-    $request->subdomain = 'string';
-    $request->successRedirect = 'string';
-    $request->workspaceId = 'string';;
+    $request->state = 'New Jersey';
+    $request->subdomain = '<value>';
+    $request->successRedirect = '<value>';
+    $request->workspaceId = '<value>';;
 
     $response = $sdk->integration->getUnifiedIntegrationAuth($request);
 
@@ -93,12 +93,12 @@ try {
     $request->categories = [
         Operations\QueryParamCategories::Accounting,
     ];
-    $request->env = 'string';
+    $request->env = '<value>';
     $request->limit = 9072.99;
     $request->offset = 5948.93;
     $request->summary = false;
-    $request->updatedGte = 'string';
-    $request->workspaceId = 'string';;
+    $request->updatedGte = '<value>';
+    $request->workspaceId = '<value>';;
 
     $response = $sdk->integration->listUnifiedIntegrationWorkspaces($request);
 
@@ -149,14 +149,14 @@ try {
     $request->categories = [
         Operations\ListUnifiedIntegrationsQueryParamCategories::Crm,
     ];
-    $request->env = 'string';
+    $request->env = '<value>';
     $request->limit = 7382.58;
     $request->offset = 353.99;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->summary = false;
-    $request->type = 'string';
-    $request->updatedGte = 'string';;
+    $request->type = '<value>';
+    $request->updatedGte = '<value>';;
 
     $response = $sdk->integration->listUnifiedIntegrations($request);
 

@@ -35,43 +35,44 @@ try {
         $request = new Operations\CreateAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'string';
-    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->address1 = '<value>';
+    $request->atsCandidate->address->address2 = '<value>';
     $request->atsCandidate->address->city = 'South Hill';
     $request->atsCandidate->address->country = 'Denmark';
     $request->atsCandidate->address->countryCode = 'KM';
     $request->atsCandidate->address->postalCode = '72991-5163';
-    $request->atsCandidate->address->region = 'string';
-    $request->atsCandidate->address->regionCode = 'string';
-    $request->atsCandidate->companyId = 'string';
+    $request->atsCandidate->address->region = '<value>';
+    $request->atsCandidate->address->regionCode = '<value>';
+    $request->atsCandidate->companyId = '<value>';
     $request->atsCandidate->companyName = 'Pollich - Lubowitz';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-06T00:47:39.352Z');
+    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T09:25:00.753Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'string';
-    $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->id = '<id>';
+    $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->atsCandidate->name = 'string';
-    $request->atsCandidate->origin = Shared\Origin::Referred;
+    $request->atsCandidate->name = '<value>';
+    $request->atsCandidate->origin = Shared\Origin::Sourced;
     $request->atsCandidate->raw = [
-        'Gasoline' => 'string',
+        'Legacy' => '<value>',
     ];
     $request->atsCandidate->sources = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->tags = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->telephones = [
         new Shared\AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-10T16:56:06.147Z');
-    $request->connectionId = 'string';;
+    $request->atsCandidate->title = '<value>';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T06:32:21.998Z');
+    $request->connectionId = '<value>';;
 
     $response = $sdk->candidate->createAtsCandidate($request);
 
@@ -118,11 +119,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsCandidateRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->candidate->getAtsCandidate($request);
 
@@ -169,15 +170,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsCandidatesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 6384.09;
     $request->offset = 7452.94;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T00:58:25.541Z');;
 
     $response = $sdk->candidate->listAtsCandidates($request);
@@ -227,44 +228,45 @@ try {
         $request = new Operations\PatchAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'string';
-    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->address1 = '<value>';
+    $request->atsCandidate->address->address2 = '<value>';
     $request->atsCandidate->address->city = 'Fort Bridget';
     $request->atsCandidate->address->country = 'Sri Lanka';
     $request->atsCandidate->address->countryCode = 'GI';
     $request->atsCandidate->address->postalCode = '46054';
-    $request->atsCandidate->address->region = 'string';
-    $request->atsCandidate->address->regionCode = 'string';
-    $request->atsCandidate->companyId = 'string';
+    $request->atsCandidate->address->region = '<value>';
+    $request->atsCandidate->address->regionCode = '<value>';
+    $request->atsCandidate->companyId = '<value>';
     $request->atsCandidate->companyName = 'Donnelly - Bartell';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-07T04:20:35.612Z');
+    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-20T03:10:26.424Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'string';
-    $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->id = '<id>';
+    $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->atsCandidate->name = 'string';
-    $request->atsCandidate->origin = Shared\Origin::Referred;
+    $request->atsCandidate->name = '<value>';
+    $request->atsCandidate->origin = Shared\Origin::Applied;
     $request->atsCandidate->raw = [
-        'generate' => 'string',
+        'Van' => '<value>',
     ];
     $request->atsCandidate->sources = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->tags = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->telephones = [
         new Shared\AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-12T20:46:24.084Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->atsCandidate->title = '<value>';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-30T15:05:49.494Z');
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->candidate->patchAtsCandidate($request);
 
@@ -311,8 +313,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsCandidateRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->candidate->removeAtsCandidate($request);
 
@@ -361,44 +363,45 @@ try {
         $request = new Operations\UpdateAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'string';
-    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->address1 = '<value>';
+    $request->atsCandidate->address->address2 = '<value>';
     $request->atsCandidate->address->city = 'Hintzborough';
     $request->atsCandidate->address->country = 'Afghanistan';
     $request->atsCandidate->address->countryCode = 'TF';
     $request->atsCandidate->address->postalCode = '39423';
-    $request->atsCandidate->address->region = 'string';
-    $request->atsCandidate->address->regionCode = 'string';
-    $request->atsCandidate->companyId = 'string';
+    $request->atsCandidate->address->region = '<value>';
+    $request->atsCandidate->address->regionCode = '<value>';
+    $request->atsCandidate->companyId = '<value>';
     $request->atsCandidate->companyName = 'O\'Reilly Inc';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T03:55:05.691Z');
+    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T17:01:22.026Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'string';
-    $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->id = '<id>';
+    $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->atsCandidate->name = 'string';
-    $request->atsCandidate->origin = Shared\Origin::Referred;
+    $request->atsCandidate->name = '<value>';
+    $request->atsCandidate->origin = Shared\Origin::Agency;
     $request->atsCandidate->raw = [
-        'lime' => 'string',
+        'Potassium' => '<value>',
     ];
     $request->atsCandidate->sources = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->tags = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->telephones = [
         new Shared\AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-18T10:50:29.862Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->atsCandidate->title = '<value>';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-19T09:22:29.995Z');
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->candidate->updateAtsCandidate($request);
 

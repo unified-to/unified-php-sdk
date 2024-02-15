@@ -34,24 +34,24 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
-    $request->atsInterview->applicationId = 'string';
-    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->applicationId = '<value>';
+    $request->atsInterview->candidateId = '<value>';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-11T04:08:22.567Z');
     $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T08:47:56.138Z');
-    $request->atsInterview->externalEventXref = 'string';
-    $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'string';
-    $request->atsInterview->location = 'string';
+    $request->atsInterview->externalEventXref = '<value>';
+    $request->atsInterview->id = '<id>';
+    $request->atsInterview->jobId = '<value>';
+    $request->atsInterview->location = '<value>';
     $request->atsInterview->raw = [
-        'Metrics' => 'string',
+        'Metrics' => '<value>',
     ];
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-07T15:15:23.855Z');
     $request->atsInterview->status = Shared\AtsInterviewStatus::AwaitingFeedback;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-20T08:44:17.279Z');
     $request->atsInterview->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->interview->createAtsInterview($request);
 
@@ -98,11 +98,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsInterviewRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->interview->getAtsInterview($request);
 
@@ -149,16 +149,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsInterviewsRequest();
-    $request->applicationId = 'string';
-    $request->connectionId = 'string';
+    $request->applicationId = '<value>';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 2562.12;
     $request->offset = 1185.02;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-28T15:15:00.508Z');;
 
     $response = $sdk->interview->listAtsInterviews($request);
@@ -207,25 +207,25 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
-    $request->atsInterview->applicationId = 'string';
-    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->applicationId = '<value>';
+    $request->atsInterview->candidateId = '<value>';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-11T19:09:34.526Z');
     $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-28T22:25:51.616Z');
-    $request->atsInterview->externalEventXref = 'string';
-    $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'string';
-    $request->atsInterview->location = 'string';
+    $request->atsInterview->externalEventXref = '<value>';
+    $request->atsInterview->id = '<id>';
+    $request->atsInterview->jobId = '<value>';
+    $request->atsInterview->location = '<value>';
     $request->atsInterview->raw = [
-        'Handmade' => 'string',
+        'Handmade' => '<value>',
     ];
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-18T02:52:45.725Z');
     $request->atsInterview->status = Shared\AtsInterviewStatus::Scheduled;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-05T22:15:01.656Z');
     $request->atsInterview->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->interview->patchAtsInterview($request);
 
@@ -272,8 +272,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsInterviewRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->interview->removeAtsInterview($request);
 
@@ -321,25 +321,25 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
-    $request->atsInterview->applicationId = 'string';
-    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->applicationId = '<value>';
+    $request->atsInterview->candidateId = '<value>';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-06T05:22:44.534Z');
     $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-29T20:29:22.648Z');
-    $request->atsInterview->externalEventXref = 'string';
-    $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'string';
-    $request->atsInterview->location = 'string';
+    $request->atsInterview->externalEventXref = '<value>';
+    $request->atsInterview->id = '<id>';
+    $request->atsInterview->jobId = '<value>';
+    $request->atsInterview->location = '<value>';
     $request->atsInterview->raw = [
-        'maroon' => 'string',
+        'maroon' => '<value>',
     ];
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-01T17:04:47.962Z');
     $request->atsInterview->status = Shared\AtsInterviewStatus::Complete;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-27T22:37:40.818Z');
     $request->atsInterview->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->interview->updateAtsInterview($request);
 

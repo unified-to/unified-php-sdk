@@ -38,19 +38,19 @@ try {
     $request->ticketingCustomer->emails = [
         new Shared\TicketingEmail(),
     ];
-    $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'string';
+    $request->ticketingCustomer->id = '<id>';
+    $request->ticketingCustomer->name = '<value>';
     $request->ticketingCustomer->raw = [
-        'Investment' => 'string',
+        'Investment' => '<value>',
     ];
     $request->ticketingCustomer->tags = [
-        'string',
+        '<value>',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-12T01:01:03.120Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->customer->createTicketingCustomer($request);
 
@@ -97,11 +97,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetTicketingCustomerRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->customer->getTicketingCustomer($request);
 
@@ -148,15 +148,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListTicketingCustomersRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 3917.11;
     $request->offset = 274.81;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-05T19:45:16.674Z');;
 
     $response = $sdk->customer->listTicketingCustomers($request);
@@ -209,20 +209,20 @@ try {
     $request->ticketingCustomer->emails = [
         new Shared\TicketingEmail(),
     ];
-    $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'string';
+    $request->ticketingCustomer->id = '<id>';
+    $request->ticketingCustomer->name = '<value>';
     $request->ticketingCustomer->raw = [
-        'Hybrid' => 'string',
+        'Hybrid' => '<value>',
     ];
     $request->ticketingCustomer->tags = [
-        'string',
+        '<value>',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T09:16:54.349Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->customer->patchTicketingCustomer($request);
 
@@ -269,8 +269,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveTicketingCustomerRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->customer->removeTicketingCustomer($request);
 
@@ -322,20 +322,20 @@ try {
     $request->ticketingCustomer->emails = [
         new Shared\TicketingEmail(),
     ];
-    $request->ticketingCustomer->id = '<ID>';
-    $request->ticketingCustomer->name = 'string';
+    $request->ticketingCustomer->id = '<id>';
+    $request->ticketingCustomer->name = '<value>';
     $request->ticketingCustomer->raw = [
-        'Zinc' => 'string',
+        'Zinc' => '<value>',
     ];
     $request->ticketingCustomer->tags = [
-        'string',
+        '<value>',
     ];
     $request->ticketingCustomer->telephones = [
         new Shared\TicketingTelephone(),
     ];
     $request->ticketingCustomer->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-29T08:49:38.630Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->customer->updateTicketingCustomer($request);
 

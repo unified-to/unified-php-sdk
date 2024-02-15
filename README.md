@@ -45,13 +45,13 @@ try {
         '2023-09-02T22:12:31.771Z',
     );
     $request->accountingAccount->currency = 'Saint Helena Pound';
-    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->customerDefinedCode = '<value>';
     $request->accountingAccount->description = 'Cross-group zero defect task-force';
-    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->id = '<id>';
     $request->accountingAccount->isPayable = false;
-    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->name = '<value>';
     $request->accountingAccount->raw = [
-        'Ruble' => 'string',
+        'Ruble' => '<value>',
     ];
     $request->accountingAccount->status = Shared\Status::Active;
     $request->accountingAccount->type = Shared\Type::FixedAsset;
@@ -59,7 +59,7 @@ try {
         'Y-m-d\TH:i:s+',
         '2024-10-01T23:54:12.882Z',
     );
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
 
     $response = $sdk->accounting->createAccountingAccount($request);
 

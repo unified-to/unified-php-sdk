@@ -35,16 +35,16 @@ try {
         $request = new Operations\CreateCommerceInventoryRequest();
     $request->commerceInventory = new Shared\CommerceInventory();
     $request->commerceInventory->available = 5165.08;
-    $request->commerceInventory->id = '<ID>';
-    $request->commerceInventory->itemId = 'string';
-    $request->commerceInventory->itemOptionId = 'string';
-    $request->commerceInventory->itemVariantId = 'string';
-    $request->commerceInventory->locationId = 'string';
+    $request->commerceInventory->id = '<id>';
+    $request->commerceInventory->itemId = '<value>';
+    $request->commerceInventory->itemOptionId = '<value>';
+    $request->commerceInventory->itemVariantId = '<value>';
+    $request->commerceInventory->locationId = '<value>';
     $request->commerceInventory->raw = [
-        'Officer' => 'string',
+        'Officer' => '<value>',
     ];
     $request->commerceInventory->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-19T06:57:05.921Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->inventory->createCommerceInventory($request);
 
@@ -91,11 +91,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetCommerceInventoryRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->inventory->getCommerceInventory($request);
 
@@ -142,17 +142,17 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCommerceInventoriesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->itemId = 'string';
+    $request->itemId = '<value>';
     $request->limit = 2481.16;
-    $request->locationId = 'string';
+    $request->locationId = '<value>';
     $request->offset = 9476.38;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-15T22:28:16.925Z');;
 
     $response = $sdk->inventory->listCommerceInventories($request);
@@ -202,17 +202,17 @@ try {
         $request = new Operations\PatchCommerceInventoryRequest();
     $request->commerceInventory = new Shared\CommerceInventory();
     $request->commerceInventory->available = 615.23;
-    $request->commerceInventory->id = '<ID>';
-    $request->commerceInventory->itemId = 'string';
-    $request->commerceInventory->itemOptionId = 'string';
-    $request->commerceInventory->itemVariantId = 'string';
-    $request->commerceInventory->locationId = 'string';
+    $request->commerceInventory->id = '<id>';
+    $request->commerceInventory->itemId = '<value>';
+    $request->commerceInventory->itemOptionId = '<value>';
+    $request->commerceInventory->itemVariantId = '<value>';
+    $request->commerceInventory->locationId = '<value>';
     $request->commerceInventory->raw = [
-        'Modern' => 'string',
+        'Modern' => '<value>',
     ];
     $request->commerceInventory->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-27T05:22:53.251Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->inventory->patchCommerceInventory($request);
 
@@ -259,8 +259,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveCommerceInventoryRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->inventory->removeCommerceInventory($request);
 
@@ -309,17 +309,17 @@ try {
         $request = new Operations\UpdateCommerceInventoryRequest();
     $request->commerceInventory = new Shared\CommerceInventory();
     $request->commerceInventory->available = 9360.02;
-    $request->commerceInventory->id = '<ID>';
-    $request->commerceInventory->itemId = 'string';
-    $request->commerceInventory->itemOptionId = 'string';
-    $request->commerceInventory->itemVariantId = 'string';
-    $request->commerceInventory->locationId = 'string';
+    $request->commerceInventory->id = '<id>';
+    $request->commerceInventory->itemId = '<value>';
+    $request->commerceInventory->itemOptionId = '<value>';
+    $request->commerceInventory->itemVariantId = '<value>';
+    $request->commerceInventory->locationId = '<value>';
     $request->commerceInventory->raw = [
-        'wavy' => 'string',
+        'wavy' => '<value>',
     ];
     $request->commerceInventory->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-08T14:12:09.565Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->inventory->updateCommerceInventory($request);
 

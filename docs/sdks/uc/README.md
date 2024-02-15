@@ -40,17 +40,17 @@ try {
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
-    $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'string';
+    $request->ucContact->id = '<id>';
+    $request->ucContact->name = '<value>';
     $request->ucContact->raw = [
-        'enhance' => 'string',
+        'enhance' => '<value>',
     ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
-    $request->ucContact->title = 'string';
+    $request->ucContact->title = '<value>';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-27T10:35:00.674Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->uc->createUcContact($request);
 
@@ -97,11 +97,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUcContactRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->uc->getUcContact($request);
 
@@ -148,18 +148,18 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUcCallsRequest();
-    $request->connectionId = 'string';
-    $request->contactId = 'string';
+    $request->connectionId = '<value>';
+    $request->contactId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 465.25;
     $request->offset = 4996.09;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-24T23:18:21.548Z');
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->uc->listUcCalls($request);
 
@@ -206,17 +206,17 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUcContactsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 5333.71;
     $request->offset = 7775.9;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-26T05:35:01.805Z');
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->uc->listUcContacts($request);
 
@@ -269,18 +269,18 @@ try {
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
-    $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'string';
+    $request->ucContact->id = '<id>';
+    $request->ucContact->name = '<value>';
     $request->ucContact->raw = [
-        'after' => 'string',
+        'after' => '<value>',
     ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
-    $request->ucContact->title = 'string';
+    $request->ucContact->title = '<value>';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T22:08:30.034Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->uc->patchUcContact($request);
 
@@ -327,8 +327,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveUcContactRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->uc->removeUcContact($request);
 
@@ -381,18 +381,18 @@ try {
     $request->ucContact->emails = [
         new Shared\UcEmail(),
     ];
-    $request->ucContact->id = '<ID>';
-    $request->ucContact->name = 'string';
+    $request->ucContact->id = '<id>';
+    $request->ucContact->name = '<value>';
     $request->ucContact->raw = [
-        'Convertible' => 'string',
+        'Convertible' => '<value>',
     ];
     $request->ucContact->telephones = [
         new Shared\UcTelephone(),
     ];
-    $request->ucContact->title = 'string';
+    $request->ucContact->title = '<value>';
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-11T10:56:34.889Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->uc->updateUcContact($request);
 

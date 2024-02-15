@@ -29,19 +29,19 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedIntegrationAuthRequest();
-    $request->env = 'string';
-    $request->externalXref = 'string';
-    $request->failureRedirect = 'string';
-    $request->integrationType = 'string';
-    $request->lang = 'string';
+    $request->env = '<value>';
+    $request->externalXref = '<value>';
+    $request->failureRedirect = '<value>';
+    $request->integrationType = '<value>';
+    $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
         Operations\Scopes::HrisEmployeeWrite,
     ];
-    $request->state = 'string';
-    $request->subdomain = 'string';
-    $request->successRedirect = 'string';
-    $request->workspaceId = 'string';;
+    $request->state = 'New Jersey';
+    $request->subdomain = '<value>';
+    $request->successRedirect = '<value>';
+    $request->workspaceId = '<value>';;
 
     $response = $sdk->auth->getUnifiedIntegrationAuth($request);
 
@@ -88,13 +88,13 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedIntegrationLoginRequest();
-    $request->env = 'string';
-    $request->failureRedirect = 'string';
-    $request->integrationType = 'string';
+    $request->env = '<value>';
+    $request->failureRedirect = '<value>';
+    $request->integrationType = '<value>';
     $request->redirect = false;
-    $request->state = 'string';
-    $request->successRedirect = 'string';
-    $request->workspaceId = 'string';;
+    $request->state = 'Virginia';
+    $request->successRedirect = '<value>';
+    $request->workspaceId = '<value>';;
 
     $response = $sdk->auth->getUnifiedIntegrationLogin($request);
 

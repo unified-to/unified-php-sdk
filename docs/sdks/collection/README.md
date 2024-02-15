@@ -36,27 +36,27 @@ try {
     $request->commerceCollection = new Shared\CommerceCollection();
     $request->commerceCollection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T12:03:57.982Z');
     $request->commerceCollection->description = 'Team-oriented intermediate interface';
-    $request->commerceCollection->id = '<ID>';
+    $request->commerceCollection->id = '<id>';
     $request->commerceCollection->isActive = false;
     $request->commerceCollection->isFeatured = false;
     $request->commerceCollection->isVisible = false;
     $request->commerceCollection->itemIds = [
-        'string',
+        '<value>',
     ];
     $request->commerceCollection->media = [
         new Shared\CommerceItemMedia(),
     ];
-    $request->commerceCollection->name = 'string';
-    $request->commerceCollection->publicDescription = 'string';
-    $request->commerceCollection->publicName = 'string';
+    $request->commerceCollection->name = '<value>';
+    $request->commerceCollection->publicDescription = '<value>';
+    $request->commerceCollection->publicName = '<value>';
     $request->commerceCollection->raw = [
-        'whoever' => 'string',
+        'whoever' => '<value>',
     ];
     $request->commerceCollection->tags = [
-        'string',
+        '<value>',
     ];
     $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-13T10:39:45.495Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->collection->createCommerceCollection($request);
 
@@ -103,11 +103,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetCommerceCollectionRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->collection->getCommerceCollection($request);
 
@@ -154,15 +154,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCommerceCollectionsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 2972.15;
     $request->offset = 5933.83;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T20:40:35.103Z');;
 
     $response = $sdk->collection->listCommerceCollections($request);
@@ -213,28 +213,28 @@ try {
     $request->commerceCollection = new Shared\CommerceCollection();
     $request->commerceCollection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-27T01:30:16.292Z');
     $request->commerceCollection->description = 'Polarised solution-oriented analyzer';
-    $request->commerceCollection->id = '<ID>';
+    $request->commerceCollection->id = '<id>';
     $request->commerceCollection->isActive = false;
     $request->commerceCollection->isFeatured = false;
     $request->commerceCollection->isVisible = false;
     $request->commerceCollection->itemIds = [
-        'string',
+        '<value>',
     ];
     $request->commerceCollection->media = [
         new Shared\CommerceItemMedia(),
     ];
-    $request->commerceCollection->name = 'string';
-    $request->commerceCollection->publicDescription = 'string';
-    $request->commerceCollection->publicName = 'string';
+    $request->commerceCollection->name = '<value>';
+    $request->commerceCollection->publicDescription = '<value>';
+    $request->commerceCollection->publicName = '<value>';
     $request->commerceCollection->raw = [
-        'Cheese' => 'string',
+        'Cheese' => '<value>',
     ];
     $request->commerceCollection->tags = [
-        'string',
+        '<value>',
     ];
     $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-29T23:35:48.700Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->collection->patchCommerceCollection($request);
 
@@ -281,8 +281,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveCommerceCollectionRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->collection->removeCommerceCollection($request);
 
@@ -332,28 +332,28 @@ try {
     $request->commerceCollection = new Shared\CommerceCollection();
     $request->commerceCollection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-30T10:24:18.569Z');
     $request->commerceCollection->description = 'Sharable dynamic solution';
-    $request->commerceCollection->id = '<ID>';
+    $request->commerceCollection->id = '<id>';
     $request->commerceCollection->isActive = false;
     $request->commerceCollection->isFeatured = false;
     $request->commerceCollection->isVisible = false;
     $request->commerceCollection->itemIds = [
-        'string',
+        '<value>',
     ];
     $request->commerceCollection->media = [
         new Shared\CommerceItemMedia(),
     ];
-    $request->commerceCollection->name = 'string';
-    $request->commerceCollection->publicDescription = 'string';
-    $request->commerceCollection->publicName = 'string';
+    $request->commerceCollection->name = '<value>';
+    $request->commerceCollection->publicDescription = '<value>';
+    $request->commerceCollection->publicName = '<value>';
     $request->commerceCollection->raw = [
-        'Modern' => 'string',
+        'Modern' => '<value>',
     ];
     $request->commerceCollection->tags = [
-        'string',
+        '<value>',
     ];
     $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-08T04:19:59.358Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->collection->updateCommerceCollection($request);
 

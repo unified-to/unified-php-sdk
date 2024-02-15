@@ -28,13 +28,13 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedIntegrationLoginRequest();
-    $request->env = 'string';
-    $request->failureRedirect = 'string';
-    $request->integrationType = 'string';
+    $request->env = '<value>';
+    $request->failureRedirect = '<value>';
+    $request->integrationType = '<value>';
     $request->redirect = false;
-    $request->state = 'string';
-    $request->successRedirect = 'string';
-    $request->workspaceId = 'string';;
+    $request->state = 'Virginia';
+    $request->successRedirect = '<value>';
+    $request->workspaceId = '<value>';;
 
     $response = $sdk->login->getUnifiedIntegrationLogin($request);
 

@@ -35,27 +35,27 @@ try {
         $request = new Operations\CreateUnifiedWebhookRequest();
     $request->webhook = new Shared\Webhook();
     $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-24T03:05:08.611Z');
-    $request->webhook->connectionId = 'string';
+    $request->webhook->connectionId = '<value>';
     $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T14:50:04.176Z');
-    $request->webhook->environment = 'string';
+    $request->webhook->environment = '<value>';
     $request->webhook->event = Shared\Event::Updated;
-    $request->webhook->fields = 'string';
-    $request->webhook->hookUrl = 'string';
-    $request->webhook->id = '<ID>';
-    $request->webhook->integrationType = 'string';
+    $request->webhook->fields = '<value>';
+    $request->webhook->hookUrl = '<value>';
+    $request->webhook->id = '<id>';
+    $request->webhook->integrationType = '<value>';
     $request->webhook->interval = 6142.55;
     $request->webhook->isHealthy = false;
     $request->webhook->meta = [
-        'Borders' => 'string',
+        'Borders' => '<value>',
     ];
     $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
     $request->webhook->pageMaxLimit = 9505.78;
     $request->webhook->runs = [
-        'string',
+        '<value>',
     ];
     $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-20T21:50:16.199Z');
     $request->webhook->webhookType = Shared\WebhookWebhookType::Virtual;
-    $request->webhook->workspaceId = 'string';
+    $request->webhook->workspaceId = '<value>';
     $request->includeAll = false;;
 
     $response = $sdk->webhook->createUnifiedWebhook($request);
@@ -103,7 +103,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedWebhookRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->webhook->getUnifiedWebhook($request);
 
@@ -150,12 +150,12 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUnifiedWebhooksRequest();
-    $request->env = 'string';
+    $request->env = '<value>';
     $request->limit = 1162.24;
-    $request->object = 'string';
+    $request->object = '<value>';
     $request->offset = 5094.7;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-20T17:03:56.207Z');;
 
     $response = $sdk->webhook->listUnifiedWebhooks($request);
@@ -203,7 +203,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PatchUnifiedWebhookTriggerRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->webhook->patchUnifiedWebhookTrigger($request);
 
@@ -250,7 +250,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveUnifiedWebhookRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->webhook->removeUnifiedWebhook($request);
 
@@ -297,7 +297,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\UpdateUnifiedWebhookTriggerRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->webhook->updateUnifiedWebhookTrigger($request);
 

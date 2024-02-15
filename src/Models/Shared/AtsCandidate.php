@@ -31,6 +31,11 @@ class AtsCandidate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('date_of_birth')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $dateOfBirth = null;
+    
     /**
      * $emails
      * 
@@ -132,6 +137,7 @@ class AtsCandidate
 		$this->companyId = null;
 		$this->companyName = null;
 		$this->createdAt = null;
+		$this->dateOfBirth = null;
 		$this->emails = null;
 		$this->externalId = null;
 		$this->id = null;

@@ -28,18 +28,18 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUcCallsRequest();
-    $request->connectionId = 'string';
-    $request->contactId = 'string';
+    $request->connectionId = '<value>';
+    $request->contactId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 465.25;
     $request->offset = 4996.09;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-24T23:18:21.548Z');
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->call->listUcCalls($request);
 

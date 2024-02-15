@@ -38,36 +38,36 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-14T18:31:06.376Z');
-    $request->atsJob->companyId = 'string';
+    $request->atsJob->companyId = '<value>';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T09:16:07.639Z');
     $request->atsJob->departments = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->description = 'Secured fault-tolerant internet solution';
     $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
-        'string',
+        '<value>',
     ];
-    $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'string';
-    $request->atsJob->name = 'string';
+    $request->atsJob->id = '<id>';
+    $request->atsJob->languageLocale = '<value>';
+    $request->atsJob->name = '<value>';
     $request->atsJob->numberOfOpenings = 6151.12;
     $request->atsJob->publicJobUrls = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->raw = [
-        'wherever' => 'string',
+        'wherever' => '<value>',
     ];
     $request->atsJob->recruiterIds = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-18T02:03:06.250Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->job->createAtsJob($request);
 
@@ -114,11 +114,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsJobRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->job->getAtsJob($request);
 
@@ -165,15 +165,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsJobsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 3958.99;
     $request->offset = 3223.84;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-04T01:14:05.456Z');;
 
     $response = $sdk->job->listAtsJobs($request);
@@ -226,37 +226,37 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T17:44:16.617Z');
-    $request->atsJob->companyId = 'string';
+    $request->atsJob->companyId = '<value>';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T17:48:14.891Z');
     $request->atsJob->departments = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->description = 'Seamless analyzing definition';
     $request->atsJob->employmentType = Shared\EmploymentType::Intern;
     $request->atsJob->hiringManagerIds = [
-        'string',
+        '<value>',
     ];
-    $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'string';
-    $request->atsJob->name = 'string';
+    $request->atsJob->id = '<id>';
+    $request->atsJob->languageLocale = '<value>';
+    $request->atsJob->name = '<value>';
     $request->atsJob->numberOfOpenings = 6182.06;
     $request->atsJob->publicJobUrls = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->raw = [
-        'North' => 'string',
+        'North' => '<value>',
     ];
     $request->atsJob->recruiterIds = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T17:34:59.133Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->job->patchAtsJob($request);
 
@@ -303,8 +303,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsJobRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->job->removeAtsJob($request);
 
@@ -356,37 +356,37 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T07:41:08.131Z');
-    $request->atsJob->companyId = 'string';
+    $request->atsJob->companyId = '<value>';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-28T21:47:53.309Z');
     $request->atsJob->departments = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->description = 'Implemented even-keeled parallelism';
     $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
-        'string',
+        '<value>',
     ];
-    $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'string';
-    $request->atsJob->name = 'string';
+    $request->atsJob->id = '<id>';
+    $request->atsJob->languageLocale = '<value>';
+    $request->atsJob->name = '<value>';
     $request->atsJob->numberOfOpenings = 9080.02;
     $request->atsJob->publicJobUrls = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->raw = [
-        'Direct' => 'string',
+        'Direct' => '<value>',
     ];
     $request->atsJob->recruiterIds = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Draft;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-04T04:44:52.139Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->job->updateAtsJob($request);
 

@@ -33,9 +33,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreatePassthroughRequest();
     $request->requestBody = [
-        'turquoise' => 'string',
+        'turquoise' => '<value>',
     ];
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->path = '/var';;
 
     $response = $sdk->passthrough->createPassthrough($request);
@@ -83,7 +83,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListPassthroughsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->path = '/selinux';;
 
     $response = $sdk->passthrough->listPassthroughs($request);
@@ -132,9 +132,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchPassthroughRequest();
     $request->requestBody = [
-        'brand' => 'string',
+        'brand' => '<value>',
     ];
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->path = '/var/mail';;
 
     $response = $sdk->passthrough->patchPassthrough($request);
@@ -182,7 +182,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemovePassthroughRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->path = '/Applications';;
 
     $response = $sdk->passthrough->removePassthrough($request);
@@ -231,9 +231,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdatePassthroughRequest();
     $request->requestBody = [
-        'Northwest' => 'string',
+        'Northwest' => '<value>',
     ];
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->path = '/var/mail';;
 
     $response = $sdk->passthrough->updatePassthrough($request);

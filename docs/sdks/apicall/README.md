@@ -29,7 +29,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetUnifiedApicallRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->apicall->getUnifiedApicall($request);
 
@@ -76,16 +76,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUnifiedApicallsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T17:47:53.304Z');
-    $request->env = 'string';
+    $request->env = '<value>';
     $request->error = false;
-    $request->externalXref = 'string';
-    $request->integrationType = 'string';
+    $request->externalXref = '<value>';
+    $request->integrationType = '<value>';
     $request->limit = 494.66;
     $request->offset = 5267.27;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-10T02:33:44.403Z');;
 
     $response = $sdk->apicall->listUnifiedApicalls($request);

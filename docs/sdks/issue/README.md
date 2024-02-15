@@ -30,8 +30,8 @@ try {
         $request = new Operations\ListUnifiedIssuesRequest();
     $request->limit = 7069.08;
     $request->offset = 7461.37;
-    $request->order = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T01:55:24.746Z');;
 
     $response = $sdk->issue->listUnifiedIssues($request);

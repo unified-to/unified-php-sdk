@@ -37,18 +37,18 @@ try {
     $request->accountingAccount->balance = 6602.56;
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T22:12:31.771Z');
     $request->accountingAccount->currency = 'Saint Helena Pound';
-    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->customerDefinedCode = '<value>';
     $request->accountingAccount->description = 'Cross-group zero defect task-force';
-    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->id = '<id>';
     $request->accountingAccount->isPayable = false;
-    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->name = '<value>';
     $request->accountingAccount->raw = [
-        'Ruble' => 'string',
+        'Ruble' => '<value>',
     ];
     $request->accountingAccount->status = Shared\Status::Active;
     $request->accountingAccount->type = Shared\Type::FixedAsset;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T23:54:12.882Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->account->createAccountingAccount($request);
 
@@ -95,11 +95,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingAccountRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->account->getAccountingAccount($request);
 
@@ -146,15 +146,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingAccountsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 9476.86;
     $request->offset = 5444.77;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-19T21:33:28.191Z');;
 
     $response = $sdk->account->listAccountingAccounts($request);
@@ -206,19 +206,19 @@ try {
     $request->accountingAccount->balance = 1931.26;
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T13:35:06.969Z');
     $request->accountingAccount->currency = 'Won';
-    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->customerDefinedCode = '<value>';
     $request->accountingAccount->description = 'Quality-focused multimedia implementation';
-    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->id = '<id>';
     $request->accountingAccount->isPayable = false;
-    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->name = '<value>';
     $request->accountingAccount->raw = [
-        'male' => 'string',
+        'male' => '<value>',
     ];
     $request->accountingAccount->status = Shared\Status::Archived;
     $request->accountingAccount->type = Shared\Type::Expense;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-01T20:09:00.405Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->account->patchAccountingAccount($request);
 
@@ -265,8 +265,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingAccountRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->account->removeAccountingAccount($request);
 
@@ -317,19 +317,19 @@ try {
     $request->accountingAccount->balance = 5954.09;
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-21T23:41:25.152Z');
     $request->accountingAccount->currency = 'Tanzanian Shilling';
-    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->customerDefinedCode = '<value>';
     $request->accountingAccount->description = 'Stand-alone grid-enabled model';
-    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->id = '<id>';
     $request->accountingAccount->isPayable = false;
-    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->name = '<value>';
     $request->accountingAccount->raw = [
-        'Costa' => 'string',
+        'Costa' => '<value>',
     ];
     $request->accountingAccount->status = Shared\Status::Archived;
     $request->accountingAccount->type = Shared\Type::Liability;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-16T10:15:08.356Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->account->updateAccountingAccount($request);
 

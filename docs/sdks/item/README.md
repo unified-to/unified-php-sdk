@@ -36,28 +36,28 @@ try {
     $request->commerceItem = new Shared\CommerceItem();
     $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-27T05:28:51.414Z');
     $request->commerceItem->description = 'Object-based local intranet';
-    $request->commerceItem->id = '<ID>';
+    $request->commerceItem->id = '<id>';
     $request->commerceItem->isActive = false;
     $request->commerceItem->isTaxable = false;
     $request->commerceItem->media = [
         new Shared\CommerceItemMedia(),
     ];
-    $request->commerceItem->name = 'string';
-    $request->commerceItem->publicDescription = 'string';
-    $request->commerceItem->publicName = 'string';
+    $request->commerceItem->name = '<value>';
+    $request->commerceItem->publicDescription = '<value>';
+    $request->commerceItem->publicName = '<value>';
     $request->commerceItem->raw = [
-        'Awesome' => 'string',
+        'Awesome' => '<value>',
     ];
     $request->commerceItem->tags = [
-        'string',
+        '<value>',
     ];
-    $request->commerceItem->type = 'string';
+    $request->commerceItem->type = '<value>';
     $request->commerceItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-06T06:18:58.093Z');
     $request->commerceItem->variants = [
         new Shared\CommerceItemVariant(),
     ];
-    $request->commerceItem->vendorName = 'string';
-    $request->connectionId = 'string';;
+    $request->commerceItem->vendorName = '<value>';
+    $request->connectionId = '<value>';;
 
     $response = $sdk->item->createCommerceItem($request);
 
@@ -104,11 +104,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetCommerceItemRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->item->getCommerceItem($request);
 
@@ -155,15 +155,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCommerceItemsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 2553.93;
     $request->offset = 4072.28;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-10T19:08:09.923Z');;
 
     $response = $sdk->item->listCommerceItems($request);
@@ -214,29 +214,29 @@ try {
     $request->commerceItem = new Shared\CommerceItem();
     $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-21T03:47:22.544Z');
     $request->commerceItem->description = 'Front-line explicit circuit';
-    $request->commerceItem->id = '<ID>';
+    $request->commerceItem->id = '<id>';
     $request->commerceItem->isActive = false;
     $request->commerceItem->isTaxable = false;
     $request->commerceItem->media = [
         new Shared\CommerceItemMedia(),
     ];
-    $request->commerceItem->name = 'string';
-    $request->commerceItem->publicDescription = 'string';
-    $request->commerceItem->publicName = 'string';
+    $request->commerceItem->name = '<value>';
+    $request->commerceItem->publicDescription = '<value>';
+    $request->commerceItem->publicName = '<value>';
     $request->commerceItem->raw = [
-        'Dollar' => 'string',
+        'Dollar' => '<value>',
     ];
     $request->commerceItem->tags = [
-        'string',
+        '<value>',
     ];
-    $request->commerceItem->type = 'string';
+    $request->commerceItem->type = '<value>';
     $request->commerceItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-26T15:20:36.769Z');
     $request->commerceItem->variants = [
         new Shared\CommerceItemVariant(),
     ];
-    $request->commerceItem->vendorName = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->commerceItem->vendorName = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->item->patchCommerceItem($request);
 
@@ -283,8 +283,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveCommerceItemRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->item->removeCommerceItem($request);
 
@@ -334,29 +334,29 @@ try {
     $request->commerceItem = new Shared\CommerceItem();
     $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-27T01:13:33.758Z');
     $request->commerceItem->description = 'Advanced intangible toolset';
-    $request->commerceItem->id = '<ID>';
+    $request->commerceItem->id = '<id>';
     $request->commerceItem->isActive = false;
     $request->commerceItem->isTaxable = false;
     $request->commerceItem->media = [
         new Shared\CommerceItemMedia(),
     ];
-    $request->commerceItem->name = 'string';
-    $request->commerceItem->publicDescription = 'string';
-    $request->commerceItem->publicName = 'string';
+    $request->commerceItem->name = '<value>';
+    $request->commerceItem->publicDescription = '<value>';
+    $request->commerceItem->publicName = '<value>';
     $request->commerceItem->raw = [
-        'fuga' => 'string',
+        'fuga' => '<value>',
     ];
     $request->commerceItem->tags = [
-        'string',
+        '<value>',
     ];
-    $request->commerceItem->type = 'string';
+    $request->commerceItem->type = '<value>';
     $request->commerceItem->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-30T16:38:52.346Z');
     $request->commerceItem->variants = [
         new Shared\CommerceItemVariant(),
     ];
-    $request->commerceItem->vendorName = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->commerceItem->vendorName = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->item->updateCommerceItem($request);
 

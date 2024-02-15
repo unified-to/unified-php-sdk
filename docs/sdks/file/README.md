@@ -36,22 +36,22 @@ try {
     $request->storageFile = new Shared\StorageFile();
     $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-26T17:10:46.324Z');
     $request->storageFile->description = 'Digitized systematic Graphic Interface';
-    $request->storageFile->downloadUrl = 'string';
-    $request->storageFile->id = '<ID>';
-    $request->storageFile->mimeType = 'string';
-    $request->storageFile->name = 'string';
-    $request->storageFile->parentId = 'string';
+    $request->storageFile->downloadUrl = '<value>';
+    $request->storageFile->id = '<id>';
+    $request->storageFile->mimeType = '<value>';
+    $request->storageFile->name = '<value>';
+    $request->storageFile->parentId = '<value>';
     $request->storageFile->permissions = [
         new Shared\StoragePermission(),
     ];
     $request->storageFile->raw = [
-        'astride' => 'string',
+        'astride' => '<value>',
     ];
     $request->storageFile->size = 3999.85;
     $request->storageFile->type = Shared\StorageFileType::Folder;
     $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-07T14:24:08.441Z');
-    $request->storageFile->userId = 'string';
-    $request->connectionId = 'string';;
+    $request->storageFile->userId = '<value>';
+    $request->connectionId = '<value>';;
 
     $response = $sdk->file->createStorageFile($request);
 
@@ -98,11 +98,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetStorageFileRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->file->getStorageFile($request);
 
@@ -149,16 +149,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListStorageFilesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 1047.26;
     $request->offset = 7962.22;
-    $request->order = 'string';
-    $request->parentId = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->parentId = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-28T04:36:03.817Z');;
 
     $response = $sdk->file->listStorageFiles($request);
@@ -209,23 +209,23 @@ try {
     $request->storageFile = new Shared\StorageFile();
     $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-01T13:48:26.867Z');
     $request->storageFile->description = 'Customer-focused mission-critical monitoring';
-    $request->storageFile->downloadUrl = 'string';
-    $request->storageFile->id = '<ID>';
-    $request->storageFile->mimeType = 'string';
-    $request->storageFile->name = 'string';
-    $request->storageFile->parentId = 'string';
+    $request->storageFile->downloadUrl = '<value>';
+    $request->storageFile->id = '<id>';
+    $request->storageFile->mimeType = '<value>';
+    $request->storageFile->name = '<value>';
+    $request->storageFile->parentId = '<value>';
     $request->storageFile->permissions = [
         new Shared\StoragePermission(),
     ];
     $request->storageFile->raw = [
-        'green' => 'string',
+        'green' => '<value>',
     ];
     $request->storageFile->size = 2253.31;
     $request->storageFile->type = Shared\StorageFileType::File;
     $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-03T15:19:05.454Z');
-    $request->storageFile->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->storageFile->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->file->patchStorageFile($request);
 
@@ -272,8 +272,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveStorageFileRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->file->removeStorageFile($request);
 
@@ -323,23 +323,23 @@ try {
     $request->storageFile = new Shared\StorageFile();
     $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-06T15:38:39.174Z');
     $request->storageFile->description = 'Polarised intangible architecture';
-    $request->storageFile->downloadUrl = 'string';
-    $request->storageFile->id = '<ID>';
-    $request->storageFile->mimeType = 'string';
-    $request->storageFile->name = 'string';
-    $request->storageFile->parentId = 'string';
+    $request->storageFile->downloadUrl = '<value>';
+    $request->storageFile->id = '<id>';
+    $request->storageFile->mimeType = '<value>';
+    $request->storageFile->name = '<value>';
+    $request->storageFile->parentId = '<value>';
     $request->storageFile->permissions = [
         new Shared\StoragePermission(),
     ];
     $request->storageFile->raw = [
-        'male' => 'string',
+        'male' => '<value>',
     ];
     $request->storageFile->size = 4091;
     $request->storageFile->type = Shared\StorageFileType::Folder;
     $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-25T21:16:43.994Z');
-    $request->storageFile->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->storageFile->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->file->updateStorageFile($request);
 

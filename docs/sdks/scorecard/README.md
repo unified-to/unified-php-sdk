@@ -34,23 +34,23 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->applicationId = '<value>';
+    $request->atsScorecard->candidateId = '<value>';
     $request->atsScorecard->comment = 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J';
     $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-24T10:18:34.661Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->id = '<id>';
+    $request->atsScorecard->interviewId = '<value>';
+    $request->atsScorecard->interviewerId = '<value>';
+    $request->atsScorecard->jobId = '<value>';
     $request->atsScorecard->questions = [
         new Shared\AtsScorecardQuestion(),
     ];
     $request->atsScorecard->raw = [
-        'Inverse' => 'string',
+        'Inverse' => '<value>',
     ];
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-16T16:10:16.235Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->scorecard->createAtsScorecard($request);
 
@@ -97,11 +97,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsScorecardRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->scorecard->getAtsScorecard($request);
 
@@ -148,19 +148,19 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsScorecardsRequest();
-    $request->applicationId = 'string';
-    $request->candidateId = 'string';
-    $request->connectionId = 'string';
+    $request->applicationId = '<value>';
+    $request->candidateId = '<value>';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->interviewId = 'string';
-    $request->jobId = 'string';
+    $request->interviewId = '<value>';
+    $request->jobId = '<value>';
     $request->limit = 5126.98;
     $request->offset = 8077.44;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-19T14:46:22.333Z');;
 
     $response = $sdk->scorecard->listAtsScorecards($request);
@@ -209,24 +209,24 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->applicationId = '<value>';
+    $request->atsScorecard->candidateId = '<value>';
     $request->atsScorecard->comment = 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support';
     $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-06T13:32:29.533Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->id = '<id>';
+    $request->atsScorecard->interviewId = '<value>';
+    $request->atsScorecard->interviewerId = '<value>';
+    $request->atsScorecard->jobId = '<value>';
     $request->atsScorecard->questions = [
         new Shared\AtsScorecardQuestion(),
     ];
     $request->atsScorecard->raw = [
-        'World' => 'string',
+        'World' => '<value>',
     ];
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-07T14:14:42.219Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->scorecard->patchAtsScorecard($request);
 
@@ -273,8 +273,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsScorecardRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->scorecard->removeAtsScorecard($request);
 
@@ -322,24 +322,24 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->applicationId = '<value>';
+    $request->atsScorecard->candidateId = '<value>';
     $request->atsScorecard->comment = 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive';
     $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T16:18:43.908Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->id = '<id>';
+    $request->atsScorecard->interviewId = '<value>';
+    $request->atsScorecard->interviewerId = '<value>';
+    $request->atsScorecard->jobId = '<value>';
     $request->atsScorecard->questions = [
         new Shared\AtsScorecardQuestion(),
     ];
     $request->atsScorecard->raw = [
-        'Digitized' => 'string',
+        'Digitized' => '<value>',
     ];
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-16T12:20:06.330Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->scorecard->updateAtsScorecard($request);
 

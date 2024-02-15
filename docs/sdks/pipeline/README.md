@@ -37,14 +37,14 @@ try {
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-24T10:05:30.432Z');
     $request->crmPipeline->dealProbability = 6254.97;
     $request->crmPipeline->displayOrder = 3052.57;
-    $request->crmPipeline->id = '<ID>';
+    $request->crmPipeline->id = '<id>';
     $request->crmPipeline->isActive = false;
-    $request->crmPipeline->name = 'string';
+    $request->crmPipeline->name = '<value>';
     $request->crmPipeline->raw = [
-        'Vista' => 'string',
+        'Vista' => '<value>',
     ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-13T04:30:34.696Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->pipeline->createCrmPipeline($request);
 
@@ -91,11 +91,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetCrmPipelineRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->pipeline->getCrmPipeline($request);
 
@@ -142,15 +142,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCrmPipelinesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 3318.18;
     $request->offset = 4834.28;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-29T18:23:30.472Z');;
 
     $response = $sdk->pipeline->listCrmPipelines($request);
@@ -202,15 +202,15 @@ try {
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-26T14:31:39.156Z');
     $request->crmPipeline->dealProbability = 8620.92;
     $request->crmPipeline->displayOrder = 4178.43;
-    $request->crmPipeline->id = '<ID>';
+    $request->crmPipeline->id = '<id>';
     $request->crmPipeline->isActive = false;
-    $request->crmPipeline->name = 'string';
+    $request->crmPipeline->name = '<value>';
     $request->crmPipeline->raw = [
-        'Costa' => 'string',
+        'Costa' => '<value>',
     ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T20:45:57.138Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->pipeline->patchCrmPipeline($request);
 
@@ -257,8 +257,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveCrmPipelineRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->pipeline->removeCrmPipeline($request);
 
@@ -309,15 +309,15 @@ try {
     $request->crmPipeline->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-27T16:21:58.595Z');
     $request->crmPipeline->dealProbability = 8923.83;
     $request->crmPipeline->displayOrder = 5142.22;
-    $request->crmPipeline->id = '<ID>';
+    $request->crmPipeline->id = '<id>';
     $request->crmPipeline->isActive = false;
-    $request->crmPipeline->name = 'string';
+    $request->crmPipeline->name = '<value>';
     $request->crmPipeline->raw = [
-        'Androgyne' => 'string',
+        'Androgyne' => '<value>',
     ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-08T17:12:56.773Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->pipeline->updateCrmPipeline($request);
 

@@ -36,22 +36,22 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-12T02:07:27.193Z');
     $request->hrisGroup->description = 'Self-enabling system-worthy collaboration';
-    $request->hrisGroup->id = '<ID>';
+    $request->hrisGroup->id = '<id>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'string',
+        '<value>',
     ];
-    $request->hrisGroup->name = 'string';
-    $request->hrisGroup->parentId = 'string';
+    $request->hrisGroup->name = '<value>';
+    $request->hrisGroup->parentId = '<value>';
     $request->hrisGroup->raw = [
-        'South' => 'string',
+        'South' => '<value>',
     ];
     $request->hrisGroup->type = Shared\HrisGroupType::Department;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-28T15:45:30.103Z');
     $request->hrisGroup->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->group->createHrisGroup($request);
 
@@ -98,11 +98,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetHrisGroupRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->group->getHrisGroup($request);
 
@@ -149,15 +149,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListHrisGroupsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 4815.14;
     $request->offset = 2554.75;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T00:40:26.357Z');;
 
     $response = $sdk->group->listHrisGroups($request);
@@ -208,23 +208,23 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-10T03:17:00.454Z');
     $request->hrisGroup->description = 'Compatible contextually-based local area network';
-    $request->hrisGroup->id = '<ID>';
+    $request->hrisGroup->id = '<id>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'string',
+        '<value>',
     ];
-    $request->hrisGroup->name = 'string';
-    $request->hrisGroup->parentId = 'string';
+    $request->hrisGroup->name = '<value>';
+    $request->hrisGroup->parentId = '<value>';
     $request->hrisGroup->raw = [
-        'indexing' => 'string',
+        'indexing' => '<value>',
     ];
     $request->hrisGroup->type = Shared\HrisGroupType::BusinessUnit;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T11:47:16.863Z');
     $request->hrisGroup->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->group->patchHrisGroup($request);
 
@@ -271,8 +271,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveHrisGroupRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->group->removeHrisGroup($request);
 
@@ -322,23 +322,23 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-07T01:08:49.621Z');
     $request->hrisGroup->description = 'Integrated empowering productivity';
-    $request->hrisGroup->id = '<ID>';
+    $request->hrisGroup->id = '<id>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'string',
+        '<value>',
     ];
-    $request->hrisGroup->name = 'string';
-    $request->hrisGroup->parentId = 'string';
+    $request->hrisGroup->name = '<value>';
+    $request->hrisGroup->parentId = '<value>';
     $request->hrisGroup->raw = [
-        'Southwest' => 'string',
+        'Southwest' => '<value>',
     ];
     $request->hrisGroup->type = Shared\HrisGroupType::Team;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-09T14:54:15.549Z');
     $request->hrisGroup->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->group->updateHrisGroup($request);
 

@@ -35,23 +35,23 @@ try {
         $request = new Operations\CreateCommerceLocationRequest();
     $request->commerceLocation = new Shared\CommerceLocation();
     $request->commerceLocation->address = new Shared\PropertyCommerceLocationAddress();
-    $request->commerceLocation->address->address1 = 'string';
-    $request->commerceLocation->address->address2 = 'string';
+    $request->commerceLocation->address->address1 = '<value>';
+    $request->commerceLocation->address->address2 = '<value>';
     $request->commerceLocation->address->city = 'North Marysecester';
     $request->commerceLocation->address->country = 'Maldives';
     $request->commerceLocation->address->countryCode = 'CU';
     $request->commerceLocation->address->postalCode = '81935';
-    $request->commerceLocation->address->region = 'string';
-    $request->commerceLocation->address->regionCode = 'string';
+    $request->commerceLocation->address->region = '<value>';
+    $request->commerceLocation->address->regionCode = '<value>';
     $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-11T11:46:34.114Z');
-    $request->commerceLocation->id = '<ID>';
+    $request->commerceLocation->id = '<id>';
     $request->commerceLocation->isActive = false;
-    $request->commerceLocation->name = 'string';
+    $request->commerceLocation->name = '<value>';
     $request->commerceLocation->raw = [
-        'Rock' => 'string',
+        'Rock' => '<value>',
     ];
     $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-13T08:13:54.098Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->location->createCommerceLocation($request);
 
@@ -98,11 +98,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetCommerceLocationRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->location->getCommerceLocation($request);
 
@@ -149,15 +149,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCommerceLocationsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 2087.22;
     $request->offset = 1166.59;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T14:52:37.550Z');;
 
     $response = $sdk->location->listCommerceLocations($request);
@@ -207,24 +207,24 @@ try {
         $request = new Operations\PatchCommerceLocationRequest();
     $request->commerceLocation = new Shared\CommerceLocation();
     $request->commerceLocation->address = new Shared\PropertyCommerceLocationAddress();
-    $request->commerceLocation->address->address1 = 'string';
-    $request->commerceLocation->address->address2 = 'string';
+    $request->commerceLocation->address->address1 = '<value>';
+    $request->commerceLocation->address->address2 = '<value>';
     $request->commerceLocation->address->city = 'Lonniefurt';
     $request->commerceLocation->address->country = 'Libyan Arab Jamahiriya';
     $request->commerceLocation->address->countryCode = 'KM';
     $request->commerceLocation->address->postalCode = '64647';
-    $request->commerceLocation->address->region = 'string';
-    $request->commerceLocation->address->regionCode = 'string';
+    $request->commerceLocation->address->region = '<value>';
+    $request->commerceLocation->address->regionCode = '<value>';
     $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-12T06:32:06.220Z');
-    $request->commerceLocation->id = '<ID>';
+    $request->commerceLocation->id = '<id>';
     $request->commerceLocation->isActive = false;
-    $request->commerceLocation->name = 'string';
+    $request->commerceLocation->name = '<value>';
     $request->commerceLocation->raw = [
-        'Syrian' => 'string',
+        'Syrian' => '<value>',
     ];
     $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T18:21:44.446Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->location->patchCommerceLocation($request);
 
@@ -271,8 +271,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveCommerceLocationRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->location->removeCommerceLocation($request);
 
@@ -321,24 +321,24 @@ try {
         $request = new Operations\UpdateCommerceLocationRequest();
     $request->commerceLocation = new Shared\CommerceLocation();
     $request->commerceLocation->address = new Shared\PropertyCommerceLocationAddress();
-    $request->commerceLocation->address->address1 = 'string';
-    $request->commerceLocation->address->address2 = 'string';
+    $request->commerceLocation->address->address1 = '<value>';
+    $request->commerceLocation->address->address2 = '<value>';
     $request->commerceLocation->address->city = 'Stillwater';
     $request->commerceLocation->address->country = 'Sierra Leone';
     $request->commerceLocation->address->countryCode = 'AL';
     $request->commerceLocation->address->postalCode = '49876-8332';
-    $request->commerceLocation->address->region = 'string';
-    $request->commerceLocation->address->regionCode = 'string';
+    $request->commerceLocation->address->region = '<value>';
+    $request->commerceLocation->address->regionCode = '<value>';
     $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-19T11:29:36.755Z');
-    $request->commerceLocation->id = '<ID>';
+    $request->commerceLocation->id = '<id>';
     $request->commerceLocation->isActive = false;
-    $request->commerceLocation->name = 'string';
+    $request->commerceLocation->name = '<value>';
     $request->commerceLocation->raw = [
-        'Street' => 'string',
+        'Street' => '<value>',
     ];
     $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-09T05:57:43.241Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->location->updateCommerceLocation($request);
 

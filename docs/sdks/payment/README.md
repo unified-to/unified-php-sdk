@@ -34,21 +34,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = 'string';
-    $request->accountingPayment->contactId = 'string';
+    $request->accountingPayment->accountId = '<value>';
+    $request->accountingPayment->contactId = '<value>';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-28T13:13:46.548Z');
     $request->accountingPayment->currency = 'Lari';
-    $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceId = 'string';
-    $request->accountingPayment->notes = 'string';
-    $request->accountingPayment->paymentMethod = 'string';
+    $request->accountingPayment->id = '<id>';
+    $request->accountingPayment->invoiceId = '<value>';
+    $request->accountingPayment->notes = '<value>';
+    $request->accountingPayment->paymentMethod = '<value>';
     $request->accountingPayment->raw = [
-        'Mount' => 'string',
+        'Mount' => '<value>',
     ];
-    $request->accountingPayment->reference = 'string';
+    $request->accountingPayment->reference = '<value>';
     $request->accountingPayment->totalAmount = 1821.1;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-22T09:20:36.660Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->payment->createAccountingPayment($request);
 
@@ -95,11 +95,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingPaymentRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->payment->getAccountingPayment($request);
 
@@ -146,17 +146,17 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingPaymentsRequest();
-    $request->connectionId = 'string';
-    $request->contactId = 'string';
+    $request->connectionId = '<value>';
+    $request->contactId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->invoiceId = 'string';
+    $request->invoiceId = '<value>';
     $request->limit = 487.78;
     $request->offset = 9308.83;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-25T18:15:35.411Z');;
 
     $response = $sdk->payment->listAccountingPayments($request);
@@ -205,22 +205,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = 'string';
-    $request->accountingPayment->contactId = 'string';
+    $request->accountingPayment->accountId = '<value>';
+    $request->accountingPayment->contactId = '<value>';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-25T02:56:43.385Z');
     $request->accountingPayment->currency = 'Boliviano boliviano';
-    $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceId = 'string';
-    $request->accountingPayment->notes = 'string';
-    $request->accountingPayment->paymentMethod = 'string';
+    $request->accountingPayment->id = '<id>';
+    $request->accountingPayment->invoiceId = '<value>';
+    $request->accountingPayment->notes = '<value>';
+    $request->accountingPayment->paymentMethod = '<value>';
     $request->accountingPayment->raw = [
-        'periodic' => 'string',
+        'periodic' => '<value>',
     ];
-    $request->accountingPayment->reference = 'string';
+    $request->accountingPayment->reference = '<value>';
     $request->accountingPayment->totalAmount = 9979.6;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-15T02:06:02.492Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->payment->patchAccountingPayment($request);
 
@@ -267,8 +267,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingPaymentRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->payment->removeAccountingPayment($request);
 
@@ -316,22 +316,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = 'string';
-    $request->accountingPayment->contactId = 'string';
+    $request->accountingPayment->accountId = '<value>';
+    $request->accountingPayment->contactId = '<value>';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-04T17:30:16.475Z');
     $request->accountingPayment->currency = 'Sudanese Pound';
-    $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceId = 'string';
-    $request->accountingPayment->notes = 'string';
-    $request->accountingPayment->paymentMethod = 'string';
+    $request->accountingPayment->id = '<id>';
+    $request->accountingPayment->invoiceId = '<value>';
+    $request->accountingPayment->notes = '<value>';
+    $request->accountingPayment->paymentMethod = '<value>';
     $request->accountingPayment->raw = [
-        'Music' => 'string',
+        'Music' => '<value>',
     ];
-    $request->accountingPayment->reference = 'string';
+    $request->accountingPayment->reference = '<value>';
     $request->accountingPayment->totalAmount = 4734;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-26T21:11:42.893Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->payment->updateAccountingPayment($request);
 

@@ -68,21 +68,21 @@ try {
         $request = new Operations\CreateAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T05:03:52.917Z');
-    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->candidateId = '<value>';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-22T12:50:56.305Z');
     $request->atsApplication->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-19T06:26:51.678Z');
-    $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'string';
-    $request->atsApplication->originalStatus = 'string';
+    $request->atsApplication->id = '<id>';
+    $request->atsApplication->jobId = '<value>';
+    $request->atsApplication->originalStatus = '<value>';
     $request->atsApplication->raw = [
-        'Mandatory' => 'string',
+        'Mandatory' => '<value>',
     ];
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-21T21:31:42.360Z');
-    $request->atsApplication->rejectedReason = 'string';
-    $request->atsApplication->source = 'string';
+    $request->atsApplication->rejectedReason = '<value>';
+    $request->atsApplication->source = '<value>';
     $request->atsApplication->status = Shared\AtsApplicationStatus::SecondInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T22:56:51.478Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->ats->createAtsApplication($request);
 
@@ -131,43 +131,44 @@ try {
         $request = new Operations\CreateAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'string';
-    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->address1 = '<value>';
+    $request->atsCandidate->address->address2 = '<value>';
     $request->atsCandidate->address->city = 'South Hill';
     $request->atsCandidate->address->country = 'Denmark';
     $request->atsCandidate->address->countryCode = 'KM';
     $request->atsCandidate->address->postalCode = '72991-5163';
-    $request->atsCandidate->address->region = 'string';
-    $request->atsCandidate->address->regionCode = 'string';
-    $request->atsCandidate->companyId = 'string';
+    $request->atsCandidate->address->region = '<value>';
+    $request->atsCandidate->address->regionCode = '<value>';
+    $request->atsCandidate->companyId = '<value>';
     $request->atsCandidate->companyName = 'Pollich - Lubowitz';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-06T00:47:39.352Z');
+    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T09:25:00.753Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'string';
-    $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->id = '<id>';
+    $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->atsCandidate->name = 'string';
-    $request->atsCandidate->origin = Shared\Origin::Referred;
+    $request->atsCandidate->name = '<value>';
+    $request->atsCandidate->origin = Shared\Origin::Sourced;
     $request->atsCandidate->raw = [
-        'Gasoline' => 'string',
+        'Legacy' => '<value>',
     ];
     $request->atsCandidate->sources = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->tags = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->telephones = [
         new Shared\AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-10T16:56:06.147Z');
-    $request->connectionId = 'string';;
+    $request->atsCandidate->title = '<value>';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T06:32:21.998Z');
+    $request->connectionId = '<value>';;
 
     $response = $sdk->ats->createAtsCandidate($request);
 
@@ -215,21 +216,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
-    $request->atsDocument->applicationId = 'string';
-    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->applicationId = '<value>';
+    $request->atsDocument->candidateId = '<value>';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-25T01:00:46.478Z');
-    $request->atsDocument->documentData = 'string';
-    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->documentData = '<value>';
+    $request->atsDocument->documentUrl = '<value>';
     $request->atsDocument->filename = 'mouse_per_missouri.mp4';
-    $request->atsDocument->id = '<ID>';
-    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->id = '<id>';
+    $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'empowering' => 'string',
+        'empowering' => '<value>',
     ];
     $request->atsDocument->type = Shared\AtsDocumentType::CoverLetter;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T09:03:14.368Z');
-    $request->atsDocument->userId = 'string';
-    $request->connectionId = 'string';;
+    $request->atsDocument->userId = '<value>';
+    $request->connectionId = '<value>';;
 
     $response = $sdk->ats->createAtsDocument($request);
 
@@ -277,24 +278,24 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
-    $request->atsInterview->applicationId = 'string';
-    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->applicationId = '<value>';
+    $request->atsInterview->candidateId = '<value>';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-11T04:08:22.567Z');
     $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T08:47:56.138Z');
-    $request->atsInterview->externalEventXref = 'string';
-    $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'string';
-    $request->atsInterview->location = 'string';
+    $request->atsInterview->externalEventXref = '<value>';
+    $request->atsInterview->id = '<id>';
+    $request->atsInterview->jobId = '<value>';
+    $request->atsInterview->location = '<value>';
     $request->atsInterview->raw = [
-        'Metrics' => 'string',
+        'Metrics' => '<value>',
     ];
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-07T15:15:23.855Z');
     $request->atsInterview->status = Shared\AtsInterviewStatus::AwaitingFeedback;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-20T08:44:17.279Z');
     $request->atsInterview->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->ats->createAtsInterview($request);
 
@@ -346,36 +347,36 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-14T18:31:06.376Z');
-    $request->atsJob->companyId = 'string';
+    $request->atsJob->companyId = '<value>';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T09:16:07.639Z');
     $request->atsJob->departments = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->description = 'Secured fault-tolerant internet solution';
     $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
-        'string',
+        '<value>',
     ];
-    $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'string';
-    $request->atsJob->name = 'string';
+    $request->atsJob->id = '<id>';
+    $request->atsJob->languageLocale = '<value>';
+    $request->atsJob->name = '<value>';
     $request->atsJob->numberOfOpenings = 6151.12;
     $request->atsJob->publicJobUrls = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->raw = [
-        'wherever' => 'string',
+        'wherever' => '<value>',
     ];
     $request->atsJob->recruiterIds = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Open;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-18T02:03:06.250Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->ats->createAtsJob($request);
 
@@ -423,23 +424,23 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->applicationId = '<value>';
+    $request->atsScorecard->candidateId = '<value>';
     $request->atsScorecard->comment = 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J';
     $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-24T10:18:34.661Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->id = '<id>';
+    $request->atsScorecard->interviewId = '<value>';
+    $request->atsScorecard->interviewerId = '<value>';
+    $request->atsScorecard->jobId = '<value>';
     $request->atsScorecard->questions = [
         new Shared\AtsScorecardQuestion(),
     ];
     $request->atsScorecard->raw = [
-        'Inverse' => 'string',
+        'Inverse' => '<value>',
     ];
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-16T16:10:16.235Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->ats->createAtsScorecard($request);
 
@@ -486,11 +487,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsApplicationRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->ats->getAtsApplication($request);
 
@@ -537,11 +538,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsCandidateRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->ats->getAtsCandidate($request);
 
@@ -588,11 +589,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsCompanyRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->ats->getAtsCompany($request);
 
@@ -639,11 +640,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsDocumentRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->ats->getAtsDocument($request);
 
@@ -690,11 +691,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsInterviewRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->ats->getAtsInterview($request);
 
@@ -741,11 +742,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsJobRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->ats->getAtsJob($request);
 
@@ -792,11 +793,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAtsScorecardRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->ats->getAtsScorecard($request);
 
@@ -843,17 +844,17 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsApplicationsRequest();
-    $request->candidateId = 'string';
-    $request->connectionId = 'string';
+    $request->candidateId = '<value>';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->jobId = 'string';
+    $request->jobId = '<value>';
     $request->limit = 441.56;
     $request->offset = 1448.74;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-21T20:30:01.596Z');;
 
     $response = $sdk->ats->listAtsApplications($request);
@@ -901,15 +902,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsApplicationstatusesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 5199.96;
     $request->offset = 7673.65;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-25T18:11:33.180Z');;
 
     $response = $sdk->ats->listAtsApplicationstatuses($request);
@@ -957,15 +958,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsCandidatesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 6384.09;
     $request->offset = 7452.94;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T00:58:25.541Z');;
 
     $response = $sdk->ats->listAtsCandidates($request);
@@ -1013,15 +1014,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsCompaniesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 6933.84;
     $request->offset = 7946.52;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T21:39:38.971Z');;
 
     $response = $sdk->ats->listAtsCompanies($request);
@@ -1069,16 +1070,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsDocumentsRequest();
-    $request->applicationId = 'string';
-    $request->connectionId = 'string';
+    $request->applicationId = '<value>';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 9635.37;
     $request->offset = 8402.77;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T00:55:54.895Z');;
 
     $response = $sdk->ats->listAtsDocuments($request);
@@ -1126,16 +1127,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsInterviewsRequest();
-    $request->applicationId = 'string';
-    $request->connectionId = 'string';
+    $request->applicationId = '<value>';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 2562.12;
     $request->offset = 1185.02;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-28T15:15:00.508Z');;
 
     $response = $sdk->ats->listAtsInterviews($request);
@@ -1183,15 +1184,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsJobsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 3958.99;
     $request->offset = 3223.84;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-04T01:14:05.456Z');;
 
     $response = $sdk->ats->listAtsJobs($request);
@@ -1239,19 +1240,19 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAtsScorecardsRequest();
-    $request->applicationId = 'string';
-    $request->candidateId = 'string';
-    $request->connectionId = 'string';
+    $request->applicationId = '<value>';
+    $request->candidateId = '<value>';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->interviewId = 'string';
-    $request->jobId = 'string';
+    $request->interviewId = '<value>';
+    $request->jobId = '<value>';
     $request->limit = 5126.98;
     $request->offset = 8077.44;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-19T14:46:22.333Z');;
 
     $response = $sdk->ats->listAtsScorecards($request);
@@ -1301,22 +1302,22 @@ try {
         $request = new Operations\PatchAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-15T20:36:09.499Z');
-    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->candidateId = '<value>';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T05:56:57.062Z');
     $request->atsApplication->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-05T05:20:09.174Z');
-    $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'string';
-    $request->atsApplication->originalStatus = 'string';
+    $request->atsApplication->id = '<id>';
+    $request->atsApplication->jobId = '<value>';
+    $request->atsApplication->originalStatus = '<value>';
     $request->atsApplication->raw = [
-        'grey' => 'string',
+        'grey' => '<value>',
     ];
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-24T17:35:54.628Z');
-    $request->atsApplication->rejectedReason = 'string';
-    $request->atsApplication->source = 'string';
+    $request->atsApplication->rejectedReason = '<value>';
+    $request->atsApplication->source = '<value>';
     $request->atsApplication->status = Shared\AtsApplicationStatus::Offered;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T16:36:51.738Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->patchAtsApplication($request);
 
@@ -1365,44 +1366,45 @@ try {
         $request = new Operations\PatchAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'string';
-    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->address1 = '<value>';
+    $request->atsCandidate->address->address2 = '<value>';
     $request->atsCandidate->address->city = 'Fort Bridget';
     $request->atsCandidate->address->country = 'Sri Lanka';
     $request->atsCandidate->address->countryCode = 'GI';
     $request->atsCandidate->address->postalCode = '46054';
-    $request->atsCandidate->address->region = 'string';
-    $request->atsCandidate->address->regionCode = 'string';
-    $request->atsCandidate->companyId = 'string';
+    $request->atsCandidate->address->region = '<value>';
+    $request->atsCandidate->address->regionCode = '<value>';
+    $request->atsCandidate->companyId = '<value>';
     $request->atsCandidate->companyName = 'Donnelly - Bartell';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-07T04:20:35.612Z');
+    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-20T03:10:26.424Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'string';
-    $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->id = '<id>';
+    $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->atsCandidate->name = 'string';
-    $request->atsCandidate->origin = Shared\Origin::Referred;
+    $request->atsCandidate->name = '<value>';
+    $request->atsCandidate->origin = Shared\Origin::Applied;
     $request->atsCandidate->raw = [
-        'generate' => 'string',
+        'Van' => '<value>',
     ];
     $request->atsCandidate->sources = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->tags = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->telephones = [
         new Shared\AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-12T20:46:24.084Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->atsCandidate->title = '<value>';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-30T15:05:49.494Z');
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->patchAtsCandidate($request);
 
@@ -1450,22 +1452,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
-    $request->atsDocument->applicationId = 'string';
-    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->applicationId = '<value>';
+    $request->atsDocument->candidateId = '<value>';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T11:33:08.084Z');
-    $request->atsDocument->documentData = 'string';
-    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->documentData = '<value>';
+    $request->atsDocument->documentUrl = '<value>';
     $request->atsDocument->filename = 'future_underpin.mp4v';
-    $request->atsDocument->id = '<ID>';
-    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->id = '<id>';
+    $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'ipsam' => 'string',
+        'ipsam' => '<value>',
     ];
     $request->atsDocument->type = Shared\AtsDocumentType::Other;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-04T16:17:46.270Z');
-    $request->atsDocument->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->atsDocument->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->patchAtsDocument($request);
 
@@ -1513,25 +1515,25 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
-    $request->atsInterview->applicationId = 'string';
-    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->applicationId = '<value>';
+    $request->atsInterview->candidateId = '<value>';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-11T19:09:34.526Z');
     $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-28T22:25:51.616Z');
-    $request->atsInterview->externalEventXref = 'string';
-    $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'string';
-    $request->atsInterview->location = 'string';
+    $request->atsInterview->externalEventXref = '<value>';
+    $request->atsInterview->id = '<id>';
+    $request->atsInterview->jobId = '<value>';
+    $request->atsInterview->location = '<value>';
     $request->atsInterview->raw = [
-        'Handmade' => 'string',
+        'Handmade' => '<value>',
     ];
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-18T02:52:45.725Z');
     $request->atsInterview->status = Shared\AtsInterviewStatus::Scheduled;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-05T22:15:01.656Z');
     $request->atsInterview->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->patchAtsInterview($request);
 
@@ -1583,37 +1585,37 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T17:44:16.617Z');
-    $request->atsJob->companyId = 'string';
+    $request->atsJob->companyId = '<value>';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T17:48:14.891Z');
     $request->atsJob->departments = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->description = 'Seamless analyzing definition';
     $request->atsJob->employmentType = Shared\EmploymentType::Intern;
     $request->atsJob->hiringManagerIds = [
-        'string',
+        '<value>',
     ];
-    $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'string';
-    $request->atsJob->name = 'string';
+    $request->atsJob->id = '<id>';
+    $request->atsJob->languageLocale = '<value>';
+    $request->atsJob->name = '<value>';
     $request->atsJob->numberOfOpenings = 6182.06;
     $request->atsJob->publicJobUrls = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->raw = [
-        'North' => 'string',
+        'North' => '<value>',
     ];
     $request->atsJob->recruiterIds = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Closed;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T17:34:59.133Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->patchAtsJob($request);
 
@@ -1661,24 +1663,24 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->applicationId = '<value>';
+    $request->atsScorecard->candidateId = '<value>';
     $request->atsScorecard->comment = 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support';
     $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-06T13:32:29.533Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->id = '<id>';
+    $request->atsScorecard->interviewId = '<value>';
+    $request->atsScorecard->interviewerId = '<value>';
+    $request->atsScorecard->jobId = '<value>';
     $request->atsScorecard->questions = [
         new Shared\AtsScorecardQuestion(),
     ];
     $request->atsScorecard->raw = [
-        'World' => 'string',
+        'World' => '<value>',
     ];
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-07T14:14:42.219Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->patchAtsScorecard($request);
 
@@ -1725,8 +1727,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsApplicationRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->removeAtsApplication($request);
 
@@ -1773,8 +1775,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsCandidateRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->removeAtsCandidate($request);
 
@@ -1821,8 +1823,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsDocumentRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->removeAtsDocument($request);
 
@@ -1869,8 +1871,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsInterviewRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->removeAtsInterview($request);
 
@@ -1917,8 +1919,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsJobRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->removeAtsJob($request);
 
@@ -1965,8 +1967,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAtsScorecardRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->removeAtsScorecard($request);
 
@@ -2015,22 +2017,22 @@ try {
         $request = new Operations\UpdateAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-22T12:21:27.415Z');
-    $request->atsApplication->candidateId = 'string';
+    $request->atsApplication->candidateId = '<value>';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-04T12:46:09.878Z');
     $request->atsApplication->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-09T08:57:01.906Z');
-    $request->atsApplication->id = '<ID>';
-    $request->atsApplication->jobId = 'string';
-    $request->atsApplication->originalStatus = 'string';
+    $request->atsApplication->id = '<id>';
+    $request->atsApplication->jobId = '<value>';
+    $request->atsApplication->originalStatus = '<value>';
     $request->atsApplication->raw = [
-        'Minivan' => 'string',
+        'Minivan' => '<value>',
     ];
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-17T03:12:00.865Z');
-    $request->atsApplication->rejectedReason = 'string';
-    $request->atsApplication->source = 'string';
+    $request->atsApplication->rejectedReason = '<value>';
+    $request->atsApplication->source = '<value>';
     $request->atsApplication->status = Shared\AtsApplicationStatus::Rejected;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T12:26:06.546Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->updateAtsApplication($request);
 
@@ -2079,44 +2081,45 @@ try {
         $request = new Operations\UpdateAtsCandidateRequest();
     $request->atsCandidate = new Shared\AtsCandidate();
     $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = 'string';
-    $request->atsCandidate->address->address2 = 'string';
+    $request->atsCandidate->address->address1 = '<value>';
+    $request->atsCandidate->address->address2 = '<value>';
     $request->atsCandidate->address->city = 'Hintzborough';
     $request->atsCandidate->address->country = 'Afghanistan';
     $request->atsCandidate->address->countryCode = 'TF';
     $request->atsCandidate->address->postalCode = '39423';
-    $request->atsCandidate->address->region = 'string';
-    $request->atsCandidate->address->regionCode = 'string';
-    $request->atsCandidate->companyId = 'string';
+    $request->atsCandidate->address->region = '<value>';
+    $request->atsCandidate->address->regionCode = '<value>';
+    $request->atsCandidate->companyId = '<value>';
     $request->atsCandidate->companyName = 'O\'Reilly Inc';
     $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T03:55:05.691Z');
+    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T17:01:22.026Z');
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = 'string';
-    $request->atsCandidate->id = '<ID>';
-    $request->atsCandidate->imageUrl = 'string';
+    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->id = '<id>';
+    $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
-        'string',
+        '<value>',
     ];
-    $request->atsCandidate->name = 'string';
-    $request->atsCandidate->origin = Shared\Origin::Referred;
+    $request->atsCandidate->name = '<value>';
+    $request->atsCandidate->origin = Shared\Origin::Agency;
     $request->atsCandidate->raw = [
-        'lime' => 'string',
+        'Potassium' => '<value>',
     ];
     $request->atsCandidate->sources = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->tags = [
-        'string',
+        '<value>',
     ];
     $request->atsCandidate->telephones = [
         new Shared\AtsTelephone(),
     ];
-    $request->atsCandidate->title = 'string';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-18T10:50:29.862Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->atsCandidate->title = '<value>';
+    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-19T09:22:29.995Z');
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->updateAtsCandidate($request);
 
@@ -2164,22 +2167,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAtsDocumentRequest();
     $request->atsDocument = new Shared\AtsDocument();
-    $request->atsDocument->applicationId = 'string';
-    $request->atsDocument->candidateId = 'string';
+    $request->atsDocument->applicationId = '<value>';
+    $request->atsDocument->candidateId = '<value>';
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-05T17:05:49.106Z');
-    $request->atsDocument->documentData = 'string';
-    $request->atsDocument->documentUrl = 'string';
+    $request->atsDocument->documentData = '<value>';
+    $request->atsDocument->documentUrl = '<value>';
     $request->atsDocument->filename = 'unbranded_reprehenderit.jpg';
-    $request->atsDocument->id = '<ID>';
-    $request->atsDocument->jobId = 'string';
+    $request->atsDocument->id = '<id>';
+    $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'GB' => 'string',
+        'GB' => '<value>',
     ];
     $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
     $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-21T13:20:57.007Z');
-    $request->atsDocument->userId = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->atsDocument->userId = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->updateAtsDocument($request);
 
@@ -2227,25 +2230,25 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAtsInterviewRequest();
     $request->atsInterview = new Shared\AtsInterview();
-    $request->atsInterview->applicationId = 'string';
-    $request->atsInterview->candidateId = 'string';
+    $request->atsInterview->applicationId = '<value>';
+    $request->atsInterview->candidateId = '<value>';
     $request->atsInterview->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-06T05:22:44.534Z');
     $request->atsInterview->endAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-29T20:29:22.648Z');
-    $request->atsInterview->externalEventXref = 'string';
-    $request->atsInterview->id = '<ID>';
-    $request->atsInterview->jobId = 'string';
-    $request->atsInterview->location = 'string';
+    $request->atsInterview->externalEventXref = '<value>';
+    $request->atsInterview->id = '<id>';
+    $request->atsInterview->jobId = '<value>';
+    $request->atsInterview->location = '<value>';
     $request->atsInterview->raw = [
-        'maroon' => 'string',
+        'maroon' => '<value>',
     ];
     $request->atsInterview->startAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-01T17:04:47.962Z');
     $request->atsInterview->status = Shared\AtsInterviewStatus::Complete;
     $request->atsInterview->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-27T22:37:40.818Z');
     $request->atsInterview->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->updateAtsInterview($request);
 
@@ -2297,37 +2300,37 @@ try {
         new Shared\AtsAddress(),
     ];
     $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T07:41:08.131Z');
-    $request->atsJob->companyId = 'string';
+    $request->atsJob->companyId = '<value>';
     $request->atsJob->compensation = [
         new Shared\AtsCompensation(),
     ];
     $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-28T21:47:53.309Z');
     $request->atsJob->departments = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->description = 'Implemented even-keeled parallelism';
     $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
     $request->atsJob->hiringManagerIds = [
-        'string',
+        '<value>',
     ];
-    $request->atsJob->id = '<ID>';
-    $request->atsJob->languageLocale = 'string';
-    $request->atsJob->name = 'string';
+    $request->atsJob->id = '<id>';
+    $request->atsJob->languageLocale = '<value>';
+    $request->atsJob->name = '<value>';
     $request->atsJob->numberOfOpenings = 9080.02;
     $request->atsJob->publicJobUrls = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->raw = [
-        'Direct' => 'string',
+        'Direct' => '<value>',
     ];
     $request->atsJob->recruiterIds = [
-        'string',
+        '<value>',
     ];
     $request->atsJob->remote = false;
     $request->atsJob->status = Shared\AtsJobStatus::Draft;
     $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-04T04:44:52.139Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->updateAtsJob($request);
 
@@ -2375,24 +2378,24 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAtsScorecardRequest();
     $request->atsScorecard = new Shared\AtsScorecard();
-    $request->atsScorecard->applicationId = 'string';
-    $request->atsScorecard->candidateId = 'string';
+    $request->atsScorecard->applicationId = '<value>';
+    $request->atsScorecard->candidateId = '<value>';
     $request->atsScorecard->comment = 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive';
     $request->atsScorecard->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T16:18:43.908Z');
-    $request->atsScorecard->id = '<ID>';
-    $request->atsScorecard->interviewId = 'string';
-    $request->atsScorecard->interviewerId = 'string';
-    $request->atsScorecard->jobId = 'string';
+    $request->atsScorecard->id = '<id>';
+    $request->atsScorecard->interviewId = '<value>';
+    $request->atsScorecard->interviewerId = '<value>';
+    $request->atsScorecard->jobId = '<value>';
     $request->atsScorecard->questions = [
         new Shared\AtsScorecardQuestion(),
     ];
     $request->atsScorecard->raw = [
-        'Digitized' => 'string',
+        'Digitized' => '<value>',
     ];
     $request->atsScorecard->recommendation = Shared\Recommendation::Yes;
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-16T12:20:06.330Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->ats->updateAtsScorecard($request);
 

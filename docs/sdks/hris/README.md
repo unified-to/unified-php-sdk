@@ -41,45 +41,45 @@ try {
         $request = new Operations\CreateHrisEmployeeRequest();
     $request->hrisEmployee = new Shared\HrisEmployee();
     $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
-    $request->hrisEmployee->address->address1 = 'string';
-    $request->hrisEmployee->address->address2 = 'string';
+    $request->hrisEmployee->address->address1 = '<value>';
+    $request->hrisEmployee->address->address2 = '<value>';
     $request->hrisEmployee->address->city = 'Armstrongborough';
     $request->hrisEmployee->address->country = 'Indonesia';
     $request->hrisEmployee->address->countryCode = 'MO';
     $request->hrisEmployee->address->postalCode = '23995';
-    $request->hrisEmployee->address->region = 'string';
-    $request->hrisEmployee->address->regionCode = 'string';
+    $request->hrisEmployee->address->region = '<value>';
+    $request->hrisEmployee->address->regionCode = '<value>';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-07T16:11:17.542Z');
     $request->hrisEmployee->currency = 'Tunisian Dinar';
     $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-15T21:52:09.133Z');
-    $request->hrisEmployee->department = 'string';
-    $request->hrisEmployee->division = 'string';
+    $request->hrisEmployee->department = '<value>';
+    $request->hrisEmployee->division = '<value>';
     $request->hrisEmployee->emails = [
         new Shared\HrisEmail(),
     ];
-    $request->hrisEmployee->employeeNumber = 'string';
+    $request->hrisEmployee->employeeNumber = '<value>';
     $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Active;
     $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::FullTime;
     $request->hrisEmployee->gender = Shared\HrisEmployeeGender::NonBinary;
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-08T04:47:23.458Z');
-    $request->hrisEmployee->id = '<ID>';
-    $request->hrisEmployee->imageUrl = 'string';
-    $request->hrisEmployee->languageLocale = 'string';
-    $request->hrisEmployee->location = 'string';
-    $request->hrisEmployee->managerId = 'string';
+    $request->hrisEmployee->id = '<id>';
+    $request->hrisEmployee->imageUrl = '<value>';
+    $request->hrisEmployee->languageLocale = '<value>';
+    $request->hrisEmployee->location = '<value>';
+    $request->hrisEmployee->managerId = '<value>';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Married;
-    $request->hrisEmployee->name = 'string';
+    $request->hrisEmployee->name = '<value>';
     $request->hrisEmployee->raw = [
-        'Deckow' => 'string',
+        'Deckow' => '<value>',
     ];
     $request->hrisEmployee->telephones = [
         new Shared\HrisTelephone(),
     ];
     $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-06T17:06:15.004Z');
     $request->hrisEmployee->timezone = 'Australia/Melbourne';
-    $request->hrisEmployee->title = 'string';
+    $request->hrisEmployee->title = '<value>';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-26T16:14:34.561Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->hris->createHrisEmployee($request);
 
@@ -129,22 +129,22 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-12T02:07:27.193Z');
     $request->hrisGroup->description = 'Self-enabling system-worthy collaboration';
-    $request->hrisGroup->id = '<ID>';
+    $request->hrisGroup->id = '<id>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'string',
+        '<value>',
     ];
-    $request->hrisGroup->name = 'string';
-    $request->hrisGroup->parentId = 'string';
+    $request->hrisGroup->name = '<value>';
+    $request->hrisGroup->parentId = '<value>';
     $request->hrisGroup->raw = [
-        'South' => 'string',
+        'South' => '<value>',
     ];
     $request->hrisGroup->type = Shared\HrisGroupType::Department;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-28T15:45:30.103Z');
     $request->hrisGroup->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->hris->createHrisGroup($request);
 
@@ -191,11 +191,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetHrisEmployeeRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->hris->getHrisEmployee($request);
 
@@ -242,11 +242,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetHrisGroupRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->hris->getHrisGroup($request);
 
@@ -293,15 +293,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListHrisEmployeesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 5148.12;
     $request->offset = 2185.43;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-10T00:54:40.984Z');;
 
     $response = $sdk->hris->listHrisEmployees($request);
@@ -349,15 +349,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListHrisGroupsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 4815.14;
     $request->offset = 2554.75;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T00:40:26.357Z');;
 
     $response = $sdk->hris->listHrisGroups($request);
@@ -407,46 +407,46 @@ try {
         $request = new Operations\PatchHrisEmployeeRequest();
     $request->hrisEmployee = new Shared\HrisEmployee();
     $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
-    $request->hrisEmployee->address->address1 = 'string';
-    $request->hrisEmployee->address->address2 = 'string';
+    $request->hrisEmployee->address->address1 = '<value>';
+    $request->hrisEmployee->address->address2 = '<value>';
     $request->hrisEmployee->address->city = 'Zettaland';
     $request->hrisEmployee->address->country = 'Mexico';
     $request->hrisEmployee->address->countryCode = 'DJ';
     $request->hrisEmployee->address->postalCode = '87892';
-    $request->hrisEmployee->address->region = 'string';
-    $request->hrisEmployee->address->regionCode = 'string';
+    $request->hrisEmployee->address->region = '<value>';
+    $request->hrisEmployee->address->regionCode = '<value>';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-12T22:40:07.218Z');
     $request->hrisEmployee->currency = 'Venezuelan bolívar';
     $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-04T03:46:56.564Z');
-    $request->hrisEmployee->department = 'string';
-    $request->hrisEmployee->division = 'string';
+    $request->hrisEmployee->department = '<value>';
+    $request->hrisEmployee->division = '<value>';
     $request->hrisEmployee->emails = [
         new Shared\HrisEmail(),
     ];
-    $request->hrisEmployee->employeeNumber = 'string';
+    $request->hrisEmployee->employeeNumber = '<value>';
     $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Inactive;
     $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::PartTime;
     $request->hrisEmployee->gender = Shared\HrisEmployeeGender::Male;
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-20T23:12:44.407Z');
-    $request->hrisEmployee->id = '<ID>';
-    $request->hrisEmployee->imageUrl = 'string';
-    $request->hrisEmployee->languageLocale = 'string';
-    $request->hrisEmployee->location = 'string';
-    $request->hrisEmployee->managerId = 'string';
+    $request->hrisEmployee->id = '<id>';
+    $request->hrisEmployee->imageUrl = '<value>';
+    $request->hrisEmployee->languageLocale = '<value>';
+    $request->hrisEmployee->location = '<value>';
+    $request->hrisEmployee->managerId = '<value>';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
-    $request->hrisEmployee->name = 'string';
+    $request->hrisEmployee->name = '<value>';
     $request->hrisEmployee->raw = [
-        'Nissan' => 'string',
+        'Nissan' => '<value>',
     ];
     $request->hrisEmployee->telephones = [
         new Shared\HrisTelephone(),
     ];
     $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-11T17:51:00.187Z');
     $request->hrisEmployee->timezone = 'Europe/Lisbon';
-    $request->hrisEmployee->title = 'string';
+    $request->hrisEmployee->title = '<value>';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-01T15:09:08.937Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->hris->patchHrisEmployee($request);
 
@@ -496,23 +496,23 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-10T03:17:00.454Z');
     $request->hrisGroup->description = 'Compatible contextually-based local area network';
-    $request->hrisGroup->id = '<ID>';
+    $request->hrisGroup->id = '<id>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'string',
+        '<value>',
     ];
-    $request->hrisGroup->name = 'string';
-    $request->hrisGroup->parentId = 'string';
+    $request->hrisGroup->name = '<value>';
+    $request->hrisGroup->parentId = '<value>';
     $request->hrisGroup->raw = [
-        'indexing' => 'string',
+        'indexing' => '<value>',
     ];
     $request->hrisGroup->type = Shared\HrisGroupType::BusinessUnit;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T11:47:16.863Z');
     $request->hrisGroup->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->hris->patchHrisGroup($request);
 
@@ -559,8 +559,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveHrisEmployeeRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->hris->removeHrisEmployee($request);
 
@@ -607,8 +607,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveHrisGroupRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->hris->removeHrisGroup($request);
 
@@ -657,46 +657,46 @@ try {
         $request = new Operations\UpdateHrisEmployeeRequest();
     $request->hrisEmployee = new Shared\HrisEmployee();
     $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
-    $request->hrisEmployee->address->address1 = 'string';
-    $request->hrisEmployee->address->address2 = 'string';
+    $request->hrisEmployee->address->address1 = '<value>';
+    $request->hrisEmployee->address->address2 = '<value>';
     $request->hrisEmployee->address->city = 'North Alfurt';
     $request->hrisEmployee->address->country = 'Thailand';
     $request->hrisEmployee->address->countryCode = 'ST';
     $request->hrisEmployee->address->postalCode = '60601-3179';
-    $request->hrisEmployee->address->region = 'string';
-    $request->hrisEmployee->address->regionCode = 'string';
+    $request->hrisEmployee->address->region = '<value>';
+    $request->hrisEmployee->address->regionCode = '<value>';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-07T16:21:55.126Z');
     $request->hrisEmployee->currency = 'Zimbabwe Dollar';
     $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-03T23:33:19.708Z');
-    $request->hrisEmployee->department = 'string';
-    $request->hrisEmployee->division = 'string';
+    $request->hrisEmployee->department = '<value>';
+    $request->hrisEmployee->division = '<value>';
     $request->hrisEmployee->emails = [
         new Shared\HrisEmail(),
     ];
-    $request->hrisEmployee->employeeNumber = 'string';
+    $request->hrisEmployee->employeeNumber = '<value>';
     $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Active;
     $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::Volunteer;
     $request->hrisEmployee->gender = Shared\HrisEmployeeGender::NonBinary;
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-20T07:53:27.713Z');
-    $request->hrisEmployee->id = '<ID>';
-    $request->hrisEmployee->imageUrl = 'string';
-    $request->hrisEmployee->languageLocale = 'string';
-    $request->hrisEmployee->location = 'string';
-    $request->hrisEmployee->managerId = 'string';
+    $request->hrisEmployee->id = '<id>';
+    $request->hrisEmployee->imageUrl = '<value>';
+    $request->hrisEmployee->languageLocale = '<value>';
+    $request->hrisEmployee->location = '<value>';
+    $request->hrisEmployee->managerId = '<value>';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
-    $request->hrisEmployee->name = 'string';
+    $request->hrisEmployee->name = '<value>';
     $request->hrisEmployee->raw = [
-        'Senior' => 'string',
+        'Senior' => '<value>',
     ];
     $request->hrisEmployee->telephones = [
         new Shared\HrisTelephone(),
     ];
     $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-09T06:17:10.243Z');
     $request->hrisEmployee->timezone = 'Africa/Casablanca';
-    $request->hrisEmployee->title = 'string';
+    $request->hrisEmployee->title = '<value>';
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-13T20:08:58.858Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->hris->updateHrisEmployee($request);
 
@@ -746,23 +746,23 @@ try {
     $request->hrisGroup = new Shared\HrisGroup();
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-07T01:08:49.621Z');
     $request->hrisGroup->description = 'Integrated empowering productivity';
-    $request->hrisGroup->id = '<ID>';
+    $request->hrisGroup->id = '<id>';
     $request->hrisGroup->isActive = false;
     $request->hrisGroup->managerIds = [
-        'string',
+        '<value>',
     ];
-    $request->hrisGroup->name = 'string';
-    $request->hrisGroup->parentId = 'string';
+    $request->hrisGroup->name = '<value>';
+    $request->hrisGroup->parentId = '<value>';
     $request->hrisGroup->raw = [
-        'Southwest' => 'string',
+        'Southwest' => '<value>',
     ];
     $request->hrisGroup->type = Shared\HrisGroupType::Team;
     $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-09T14:54:15.549Z');
     $request->hrisGroup->userIds = [
-        'string',
+        '<value>',
     ];
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->hris->updateHrisGroup($request);
 

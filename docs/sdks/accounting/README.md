@@ -73,18 +73,18 @@ try {
     $request->accountingAccount->balance = 6602.56;
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-02T22:12:31.771Z');
     $request->accountingAccount->currency = 'Saint Helena Pound';
-    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->customerDefinedCode = '<value>';
     $request->accountingAccount->description = 'Cross-group zero defect task-force';
-    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->id = '<id>';
     $request->accountingAccount->isPayable = false;
-    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->name = '<value>';
     $request->accountingAccount->raw = [
-        'Ruble' => 'string',
+        'Ruble' => '<value>',
     ];
     $request->accountingAccount->status = Shared\Status::Active;
     $request->accountingAccount->type = Shared\Type::FixedAsset;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T23:54:12.882Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingAccount($request);
 
@@ -133,43 +133,43 @@ try {
         $request = new Operations\CreateAccountingContactRequest();
     $request->accountingContact = new Shared\AccountingContact();
     $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
-    $request->accountingContact->billingAddress->address1 = 'string';
-    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->address1 = '<value>';
+    $request->accountingContact->billingAddress->address2 = '<value>';
     $request->accountingContact->billingAddress->city = 'Lake Benny';
     $request->accountingContact->billingAddress->country = 'Azerbaijan';
     $request->accountingContact->billingAddress->countryCode = 'GT';
     $request->accountingContact->billingAddress->postalCode = '48359-3238';
-    $request->accountingContact->billingAddress->region = 'string';
-    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->billingAddress->region = '<value>';
+    $request->accountingContact->billingAddress->regionCode = '<value>';
     $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-19T03:22:44.048Z');
     $request->accountingContact->currency = 'Peso Uruguayo';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->id = '<id>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
-    $request->accountingContact->name = 'string';
+    $request->accountingContact->name = '<value>';
     $request->accountingContact->raw = [
-        'unfold' => 'string',
+        'unfold' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
-    $request->accountingContact->shippingAddress->address1 = 'string';
-    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->address1 = '<value>';
+    $request->accountingContact->shippingAddress->address2 = '<value>';
     $request->accountingContact->shippingAddress->city = 'Port Wilberfield';
     $request->accountingContact->shippingAddress->country = 'Bouvet Island (Bouvetoya)';
     $request->accountingContact->shippingAddress->countryCode = 'AM';
     $request->accountingContact->shippingAddress->postalCode = '62093';
-    $request->accountingContact->shippingAddress->region = 'string';
-    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->shippingAddress->region = '<value>';
+    $request->accountingContact->shippingAddress->regionCode = '<value>';
     $request->accountingContact->taxExemption = Shared\TaxExemption::EducationalOrg;
-    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
     $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-29T11:32:51.059Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingContact($request);
 
@@ -219,30 +219,30 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6736.06;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-27T09:14:42.959Z');
-    $request->accountingInvoice->contactId = 'string';
+    $request->accountingInvoice->contactId = '<value>';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-05T18:32:52.109Z');
     $request->accountingInvoice->currency = 'Uzbekistan Sum';
     $request->accountingInvoice->discountAmount = 259.66;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T15:54:59.455Z');
-    $request->accountingInvoice->id = '<ID>';
-    $request->accountingInvoice->invoiceNumber = 'string';
+    $request->accountingInvoice->id = '<id>';
+    $request->accountingInvoice->invoiceNumber = '<value>';
     $request->accountingInvoice->lineitems = [
         new Shared\AccountingLineitem(),
     ];
-    $request->accountingInvoice->notes = 'string';
+    $request->accountingInvoice->notes = '<value>';
     $request->accountingInvoice->paidAmount = 7142.37;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T02:12:20.862Z');
     $request->accountingInvoice->raw = [
-        'Central' => 'string',
+        'Central' => '<value>',
     ];
     $request->accountingInvoice->refundAmount = 1578.89;
-    $request->accountingInvoice->refundReason = 'string';
+    $request->accountingInvoice->refundReason = '<value>';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-27T04:22:20.182Z');
     $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
     $request->accountingInvoice->taxAmount = 6864;
     $request->accountingInvoice->totalAmount = 6873.46;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T22:49:02.835Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingInvoice($request);
 
@@ -290,21 +290,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = 'string';
-    $request->accountingPayment->contactId = 'string';
+    $request->accountingPayment->accountId = '<value>';
+    $request->accountingPayment->contactId = '<value>';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-28T13:13:46.548Z');
     $request->accountingPayment->currency = 'Lari';
-    $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceId = 'string';
-    $request->accountingPayment->notes = 'string';
-    $request->accountingPayment->paymentMethod = 'string';
+    $request->accountingPayment->id = '<id>';
+    $request->accountingPayment->invoiceId = '<value>';
+    $request->accountingPayment->notes = '<value>';
+    $request->accountingPayment->paymentMethod = '<value>';
     $request->accountingPayment->raw = [
-        'Mount' => 'string',
+        'Mount' => '<value>',
     ];
-    $request->accountingPayment->reference = 'string';
+    $request->accountingPayment->reference = '<value>';
     $request->accountingPayment->totalAmount = 1821.1;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-22T09:20:36.660Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingPayment($request);
 
@@ -354,15 +354,15 @@ try {
     $request->accountingTaxrate = new Shared\AccountingTaxrate();
     $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-08T09:55:20.238Z');
     $request->accountingTaxrate->description = 'Enterprise-wide content-based productivity';
-    $request->accountingTaxrate->id = '<ID>';
+    $request->accountingTaxrate->id = '<id>';
     $request->accountingTaxrate->isActive = false;
-    $request->accountingTaxrate->name = 'string';
+    $request->accountingTaxrate->name = '<value>';
     $request->accountingTaxrate->rate = 6789.7;
     $request->accountingTaxrate->raw = [
-        'Human' => 'string',
+        'Human' => '<value>',
     ];
     $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-06T04:09:12.755Z');
-    $request->connectionId = 'string';;
+    $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingTaxrate($request);
 
@@ -410,21 +410,21 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->createdAt = '<value>';
     $request->accountingTransaction->currency = 'Libyan Dinar';
     $request->accountingTransaction->description = 'Pre-emptive multimedia benchmark';
-    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->id = '<id>';
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
     $request->accountingTransaction->raw = [
-        'Metal' => 'string',
+        'Metal' => '<value>',
     ];
-    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->reference = '<value>';
     $request->accountingTransaction->taxAmount = 8276.07;
-    $request->accountingTransaction->taxrateId = 'string';
-    $request->accountingTransaction->updatedAt = 'string';
-    $request->connectionId = 'string';;
+    $request->accountingTransaction->taxrateId = '<value>';
+    $request->accountingTransaction->updatedAt = '<value>';
+    $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingTransaction($request);
 
@@ -471,11 +471,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingAccountRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingAccount($request);
 
@@ -522,11 +522,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingContactRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingContact($request);
 
@@ -573,11 +573,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingInvoiceRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingInvoice($request);
 
@@ -624,11 +624,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingOrganizationRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingOrganization($request);
 
@@ -675,11 +675,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingPaymentRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingPayment($request);
 
@@ -726,11 +726,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingPayoutRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingPayout($request);
 
@@ -777,11 +777,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingRefundRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingRefund($request);
 
@@ -828,11 +828,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingTaxrateRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingTaxrate($request);
 
@@ -879,11 +879,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountingTransactionRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->getAccountingTransaction($request);
 
@@ -930,15 +930,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingAccountsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 9476.86;
     $request->offset = 5444.77;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-19T21:33:28.191Z');;
 
     $response = $sdk->accounting->listAccountingAccounts($request);
@@ -986,16 +986,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingContactsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 4596.32;
     $request->offset = 8881.9;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
-    $request->type = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->type = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T14:00:38.736Z');;
 
     $response = $sdk->accounting->listAccountingContacts($request);
@@ -1043,16 +1043,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingInvoicesRequest();
-    $request->connectionId = 'string';
-    $request->contactId = 'string';
+    $request->connectionId = '<value>';
+    $request->contactId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 6788.11;
     $request->offset = 5122.49;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-23T19:02:52.454Z');;
 
     $response = $sdk->accounting->listAccountingInvoices($request);
@@ -1100,15 +1100,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingOrganizationsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 4896.89;
     $request->offset = 9817.05;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-02T18:55:09.644Z');;
 
     $response = $sdk->accounting->listAccountingOrganizations($request);
@@ -1156,17 +1156,17 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingPaymentsRequest();
-    $request->connectionId = 'string';
-    $request->contactId = 'string';
+    $request->connectionId = '<value>';
+    $request->contactId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
-    $request->invoiceId = 'string';
+    $request->invoiceId = '<value>';
     $request->limit = 487.78;
     $request->offset = 9308.83;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-25T18:15:35.411Z');;
 
     $response = $sdk->accounting->listAccountingPayments($request);
@@ -1214,15 +1214,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingPayoutsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 6876.93;
     $request->offset = 5.2;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-08T08:07:55.044Z');;
 
     $response = $sdk->accounting->listAccountingPayouts($request);
@@ -1270,16 +1270,16 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingRefundsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 8743.36;
     $request->offset = 6995.02;
-    $request->order = 'string';
-    $request->paymentId = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->paymentId = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-01T03:28:05.895Z');;
 
     $response = $sdk->accounting->listAccountingRefunds($request);
@@ -1327,15 +1327,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingTaxratesRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 1599.19;
     $request->offset = 1097.48;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T14:31:13.247Z');;
 
     $response = $sdk->accounting->listAccountingTaxrates($request);
@@ -1383,15 +1383,15 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListAccountingTransactionsRequest();
-    $request->connectionId = 'string';
+    $request->connectionId = '<value>';
     $request->fields = [
-        'string',
+        '<value>',
     ];
     $request->limit = 7894.5;
     $request->offset = 4597.84;
-    $request->order = 'string';
-    $request->query = 'string';
-    $request->sort = 'string';
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-02T12:20:43.572Z');;
 
     $response = $sdk->accounting->listAccountingTransactions($request);
@@ -1443,19 +1443,19 @@ try {
     $request->accountingAccount->balance = 1931.26;
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T13:35:06.969Z');
     $request->accountingAccount->currency = 'Won';
-    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->customerDefinedCode = '<value>';
     $request->accountingAccount->description = 'Quality-focused multimedia implementation';
-    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->id = '<id>';
     $request->accountingAccount->isPayable = false;
-    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->name = '<value>';
     $request->accountingAccount->raw = [
-        'male' => 'string',
+        'male' => '<value>',
     ];
     $request->accountingAccount->status = Shared\Status::Archived;
     $request->accountingAccount->type = Shared\Type::Expense;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-01T20:09:00.405Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->patchAccountingAccount($request);
 
@@ -1504,44 +1504,44 @@ try {
         $request = new Operations\PatchAccountingContactRequest();
     $request->accountingContact = new Shared\AccountingContact();
     $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
-    $request->accountingContact->billingAddress->address1 = 'string';
-    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->address1 = '<value>';
+    $request->accountingContact->billingAddress->address2 = '<value>';
     $request->accountingContact->billingAddress->city = 'Sylvestermouth';
     $request->accountingContact->billingAddress->country = 'Norfolk Island';
     $request->accountingContact->billingAddress->countryCode = 'BN';
     $request->accountingContact->billingAddress->postalCode = '34531-3519';
-    $request->accountingContact->billingAddress->region = 'string';
-    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->billingAddress->region = '<value>';
+    $request->accountingContact->billingAddress->regionCode = '<value>';
     $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-14T18:48:39.369Z');
     $request->accountingContact->currency = 'Singapore Dollar';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->id = '<id>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
-    $request->accountingContact->name = 'string';
+    $request->accountingContact->name = '<value>';
     $request->accountingContact->raw = [
-        'bypass' => 'string',
+        'bypass' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
-    $request->accountingContact->shippingAddress->address1 = 'string';
-    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->address1 = '<value>';
+    $request->accountingContact->shippingAddress->address2 = '<value>';
     $request->accountingContact->shippingAddress->city = 'Koeppfield';
     $request->accountingContact->shippingAddress->country = 'Netherlands Antilles';
     $request->accountingContact->shippingAddress->countryCode = 'NE';
     $request->accountingContact->shippingAddress->postalCode = '36791';
-    $request->accountingContact->shippingAddress->region = 'string';
-    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->shippingAddress->region = '<value>';
+    $request->accountingContact->shippingAddress->regionCode = '<value>';
     $request->accountingContact->taxExemption = Shared\TaxExemption::TribalGov;
-    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
     $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T21:20:14.932Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->patchAccountingContact($request);
 
@@ -1591,31 +1591,31 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 7374.1;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-18T11:25:21.140Z');
-    $request->accountingInvoice->contactId = 'string';
+    $request->accountingInvoice->contactId = '<value>';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T05:39:15.854Z');
     $request->accountingInvoice->currency = 'Gold';
     $request->accountingInvoice->discountAmount = 9127.96;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-05T05:55:55.560Z');
-    $request->accountingInvoice->id = '<ID>';
-    $request->accountingInvoice->invoiceNumber = 'string';
+    $request->accountingInvoice->id = '<id>';
+    $request->accountingInvoice->invoiceNumber = '<value>';
     $request->accountingInvoice->lineitems = [
         new Shared\AccountingLineitem(),
     ];
-    $request->accountingInvoice->notes = 'string';
+    $request->accountingInvoice->notes = '<value>';
     $request->accountingInvoice->paidAmount = 7810.81;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-02T21:47:54.080Z');
     $request->accountingInvoice->raw = [
-        'Northwest' => 'string',
+        'Northwest' => '<value>',
     ];
     $request->accountingInvoice->refundAmount = 6443.77;
-    $request->accountingInvoice->refundReason = 'string';
+    $request->accountingInvoice->refundReason = '<value>';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-21T01:13:52.344Z');
     $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
     $request->accountingInvoice->taxAmount = 1140.08;
     $request->accountingInvoice->totalAmount = 4543.48;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-02T12:10:13.037Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->patchAccountingInvoice($request);
 
@@ -1663,22 +1663,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = 'string';
-    $request->accountingPayment->contactId = 'string';
+    $request->accountingPayment->accountId = '<value>';
+    $request->accountingPayment->contactId = '<value>';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-25T02:56:43.385Z');
     $request->accountingPayment->currency = 'Boliviano boliviano';
-    $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceId = 'string';
-    $request->accountingPayment->notes = 'string';
-    $request->accountingPayment->paymentMethod = 'string';
+    $request->accountingPayment->id = '<id>';
+    $request->accountingPayment->invoiceId = '<value>';
+    $request->accountingPayment->notes = '<value>';
+    $request->accountingPayment->paymentMethod = '<value>';
     $request->accountingPayment->raw = [
-        'periodic' => 'string',
+        'periodic' => '<value>',
     ];
-    $request->accountingPayment->reference = 'string';
+    $request->accountingPayment->reference = '<value>';
     $request->accountingPayment->totalAmount = 9979.6;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-15T02:06:02.492Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->patchAccountingPayment($request);
 
@@ -1728,16 +1728,16 @@ try {
     $request->accountingTaxrate = new Shared\AccountingTaxrate();
     $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-19T15:57:03.731Z');
     $request->accountingTaxrate->description = 'Quality-focused user-facing complexity';
-    $request->accountingTaxrate->id = '<ID>';
+    $request->accountingTaxrate->id = '<id>';
     $request->accountingTaxrate->isActive = false;
-    $request->accountingTaxrate->name = 'string';
+    $request->accountingTaxrate->name = '<value>';
     $request->accountingTaxrate->rate = 220.78;
     $request->accountingTaxrate->raw = [
-        'Facilitator' => 'string',
+        'Facilitator' => '<value>',
     ];
     $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-17T14:16:26.961Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->patchAccountingTaxrate($request);
 
@@ -1785,22 +1785,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->createdAt = '<value>';
     $request->accountingTransaction->currency = 'Kwacha';
     $request->accountingTransaction->description = 'Multi-channelled transitional function';
-    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->id = '<id>';
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
     $request->accountingTransaction->raw = [
-        'Gambia' => 'string',
+        'Gambia' => '<value>',
     ];
-    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->reference = '<value>';
     $request->accountingTransaction->taxAmount = 259.82;
-    $request->accountingTransaction->taxrateId = 'string';
-    $request->accountingTransaction->updatedAt = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->accountingTransaction->taxrateId = '<value>';
+    $request->accountingTransaction->updatedAt = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->patchAccountingTransaction($request);
 
@@ -1847,8 +1847,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingAccountRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->removeAccountingAccount($request);
 
@@ -1895,8 +1895,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingContactRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->removeAccountingContact($request);
 
@@ -1943,8 +1943,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingInvoiceRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->removeAccountingInvoice($request);
 
@@ -1991,8 +1991,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingPaymentRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->removeAccountingPayment($request);
 
@@ -2039,8 +2039,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingTaxrateRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->removeAccountingTaxrate($request);
 
@@ -2087,8 +2087,8 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveAccountingTransactionRequest();
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->removeAccountingTransaction($request);
 
@@ -2139,19 +2139,19 @@ try {
     $request->accountingAccount->balance = 5954.09;
     $request->accountingAccount->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-21T23:41:25.152Z');
     $request->accountingAccount->currency = 'Tanzanian Shilling';
-    $request->accountingAccount->customerDefinedCode = 'string';
+    $request->accountingAccount->customerDefinedCode = '<value>';
     $request->accountingAccount->description = 'Stand-alone grid-enabled model';
-    $request->accountingAccount->id = '<ID>';
+    $request->accountingAccount->id = '<id>';
     $request->accountingAccount->isPayable = false;
-    $request->accountingAccount->name = 'string';
+    $request->accountingAccount->name = '<value>';
     $request->accountingAccount->raw = [
-        'Costa' => 'string',
+        'Costa' => '<value>',
     ];
     $request->accountingAccount->status = Shared\Status::Archived;
     $request->accountingAccount->type = Shared\Type::Liability;
     $request->accountingAccount->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-16T10:15:08.356Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->updateAccountingAccount($request);
 
@@ -2200,44 +2200,44 @@ try {
         $request = new Operations\UpdateAccountingContactRequest();
     $request->accountingContact = new Shared\AccountingContact();
     $request->accountingContact->billingAddress = new Shared\PropertyAccountingContactBillingAddress();
-    $request->accountingContact->billingAddress->address1 = 'string';
-    $request->accountingContact->billingAddress->address2 = 'string';
+    $request->accountingContact->billingAddress->address1 = '<value>';
+    $request->accountingContact->billingAddress->address2 = '<value>';
     $request->accountingContact->billingAddress->city = 'Mayaguez';
     $request->accountingContact->billingAddress->country = 'Ghana';
     $request->accountingContact->billingAddress->countryCode = 'JE';
     $request->accountingContact->billingAddress->postalCode = '16521-4269';
-    $request->accountingContact->billingAddress->region = 'string';
-    $request->accountingContact->billingAddress->regionCode = 'string';
+    $request->accountingContact->billingAddress->region = '<value>';
+    $request->accountingContact->billingAddress->regionCode = '<value>';
     $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T04:27:23.372Z');
     $request->accountingContact->currency = 'European Monetary Unit (E.M.U.-6)';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
-    $request->accountingContact->id = '<ID>';
+    $request->accountingContact->id = '<id>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
-    $request->accountingContact->name = 'string';
+    $request->accountingContact->name = '<value>';
     $request->accountingContact->raw = [
-        'salmon' => 'string',
+        'salmon' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
-    $request->accountingContact->shippingAddress->address1 = 'string';
-    $request->accountingContact->shippingAddress->address2 = 'string';
+    $request->accountingContact->shippingAddress->address1 = '<value>';
+    $request->accountingContact->shippingAddress->address2 = '<value>';
     $request->accountingContact->shippingAddress->city = 'Lelahport';
     $request->accountingContact->shippingAddress->country = 'Dominica';
     $request->accountingContact->shippingAddress->countryCode = 'SJ';
     $request->accountingContact->shippingAddress->postalCode = '63899';
-    $request->accountingContact->shippingAddress->region = 'string';
-    $request->accountingContact->shippingAddress->regionCode = 'string';
+    $request->accountingContact->shippingAddress->region = '<value>';
+    $request->accountingContact->shippingAddress->regionCode = '<value>';
     $request->accountingContact->taxExemption = Shared\TaxExemption::FederalGov;
-    $request->accountingContact->taxNumber = 'string';
+    $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
     $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-28T03:42:59.577Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->updateAccountingContact($request);
 
@@ -2287,31 +2287,31 @@ try {
     $request->accountingInvoice = new Shared\AccountingInvoice();
     $request->accountingInvoice->balanceAmount = 6974.28;
     $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T06:46:26.704Z');
-    $request->accountingInvoice->contactId = 'string';
+    $request->accountingInvoice->contactId = '<value>';
     $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T23:29:44.275Z');
     $request->accountingInvoice->currency = 'Forint';
     $request->accountingInvoice->discountAmount = 2579.09;
     $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-25T16:24:30.030Z');
-    $request->accountingInvoice->id = '<ID>';
-    $request->accountingInvoice->invoiceNumber = 'string';
+    $request->accountingInvoice->id = '<id>';
+    $request->accountingInvoice->invoiceNumber = '<value>';
     $request->accountingInvoice->lineitems = [
         new Shared\AccountingLineitem(),
     ];
-    $request->accountingInvoice->notes = 'string';
+    $request->accountingInvoice->notes = '<value>';
     $request->accountingInvoice->paidAmount = 3682.14;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-27T09:53:44.172Z');
     $request->accountingInvoice->raw = [
-        'intuitive' => 'string',
+        'intuitive' => '<value>',
     ];
     $request->accountingInvoice->refundAmount = 3314.72;
-    $request->accountingInvoice->refundReason = 'string';
+    $request->accountingInvoice->refundReason = '<value>';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-05T20:13:33.419Z');
     $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
     $request->accountingInvoice->taxAmount = 3824.24;
     $request->accountingInvoice->totalAmount = 2939.97;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T18:41:11.569Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->updateAccountingInvoice($request);
 
@@ -2359,22 +2359,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAccountingPaymentRequest();
     $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = 'string';
-    $request->accountingPayment->contactId = 'string';
+    $request->accountingPayment->accountId = '<value>';
+    $request->accountingPayment->contactId = '<value>';
     $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-04T17:30:16.475Z');
     $request->accountingPayment->currency = 'Sudanese Pound';
-    $request->accountingPayment->id = '<ID>';
-    $request->accountingPayment->invoiceId = 'string';
-    $request->accountingPayment->notes = 'string';
-    $request->accountingPayment->paymentMethod = 'string';
+    $request->accountingPayment->id = '<id>';
+    $request->accountingPayment->invoiceId = '<value>';
+    $request->accountingPayment->notes = '<value>';
+    $request->accountingPayment->paymentMethod = '<value>';
     $request->accountingPayment->raw = [
-        'Music' => 'string',
+        'Music' => '<value>',
     ];
-    $request->accountingPayment->reference = 'string';
+    $request->accountingPayment->reference = '<value>';
     $request->accountingPayment->totalAmount = 4734;
     $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-26T21:11:42.893Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->updateAccountingPayment($request);
 
@@ -2424,16 +2424,16 @@ try {
     $request->accountingTaxrate = new Shared\AccountingTaxrate();
     $request->accountingTaxrate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-06T18:04:39.999Z');
     $request->accountingTaxrate->description = 'Switchable intangible initiative';
-    $request->accountingTaxrate->id = '<ID>';
+    $request->accountingTaxrate->id = '<id>';
     $request->accountingTaxrate->isActive = false;
-    $request->accountingTaxrate->name = 'string';
+    $request->accountingTaxrate->name = '<value>';
     $request->accountingTaxrate->rate = 2580.61;
     $request->accountingTaxrate->raw = [
-        'Buckinghamshire' => 'string',
+        'Buckinghamshire' => '<value>',
     ];
     $request->accountingTaxrate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-25T16:43:20.981Z');
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->updateAccountingTaxrate($request);
 
@@ -2481,22 +2481,22 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAccountingTransactionRequest();
     $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = 'string';
+    $request->accountingTransaction->createdAt = '<value>';
     $request->accountingTransaction->currency = 'Zloty';
     $request->accountingTransaction->description = 'Organic web-enabled orchestration';
-    $request->accountingTransaction->id = '<ID>';
+    $request->accountingTransaction->id = '<id>';
     $request->accountingTransaction->lineitems = [
         new Shared\AccountingTransactionLineitem(),
     ];
     $request->accountingTransaction->raw = [
-        'Intelligent' => 'string',
+        'Intelligent' => '<value>',
     ];
-    $request->accountingTransaction->reference = 'string';
+    $request->accountingTransaction->reference = '<value>';
     $request->accountingTransaction->taxAmount = 421.84;
-    $request->accountingTransaction->taxrateId = 'string';
-    $request->accountingTransaction->updatedAt = 'string';
-    $request->connectionId = 'string';
-    $request->id = '<ID>';;
+    $request->accountingTransaction->taxrateId = '<value>';
+    $request->accountingTransaction->updatedAt = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->accounting->updateAccountingTransaction($request);
 
