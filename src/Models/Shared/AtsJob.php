@@ -107,6 +107,16 @@ class AtsJob
     public ?array $publicJobUrls = null;
     
     /**
+     * $questions
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsJobQuestion> $questions
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('questions')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsJobQuestion>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $questions = null;
+    
+    /**
      * $raw
      * 
      * @var ?array<string, mixed> $raw
@@ -157,6 +167,7 @@ class AtsJob
 		$this->name = null;
 		$this->numberOfOpenings = null;
 		$this->publicJobUrls = null;
+		$this->questions = null;
 		$this->raw = null;
 		$this->recruiterIds = null;
 		$this->remote = null;

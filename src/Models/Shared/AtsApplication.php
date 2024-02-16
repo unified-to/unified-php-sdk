@@ -11,6 +11,16 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsApplication
 {
+    /**
+     * $answers
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsApplicationAnswer> $answers
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('answers')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsApplicationAnswer>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $answers = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('applied_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -83,6 +93,7 @@ class AtsApplication
     
 	public function __construct()
 	{
+		$this->answers = null;
 		$this->appliedAt = null;
 		$this->candidateId = null;
 		$this->createdAt = null;

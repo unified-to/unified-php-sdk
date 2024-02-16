@@ -58,6 +58,9 @@ try {
     $request->atsJob->publicJobUrls = [
         '<value>',
     ];
+    $request->atsJob->questions = [
+        new Shared\AtsJobQuestion(),
+    ];
     $request->atsJob->raw = [
         'wherever' => '<value>',
     ];
@@ -246,6 +249,9 @@ try {
     $request->atsJob->publicJobUrls = [
         '<value>',
     ];
+    $request->atsJob->questions = [
+        new Shared\AtsJobQuestion(),
+    ];
     $request->atsJob->raw = [
         'North' => '<value>',
     ];
@@ -375,6 +381,9 @@ try {
     $request->atsJob->numberOfOpenings = 9080.02;
     $request->atsJob->publicJobUrls = [
         '<value>',
+    ];
+    $request->atsJob->questions = [
+        new Shared\AtsJobQuestion(),
     ];
     $request->atsJob->raw = [
         'Direct' => '<value>',

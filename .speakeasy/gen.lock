@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 5c191fdb16f8d76a3eb09c714f56170d
+  docChecksum: 119b9584a5fe294470614e38361fae09
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.12.6
-  configChecksum: d86815cba6e677dcfb4b1a1f5ab3fd4c
+  generationVersion: 2.259.1
+  releaseVersion: 0.12.7
+  configChecksum: feb69ac776cd56d478cbeb75e788db2e
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -577,6 +577,7 @@ generatedFiles:
   - src/Models/Shared/UcEmail.php
   - src/Models/Shared/AtsApplicationStatus.php
   - src/Models/Shared/AtsApplication.php
+  - src/Models/Shared/AtsApplicationAnswer.php
   - src/Models/Shared/Origin.php
   - src/Models/Shared/AtsCandidate.php
   - src/Models/Shared/AtsTelephoneType.php
@@ -591,6 +592,8 @@ generatedFiles:
   - src/Models/Shared/EmploymentType.php
   - src/Models/Shared/AtsJobStatus.php
   - src/Models/Shared/AtsJob.php
+  - src/Models/Shared/AtsJobQuestionType.php
+  - src/Models/Shared/AtsJobQuestion.php
   - src/Models/Shared/Frequency.php
   - src/Models/Shared/AtsCompensationType.php
   - src/Models/Shared/AtsCompensation.php
@@ -1172,6 +1175,7 @@ generatedFiles:
   - docs/Models/Shared/UcEmail.md
   - docs/Models/Shared/AtsApplicationStatus.md
   - docs/Models/Shared/AtsApplication.md
+  - docs/Models/Shared/AtsApplicationAnswer.md
   - docs/Models/Shared/Origin.md
   - docs/Models/Shared/AtsCandidate.md
   - docs/Models/Shared/AtsTelephoneType.md
@@ -1186,6 +1190,8 @@ generatedFiles:
   - docs/Models/Shared/EmploymentType.md
   - docs/Models/Shared/AtsJobStatus.md
   - docs/Models/Shared/AtsJob.md
+  - docs/Models/Shared/AtsJobQuestionType.md
+  - docs/Models/Shared/AtsJobQuestion.md
   - docs/Models/Shared/Frequency.md
   - docs/Models/Shared/AtsCompensationType.md
   - docs/Models/Shared/AtsCompensation.md

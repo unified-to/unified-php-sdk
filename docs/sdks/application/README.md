@@ -34,6 +34,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
+    $request->atsApplication->answers = [
+        new Shared\AtsApplicationAnswer(),
+    ];
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T05:03:52.917Z');
     $request->atsApplication->candidateId = '<value>';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-22T12:50:56.305Z');
@@ -206,6 +209,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
+    $request->atsApplication->answers = [
+        new Shared\AtsApplicationAnswer(),
+    ];
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-15T20:36:09.499Z');
     $request->atsApplication->candidateId = '<value>';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-06T05:56:57.062Z');
@@ -318,6 +324,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateAtsApplicationRequest();
     $request->atsApplication = new Shared\AtsApplication();
+    $request->atsApplication->answers = [
+        new Shared\AtsApplicationAnswer(),
+    ];
     $request->atsApplication->appliedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-22T12:21:27.415Z');
     $request->atsApplication->candidateId = '<value>';
     $request->atsApplication->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-04T12:46:09.878Z');
