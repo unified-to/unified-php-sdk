@@ -37,6 +37,7 @@ try {
     $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-26T17:10:46.324Z');
     $request->storageFile->description = 'Digitized systematic Graphic Interface';
     $request->storageFile->downloadUrl = '<value>';
+    $request->storageFile->hash = '<value>';
     $request->storageFile->id = '<id>';
     $request->storageFile->mimeType = '<value>';
     $request->storageFile->name = '<value>';
@@ -210,6 +211,7 @@ try {
     $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-01T13:48:26.867Z');
     $request->storageFile->description = 'Customer-focused mission-critical monitoring';
     $request->storageFile->downloadUrl = '<value>';
+    $request->storageFile->hash = '<value>';
     $request->storageFile->id = '<id>';
     $request->storageFile->mimeType = '<value>';
     $request->storageFile->name = '<value>';
@@ -324,6 +326,7 @@ try {
     $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-06T15:38:39.174Z');
     $request->storageFile->description = 'Polarised intangible architecture';
     $request->storageFile->downloadUrl = '<value>';
+    $request->storageFile->hash = '<value>';
     $request->storageFile->id = '<id>';
     $request->storageFile->mimeType = '<value>';
     $request->storageFile->name = '<value>';

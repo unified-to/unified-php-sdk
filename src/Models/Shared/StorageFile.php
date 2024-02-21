@@ -26,6 +26,11 @@ class StorageFile
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $downloadUrl = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('hash')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $hash = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -91,6 +96,7 @@ class StorageFile
 		$this->createdAt = null;
 		$this->description = null;
 		$this->downloadUrl = null;
+		$this->hash = null;
 		$this->id = null;
 		$this->mimeType = null;
 		$this->name = null;
