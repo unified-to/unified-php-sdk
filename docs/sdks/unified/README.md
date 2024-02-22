@@ -146,7 +146,7 @@ try {
     $request->webhook->connectionId = '<value>';
     $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T14:50:04.176Z');
     $request->webhook->environment = '<value>';
-    $request->webhook->event = Shared\Event::Updated;
+    $request->webhook->event = Shared\Event::Created;
     $request->webhook->fields = '<value>';
     $request->webhook->hookUrl = '<value>';
     $request->webhook->id = '<id>';

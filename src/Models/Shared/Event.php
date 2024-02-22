@@ -13,4 +13,5 @@ enum Event: string
 {
     case Updated = 'updated';
     case Created = 'created';
+    case Deleted = 'deleted';
 }
