@@ -53,6 +53,7 @@ try {
     $request->auth->clientSecret = '<value>';
     $request->auth->consumerKey = '<value>';
     $request->auth->consumerSecret = '<value>';
+    $request->auth->devApiKey = '<value>';
     $request->auth->emails = [
         '<value>',
     ];
@@ -752,6 +753,7 @@ try {
     $request->connection->auth->clientSecret = '<value>';
     $request->connection->auth->consumerKey = '<value>';
     $request->connection->auth->consumerSecret = '<value>';
+    $request->connection->auth->devApiKey = '<value>';
     $request->connection->auth->emails = [
         '<value>',
     ];
@@ -992,6 +994,7 @@ try {
     $request->connection->auth->clientSecret = '<value>';
     $request->connection->auth->consumerKey = '<value>';
     $request->connection->auth->consumerSecret = '<value>';
+    $request->connection->auth->devApiKey = '<value>';
     $request->connection->auth->emails = [
         '<value>',
     ];

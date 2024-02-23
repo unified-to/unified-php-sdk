@@ -57,6 +57,11 @@ class PropertyConnectionAuth
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $consumerSecret = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('dev_api_key')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $devApiKey = null;
+    
     /**
      * $emails
      * 
@@ -152,6 +157,7 @@ class PropertyConnectionAuth
 		$this->clientSecret = null;
 		$this->consumerKey = null;
 		$this->consumerSecret = null;
+		$this->devApiKey = null;
 		$this->emails = null;
 		$this->expiresIn = null;
 		$this->expiryDate = null;

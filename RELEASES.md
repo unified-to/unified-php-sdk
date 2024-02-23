@@ -807,3 +807,13 @@ Based on:
 - [php v0.12.9] .
 ### Releases
 - [Composer v0.12.9] https://packagist.org/packages/unified/unified-to#v0.12.9 - .
+
+## 2024-02-23 00:17:28
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.192.1 (2.269.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.12.10] .
+### Releases
+- [Composer v0.12.10] https://packagist.org/packages/unified/unified-to#v0.12.10 - .
