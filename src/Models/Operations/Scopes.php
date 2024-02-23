@@ -35,8 +35,8 @@ enum Scopes: string
     case CommerceInventoryWrite = 'commerce_inventory_write';
     case CommerceLocationRead = 'commerce_location_read';
     case CommerceLocationWrite = 'commerce_location_write';
-    case AtsScorecardRead = 'ats_scorecard_read';
-    case AtsScorecardWrite = 'ats_scorecard_write';
+    case AtsActivityRead = 'ats_activity_read';
+    case AtsActivityWrite = 'ats_activity_write';
     case AtsApplicationRead = 'ats_application_read';
     case AtsApplicationWrite = 'ats_application_write';
     case AtsApplicationstatusRead = 'ats_applicationstatus_read';
@@ -49,6 +49,8 @@ enum Scopes: string
     case AtsCompanyRead = 'ats_company_read';
     case AtsDocumentRead = 'ats_document_read';
     case AtsDocumentWrite = 'ats_document_write';
+    case AtsScorecardRead = 'ats_scorecard_read';
+    case AtsScorecardWrite = 'ats_scorecard_write';
     case CrmCompanyRead = 'crm_company_read';
     case CrmCompanyWrite = 'crm_company_write';
     case CrmContactRead = 'crm_contact_read';

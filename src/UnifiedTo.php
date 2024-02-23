@@ -45,6 +45,8 @@ class UnifiedTo
 	
 	public Ats $ats;
 	
+	public Activity $activity;
+	
 	public Application $application;
 	
 	public Applicationstatus $applicationstatus;
@@ -171,6 +173,8 @@ class UnifiedTo
 		$this->transaction = new Transaction($this->sdkConfiguration);
 		
 		$this->ats = new Ats($this->sdkConfiguration);
+		
+		$this->activity = new Activity($this->sdkConfiguration);
 		
 		$this->application = new Application($this->sdkConfiguration);
 		

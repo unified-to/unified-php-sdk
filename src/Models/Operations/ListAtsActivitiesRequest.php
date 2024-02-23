@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListAtsScorecardsRequest
+class ListAtsActivitiesRequest
 {
     /**
      * The application ID to filter results
@@ -34,6 +34,14 @@ class ListAtsScorecardsRequest
      */
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+    
+    /**
+     * The document ID to filter results
+     * 
+     * @var ?string $documentId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=document_id')]
+    public ?string $documentId = null;
     
     /**
      * Comma-delimited fields to return
@@ -87,11 +95,20 @@ class ListAtsScorecardsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
     
+    /**
+     * The user ID to filter results
+     * 
+     * @var ?string $userId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
 		$this->applicationId = null;
 		$this->candidateId = null;
 		$this->connectionId = "";
+		$this->documentId = null;
 		$this->fields = null;
 		$this->interviewId = null;
 		$this->jobId = null;
@@ -101,5 +118,6 @@ class ListAtsScorecardsRequest
 		$this->query = null;
 		$this->sort = null;
 		$this->updatedGte = null;
+		$this->userId = null;
 	}
 }

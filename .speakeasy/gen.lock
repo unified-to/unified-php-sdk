@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 540edc51c35db4343817668bdfafdaa0
+  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.269.0
-  releaseVersion: 0.12.10
-  configChecksum: aeb28fe688ecaf3ad3c8a6b76cd0fa0a
+  releaseVersion: 0.12.11
+  configChecksum: 3d945434a92a883126a0550ce9acda9b
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -29,6 +29,7 @@ generatedFiles:
   - src/Taxrate.php
   - src/Transaction.php
   - src/Ats.php
+  - src/Activity.php
   - src/Application.php
   - src/Applicationstatus.php
   - src/Candidate.php
@@ -201,6 +202,8 @@ generatedFiles:
   - src/Models/Operations/UpdateCrmContactResponse.php
   - src/Models/Operations/UpdateUcContactRequest.php
   - src/Models/Operations/UpdateUcContactResponse.php
+  - src/Models/Operations/CreateAtsActivityRequest.php
+  - src/Models/Operations/CreateAtsActivityResponse.php
   - src/Models/Operations/CreateAtsApplicationRequest.php
   - src/Models/Operations/CreateAtsApplicationResponse.php
   - src/Models/Operations/CreateAtsCandidateRequest.php
@@ -213,6 +216,8 @@ generatedFiles:
   - src/Models/Operations/CreateAtsJobResponse.php
   - src/Models/Operations/CreateAtsScorecardRequest.php
   - src/Models/Operations/CreateAtsScorecardResponse.php
+  - src/Models/Operations/GetAtsActivityRequest.php
+  - src/Models/Operations/GetAtsActivityResponse.php
   - src/Models/Operations/GetAtsApplicationRequest.php
   - src/Models/Operations/GetAtsApplicationResponse.php
   - src/Models/Operations/GetAtsCandidateRequest.php
@@ -227,6 +232,8 @@ generatedFiles:
   - src/Models/Operations/GetAtsJobResponse.php
   - src/Models/Operations/GetAtsScorecardRequest.php
   - src/Models/Operations/GetAtsScorecardResponse.php
+  - src/Models/Operations/ListAtsActivitiesRequest.php
+  - src/Models/Operations/ListAtsActivitiesResponse.php
   - src/Models/Operations/ListAtsApplicationsRequest.php
   - src/Models/Operations/ListAtsApplicationsResponse.php
   - src/Models/Operations/ListAtsApplicationstatusesRequest.php
@@ -243,6 +250,8 @@ generatedFiles:
   - src/Models/Operations/ListAtsJobsResponse.php
   - src/Models/Operations/ListAtsScorecardsRequest.php
   - src/Models/Operations/ListAtsScorecardsResponse.php
+  - src/Models/Operations/PatchAtsActivityRequest.php
+  - src/Models/Operations/PatchAtsActivityResponse.php
   - src/Models/Operations/PatchAtsApplicationRequest.php
   - src/Models/Operations/PatchAtsApplicationResponse.php
   - src/Models/Operations/PatchAtsCandidateRequest.php
@@ -255,6 +264,8 @@ generatedFiles:
   - src/Models/Operations/PatchAtsJobResponse.php
   - src/Models/Operations/PatchAtsScorecardRequest.php
   - src/Models/Operations/PatchAtsScorecardResponse.php
+  - src/Models/Operations/RemoveAtsActivityRequest.php
+  - src/Models/Operations/RemoveAtsActivityResponse.php
   - src/Models/Operations/RemoveAtsApplicationRequest.php
   - src/Models/Operations/RemoveAtsApplicationResponse.php
   - src/Models/Operations/RemoveAtsCandidateRequest.php
@@ -267,6 +278,8 @@ generatedFiles:
   - src/Models/Operations/RemoveAtsJobResponse.php
   - src/Models/Operations/RemoveAtsScorecardRequest.php
   - src/Models/Operations/RemoveAtsScorecardResponse.php
+  - src/Models/Operations/UpdateAtsActivityRequest.php
+  - src/Models/Operations/UpdateAtsActivityResponse.php
   - src/Models/Operations/UpdateAtsApplicationRequest.php
   - src/Models/Operations/UpdateAtsApplicationResponse.php
   - src/Models/Operations/UpdateAtsCandidateRequest.php
@@ -575,6 +588,8 @@ generatedFiles:
   - src/Models/Shared/UcTelephone.php
   - src/Models/Shared/UcEmailType.php
   - src/Models/Shared/UcEmail.php
+  - src/Models/Shared/AtsActivityType.php
+  - src/Models/Shared/AtsActivity.php
   - src/Models/Shared/AtsApplicationStatus.php
   - src/Models/Shared/AtsApplication.php
   - src/Models/Shared/AtsApplicationAnswer.php
@@ -799,6 +814,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateCrmContactResponse.md
   - docs/Models/Operations/UpdateUcContactRequest.md
   - docs/Models/Operations/UpdateUcContactResponse.md
+  - docs/Models/Operations/CreateAtsActivityRequest.md
+  - docs/Models/Operations/CreateAtsActivityResponse.md
   - docs/Models/Operations/CreateAtsApplicationRequest.md
   - docs/Models/Operations/CreateAtsApplicationResponse.md
   - docs/Models/Operations/CreateAtsCandidateRequest.md
@@ -811,6 +828,8 @@ generatedFiles:
   - docs/Models/Operations/CreateAtsJobResponse.md
   - docs/Models/Operations/CreateAtsScorecardRequest.md
   - docs/Models/Operations/CreateAtsScorecardResponse.md
+  - docs/Models/Operations/GetAtsActivityRequest.md
+  - docs/Models/Operations/GetAtsActivityResponse.md
   - docs/Models/Operations/GetAtsApplicationRequest.md
   - docs/Models/Operations/GetAtsApplicationResponse.md
   - docs/Models/Operations/GetAtsCandidateRequest.md
@@ -825,6 +844,8 @@ generatedFiles:
   - docs/Models/Operations/GetAtsJobResponse.md
   - docs/Models/Operations/GetAtsScorecardRequest.md
   - docs/Models/Operations/GetAtsScorecardResponse.md
+  - docs/Models/Operations/ListAtsActivitiesRequest.md
+  - docs/Models/Operations/ListAtsActivitiesResponse.md
   - docs/Models/Operations/ListAtsApplicationsRequest.md
   - docs/Models/Operations/ListAtsApplicationsResponse.md
   - docs/Models/Operations/ListAtsApplicationstatusesRequest.md
@@ -841,6 +862,8 @@ generatedFiles:
   - docs/Models/Operations/ListAtsJobsResponse.md
   - docs/Models/Operations/ListAtsScorecardsRequest.md
   - docs/Models/Operations/ListAtsScorecardsResponse.md
+  - docs/Models/Operations/PatchAtsActivityRequest.md
+  - docs/Models/Operations/PatchAtsActivityResponse.md
   - docs/Models/Operations/PatchAtsApplicationRequest.md
   - docs/Models/Operations/PatchAtsApplicationResponse.md
   - docs/Models/Operations/PatchAtsCandidateRequest.md
@@ -853,6 +876,8 @@ generatedFiles:
   - docs/Models/Operations/PatchAtsJobResponse.md
   - docs/Models/Operations/PatchAtsScorecardRequest.md
   - docs/Models/Operations/PatchAtsScorecardResponse.md
+  - docs/Models/Operations/RemoveAtsActivityRequest.md
+  - docs/Models/Operations/RemoveAtsActivityResponse.md
   - docs/Models/Operations/RemoveAtsApplicationRequest.md
   - docs/Models/Operations/RemoveAtsApplicationResponse.md
   - docs/Models/Operations/RemoveAtsCandidateRequest.md
@@ -865,6 +890,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveAtsJobResponse.md
   - docs/Models/Operations/RemoveAtsScorecardRequest.md
   - docs/Models/Operations/RemoveAtsScorecardResponse.md
+  - docs/Models/Operations/UpdateAtsActivityRequest.md
+  - docs/Models/Operations/UpdateAtsActivityResponse.md
   - docs/Models/Operations/UpdateAtsApplicationRequest.md
   - docs/Models/Operations/UpdateAtsApplicationResponse.md
   - docs/Models/Operations/UpdateAtsCandidateRequest.md
@@ -1173,6 +1200,8 @@ generatedFiles:
   - docs/Models/Shared/UcTelephone.md
   - docs/Models/Shared/UcEmailType.md
   - docs/Models/Shared/UcEmail.md
+  - docs/Models/Shared/AtsActivityType.md
+  - docs/Models/Shared/AtsActivity.md
   - docs/Models/Shared/AtsApplicationStatus.md
   - docs/Models/Shared/AtsApplication.md
   - docs/Models/Shared/AtsApplicationAnswer.md
@@ -1301,6 +1330,7 @@ generatedFiles:
   - docs/sdks/taxrate/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
+  - docs/sdks/activity/README.md
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md

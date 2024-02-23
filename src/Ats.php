@@ -22,6 +22,48 @@ class Ats
 	}
 	
     /**
+     * Create an activity
+     * 
+     * @param \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
+     */
+	public function createAtsActivity(
+        ?\Unified\Unified_to\Models\Operations\CreateAtsActivityRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity', \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "atsActivity", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsActivity = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Create an application
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest $request
@@ -267,6 +309,45 @@ class Ats
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve an activity
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetAtsActivityRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
+     */
+	public function getAtsActivity(
+        ?\Unified\Unified_to\Models\Operations\GetAtsActivityRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', \Unified\Unified_to\Models\Operations\GetAtsActivityRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsActivityRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\GetAtsActivityResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsActivity = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
             }
         }
 
@@ -540,6 +621,45 @@ class Ats
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List all activities
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
+     */
+	public function listAtsActivities(
+        ?\Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity', \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsActivities = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsActivity>', 'json');
             }
         }
 
@@ -859,6 +979,48 @@ class Ats
     }
 	
     /**
+     * Update an activity
+     * 
+     * @param \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
+     */
+	public function patchAtsActivity(
+        ?\Unified\Unified_to\Models\Operations\PatchAtsActivityRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "atsActivity", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsActivity = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Update an application
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest $request
@@ -1111,6 +1273,43 @@ class Ats
     }
 	
     /**
+     * Remove an activity
+     * 
+     * @param \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
+     */
+	public function removeAtsActivity(
+        ?\Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $response->res = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Remove an application
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest $request
@@ -1326,6 +1525,48 @@ class Ats
         if (true) { /** @phpstan-ignore-line */
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $response->res = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update an activity
+     * 
+     * @param \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
+     */
+	public function updateAtsActivity(
+        ?\Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "atsActivity", "json");
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->atsActivity = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
             }
         }
 

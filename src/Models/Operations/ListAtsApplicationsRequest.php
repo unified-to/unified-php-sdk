@@ -36,7 +36,7 @@ class ListAtsApplicationsRequest
     public ?array $fields = null;
     
     /**
-     * The job ID
+     * The job ID to filter results
      * 
      * @var ?string $jobId
      */

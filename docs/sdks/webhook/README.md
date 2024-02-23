@@ -48,7 +48,7 @@ try {
     $request->webhook->meta = [
         'Borders' => '<value>',
     ];
-    $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
+    $request->webhook->objectType = Shared\ObjectType::CrmPipeline;
     $request->webhook->pageMaxLimit = 9505.78;
     $request->webhook->runs = [
         '<value>',

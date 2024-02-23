@@ -24,6 +24,7 @@ enum ObjectType: string
     case CommerceCollection = 'commerce_collection';
     case CommerceInventory = 'commerce_inventory';
     case CommerceLocation = 'commerce_location';
+    case AtsActivity = 'ats_activity';
     case AtsApplication = 'ats_application';
     case AtsApplicationstatus = 'ats_applicationstatus';
     case AtsCandidate = 'ats_candidate';

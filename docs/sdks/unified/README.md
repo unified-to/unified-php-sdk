@@ -157,7 +157,7 @@ try {
     $request->webhook->meta = [
         'Borders' => '<value>',
     ];
-    $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
+    $request->webhook->objectType = Shared\ObjectType::CrmPipeline;
     $request->webhook->pageMaxLimit = 9505.78;
     $request->webhook->runs = [
         '<value>',
@@ -792,7 +792,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-24T01:15:30.014Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-20T21:38:39.955Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AtsInterviewWrite,
+        Shared\PropertyConnectionPermissions::AtsJobRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T02:30:18.551Z');
     $request->connection->workspaceId = '<value>';
