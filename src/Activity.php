@@ -25,10 +25,12 @@ class Activity
      * Create an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
      */
 	public function createAtsActivity(
         ?\Unified\Unified_to\Models\Operations\CreateAtsActivityRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Activity
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Activity
      * Retrieve an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsActivityRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
      */
 	public function getAtsActivity(
         ?\Unified\Unified_to\Models\Operations\GetAtsActivityRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Activity
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Activity
      * List all activities
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAtsActivitiesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
      */
 	public function listAtsActivities(
         ?\Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAtsActivitiesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Activity
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Activity
      * Update an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
      */
 	public function patchAtsActivity(
         ?\Unified\Unified_to\Models\Operations\PatchAtsActivityRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Activity
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Activity
      * Remove an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
      */
 	public function removeAtsActivity(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Activity
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Activity
      * Update an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
      */
 	public function updateAtsActivity(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Activity
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

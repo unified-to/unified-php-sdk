@@ -20,16 +20,14 @@ Create a group
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateHrisGroupRequest();
@@ -53,7 +51,10 @@ try {
     ];
     $request->connectionId = '<value>';;
 
-    $response = $sdk->group->createHrisGroup($request);
+    $requestSecurity = new Operations\CreateHrisGroupSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->group->createHrisGroup($request, $requestSecurity);
 
     if ($response->hrisGroup !== null) {
         // handle response
@@ -65,9 +66,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateHrisGroupRequest](../../Models/Operations/CreateHrisGroupRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateHrisGroupRequest](../../Models/Operations/CreateHrisGroupRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateHrisGroupSecurity](../../Models/Operations/CreateHrisGroupSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response
@@ -85,16 +87,13 @@ Retrieve a group
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetHrisGroupRequest();
@@ -104,7 +103,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->group->getHrisGroup($request);
+    $requestSecurity = new Operations\GetHrisGroupSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->group->getHrisGroup($request, $requestSecurity);
 
     if ($response->hrisGroup !== null) {
         // handle response
@@ -116,9 +118,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\GetHrisGroupRequest](../../Models/Operations/GetHrisGroupRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\GetHrisGroupRequest](../../Models/Operations/GetHrisGroupRequest.md)   | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `security`                                                                                                    | [\Unified\Unified_to\Models\Operations\GetHrisGroupSecurity](../../Models/Operations/GetHrisGroupSecurity.md) | :heavy_check_mark:                                                                                            | The security requirements to use for the request.                                                             |
 
 
 ### Response
@@ -136,16 +139,13 @@ List all groups
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListHrisGroupsRequest();
@@ -160,7 +160,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T00:40:26.357Z');;
 
-    $response = $sdk->group->listHrisGroups($request);
+    $requestSecurity = new Operations\ListHrisGroupsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->group->listHrisGroups($request, $requestSecurity);
 
     if ($response->hrisGroups !== null) {
         // handle response
@@ -172,9 +175,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\ListHrisGroupsRequest](../../Models/Operations/ListHrisGroupsRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\ListHrisGroupsRequest](../../Models/Operations/ListHrisGroupsRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\ListHrisGroupsSecurity](../../Models/Operations/ListHrisGroupsSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response
@@ -192,16 +196,14 @@ Update a group
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchHrisGroupRequest();
@@ -226,7 +228,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->group->patchHrisGroup($request);
+    $requestSecurity = new Operations\PatchHrisGroupSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->group->patchHrisGroup($request, $requestSecurity);
 
     if ($response->hrisGroup !== null) {
         // handle response
@@ -238,9 +243,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchHrisGroupRequest](../../Models/Operations/PatchHrisGroupRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchHrisGroupRequest](../../Models/Operations/PatchHrisGroupRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchHrisGroupSecurity](../../Models/Operations/PatchHrisGroupSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response
@@ -258,23 +264,23 @@ Remove a group
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveHrisGroupRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->group->removeHrisGroup($request);
+    $requestSecurity = new Operations\RemoveHrisGroupSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->group->removeHrisGroup($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -286,9 +292,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest](../../Models/Operations/RemoveHrisGroupRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest](../../Models/Operations/RemoveHrisGroupRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveHrisGroupSecurity](../../Models/Operations/RemoveHrisGroupSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response
@@ -306,16 +313,14 @@ Update a group
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateHrisGroupRequest();
@@ -340,7 +345,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->group->updateHrisGroup($request);
+    $requestSecurity = new Operations\UpdateHrisGroupSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->group->updateHrisGroup($request, $requestSecurity);
 
     if ($response->hrisGroup !== null) {
         // handle response
@@ -352,9 +360,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest](../../Models/Operations/UpdateHrisGroupRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest](../../Models/Operations/UpdateHrisGroupRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateHrisGroupSecurity](../../Models/Operations/UpdateHrisGroupSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response

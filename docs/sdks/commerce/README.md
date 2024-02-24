@@ -38,16 +38,14 @@ Create a collection
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateCommerceCollectionRequest();
@@ -76,7 +74,10 @@ try {
     $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-13T10:39:45.495Z');
     $request->connectionId = '<value>';;
 
-    $response = $sdk->commerce->createCommerceCollection($request);
+    $requestSecurity = new Operations\CreateCommerceCollectionSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->createCommerceCollection($request, $requestSecurity);
 
     if ($response->commerceCollection !== null) {
         // handle response
@@ -88,9 +89,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest](../../Models/Operations/CreateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest](../../Models/Operations/CreateCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateCommerceCollectionSecurity](../../Models/Operations/CreateCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
 
 
 ### Response
@@ -108,16 +110,14 @@ Create an inventory
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateCommerceInventoryRequest();
@@ -134,7 +134,10 @@ try {
     $request->commerceInventory->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-19T06:57:05.921Z');
     $request->connectionId = '<value>';;
 
-    $response = $sdk->commerce->createCommerceInventory($request);
+    $requestSecurity = new Operations\CreateCommerceInventorySecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->createCommerceInventory($request, $requestSecurity);
 
     if ($response->commerceInventory !== null) {
         // handle response
@@ -146,9 +149,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest](../../Models/Operations/CreateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest](../../Models/Operations/CreateCommerceInventoryRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateCommerceInventorySecurity](../../Models/Operations/CreateCommerceInventorySecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
 
 
 ### Response
@@ -166,16 +170,14 @@ Create an item
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateCommerceItemRequest();
@@ -205,7 +207,10 @@ try {
     $request->commerceItem->vendorName = '<value>';
     $request->connectionId = '<value>';;
 
-    $response = $sdk->commerce->createCommerceItem($request);
+    $requestSecurity = new Operations\CreateCommerceItemSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->createCommerceItem($request, $requestSecurity);
 
     if ($response->commerceItem !== null) {
         // handle response
@@ -217,9 +222,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateCommerceItemRequest](../../Models/Operations/CreateCommerceItemRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateCommerceItemRequest](../../Models/Operations/CreateCommerceItemRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateCommerceItemSecurity](../../Models/Operations/CreateCommerceItemSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
 
 
 ### Response
@@ -237,16 +243,14 @@ Create a location
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateCommerceLocationRequest();
@@ -270,7 +274,10 @@ try {
     $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-13T08:13:54.098Z');
     $request->connectionId = '<value>';;
 
-    $response = $sdk->commerce->createCommerceLocation($request);
+    $requestSecurity = new Operations\CreateCommerceLocationSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->createCommerceLocation($request, $requestSecurity);
 
     if ($response->commerceLocation !== null) {
         // handle response
@@ -282,9 +289,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest](../../Models/Operations/CreateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest](../../Models/Operations/CreateCommerceLocationRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateCommerceLocationSecurity](../../Models/Operations/CreateCommerceLocationSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
 
 
 ### Response
@@ -302,16 +310,13 @@ Retrieve a collection
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetCommerceCollectionRequest();
@@ -321,7 +326,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->getCommerceCollection($request);
+    $requestSecurity = new Operations\GetCommerceCollectionSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->getCommerceCollection($request, $requestSecurity);
 
     if ($response->commerceCollection !== null) {
         // handle response
@@ -333,9 +341,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest](../../Models/Operations/GetCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest](../../Models/Operations/GetCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\GetCommerceCollectionSecurity](../../Models/Operations/GetCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
 
 
 ### Response
@@ -353,16 +362,13 @@ Retrieve an inventory
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetCommerceInventoryRequest();
@@ -372,7 +378,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->getCommerceInventory($request);
+    $requestSecurity = new Operations\GetCommerceInventorySecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->getCommerceInventory($request, $requestSecurity);
 
     if ($response->commerceInventory !== null) {
         // handle response
@@ -384,9 +393,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest](../../Models/Operations/GetCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest](../../Models/Operations/GetCommerceInventoryRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `security`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetCommerceInventorySecurity](../../Models/Operations/GetCommerceInventorySecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
 
 
 ### Response
@@ -404,16 +414,13 @@ Retrieve an item
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetCommerceItemRequest();
@@ -423,7 +430,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->getCommerceItem($request);
+    $requestSecurity = new Operations\GetCommerceItemSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->getCommerceItem($request, $requestSecurity);
 
     if ($response->commerceItem !== null) {
         // handle response
@@ -435,9 +445,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetCommerceItemRequest](../../Models/Operations/GetCommerceItemRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetCommerceItemRequest](../../Models/Operations/GetCommerceItemRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetCommerceItemSecurity](../../Models/Operations/GetCommerceItemSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response
@@ -455,16 +466,13 @@ Retrieve a location
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetCommerceLocationRequest();
@@ -474,7 +482,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->getCommerceLocation($request);
+    $requestSecurity = new Operations\GetCommerceLocationSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->getCommerceLocation($request, $requestSecurity);
 
     if ($response->commerceLocation !== null) {
         // handle response
@@ -486,9 +497,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\GetCommerceLocationRequest](../../Models/Operations/GetCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetCommerceLocationRequest](../../Models/Operations/GetCommerceLocationRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetCommerceLocationSecurity](../../Models/Operations/GetCommerceLocationSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
 
 
 ### Response
@@ -506,16 +518,13 @@ List all collections
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListCommerceCollectionsRequest();
@@ -530,7 +539,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T20:40:35.103Z');;
 
-    $response = $sdk->commerce->listCommerceCollections($request);
+    $requestSecurity = new Operations\ListCommerceCollectionsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->listCommerceCollections($request, $requestSecurity);
 
     if ($response->commerceCollections !== null) {
         // handle response
@@ -542,9 +554,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest](../../Models/Operations/ListCommerceCollectionsRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest](../../Models/Operations/ListCommerceCollectionsRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\ListCommerceCollectionsSecurity](../../Models/Operations/ListCommerceCollectionsSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
 
 
 ### Response
@@ -562,16 +575,13 @@ List all inventories
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListCommerceInventoriesRequest();
@@ -588,7 +598,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-15T22:28:16.925Z');;
 
-    $response = $sdk->commerce->listCommerceInventories($request);
+    $requestSecurity = new Operations\ListCommerceInventoriesSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->listCommerceInventories($request, $requestSecurity);
 
     if ($response->commerceInventories !== null) {
         // handle response
@@ -600,9 +613,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest](../../Models/Operations/ListCommerceInventoriesRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest](../../Models/Operations/ListCommerceInventoriesRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\ListCommerceInventoriesSecurity](../../Models/Operations/ListCommerceInventoriesSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
 
 
 ### Response
@@ -620,16 +634,13 @@ List all items
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListCommerceItemsRequest();
@@ -644,7 +655,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-10T19:08:09.923Z');;
 
-    $response = $sdk->commerce->listCommerceItems($request);
+    $requestSecurity = new Operations\ListCommerceItemsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->listCommerceItems($request, $requestSecurity);
 
     if ($response->commerceItems !== null) {
         // handle response
@@ -656,9 +670,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest](../../Models/Operations/ListCommerceItemsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest](../../Models/Operations/ListCommerceItemsRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListCommerceItemsSecurity](../../Models/Operations/ListCommerceItemsSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response
@@ -676,16 +691,13 @@ List all locations
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListCommerceLocationsRequest();
@@ -700,7 +712,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T14:52:37.550Z');;
 
-    $response = $sdk->commerce->listCommerceLocations($request);
+    $requestSecurity = new Operations\ListCommerceLocationsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->listCommerceLocations($request, $requestSecurity);
 
     if ($response->commerceLocations !== null) {
         // handle response
@@ -712,9 +727,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest](../../Models/Operations/ListCommerceLocationsRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest](../../Models/Operations/ListCommerceLocationsRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListCommerceLocationsSecurity](../../Models/Operations/ListCommerceLocationsSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
 
 
 ### Response
@@ -732,16 +748,14 @@ Update a collection
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchCommerceCollectionRequest();
@@ -771,7 +785,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->patchCommerceCollection($request);
+    $requestSecurity = new Operations\PatchCommerceCollectionSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->patchCommerceCollection($request, $requestSecurity);
 
     if ($response->commerceCollection !== null) {
         // handle response
@@ -783,9 +800,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest](../../Models/Operations/PatchCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest](../../Models/Operations/PatchCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchCommerceCollectionSecurity](../../Models/Operations/PatchCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
 
 
 ### Response
@@ -803,16 +821,14 @@ Update an inventory
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchCommerceInventoryRequest();
@@ -830,7 +846,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->patchCommerceInventory($request);
+    $requestSecurity = new Operations\PatchCommerceInventorySecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->patchCommerceInventory($request, $requestSecurity);
 
     if ($response->commerceInventory !== null) {
         // handle response
@@ -842,9 +861,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest](../../Models/Operations/PatchCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest](../../Models/Operations/PatchCommerceInventoryRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchCommerceInventorySecurity](../../Models/Operations/PatchCommerceInventorySecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
 
 
 ### Response
@@ -862,16 +882,14 @@ Update an item
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchCommerceItemRequest();
@@ -902,7 +920,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->patchCommerceItem($request);
+    $requestSecurity = new Operations\PatchCommerceItemSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->patchCommerceItem($request, $requestSecurity);
 
     if ($response->commerceItem !== null) {
         // handle response
@@ -914,9 +935,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchCommerceItemRequest](../../Models/Operations/PatchCommerceItemRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchCommerceItemRequest](../../Models/Operations/PatchCommerceItemRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchCommerceItemSecurity](../../Models/Operations/PatchCommerceItemSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response
@@ -934,16 +956,14 @@ Update a location
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchCommerceLocationRequest();
@@ -968,7 +988,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->patchCommerceLocation($request);
+    $requestSecurity = new Operations\PatchCommerceLocationSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->patchCommerceLocation($request, $requestSecurity);
 
     if ($response->commerceLocation !== null) {
         // handle response
@@ -980,9 +1003,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest](../../Models/Operations/PatchCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest](../../Models/Operations/PatchCommerceLocationRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCommerceLocationSecurity](../../Models/Operations/PatchCommerceLocationSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
 
 
 ### Response
@@ -1000,23 +1024,23 @@ Remove a collection
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveCommerceCollectionRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->removeCommerceCollection($request);
+    $requestSecurity = new Operations\RemoveCommerceCollectionSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->removeCommerceCollection($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -1028,9 +1052,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest](../../Models/Operations/RemoveCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest](../../Models/Operations/RemoveCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveCommerceCollectionSecurity](../../Models/Operations/RemoveCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
 
 
 ### Response
@@ -1048,23 +1073,23 @@ Remove an inventory
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveCommerceInventoryRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->removeCommerceInventory($request);
+    $requestSecurity = new Operations\RemoveCommerceInventorySecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->removeCommerceInventory($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -1076,9 +1101,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest](../../Models/Operations/RemoveCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest](../../Models/Operations/RemoveCommerceInventoryRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveCommerceInventorySecurity](../../Models/Operations/RemoveCommerceInventorySecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
 
 
 ### Response
@@ -1096,23 +1122,23 @@ Remove an item
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveCommerceItemRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->removeCommerceItem($request);
+    $requestSecurity = new Operations\RemoveCommerceItemSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->removeCommerceItem($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -1124,9 +1150,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest](../../Models/Operations/RemoveCommerceItemRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest](../../Models/Operations/RemoveCommerceItemRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveCommerceItemSecurity](../../Models/Operations/RemoveCommerceItemSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
 
 
 ### Response
@@ -1144,23 +1171,23 @@ Remove a location
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveCommerceLocationRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->removeCommerceLocation($request);
+    $requestSecurity = new Operations\RemoveCommerceLocationSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->removeCommerceLocation($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -1172,9 +1199,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest](../../Models/Operations/RemoveCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest](../../Models/Operations/RemoveCommerceLocationRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveCommerceLocationSecurity](../../Models/Operations/RemoveCommerceLocationSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
 
 
 ### Response
@@ -1192,16 +1220,14 @@ Update a collection
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateCommerceCollectionRequest();
@@ -1231,7 +1257,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->updateCommerceCollection($request);
+    $requestSecurity = new Operations\UpdateCommerceCollectionSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->updateCommerceCollection($request, $requestSecurity);
 
     if ($response->commerceCollection !== null) {
         // handle response
@@ -1243,9 +1272,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest](../../Models/Operations/UpdateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest](../../Models/Operations/UpdateCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| `security`                                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateCommerceCollectionSecurity](../../Models/Operations/UpdateCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
 
 
 ### Response
@@ -1263,16 +1293,14 @@ Update an inventory
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateCommerceInventoryRequest();
@@ -1290,7 +1318,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->updateCommerceInventory($request);
+    $requestSecurity = new Operations\UpdateCommerceInventorySecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->updateCommerceInventory($request, $requestSecurity);
 
     if ($response->commerceInventory !== null) {
         // handle response
@@ -1302,9 +1333,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest](../../Models/Operations/UpdateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest](../../Models/Operations/UpdateCommerceInventoryRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateCommerceInventorySecurity](../../Models/Operations/UpdateCommerceInventorySecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
 
 
 ### Response
@@ -1322,16 +1354,14 @@ Update an item
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateCommerceItemRequest();
@@ -1362,7 +1392,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->updateCommerceItem($request);
+    $requestSecurity = new Operations\UpdateCommerceItemSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->updateCommerceItem($request, $requestSecurity);
 
     if ($response->commerceItem !== null) {
         // handle response
@@ -1374,9 +1407,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest](../../Models/Operations/UpdateCommerceItemRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest](../../Models/Operations/UpdateCommerceItemRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateCommerceItemSecurity](../../Models/Operations/UpdateCommerceItemSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
 
 
 ### Response
@@ -1394,16 +1428,14 @@ Update a location
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateCommerceLocationRequest();
@@ -1428,7 +1460,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->commerce->updateCommerceLocation($request);
+    $requestSecurity = new Operations\UpdateCommerceLocationSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->commerce->updateCommerceLocation($request, $requestSecurity);
 
     if ($response->commerceLocation !== null) {
         // handle response
@@ -1440,9 +1475,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest](../../Models/Operations/UpdateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest](../../Models/Operations/UpdateCommerceLocationRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateCommerceLocationSecurity](../../Models/Operations/UpdateCommerceLocationSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
 
 
 ### Response

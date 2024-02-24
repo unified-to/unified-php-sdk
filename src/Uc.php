@@ -25,10 +25,12 @@ class Uc
      * Create a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateUcContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateUcContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateUcContactResponse
      */
 	public function createUcContact(
         ?\Unified\Unified_to\Models\Operations\CreateUcContactRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateUcContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Uc
      * Retrieve a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUcContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetUcContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUcContactResponse
      */
 	public function getUcContact(
         ?\Unified\Unified_to\Models\Operations\GetUcContactRequest $request,
+        \Unified\Unified_to\Models\Operations\GetUcContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Uc
      * List all calls
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUcCallsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListUcCallsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      */
 	public function listUcCalls(
         ?\Unified\Unified_to\Models\Operations\ListUcCallsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListUcCallsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUcCallsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Uc
      * List all contacts
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUcContactsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListUcContactsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUcContactsResponse
      */
 	public function listUcContacts(
         ?\Unified\Unified_to\Models\Operations\ListUcContactsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListUcContactsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUcContactsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -159,7 +170,8 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -184,10 +196,12 @@ class Uc
      * Update a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchUcContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchUcContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchUcContactResponse
      */
 	public function patchUcContact(
         ?\Unified\Unified_to\Models\Operations\PatchUcContactRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchUcContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -201,7 +215,8 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -226,10 +241,12 @@ class Uc
      * Remove a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveUcContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveUcContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
      */
 	public function removeUcContact(
         ?\Unified\Unified_to\Models\Operations\RemoveUcContactRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveUcContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -239,7 +256,8 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -263,10 +281,12 @@ class Uc
      * Update a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateUcContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateUcContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateUcContactResponse
      */
 	public function updateUcContact(
         ?\Unified\Unified_to\Models\Operations\UpdateUcContactRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateUcContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateUcContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -280,7 +300,8 @@ class Uc
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

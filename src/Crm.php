@@ -25,10 +25,12 @@ class Crm
      * Create a company
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
      */
 	public function createCrmCompany(
         ?\Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Crm
      * Create a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmContactResponse
      */
 	public function createCrmContact(
         ?\Unified\Unified_to\Models\Operations\CreateCrmContactRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -84,7 +89,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -109,10 +115,12 @@ class Crm
      * Create a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
      */
 	public function createCrmDeal(
         ?\Unified\Unified_to\Models\Operations\CreateCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -126,7 +134,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -151,10 +160,12 @@ class Crm
      * Create a event
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmEventRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
      */
 	public function createCrmEvent(
         ?\Unified\Unified_to\Models\Operations\CreateCrmEventRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -168,7 +179,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -193,10 +205,12 @@ class Crm
      * Create a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
      */
 	public function createCrmLead(
         ?\Unified\Unified_to\Models\Operations\CreateCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -210,7 +224,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -235,10 +250,12 @@ class Crm
      * Create a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
      */
 	public function createCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -252,7 +269,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -277,10 +295,12 @@ class Crm
      * Retrieve a company
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
      */
 	public function getCrmCompany(
         ?\Unified\Unified_to\Models\Operations\GetCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -291,7 +311,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -316,10 +337,12 @@ class Crm
      * Retrieve a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmContactResponse
      */
 	public function getCrmContact(
         ?\Unified\Unified_to\Models\Operations\GetCrmContactRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -330,7 +353,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -355,10 +379,12 @@ class Crm
      * Retrieve a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
      */
 	public function getCrmDeal(
         ?\Unified\Unified_to\Models\Operations\GetCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -369,7 +395,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -394,10 +421,12 @@ class Crm
      * Retrieve a event
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmEventRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
      */
 	public function getCrmEvent(
         ?\Unified\Unified_to\Models\Operations\GetCrmEventRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -408,7 +437,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -433,10 +463,12 @@ class Crm
      * Retrieve a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
      */
 	public function getCrmLead(
         ?\Unified\Unified_to\Models\Operations\GetCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -447,7 +479,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -472,10 +505,12 @@ class Crm
      * Retrieve a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
      */
 	public function getCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\GetCrmPipelineRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -486,7 +521,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -511,10 +547,12 @@ class Crm
      * List all companies
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmCompaniesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
      */
 	public function listCrmCompanies(
         ?\Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmCompaniesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -525,7 +563,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -550,10 +589,12 @@ class Crm
      * List all contacts
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmContactsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmContactsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmContactsResponse
      */
 	public function listCrmContacts(
         ?\Unified\Unified_to\Models\Operations\ListCrmContactsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmContactsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmContactsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -564,7 +605,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -589,10 +631,12 @@ class Crm
      * List all deals
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmDealsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmDealsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
      */
 	public function listCrmDeals(
         ?\Unified\Unified_to\Models\Operations\ListCrmDealsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmDealsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -603,7 +647,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -628,10 +673,12 @@ class Crm
      * List all events
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmEventsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmEventsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
      */
 	public function listCrmEvents(
         ?\Unified\Unified_to\Models\Operations\ListCrmEventsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmEventsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -642,7 +689,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -667,10 +715,12 @@ class Crm
      * List all leads
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmLeadsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
      */
 	public function listCrmLeads(
         ?\Unified\Unified_to\Models\Operations\ListCrmLeadsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmLeadsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -681,7 +731,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -706,10 +757,12 @@ class Crm
      * List all pipelines
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmPipelinesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
      */
 	public function listCrmPipelines(
         ?\Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmPipelinesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -720,7 +773,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -745,10 +799,12 @@ class Crm
      * Update a company
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
      */
 	public function patchCrmCompany(
         ?\Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -762,7 +818,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -787,10 +844,12 @@ class Crm
      * Update a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmContactResponse
      */
 	public function patchCrmContact(
         ?\Unified\Unified_to\Models\Operations\PatchCrmContactRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -804,7 +863,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -829,10 +889,12 @@ class Crm
      * Update a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
      */
 	public function patchCrmDeal(
         ?\Unified\Unified_to\Models\Operations\PatchCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -846,7 +908,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -871,10 +934,12 @@ class Crm
      * Update a event
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmEventRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
      */
 	public function patchCrmEvent(
         ?\Unified\Unified_to\Models\Operations\PatchCrmEventRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -888,7 +953,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -913,10 +979,12 @@ class Crm
      * Update a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
      */
 	public function patchCrmLead(
         ?\Unified\Unified_to\Models\Operations\PatchCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -930,7 +998,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -955,10 +1024,12 @@ class Crm
      * Update a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
      */
 	public function patchCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -972,7 +1043,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -997,10 +1069,12 @@ class Crm
      * Remove a company
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
      */
 	public function removeCrmCompany(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1010,7 +1084,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1034,10 +1109,12 @@ class Crm
      * Remove a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmContactResponse
      */
 	public function removeCrmContact(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmContactRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1047,7 +1124,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1071,10 +1149,12 @@ class Crm
      * Remove a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
      */
 	public function removeCrmDeal(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1084,7 +1164,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1108,10 +1189,12 @@ class Crm
      * Remove a event
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
      */
 	public function removeCrmEvent(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmEventRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1121,7 +1204,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1145,10 +1229,12 @@ class Crm
      * Remove a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
      */
 	public function removeCrmLead(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1158,7 +1244,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1182,10 +1269,12 @@ class Crm
      * Remove a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
      */
 	public function removeCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1195,7 +1284,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1219,10 +1309,12 @@ class Crm
      * Update a company
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
      */
 	public function updateCrmCompany(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1236,7 +1328,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1261,10 +1354,12 @@ class Crm
      * Update a contact
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmContactRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmContactSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmContactResponse
      */
 	public function updateCrmContact(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmContactRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmContactSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmContactResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1278,7 +1373,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1303,10 +1399,12 @@ class Crm
      * Update a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
      */
 	public function updateCrmDeal(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1320,7 +1418,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1345,10 +1444,12 @@ class Crm
      * Update a event
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
      */
 	public function updateCrmEvent(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmEventRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1362,7 +1463,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1387,10 +1489,12 @@ class Crm
      * Update a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
      */
 	public function updateCrmLead(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1404,7 +1508,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1429,10 +1534,12 @@ class Crm
      * Update a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
      */
 	public function updateCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1446,7 +1553,8 @@ class Crm
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

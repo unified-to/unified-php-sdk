@@ -25,10 +25,12 @@ class Enrich
      * Retrieve enrichment information for a company
      * 
      * @param \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListEnrichCompaniesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
      */
 	public function listEnrichCompanies(
         ?\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListEnrichCompaniesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -39,7 +41,8 @@ class Enrich
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -64,10 +67,12 @@ class Enrich
      * Retrieve enrichment information for a person
      * 
      * @param \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListEnrichPeopleSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
      */
 	public function listEnrichPeople(
         ?\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest $request,
+        \Unified\Unified_to\Models\Operations\ListEnrichPeopleSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -78,7 +83,8 @@ class Enrich
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

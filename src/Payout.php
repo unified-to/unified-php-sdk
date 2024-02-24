@@ -25,10 +25,12 @@ class Payout
      * Retrieve a payout
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAccountingPayoutRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAccountingPayoutSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAccountingPayoutResponse
      */
 	public function getAccountingPayout(
         ?\Unified\Unified_to\Models\Operations\GetAccountingPayoutRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAccountingPayoutSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAccountingPayoutResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -39,7 +41,8 @@ class Payout
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -64,10 +67,12 @@ class Payout
      * List all payouts
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAccountingPayoutsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAccountingPayoutsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAccountingPayoutsResponse
      */
 	public function listAccountingPayouts(
         ?\Unified\Unified_to\Models\Operations\ListAccountingPayoutsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAccountingPayoutsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAccountingPayoutsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -78,7 +83,8 @@ class Payout
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

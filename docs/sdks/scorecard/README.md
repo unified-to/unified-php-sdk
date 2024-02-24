@@ -20,16 +20,14 @@ Create a scorecard
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateAtsScorecardRequest();
@@ -52,7 +50,10 @@ try {
     $request->atsScorecard->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-16T16:10:16.235Z');
     $request->connectionId = '<value>';;
 
-    $response = $sdk->scorecard->createAtsScorecard($request);
+    $requestSecurity = new Operations\CreateAtsScorecardSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->scorecard->createAtsScorecard($request, $requestSecurity);
 
     if ($response->atsScorecard !== null) {
         // handle response
@@ -64,9 +65,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest](../../Models/Operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest](../../Models/Operations/CreateAtsScorecardRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateAtsScorecardSecurity](../../Models/Operations/CreateAtsScorecardSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
 
 
 ### Response
@@ -84,16 +86,13 @@ Retrieve a scorecard
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetAtsScorecardRequest();
@@ -103,7 +102,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->scorecard->getAtsScorecard($request);
+    $requestSecurity = new Operations\GetAtsScorecardSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->scorecard->getAtsScorecard($request, $requestSecurity);
 
     if ($response->atsScorecard !== null) {
         // handle response
@@ -115,9 +117,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetAtsScorecardRequest](../../Models/Operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetAtsScorecardRequest](../../Models/Operations/GetAtsScorecardRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetAtsScorecardSecurity](../../Models/Operations/GetAtsScorecardSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response
@@ -135,16 +138,13 @@ List all scorecards
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListAtsScorecardsRequest();
@@ -163,7 +163,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-19T14:46:22.333Z');;
 
-    $response = $sdk->scorecard->listAtsScorecards($request);
+    $requestSecurity = new Operations\ListAtsScorecardsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->scorecard->listAtsScorecards($request, $requestSecurity);
 
     if ($response->atsScorecards !== null) {
         // handle response
@@ -175,9 +178,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest](../../Models/Operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest](../../Models/Operations/ListAtsScorecardsRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListAtsScorecardsSecurity](../../Models/Operations/ListAtsScorecardsSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response
@@ -195,16 +199,14 @@ Update a scorecard
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchAtsScorecardRequest();
@@ -228,7 +230,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->scorecard->patchAtsScorecard($request);
+    $requestSecurity = new Operations\PatchAtsScorecardSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->scorecard->patchAtsScorecard($request, $requestSecurity);
 
     if ($response->atsScorecard !== null) {
         // handle response
@@ -240,9 +245,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest](../../Models/Operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest](../../Models/Operations/PatchAtsScorecardRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchAtsScorecardSecurity](../../Models/Operations/PatchAtsScorecardSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response
@@ -260,23 +266,23 @@ Remove a scorecard
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveAtsScorecardRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->scorecard->removeAtsScorecard($request);
+    $requestSecurity = new Operations\RemoveAtsScorecardSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->scorecard->removeAtsScorecard($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -288,9 +294,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest](../../Models/Operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest](../../Models/Operations/RemoveAtsScorecardRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveAtsScorecardSecurity](../../Models/Operations/RemoveAtsScorecardSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
 
 
 ### Response
@@ -308,16 +315,14 @@ Update a scorecard
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateAtsScorecardRequest();
@@ -341,7 +346,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->scorecard->updateAtsScorecard($request);
+    $requestSecurity = new Operations\UpdateAtsScorecardSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->scorecard->updateAtsScorecard($request, $requestSecurity);
 
     if ($response->atsScorecard !== null) {
         // handle response
@@ -353,9 +361,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest](../../Models/Operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest](../../Models/Operations/UpdateAtsScorecardRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateAtsScorecardSecurity](../../Models/Operations/UpdateAtsScorecardSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
 
 
 ### Response

@@ -25,10 +25,12 @@ class Collection
      * Create a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
      */
 	public function createCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Collection
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Collection
      * Retrieve a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
      */
 	public function getCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Collection
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Collection
      * List all collections
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCommerceCollectionsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
      */
 	public function listCommerceCollections(
         ?\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCommerceCollectionsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Collection
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Collection
      * Update a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
      */
 	public function patchCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Collection
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Collection
      * Remove a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
      */
 	public function removeCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Collection
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Collection
      * Update a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
      */
 	public function updateCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Collection
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

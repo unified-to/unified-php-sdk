@@ -25,10 +25,12 @@ class Ticket
      * Create a ticket
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateTicketingTicketSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
      */
 	public function createTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateTicketingTicketSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Ticket
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Ticket
      * Retrieve a ticket
      * 
      * @param \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetTicketingTicketSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
      */
 	public function getTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\GetTicketingTicketRequest $request,
+        \Unified\Unified_to\Models\Operations\GetTicketingTicketSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Ticket
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Ticket
      * List all tickets
      * 
      * @param \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListTicketingTicketsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
      */
 	public function listTicketingTickets(
         ?\Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListTicketingTicketsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Ticket
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Ticket
      * Update a ticket
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchTicketingTicketSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
      */
 	public function patchTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchTicketingTicketSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Ticket
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Ticket
      * Remove a ticket
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveTicketingTicketSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
      */
 	public function removeTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveTicketingTicketSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Ticket
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Ticket
      * Update a ticket
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateTicketingTicketSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse
      */
 	public function updateTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateTicketingTicketSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Ticket
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

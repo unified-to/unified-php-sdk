@@ -25,10 +25,12 @@ class Application
      * Create an application
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
      */
 	public function createAtsApplication(
         ?\Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Application
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Application
      * Retrieve an application
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
      */
 	public function getAtsApplication(
         ?\Unified\Unified_to\Models\Operations\GetAtsApplicationRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Application
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Application
      * List all applications
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
      */
 	public function listAtsApplications(
         ?\Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAtsApplicationsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Application
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Application
      * Update an application
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
      */
 	public function patchAtsApplication(
         ?\Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Application
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Application
      * Remove an application
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
      */
 	public function removeAtsApplication(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Application
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Application
      * Update an application
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
      */
 	public function updateAtsApplication(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Application
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

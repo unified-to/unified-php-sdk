@@ -25,10 +25,12 @@ class Issue
      * List support issues
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListUnifiedIssuesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse
      */
 	public function listUnifiedIssues(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListUnifiedIssuesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -39,7 +41,8 @@ class Issue
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

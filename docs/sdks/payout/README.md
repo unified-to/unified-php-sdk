@@ -16,16 +16,13 @@ Retrieve a payout
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetAccountingPayoutRequest();
@@ -35,7 +32,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->payout->getAccountingPayout($request);
+    $requestSecurity = new Operations\GetAccountingPayoutSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->payout->getAccountingPayout($request, $requestSecurity);
 
     if ($response->accountingPayout !== null) {
         // handle response
@@ -47,9 +47,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\GetAccountingPayoutRequest](../../Models/Operations/GetAccountingPayoutRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAccountingPayoutRequest](../../Models/Operations/GetAccountingPayoutRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAccountingPayoutSecurity](../../Models/Operations/GetAccountingPayoutSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
 
 
 ### Response
@@ -67,16 +68,13 @@ List all payouts
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListAccountingPayoutsRequest();
@@ -91,7 +89,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-08T08:07:55.044Z');;
 
-    $response = $sdk->payout->listAccountingPayouts($request);
+    $requestSecurity = new Operations\ListAccountingPayoutsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->payout->listAccountingPayouts($request, $requestSecurity);
 
     if ($response->accountingPayouts !== null) {
         // handle response
@@ -103,9 +104,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\ListAccountingPayoutsRequest](../../Models/Operations/ListAccountingPayoutsRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListAccountingPayoutsRequest](../../Models/Operations/ListAccountingPayoutsRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListAccountingPayoutsSecurity](../../Models/Operations/ListAccountingPayoutsSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
 
 
 ### Response

@@ -20,16 +20,14 @@ Create a deal
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateCrmDealRequest();
@@ -56,7 +54,10 @@ try {
     $request->crmDeal->wonReason = '<value>';
     $request->connectionId = '<value>';;
 
-    $response = $sdk->deal->createCrmDeal($request);
+    $requestSecurity = new Operations\CreateCrmDealSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->deal->createCrmDeal($request, $requestSecurity);
 
     if ($response->crmDeal !== null) {
         // handle response
@@ -68,9 +69,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\CreateCrmDealRequest](../../Models/Operations/CreateCrmDealRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\CreateCrmDealRequest](../../Models/Operations/CreateCrmDealRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `security`                                                                                                      | [\Unified\Unified_to\Models\Operations\CreateCrmDealSecurity](../../Models/Operations/CreateCrmDealSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
 
 
 ### Response
@@ -88,16 +90,13 @@ Retrieve a deal
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetCrmDealRequest();
@@ -107,7 +106,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->deal->getCrmDeal($request);
+    $requestSecurity = new Operations\GetCrmDealSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->deal->getCrmDeal($request, $requestSecurity);
 
     if ($response->crmDeal !== null) {
         // handle response
@@ -119,9 +121,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                              | [\Unified\Unified_to\Models\Operations\GetCrmDealRequest](../../Models/Operations/GetCrmDealRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                | [\Unified\Unified_to\Models\Operations\GetCrmDealRequest](../../Models/Operations/GetCrmDealRequest.md)   | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| `security`                                                                                                | [\Unified\Unified_to\Models\Operations\GetCrmDealSecurity](../../Models/Operations/GetCrmDealSecurity.md) | :heavy_check_mark:                                                                                        | The security requirements to use for the request.                                                         |
 
 
 ### Response
@@ -139,16 +142,13 @@ List all deals
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListCrmDealsRequest();
@@ -166,7 +166,10 @@ try {
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T01:39:26.472Z');
     $request->userId = '<value>';;
 
-    $response = $sdk->deal->listCrmDeals($request);
+    $requestSecurity = new Operations\ListCrmDealsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->deal->listCrmDeals($request, $requestSecurity);
 
     if ($response->crmDeals !== null) {
         // handle response
@@ -178,9 +181,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListCrmDealsRequest](../../Models/Operations/ListCrmDealsRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\ListCrmDealsRequest](../../Models/Operations/ListCrmDealsRequest.md)   | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `security`                                                                                                    | [\Unified\Unified_to\Models\Operations\ListCrmDealsSecurity](../../Models/Operations/ListCrmDealsSecurity.md) | :heavy_check_mark:                                                                                            | The security requirements to use for the request.                                                             |
 
 
 ### Response
@@ -198,16 +202,14 @@ Update a deal
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchCrmDealRequest();
@@ -235,7 +237,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->deal->patchCrmDeal($request);
+    $requestSecurity = new Operations\PatchCrmDealSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->deal->patchCrmDeal($request, $requestSecurity);
 
     if ($response->crmDeal !== null) {
         // handle response
@@ -247,9 +252,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchCrmDealRequest](../../Models/Operations/PatchCrmDealRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCrmDealRequest](../../Models/Operations/PatchCrmDealRequest.md)   | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `security`                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCrmDealSecurity](../../Models/Operations/PatchCrmDealSecurity.md) | :heavy_check_mark:                                                                                            | The security requirements to use for the request.                                                             |
 
 
 ### Response
@@ -267,23 +273,23 @@ Remove a deal
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveCrmDealRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->deal->removeCrmDeal($request);
+    $requestSecurity = new Operations\RemoveCrmDealSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->deal->removeCrmDeal($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -295,9 +301,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\RemoveCrmDealRequest](../../Models/Operations/RemoveCrmDealRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\RemoveCrmDealRequest](../../Models/Operations/RemoveCrmDealRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `security`                                                                                                      | [\Unified\Unified_to\Models\Operations\RemoveCrmDealSecurity](../../Models/Operations/RemoveCrmDealSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
 
 
 ### Response
@@ -315,16 +322,14 @@ Update a deal
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateCrmDealRequest();
@@ -352,7 +357,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->deal->updateCrmDeal($request);
+    $requestSecurity = new Operations\UpdateCrmDealSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->deal->updateCrmDeal($request, $requestSecurity);
 
     if ($response->crmDeal !== null) {
         // handle response
@@ -364,9 +372,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\UpdateCrmDealRequest](../../Models/Operations/UpdateCrmDealRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\UpdateCrmDealRequest](../../Models/Operations/UpdateCrmDealRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `security`                                                                                                      | [\Unified\Unified_to\Models\Operations\UpdateCrmDealSecurity](../../Models/Operations/UpdateCrmDealSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
 
 
 ### Response

@@ -132,8 +132,7 @@ class UnifiedTo
 	public Issue $issue;
 	
 	public Webhook $webhook;
-		
-	private SDKConfiguration $sdkConfiguration;
+	
 
 	/**
 	 * Returns a new instance of the SDK builder used to configure and create the SDK instance.
@@ -148,9 +147,9 @@ class UnifiedTo
 	/**
 	 * @param SDKConfiguration $sdkConfiguration
 	 */
-	public function __construct(SDKConfiguration $sdkConfiguration)
-	{
-		$this->sdkConfiguration = $sdkConfiguration;
+	public function __construct(
+		private SDKConfiguration $sdkConfiguration,
+	) {
 		
 		$this->accounting = new Accounting($this->sdkConfiguration);
 		

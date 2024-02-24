@@ -25,10 +25,12 @@ class Deal
      * Create a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
      */
 	public function createCrmDeal(
         ?\Unified\Unified_to\Models\Operations\CreateCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Deal
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Deal
      * Retrieve a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
      */
 	public function getCrmDeal(
         ?\Unified\Unified_to\Models\Operations\GetCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Deal
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Deal
      * List all deals
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmDealsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmDealsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
      */
 	public function listCrmDeals(
         ?\Unified\Unified_to\Models\Operations\ListCrmDealsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmDealsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Deal
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Deal
      * Update a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
      */
 	public function patchCrmDeal(
         ?\Unified\Unified_to\Models\Operations\PatchCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Deal
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Deal
      * Remove a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
      */
 	public function removeCrmDeal(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Deal
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Deal
      * Update a deal
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmDealSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
      */
 	public function updateCrmDeal(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmDealRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmDealSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Deal
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

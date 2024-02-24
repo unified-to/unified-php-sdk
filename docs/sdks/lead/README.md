@@ -20,16 +20,14 @@ Create a lead
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateCrmLeadRequest();
@@ -66,7 +64,10 @@ try {
     $request->crmLead->userId = '<value>';
     $request->connectionId = '<value>';;
 
-    $response = $sdk->lead->createCrmLead($request);
+    $requestSecurity = new Operations\CreateCrmLeadSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->lead->createCrmLead($request, $requestSecurity);
 
     if ($response->crmLead !== null) {
         // handle response
@@ -78,9 +79,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\CreateCrmLeadRequest](../../Models/Operations/CreateCrmLeadRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\CreateCrmLeadRequest](../../Models/Operations/CreateCrmLeadRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `security`                                                                                                      | [\Unified\Unified_to\Models\Operations\CreateCrmLeadSecurity](../../Models/Operations/CreateCrmLeadSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
 
 
 ### Response
@@ -98,16 +100,13 @@ Retrieve a lead
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetCrmLeadRequest();
@@ -117,7 +116,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->lead->getCrmLead($request);
+    $requestSecurity = new Operations\GetCrmLeadSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->lead->getCrmLead($request, $requestSecurity);
 
     if ($response->crmLead !== null) {
         // handle response
@@ -129,9 +131,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                              | [\Unified\Unified_to\Models\Operations\GetCrmLeadRequest](../../Models/Operations/GetCrmLeadRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                | [\Unified\Unified_to\Models\Operations\GetCrmLeadRequest](../../Models/Operations/GetCrmLeadRequest.md)   | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| `security`                                                                                                | [\Unified\Unified_to\Models\Operations\GetCrmLeadSecurity](../../Models/Operations/GetCrmLeadSecurity.md) | :heavy_check_mark:                                                                                        | The security requirements to use for the request.                                                         |
 
 
 ### Response
@@ -149,16 +152,13 @@ List all leads
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListCrmLeadsRequest();
@@ -176,7 +176,10 @@ try {
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T07:27:29.016Z');
     $request->userId = '<value>';;
 
-    $response = $sdk->lead->listCrmLeads($request);
+    $requestSecurity = new Operations\ListCrmLeadsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->lead->listCrmLeads($request, $requestSecurity);
 
     if ($response->crmLeads !== null) {
         // handle response
@@ -188,9 +191,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListCrmLeadsRequest](../../Models/Operations/ListCrmLeadsRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\ListCrmLeadsRequest](../../Models/Operations/ListCrmLeadsRequest.md)   | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `security`                                                                                                    | [\Unified\Unified_to\Models\Operations\ListCrmLeadsSecurity](../../Models/Operations/ListCrmLeadsSecurity.md) | :heavy_check_mark:                                                                                            | The security requirements to use for the request.                                                             |
 
 
 ### Response
@@ -208,16 +212,14 @@ Update a lead
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchCrmLeadRequest();
@@ -255,7 +257,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->lead->patchCrmLead($request);
+    $requestSecurity = new Operations\PatchCrmLeadSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->lead->patchCrmLead($request, $requestSecurity);
 
     if ($response->crmLead !== null) {
         // handle response
@@ -267,9 +272,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\PatchCrmLeadRequest](../../Models/Operations/PatchCrmLeadRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCrmLeadRequest](../../Models/Operations/PatchCrmLeadRequest.md)   | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `security`                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCrmLeadSecurity](../../Models/Operations/PatchCrmLeadSecurity.md) | :heavy_check_mark:                                                                                            | The security requirements to use for the request.                                                             |
 
 
 ### Response
@@ -287,23 +293,23 @@ Remove a lead
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveCrmLeadRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->lead->removeCrmLead($request);
+    $requestSecurity = new Operations\RemoveCrmLeadSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->lead->removeCrmLead($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -315,9 +321,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest](../../Models/Operations/RemoveCrmLeadRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest](../../Models/Operations/RemoveCrmLeadRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `security`                                                                                                      | [\Unified\Unified_to\Models\Operations\RemoveCrmLeadSecurity](../../Models/Operations/RemoveCrmLeadSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
 
 
 ### Response
@@ -335,16 +342,14 @@ Update a lead
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateCrmLeadRequest();
@@ -382,7 +387,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->lead->updateCrmLead($request);
+    $requestSecurity = new Operations\UpdateCrmLeadSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->lead->updateCrmLead($request, $requestSecurity);
 
     if ($response->crmLead !== null) {
         // handle response
@@ -394,9 +402,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest](../../Models/Operations/UpdateCrmLeadRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest](../../Models/Operations/UpdateCrmLeadRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `security`                                                                                                      | [\Unified\Unified_to\Models\Operations\UpdateCrmLeadSecurity](../../Models/Operations/UpdateCrmLeadSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
 
 
 ### Response

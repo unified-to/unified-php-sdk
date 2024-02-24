@@ -25,10 +25,12 @@ class Invoice
      * Create a invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse
      */
 	public function createAccountingInvoice(
         ?\Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Invoice
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Invoice
      * Retrieve a invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAccountingInvoiceSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse
      */
 	public function getAccountingInvoice(
         ?\Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAccountingInvoiceSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Invoice
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Invoice
      * List all invoices
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAccountingInvoicesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse
      */
 	public function listAccountingInvoices(
         ?\Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAccountingInvoicesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Invoice
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Invoice
      * Update a invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse
      */
 	public function patchAccountingInvoice(
         ?\Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Invoice
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Invoice
      * Remove a invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse
      */
 	public function removeAccountingInvoice(
         ?\Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Invoice
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Invoice
      * Update a invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse
      */
 	public function updateAccountingInvoice(
         ?\Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Invoice
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

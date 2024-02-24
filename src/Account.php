@@ -25,10 +25,12 @@ class Account
      * Create an account
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAccountingAccountRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateAccountingAccountSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingAccountResponse
      */
 	public function createAccountingAccount(
         ?\Unified\Unified_to\Models\Operations\CreateAccountingAccountRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateAccountingAccountSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Account
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Account
      * Retrieve an account
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAccountingAccountRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAccountingAccountSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAccountingAccountResponse
      */
 	public function getAccountingAccount(
         ?\Unified\Unified_to\Models\Operations\GetAccountingAccountRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAccountingAccountSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Account
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Account
      * List all accounts
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAccountingAccountsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAccountingAccountsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAccountingAccountsResponse
      */
 	public function listAccountingAccounts(
         ?\Unified\Unified_to\Models\Operations\ListAccountingAccountsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAccountingAccountsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAccountingAccountsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Account
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Account
      * Update an account
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAccountingAccountRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchAccountingAccountSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingAccountResponse
      */
 	public function patchAccountingAccount(
         ?\Unified\Unified_to\Models\Operations\PatchAccountingAccountRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchAccountingAccountSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Account
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Account
      * Remove an account
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAccountingAccountRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingAccountSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingAccountResponse
      */
 	public function removeAccountingAccount(
         ?\Unified\Unified_to\Models\Operations\RemoveAccountingAccountRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveAccountingAccountSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Account
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Account
      * Update an account
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAccountingAccountRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingAccountSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingAccountResponse
      */
 	public function updateAccountingAccount(
         ?\Unified\Unified_to\Models\Operations\UpdateAccountingAccountRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateAccountingAccountSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Account
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

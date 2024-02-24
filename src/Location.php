@@ -25,10 +25,12 @@ class Location
      * Create a location
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      */
 	public function createCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Location
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Location
      * Retrieve a location
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
      */
 	public function getCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\GetCommerceLocationRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Location
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Location
      * List all locations
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCommerceLocationsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
      */
 	public function listCommerceLocations(
         ?\Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCommerceLocationsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Location
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Location
      * Update a location
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
      */
 	public function patchCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Location
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Location
      * Remove a location
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      */
 	public function removeCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Location
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Location
      * Update a location
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
      */
 	public function updateCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Location
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

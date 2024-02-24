@@ -15,16 +15,13 @@ List support issues
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListUnifiedIssuesRequest();
@@ -34,7 +31,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T01:55:24.746Z');;
 
-    $response = $sdk->issue->listUnifiedIssues($request);
+    $requestSecurity = new Operations\ListUnifiedIssuesSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->issue->listUnifiedIssues($request, $requestSecurity);
 
     if ($response->issues !== null) {
         // handle response
@@ -46,9 +46,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest](../../Models/Operations/ListUnifiedIssuesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest](../../Models/Operations/ListUnifiedIssuesRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListUnifiedIssuesSecurity](../../Models/Operations/ListUnifiedIssuesSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response

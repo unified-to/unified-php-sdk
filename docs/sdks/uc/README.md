@@ -21,16 +21,14 @@ Create a contact
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateUcContactRequest();
@@ -52,7 +50,10 @@ try {
     $request->ucContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-27T10:35:00.674Z');
     $request->connectionId = '<value>';;
 
-    $response = $sdk->uc->createUcContact($request);
+    $requestSecurity = new Operations\CreateUcContactSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->uc->createUcContact($request, $requestSecurity);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -64,9 +65,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateUcContactRequest](../../Models/Operations/CreateUcContactRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateUcContactRequest](../../Models/Operations/CreateUcContactRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateUcContactSecurity](../../Models/Operations/CreateUcContactSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response
@@ -84,16 +86,13 @@ Retrieve a contact
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetUcContactRequest();
@@ -103,7 +102,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->uc->getUcContact($request);
+    $requestSecurity = new Operations\GetUcContactSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->uc->getUcContact($request, $requestSecurity);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -115,9 +117,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUcContactRequest](../../Models/Operations/GetUcContactRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUcContactRequest](../../Models/Operations/GetUcContactRequest.md)   | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `security`                                                                                                    | [\Unified\Unified_to\Models\Operations\GetUcContactSecurity](../../Models/Operations/GetUcContactSecurity.md) | :heavy_check_mark:                                                                                            | The security requirements to use for the request.                                                             |
 
 
 ### Response
@@ -135,16 +138,13 @@ List all calls
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListUcCallsRequest();
@@ -161,7 +161,10 @@ try {
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-24T23:18:21.548Z');
     $request->userId = '<value>';;
 
-    $response = $sdk->uc->listUcCalls($request);
+    $requestSecurity = new Operations\ListUcCallsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->uc->listUcCalls($request, $requestSecurity);
 
     if ($response->ucCalls !== null) {
         // handle response
@@ -173,9 +176,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\Unified\Unified_to\Models\Operations\ListUcCallsRequest](../../Models/Operations/ListUcCallsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListUcCallsRequest](../../Models/Operations/ListUcCallsRequest.md)   | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| `security`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListUcCallsSecurity](../../Models/Operations/ListUcCallsSecurity.md) | :heavy_check_mark:                                                                                          | The security requirements to use for the request.                                                           |
 
 
 ### Response
@@ -193,16 +197,13 @@ List all contacts
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListUcContactsRequest();
@@ -218,7 +219,10 @@ try {
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-26T05:35:01.805Z');
     $request->userId = '<value>';;
 
-    $response = $sdk->uc->listUcContacts($request);
+    $requestSecurity = new Operations\ListUcContactsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->uc->listUcContacts($request, $requestSecurity);
 
     if ($response->ucContacts !== null) {
         // handle response
@@ -230,9 +234,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\ListUcContactsRequest](../../Models/Operations/ListUcContactsRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\ListUcContactsRequest](../../Models/Operations/ListUcContactsRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\ListUcContactsSecurity](../../Models/Operations/ListUcContactsSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response
@@ -250,16 +255,14 @@ Update a contact
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchUcContactRequest();
@@ -282,7 +285,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->uc->patchUcContact($request);
+    $requestSecurity = new Operations\PatchUcContactSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->uc->patchUcContact($request, $requestSecurity);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -294,9 +300,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchUcContactRequest](../../Models/Operations/PatchUcContactRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchUcContactRequest](../../Models/Operations/PatchUcContactRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchUcContactSecurity](../../Models/Operations/PatchUcContactSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response
@@ -314,23 +321,23 @@ Remove a contact
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveUcContactRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->uc->removeUcContact($request);
+    $requestSecurity = new Operations\RemoveUcContactSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->uc->removeUcContact($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -342,9 +349,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveUcContactRequest](../../Models/Operations/RemoveUcContactRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveUcContactRequest](../../Models/Operations/RemoveUcContactRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveUcContactSecurity](../../Models/Operations/RemoveUcContactSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response
@@ -362,16 +370,14 @@ Update a contact
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateUcContactRequest();
@@ -394,7 +400,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->uc->updateUcContact($request);
+    $requestSecurity = new Operations\UpdateUcContactSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->uc->updateUcContact($request, $requestSecurity);
 
     if ($response->ucContact !== null) {
         // handle response
@@ -406,9 +415,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateUcContactRequest](../../Models/Operations/UpdateUcContactRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateUcContactRequest](../../Models/Operations/UpdateUcContactRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateUcContactSecurity](../../Models/Operations/UpdateUcContactSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response

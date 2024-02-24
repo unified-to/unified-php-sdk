@@ -16,16 +16,13 @@ Retrieve enrichment information for a company
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListEnrichCompaniesRequest();
@@ -33,7 +30,10 @@ try {
     $request->domain = 'dismal-cornmeal.org';
     $request->name = '<value>';;
 
-    $response = $sdk->enrich->listEnrichCompanies($request);
+    $requestSecurity = new Operations\ListEnrichCompaniesSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->enrich->listEnrichCompanies($request, $requestSecurity);
 
     if ($response->enrichCompany !== null) {
         // handle response
@@ -45,9 +45,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest](../../Models/Operations/ListEnrichCompaniesRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest](../../Models/Operations/ListEnrichCompaniesRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\ListEnrichCompaniesSecurity](../../Models/Operations/ListEnrichCompaniesSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
 
 
 ### Response
@@ -65,16 +66,13 @@ Retrieve enrichment information for a person
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListEnrichPeopleRequest();
@@ -84,7 +82,10 @@ try {
     $request->name = '<value>';
     $request->twitter = '<value>';;
 
-    $response = $sdk->enrich->listEnrichPeople($request);
+    $requestSecurity = new Operations\ListEnrichPeopleSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->enrich->listEnrichPeople($request, $requestSecurity);
 
     if ($response->enrichPerson !== null) {
         // handle response
@@ -96,9 +97,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest](../../Models/Operations/ListEnrichPeopleRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest](../../Models/Operations/ListEnrichPeopleRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `security`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListEnrichPeopleSecurity](../../Models/Operations/ListEnrichPeopleSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
 
 
 ### Response

@@ -20,16 +20,14 @@ Create a event
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateCrmEventRequest();
@@ -85,7 +83,10 @@ try {
     $request->crmEvent->userId = '<value>';
     $request->connectionId = '<value>';;
 
-    $response = $sdk->event->createCrmEvent($request);
+    $requestSecurity = new Operations\CreateCrmEventSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->event->createCrmEvent($request, $requestSecurity);
 
     if ($response->crmEvent !== null) {
         // handle response
@@ -97,9 +98,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\CreateCrmEventRequest](../../Models/Operations/CreateCrmEventRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateCrmEventRequest](../../Models/Operations/CreateCrmEventRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateCrmEventSecurity](../../Models/Operations/CreateCrmEventSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response
@@ -117,16 +119,13 @@ Retrieve a event
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetCrmEventRequest();
@@ -136,7 +135,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->event->getCrmEvent($request);
+    $requestSecurity = new Operations\GetCrmEventSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->event->getCrmEvent($request, $requestSecurity);
 
     if ($response->crmEvent !== null) {
         // handle response
@@ -148,9 +150,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\Unified\Unified_to\Models\Operations\GetCrmEventRequest](../../Models/Operations/GetCrmEventRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\GetCrmEventRequest](../../Models/Operations/GetCrmEventRequest.md)   | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| `security`                                                                                                  | [\Unified\Unified_to\Models\Operations\GetCrmEventSecurity](../../Models/Operations/GetCrmEventSecurity.md) | :heavy_check_mark:                                                                                          | The security requirements to use for the request.                                                           |
 
 
 ### Response
@@ -168,16 +171,13 @@ List all events
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListCrmEventsRequest();
@@ -197,7 +197,10 @@ try {
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-30T03:39:38.103Z');
     $request->userId = '<value>';;
 
-    $response = $sdk->event->listCrmEvents($request);
+    $requestSecurity = new Operations\ListCrmEventsSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->event->listCrmEvents($request, $requestSecurity);
 
     if ($response->crmEvents !== null) {
         // handle response
@@ -209,9 +212,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\ListCrmEventsRequest](../../Models/Operations/ListCrmEventsRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\ListCrmEventsRequest](../../Models/Operations/ListCrmEventsRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `security`                                                                                                      | [\Unified\Unified_to\Models\Operations\ListCrmEventsSecurity](../../Models/Operations/ListCrmEventsSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
 
 
 ### Response
@@ -229,16 +233,14 @@ Update a event
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchCrmEventRequest();
@@ -295,7 +297,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->event->patchCrmEvent($request);
+    $requestSecurity = new Operations\PatchCrmEventSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->event->patchCrmEvent($request, $requestSecurity);
 
     if ($response->crmEvent !== null) {
         // handle response
@@ -307,9 +312,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCrmEventRequest](../../Models/Operations/PatchCrmEventRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCrmEventRequest](../../Models/Operations/PatchCrmEventRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `security`                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchCrmEventSecurity](../../Models/Operations/PatchCrmEventSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
 
 
 ### Response
@@ -327,23 +333,23 @@ Remove a event
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveCrmEventRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->event->removeCrmEvent($request);
+    $requestSecurity = new Operations\RemoveCrmEventSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->event->removeCrmEvent($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -355,9 +361,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\RemoveCrmEventRequest](../../Models/Operations/RemoveCrmEventRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveCrmEventRequest](../../Models/Operations/RemoveCrmEventRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveCrmEventSecurity](../../Models/Operations/RemoveCrmEventSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response
@@ -375,16 +382,14 @@ Update a event
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateCrmEventRequest();
@@ -441,7 +446,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->event->updateCrmEvent($request);
+    $requestSecurity = new Operations\UpdateCrmEventSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->event->updateCrmEvent($request, $requestSecurity);
 
     if ($response->crmEvent !== null) {
         // handle response
@@ -453,9 +461,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\UpdateCrmEventRequest](../../Models/Operations/UpdateCrmEventRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateCrmEventRequest](../../Models/Operations/UpdateCrmEventRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateCrmEventSecurity](../../Models/Operations/UpdateCrmEventSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response

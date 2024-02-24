@@ -20,16 +20,14 @@ Create a file
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\CreateStorageFileRequest();
@@ -54,7 +52,10 @@ try {
     $request->storageFile->userId = '<value>';
     $request->connectionId = '<value>';;
 
-    $response = $sdk->storage->createStorageFile($request);
+    $requestSecurity = new Operations\CreateStorageFileSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->storage->createStorageFile($request, $requestSecurity);
 
     if ($response->storageFile !== null) {
         // handle response
@@ -66,9 +67,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateStorageFileRequest](../../Models/Operations/CreateStorageFileRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateStorageFileRequest](../../Models/Operations/CreateStorageFileRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateStorageFileSecurity](../../Models/Operations/CreateStorageFileSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response
@@ -86,16 +88,13 @@ Retrieve a file
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\GetStorageFileRequest();
@@ -105,7 +104,10 @@ try {
     ];
     $request->id = '<id>';;
 
-    $response = $sdk->storage->getStorageFile($request);
+    $requestSecurity = new Operations\GetStorageFileSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->storage->getStorageFile($request, $requestSecurity);
 
     if ($response->storageFile !== null) {
         // handle response
@@ -117,9 +119,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetStorageFileRequest](../../Models/Operations/GetStorageFileRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetStorageFileRequest](../../Models/Operations/GetStorageFileRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `security`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetStorageFileSecurity](../../Models/Operations/GetStorageFileSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
 
 
 ### Response
@@ -137,16 +140,13 @@ List all files
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\ListStorageFilesRequest();
@@ -162,7 +162,10 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-28T04:36:03.817Z');;
 
-    $response = $sdk->storage->listStorageFiles($request);
+    $requestSecurity = new Operations\ListStorageFilesSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->storage->listStorageFiles($request, $requestSecurity);
 
     if ($response->storageFiles !== null) {
         // handle response
@@ -174,9 +177,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListStorageFilesRequest](../../Models/Operations/ListStorageFilesRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListStorageFilesRequest](../../Models/Operations/ListStorageFilesRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `security`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListStorageFilesSecurity](../../Models/Operations/ListStorageFilesSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
 
 
 ### Response
@@ -194,16 +198,14 @@ Update a file
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\PatchStorageFileRequest();
@@ -229,7 +231,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->storage->patchStorageFile($request);
+    $requestSecurity = new Operations\PatchStorageFileSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->storage->patchStorageFile($request, $requestSecurity);
 
     if ($response->storageFile !== null) {
         // handle response
@@ -241,9 +246,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchStorageFileRequest](../../Models/Operations/PatchStorageFileRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchStorageFileRequest](../../Models/Operations/PatchStorageFileRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `security`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchStorageFileSecurity](../../Models/Operations/PatchStorageFileSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
 
 
 ### Response
@@ -261,23 +267,23 @@ Remove a file
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\RemoveStorageFileRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->storage->removeStorageFile($request);
+    $requestSecurity = new Operations\RemoveStorageFileSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->storage->removeStorageFile($request, $requestSecurity);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -289,9 +295,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveStorageFileRequest](../../Models/Operations/RemoveStorageFileRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveStorageFileRequest](../../Models/Operations/RemoveStorageFileRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveStorageFileSecurity](../../Models/Operations/RemoveStorageFileSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response
@@ -309,16 +316,14 @@ Update a file
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
+use \Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
         $request = new Operations\UpdateStorageFileRequest();
@@ -344,7 +349,10 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $response = $sdk->storage->updateStorageFile($request);
+    $requestSecurity = new Operations\UpdateStorageFileSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->storage->updateStorageFile($request, $requestSecurity);
 
     if ($response->storageFile !== null) {
         // handle response
@@ -356,9 +364,10 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateStorageFileRequest](../../Models/Operations/UpdateStorageFileRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateStorageFileRequest](../../Models/Operations/UpdateStorageFileRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateStorageFileSecurity](../../Models/Operations/UpdateStorageFileSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
 
 
 ### Response

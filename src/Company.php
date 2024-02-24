@@ -25,10 +25,12 @@ class Company
      * Create a company
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
      */
 	public function createCrmCompany(
         ?\Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Company
      * Retrieve a company
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAtsCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
      */
 	public function getAtsCompany(
         ?\Unified\Unified_to\Models\Operations\GetAtsCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAtsCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Company
      * Retrieve a company
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
      */
 	public function getCrmCompany(
         ?\Unified\Unified_to\Models\Operations\GetCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Company
      * List all companies
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAtsCompaniesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
      */
 	public function listAtsCompanies(
         ?\Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAtsCompaniesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -159,7 +170,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -184,10 +196,12 @@ class Company
      * List all companies
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmCompaniesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
      */
 	public function listCrmCompanies(
         ?\Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmCompaniesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -198,7 +212,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -223,10 +238,12 @@ class Company
      * Retrieve enrichment information for a company
      * 
      * @param \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListEnrichCompaniesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
      */
 	public function listEnrichCompanies(
         ?\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListEnrichCompaniesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -237,7 +254,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -262,10 +280,12 @@ class Company
      * Update a company
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
      */
 	public function patchCrmCompany(
         ?\Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -279,7 +299,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -304,10 +325,12 @@ class Company
      * Remove a company
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
      */
 	public function removeCrmCompany(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -317,7 +340,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -341,10 +365,12 @@ class Company
      * Update a company
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
      */
 	public function updateCrmCompany(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -358,7 +384,8 @@ class Company
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

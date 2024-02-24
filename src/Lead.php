@@ -25,10 +25,12 @@ class Lead
      * Create a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
      */
 	public function createCrmLead(
         ?\Unified\Unified_to\Models\Operations\CreateCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Lead
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Lead
      * Retrieve a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
      */
 	public function getCrmLead(
         ?\Unified\Unified_to\Models\Operations\GetCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\GetCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Lead
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Lead
      * List all leads
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListCrmLeadsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
      */
 	public function listCrmLeads(
         ?\Unified\Unified_to\Models\Operations\ListCrmLeadsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListCrmLeadsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Lead
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Lead
      * Update a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
      */
 	public function patchCrmLead(
         ?\Unified\Unified_to\Models\Operations\PatchCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Lead
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Lead
      * Remove a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
      */
 	public function removeCrmLead(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Lead
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Lead
      * Update a lead
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateCrmLeadSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
      */
 	public function updateCrmLead(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateCrmLeadSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Lead
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

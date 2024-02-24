@@ -25,10 +25,12 @@ class Document
      * Create a document
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
      */
 	public function createAtsDocument(
         ?\Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Document
      * Retrieve a document
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
      */
 	public function getAtsDocument(
         ?\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Document
      * List all documents
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAtsDocumentsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
      */
 	public function listAtsDocuments(
         ?\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAtsDocumentsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Document
      * Update a document
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
      */
 	public function patchAtsDocument(
         ?\Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Document
      * Remove a document
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
      */
 	public function removeAtsDocument(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Document
      * Update a document
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
      */
 	public function updateAtsDocument(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Document
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

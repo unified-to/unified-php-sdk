@@ -6,16 +6,16 @@
 
 declare(strict_types=1);
 
-namespace Unified\Unified_to\Models\Shared;
+namespace Unified\Unified_to\Models\Operations;
 
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
-class Security
+class PatchHrisGroupSecurity
 {
 	#[SpeakeasyMetadata('security:scheme=true,type=apiKey,subtype=header,name=authorization')]
-    public ?string $jwt = null;
+    public string $jwt;
     
 	public function __construct()
 	{
-		$this->jwt = null;
+		$this->jwt = "";
 	}
 }

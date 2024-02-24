@@ -1,21 +1,22 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
+  docChecksum: 933f1fadb58fda6f0fe4bf144990d66c
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.269.0
-  releaseVersion: 0.12.11
-  configChecksum: 3d945434a92a883126a0550ce9acda9b
+  generationVersion: 2.272.4
+  releaseVersion: 0.13.0
+  configChecksum: 6570c2874ec78562c2bc52780d838f69
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 features:
   php:
-    core: 3.3.2
-    globalSecurity: 2.81.3
+    core: 3.3.3
+    globalSecurity: 2.81.4
     globalServerURLs: 2.82.1
+    methodSecurity: 2.82.1
 generatedFiles:
   - src/SDKConfiguration.php
   - src/Accounting.php
@@ -94,461 +95,686 @@ generatedFiles:
   - src/Utils/SecurityMetadata.php
   - src/Utils/SpeakeasyMetadata.php
   - src/Utils/Utils.php
+  - src/Models/Operations/CreateAccountingAccountSecurity.php
   - src/Models/Operations/CreateAccountingAccountRequest.php
   - src/Models/Operations/CreateAccountingAccountResponse.php
+  - src/Models/Operations/CreateAccountingContactSecurity.php
   - src/Models/Operations/CreateAccountingContactRequest.php
   - src/Models/Operations/CreateAccountingContactResponse.php
+  - src/Models/Operations/CreateAccountingInvoiceSecurity.php
   - src/Models/Operations/CreateAccountingInvoiceRequest.php
   - src/Models/Operations/CreateAccountingInvoiceResponse.php
+  - src/Models/Operations/CreateAccountingPaymentSecurity.php
   - src/Models/Operations/CreateAccountingPaymentRequest.php
   - src/Models/Operations/CreateAccountingPaymentResponse.php
+  - src/Models/Operations/CreateAccountingTaxrateSecurity.php
   - src/Models/Operations/CreateAccountingTaxrateRequest.php
   - src/Models/Operations/CreateAccountingTaxrateResponse.php
+  - src/Models/Operations/CreateAccountingTransactionSecurity.php
   - src/Models/Operations/CreateAccountingTransactionRequest.php
   - src/Models/Operations/CreateAccountingTransactionResponse.php
+  - src/Models/Operations/GetAccountingAccountSecurity.php
   - src/Models/Operations/GetAccountingAccountRequest.php
   - src/Models/Operations/GetAccountingAccountResponse.php
+  - src/Models/Operations/GetAccountingContactSecurity.php
   - src/Models/Operations/GetAccountingContactRequest.php
   - src/Models/Operations/GetAccountingContactResponse.php
+  - src/Models/Operations/GetAccountingInvoiceSecurity.php
   - src/Models/Operations/GetAccountingInvoiceRequest.php
   - src/Models/Operations/GetAccountingInvoiceResponse.php
+  - src/Models/Operations/GetAccountingOrganizationSecurity.php
   - src/Models/Operations/GetAccountingOrganizationRequest.php
   - src/Models/Operations/GetAccountingOrganizationResponse.php
+  - src/Models/Operations/GetAccountingPaymentSecurity.php
   - src/Models/Operations/GetAccountingPaymentRequest.php
   - src/Models/Operations/GetAccountingPaymentResponse.php
+  - src/Models/Operations/GetAccountingPayoutSecurity.php
   - src/Models/Operations/GetAccountingPayoutRequest.php
   - src/Models/Operations/GetAccountingPayoutResponse.php
+  - src/Models/Operations/GetAccountingRefundSecurity.php
   - src/Models/Operations/GetAccountingRefundRequest.php
   - src/Models/Operations/GetAccountingRefundResponse.php
+  - src/Models/Operations/GetAccountingTaxrateSecurity.php
   - src/Models/Operations/GetAccountingTaxrateRequest.php
   - src/Models/Operations/GetAccountingTaxrateResponse.php
+  - src/Models/Operations/GetAccountingTransactionSecurity.php
   - src/Models/Operations/GetAccountingTransactionRequest.php
   - src/Models/Operations/GetAccountingTransactionResponse.php
+  - src/Models/Operations/ListAccountingAccountsSecurity.php
   - src/Models/Operations/ListAccountingAccountsRequest.php
   - src/Models/Operations/ListAccountingAccountsResponse.php
+  - src/Models/Operations/ListAccountingContactsSecurity.php
   - src/Models/Operations/ListAccountingContactsRequest.php
   - src/Models/Operations/ListAccountingContactsResponse.php
+  - src/Models/Operations/ListAccountingInvoicesSecurity.php
   - src/Models/Operations/ListAccountingInvoicesRequest.php
   - src/Models/Operations/ListAccountingInvoicesResponse.php
+  - src/Models/Operations/ListAccountingOrganizationsSecurity.php
   - src/Models/Operations/ListAccountingOrganizationsRequest.php
   - src/Models/Operations/ListAccountingOrganizationsResponse.php
+  - src/Models/Operations/ListAccountingPaymentsSecurity.php
   - src/Models/Operations/ListAccountingPaymentsRequest.php
   - src/Models/Operations/ListAccountingPaymentsResponse.php
+  - src/Models/Operations/ListAccountingPayoutsSecurity.php
   - src/Models/Operations/ListAccountingPayoutsRequest.php
   - src/Models/Operations/ListAccountingPayoutsResponse.php
+  - src/Models/Operations/ListAccountingRefundsSecurity.php
   - src/Models/Operations/ListAccountingRefundsRequest.php
   - src/Models/Operations/ListAccountingRefundsResponse.php
+  - src/Models/Operations/ListAccountingTaxratesSecurity.php
   - src/Models/Operations/ListAccountingTaxratesRequest.php
   - src/Models/Operations/ListAccountingTaxratesResponse.php
+  - src/Models/Operations/ListAccountingTransactionsSecurity.php
   - src/Models/Operations/ListAccountingTransactionsRequest.php
   - src/Models/Operations/ListAccountingTransactionsResponse.php
+  - src/Models/Operations/PatchAccountingAccountSecurity.php
   - src/Models/Operations/PatchAccountingAccountRequest.php
   - src/Models/Operations/PatchAccountingAccountResponse.php
+  - src/Models/Operations/PatchAccountingContactSecurity.php
   - src/Models/Operations/PatchAccountingContactRequest.php
   - src/Models/Operations/PatchAccountingContactResponse.php
+  - src/Models/Operations/PatchAccountingInvoiceSecurity.php
   - src/Models/Operations/PatchAccountingInvoiceRequest.php
   - src/Models/Operations/PatchAccountingInvoiceResponse.php
+  - src/Models/Operations/PatchAccountingPaymentSecurity.php
   - src/Models/Operations/PatchAccountingPaymentRequest.php
   - src/Models/Operations/PatchAccountingPaymentResponse.php
+  - src/Models/Operations/PatchAccountingTaxrateSecurity.php
   - src/Models/Operations/PatchAccountingTaxrateRequest.php
   - src/Models/Operations/PatchAccountingTaxrateResponse.php
+  - src/Models/Operations/PatchAccountingTransactionSecurity.php
   - src/Models/Operations/PatchAccountingTransactionRequest.php
   - src/Models/Operations/PatchAccountingTransactionResponse.php
+  - src/Models/Operations/RemoveAccountingAccountSecurity.php
   - src/Models/Operations/RemoveAccountingAccountRequest.php
   - src/Models/Operations/RemoveAccountingAccountResponse.php
+  - src/Models/Operations/RemoveAccountingContactSecurity.php
   - src/Models/Operations/RemoveAccountingContactRequest.php
   - src/Models/Operations/RemoveAccountingContactResponse.php
+  - src/Models/Operations/RemoveAccountingInvoiceSecurity.php
   - src/Models/Operations/RemoveAccountingInvoiceRequest.php
   - src/Models/Operations/RemoveAccountingInvoiceResponse.php
+  - src/Models/Operations/RemoveAccountingPaymentSecurity.php
   - src/Models/Operations/RemoveAccountingPaymentRequest.php
   - src/Models/Operations/RemoveAccountingPaymentResponse.php
+  - src/Models/Operations/RemoveAccountingTaxrateSecurity.php
   - src/Models/Operations/RemoveAccountingTaxrateRequest.php
   - src/Models/Operations/RemoveAccountingTaxrateResponse.php
+  - src/Models/Operations/RemoveAccountingTransactionSecurity.php
   - src/Models/Operations/RemoveAccountingTransactionRequest.php
   - src/Models/Operations/RemoveAccountingTransactionResponse.php
+  - src/Models/Operations/UpdateAccountingAccountSecurity.php
   - src/Models/Operations/UpdateAccountingAccountRequest.php
   - src/Models/Operations/UpdateAccountingAccountResponse.php
+  - src/Models/Operations/UpdateAccountingContactSecurity.php
   - src/Models/Operations/UpdateAccountingContactRequest.php
   - src/Models/Operations/UpdateAccountingContactResponse.php
+  - src/Models/Operations/UpdateAccountingInvoiceSecurity.php
   - src/Models/Operations/UpdateAccountingInvoiceRequest.php
   - src/Models/Operations/UpdateAccountingInvoiceResponse.php
+  - src/Models/Operations/UpdateAccountingPaymentSecurity.php
   - src/Models/Operations/UpdateAccountingPaymentRequest.php
   - src/Models/Operations/UpdateAccountingPaymentResponse.php
+  - src/Models/Operations/UpdateAccountingTaxrateSecurity.php
   - src/Models/Operations/UpdateAccountingTaxrateRequest.php
   - src/Models/Operations/UpdateAccountingTaxrateResponse.php
+  - src/Models/Operations/UpdateAccountingTransactionSecurity.php
   - src/Models/Operations/UpdateAccountingTransactionRequest.php
   - src/Models/Operations/UpdateAccountingTransactionResponse.php
+  - src/Models/Operations/CreateCrmContactSecurity.php
   - src/Models/Operations/CreateCrmContactRequest.php
   - src/Models/Operations/CreateCrmContactResponse.php
+  - src/Models/Operations/CreateUcContactSecurity.php
   - src/Models/Operations/CreateUcContactRequest.php
   - src/Models/Operations/CreateUcContactResponse.php
+  - src/Models/Operations/GetCrmContactSecurity.php
   - src/Models/Operations/GetCrmContactRequest.php
   - src/Models/Operations/GetCrmContactResponse.php
+  - src/Models/Operations/GetUcContactSecurity.php
   - src/Models/Operations/GetUcContactRequest.php
   - src/Models/Operations/GetUcContactResponse.php
+  - src/Models/Operations/ListCrmContactsSecurity.php
   - src/Models/Operations/ListCrmContactsRequest.php
   - src/Models/Operations/ListCrmContactsResponse.php
+  - src/Models/Operations/ListUcContactsSecurity.php
   - src/Models/Operations/ListUcContactsRequest.php
   - src/Models/Operations/ListUcContactsResponse.php
+  - src/Models/Operations/PatchCrmContactSecurity.php
   - src/Models/Operations/PatchCrmContactRequest.php
   - src/Models/Operations/PatchCrmContactResponse.php
+  - src/Models/Operations/PatchUcContactSecurity.php
   - src/Models/Operations/PatchUcContactRequest.php
   - src/Models/Operations/PatchUcContactResponse.php
+  - src/Models/Operations/RemoveCrmContactSecurity.php
   - src/Models/Operations/RemoveCrmContactRequest.php
   - src/Models/Operations/RemoveCrmContactResponse.php
+  - src/Models/Operations/RemoveUcContactSecurity.php
   - src/Models/Operations/RemoveUcContactRequest.php
   - src/Models/Operations/RemoveUcContactResponse.php
+  - src/Models/Operations/UpdateCrmContactSecurity.php
   - src/Models/Operations/UpdateCrmContactRequest.php
   - src/Models/Operations/UpdateCrmContactResponse.php
+  - src/Models/Operations/UpdateUcContactSecurity.php
   - src/Models/Operations/UpdateUcContactRequest.php
   - src/Models/Operations/UpdateUcContactResponse.php
+  - src/Models/Operations/CreateAtsActivitySecurity.php
   - src/Models/Operations/CreateAtsActivityRequest.php
   - src/Models/Operations/CreateAtsActivityResponse.php
+  - src/Models/Operations/CreateAtsApplicationSecurity.php
   - src/Models/Operations/CreateAtsApplicationRequest.php
   - src/Models/Operations/CreateAtsApplicationResponse.php
+  - src/Models/Operations/CreateAtsCandidateSecurity.php
   - src/Models/Operations/CreateAtsCandidateRequest.php
   - src/Models/Operations/CreateAtsCandidateResponse.php
+  - src/Models/Operations/CreateAtsDocumentSecurity.php
   - src/Models/Operations/CreateAtsDocumentRequest.php
   - src/Models/Operations/CreateAtsDocumentResponse.php
+  - src/Models/Operations/CreateAtsInterviewSecurity.php
   - src/Models/Operations/CreateAtsInterviewRequest.php
   - src/Models/Operations/CreateAtsInterviewResponse.php
+  - src/Models/Operations/CreateAtsJobSecurity.php
   - src/Models/Operations/CreateAtsJobRequest.php
   - src/Models/Operations/CreateAtsJobResponse.php
+  - src/Models/Operations/CreateAtsScorecardSecurity.php
   - src/Models/Operations/CreateAtsScorecardRequest.php
   - src/Models/Operations/CreateAtsScorecardResponse.php
+  - src/Models/Operations/GetAtsActivitySecurity.php
   - src/Models/Operations/GetAtsActivityRequest.php
   - src/Models/Operations/GetAtsActivityResponse.php
+  - src/Models/Operations/GetAtsApplicationSecurity.php
   - src/Models/Operations/GetAtsApplicationRequest.php
   - src/Models/Operations/GetAtsApplicationResponse.php
+  - src/Models/Operations/GetAtsCandidateSecurity.php
   - src/Models/Operations/GetAtsCandidateRequest.php
   - src/Models/Operations/GetAtsCandidateResponse.php
+  - src/Models/Operations/GetAtsCompanySecurity.php
   - src/Models/Operations/GetAtsCompanyRequest.php
   - src/Models/Operations/GetAtsCompanyResponse.php
+  - src/Models/Operations/GetAtsDocumentSecurity.php
   - src/Models/Operations/GetAtsDocumentRequest.php
   - src/Models/Operations/GetAtsDocumentResponse.php
+  - src/Models/Operations/GetAtsInterviewSecurity.php
   - src/Models/Operations/GetAtsInterviewRequest.php
   - src/Models/Operations/GetAtsInterviewResponse.php
+  - src/Models/Operations/GetAtsJobSecurity.php
   - src/Models/Operations/GetAtsJobRequest.php
   - src/Models/Operations/GetAtsJobResponse.php
+  - src/Models/Operations/GetAtsScorecardSecurity.php
   - src/Models/Operations/GetAtsScorecardRequest.php
   - src/Models/Operations/GetAtsScorecardResponse.php
+  - src/Models/Operations/ListAtsActivitiesSecurity.php
   - src/Models/Operations/ListAtsActivitiesRequest.php
   - src/Models/Operations/ListAtsActivitiesResponse.php
+  - src/Models/Operations/ListAtsApplicationsSecurity.php
   - src/Models/Operations/ListAtsApplicationsRequest.php
   - src/Models/Operations/ListAtsApplicationsResponse.php
+  - src/Models/Operations/ListAtsApplicationstatusesSecurity.php
   - src/Models/Operations/ListAtsApplicationstatusesRequest.php
   - src/Models/Operations/ListAtsApplicationstatusesResponse.php
+  - src/Models/Operations/ListAtsCandidatesSecurity.php
   - src/Models/Operations/ListAtsCandidatesRequest.php
   - src/Models/Operations/ListAtsCandidatesResponse.php
+  - src/Models/Operations/ListAtsCompaniesSecurity.php
   - src/Models/Operations/ListAtsCompaniesRequest.php
   - src/Models/Operations/ListAtsCompaniesResponse.php
+  - src/Models/Operations/ListAtsDocumentsSecurity.php
   - src/Models/Operations/ListAtsDocumentsRequest.php
   - src/Models/Operations/ListAtsDocumentsResponse.php
+  - src/Models/Operations/ListAtsInterviewsSecurity.php
   - src/Models/Operations/ListAtsInterviewsRequest.php
   - src/Models/Operations/ListAtsInterviewsResponse.php
+  - src/Models/Operations/ListAtsJobsSecurity.php
   - src/Models/Operations/ListAtsJobsRequest.php
   - src/Models/Operations/ListAtsJobsResponse.php
+  - src/Models/Operations/ListAtsScorecardsSecurity.php
   - src/Models/Operations/ListAtsScorecardsRequest.php
   - src/Models/Operations/ListAtsScorecardsResponse.php
+  - src/Models/Operations/PatchAtsActivitySecurity.php
   - src/Models/Operations/PatchAtsActivityRequest.php
   - src/Models/Operations/PatchAtsActivityResponse.php
+  - src/Models/Operations/PatchAtsApplicationSecurity.php
   - src/Models/Operations/PatchAtsApplicationRequest.php
   - src/Models/Operations/PatchAtsApplicationResponse.php
+  - src/Models/Operations/PatchAtsCandidateSecurity.php
   - src/Models/Operations/PatchAtsCandidateRequest.php
   - src/Models/Operations/PatchAtsCandidateResponse.php
+  - src/Models/Operations/PatchAtsDocumentSecurity.php
   - src/Models/Operations/PatchAtsDocumentRequest.php
   - src/Models/Operations/PatchAtsDocumentResponse.php
+  - src/Models/Operations/PatchAtsInterviewSecurity.php
   - src/Models/Operations/PatchAtsInterviewRequest.php
   - src/Models/Operations/PatchAtsInterviewResponse.php
+  - src/Models/Operations/PatchAtsJobSecurity.php
   - src/Models/Operations/PatchAtsJobRequest.php
   - src/Models/Operations/PatchAtsJobResponse.php
+  - src/Models/Operations/PatchAtsScorecardSecurity.php
   - src/Models/Operations/PatchAtsScorecardRequest.php
   - src/Models/Operations/PatchAtsScorecardResponse.php
+  - src/Models/Operations/RemoveAtsActivitySecurity.php
   - src/Models/Operations/RemoveAtsActivityRequest.php
   - src/Models/Operations/RemoveAtsActivityResponse.php
+  - src/Models/Operations/RemoveAtsApplicationSecurity.php
   - src/Models/Operations/RemoveAtsApplicationRequest.php
   - src/Models/Operations/RemoveAtsApplicationResponse.php
+  - src/Models/Operations/RemoveAtsCandidateSecurity.php
   - src/Models/Operations/RemoveAtsCandidateRequest.php
   - src/Models/Operations/RemoveAtsCandidateResponse.php
+  - src/Models/Operations/RemoveAtsDocumentSecurity.php
   - src/Models/Operations/RemoveAtsDocumentRequest.php
   - src/Models/Operations/RemoveAtsDocumentResponse.php
+  - src/Models/Operations/RemoveAtsInterviewSecurity.php
   - src/Models/Operations/RemoveAtsInterviewRequest.php
   - src/Models/Operations/RemoveAtsInterviewResponse.php
+  - src/Models/Operations/RemoveAtsJobSecurity.php
   - src/Models/Operations/RemoveAtsJobRequest.php
   - src/Models/Operations/RemoveAtsJobResponse.php
+  - src/Models/Operations/RemoveAtsScorecardSecurity.php
   - src/Models/Operations/RemoveAtsScorecardRequest.php
   - src/Models/Operations/RemoveAtsScorecardResponse.php
+  - src/Models/Operations/UpdateAtsActivitySecurity.php
   - src/Models/Operations/UpdateAtsActivityRequest.php
   - src/Models/Operations/UpdateAtsActivityResponse.php
+  - src/Models/Operations/UpdateAtsApplicationSecurity.php
   - src/Models/Operations/UpdateAtsApplicationRequest.php
   - src/Models/Operations/UpdateAtsApplicationResponse.php
+  - src/Models/Operations/UpdateAtsCandidateSecurity.php
   - src/Models/Operations/UpdateAtsCandidateRequest.php
   - src/Models/Operations/UpdateAtsCandidateResponse.php
+  - src/Models/Operations/UpdateAtsDocumentSecurity.php
   - src/Models/Operations/UpdateAtsDocumentRequest.php
   - src/Models/Operations/UpdateAtsDocumentResponse.php
+  - src/Models/Operations/UpdateAtsInterviewSecurity.php
   - src/Models/Operations/UpdateAtsInterviewRequest.php
   - src/Models/Operations/UpdateAtsInterviewResponse.php
+  - src/Models/Operations/UpdateAtsJobSecurity.php
   - src/Models/Operations/UpdateAtsJobRequest.php
   - src/Models/Operations/UpdateAtsJobResponse.php
+  - src/Models/Operations/UpdateAtsScorecardSecurity.php
   - src/Models/Operations/UpdateAtsScorecardRequest.php
   - src/Models/Operations/UpdateAtsScorecardResponse.php
+  - src/Models/Operations/CreateCrmCompanySecurity.php
   - src/Models/Operations/CreateCrmCompanyRequest.php
   - src/Models/Operations/CreateCrmCompanyResponse.php
+  - src/Models/Operations/GetCrmCompanySecurity.php
   - src/Models/Operations/GetCrmCompanyRequest.php
   - src/Models/Operations/GetCrmCompanyResponse.php
+  - src/Models/Operations/ListCrmCompaniesSecurity.php
   - src/Models/Operations/ListCrmCompaniesRequest.php
   - src/Models/Operations/ListCrmCompaniesResponse.php
+  - src/Models/Operations/ListEnrichCompaniesSecurity.php
   - src/Models/Operations/ListEnrichCompaniesRequest.php
   - src/Models/Operations/ListEnrichCompaniesResponse.php
+  - src/Models/Operations/PatchCrmCompanySecurity.php
   - src/Models/Operations/PatchCrmCompanyRequest.php
   - src/Models/Operations/PatchCrmCompanyResponse.php
+  - src/Models/Operations/RemoveCrmCompanySecurity.php
   - src/Models/Operations/RemoveCrmCompanyRequest.php
   - src/Models/Operations/RemoveCrmCompanyResponse.php
+  - src/Models/Operations/UpdateCrmCompanySecurity.php
   - src/Models/Operations/UpdateCrmCompanyRequest.php
   - src/Models/Operations/UpdateCrmCompanyResponse.php
+  - src/Models/Operations/CreateCommerceCollectionSecurity.php
   - src/Models/Operations/CreateCommerceCollectionRequest.php
   - src/Models/Operations/CreateCommerceCollectionResponse.php
+  - src/Models/Operations/CreateCommerceInventorySecurity.php
   - src/Models/Operations/CreateCommerceInventoryRequest.php
   - src/Models/Operations/CreateCommerceInventoryResponse.php
+  - src/Models/Operations/CreateCommerceItemSecurity.php
   - src/Models/Operations/CreateCommerceItemRequest.php
   - src/Models/Operations/CreateCommerceItemResponse.php
+  - src/Models/Operations/CreateCommerceLocationSecurity.php
   - src/Models/Operations/CreateCommerceLocationRequest.php
   - src/Models/Operations/CreateCommerceLocationResponse.php
+  - src/Models/Operations/GetCommerceCollectionSecurity.php
   - src/Models/Operations/GetCommerceCollectionRequest.php
   - src/Models/Operations/GetCommerceCollectionResponse.php
+  - src/Models/Operations/GetCommerceInventorySecurity.php
   - src/Models/Operations/GetCommerceInventoryRequest.php
   - src/Models/Operations/GetCommerceInventoryResponse.php
+  - src/Models/Operations/GetCommerceItemSecurity.php
   - src/Models/Operations/GetCommerceItemRequest.php
   - src/Models/Operations/GetCommerceItemResponse.php
+  - src/Models/Operations/GetCommerceLocationSecurity.php
   - src/Models/Operations/GetCommerceLocationRequest.php
   - src/Models/Operations/GetCommerceLocationResponse.php
+  - src/Models/Operations/ListCommerceCollectionsSecurity.php
   - src/Models/Operations/ListCommerceCollectionsRequest.php
   - src/Models/Operations/ListCommerceCollectionsResponse.php
+  - src/Models/Operations/ListCommerceInventoriesSecurity.php
   - src/Models/Operations/ListCommerceInventoriesRequest.php
   - src/Models/Operations/ListCommerceInventoriesResponse.php
+  - src/Models/Operations/ListCommerceItemsSecurity.php
   - src/Models/Operations/ListCommerceItemsRequest.php
   - src/Models/Operations/ListCommerceItemsResponse.php
+  - src/Models/Operations/ListCommerceLocationsSecurity.php
   - src/Models/Operations/ListCommerceLocationsRequest.php
   - src/Models/Operations/ListCommerceLocationsResponse.php
+  - src/Models/Operations/PatchCommerceCollectionSecurity.php
   - src/Models/Operations/PatchCommerceCollectionRequest.php
   - src/Models/Operations/PatchCommerceCollectionResponse.php
+  - src/Models/Operations/PatchCommerceInventorySecurity.php
   - src/Models/Operations/PatchCommerceInventoryRequest.php
   - src/Models/Operations/PatchCommerceInventoryResponse.php
+  - src/Models/Operations/PatchCommerceItemSecurity.php
   - src/Models/Operations/PatchCommerceItemRequest.php
   - src/Models/Operations/PatchCommerceItemResponse.php
+  - src/Models/Operations/PatchCommerceLocationSecurity.php
   - src/Models/Operations/PatchCommerceLocationRequest.php
   - src/Models/Operations/PatchCommerceLocationResponse.php
+  - src/Models/Operations/RemoveCommerceCollectionSecurity.php
   - src/Models/Operations/RemoveCommerceCollectionRequest.php
   - src/Models/Operations/RemoveCommerceCollectionResponse.php
+  - src/Models/Operations/RemoveCommerceInventorySecurity.php
   - src/Models/Operations/RemoveCommerceInventoryRequest.php
   - src/Models/Operations/RemoveCommerceInventoryResponse.php
+  - src/Models/Operations/RemoveCommerceItemSecurity.php
   - src/Models/Operations/RemoveCommerceItemRequest.php
   - src/Models/Operations/RemoveCommerceItemResponse.php
+  - src/Models/Operations/RemoveCommerceLocationSecurity.php
   - src/Models/Operations/RemoveCommerceLocationRequest.php
   - src/Models/Operations/RemoveCommerceLocationResponse.php
+  - src/Models/Operations/UpdateCommerceCollectionSecurity.php
   - src/Models/Operations/UpdateCommerceCollectionRequest.php
   - src/Models/Operations/UpdateCommerceCollectionResponse.php
+  - src/Models/Operations/UpdateCommerceInventorySecurity.php
   - src/Models/Operations/UpdateCommerceInventoryRequest.php
   - src/Models/Operations/UpdateCommerceInventoryResponse.php
+  - src/Models/Operations/UpdateCommerceItemSecurity.php
   - src/Models/Operations/UpdateCommerceItemRequest.php
   - src/Models/Operations/UpdateCommerceItemResponse.php
+  - src/Models/Operations/UpdateCommerceLocationSecurity.php
   - src/Models/Operations/UpdateCommerceLocationRequest.php
   - src/Models/Operations/UpdateCommerceLocationResponse.php
+  - src/Models/Operations/CreateCrmDealSecurity.php
   - src/Models/Operations/CreateCrmDealRequest.php
   - src/Models/Operations/CreateCrmDealResponse.php
+  - src/Models/Operations/CreateCrmEventSecurity.php
   - src/Models/Operations/CreateCrmEventRequest.php
   - src/Models/Operations/CreateCrmEventResponse.php
+  - src/Models/Operations/CreateCrmLeadSecurity.php
   - src/Models/Operations/CreateCrmLeadRequest.php
   - src/Models/Operations/CreateCrmLeadResponse.php
+  - src/Models/Operations/CreateCrmPipelineSecurity.php
   - src/Models/Operations/CreateCrmPipelineRequest.php
   - src/Models/Operations/CreateCrmPipelineResponse.php
+  - src/Models/Operations/GetCrmDealSecurity.php
   - src/Models/Operations/GetCrmDealRequest.php
   - src/Models/Operations/GetCrmDealResponse.php
+  - src/Models/Operations/GetCrmEventSecurity.php
   - src/Models/Operations/GetCrmEventRequest.php
   - src/Models/Operations/GetCrmEventResponse.php
+  - src/Models/Operations/GetCrmLeadSecurity.php
   - src/Models/Operations/GetCrmLeadRequest.php
   - src/Models/Operations/GetCrmLeadResponse.php
+  - src/Models/Operations/GetCrmPipelineSecurity.php
   - src/Models/Operations/GetCrmPipelineRequest.php
   - src/Models/Operations/GetCrmPipelineResponse.php
+  - src/Models/Operations/ListCrmDealsSecurity.php
   - src/Models/Operations/ListCrmDealsRequest.php
   - src/Models/Operations/ListCrmDealsResponse.php
+  - src/Models/Operations/ListCrmEventsSecurity.php
   - src/Models/Operations/ListCrmEventsRequest.php
   - src/Models/Operations/ListCrmEventsResponse.php
+  - src/Models/Operations/ListCrmLeadsSecurity.php
   - src/Models/Operations/ListCrmLeadsRequest.php
   - src/Models/Operations/ListCrmLeadsResponse.php
+  - src/Models/Operations/ListCrmPipelinesSecurity.php
   - src/Models/Operations/ListCrmPipelinesRequest.php
   - src/Models/Operations/ListCrmPipelinesResponse.php
+  - src/Models/Operations/PatchCrmDealSecurity.php
   - src/Models/Operations/PatchCrmDealRequest.php
   - src/Models/Operations/PatchCrmDealResponse.php
+  - src/Models/Operations/PatchCrmEventSecurity.php
   - src/Models/Operations/PatchCrmEventRequest.php
   - src/Models/Operations/PatchCrmEventResponse.php
+  - src/Models/Operations/PatchCrmLeadSecurity.php
   - src/Models/Operations/PatchCrmLeadRequest.php
   - src/Models/Operations/PatchCrmLeadResponse.php
+  - src/Models/Operations/PatchCrmPipelineSecurity.php
   - src/Models/Operations/PatchCrmPipelineRequest.php
   - src/Models/Operations/PatchCrmPipelineResponse.php
+  - src/Models/Operations/RemoveCrmDealSecurity.php
   - src/Models/Operations/RemoveCrmDealRequest.php
   - src/Models/Operations/RemoveCrmDealResponse.php
+  - src/Models/Operations/RemoveCrmEventSecurity.php
   - src/Models/Operations/RemoveCrmEventRequest.php
   - src/Models/Operations/RemoveCrmEventResponse.php
+  - src/Models/Operations/RemoveCrmLeadSecurity.php
   - src/Models/Operations/RemoveCrmLeadRequest.php
   - src/Models/Operations/RemoveCrmLeadResponse.php
+  - src/Models/Operations/RemoveCrmPipelineSecurity.php
   - src/Models/Operations/RemoveCrmPipelineRequest.php
   - src/Models/Operations/RemoveCrmPipelineResponse.php
+  - src/Models/Operations/UpdateCrmDealSecurity.php
   - src/Models/Operations/UpdateCrmDealRequest.php
   - src/Models/Operations/UpdateCrmDealResponse.php
+  - src/Models/Operations/UpdateCrmEventSecurity.php
   - src/Models/Operations/UpdateCrmEventRequest.php
   - src/Models/Operations/UpdateCrmEventResponse.php
+  - src/Models/Operations/UpdateCrmLeadSecurity.php
   - src/Models/Operations/UpdateCrmLeadRequest.php
   - src/Models/Operations/UpdateCrmLeadResponse.php
+  - src/Models/Operations/UpdateCrmPipelineSecurity.php
   - src/Models/Operations/UpdateCrmPipelineRequest.php
   - src/Models/Operations/UpdateCrmPipelineResponse.php
+  - src/Models/Operations/ListEnrichPeopleSecurity.php
   - src/Models/Operations/ListEnrichPeopleRequest.php
   - src/Models/Operations/ListEnrichPeopleResponse.php
+  - src/Models/Operations/CreateHrisEmployeeSecurity.php
   - src/Models/Operations/CreateHrisEmployeeRequest.php
   - src/Models/Operations/CreateHrisEmployeeResponse.php
+  - src/Models/Operations/CreateHrisGroupSecurity.php
   - src/Models/Operations/CreateHrisGroupRequest.php
   - src/Models/Operations/CreateHrisGroupResponse.php
+  - src/Models/Operations/GetHrisEmployeeSecurity.php
   - src/Models/Operations/GetHrisEmployeeRequest.php
   - src/Models/Operations/GetHrisEmployeeResponse.php
+  - src/Models/Operations/GetHrisGroupSecurity.php
   - src/Models/Operations/GetHrisGroupRequest.php
   - src/Models/Operations/GetHrisGroupResponse.php
+  - src/Models/Operations/ListHrisEmployeesSecurity.php
   - src/Models/Operations/ListHrisEmployeesRequest.php
   - src/Models/Operations/ListHrisEmployeesResponse.php
+  - src/Models/Operations/ListHrisGroupsSecurity.php
   - src/Models/Operations/ListHrisGroupsRequest.php
   - src/Models/Operations/ListHrisGroupsResponse.php
+  - src/Models/Operations/PatchHrisEmployeeSecurity.php
   - src/Models/Operations/PatchHrisEmployeeRequest.php
   - src/Models/Operations/PatchHrisEmployeeResponse.php
+  - src/Models/Operations/PatchHrisGroupSecurity.php
   - src/Models/Operations/PatchHrisGroupRequest.php
   - src/Models/Operations/PatchHrisGroupResponse.php
+  - src/Models/Operations/RemoveHrisEmployeeSecurity.php
   - src/Models/Operations/RemoveHrisEmployeeRequest.php
   - src/Models/Operations/RemoveHrisEmployeeResponse.php
+  - src/Models/Operations/RemoveHrisGroupSecurity.php
   - src/Models/Operations/RemoveHrisGroupRequest.php
   - src/Models/Operations/RemoveHrisGroupResponse.php
+  - src/Models/Operations/UpdateHrisEmployeeSecurity.php
   - src/Models/Operations/UpdateHrisEmployeeRequest.php
   - src/Models/Operations/UpdateHrisEmployeeResponse.php
+  - src/Models/Operations/UpdateHrisGroupSecurity.php
   - src/Models/Operations/UpdateHrisGroupRequest.php
   - src/Models/Operations/UpdateHrisGroupResponse.php
+  - src/Models/Operations/CreateMartechListSecurity.php
   - src/Models/Operations/CreateMartechListRequest.php
   - src/Models/Operations/CreateMartechListResponse.php
+  - src/Models/Operations/CreateMartechMemberSecurity.php
   - src/Models/Operations/CreateMartechMemberRequest.php
   - src/Models/Operations/CreateMartechMemberResponse.php
+  - src/Models/Operations/GetMartechListSecurity.php
   - src/Models/Operations/GetMartechListRequest.php
   - src/Models/Operations/GetMartechListResponse.php
+  - src/Models/Operations/GetMartechMemberSecurity.php
   - src/Models/Operations/GetMartechMemberRequest.php
   - src/Models/Operations/GetMartechMemberResponse.php
+  - src/Models/Operations/ListMartechListsSecurity.php
   - src/Models/Operations/ListMartechListsRequest.php
   - src/Models/Operations/ListMartechListsResponse.php
+  - src/Models/Operations/ListMartechMembersSecurity.php
   - src/Models/Operations/ListMartechMembersRequest.php
   - src/Models/Operations/ListMartechMembersResponse.php
+  - src/Models/Operations/PatchMartechListSecurity.php
   - src/Models/Operations/PatchMartechListRequest.php
   - src/Models/Operations/PatchMartechListResponse.php
+  - src/Models/Operations/PatchMartechMemberSecurity.php
   - src/Models/Operations/PatchMartechMemberRequest.php
   - src/Models/Operations/PatchMartechMemberResponse.php
+  - src/Models/Operations/RemoveMartechListSecurity.php
   - src/Models/Operations/RemoveMartechListRequest.php
   - src/Models/Operations/RemoveMartechListResponse.php
+  - src/Models/Operations/RemoveMartechMemberSecurity.php
   - src/Models/Operations/RemoveMartechMemberRequest.php
   - src/Models/Operations/RemoveMartechMemberResponse.php
+  - src/Models/Operations/UpdateMartechListSecurity.php
   - src/Models/Operations/UpdateMartechListRequest.php
   - src/Models/Operations/UpdateMartechListResponse.php
+  - src/Models/Operations/UpdateMartechMemberSecurity.php
   - src/Models/Operations/UpdateMartechMemberRequest.php
   - src/Models/Operations/UpdateMartechMemberResponse.php
+  - src/Models/Operations/CreatePassthroughSecurity.php
   - src/Models/Operations/CreatePassthroughRequest.php
   - src/Models/Operations/CreatePassthroughResponse.php
+  - src/Models/Operations/ListPassthroughsSecurity.php
   - src/Models/Operations/ListPassthroughsRequest.php
   - src/Models/Operations/ListPassthroughsResponse.php
+  - src/Models/Operations/PatchPassthroughSecurity.php
   - src/Models/Operations/PatchPassthroughRequest.php
   - src/Models/Operations/PatchPassthroughResponse.php
+  - src/Models/Operations/RemovePassthroughSecurity.php
   - src/Models/Operations/RemovePassthroughRequest.php
   - src/Models/Operations/RemovePassthroughResponse.php
+  - src/Models/Operations/UpdatePassthroughSecurity.php
   - src/Models/Operations/UpdatePassthroughRequest.php
   - src/Models/Operations/UpdatePassthroughResponse.php
+  - src/Models/Operations/CreateStorageFileSecurity.php
   - src/Models/Operations/CreateStorageFileRequest.php
   - src/Models/Operations/CreateStorageFileResponse.php
+  - src/Models/Operations/GetStorageFileSecurity.php
   - src/Models/Operations/GetStorageFileRequest.php
   - src/Models/Operations/GetStorageFileResponse.php
+  - src/Models/Operations/ListStorageFilesSecurity.php
   - src/Models/Operations/ListStorageFilesRequest.php
   - src/Models/Operations/ListStorageFilesResponse.php
+  - src/Models/Operations/PatchStorageFileSecurity.php
   - src/Models/Operations/PatchStorageFileRequest.php
   - src/Models/Operations/PatchStorageFileResponse.php
+  - src/Models/Operations/RemoveStorageFileSecurity.php
   - src/Models/Operations/RemoveStorageFileRequest.php
   - src/Models/Operations/RemoveStorageFileResponse.php
+  - src/Models/Operations/UpdateStorageFileSecurity.php
   - src/Models/Operations/UpdateStorageFileRequest.php
   - src/Models/Operations/UpdateStorageFileResponse.php
+  - src/Models/Operations/CreateTicketingCustomerSecurity.php
   - src/Models/Operations/CreateTicketingCustomerRequest.php
   - src/Models/Operations/CreateTicketingCustomerResponse.php
+  - src/Models/Operations/CreateTicketingNoteSecurity.php
   - src/Models/Operations/CreateTicketingNoteRequest.php
   - src/Models/Operations/CreateTicketingNoteResponse.php
+  - src/Models/Operations/CreateTicketingTicketSecurity.php
   - src/Models/Operations/CreateTicketingTicketRequest.php
   - src/Models/Operations/CreateTicketingTicketResponse.php
+  - src/Models/Operations/GetTicketingCustomerSecurity.php
   - src/Models/Operations/GetTicketingCustomerRequest.php
   - src/Models/Operations/GetTicketingCustomerResponse.php
+  - src/Models/Operations/GetTicketingNoteSecurity.php
   - src/Models/Operations/GetTicketingNoteRequest.php
   - src/Models/Operations/GetTicketingNoteResponse.php
+  - src/Models/Operations/GetTicketingTicketSecurity.php
   - src/Models/Operations/GetTicketingTicketRequest.php
   - src/Models/Operations/GetTicketingTicketResponse.php
+  - src/Models/Operations/ListTicketingCustomersSecurity.php
   - src/Models/Operations/ListTicketingCustomersRequest.php
   - src/Models/Operations/ListTicketingCustomersResponse.php
+  - src/Models/Operations/ListTicketingNotesSecurity.php
   - src/Models/Operations/ListTicketingNotesRequest.php
   - src/Models/Operations/ListTicketingNotesResponse.php
+  - src/Models/Operations/ListTicketingTicketsSecurity.php
   - src/Models/Operations/ListTicketingTicketsRequest.php
   - src/Models/Operations/ListTicketingTicketsResponse.php
+  - src/Models/Operations/PatchTicketingCustomerSecurity.php
   - src/Models/Operations/PatchTicketingCustomerRequest.php
   - src/Models/Operations/PatchTicketingCustomerResponse.php
+  - src/Models/Operations/PatchTicketingNoteSecurity.php
   - src/Models/Operations/PatchTicketingNoteRequest.php
   - src/Models/Operations/PatchTicketingNoteResponse.php
+  - src/Models/Operations/PatchTicketingTicketSecurity.php
   - src/Models/Operations/PatchTicketingTicketRequest.php
   - src/Models/Operations/PatchTicketingTicketResponse.php
+  - src/Models/Operations/RemoveTicketingCustomerSecurity.php
   - src/Models/Operations/RemoveTicketingCustomerRequest.php
   - src/Models/Operations/RemoveTicketingCustomerResponse.php
+  - src/Models/Operations/RemoveTicketingNoteSecurity.php
   - src/Models/Operations/RemoveTicketingNoteRequest.php
   - src/Models/Operations/RemoveTicketingNoteResponse.php
+  - src/Models/Operations/RemoveTicketingTicketSecurity.php
   - src/Models/Operations/RemoveTicketingTicketRequest.php
   - src/Models/Operations/RemoveTicketingTicketResponse.php
+  - src/Models/Operations/UpdateTicketingCustomerSecurity.php
   - src/Models/Operations/UpdateTicketingCustomerRequest.php
   - src/Models/Operations/UpdateTicketingCustomerResponse.php
+  - src/Models/Operations/UpdateTicketingNoteSecurity.php
   - src/Models/Operations/UpdateTicketingNoteRequest.php
   - src/Models/Operations/UpdateTicketingNoteResponse.php
+  - src/Models/Operations/UpdateTicketingTicketSecurity.php
   - src/Models/Operations/UpdateTicketingTicketRequest.php
   - src/Models/Operations/UpdateTicketingTicketResponse.php
+  - src/Models/Operations/ListUcCallsSecurity.php
   - src/Models/Operations/ListUcCallsRequest.php
   - src/Models/Operations/ListUcCallsResponse.php
+  - src/Models/Operations/CreateUnifiedConnectionSecurity.php
   - src/Models/Operations/CreateUnifiedConnectionResponse.php
+  - src/Models/Operations/CreateUnifiedWebhookSecurity.php
   - src/Models/Operations/CreateUnifiedWebhookRequest.php
   - src/Models/Operations/CreateUnifiedWebhookResponse.php
+  - src/Models/Operations/GetUnifiedApicallSecurity.php
   - src/Models/Operations/GetUnifiedApicallRequest.php
   - src/Models/Operations/GetUnifiedApicallResponse.php
+  - src/Models/Operations/GetUnifiedConnectionSecurity.php
   - src/Models/Operations/GetUnifiedConnectionRequest.php
   - src/Models/Operations/GetUnifiedConnectionResponse.php
   - src/Models/Operations/Scopes.php
   - src/Models/Operations/GetUnifiedIntegrationAuthRequest.php
   - src/Models/Operations/GetUnifiedIntegrationAuthResponse.php
+  - src/Models/Operations/GetUnifiedWebhookSecurity.php
   - src/Models/Operations/GetUnifiedWebhookRequest.php
   - src/Models/Operations/GetUnifiedWebhookResponse.php
+  - src/Models/Operations/ListUnifiedApicallsSecurity.php
   - src/Models/Operations/ListUnifiedApicallsRequest.php
   - src/Models/Operations/ListUnifiedApicallsResponse.php
+  - src/Models/Operations/ListUnifiedConnectionsSecurity.php
   - src/Models/Operations/Categories.php
   - src/Models/Operations/ListUnifiedConnectionsRequest.php
   - src/Models/Operations/ListUnifiedConnectionsResponse.php
   - src/Models/Operations/QueryParamCategories.php
   - src/Models/Operations/ListUnifiedIntegrationWorkspacesRequest.php
   - src/Models/Operations/ListUnifiedIntegrationWorkspacesResponse.php
+  - src/Models/Operations/ListUnifiedIntegrationsSecurity.php
   - src/Models/Operations/ListUnifiedIntegrationsQueryParamCategories.php
   - src/Models/Operations/ListUnifiedIntegrationsRequest.php
   - src/Models/Operations/ListUnifiedIntegrationsResponse.php
+  - src/Models/Operations/ListUnifiedIssuesSecurity.php
   - src/Models/Operations/ListUnifiedIssuesRequest.php
   - src/Models/Operations/ListUnifiedIssuesResponse.php
+  - src/Models/Operations/ListUnifiedWebhooksSecurity.php
   - src/Models/Operations/ListUnifiedWebhooksRequest.php
   - src/Models/Operations/ListUnifiedWebhooksResponse.php
+  - src/Models/Operations/PatchUnifiedConnectionSecurity.php
   - src/Models/Operations/PatchUnifiedConnectionRequest.php
   - src/Models/Operations/PatchUnifiedConnectionResponse.php
+  - src/Models/Operations/PatchUnifiedWebhookTriggerSecurity.php
   - src/Models/Operations/PatchUnifiedWebhookTriggerRequest.php
   - src/Models/Operations/PatchUnifiedWebhookTriggerResponse.php
+  - src/Models/Operations/RemoveUnifiedConnectionSecurity.php
   - src/Models/Operations/RemoveUnifiedConnectionRequest.php
   - src/Models/Operations/RemoveUnifiedConnectionResponse.php
+  - src/Models/Operations/RemoveUnifiedWebhookSecurity.php
   - src/Models/Operations/RemoveUnifiedWebhookRequest.php
   - src/Models/Operations/RemoveUnifiedWebhookResponse.php
+  - src/Models/Operations/UpdateUnifiedConnectionSecurity.php
   - src/Models/Operations/UpdateUnifiedConnectionRequest.php
   - src/Models/Operations/UpdateUnifiedConnectionResponse.php
+  - src/Models/Operations/UpdateUnifiedWebhookTriggerSecurity.php
   - src/Models/Operations/UpdateUnifiedWebhookTriggerRequest.php
   - src/Models/Operations/UpdateUnifiedWebhookTriggerResponse.php
   - src/Models/Operations/GetUnifiedIntegrationLoginRequest.php
@@ -705,462 +931,686 @@ generatedFiles:
   - src/Models/Shared/IssueStatus.php
   - src/Models/Shared/IssueType.php
   - src/Models/Shared/Issue.php
-  - src/Models/Shared/Security.php
+  - docs/Models/Operations/CreateAccountingAccountSecurity.md
   - docs/Models/Operations/CreateAccountingAccountRequest.md
   - docs/Models/Operations/CreateAccountingAccountResponse.md
+  - docs/Models/Operations/CreateAccountingContactSecurity.md
   - docs/Models/Operations/CreateAccountingContactRequest.md
   - docs/Models/Operations/CreateAccountingContactResponse.md
+  - docs/Models/Operations/CreateAccountingInvoiceSecurity.md
   - docs/Models/Operations/CreateAccountingInvoiceRequest.md
   - docs/Models/Operations/CreateAccountingInvoiceResponse.md
+  - docs/Models/Operations/CreateAccountingPaymentSecurity.md
   - docs/Models/Operations/CreateAccountingPaymentRequest.md
   - docs/Models/Operations/CreateAccountingPaymentResponse.md
+  - docs/Models/Operations/CreateAccountingTaxrateSecurity.md
   - docs/Models/Operations/CreateAccountingTaxrateRequest.md
   - docs/Models/Operations/CreateAccountingTaxrateResponse.md
+  - docs/Models/Operations/CreateAccountingTransactionSecurity.md
   - docs/Models/Operations/CreateAccountingTransactionRequest.md
   - docs/Models/Operations/CreateAccountingTransactionResponse.md
+  - docs/Models/Operations/GetAccountingAccountSecurity.md
   - docs/Models/Operations/GetAccountingAccountRequest.md
   - docs/Models/Operations/GetAccountingAccountResponse.md
+  - docs/Models/Operations/GetAccountingContactSecurity.md
   - docs/Models/Operations/GetAccountingContactRequest.md
   - docs/Models/Operations/GetAccountingContactResponse.md
+  - docs/Models/Operations/GetAccountingInvoiceSecurity.md
   - docs/Models/Operations/GetAccountingInvoiceRequest.md
   - docs/Models/Operations/GetAccountingInvoiceResponse.md
+  - docs/Models/Operations/GetAccountingOrganizationSecurity.md
   - docs/Models/Operations/GetAccountingOrganizationRequest.md
   - docs/Models/Operations/GetAccountingOrganizationResponse.md
+  - docs/Models/Operations/GetAccountingPaymentSecurity.md
   - docs/Models/Operations/GetAccountingPaymentRequest.md
   - docs/Models/Operations/GetAccountingPaymentResponse.md
+  - docs/Models/Operations/GetAccountingPayoutSecurity.md
   - docs/Models/Operations/GetAccountingPayoutRequest.md
   - docs/Models/Operations/GetAccountingPayoutResponse.md
+  - docs/Models/Operations/GetAccountingRefundSecurity.md
   - docs/Models/Operations/GetAccountingRefundRequest.md
   - docs/Models/Operations/GetAccountingRefundResponse.md
+  - docs/Models/Operations/GetAccountingTaxrateSecurity.md
   - docs/Models/Operations/GetAccountingTaxrateRequest.md
   - docs/Models/Operations/GetAccountingTaxrateResponse.md
+  - docs/Models/Operations/GetAccountingTransactionSecurity.md
   - docs/Models/Operations/GetAccountingTransactionRequest.md
   - docs/Models/Operations/GetAccountingTransactionResponse.md
+  - docs/Models/Operations/ListAccountingAccountsSecurity.md
   - docs/Models/Operations/ListAccountingAccountsRequest.md
   - docs/Models/Operations/ListAccountingAccountsResponse.md
+  - docs/Models/Operations/ListAccountingContactsSecurity.md
   - docs/Models/Operations/ListAccountingContactsRequest.md
   - docs/Models/Operations/ListAccountingContactsResponse.md
+  - docs/Models/Operations/ListAccountingInvoicesSecurity.md
   - docs/Models/Operations/ListAccountingInvoicesRequest.md
   - docs/Models/Operations/ListAccountingInvoicesResponse.md
+  - docs/Models/Operations/ListAccountingOrganizationsSecurity.md
   - docs/Models/Operations/ListAccountingOrganizationsRequest.md
   - docs/Models/Operations/ListAccountingOrganizationsResponse.md
+  - docs/Models/Operations/ListAccountingPaymentsSecurity.md
   - docs/Models/Operations/ListAccountingPaymentsRequest.md
   - docs/Models/Operations/ListAccountingPaymentsResponse.md
+  - docs/Models/Operations/ListAccountingPayoutsSecurity.md
   - docs/Models/Operations/ListAccountingPayoutsRequest.md
   - docs/Models/Operations/ListAccountingPayoutsResponse.md
+  - docs/Models/Operations/ListAccountingRefundsSecurity.md
   - docs/Models/Operations/ListAccountingRefundsRequest.md
   - docs/Models/Operations/ListAccountingRefundsResponse.md
+  - docs/Models/Operations/ListAccountingTaxratesSecurity.md
   - docs/Models/Operations/ListAccountingTaxratesRequest.md
   - docs/Models/Operations/ListAccountingTaxratesResponse.md
+  - docs/Models/Operations/ListAccountingTransactionsSecurity.md
   - docs/Models/Operations/ListAccountingTransactionsRequest.md
   - docs/Models/Operations/ListAccountingTransactionsResponse.md
+  - docs/Models/Operations/PatchAccountingAccountSecurity.md
   - docs/Models/Operations/PatchAccountingAccountRequest.md
   - docs/Models/Operations/PatchAccountingAccountResponse.md
+  - docs/Models/Operations/PatchAccountingContactSecurity.md
   - docs/Models/Operations/PatchAccountingContactRequest.md
   - docs/Models/Operations/PatchAccountingContactResponse.md
+  - docs/Models/Operations/PatchAccountingInvoiceSecurity.md
   - docs/Models/Operations/PatchAccountingInvoiceRequest.md
   - docs/Models/Operations/PatchAccountingInvoiceResponse.md
+  - docs/Models/Operations/PatchAccountingPaymentSecurity.md
   - docs/Models/Operations/PatchAccountingPaymentRequest.md
   - docs/Models/Operations/PatchAccountingPaymentResponse.md
+  - docs/Models/Operations/PatchAccountingTaxrateSecurity.md
   - docs/Models/Operations/PatchAccountingTaxrateRequest.md
   - docs/Models/Operations/PatchAccountingTaxrateResponse.md
+  - docs/Models/Operations/PatchAccountingTransactionSecurity.md
   - docs/Models/Operations/PatchAccountingTransactionRequest.md
   - docs/Models/Operations/PatchAccountingTransactionResponse.md
+  - docs/Models/Operations/RemoveAccountingAccountSecurity.md
   - docs/Models/Operations/RemoveAccountingAccountRequest.md
   - docs/Models/Operations/RemoveAccountingAccountResponse.md
+  - docs/Models/Operations/RemoveAccountingContactSecurity.md
   - docs/Models/Operations/RemoveAccountingContactRequest.md
   - docs/Models/Operations/RemoveAccountingContactResponse.md
+  - docs/Models/Operations/RemoveAccountingInvoiceSecurity.md
   - docs/Models/Operations/RemoveAccountingInvoiceRequest.md
   - docs/Models/Operations/RemoveAccountingInvoiceResponse.md
+  - docs/Models/Operations/RemoveAccountingPaymentSecurity.md
   - docs/Models/Operations/RemoveAccountingPaymentRequest.md
   - docs/Models/Operations/RemoveAccountingPaymentResponse.md
+  - docs/Models/Operations/RemoveAccountingTaxrateSecurity.md
   - docs/Models/Operations/RemoveAccountingTaxrateRequest.md
   - docs/Models/Operations/RemoveAccountingTaxrateResponse.md
+  - docs/Models/Operations/RemoveAccountingTransactionSecurity.md
   - docs/Models/Operations/RemoveAccountingTransactionRequest.md
   - docs/Models/Operations/RemoveAccountingTransactionResponse.md
+  - docs/Models/Operations/UpdateAccountingAccountSecurity.md
   - docs/Models/Operations/UpdateAccountingAccountRequest.md
   - docs/Models/Operations/UpdateAccountingAccountResponse.md
+  - docs/Models/Operations/UpdateAccountingContactSecurity.md
   - docs/Models/Operations/UpdateAccountingContactRequest.md
   - docs/Models/Operations/UpdateAccountingContactResponse.md
+  - docs/Models/Operations/UpdateAccountingInvoiceSecurity.md
   - docs/Models/Operations/UpdateAccountingInvoiceRequest.md
   - docs/Models/Operations/UpdateAccountingInvoiceResponse.md
+  - docs/Models/Operations/UpdateAccountingPaymentSecurity.md
   - docs/Models/Operations/UpdateAccountingPaymentRequest.md
   - docs/Models/Operations/UpdateAccountingPaymentResponse.md
+  - docs/Models/Operations/UpdateAccountingTaxrateSecurity.md
   - docs/Models/Operations/UpdateAccountingTaxrateRequest.md
   - docs/Models/Operations/UpdateAccountingTaxrateResponse.md
+  - docs/Models/Operations/UpdateAccountingTransactionSecurity.md
   - docs/Models/Operations/UpdateAccountingTransactionRequest.md
   - docs/Models/Operations/UpdateAccountingTransactionResponse.md
+  - docs/Models/Operations/CreateCrmContactSecurity.md
   - docs/Models/Operations/CreateCrmContactRequest.md
   - docs/Models/Operations/CreateCrmContactResponse.md
+  - docs/Models/Operations/CreateUcContactSecurity.md
   - docs/Models/Operations/CreateUcContactRequest.md
   - docs/Models/Operations/CreateUcContactResponse.md
+  - docs/Models/Operations/GetCrmContactSecurity.md
   - docs/Models/Operations/GetCrmContactRequest.md
   - docs/Models/Operations/GetCrmContactResponse.md
+  - docs/Models/Operations/GetUcContactSecurity.md
   - docs/Models/Operations/GetUcContactRequest.md
   - docs/Models/Operations/GetUcContactResponse.md
+  - docs/Models/Operations/ListCrmContactsSecurity.md
   - docs/Models/Operations/ListCrmContactsRequest.md
   - docs/Models/Operations/ListCrmContactsResponse.md
+  - docs/Models/Operations/ListUcContactsSecurity.md
   - docs/Models/Operations/ListUcContactsRequest.md
   - docs/Models/Operations/ListUcContactsResponse.md
+  - docs/Models/Operations/PatchCrmContactSecurity.md
   - docs/Models/Operations/PatchCrmContactRequest.md
   - docs/Models/Operations/PatchCrmContactResponse.md
+  - docs/Models/Operations/PatchUcContactSecurity.md
   - docs/Models/Operations/PatchUcContactRequest.md
   - docs/Models/Operations/PatchUcContactResponse.md
+  - docs/Models/Operations/RemoveCrmContactSecurity.md
   - docs/Models/Operations/RemoveCrmContactRequest.md
   - docs/Models/Operations/RemoveCrmContactResponse.md
+  - docs/Models/Operations/RemoveUcContactSecurity.md
   - docs/Models/Operations/RemoveUcContactRequest.md
   - docs/Models/Operations/RemoveUcContactResponse.md
+  - docs/Models/Operations/UpdateCrmContactSecurity.md
   - docs/Models/Operations/UpdateCrmContactRequest.md
   - docs/Models/Operations/UpdateCrmContactResponse.md
+  - docs/Models/Operations/UpdateUcContactSecurity.md
   - docs/Models/Operations/UpdateUcContactRequest.md
   - docs/Models/Operations/UpdateUcContactResponse.md
+  - docs/Models/Operations/CreateAtsActivitySecurity.md
   - docs/Models/Operations/CreateAtsActivityRequest.md
   - docs/Models/Operations/CreateAtsActivityResponse.md
+  - docs/Models/Operations/CreateAtsApplicationSecurity.md
   - docs/Models/Operations/CreateAtsApplicationRequest.md
   - docs/Models/Operations/CreateAtsApplicationResponse.md
+  - docs/Models/Operations/CreateAtsCandidateSecurity.md
   - docs/Models/Operations/CreateAtsCandidateRequest.md
   - docs/Models/Operations/CreateAtsCandidateResponse.md
+  - docs/Models/Operations/CreateAtsDocumentSecurity.md
   - docs/Models/Operations/CreateAtsDocumentRequest.md
   - docs/Models/Operations/CreateAtsDocumentResponse.md
+  - docs/Models/Operations/CreateAtsInterviewSecurity.md
   - docs/Models/Operations/CreateAtsInterviewRequest.md
   - docs/Models/Operations/CreateAtsInterviewResponse.md
+  - docs/Models/Operations/CreateAtsJobSecurity.md
   - docs/Models/Operations/CreateAtsJobRequest.md
   - docs/Models/Operations/CreateAtsJobResponse.md
+  - docs/Models/Operations/CreateAtsScorecardSecurity.md
   - docs/Models/Operations/CreateAtsScorecardRequest.md
   - docs/Models/Operations/CreateAtsScorecardResponse.md
+  - docs/Models/Operations/GetAtsActivitySecurity.md
   - docs/Models/Operations/GetAtsActivityRequest.md
   - docs/Models/Operations/GetAtsActivityResponse.md
+  - docs/Models/Operations/GetAtsApplicationSecurity.md
   - docs/Models/Operations/GetAtsApplicationRequest.md
   - docs/Models/Operations/GetAtsApplicationResponse.md
+  - docs/Models/Operations/GetAtsCandidateSecurity.md
   - docs/Models/Operations/GetAtsCandidateRequest.md
   - docs/Models/Operations/GetAtsCandidateResponse.md
+  - docs/Models/Operations/GetAtsCompanySecurity.md
   - docs/Models/Operations/GetAtsCompanyRequest.md
   - docs/Models/Operations/GetAtsCompanyResponse.md
+  - docs/Models/Operations/GetAtsDocumentSecurity.md
   - docs/Models/Operations/GetAtsDocumentRequest.md
   - docs/Models/Operations/GetAtsDocumentResponse.md
+  - docs/Models/Operations/GetAtsInterviewSecurity.md
   - docs/Models/Operations/GetAtsInterviewRequest.md
   - docs/Models/Operations/GetAtsInterviewResponse.md
+  - docs/Models/Operations/GetAtsJobSecurity.md
   - docs/Models/Operations/GetAtsJobRequest.md
   - docs/Models/Operations/GetAtsJobResponse.md
+  - docs/Models/Operations/GetAtsScorecardSecurity.md
   - docs/Models/Operations/GetAtsScorecardRequest.md
   - docs/Models/Operations/GetAtsScorecardResponse.md
+  - docs/Models/Operations/ListAtsActivitiesSecurity.md
   - docs/Models/Operations/ListAtsActivitiesRequest.md
   - docs/Models/Operations/ListAtsActivitiesResponse.md
+  - docs/Models/Operations/ListAtsApplicationsSecurity.md
   - docs/Models/Operations/ListAtsApplicationsRequest.md
   - docs/Models/Operations/ListAtsApplicationsResponse.md
+  - docs/Models/Operations/ListAtsApplicationstatusesSecurity.md
   - docs/Models/Operations/ListAtsApplicationstatusesRequest.md
   - docs/Models/Operations/ListAtsApplicationstatusesResponse.md
+  - docs/Models/Operations/ListAtsCandidatesSecurity.md
   - docs/Models/Operations/ListAtsCandidatesRequest.md
   - docs/Models/Operations/ListAtsCandidatesResponse.md
+  - docs/Models/Operations/ListAtsCompaniesSecurity.md
   - docs/Models/Operations/ListAtsCompaniesRequest.md
   - docs/Models/Operations/ListAtsCompaniesResponse.md
+  - docs/Models/Operations/ListAtsDocumentsSecurity.md
   - docs/Models/Operations/ListAtsDocumentsRequest.md
   - docs/Models/Operations/ListAtsDocumentsResponse.md
+  - docs/Models/Operations/ListAtsInterviewsSecurity.md
   - docs/Models/Operations/ListAtsInterviewsRequest.md
   - docs/Models/Operations/ListAtsInterviewsResponse.md
+  - docs/Models/Operations/ListAtsJobsSecurity.md
   - docs/Models/Operations/ListAtsJobsRequest.md
   - docs/Models/Operations/ListAtsJobsResponse.md
+  - docs/Models/Operations/ListAtsScorecardsSecurity.md
   - docs/Models/Operations/ListAtsScorecardsRequest.md
   - docs/Models/Operations/ListAtsScorecardsResponse.md
+  - docs/Models/Operations/PatchAtsActivitySecurity.md
   - docs/Models/Operations/PatchAtsActivityRequest.md
   - docs/Models/Operations/PatchAtsActivityResponse.md
+  - docs/Models/Operations/PatchAtsApplicationSecurity.md
   - docs/Models/Operations/PatchAtsApplicationRequest.md
   - docs/Models/Operations/PatchAtsApplicationResponse.md
+  - docs/Models/Operations/PatchAtsCandidateSecurity.md
   - docs/Models/Operations/PatchAtsCandidateRequest.md
   - docs/Models/Operations/PatchAtsCandidateResponse.md
+  - docs/Models/Operations/PatchAtsDocumentSecurity.md
   - docs/Models/Operations/PatchAtsDocumentRequest.md
   - docs/Models/Operations/PatchAtsDocumentResponse.md
+  - docs/Models/Operations/PatchAtsInterviewSecurity.md
   - docs/Models/Operations/PatchAtsInterviewRequest.md
   - docs/Models/Operations/PatchAtsInterviewResponse.md
+  - docs/Models/Operations/PatchAtsJobSecurity.md
   - docs/Models/Operations/PatchAtsJobRequest.md
   - docs/Models/Operations/PatchAtsJobResponse.md
+  - docs/Models/Operations/PatchAtsScorecardSecurity.md
   - docs/Models/Operations/PatchAtsScorecardRequest.md
   - docs/Models/Operations/PatchAtsScorecardResponse.md
+  - docs/Models/Operations/RemoveAtsActivitySecurity.md
   - docs/Models/Operations/RemoveAtsActivityRequest.md
   - docs/Models/Operations/RemoveAtsActivityResponse.md
+  - docs/Models/Operations/RemoveAtsApplicationSecurity.md
   - docs/Models/Operations/RemoveAtsApplicationRequest.md
   - docs/Models/Operations/RemoveAtsApplicationResponse.md
+  - docs/Models/Operations/RemoveAtsCandidateSecurity.md
   - docs/Models/Operations/RemoveAtsCandidateRequest.md
   - docs/Models/Operations/RemoveAtsCandidateResponse.md
+  - docs/Models/Operations/RemoveAtsDocumentSecurity.md
   - docs/Models/Operations/RemoveAtsDocumentRequest.md
   - docs/Models/Operations/RemoveAtsDocumentResponse.md
+  - docs/Models/Operations/RemoveAtsInterviewSecurity.md
   - docs/Models/Operations/RemoveAtsInterviewRequest.md
   - docs/Models/Operations/RemoveAtsInterviewResponse.md
+  - docs/Models/Operations/RemoveAtsJobSecurity.md
   - docs/Models/Operations/RemoveAtsJobRequest.md
   - docs/Models/Operations/RemoveAtsJobResponse.md
+  - docs/Models/Operations/RemoveAtsScorecardSecurity.md
   - docs/Models/Operations/RemoveAtsScorecardRequest.md
   - docs/Models/Operations/RemoveAtsScorecardResponse.md
+  - docs/Models/Operations/UpdateAtsActivitySecurity.md
   - docs/Models/Operations/UpdateAtsActivityRequest.md
   - docs/Models/Operations/UpdateAtsActivityResponse.md
+  - docs/Models/Operations/UpdateAtsApplicationSecurity.md
   - docs/Models/Operations/UpdateAtsApplicationRequest.md
   - docs/Models/Operations/UpdateAtsApplicationResponse.md
+  - docs/Models/Operations/UpdateAtsCandidateSecurity.md
   - docs/Models/Operations/UpdateAtsCandidateRequest.md
   - docs/Models/Operations/UpdateAtsCandidateResponse.md
+  - docs/Models/Operations/UpdateAtsDocumentSecurity.md
   - docs/Models/Operations/UpdateAtsDocumentRequest.md
   - docs/Models/Operations/UpdateAtsDocumentResponse.md
+  - docs/Models/Operations/UpdateAtsInterviewSecurity.md
   - docs/Models/Operations/UpdateAtsInterviewRequest.md
   - docs/Models/Operations/UpdateAtsInterviewResponse.md
+  - docs/Models/Operations/UpdateAtsJobSecurity.md
   - docs/Models/Operations/UpdateAtsJobRequest.md
   - docs/Models/Operations/UpdateAtsJobResponse.md
+  - docs/Models/Operations/UpdateAtsScorecardSecurity.md
   - docs/Models/Operations/UpdateAtsScorecardRequest.md
   - docs/Models/Operations/UpdateAtsScorecardResponse.md
+  - docs/Models/Operations/CreateCrmCompanySecurity.md
   - docs/Models/Operations/CreateCrmCompanyRequest.md
   - docs/Models/Operations/CreateCrmCompanyResponse.md
+  - docs/Models/Operations/GetCrmCompanySecurity.md
   - docs/Models/Operations/GetCrmCompanyRequest.md
   - docs/Models/Operations/GetCrmCompanyResponse.md
+  - docs/Models/Operations/ListCrmCompaniesSecurity.md
   - docs/Models/Operations/ListCrmCompaniesRequest.md
   - docs/Models/Operations/ListCrmCompaniesResponse.md
+  - docs/Models/Operations/ListEnrichCompaniesSecurity.md
   - docs/Models/Operations/ListEnrichCompaniesRequest.md
   - docs/Models/Operations/ListEnrichCompaniesResponse.md
+  - docs/Models/Operations/PatchCrmCompanySecurity.md
   - docs/Models/Operations/PatchCrmCompanyRequest.md
   - docs/Models/Operations/PatchCrmCompanyResponse.md
+  - docs/Models/Operations/RemoveCrmCompanySecurity.md
   - docs/Models/Operations/RemoveCrmCompanyRequest.md
   - docs/Models/Operations/RemoveCrmCompanyResponse.md
+  - docs/Models/Operations/UpdateCrmCompanySecurity.md
   - docs/Models/Operations/UpdateCrmCompanyRequest.md
   - docs/Models/Operations/UpdateCrmCompanyResponse.md
+  - docs/Models/Operations/CreateCommerceCollectionSecurity.md
   - docs/Models/Operations/CreateCommerceCollectionRequest.md
   - docs/Models/Operations/CreateCommerceCollectionResponse.md
+  - docs/Models/Operations/CreateCommerceInventorySecurity.md
   - docs/Models/Operations/CreateCommerceInventoryRequest.md
   - docs/Models/Operations/CreateCommerceInventoryResponse.md
+  - docs/Models/Operations/CreateCommerceItemSecurity.md
   - docs/Models/Operations/CreateCommerceItemRequest.md
   - docs/Models/Operations/CreateCommerceItemResponse.md
+  - docs/Models/Operations/CreateCommerceLocationSecurity.md
   - docs/Models/Operations/CreateCommerceLocationRequest.md
   - docs/Models/Operations/CreateCommerceLocationResponse.md
+  - docs/Models/Operations/GetCommerceCollectionSecurity.md
   - docs/Models/Operations/GetCommerceCollectionRequest.md
   - docs/Models/Operations/GetCommerceCollectionResponse.md
+  - docs/Models/Operations/GetCommerceInventorySecurity.md
   - docs/Models/Operations/GetCommerceInventoryRequest.md
   - docs/Models/Operations/GetCommerceInventoryResponse.md
+  - docs/Models/Operations/GetCommerceItemSecurity.md
   - docs/Models/Operations/GetCommerceItemRequest.md
   - docs/Models/Operations/GetCommerceItemResponse.md
+  - docs/Models/Operations/GetCommerceLocationSecurity.md
   - docs/Models/Operations/GetCommerceLocationRequest.md
   - docs/Models/Operations/GetCommerceLocationResponse.md
+  - docs/Models/Operations/ListCommerceCollectionsSecurity.md
   - docs/Models/Operations/ListCommerceCollectionsRequest.md
   - docs/Models/Operations/ListCommerceCollectionsResponse.md
+  - docs/Models/Operations/ListCommerceInventoriesSecurity.md
   - docs/Models/Operations/ListCommerceInventoriesRequest.md
   - docs/Models/Operations/ListCommerceInventoriesResponse.md
+  - docs/Models/Operations/ListCommerceItemsSecurity.md
   - docs/Models/Operations/ListCommerceItemsRequest.md
   - docs/Models/Operations/ListCommerceItemsResponse.md
+  - docs/Models/Operations/ListCommerceLocationsSecurity.md
   - docs/Models/Operations/ListCommerceLocationsRequest.md
   - docs/Models/Operations/ListCommerceLocationsResponse.md
+  - docs/Models/Operations/PatchCommerceCollectionSecurity.md
   - docs/Models/Operations/PatchCommerceCollectionRequest.md
   - docs/Models/Operations/PatchCommerceCollectionResponse.md
+  - docs/Models/Operations/PatchCommerceInventorySecurity.md
   - docs/Models/Operations/PatchCommerceInventoryRequest.md
   - docs/Models/Operations/PatchCommerceInventoryResponse.md
+  - docs/Models/Operations/PatchCommerceItemSecurity.md
   - docs/Models/Operations/PatchCommerceItemRequest.md
   - docs/Models/Operations/PatchCommerceItemResponse.md
+  - docs/Models/Operations/PatchCommerceLocationSecurity.md
   - docs/Models/Operations/PatchCommerceLocationRequest.md
   - docs/Models/Operations/PatchCommerceLocationResponse.md
+  - docs/Models/Operations/RemoveCommerceCollectionSecurity.md
   - docs/Models/Operations/RemoveCommerceCollectionRequest.md
   - docs/Models/Operations/RemoveCommerceCollectionResponse.md
+  - docs/Models/Operations/RemoveCommerceInventorySecurity.md
   - docs/Models/Operations/RemoveCommerceInventoryRequest.md
   - docs/Models/Operations/RemoveCommerceInventoryResponse.md
+  - docs/Models/Operations/RemoveCommerceItemSecurity.md
   - docs/Models/Operations/RemoveCommerceItemRequest.md
   - docs/Models/Operations/RemoveCommerceItemResponse.md
+  - docs/Models/Operations/RemoveCommerceLocationSecurity.md
   - docs/Models/Operations/RemoveCommerceLocationRequest.md
   - docs/Models/Operations/RemoveCommerceLocationResponse.md
+  - docs/Models/Operations/UpdateCommerceCollectionSecurity.md
   - docs/Models/Operations/UpdateCommerceCollectionRequest.md
   - docs/Models/Operations/UpdateCommerceCollectionResponse.md
+  - docs/Models/Operations/UpdateCommerceInventorySecurity.md
   - docs/Models/Operations/UpdateCommerceInventoryRequest.md
   - docs/Models/Operations/UpdateCommerceInventoryResponse.md
+  - docs/Models/Operations/UpdateCommerceItemSecurity.md
   - docs/Models/Operations/UpdateCommerceItemRequest.md
   - docs/Models/Operations/UpdateCommerceItemResponse.md
+  - docs/Models/Operations/UpdateCommerceLocationSecurity.md
   - docs/Models/Operations/UpdateCommerceLocationRequest.md
   - docs/Models/Operations/UpdateCommerceLocationResponse.md
+  - docs/Models/Operations/CreateCrmDealSecurity.md
   - docs/Models/Operations/CreateCrmDealRequest.md
   - docs/Models/Operations/CreateCrmDealResponse.md
+  - docs/Models/Operations/CreateCrmEventSecurity.md
   - docs/Models/Operations/CreateCrmEventRequest.md
   - docs/Models/Operations/CreateCrmEventResponse.md
+  - docs/Models/Operations/CreateCrmLeadSecurity.md
   - docs/Models/Operations/CreateCrmLeadRequest.md
   - docs/Models/Operations/CreateCrmLeadResponse.md
+  - docs/Models/Operations/CreateCrmPipelineSecurity.md
   - docs/Models/Operations/CreateCrmPipelineRequest.md
   - docs/Models/Operations/CreateCrmPipelineResponse.md
+  - docs/Models/Operations/GetCrmDealSecurity.md
   - docs/Models/Operations/GetCrmDealRequest.md
   - docs/Models/Operations/GetCrmDealResponse.md
+  - docs/Models/Operations/GetCrmEventSecurity.md
   - docs/Models/Operations/GetCrmEventRequest.md
   - docs/Models/Operations/GetCrmEventResponse.md
+  - docs/Models/Operations/GetCrmLeadSecurity.md
   - docs/Models/Operations/GetCrmLeadRequest.md
   - docs/Models/Operations/GetCrmLeadResponse.md
+  - docs/Models/Operations/GetCrmPipelineSecurity.md
   - docs/Models/Operations/GetCrmPipelineRequest.md
   - docs/Models/Operations/GetCrmPipelineResponse.md
+  - docs/Models/Operations/ListCrmDealsSecurity.md
   - docs/Models/Operations/ListCrmDealsRequest.md
   - docs/Models/Operations/ListCrmDealsResponse.md
+  - docs/Models/Operations/ListCrmEventsSecurity.md
   - docs/Models/Operations/ListCrmEventsRequest.md
   - docs/Models/Operations/ListCrmEventsResponse.md
+  - docs/Models/Operations/ListCrmLeadsSecurity.md
   - docs/Models/Operations/ListCrmLeadsRequest.md
   - docs/Models/Operations/ListCrmLeadsResponse.md
+  - docs/Models/Operations/ListCrmPipelinesSecurity.md
   - docs/Models/Operations/ListCrmPipelinesRequest.md
   - docs/Models/Operations/ListCrmPipelinesResponse.md
+  - docs/Models/Operations/PatchCrmDealSecurity.md
   - docs/Models/Operations/PatchCrmDealRequest.md
   - docs/Models/Operations/PatchCrmDealResponse.md
+  - docs/Models/Operations/PatchCrmEventSecurity.md
   - docs/Models/Operations/PatchCrmEventRequest.md
   - docs/Models/Operations/PatchCrmEventResponse.md
+  - docs/Models/Operations/PatchCrmLeadSecurity.md
   - docs/Models/Operations/PatchCrmLeadRequest.md
   - docs/Models/Operations/PatchCrmLeadResponse.md
+  - docs/Models/Operations/PatchCrmPipelineSecurity.md
   - docs/Models/Operations/PatchCrmPipelineRequest.md
   - docs/Models/Operations/PatchCrmPipelineResponse.md
+  - docs/Models/Operations/RemoveCrmDealSecurity.md
   - docs/Models/Operations/RemoveCrmDealRequest.md
   - docs/Models/Operations/RemoveCrmDealResponse.md
+  - docs/Models/Operations/RemoveCrmEventSecurity.md
   - docs/Models/Operations/RemoveCrmEventRequest.md
   - docs/Models/Operations/RemoveCrmEventResponse.md
+  - docs/Models/Operations/RemoveCrmLeadSecurity.md
   - docs/Models/Operations/RemoveCrmLeadRequest.md
   - docs/Models/Operations/RemoveCrmLeadResponse.md
+  - docs/Models/Operations/RemoveCrmPipelineSecurity.md
   - docs/Models/Operations/RemoveCrmPipelineRequest.md
   - docs/Models/Operations/RemoveCrmPipelineResponse.md
+  - docs/Models/Operations/UpdateCrmDealSecurity.md
   - docs/Models/Operations/UpdateCrmDealRequest.md
   - docs/Models/Operations/UpdateCrmDealResponse.md
+  - docs/Models/Operations/UpdateCrmEventSecurity.md
   - docs/Models/Operations/UpdateCrmEventRequest.md
   - docs/Models/Operations/UpdateCrmEventResponse.md
+  - docs/Models/Operations/UpdateCrmLeadSecurity.md
   - docs/Models/Operations/UpdateCrmLeadRequest.md
   - docs/Models/Operations/UpdateCrmLeadResponse.md
+  - docs/Models/Operations/UpdateCrmPipelineSecurity.md
   - docs/Models/Operations/UpdateCrmPipelineRequest.md
   - docs/Models/Operations/UpdateCrmPipelineResponse.md
+  - docs/Models/Operations/ListEnrichPeopleSecurity.md
   - docs/Models/Operations/ListEnrichPeopleRequest.md
   - docs/Models/Operations/ListEnrichPeopleResponse.md
+  - docs/Models/Operations/CreateHrisEmployeeSecurity.md
   - docs/Models/Operations/CreateHrisEmployeeRequest.md
   - docs/Models/Operations/CreateHrisEmployeeResponse.md
+  - docs/Models/Operations/CreateHrisGroupSecurity.md
   - docs/Models/Operations/CreateHrisGroupRequest.md
   - docs/Models/Operations/CreateHrisGroupResponse.md
+  - docs/Models/Operations/GetHrisEmployeeSecurity.md
   - docs/Models/Operations/GetHrisEmployeeRequest.md
   - docs/Models/Operations/GetHrisEmployeeResponse.md
+  - docs/Models/Operations/GetHrisGroupSecurity.md
   - docs/Models/Operations/GetHrisGroupRequest.md
   - docs/Models/Operations/GetHrisGroupResponse.md
+  - docs/Models/Operations/ListHrisEmployeesSecurity.md
   - docs/Models/Operations/ListHrisEmployeesRequest.md
   - docs/Models/Operations/ListHrisEmployeesResponse.md
+  - docs/Models/Operations/ListHrisGroupsSecurity.md
   - docs/Models/Operations/ListHrisGroupsRequest.md
   - docs/Models/Operations/ListHrisGroupsResponse.md
+  - docs/Models/Operations/PatchHrisEmployeeSecurity.md
   - docs/Models/Operations/PatchHrisEmployeeRequest.md
   - docs/Models/Operations/PatchHrisEmployeeResponse.md
+  - docs/Models/Operations/PatchHrisGroupSecurity.md
   - docs/Models/Operations/PatchHrisGroupRequest.md
   - docs/Models/Operations/PatchHrisGroupResponse.md
+  - docs/Models/Operations/RemoveHrisEmployeeSecurity.md
   - docs/Models/Operations/RemoveHrisEmployeeRequest.md
   - docs/Models/Operations/RemoveHrisEmployeeResponse.md
+  - docs/Models/Operations/RemoveHrisGroupSecurity.md
   - docs/Models/Operations/RemoveHrisGroupRequest.md
   - docs/Models/Operations/RemoveHrisGroupResponse.md
+  - docs/Models/Operations/UpdateHrisEmployeeSecurity.md
   - docs/Models/Operations/UpdateHrisEmployeeRequest.md
   - docs/Models/Operations/UpdateHrisEmployeeResponse.md
+  - docs/Models/Operations/UpdateHrisGroupSecurity.md
   - docs/Models/Operations/UpdateHrisGroupRequest.md
   - docs/Models/Operations/UpdateHrisGroupResponse.md
+  - docs/Models/Operations/CreateMartechListSecurity.md
   - docs/Models/Operations/CreateMartechListRequest.md
   - docs/Models/Operations/CreateMartechListResponse.md
+  - docs/Models/Operations/CreateMartechMemberSecurity.md
   - docs/Models/Operations/CreateMartechMemberRequest.md
   - docs/Models/Operations/CreateMartechMemberResponse.md
+  - docs/Models/Operations/GetMartechListSecurity.md
   - docs/Models/Operations/GetMartechListRequest.md
   - docs/Models/Operations/GetMartechListResponse.md
+  - docs/Models/Operations/GetMartechMemberSecurity.md
   - docs/Models/Operations/GetMartechMemberRequest.md
   - docs/Models/Operations/GetMartechMemberResponse.md
+  - docs/Models/Operations/ListMartechListsSecurity.md
   - docs/Models/Operations/ListMartechListsRequest.md
   - docs/Models/Operations/ListMartechListsResponse.md
+  - docs/Models/Operations/ListMartechMembersSecurity.md
   - docs/Models/Operations/ListMartechMembersRequest.md
   - docs/Models/Operations/ListMartechMembersResponse.md
+  - docs/Models/Operations/PatchMartechListSecurity.md
   - docs/Models/Operations/PatchMartechListRequest.md
   - docs/Models/Operations/PatchMartechListResponse.md
+  - docs/Models/Operations/PatchMartechMemberSecurity.md
   - docs/Models/Operations/PatchMartechMemberRequest.md
   - docs/Models/Operations/PatchMartechMemberResponse.md
+  - docs/Models/Operations/RemoveMartechListSecurity.md
   - docs/Models/Operations/RemoveMartechListRequest.md
   - docs/Models/Operations/RemoveMartechListResponse.md
+  - docs/Models/Operations/RemoveMartechMemberSecurity.md
   - docs/Models/Operations/RemoveMartechMemberRequest.md
   - docs/Models/Operations/RemoveMartechMemberResponse.md
+  - docs/Models/Operations/UpdateMartechListSecurity.md
   - docs/Models/Operations/UpdateMartechListRequest.md
   - docs/Models/Operations/UpdateMartechListResponse.md
+  - docs/Models/Operations/UpdateMartechMemberSecurity.md
   - docs/Models/Operations/UpdateMartechMemberRequest.md
   - docs/Models/Operations/UpdateMartechMemberResponse.md
+  - docs/Models/Operations/CreatePassthroughSecurity.md
   - docs/Models/Operations/CreatePassthroughRequest.md
   - docs/Models/Operations/CreatePassthroughResponse.md
+  - docs/Models/Operations/ListPassthroughsSecurity.md
   - docs/Models/Operations/ListPassthroughsRequest.md
   - docs/Models/Operations/ListPassthroughsResponse.md
+  - docs/Models/Operations/PatchPassthroughSecurity.md
   - docs/Models/Operations/PatchPassthroughRequest.md
   - docs/Models/Operations/PatchPassthroughResponse.md
+  - docs/Models/Operations/RemovePassthroughSecurity.md
   - docs/Models/Operations/RemovePassthroughRequest.md
   - docs/Models/Operations/RemovePassthroughResponse.md
+  - docs/Models/Operations/UpdatePassthroughSecurity.md
   - docs/Models/Operations/UpdatePassthroughRequest.md
   - docs/Models/Operations/UpdatePassthroughResponse.md
+  - docs/Models/Operations/CreateStorageFileSecurity.md
   - docs/Models/Operations/CreateStorageFileRequest.md
   - docs/Models/Operations/CreateStorageFileResponse.md
+  - docs/Models/Operations/GetStorageFileSecurity.md
   - docs/Models/Operations/GetStorageFileRequest.md
   - docs/Models/Operations/GetStorageFileResponse.md
+  - docs/Models/Operations/ListStorageFilesSecurity.md
   - docs/Models/Operations/ListStorageFilesRequest.md
   - docs/Models/Operations/ListStorageFilesResponse.md
+  - docs/Models/Operations/PatchStorageFileSecurity.md
   - docs/Models/Operations/PatchStorageFileRequest.md
   - docs/Models/Operations/PatchStorageFileResponse.md
+  - docs/Models/Operations/RemoveStorageFileSecurity.md
   - docs/Models/Operations/RemoveStorageFileRequest.md
   - docs/Models/Operations/RemoveStorageFileResponse.md
+  - docs/Models/Operations/UpdateStorageFileSecurity.md
   - docs/Models/Operations/UpdateStorageFileRequest.md
   - docs/Models/Operations/UpdateStorageFileResponse.md
+  - docs/Models/Operations/CreateTicketingCustomerSecurity.md
   - docs/Models/Operations/CreateTicketingCustomerRequest.md
   - docs/Models/Operations/CreateTicketingCustomerResponse.md
+  - docs/Models/Operations/CreateTicketingNoteSecurity.md
   - docs/Models/Operations/CreateTicketingNoteRequest.md
   - docs/Models/Operations/CreateTicketingNoteResponse.md
+  - docs/Models/Operations/CreateTicketingTicketSecurity.md
   - docs/Models/Operations/CreateTicketingTicketRequest.md
   - docs/Models/Operations/CreateTicketingTicketResponse.md
+  - docs/Models/Operations/GetTicketingCustomerSecurity.md
   - docs/Models/Operations/GetTicketingCustomerRequest.md
   - docs/Models/Operations/GetTicketingCustomerResponse.md
+  - docs/Models/Operations/GetTicketingNoteSecurity.md
   - docs/Models/Operations/GetTicketingNoteRequest.md
   - docs/Models/Operations/GetTicketingNoteResponse.md
+  - docs/Models/Operations/GetTicketingTicketSecurity.md
   - docs/Models/Operations/GetTicketingTicketRequest.md
   - docs/Models/Operations/GetTicketingTicketResponse.md
+  - docs/Models/Operations/ListTicketingCustomersSecurity.md
   - docs/Models/Operations/ListTicketingCustomersRequest.md
   - docs/Models/Operations/ListTicketingCustomersResponse.md
+  - docs/Models/Operations/ListTicketingNotesSecurity.md
   - docs/Models/Operations/ListTicketingNotesRequest.md
   - docs/Models/Operations/ListTicketingNotesResponse.md
+  - docs/Models/Operations/ListTicketingTicketsSecurity.md
   - docs/Models/Operations/ListTicketingTicketsRequest.md
   - docs/Models/Operations/ListTicketingTicketsResponse.md
+  - docs/Models/Operations/PatchTicketingCustomerSecurity.md
   - docs/Models/Operations/PatchTicketingCustomerRequest.md
   - docs/Models/Operations/PatchTicketingCustomerResponse.md
+  - docs/Models/Operations/PatchTicketingNoteSecurity.md
   - docs/Models/Operations/PatchTicketingNoteRequest.md
   - docs/Models/Operations/PatchTicketingNoteResponse.md
+  - docs/Models/Operations/PatchTicketingTicketSecurity.md
   - docs/Models/Operations/PatchTicketingTicketRequest.md
   - docs/Models/Operations/PatchTicketingTicketResponse.md
+  - docs/Models/Operations/RemoveTicketingCustomerSecurity.md
   - docs/Models/Operations/RemoveTicketingCustomerRequest.md
   - docs/Models/Operations/RemoveTicketingCustomerResponse.md
+  - docs/Models/Operations/RemoveTicketingNoteSecurity.md
   - docs/Models/Operations/RemoveTicketingNoteRequest.md
   - docs/Models/Operations/RemoveTicketingNoteResponse.md
+  - docs/Models/Operations/RemoveTicketingTicketSecurity.md
   - docs/Models/Operations/RemoveTicketingTicketRequest.md
   - docs/Models/Operations/RemoveTicketingTicketResponse.md
+  - docs/Models/Operations/UpdateTicketingCustomerSecurity.md
   - docs/Models/Operations/UpdateTicketingCustomerRequest.md
   - docs/Models/Operations/UpdateTicketingCustomerResponse.md
+  - docs/Models/Operations/UpdateTicketingNoteSecurity.md
   - docs/Models/Operations/UpdateTicketingNoteRequest.md
   - docs/Models/Operations/UpdateTicketingNoteResponse.md
+  - docs/Models/Operations/UpdateTicketingTicketSecurity.md
   - docs/Models/Operations/UpdateTicketingTicketRequest.md
   - docs/Models/Operations/UpdateTicketingTicketResponse.md
+  - docs/Models/Operations/ListUcCallsSecurity.md
   - docs/Models/Operations/ListUcCallsRequest.md
   - docs/Models/Operations/ListUcCallsResponse.md
+  - docs/Models/Operations/CreateUnifiedConnectionSecurity.md
   - docs/Models/Operations/CreateUnifiedConnectionResponse.md
+  - docs/Models/Operations/CreateUnifiedWebhookSecurity.md
   - docs/Models/Operations/CreateUnifiedWebhookRequest.md
   - docs/Models/Operations/CreateUnifiedWebhookResponse.md
+  - docs/Models/Operations/GetUnifiedApicallSecurity.md
   - docs/Models/Operations/GetUnifiedApicallRequest.md
   - docs/Models/Operations/GetUnifiedApicallResponse.md
+  - docs/Models/Operations/GetUnifiedConnectionSecurity.md
   - docs/Models/Operations/GetUnifiedConnectionRequest.md
   - docs/Models/Operations/GetUnifiedConnectionResponse.md
   - docs/Models/Operations/Scopes.md
   - docs/Models/Operations/GetUnifiedIntegrationAuthRequest.md
   - docs/Models/Operations/GetUnifiedIntegrationAuthResponse.md
+  - docs/Models/Operations/GetUnifiedWebhookSecurity.md
   - docs/Models/Operations/GetUnifiedWebhookRequest.md
   - docs/Models/Operations/GetUnifiedWebhookResponse.md
+  - docs/Models/Operations/ListUnifiedApicallsSecurity.md
   - docs/Models/Operations/ListUnifiedApicallsRequest.md
   - docs/Models/Operations/ListUnifiedApicallsResponse.md
+  - docs/Models/Operations/ListUnifiedConnectionsSecurity.md
   - docs/Models/Operations/Categories.md
   - docs/Models/Operations/ListUnifiedConnectionsRequest.md
   - docs/Models/Operations/ListUnifiedConnectionsResponse.md
   - docs/Models/Operations/QueryParamCategories.md
   - docs/Models/Operations/ListUnifiedIntegrationWorkspacesRequest.md
   - docs/Models/Operations/ListUnifiedIntegrationWorkspacesResponse.md
+  - docs/Models/Operations/ListUnifiedIntegrationsSecurity.md
   - docs/Models/Operations/ListUnifiedIntegrationsQueryParamCategories.md
   - docs/Models/Operations/ListUnifiedIntegrationsRequest.md
   - docs/Models/Operations/ListUnifiedIntegrationsResponse.md
+  - docs/Models/Operations/ListUnifiedIssuesSecurity.md
   - docs/Models/Operations/ListUnifiedIssuesRequest.md
   - docs/Models/Operations/ListUnifiedIssuesResponse.md
+  - docs/Models/Operations/ListUnifiedWebhooksSecurity.md
   - docs/Models/Operations/ListUnifiedWebhooksRequest.md
   - docs/Models/Operations/ListUnifiedWebhooksResponse.md
+  - docs/Models/Operations/PatchUnifiedConnectionSecurity.md
   - docs/Models/Operations/PatchUnifiedConnectionRequest.md
   - docs/Models/Operations/PatchUnifiedConnectionResponse.md
+  - docs/Models/Operations/PatchUnifiedWebhookTriggerSecurity.md
   - docs/Models/Operations/PatchUnifiedWebhookTriggerRequest.md
   - docs/Models/Operations/PatchUnifiedWebhookTriggerResponse.md
+  - docs/Models/Operations/RemoveUnifiedConnectionSecurity.md
   - docs/Models/Operations/RemoveUnifiedConnectionRequest.md
   - docs/Models/Operations/RemoveUnifiedConnectionResponse.md
+  - docs/Models/Operations/RemoveUnifiedWebhookSecurity.md
   - docs/Models/Operations/RemoveUnifiedWebhookRequest.md
   - docs/Models/Operations/RemoveUnifiedWebhookResponse.md
+  - docs/Models/Operations/UpdateUnifiedConnectionSecurity.md
   - docs/Models/Operations/UpdateUnifiedConnectionRequest.md
   - docs/Models/Operations/UpdateUnifiedConnectionResponse.md
+  - docs/Models/Operations/UpdateUnifiedWebhookTriggerSecurity.md
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerRequest.md
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerResponse.md
   - docs/Models/Operations/GetUnifiedIntegrationLoginRequest.md
@@ -1317,7 +1767,6 @@ generatedFiles:
   - docs/Models/Shared/IssueStatus.md
   - docs/Models/Shared/IssueType.md
   - docs/Models/Shared/Issue.md
-  - docs/Models/Shared/Security.md
   - docs/sdks/unifiedto/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md

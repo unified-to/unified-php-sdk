@@ -25,10 +25,12 @@ class Passthrough
      * Passthrough POST
      * 
      * @param \Unified\Unified_to\Models\Operations\CreatePassthroughRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreatePassthroughSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreatePassthroughResponse
      */
 	public function createPassthrough(
         ?\Unified\Unified_to\Models\Operations\CreatePassthroughRequest $request,
+        \Unified\Unified_to\Models\Operations\CreatePassthroughSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreatePassthroughResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Passthrough
      * Passthrough GET
      * 
      * @param \Unified\Unified_to\Models\Operations\ListPassthroughsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListPassthroughsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListPassthroughsResponse
      */
 	public function listPassthroughs(
         ?\Unified\Unified_to\Models\Operations\ListPassthroughsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListPassthroughsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListPassthroughsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -80,7 +85,8 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -105,10 +111,12 @@ class Passthrough
      * Passthrough PUT
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchPassthroughRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchPassthroughSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchPassthroughResponse
      */
 	public function patchPassthrough(
         ?\Unified\Unified_to\Models\Operations\PatchPassthroughRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchPassthroughSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchPassthroughResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -122,7 +130,8 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -147,10 +156,12 @@ class Passthrough
      * Passthrough DELETE
      * 
      * @param \Unified\Unified_to\Models\Operations\RemovePassthroughRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemovePassthroughSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemovePassthroughResponse
      */
 	public function removePassthrough(
         ?\Unified\Unified_to\Models\Operations\RemovePassthroughRequest $request,
+        \Unified\Unified_to\Models\Operations\RemovePassthroughSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemovePassthroughResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -160,7 +171,8 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -185,10 +197,12 @@ class Passthrough
      * Passthrough PUT
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdatePassthroughRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdatePassthroughSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdatePassthroughResponse
      */
 	public function updatePassthrough(
         ?\Unified\Unified_to\Models\Operations\UpdatePassthroughRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdatePassthroughSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdatePassthroughResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -202,7 +216,8 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

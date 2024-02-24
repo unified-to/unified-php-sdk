@@ -3,18 +3,14 @@
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use Unified\Unified_to;
-use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Unified_to\UnifiedTo::builder()->build();
 
 try {
     $request = new Operations\CreateAccountingAccountRequest();
@@ -41,7 +37,10 @@ try {
     );
     $request->connectionId = '<value>';
 
-    $response = $sdk->accounting->createAccountingAccount($request);
+    $requestSecurity = new Operations\CreateAccountingAccountSecurity();
+    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+
+    $response = $sdk->accounting->createAccountingAccount($request, $requestSecurity);
 
     if ($response->accountingAccount !== null) {
         // handle response

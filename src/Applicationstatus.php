@@ -25,10 +25,12 @@ class Applicationstatus
      * List all application statuses
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
      */
 	public function listAtsApplicationstatuses(
         ?\Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -39,7 +41,8 @@ class Applicationstatus
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -8,10 +8,12 @@ generation:
     nameResolutionDec2023: false
     parameterOrderingFeb2024: false
     requestResponseComponentNamesFeb2024: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 0.12.11
+  version: 0.13.0
   imports:
     option: openapi
     paths:

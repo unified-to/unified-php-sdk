@@ -11,9 +11,14 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsApplicationAnswer
 {
-	#[\JMS\Serializer\Annotation\SerializedName('answer')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $answer;
+    /**
+     * $answers
+     * 
+     * @var array<string> $answers
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('answers')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    public array $answers;
     
 	#[\JMS\Serializer\Annotation\SerializedName('question_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -21,7 +26,7 @@ class AtsApplicationAnswer
     
 	public function __construct()
 	{
-		$this->answer = "";
+		$this->answers = [];
 		$this->questionId = "";
 	}
 }

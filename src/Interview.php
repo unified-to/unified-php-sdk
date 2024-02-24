@@ -25,10 +25,12 @@ class Interview
      * Create a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
      */
 	public function createAtsInterview(
         ?\Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Interview
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Interview
      * Retrieve a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
      */
 	public function getAtsInterview(
         ?\Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Interview
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Interview
      * List all interviews
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAtsInterviewsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
      */
 	public function listAtsInterviews(
         ?\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAtsInterviewsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Interview
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Interview
      * Update a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
      */
 	public function patchAtsInterview(
         ?\Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Interview
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Interview
      * Remove a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
      */
 	public function removeAtsInterview(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Interview
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Interview
      * Update a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
      */
 	public function updateAtsInterview(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Interview
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

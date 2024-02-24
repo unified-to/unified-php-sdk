@@ -25,10 +25,12 @@ class Transaction
      * Create a transaction
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\CreateAccountingTransactionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
      */
 	public function createAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest $request,
+        \Unified\Unified_to\Models\Operations\CreateAccountingTransactionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,7 +44,8 @@ class Transaction
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,10 +70,12 @@ class Transaction
      * Retrieve a transaction
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\GetAccountingTransactionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
      */
 	public function getAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest $request,
+        \Unified\Unified_to\Models\Operations\GetAccountingTransactionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,7 +86,8 @@ class Transaction
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,10 +112,12 @@ class Transaction
      * List all transactions
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest $request
+     * @param \Unified\Unified_to\Models\Operations\ListAccountingTransactionsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
      */
 	public function listAccountingTransactions(
         ?\Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest $request,
+        \Unified\Unified_to\Models\Operations\ListAccountingTransactionsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +128,8 @@ class Transaction
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,10 +154,12 @@ class Transaction
      * Update a transaction
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\PatchAccountingTransactionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
      */
 	public function patchAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest $request,
+        \Unified\Unified_to\Models\Operations\PatchAccountingTransactionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,7 +173,8 @@ class Transaction
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -187,10 +199,12 @@ class Transaction
      * Remove a transaction
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
      */
 	public function removeAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest $request,
+        \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -200,7 +214,8 @@ class Transaction
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -224,10 +239,12 @@ class Transaction
      * Update a transaction
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest $request
+     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse
      */
 	public function updateAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest $request,
+        \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -241,7 +258,8 @@ class Transaction
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
