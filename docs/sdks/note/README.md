@@ -24,10 +24,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CreateTicketingNoteRequest();
@@ -44,10 +47,7 @@ try {
     $request->ticketingNote->userId = '<value>';
     $request->connectionId = '<value>';;
 
-    $requestSecurity = new Operations\CreateTicketingNoteSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->note->createTicketingNote($request, $requestSecurity);
+    $response = $sdk->note->createTicketingNote($request);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -59,10 +59,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest](../../Models/Operations/CreateTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\CreateTicketingNoteSecurity](../../Models/Operations/CreateTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest](../../Models/Operations/CreateTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
@@ -84,9 +83,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetTicketingNoteRequest();
@@ -96,10 +99,7 @@ try {
     ];
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\GetTicketingNoteSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->note->getTicketingNote($request, $requestSecurity);
+    $response = $sdk->note->getTicketingNote($request);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -111,10 +111,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetTicketingNoteRequest](../../Models/Operations/GetTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
-| `security`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetTicketingNoteSecurity](../../Models/Operations/GetTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetTicketingNoteRequest](../../Models/Operations/GetTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
@@ -136,9 +135,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListTicketingNotesRequest();
@@ -154,10 +157,7 @@ try {
     $request->ticketId = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-20T16:07:42.054Z');;
 
-    $requestSecurity = new Operations\ListTicketingNotesSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->note->listTicketingNotes($request, $requestSecurity);
+    $response = $sdk->note->listTicketingNotes($request);
 
     if ($response->ticketingNotes !== null) {
         // handle response
@@ -169,10 +169,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListTicketingNotesRequest](../../Models/Operations/ListTicketingNotesRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListTicketingNotesSecurity](../../Models/Operations/ListTicketingNotesSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListTicketingNotesRequest](../../Models/Operations/ListTicketingNotesRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
@@ -194,10 +193,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PatchTicketingNoteRequest();
@@ -215,10 +217,7 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\PatchTicketingNoteSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->note->patchTicketingNote($request, $requestSecurity);
+    $response = $sdk->note->patchTicketingNote($request);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -230,10 +229,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest](../../Models/Operations/PatchTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchTicketingNoteSecurity](../../Models/Operations/PatchTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest](../../Models/Operations/PatchTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
@@ -255,19 +253,20 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveTicketingNoteRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\RemoveTicketingNoteSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->note->removeTicketingNote($request, $requestSecurity);
+    $response = $sdk->note->removeTicketingNote($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -279,10 +278,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest](../../Models/Operations/RemoveTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\RemoveTicketingNoteSecurity](../../Models/Operations/RemoveTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest](../../Models/Operations/RemoveTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
@@ -304,10 +302,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\UpdateTicketingNoteRequest();
@@ -325,10 +326,7 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\UpdateTicketingNoteSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->note->updateTicketingNote($request, $requestSecurity);
+    $response = $sdk->note->updateTicketingNote($request);
 
     if ($response->ticketingNote !== null) {
         // handle response
@@ -340,10 +338,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest](../../Models/Operations/UpdateTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\UpdateTicketingNoteSecurity](../../Models/Operations/UpdateTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest](../../Models/Operations/UpdateTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response

@@ -23,9 +23,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CreatePassthroughRequest();
@@ -35,10 +39,7 @@ try {
     $request->connectionId = '<value>';
     $request->path = '/var';;
 
-    $requestSecurity = new Operations\CreatePassthroughSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->passthrough->createPassthrough($request, $requestSecurity);
+    $response = $sdk->passthrough->createPassthrough($request);
 
     if ($response->result !== null) {
         // handle response
@@ -50,10 +51,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreatePassthroughRequest](../../Models/Operations/CreatePassthroughRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreatePassthroughSecurity](../../Models/Operations/CreatePassthroughSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreatePassthroughRequest](../../Models/Operations/CreatePassthroughRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -75,19 +75,20 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListPassthroughsRequest();
     $request->connectionId = '<value>';
     $request->path = '/selinux';;
 
-    $requestSecurity = new Operations\ListPassthroughsSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->passthrough->listPassthroughs($request, $requestSecurity);
+    $response = $sdk->passthrough->listPassthroughs($request);
 
     if ($response->result !== null) {
         // handle response
@@ -99,10 +100,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListPassthroughsRequest](../../Models/Operations/ListPassthroughsRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
-| `security`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListPassthroughsSecurity](../../Models/Operations/ListPassthroughsSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListPassthroughsRequest](../../Models/Operations/ListPassthroughsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
@@ -124,9 +124,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PatchPassthroughRequest();
@@ -136,10 +140,7 @@ try {
     $request->connectionId = '<value>';
     $request->path = '/var/mail';;
 
-    $requestSecurity = new Operations\PatchPassthroughSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->passthrough->patchPassthrough($request, $requestSecurity);
+    $response = $sdk->passthrough->patchPassthrough($request);
 
     if ($response->result !== null) {
         // handle response
@@ -151,10 +152,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchPassthroughRequest](../../Models/Operations/PatchPassthroughRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
-| `security`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchPassthroughSecurity](../../Models/Operations/PatchPassthroughSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchPassthroughRequest](../../Models/Operations/PatchPassthroughRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
@@ -176,19 +176,20 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemovePassthroughRequest();
     $request->connectionId = '<value>';
     $request->path = '/Applications';;
 
-    $requestSecurity = new Operations\RemovePassthroughSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->passthrough->removePassthrough($request, $requestSecurity);
+    $response = $sdk->passthrough->removePassthrough($request);
 
     if ($response->result !== null) {
         // handle response
@@ -200,10 +201,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemovePassthroughRequest](../../Models/Operations/RemovePassthroughRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemovePassthroughSecurity](../../Models/Operations/RemovePassthroughSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemovePassthroughRequest](../../Models/Operations/RemovePassthroughRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -225,9 +225,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\UpdatePassthroughRequest();
@@ -237,10 +241,7 @@ try {
     $request->connectionId = '<value>';
     $request->path = '/var/mail';;
 
-    $requestSecurity = new Operations\UpdatePassthroughSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->passthrough->updatePassthrough($request, $requestSecurity);
+    $response = $sdk->passthrough->updatePassthrough($request);
 
     if ($response->result !== null) {
         // handle response
@@ -252,10 +253,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdatePassthroughRequest](../../Models/Operations/UpdatePassthroughRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdatePassthroughSecurity](../../Models/Operations/UpdatePassthroughSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdatePassthroughRequest](../../Models/Operations/UpdatePassthroughRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response

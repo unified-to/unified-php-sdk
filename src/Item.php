@@ -25,12 +25,10 @@ class Item
      * Create an item
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      */
 	public function createCommerceItem(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Item
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Item
      * Retrieve an item
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      */
 	public function getCommerceItem(
         ?\Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Item
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Item
      * List all items
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceItemsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
      */
 	public function listCommerceItems(
         ?\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListCommerceItemsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Item
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Item
      * Update an item
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
      */
 	public function patchCommerceItem(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Item
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Item
      * Remove an item
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      */
 	public function removeCommerceItem(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Item
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Item
      * Update an item
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
      */
 	public function updateCommerceItem(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Item
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

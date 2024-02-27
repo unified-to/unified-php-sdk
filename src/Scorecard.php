@@ -25,12 +25,10 @@ class Scorecard
      * Create a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
      */
 	public function createAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Scorecard
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Scorecard
      * Retrieve a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
      */
 	public function getAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\GetAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Scorecard
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Scorecard
      * List all scorecards
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsScorecardsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
      */
 	public function listAtsScorecards(
         ?\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsScorecardsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Scorecard
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Scorecard
      * Update a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
      */
 	public function patchAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Scorecard
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Scorecard
      * Remove a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
      */
 	public function removeAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Scorecard
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Scorecard
      * Update a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
      */
 	public function updateAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Scorecard
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

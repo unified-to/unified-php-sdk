@@ -24,10 +24,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CreateHrisEmployeeRequest();
@@ -73,10 +76,7 @@ try {
     $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-26T16:14:34.561Z');
     $request->connectionId = '<value>';;
 
-    $requestSecurity = new Operations\CreateHrisEmployeeSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->employee->createHrisEmployee($request, $requestSecurity);
+    $response = $sdk->employee->createHrisEmployee($request);
 
     if ($response->hrisEmployee !== null) {
         // handle response
@@ -88,10 +88,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest](../../Models/Operations/CreateHrisEmployeeRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateHrisEmployeeSecurity](../../Models/Operations/CreateHrisEmployeeSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest](../../Models/Operations/CreateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
@@ -113,9 +112,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetHrisEmployeeRequest();
@@ -125,10 +128,7 @@ try {
     ];
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\GetHrisEmployeeSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->employee->getHrisEmployee($request, $requestSecurity);
+    $response = $sdk->employee->getHrisEmployee($request);
 
     if ($response->hrisEmployee !== null) {
         // handle response
@@ -140,10 +140,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest](../../Models/Operations/GetHrisEmployeeRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
-| `security`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetHrisEmployeeSecurity](../../Models/Operations/GetHrisEmployeeSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest](../../Models/Operations/GetHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
@@ -165,9 +164,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListHrisEmployeesRequest();
@@ -182,10 +185,7 @@ try {
     $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-10T00:54:40.984Z');;
 
-    $requestSecurity = new Operations\ListHrisEmployeesSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->employee->listHrisEmployees($request, $requestSecurity);
+    $response = $sdk->employee->listHrisEmployees($request);
 
     if ($response->hrisEmployees !== null) {
         // handle response
@@ -197,10 +197,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest](../../Models/Operations/ListHrisEmployeesRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListHrisEmployeesSecurity](../../Models/Operations/ListHrisEmployeesSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest](../../Models/Operations/ListHrisEmployeesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -222,10 +221,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PatchHrisEmployeeRequest();
@@ -272,10 +274,7 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\PatchHrisEmployeeSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->employee->patchHrisEmployee($request, $requestSecurity);
+    $response = $sdk->employee->patchHrisEmployee($request);
 
     if ($response->hrisEmployee !== null) {
         // handle response
@@ -287,10 +286,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest](../../Models/Operations/PatchHrisEmployeeRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchHrisEmployeeSecurity](../../Models/Operations/PatchHrisEmployeeSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest](../../Models/Operations/PatchHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -312,19 +310,20 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RemoveHrisEmployeeRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\RemoveHrisEmployeeSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->employee->removeHrisEmployee($request, $requestSecurity);
+    $response = $sdk->employee->removeHrisEmployee($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -336,10 +335,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest](../../Models/Operations/RemoveHrisEmployeeRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeSecurity](../../Models/Operations/RemoveHrisEmployeeSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest](../../Models/Operations/RemoveHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
@@ -361,10 +359,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\UpdateHrisEmployeeRequest();
@@ -411,10 +412,7 @@ try {
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\UpdateHrisEmployeeSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->employee->updateHrisEmployee($request, $requestSecurity);
+    $response = $sdk->employee->updateHrisEmployee($request);
 
     if ($response->hrisEmployee !== null) {
         // handle response
@@ -426,10 +424,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest](../../Models/Operations/UpdateHrisEmployeeRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeSecurity](../../Models/Operations/UpdateHrisEmployeeSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest](../../Models/Operations/UpdateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response

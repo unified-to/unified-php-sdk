@@ -25,12 +25,10 @@ class Taxrate
      * Create a taxrate
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse
      */
 	public function createAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Taxrate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Taxrate
      * Retrieve a taxrate
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAccountingTaxrateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse
      */
 	public function getAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAccountingTaxrateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Taxrate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Taxrate
      * List all taxrates
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAccountingTaxratesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse
      */
 	public function listAccountingTaxrates(
         ?\Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAccountingTaxratesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Taxrate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Taxrate
      * Update a taxrate
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse
      */
 	public function patchAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Taxrate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Taxrate
      * Remove a taxrate
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse
      */
 	public function removeAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Taxrate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Taxrate
      * Update a taxrate
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse
      */
 	public function updateAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Taxrate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

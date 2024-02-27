@@ -1,0 +1,9 @@
+# CreatePaymentPaymentRequest
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `paymentPayment`                                                                           | [?\Unified\Unified_to\Models\Shared\PaymentPayment](../../Models/Shared/PaymentPayment.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `connectionId`                                                                             | *string*                                                                                   | :heavy_check_mark:                                                                         | ID of the connection                                                                       |

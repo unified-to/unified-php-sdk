@@ -25,12 +25,10 @@ class Job
      * Create a job
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
      */
 	public function createAtsJob(
         ?\Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Job
      * Retrieve a job
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
      */
 	public function getAtsJob(
         ?\Unified\Unified_to\Models\Operations\GetAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Job
      * List all jobs
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsJobsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
      */
 	public function listAtsJobs(
         ?\Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsJobsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Job
      * Update a job
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
      */
 	public function patchAtsJob(
         ?\Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Job
      * Remove a job
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
      */
 	public function removeAtsJob(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Job
      * Update a job
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
      */
 	public function updateAtsJob(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Job
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

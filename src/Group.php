@@ -25,12 +25,10 @@ class Group
      * Create a group
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateHrisGroupSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
      */
 	public function createHrisGroup(
         ?\Unified\Unified_to\Models\Operations\CreateHrisGroupRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateHrisGroupSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Group
      * Retrieve a group
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisGroupRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetHrisGroupSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
      */
 	public function getHrisGroup(
         ?\Unified\Unified_to\Models\Operations\GetHrisGroupRequest $request,
-        \Unified\Unified_to\Models\Operations\GetHrisGroupSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Group
      * List all groups
      * 
      * @param \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListHrisGroupsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
      */
 	public function listHrisGroups(
         ?\Unified\Unified_to\Models\Operations\ListHrisGroupsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListHrisGroupsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Group
      * Update a group
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisGroupSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
      */
 	public function patchHrisGroup(
         ?\Unified\Unified_to\Models\Operations\PatchHrisGroupRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchHrisGroupSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Group
      * Remove a group
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveHrisGroupSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
      */
 	public function removeHrisGroup(
         ?\Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveHrisGroupSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Group
      * Update a group
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateHrisGroupSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
      */
 	public function updateHrisGroup(
         ?\Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateHrisGroupSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Group
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

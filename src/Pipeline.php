@@ -25,12 +25,10 @@ class Pipeline
      * Create a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
      */
 	public function createCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Pipeline
      * Retrieve a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
      */
 	public function getCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\GetCrmPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Pipeline
      * List all pipelines
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListCrmPipelinesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
      */
 	public function listCrmPipelines(
         ?\Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListCrmPipelinesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Pipeline
      * Update a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
      */
 	public function patchCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Pipeline
      * Remove a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
      */
 	public function removeCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Pipeline
      * Update a pipeline
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateCrmPipelineSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
      */
 	public function updateCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateCrmPipelineSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Pipeline
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

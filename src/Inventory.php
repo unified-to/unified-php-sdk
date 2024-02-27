@@ -25,12 +25,10 @@ class Inventory
      * Create an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
      */
 	public function createCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Inventory
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Inventory
      * Retrieve an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
      */
 	public function getCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Inventory
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Inventory
      * List all inventories
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceInventoriesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
      */
 	public function listCommerceInventories(
         ?\Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListCommerceInventoriesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Inventory
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Inventory
      * Update an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
      */
 	public function patchCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Inventory
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Inventory
      * Remove an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
      */
 	public function removeCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Inventory
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Inventory
      * Update an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
      */
 	public function updateCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Inventory
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

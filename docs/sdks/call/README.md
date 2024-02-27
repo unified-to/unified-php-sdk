@@ -19,9 +19,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUcCallsRequest();
@@ -38,10 +42,7 @@ try {
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-24T23:18:21.548Z');
     $request->userId = '<value>';;
 
-    $requestSecurity = new Operations\ListUcCallsSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->call->listUcCalls($request, $requestSecurity);
+    $response = $sdk->call->listUcCalls($request);
 
     if ($response->ucCalls !== null) {
         // handle response
@@ -53,10 +54,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListUcCallsRequest](../../Models/Operations/ListUcCallsRequest.md)   | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
-| `security`                                                                                                  | [\Unified\Unified_to\Models\Operations\ListUcCallsSecurity](../../Models/Operations/ListUcCallsSecurity.md) | :heavy_check_mark:                                                                                          | The security requirements to use for the request.                                                           |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                | [\Unified\Unified_to\Models\Operations\ListUcCallsRequest](../../Models/Operations/ListUcCallsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 
 ### Response

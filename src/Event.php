@@ -25,12 +25,10 @@ class Event
      * Create a event
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmEventRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
      */
 	public function createCrmEvent(
         ?\Unified\Unified_to\Models\Operations\CreateCrmEventRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Event
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Event
      * Retrieve a event
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmEventRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
      */
 	public function getCrmEvent(
         ?\Unified\Unified_to\Models\Operations\GetCrmEventRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Event
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Event
      * List all events
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCrmEventsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListCrmEventsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
      */
 	public function listCrmEvents(
         ?\Unified\Unified_to\Models\Operations\ListCrmEventsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListCrmEventsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Event
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Event
      * Update a event
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmEventRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
      */
 	public function patchCrmEvent(
         ?\Unified\Unified_to\Models\Operations\PatchCrmEventRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Event
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Event
      * Remove a event
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
      */
 	public function removeCrmEvent(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmEventRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Event
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Event
      * Update a event
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateCrmEventSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
      */
 	public function updateCrmEvent(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmEventRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateCrmEventSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Event
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

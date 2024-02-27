@@ -25,12 +25,10 @@ class ListT
      * Create a list
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateMartechListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateMartechListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateMartechListResponse
      */
 	public function createMartechList(
         ?\Unified\Unified_to\Models\Operations\CreateMartechListRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateMartechListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class ListT
      * Retrieve a list
      * 
      * @param \Unified\Unified_to\Models\Operations\GetMartechListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetMartechListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetMartechListResponse
      */
 	public function getMartechList(
         ?\Unified\Unified_to\Models\Operations\GetMartechListRequest $request,
-        \Unified\Unified_to\Models\Operations\GetMartechListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class ListT
      * List all lists
      * 
      * @param \Unified\Unified_to\Models\Operations\ListMartechListsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListMartechListsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListMartechListsResponse
      */
 	public function listMartechLists(
         ?\Unified\Unified_to\Models\Operations\ListMartechListsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListMartechListsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListMartechListsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class ListT
      * Update a list
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchMartechListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchMartechListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchMartechListResponse
      */
 	public function patchMartechList(
         ?\Unified\Unified_to\Models\Operations\PatchMartechListRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchMartechListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class ListT
      * Remove a list
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveMartechListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveMartechListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechListResponse
      */
 	public function removeMartechList(
         ?\Unified\Unified_to\Models\Operations\RemoveMartechListRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveMartechListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class ListT
      * Update a list
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateMartechListRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateMartechListSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateMartechListResponse
      */
 	public function updateMartechList(
         ?\Unified\Unified_to\Models\Operations\UpdateMartechListRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateMartechListSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class ListT
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

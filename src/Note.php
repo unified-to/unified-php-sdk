@@ -25,12 +25,10 @@ class Note
      * Create a note
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateTicketingNoteSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
      */
 	public function createTicketingNote(
         ?\Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateTicketingNoteSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Note
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Note
      * Retrieve a note
      * 
      * @param \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingNoteSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
      */
 	public function getTicketingNote(
         ?\Unified\Unified_to\Models\Operations\GetTicketingNoteRequest $request,
-        \Unified\Unified_to\Models\Operations\GetTicketingNoteSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Note
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Note
      * List all notes
      * 
      * @param \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListTicketingNotesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
      */
 	public function listTicketingNotes(
         ?\Unified\Unified_to\Models\Operations\ListTicketingNotesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListTicketingNotesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Note
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Note
      * Update a note
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchTicketingNoteSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
      */
 	public function patchTicketingNote(
         ?\Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchTicketingNoteSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Note
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Note
      * Remove a note
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveTicketingNoteSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
      */
 	public function removeTicketingNote(
         ?\Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveTicketingNoteSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Note
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Note
      * Update a note
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateTicketingNoteSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
      */
 	public function updateTicketingNote(
         ?\Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateTicketingNoteSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Note
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

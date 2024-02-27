@@ -33,12 +33,6 @@ class UnifiedTo
 	
 	public Organization $organization;
 	
-	public Payment $payment;
-	
-	public Payout $payout;
-	
-	public Refund $refund;
-	
 	public Taxrate $taxrate;
 	
 	public Transaction $transaction;
@@ -101,6 +95,14 @@ class UnifiedTo
 	
 	public Passthrough $passthrough;
 	
+	public Payment $payment;
+	
+	public Link $link;
+	
+	public Payout $payout;
+	
+	public Refund $refund;
+	
 	public Storage $storage;
 	
 	public File $file;
@@ -160,12 +162,6 @@ class UnifiedTo
 		$this->invoice = new Invoice($this->sdkConfiguration);
 		
 		$this->organization = new Organization($this->sdkConfiguration);
-		
-		$this->payment = new Payment($this->sdkConfiguration);
-		
-		$this->payout = new Payout($this->sdkConfiguration);
-		
-		$this->refund = new Refund($this->sdkConfiguration);
 		
 		$this->taxrate = new Taxrate($this->sdkConfiguration);
 		
@@ -228,6 +224,14 @@ class UnifiedTo
 		$this->member = new Member($this->sdkConfiguration);
 		
 		$this->passthrough = new Passthrough($this->sdkConfiguration);
+		
+		$this->payment = new Payment($this->sdkConfiguration);
+		
+		$this->link = new Link($this->sdkConfiguration);
+		
+		$this->payout = new Payout($this->sdkConfiguration);
+		
+		$this->refund = new Refund($this->sdkConfiguration);
 		
 		$this->storage = new Storage($this->sdkConfiguration);
 		

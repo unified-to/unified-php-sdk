@@ -25,12 +25,10 @@ class Employee
      * Create an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateHrisEmployeeSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
      */
 	public function createHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateHrisEmployeeSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Employee
      * Retrieve an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetHrisEmployeeSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
      */
 	public function getHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest $request,
-        \Unified\Unified_to\Models\Operations\GetHrisEmployeeSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Employee
      * List all employees
      * 
      * @param \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListHrisEmployeesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
      */
 	public function listHrisEmployees(
         ?\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListHrisEmployeesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Employee
      * Update an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisEmployeeSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
      */
 	public function patchHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchHrisEmployeeSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Employee
      * Remove an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
      */
 	public function removeHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Employee
      * Update an employee
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
      */
 	public function updateHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Employee
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

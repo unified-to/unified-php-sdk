@@ -15,11 +15,12 @@ enum ObjectType: string
     case AccountingTransaction = 'accounting_transaction';
     case AccountingContact = 'accounting_contact';
     case AccountingInvoice = 'accounting_invoice';
-    case AccountingPayment = 'accounting_payment';
     case AccountingTaxrate = 'accounting_taxrate';
     case AccountingOrganization = 'accounting_organization';
-    case AccountingPayout = 'accounting_payout';
-    case AccountingRefund = 'accounting_refund';
+    case PaymentPayment = 'payment_payment';
+    case PaymentLink = 'payment_link';
+    case PaymentPayout = 'payment_payout';
+    case PaymentRefund = 'payment_refund';
     case CommerceItem = 'commerce_item';
     case CommerceCollection = 'commerce_collection';
     case CommerceInventory = 'commerce_inventory';

@@ -25,12 +25,10 @@ class Ats
      * Create an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
      */
 	public function createAtsActivity(
         ?\Unified\Unified_to\Models\Operations\CreateAtsActivityRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Ats
      * Create an application
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
      */
 	public function createAtsApplication(
         ?\Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -89,8 +84,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -115,12 +109,10 @@ class Ats
      * Create a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
      */
 	public function createAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -134,8 +126,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -160,12 +151,10 @@ class Ats
      * Create a document
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
      */
 	public function createAtsDocument(
         ?\Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -179,8 +168,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -205,12 +193,10 @@ class Ats
      * Create a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
      */
 	public function createAtsInterview(
         ?\Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -224,8 +210,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -250,12 +235,10 @@ class Ats
      * Create a job
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
      */
 	public function createAtsJob(
         ?\Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -269,8 +252,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -295,12 +277,10 @@ class Ats
      * Create a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
      */
 	public function createAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -314,8 +294,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -340,12 +319,10 @@ class Ats
      * Retrieve an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsActivityRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
      */
 	public function getAtsActivity(
         ?\Unified\Unified_to\Models\Operations\GetAtsActivityRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -356,8 +333,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -382,12 +358,10 @@ class Ats
      * Retrieve an application
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
      */
 	public function getAtsApplication(
         ?\Unified\Unified_to\Models\Operations\GetAtsApplicationRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -398,8 +372,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -424,12 +397,10 @@ class Ats
      * Retrieve a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
      */
 	public function getAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\GetAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -440,8 +411,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -466,12 +436,10 @@ class Ats
      * Retrieve a company
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsCompanySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
      */
 	public function getAtsCompany(
         ?\Unified\Unified_to\Models\Operations\GetAtsCompanyRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsCompanySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -482,8 +450,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -508,12 +475,10 @@ class Ats
      * Retrieve a document
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
      */
 	public function getAtsDocument(
         ?\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -524,8 +489,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -550,12 +514,10 @@ class Ats
      * Retrieve a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
      */
 	public function getAtsInterview(
         ?\Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -566,8 +528,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -592,12 +553,10 @@ class Ats
      * Retrieve a job
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
      */
 	public function getAtsJob(
         ?\Unified\Unified_to\Models\Operations\GetAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -608,8 +567,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -634,12 +592,10 @@ class Ats
      * Retrieve a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
      */
 	public function getAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\GetAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -650,8 +606,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -676,12 +631,10 @@ class Ats
      * List all activities
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsActivitiesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
      */
 	public function listAtsActivities(
         ?\Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsActivitiesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -692,8 +645,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -718,12 +670,10 @@ class Ats
      * List all applications
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
      */
 	public function listAtsApplications(
         ?\Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsApplicationsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -734,8 +684,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -760,12 +709,10 @@ class Ats
      * List all application statuses
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
      */
 	public function listAtsApplicationstatuses(
         ?\Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -776,8 +723,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -802,12 +748,10 @@ class Ats
      * List all candidates
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsCandidatesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
      */
 	public function listAtsCandidates(
         ?\Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsCandidatesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -818,8 +762,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -844,12 +787,10 @@ class Ats
      * List all companies
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsCompaniesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
      */
 	public function listAtsCompanies(
         ?\Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsCompaniesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -860,8 +801,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -886,12 +826,10 @@ class Ats
      * List all documents
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsDocumentsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
      */
 	public function listAtsDocuments(
         ?\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsDocumentsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -902,8 +840,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -928,12 +865,10 @@ class Ats
      * List all interviews
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsInterviewsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
      */
 	public function listAtsInterviews(
         ?\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsInterviewsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -944,8 +879,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -970,12 +904,10 @@ class Ats
      * List all jobs
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsJobsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
      */
 	public function listAtsJobs(
         ?\Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsJobsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -986,8 +918,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1012,12 +943,10 @@ class Ats
      * List all scorecards
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsScorecardsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
      */
 	public function listAtsScorecards(
         ?\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsScorecardsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1028,8 +957,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1054,12 +982,10 @@ class Ats
      * Update an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
      */
 	public function patchAtsActivity(
         ?\Unified\Unified_to\Models\Operations\PatchAtsActivityRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1073,8 +999,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1099,12 +1024,10 @@ class Ats
      * Update an application
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
      */
 	public function patchAtsApplication(
         ?\Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1118,8 +1041,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1144,12 +1066,10 @@ class Ats
      * Update a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
      */
 	public function patchAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1163,8 +1083,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1189,12 +1108,10 @@ class Ats
      * Update a document
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
      */
 	public function patchAtsDocument(
         ?\Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1208,8 +1125,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1234,12 +1150,10 @@ class Ats
      * Update a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
      */
 	public function patchAtsInterview(
         ?\Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1253,8 +1167,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1279,12 +1192,10 @@ class Ats
      * Update a job
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
      */
 	public function patchAtsJob(
         ?\Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1298,8 +1209,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1324,12 +1234,10 @@ class Ats
      * Update a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
      */
 	public function patchAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1343,8 +1251,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1369,12 +1276,10 @@ class Ats
      * Remove an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
      */
 	public function removeAtsActivity(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1384,8 +1289,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1409,12 +1313,10 @@ class Ats
      * Remove an application
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
      */
 	public function removeAtsApplication(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1424,8 +1326,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1449,12 +1350,10 @@ class Ats
      * Remove a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
      */
 	public function removeAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1464,8 +1363,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1489,12 +1387,10 @@ class Ats
      * Remove a document
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
      */
 	public function removeAtsDocument(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1504,8 +1400,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1529,12 +1424,10 @@ class Ats
      * Remove a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
      */
 	public function removeAtsInterview(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1544,8 +1437,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1569,12 +1461,10 @@ class Ats
      * Remove a job
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
      */
 	public function removeAtsJob(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1584,8 +1474,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1609,12 +1498,10 @@ class Ats
      * Remove a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
      */
 	public function removeAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1624,8 +1511,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1649,12 +1535,10 @@ class Ats
      * Update an activity
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsActivitySecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
      */
 	public function updateAtsActivity(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsActivitySecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1668,8 +1552,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1694,12 +1577,10 @@ class Ats
      * Update an application
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsApplicationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
      */
 	public function updateAtsApplication(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsApplicationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1713,8 +1594,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1739,12 +1619,10 @@ class Ats
      * Update a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
      */
 	public function updateAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1758,8 +1636,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1784,12 +1661,10 @@ class Ats
      * Update a document
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsDocumentSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
      */
 	public function updateAtsDocument(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsDocumentSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1803,8 +1678,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1829,12 +1703,10 @@ class Ats
      * Update a interview
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsInterviewSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
      */
 	public function updateAtsInterview(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsInterviewSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1848,8 +1720,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1874,12 +1745,10 @@ class Ats
      * Update a job
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsJobSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
      */
 	public function updateAtsJob(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsJobSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1893,8 +1762,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1919,12 +1787,10 @@ class Ats
      * Update a scorecard
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsScorecardSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
      */
 	public function updateAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsScorecardSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1938,8 +1804,7 @@ class Ats
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

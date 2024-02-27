@@ -3,14 +3,88 @@
 
 ### Available Operations
 
-* [createAccountingPayment](#createaccountingpayment) - Create a payment
-* [getAccountingPayment](#getaccountingpayment) - Retrieve a payment
-* [listAccountingPayments](#listaccountingpayments) - List all payments
-* [patchAccountingPayment](#patchaccountingpayment) - Update a payment
-* [removeAccountingPayment](#removeaccountingpayment) - Remove a payment
-* [updateAccountingPayment](#updateaccountingpayment) - Update a payment
+* [createPaymentLink](#createpaymentlink) - Create a payment link
+* [createPaymentPayment](#createpaymentpayment) - Create a payment
+* [getPaymentLink](#getpaymentlink) - Retrieve a payment link
+* [getPaymentPayment](#getpaymentpayment) - Retrieve a payment
+* [getPaymentPayout](#getpaymentpayout) - Retrieve a payout
+* [getPaymentRefund](#getpaymentrefund) - Retrieve a refund
+* [listPaymentLinks](#listpaymentlinks) - List all payment links
+* [listPaymentPayments](#listpaymentpayments) - List all payments
+* [listPaymentPayouts](#listpaymentpayouts) - List all payouts
+* [listPaymentRefunds](#listpaymentrefunds) - List all refunds
+* [patchPaymentLink](#patchpaymentlink) - Update a payment link
+* [patchPaymentPayment](#patchpaymentpayment) - Update a payment
+* [removePaymentLink](#removepaymentlink) - Remove a payment link
+* [removePaymentPayment](#removepaymentpayment) - Remove a payment
+* [updatePaymentLink](#updatepaymentlink) - Update a payment link
+* [updatePaymentPayment](#updatepaymentpayment) - Update a payment
 
-## createAccountingPayment
+## createPaymentLink
+
+Create a payment link
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\CreatePaymentLinkRequest();
+    $request->paymentLink = new Shared\PaymentLink();
+    $request->paymentLink->amount = 8711.36;
+    $request->paymentLink->contactId = '<value>';
+    $request->paymentLink->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-14T04:54:56.527Z');
+    $request->paymentLink->currency = 'Aruban Guilder';
+    $request->paymentLink->id = '<id>';
+    $request->paymentLink->isActive = false;
+    $request->paymentLink->lineitems = [
+        new Shared\PaymenntLinkLineitem(),
+    ];
+    $request->paymentLink->paymentId = '<value>';
+    $request->paymentLink->raw = [
+        'stump' => '<value>',
+    ];
+    $request->paymentLink->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-14T18:03:00.242Z');
+    $request->paymentLink->url = 'http://baggy-shark.biz';
+    $request->connectionId = '<value>';;
+
+    $response = $sdk->payment->createPaymentLink($request);
+
+    if ($response->paymentLink !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest](../../Models/Operations/CreatePaymentLinkRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse](../../Models/Operations/CreatePaymentLinkResponse.md)**
+
+
+## createPaymentPayment
 
 Create a payment
 
@@ -24,36 +98,36 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateAccountingPaymentRequest();
-    $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = '<value>';
-    $request->accountingPayment->contactId = '<value>';
-    $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-28T13:13:46.548Z');
-    $request->accountingPayment->currency = 'Lari';
-    $request->accountingPayment->id = '<id>';
-    $request->accountingPayment->invoiceId = '<value>';
-    $request->accountingPayment->notes = '<value>';
-    $request->accountingPayment->paymentMethod = '<value>';
-    $request->accountingPayment->raw = [
-        'Mount' => '<value>',
+        $request = new Operations\CreatePaymentPaymentRequest();
+    $request->paymentPayment = new Shared\PaymentPayment();
+    $request->paymentPayment->accountId = '<value>';
+    $request->paymentPayment->contactId = '<value>';
+    $request->paymentPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-29T07:18:50.554Z');
+    $request->paymentPayment->currency = 'Iceland Krona';
+    $request->paymentPayment->id = '<id>';
+    $request->paymentPayment->invoiceId = '<value>';
+    $request->paymentPayment->notes = '<value>';
+    $request->paymentPayment->paymentMethod = '<value>';
+    $request->paymentPayment->raw = [
+        'moderator' => '<value>',
     ];
-    $request->accountingPayment->reference = '<value>';
-    $request->accountingPayment->totalAmount = 1821.1;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-22T09:20:36.660Z');
+    $request->paymentPayment->reference = '<value>';
+    $request->paymentPayment->totalAmount = 8883.6;
+    $request->paymentPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-25T05:19:24.134Z');
     $request->connectionId = '<value>';;
 
-    $requestSecurity = new Operations\CreateAccountingPaymentSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+    $response = $sdk->payment->createPaymentPayment($request);
 
-    $response = $sdk->payment->createAccountingPayment($request, $requestSecurity);
-
-    if ($response->accountingPayment !== null) {
+    if ($response->paymentPayment !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -63,18 +137,69 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateAccountingPaymentRequest](../../Models/Operations/CreateAccountingPaymentRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\CreateAccountingPaymentSecurity](../../Models/Operations/CreateAccountingPaymentSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\CreatePaymentPaymentRequest](../../Models/Operations/CreatePaymentPaymentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateAccountingPaymentResponse](../../Models/Operations/CreateAccountingPaymentResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\CreatePaymentPaymentResponse](../../Models/Operations/CreatePaymentPaymentResponse.md)**
 
 
-## getAccountingPayment
+## getPaymentLink
+
+Retrieve a payment link
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\GetPaymentLinkRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->id = '<id>';;
+
+    $response = $sdk->payment->getPaymentLink($request);
+
+    if ($response->paymentLink !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetPaymentLinkRequest](../../Models/Operations/GetPaymentLinkRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetPaymentLinkResponse](../../Models/Operations/GetPaymentLinkResponse.md)**
+
+
+## getPaymentPayment
 
 Retrieve a payment
 
@@ -88,24 +213,25 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetAccountingPaymentRequest();
+        $request = new Operations\GetPaymentPaymentRequest();
     $request->connectionId = '<value>';
     $request->fields = [
         '<value>',
     ];
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\GetAccountingPaymentSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+    $response = $sdk->payment->getPaymentPayment($request);
 
-    $response = $sdk->payment->getAccountingPayment($request, $requestSecurity);
-
-    if ($response->accountingPayment !== null) {
+    if ($response->paymentPayment !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -115,18 +241,180 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetAccountingPaymentRequest](../../Models/Operations/GetAccountingPaymentRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-| `security`                                                                                                                    | [\Unified\Unified_to\Models\Operations\GetAccountingPaymentSecurity](../../Models/Operations/GetAccountingPaymentSecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetPaymentPaymentRequest](../../Models/Operations/GetPaymentPaymentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAccountingPaymentResponse](../../Models/Operations/GetAccountingPaymentResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetPaymentPaymentResponse](../../Models/Operations/GetPaymentPaymentResponse.md)**
 
 
-## listAccountingPayments
+## getPaymentPayout
+
+Retrieve a payout
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\GetPaymentPayoutRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->id = '<id>';;
+
+    $response = $sdk->payment->getPaymentPayout($request);
+
+    if ($response->paymentPayout !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest](../../Models/Operations/GetPaymentPayoutRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetPaymentPayoutResponse](../../Models/Operations/GetPaymentPayoutResponse.md)**
+
+
+## getPaymentRefund
+
+Retrieve a refund
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\GetPaymentRefundRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->id = '<id>';;
+
+    $response = $sdk->payment->getPaymentRefund($request);
+
+    if ($response->paymentRefund !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetPaymentRefundRequest](../../Models/Operations/GetPaymentRefundRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetPaymentRefundResponse](../../Models/Operations/GetPaymentRefundResponse.md)**
+
+
+## listPaymentLinks
+
+List all payment links
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListPaymentLinksRequest();
+    $request->connectionId = '<value>';
+    $request->contactId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->limit = 5840.47;
+    $request->offset = 2505.87;
+    $request->order = '<value>';
+    $request->paymentId = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-19T04:38:46.756Z');;
+
+    $response = $sdk->payment->listPaymentLinks($request);
+
+    if ($response->paymentLinks !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListPaymentLinksRequest](../../Models/Operations/ListPaymentLinksRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListPaymentLinksResponse](../../Models/Operations/ListPaymentLinksResponse.md)**
+
+
+## listPaymentPayments
 
 List all payments
 
@@ -140,31 +428,32 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListAccountingPaymentsRequest();
+        $request = new Operations\ListPaymentPaymentsRequest();
     $request->connectionId = '<value>';
     $request->contactId = '<value>';
     $request->fields = [
         '<value>',
     ];
     $request->invoiceId = '<value>';
-    $request->limit = 487.78;
-    $request->offset = 9308.83;
+    $request->limit = 2381.17;
+    $request->offset = 837.03;
     $request->order = '<value>';
     $request->query = '<value>';
     $request->sort = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-25T18:15:35.411Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-25T04:38:11.791Z');;
 
-    $requestSecurity = new Operations\ListAccountingPaymentsSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+    $response = $sdk->payment->listPaymentPayments($request);
 
-    $response = $sdk->payment->listAccountingPayments($request, $requestSecurity);
-
-    if ($response->accountingPayments !== null) {
+    if ($response->paymentPayments !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -174,18 +463,197 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\ListAccountingPaymentsRequest](../../Models/Operations/ListAccountingPaymentsRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\ListAccountingPaymentsSecurity](../../Models/Operations/ListAccountingPaymentsSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListPaymentPaymentsRequest](../../Models/Operations/ListPaymentPaymentsRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListAccountingPaymentsResponse](../../Models/Operations/ListAccountingPaymentsResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\ListPaymentPaymentsResponse](../../Models/Operations/ListPaymentPaymentsResponse.md)**
 
 
-## patchAccountingPayment
+## listPaymentPayouts
+
+List all payouts
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListPaymentPayoutsRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->limit = 5474.75;
+    $request->offset = 586.95;
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-05T08:15:58.034Z');;
+
+    $response = $sdk->payment->listPaymentPayouts($request);
+
+    if ($response->paymentPayouts !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest](../../Models/Operations/ListPaymentPayoutsRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListPaymentPayoutsResponse](../../Models/Operations/ListPaymentPayoutsResponse.md)**
+
+
+## listPaymentRefunds
+
+List all refunds
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListPaymentRefundsRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->limit = 5820.28;
+    $request->offset = 6141.19;
+    $request->order = '<value>';
+    $request->paymentId = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-03T22:54:27.299Z');;
+
+    $response = $sdk->payment->listPaymentRefunds($request);
+
+    if ($response->paymentRefunds !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest](../../Models/Operations/ListPaymentRefundsRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse](../../Models/Operations/ListPaymentRefundsResponse.md)**
+
+
+## patchPaymentLink
+
+Update a payment link
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\PatchPaymentLinkRequest();
+    $request->paymentLink = new Shared\PaymentLink();
+    $request->paymentLink->amount = 2219.73;
+    $request->paymentLink->contactId = '<value>';
+    $request->paymentLink->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-20T18:32:48.667Z');
+    $request->paymentLink->currency = 'UIC-Franc';
+    $request->paymentLink->id = '<id>';
+    $request->paymentLink->isActive = false;
+    $request->paymentLink->lineitems = [
+        new Shared\PaymenntLinkLineitem(),
+    ];
+    $request->paymentLink->paymentId = '<value>';
+    $request->paymentLink->raw = [
+        'Tellurium' => '<value>',
+    ];
+    $request->paymentLink->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-20T09:13:52.888Z');
+    $request->paymentLink->url = 'http://accurate-costume.org';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->payment->patchPaymentLink($request);
+
+    if ($response->paymentLink !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest](../../Models/Operations/PatchPaymentLinkRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse](../../Models/Operations/PatchPaymentLinkResponse.md)**
+
+
+## patchPaymentPayment
 
 Update a payment
 
@@ -199,37 +667,37 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchAccountingPaymentRequest();
-    $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = '<value>';
-    $request->accountingPayment->contactId = '<value>';
-    $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-25T02:56:43.385Z');
-    $request->accountingPayment->currency = 'Boliviano boliviano';
-    $request->accountingPayment->id = '<id>';
-    $request->accountingPayment->invoiceId = '<value>';
-    $request->accountingPayment->notes = '<value>';
-    $request->accountingPayment->paymentMethod = '<value>';
-    $request->accountingPayment->raw = [
-        'periodic' => '<value>',
+        $request = new Operations\PatchPaymentPaymentRequest();
+    $request->paymentPayment = new Shared\PaymentPayment();
+    $request->paymentPayment->accountId = '<value>';
+    $request->paymentPayment->contactId = '<value>';
+    $request->paymentPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-28T13:33:54.908Z');
+    $request->paymentPayment->currency = 'Cape Verde Escudo';
+    $request->paymentPayment->id = '<id>';
+    $request->paymentPayment->invoiceId = '<value>';
+    $request->paymentPayment->notes = '<value>';
+    $request->paymentPayment->paymentMethod = '<value>';
+    $request->paymentPayment->raw = [
+        'Dodge' => '<value>',
     ];
-    $request->accountingPayment->reference = '<value>';
-    $request->accountingPayment->totalAmount = 9979.6;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-15T02:06:02.492Z');
+    $request->paymentPayment->reference = '<value>';
+    $request->paymentPayment->totalAmount = 2981.35;
+    $request->paymentPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-06T16:43:18.631Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\PatchAccountingPaymentSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+    $response = $sdk->payment->patchPaymentPayment($request);
 
-    $response = $sdk->payment->patchAccountingPayment($request, $requestSecurity);
-
-    if ($response->accountingPayment !== null) {
+    if ($response->paymentPayment !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -239,18 +707,66 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchAccountingPaymentRequest](../../Models/Operations/PatchAccountingPaymentRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\Unified\Unified_to\Models\Operations\PatchAccountingPaymentSecurity](../../Models/Operations/PatchAccountingPaymentSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\PatchPaymentPaymentRequest](../../Models/Operations/PatchPaymentPaymentRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchAccountingPaymentResponse](../../Models/Operations/PatchAccountingPaymentResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\PatchPaymentPaymentResponse](../../Models/Operations/PatchPaymentPaymentResponse.md)**
 
 
-## removeAccountingPayment
+## removePaymentLink
+
+Remove a payment link
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\RemovePaymentLinkRequest();
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->payment->removePaymentLink($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest](../../Models/Operations/RemovePaymentLinkRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse](../../Models/Operations/RemovePaymentLinkResponse.md)**
+
+
+## removePaymentPayment
 
 Remove a payment
 
@@ -264,19 +780,20 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveAccountingPaymentRequest();
+        $request = new Operations\RemovePaymentPaymentRequest();
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\RemoveAccountingPaymentSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
-
-    $response = $sdk->payment->removeAccountingPayment($request, $requestSecurity);
+    $response = $sdk->payment->removePaymentPayment($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -288,18 +805,82 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveAccountingPaymentRequest](../../Models/Operations/RemoveAccountingPaymentRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\RemoveAccountingPaymentSecurity](../../Models/Operations/RemoveAccountingPaymentSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\RemovePaymentPaymentRequest](../../Models/Operations/RemovePaymentPaymentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveAccountingPaymentResponse](../../Models/Operations/RemoveAccountingPaymentResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\RemovePaymentPaymentResponse](../../Models/Operations/RemovePaymentPaymentResponse.md)**
 
 
-## updateAccountingPayment
+## updatePaymentLink
+
+Update a payment link
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\UpdatePaymentLinkRequest();
+    $request->paymentLink = new Shared\PaymentLink();
+    $request->paymentLink->amount = 6147.65;
+    $request->paymentLink->contactId = '<value>';
+    $request->paymentLink->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T07:49:35.280Z');
+    $request->paymentLink->currency = 'Gibraltar Pound';
+    $request->paymentLink->id = '<id>';
+    $request->paymentLink->isActive = false;
+    $request->paymentLink->lineitems = [
+        new Shared\PaymenntLinkLineitem(),
+    ];
+    $request->paymentLink->paymentId = '<value>';
+    $request->paymentLink->raw = [
+        'male' => '<value>',
+    ];
+    $request->paymentLink->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-22T16:01:32.942Z');
+    $request->paymentLink->url = 'https://complex-glove.com';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->payment->updatePaymentLink($request);
+
+    if ($response->paymentLink !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest](../../Models/Operations/UpdatePaymentLinkRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse](../../Models/Operations/UpdatePaymentLinkResponse.md)**
+
+
+## updatePaymentPayment
 
 Update a payment
 
@@ -313,37 +894,37 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateAccountingPaymentRequest();
-    $request->accountingPayment = new Shared\AccountingPayment();
-    $request->accountingPayment->accountId = '<value>';
-    $request->accountingPayment->contactId = '<value>';
-    $request->accountingPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-04T17:30:16.475Z');
-    $request->accountingPayment->currency = 'Sudanese Pound';
-    $request->accountingPayment->id = '<id>';
-    $request->accountingPayment->invoiceId = '<value>';
-    $request->accountingPayment->notes = '<value>';
-    $request->accountingPayment->paymentMethod = '<value>';
-    $request->accountingPayment->raw = [
-        'Music' => '<value>',
+        $request = new Operations\UpdatePaymentPaymentRequest();
+    $request->paymentPayment = new Shared\PaymentPayment();
+    $request->paymentPayment->accountId = '<value>';
+    $request->paymentPayment->contactId = '<value>';
+    $request->paymentPayment->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-20T21:00:50.233Z');
+    $request->paymentPayment->currency = 'Namibia Dollar';
+    $request->paymentPayment->id = '<id>';
+    $request->paymentPayment->invoiceId = '<value>';
+    $request->paymentPayment->notes = '<value>';
+    $request->paymentPayment->paymentMethod = '<value>';
+    $request->paymentPayment->raw = [
+        'Wagon' => '<value>',
     ];
-    $request->accountingPayment->reference = '<value>';
-    $request->accountingPayment->totalAmount = 4734;
-    $request->accountingPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-26T21:11:42.893Z');
+    $request->paymentPayment->reference = '<value>';
+    $request->paymentPayment->totalAmount = 2793.98;
+    $request->paymentPayment->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-23T01:02:53.585Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\UpdateAccountingPaymentSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+    $response = $sdk->payment->updatePaymentPayment($request);
 
-    $response = $sdk->payment->updateAccountingPayment($request, $requestSecurity);
-
-    if ($response->accountingPayment !== null) {
+    if ($response->paymentPayment !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -353,13 +934,12 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateAccountingPaymentRequest](../../Models/Operations/UpdateAccountingPaymentRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-| `security`                                                                                                                          | [\Unified\Unified_to\Models\Operations\UpdateAccountingPaymentSecurity](../../Models/Operations/UpdateAccountingPaymentSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\UpdatePaymentPaymentRequest](../../Models/Operations/UpdatePaymentPaymentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateAccountingPaymentResponse](../../Models/Operations/UpdateAccountingPaymentResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\UpdatePaymentPaymentResponse](../../Models/Operations/UpdatePaymentPaymentResponse.md)**
 

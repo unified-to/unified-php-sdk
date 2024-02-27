@@ -24,31 +24,28 @@ class Payout
     /**
      * Retrieve a payout
      * 
-     * @param \Unified\Unified_to\Models\Operations\GetAccountingPayoutRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAccountingPayoutSecurity $security
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingPayoutResponse
+     * @param \Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentPayoutResponse
      */
-	public function getAccountingPayout(
-        ?\Unified\Unified_to\Models\Operations\GetAccountingPayoutRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAccountingPayoutSecurity $security,
-    ): \Unified\Unified_to\Models\Operations\GetAccountingPayoutResponse
+	public function getPaymentPayout(
+        ?\Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetPaymentPayoutResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/payout/{id}', \Unified\Unified_to\Models\Operations\GetAccountingPayoutRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout/{id}', \Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingPayoutRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
 
-        $response = new \Unified\Unified_to\Models\Operations\GetAccountingPayoutResponse();
+        $response = new \Unified\Unified_to\Models\Operations\GetPaymentPayoutResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -56,7 +53,7 @@ class Payout
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingPayout = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingPayout', 'json');
+                $response->paymentPayout = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\PaymentPayout', 'json');
             }
         }
 
@@ -66,31 +63,28 @@ class Payout
     /**
      * List all payouts
      * 
-     * @param \Unified\Unified_to\Models\Operations\ListAccountingPayoutsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAccountingPayoutsSecurity $security
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingPayoutsResponse
+     * @param \Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentPayoutsResponse
      */
-	public function listAccountingPayouts(
-        ?\Unified\Unified_to\Models\Operations\ListAccountingPayoutsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAccountingPayoutsSecurity $security,
-    ): \Unified\Unified_to\Models\Operations\ListAccountingPayoutsResponse
+	public function listPaymentPayouts(
+        ?\Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListPaymentPayoutsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/payout', \Unified\Unified_to\Models\Operations\ListAccountingPayoutsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout', \Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingPayoutsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
 
-        $response = new \Unified\Unified_to\Models\Operations\ListAccountingPayoutsResponse();
+        $response = new \Unified\Unified_to\Models\Operations\ListPaymentPayoutsResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -98,7 +92,7 @@ class Payout
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingPayouts = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AccountingPayout>', 'json');
+                $response->paymentPayouts = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\PaymentPayout>', 'json');
             }
         }
 

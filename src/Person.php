@@ -25,12 +25,10 @@ class Person
      * Retrieve enrichment information for a person
      * 
      * @param \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListEnrichPeopleSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
      */
 	public function listEnrichPeople(
         ?\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest $request,
-        \Unified\Unified_to\Models\Operations\ListEnrichPeopleSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -41,8 +39,7 @@ class Person
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -25,12 +25,10 @@ class Organization
      * Retrieve an organization
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAccountingOrganizationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAccountingOrganizationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAccountingOrganizationResponse
      */
 	public function getAccountingOrganization(
         ?\Unified\Unified_to\Models\Operations\GetAccountingOrganizationRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAccountingOrganizationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAccountingOrganizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -41,8 +39,7 @@ class Organization
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -67,12 +64,10 @@ class Organization
      * List all organizations
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsResponse
      */
 	public function listAccountingOrganizations(
         ?\Unified\Unified_to\Models\Operations\ListAccountingOrganizationsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -83,8 +78,7 @@ class Organization
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

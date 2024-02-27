@@ -25,12 +25,10 @@ class Call
      * List all calls
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUcCallsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUcCallsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      */
 	public function listUcCalls(
         ?\Unified\Unified_to\Models\Operations\ListUcCallsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUcCallsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUcCallsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -41,8 +39,7 @@ class Call
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

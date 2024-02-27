@@ -25,12 +25,10 @@ class Apicall
      * Retrieve specific API Call by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
      */
 	public function getUnifiedApicall(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Apicall
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -66,12 +63,10 @@ class Apicall
      * Returns API Calls
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUnifiedApicallsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
      */
 	public function listUnifiedApicalls(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUnifiedApicallsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -82,8 +77,7 @@ class Apicall
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

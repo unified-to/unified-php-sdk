@@ -25,12 +25,10 @@ class Commerce
      * Create a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
      */
 	public function createCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Commerce
      * Create an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
      */
 	public function createCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -89,8 +84,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -115,12 +109,10 @@ class Commerce
      * Create an item
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      */
 	public function createCommerceItem(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -134,8 +126,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -160,12 +151,10 @@ class Commerce
      * Create a location
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      */
 	public function createCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -179,8 +168,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -205,12 +193,10 @@ class Commerce
      * Retrieve a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
      */
 	public function getCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -221,8 +207,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -247,12 +232,10 @@ class Commerce
      * Retrieve an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
      */
 	public function getCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -263,8 +246,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -289,12 +271,10 @@ class Commerce
      * Retrieve an item
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      */
 	public function getCommerceItem(
         ?\Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -305,8 +285,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -331,12 +310,10 @@ class Commerce
      * Retrieve a location
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
      */
 	public function getCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\GetCommerceLocationRequest $request,
-        \Unified\Unified_to\Models\Operations\GetCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -347,8 +324,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -373,12 +349,10 @@ class Commerce
      * List all collections
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceCollectionsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
      */
 	public function listCommerceCollections(
         ?\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListCommerceCollectionsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -389,8 +363,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -415,12 +388,10 @@ class Commerce
      * List all inventories
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceInventoriesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
      */
 	public function listCommerceInventories(
         ?\Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListCommerceInventoriesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -431,8 +402,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -457,12 +427,10 @@ class Commerce
      * List all items
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceItemsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
      */
 	public function listCommerceItems(
         ?\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListCommerceItemsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -473,8 +441,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -499,12 +466,10 @@ class Commerce
      * List all locations
      * 
      * @param \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceLocationsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
      */
 	public function listCommerceLocations(
         ?\Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListCommerceLocationsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -515,8 +480,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -541,12 +505,10 @@ class Commerce
      * Update a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
      */
 	public function patchCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -560,8 +522,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -586,12 +547,10 @@ class Commerce
      * Update an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
      */
 	public function patchCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -605,8 +564,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -631,12 +589,10 @@ class Commerce
      * Update an item
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
      */
 	public function patchCommerceItem(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -650,8 +606,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -676,12 +631,10 @@ class Commerce
      * Update a location
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
      */
 	public function patchCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -695,8 +648,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -721,12 +673,10 @@ class Commerce
      * Remove a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
      */
 	public function removeCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -736,8 +686,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -761,12 +710,10 @@ class Commerce
      * Remove an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
      */
 	public function removeCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -776,8 +723,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -801,12 +747,10 @@ class Commerce
      * Remove an item
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      */
 	public function removeCommerceItem(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -816,8 +760,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -841,12 +784,10 @@ class Commerce
      * Remove a location
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      */
 	public function removeCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -856,8 +797,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -881,12 +821,10 @@ class Commerce
      * Update a collection
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
      */
 	public function updateCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -900,8 +838,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -926,12 +863,10 @@ class Commerce
      * Update an inventory
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceInventorySecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
      */
 	public function updateCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateCommerceInventorySecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -945,8 +880,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -971,12 +905,10 @@ class Commerce
      * Update an item
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceItemSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
      */
 	public function updateCommerceItem(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateCommerceItemSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -990,8 +922,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1016,12 +947,10 @@ class Commerce
      * Update a location
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceLocationSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
      */
 	public function updateCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateCommerceLocationSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1035,8 +964,7 @@ class Commerce
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

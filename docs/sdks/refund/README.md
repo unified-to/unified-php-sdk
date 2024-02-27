@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [getAccountingRefund](#getaccountingrefund) - Retrieve a refund
-* [listAccountingRefunds](#listaccountingrefunds) - List all refunds
+* [getPaymentRefund](#getpaymentrefund) - Retrieve a refund
+* [listPaymentRefunds](#listpaymentrefunds) - List all refunds
 
-## getAccountingRefund
+## getPaymentRefund
 
 Retrieve a refund
 
@@ -20,24 +20,25 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetAccountingRefundRequest();
+        $request = new Operations\GetPaymentRefundRequest();
     $request->connectionId = '<value>';
     $request->fields = [
         '<value>',
     ];
     $request->id = '<id>';;
 
-    $requestSecurity = new Operations\GetAccountingRefundSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+    $response = $sdk->refund->getPaymentRefund($request);
 
-    $response = $sdk->refund->getAccountingRefund($request, $requestSecurity);
-
-    if ($response->accountingRefund !== null) {
+    if ($response->paymentRefund !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -47,18 +48,17 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAccountingRefundRequest](../../Models/Operations/GetAccountingRefundRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAccountingRefundSecurity](../../Models/Operations/GetAccountingRefundSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\GetPaymentRefundRequest](../../Models/Operations/GetPaymentRefundRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAccountingRefundResponse](../../Models/Operations/GetAccountingRefundResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\GetPaymentRefundResponse](../../Models/Operations/GetPaymentRefundResponse.md)**
 
 
-## listAccountingRefunds
+## listPaymentRefunds
 
 List all refunds
 
@@ -72,30 +72,31 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
 use \Unified\Unified_to\Models\Operations;
 
-$sdk = Unified_to\UnifiedTo::builder()->build();
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListAccountingRefundsRequest();
+        $request = new Operations\ListPaymentRefundsRequest();
     $request->connectionId = '<value>';
     $request->fields = [
         '<value>',
     ];
-    $request->limit = 8743.36;
-    $request->offset = 6995.02;
+    $request->limit = 5820.28;
+    $request->offset = 6141.19;
     $request->order = '<value>';
     $request->paymentId = '<value>';
     $request->query = '<value>';
     $request->sort = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-01T03:28:05.895Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-03T22:54:27.299Z');;
 
-    $requestSecurity = new Operations\ListAccountingRefundsSecurity();
-    $requestSecurity->jwt = '<YOUR_API_KEY_HERE>';
+    $response = $sdk->refund->listPaymentRefunds($request);
 
-    $response = $sdk->refund->listAccountingRefunds($request, $requestSecurity);
-
-    if ($response->accountingRefunds !== null) {
+    if ($response->paymentRefunds !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -105,13 +106,12 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListAccountingRefundsRequest](../../Models/Operations/ListAccountingRefundsRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListAccountingRefundsSecurity](../../Models/Operations/ListAccountingRefundsSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest](../../Models/Operations/ListPaymentRefundsRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListAccountingRefundsResponse](../../Models/Operations/ListAccountingRefundsResponse.md)**
+**[?\Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse](../../Models/Operations/ListPaymentRefundsResponse.md)**
 

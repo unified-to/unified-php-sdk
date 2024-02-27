@@ -25,12 +25,10 @@ class Unified
      * Create connection
      * 
      * @param \Unified\Unified_to\Models\Shared\Connection $request
-     * @param \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse
      */
 	public function createUnifiedConnection(
         ?\Unified\Unified_to\Models\Shared\Connection $request,
-        \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -72,12 +69,10 @@ class Unified
      * The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
      */
 	public function createUnifiedWebhook(
         ?\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -92,8 +87,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -118,12 +112,10 @@ class Unified
      * Retrieve specific API Call by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
      */
 	public function getUnifiedApicall(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedApicallSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -133,8 +125,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -159,12 +150,10 @@ class Unified
      * Retrieve connection
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedConnectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
      */
 	public function getUnifiedConnection(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedConnectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -174,8 +163,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -216,7 +204,7 @@ class Unified
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -240,12 +228,10 @@ class Unified
      * Retrieve webhook by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
      */
 	public function getUnifiedWebhook(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedWebhookSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -255,8 +241,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -281,12 +266,10 @@ class Unified
      * Returns API Calls
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUnifiedApicallsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
      */
 	public function listUnifiedApicalls(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUnifiedApicallsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -297,8 +280,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -323,12 +305,10 @@ class Unified
      * List all connections
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse
      */
 	public function listUnifiedConnections(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -339,8 +319,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -381,7 +360,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -406,12 +385,10 @@ class Unified
      * Returns all integrations
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
      */
 	public function listUnifiedIntegrations(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -422,8 +399,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -448,12 +424,10 @@ class Unified
      * List support issues
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUnifiedIssuesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse
      */
 	public function listUnifiedIssues(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUnifiedIssuesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -464,8 +438,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -490,12 +463,10 @@ class Unified
      * Returns all registered webhooks
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
      */
 	public function listUnifiedWebhooks(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -506,8 +477,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -532,12 +502,10 @@ class Unified
      * Update connection
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse
      */
 	public function patchUnifiedConnection(
         ?\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -551,8 +519,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -577,12 +544,10 @@ class Unified
      * Trigger webhook
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
      */
 	public function patchUnifiedWebhookTrigger(
         ?\Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -592,8 +557,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -617,12 +581,10 @@ class Unified
      * Remove connection
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse
      */
 	public function removeUnifiedConnection(
         ?\Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -632,8 +594,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -657,12 +618,10 @@ class Unified
      * Remove webhook subscription
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
      */
 	public function removeUnifiedWebhook(
         ?\Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -672,8 +631,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -697,12 +655,10 @@ class Unified
      * Update connection
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse
      */
 	public function updateUnifiedConnection(
         ?\Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -716,8 +672,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -742,12 +697,10 @@ class Unified
      * Trigger webhook
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
      */
 	public function updateUnifiedWebhookTrigger(
         ?\Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -757,8 +710,7 @@ class Unified
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

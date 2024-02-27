@@ -25,12 +25,10 @@ class Candidate
      * Create a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
      */
 	public function createAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Candidate
      * Retrieve a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
      */
 	public function getAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\GetAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\GetAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Candidate
      * List all candidates
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListAtsCandidatesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
      */
 	public function listAtsCandidates(
         ?\Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListAtsCandidatesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Candidate
      * Update a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
      */
 	public function patchAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Candidate
      * Remove a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
      */
 	public function removeAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Candidate
      * Update a candidate
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsCandidateSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
      */
 	public function updateAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateAtsCandidateSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Candidate
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

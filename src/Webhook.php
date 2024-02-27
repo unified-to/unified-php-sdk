@@ -27,12 +27,10 @@ class Webhook
      * The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
      */
 	public function createUnifiedWebhook(
         ?\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -47,8 +45,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -73,12 +70,10 @@ class Webhook
      * Retrieve webhook by its ID
      * 
      * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetUnifiedWebhookSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
      */
 	public function getUnifiedWebhook(
         ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request,
-        \Unified\Unified_to\Models\Operations\GetUnifiedWebhookSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -88,8 +83,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -114,12 +108,10 @@ class Webhook
      * Returns all registered webhooks
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
      */
 	public function listUnifiedWebhooks(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -130,8 +122,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -156,12 +147,10 @@ class Webhook
      * Trigger webhook
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
      */
 	public function patchUnifiedWebhookTrigger(
         ?\Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -171,8 +160,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -196,12 +184,10 @@ class Webhook
      * Remove webhook subscription
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
      */
 	public function removeUnifiedWebhook(
         ?\Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -211,8 +197,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -236,12 +221,10 @@ class Webhook
      * Trigger webhook
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
      */
 	public function updateUnifiedWebhookTrigger(
         ?\Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -251,8 +234,7 @@ class Webhook
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

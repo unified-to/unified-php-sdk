@@ -23,4 +23,5 @@ enum PropertyConnectionCategories: string
     case Accounting = 'accounting';
     case Storage = 'storage';
     case Commerce = 'commerce';
+    case Payment = 'payment';
 }

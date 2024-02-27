@@ -41,7 +41,7 @@ class Integration
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -81,7 +81,7 @@ class Integration
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,12 +106,10 @@ class Integration
      * Returns all integrations
      * 
      * @param \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
      */
 	public function listUnifiedIntegrations(
         ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request,
-        \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -122,8 +120,7 @@ class Integration
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

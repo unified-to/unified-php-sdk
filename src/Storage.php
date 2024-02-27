@@ -25,12 +25,10 @@ class Storage
      * Create a file
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateStorageFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\CreateStorageFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\CreateStorageFileResponse
      */
 	public function createStorageFile(
         ?\Unified\Unified_to\Models\Operations\CreateStorageFileRequest $request,
-        \Unified\Unified_to\Models\Operations\CreateStorageFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\CreateStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -44,8 +42,7 @@ class Storage
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -70,12 +67,10 @@ class Storage
      * Retrieve a file
      * 
      * @param \Unified\Unified_to\Models\Operations\GetStorageFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\GetStorageFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\GetStorageFileResponse
      */
 	public function getStorageFile(
         ?\Unified\Unified_to\Models\Operations\GetStorageFileRequest $request,
-        \Unified\Unified_to\Models\Operations\GetStorageFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\GetStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -86,8 +81,7 @@ class Storage
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,12 +106,10 @@ class Storage
      * List all files
      * 
      * @param \Unified\Unified_to\Models\Operations\ListStorageFilesRequest $request
-     * @param \Unified\Unified_to\Models\Operations\ListStorageFilesSecurity $security
      * @return \Unified\Unified_to\Models\Operations\ListStorageFilesResponse
      */
 	public function listStorageFiles(
         ?\Unified\Unified_to\Models\Operations\ListStorageFilesRequest $request,
-        \Unified\Unified_to\Models\Operations\ListStorageFilesSecurity $security,
     ): \Unified\Unified_to\Models\Operations\ListStorageFilesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -128,8 +120,7 @@ class Storage
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -154,12 +145,10 @@ class Storage
      * Update a file
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchStorageFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\PatchStorageFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\PatchStorageFileResponse
      */
 	public function patchStorageFile(
         ?\Unified\Unified_to\Models\Operations\PatchStorageFileRequest $request,
-        \Unified\Unified_to\Models\Operations\PatchStorageFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\PatchStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -173,8 +162,7 @@ class Storage
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -199,12 +187,10 @@ class Storage
      * Remove a file
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveStorageFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\RemoveStorageFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\RemoveStorageFileResponse
      */
 	public function removeStorageFile(
         ?\Unified\Unified_to\Models\Operations\RemoveStorageFileRequest $request,
-        \Unified\Unified_to\Models\Operations\RemoveStorageFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\RemoveStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -214,8 +200,7 @@ class Storage
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +224,10 @@ class Storage
      * Update a file
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateStorageFileRequest $request
-     * @param \Unified\Unified_to\Models\Operations\UpdateStorageFileSecurity $security
      * @return \Unified\Unified_to\Models\Operations\UpdateStorageFileResponse
      */
 	public function updateStorageFile(
         ?\Unified\Unified_to\Models\Operations\UpdateStorageFileRequest $request,
-        \Unified\Unified_to\Models\Operations\UpdateStorageFileSecurity $security,
     ): \Unified\Unified_to\Models\Operations\UpdateStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,8 +241,7 @@ class Storage
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
