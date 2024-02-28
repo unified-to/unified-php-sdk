@@ -126,6 +126,11 @@ class AccountingInvoice
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('url')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $url = null;
+    
 	public function __construct()
 	{
 		$this->balanceAmount = null;
@@ -149,5 +154,6 @@ class AccountingInvoice
 		$this->taxAmount = null;
 		$this->totalAmount = null;
 		$this->updatedAt = null;
+		$this->url = null;
 	}
 }

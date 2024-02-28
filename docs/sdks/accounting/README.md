@@ -235,6 +235,7 @@ try {
     $request->accountingInvoice->taxAmount = 6864;
     $request->accountingInvoice->totalAmount = 6873.46;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T22:49:02.835Z');
+    $request->accountingInvoice->url = 'http://forked-idiom.biz';
     $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingInvoice($request);
@@ -1238,6 +1239,7 @@ try {
     $request->accountingInvoice->taxAmount = 1140.08;
     $request->accountingInvoice->totalAmount = 4543.48;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-02T12:10:13.037Z');
+    $request->accountingInvoice->url = 'http://creepy-dart.org';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
@@ -1833,6 +1835,7 @@ try {
     $request->accountingInvoice->taxAmount = 3824.24;
     $request->accountingInvoice->totalAmount = 2939.97;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T18:41:11.569Z');
+    $request->accountingInvoice->url = 'https://admirable-suspension.org';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
