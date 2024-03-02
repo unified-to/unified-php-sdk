@@ -143,6 +143,7 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = '<value>';
+    $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
         'unfold' => '<value>',
     ];
@@ -225,17 +226,18 @@ try {
     $request->accountingInvoice->notes = '<value>';
     $request->accountingInvoice->paidAmount = 7142.37;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T02:12:20.862Z');
+    $request->accountingInvoice->paymentCollectionMethod = Shared\PaymentCollectionMethod::ChargeAutomatically;
     $request->accountingInvoice->raw = [
-        'Central' => '<value>',
+        'hacking' => '<value>',
     ];
-    $request->accountingInvoice->refundAmount = 1578.89;
+    $request->accountingInvoice->refundAmount = 5503.49;
     $request->accountingInvoice->refundReason = '<value>';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-27T04:22:20.182Z');
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-02T02:10:22.972Z');
     $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
-    $request->accountingInvoice->taxAmount = 6864;
-    $request->accountingInvoice->totalAmount = 6873.46;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T22:49:02.835Z');
-    $request->accountingInvoice->url = 'http://forked-idiom.biz';
+    $request->accountingInvoice->taxAmount = 6873.46;
+    $request->accountingInvoice->totalAmount = 6276.92;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-31T14:28:49.824Z');
+    $request->accountingInvoice->url = 'http://irresponsible-elite.biz';
     $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingInvoice($request);
@@ -1146,6 +1148,7 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = '<value>';
+    $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
         'bypass' => '<value>',
     ];
@@ -1229,17 +1232,18 @@ try {
     $request->accountingInvoice->notes = '<value>';
     $request->accountingInvoice->paidAmount = 7810.81;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-02T21:47:54.080Z');
+    $request->accountingInvoice->paymentCollectionMethod = Shared\PaymentCollectionMethod::SendInvoice;
     $request->accountingInvoice->raw = [
-        'Northwest' => '<value>',
+        'Credit' => '<value>',
     ];
-    $request->accountingInvoice->refundAmount = 6443.77;
+    $request->accountingInvoice->refundAmount = 3028.19;
     $request->accountingInvoice->refundReason = '<value>';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-21T01:13:52.344Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Draft;
-    $request->accountingInvoice->taxAmount = 1140.08;
-    $request->accountingInvoice->totalAmount = 4543.48;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-02T12:10:13.037Z');
-    $request->accountingInvoice->url = 'http://creepy-dart.org';
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T22:52:23.132Z');
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Voided;
+    $request->accountingInvoice->taxAmount = 6957.18;
+    $request->accountingInvoice->totalAmount = 2520.91;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-16T16:44:58.399Z');
+    $request->accountingInvoice->url = 'http://tame-jellybeans.biz';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
@@ -1742,6 +1746,7 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = '<value>';
+    $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
         'salmon' => '<value>',
     ];
@@ -1825,17 +1830,18 @@ try {
     $request->accountingInvoice->notes = '<value>';
     $request->accountingInvoice->paidAmount = 3682.14;
     $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-27T09:53:44.172Z');
+    $request->accountingInvoice->paymentCollectionMethod = Shared\PaymentCollectionMethod::SendInvoice;
     $request->accountingInvoice->raw = [
-        'intuitive' => '<value>',
+        'Nick' => '<value>',
     ];
-    $request->accountingInvoice->refundAmount = 3314.72;
+    $request->accountingInvoice->refundAmount = 2939.97;
     $request->accountingInvoice->refundReason = '<value>';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-05T20:13:33.419Z');
+    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T18:41:11.569Z');
     $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
-    $request->accountingInvoice->taxAmount = 3824.24;
-    $request->accountingInvoice->totalAmount = 2939.97;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T18:41:11.569Z');
-    $request->accountingInvoice->url = 'https://admirable-suspension.org';
+    $request->accountingInvoice->taxAmount = 126.09;
+    $request->accountingInvoice->totalAmount = 8760.89;
+    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-21T11:15:42.077Z');
+    $request->accountingInvoice->url = 'https://long-term-expedition.org';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 

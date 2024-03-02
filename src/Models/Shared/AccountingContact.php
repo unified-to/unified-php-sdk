@@ -61,6 +61,11 @@ class AccountingContact
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('portal_url')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $portalUrl = null;
+    
     /**
      * $raw
      * 
@@ -112,6 +117,7 @@ class AccountingContact
 		$this->isCustomer = null;
 		$this->isSupplier = null;
 		$this->name = null;
+		$this->portalUrl = null;
 		$this->raw = null;
 		$this->shippingAddress = null;
 		$this->taxExemption = null;

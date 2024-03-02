@@ -165,7 +165,7 @@ try {
         '<value>',
     ];
     $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-20T21:50:16.199Z');
-    $request->webhook->webhookType = Shared\WebhookWebhookType::Virtual;
+    $request->webhook->webhookType = Shared\WebhookType::Virtual;
     $request->webhook->workspaceId = '<value>';
     $request->includeAll = false;;
 

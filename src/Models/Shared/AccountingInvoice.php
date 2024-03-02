@@ -81,6 +81,11 @@ class AccountingInvoice
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $paidAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('payment_collection_method')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PaymentCollectionMethod>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PaymentCollectionMethod $paymentCollectionMethod = null;
+    
     /**
      * $raw
      * 
@@ -146,6 +151,7 @@ class AccountingInvoice
 		$this->notes = null;
 		$this->paidAmount = null;
 		$this->paidAt = null;
+		$this->paymentCollectionMethod = null;
 		$this->raw = null;
 		$this->refundAmount = null;
 		$this->refundReason = null;

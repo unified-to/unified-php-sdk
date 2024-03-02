@@ -9,9 +9,42 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-enum PropertyIntegrationSupportWebhookEvents: string
+class PropertyIntegrationSupportWebhookEvents
 {
-    case Updated = 'updated';
-    case Created = 'created';
-    case Deleted = 'deleted';
+    /**
+     * $created
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated> $created
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('created')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $created = null;
+    
+    /**
+     * $deleted
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted> $deleted
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('deleted')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $deleted = null;
+    
+    /**
+     * $updated
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated> $updated
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('updated')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $updated = null;
+    
+	public function __construct()
+	{
+		$this->created = null;
+		$this->deleted = null;
+		$this->updated = null;
+	}
 }

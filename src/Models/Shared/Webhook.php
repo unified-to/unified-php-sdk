@@ -104,9 +104,9 @@ class Webhook
     public ?\DateTime $updatedAt = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('webhook_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\WebhookWebhookType>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\WebhookType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?WebhookWebhookType $webhookType = null;
+    public ?WebhookType $webhookType = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
     #[\JMS\Serializer\Annotation\Type('string')]

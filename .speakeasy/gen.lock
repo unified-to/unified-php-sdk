@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 48060151324f197510525fbcfe544edc
+  docChecksum: 0793d7d9d65b0d606620076f43596338
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.272.7
-  releaseVersion: 0.14.1
-  configChecksum: 6e67f6021b33c2a78d3d128e6ffac4d1
+  generationVersion: 2.277.0
+  releaseVersion: 0.14.2
+  configChecksum: 89a9b7de2a4103b50e1b5d83fc9da071
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -577,6 +577,7 @@ generatedFiles:
   - src/Models/Shared/AccountingEmailType.php
   - src/Models/Shared/AccountingEmail.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
+  - src/Models/Shared/PaymentCollectionMethod.php
   - src/Models/Shared/AccountingInvoiceStatus.php
   - src/Models/Shared/AccountingInvoice.php
   - src/Models/Shared/AccountingLineitem.php
@@ -708,14 +709,16 @@ generatedFiles:
   - src/Models/Shared/PropertyConnectionAuth.php
   - src/Models/Shared/Event.php
   - src/Models/Shared/ObjectType.php
-  - src/Models/Shared/WebhookWebhookType.php
+  - src/Models/Shared/WebhookType.php
   - src/Models/Shared/Webhook.php
   - src/Models/Shared/ApiCallType.php
   - src/Models/Shared/ApiCall.php
   - src/Models/Shared/Integration.php
-  - src/Models/Shared/WebhookType.php
   - src/Models/Shared/IntegrationSupport.php
   - src/Models/Shared/PropertyIntegrationSupportWebhookEvents.php
+  - src/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.php
+  - src/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.php
+  - src/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.php
   - src/Models/Shared/PropertyIntegrationCategories.php
   - src/Models/Shared/IssueStatus.php
   - src/Models/Shared/IssueType.php
@@ -1203,6 +1206,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingEmailType.md
   - docs/Models/Shared/AccountingEmail.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
+  - docs/Models/Shared/PaymentCollectionMethod.md
   - docs/Models/Shared/AccountingInvoiceStatus.md
   - docs/Models/Shared/AccountingInvoice.md
   - docs/Models/Shared/AccountingLineitem.md
@@ -1334,14 +1338,16 @@ generatedFiles:
   - docs/Models/Shared/PropertyConnectionAuth.md
   - docs/Models/Shared/Event.md
   - docs/Models/Shared/ObjectType.md
-  - docs/Models/Shared/WebhookWebhookType.md
+  - docs/Models/Shared/WebhookType.md
   - docs/Models/Shared/Webhook.md
   - docs/Models/Shared/ApiCallType.md
   - docs/Models/Shared/ApiCall.md
   - docs/Models/Shared/Integration.md
-  - docs/Models/Shared/WebhookType.md
   - docs/Models/Shared/IntegrationSupport.md
   - docs/Models/Shared/PropertyIntegrationSupportWebhookEvents.md
+  - docs/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.md
+  - docs/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.md
+  - docs/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.md
   - docs/Models/Shared/PropertyIntegrationCategories.md
   - docs/Models/Shared/IssueStatus.md
   - docs/Models/Shared/IssueType.md

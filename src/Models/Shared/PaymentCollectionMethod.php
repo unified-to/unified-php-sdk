@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-enum WebhookType: string
+enum PaymentCollectionMethod: string
 {
-    case Virtual = 'virtual';
-    case Native = 'native';
+    case SendInvoice = 'send_invoice';
+    case ChargeAutomatically = 'charge_automatically';
 }

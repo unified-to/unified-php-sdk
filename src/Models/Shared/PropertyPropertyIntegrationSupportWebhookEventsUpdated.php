@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-enum WebhookType: string
+enum PropertyPropertyIntegrationSupportWebhookEventsUpdated: string
 {
     case Virtual = 'virtual';
     case Native = 'native';

@@ -176,20 +176,10 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $searchTwitter = null;
     
-    /**
-     * $webhookEvents
-     * 
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents> $webhookEvents
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('webhook_events')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents>>')]
+    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $webhookEvents = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('webhook_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\WebhookType>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?WebhookType $webhookType = null;
+    public ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null;
     
 	public function __construct()
 	{
@@ -224,6 +214,5 @@ class IntegrationSupport
 		$this->searchName = null;
 		$this->searchTwitter = null;
 		$this->webhookEvents = null;
-		$this->webhookType = null;
 	}
 }
