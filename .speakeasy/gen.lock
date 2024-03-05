@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0793d7d9d65b0d606620076f43596338
+  docChecksum: 1982f00b1c8ae9709c4c51c2b473ab66
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.277.0
-  releaseVersion: 0.14.2
-  configChecksum: 89a9b7de2a4103b50e1b5d83fc9da071
+  releaseVersion: 0.14.3
+  configChecksum: 9078a8d8ff22c00e3a52bed09f26b786
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -574,6 +574,8 @@ generatedFiles:
   - src/Models/Shared/AccountingTelephoneType.php
   - src/Models/Shared/AccountingTelephone.php
   - src/Models/Shared/PropertyAccountingContactShippingAddress.php
+  - src/Models/Shared/AccountingContactPaymentMethodType.php
+  - src/Models/Shared/AccountingContactPaymentMethod.php
   - src/Models/Shared/AccountingEmailType.php
   - src/Models/Shared/AccountingEmail.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
@@ -1203,6 +1205,8 @@ generatedFiles:
   - docs/Models/Shared/AccountingTelephoneType.md
   - docs/Models/Shared/AccountingTelephone.md
   - docs/Models/Shared/PropertyAccountingContactShippingAddress.md
+  - docs/Models/Shared/AccountingContactPaymentMethodType.md
+  - docs/Models/Shared/AccountingContactPaymentMethod.md
   - docs/Models/Shared/AccountingEmailType.md
   - docs/Models/Shared/AccountingEmail.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md

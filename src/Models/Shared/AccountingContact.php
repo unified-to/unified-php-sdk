@@ -61,6 +61,16 @@ class AccountingContact
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+    /**
+     * $paymentMethods
+     * 
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod> $paymentMethods
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('payment_methods')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $paymentMethods = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('portal_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -117,6 +127,7 @@ class AccountingContact
 		$this->isCustomer = null;
 		$this->isSupplier = null;
 		$this->name = null;
+		$this->paymentMethods = null;
 		$this->portalUrl = null;
 		$this->raw = null;
 		$this->shippingAddress = null;

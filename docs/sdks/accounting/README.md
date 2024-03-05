@@ -143,6 +143,9 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = '<value>';
+    $request->accountingContact->paymentMethods = [
+        new Shared\AccountingContactPaymentMethod(),
+    ];
     $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
         'unfold' => '<value>',
@@ -1148,6 +1151,9 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = '<value>';
+    $request->accountingContact->paymentMethods = [
+        new Shared\AccountingContactPaymentMethod(),
+    ];
     $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
         'bypass' => '<value>',
@@ -1746,6 +1752,9 @@ try {
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
     $request->accountingContact->name = '<value>';
+    $request->accountingContact->paymentMethods = [
+        new Shared\AccountingContactPaymentMethod(),
+    ];
     $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
         'salmon' => '<value>',
