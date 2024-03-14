@@ -73,6 +73,7 @@ try {
     $request->crmEvent->meeting->title = '<value>';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Virtual asymmetric definition';
+    $request->crmEvent->note->title = '<value>';
     $request->crmEvent->raw = [
         'Bhutan' => '<value>',
     ];
@@ -285,6 +286,7 @@ try {
     $request->crmEvent->meeting->title = '<value>';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Realigned composite benchmark';
+    $request->crmEvent->note->title = '<value>';
     $request->crmEvent->raw = [
         'Ohio' => '<value>',
     ];
@@ -433,6 +435,7 @@ try {
     $request->crmEvent->meeting->title = '<value>';
     $request->crmEvent->note = new Shared\PropertyCrmEventNote();
     $request->crmEvent->note->description = 'Visionary actuating migration';
+    $request->crmEvent->note->title = '<value>';
     $request->crmEvent->raw = [
         'rich' => '<value>',
     ];

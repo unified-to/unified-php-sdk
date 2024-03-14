@@ -22,8 +22,14 @@ class PropertyCrmEventNote
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('title')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $title = null;
+    
 	public function __construct()
 	{
 		$this->description = null;
+		$this->title = null;
 	}
 }
