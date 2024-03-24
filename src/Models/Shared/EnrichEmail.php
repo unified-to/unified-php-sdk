@@ -15,6 +15,11 @@ class EnrichEmail
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $email;
     
+	#[\JMS\Serializer\Annotation\SerializedName('is_verified')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isVerified = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\EnrichEmailType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -23,6 +28,7 @@ class EnrichEmail
 	public function __construct()
 	{
 		$this->email = "";
+		$this->isVerified = null;
 		$this->type = null;
 	}
 }
