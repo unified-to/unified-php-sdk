@@ -12,6 +12,14 @@ use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListEnrichPeopleRequest
 {
     /**
+     * The name of the company the person is associated with.  Not valid by itself.
+     * 
+     * @var ?string $companyName
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_name')]
+    public ?string $companyName = null;
+    
+    /**
      * ID of the connection
      * 
      * @var string $connectionId
@@ -53,6 +61,7 @@ class ListEnrichPeopleRequest
     
 	public function __construct()
 	{
+		$this->companyName = null;
 		$this->connectionId = "";
 		$this->email = null;
 		$this->linkedinUrl = null;

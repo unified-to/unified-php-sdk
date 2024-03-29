@@ -80,8 +80,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListEnrichPeopleRequest();
+    $request->companyName = 'Stanton LLC';
     $request->connectionId = '<value>';
-    $request->email = 'Rosendo53@gmail.com';
+    $request->email = 'Kamille53@gmail.com';
     $request->linkedinUrl = '<value>';
     $request->name = '<value>';
     $request->twitter = '<value>';;
