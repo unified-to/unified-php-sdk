@@ -1300,7 +1300,9 @@ class Ats
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
+        }
+        else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
@@ -1338,7 +1340,9 @@ class Ats
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
+        }
+        else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
@@ -1376,7 +1380,9 @@ class Ats
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
+        }
+        else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
@@ -1414,7 +1420,9 @@ class Ats
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
+        }
+        else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
@@ -1452,7 +1460,9 @@ class Ats
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
+        }
+        else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
@@ -1490,7 +1500,9 @@ class Ats
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
+        }
+        else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
@@ -1528,7 +1540,9 @@ class Ats
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if (true) { /** @phpstan-ignore-line */
+        if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
+        }
+        else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');

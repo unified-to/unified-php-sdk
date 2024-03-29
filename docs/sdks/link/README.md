@@ -42,7 +42,7 @@ try {
     $request->paymentLink->id = '<id>';
     $request->paymentLink->isActive = false;
     $request->paymentLink->lineitems = [
-        new Shared\PaymenntLinkLineitem(),
+        new Shared\PaymentLinkLineitem(),
     ];
     $request->paymentLink->paymentId = '<value>';
     $request->paymentLink->raw = [
@@ -217,7 +217,7 @@ try {
     $request->paymentLink->id = '<id>';
     $request->paymentLink->isActive = false;
     $request->paymentLink->lineitems = [
-        new Shared\PaymenntLinkLineitem(),
+        new Shared\PaymentLinkLineitem(),
     ];
     $request->paymentLink->paymentId = '<value>';
     $request->paymentLink->raw = [
@@ -331,7 +331,7 @@ try {
     $request->paymentLink->id = '<id>';
     $request->paymentLink->isActive = false;
     $request->paymentLink->lineitems = [
-        new Shared\PaymenntLinkLineitem(),
+        new Shared\PaymentLinkLineitem(),
     ];
     $request->paymentLink->paymentId = '<value>';
     $request->paymentLink->raw = [

@@ -13,8 +13,7 @@ class PaymentLink
 {
 	#[\JMS\Serializer\Annotation\SerializedName('amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?float $amount = null;
+    public float $amount;
     
 	#[\JMS\Serializer\Annotation\SerializedName('contact_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -38,15 +37,16 @@ class PaymentLink
     
 	#[\JMS\Serializer\Annotation\SerializedName('is_active')]
     #[\JMS\Serializer\Annotation\Type('bool')]
-    public bool $isActive;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isActive = null;
     
     /**
      * $lineitems
      * 
-     * @var array<\Unified\Unified_to\Models\Shared\PaymenntLinkLineitem> $lineitems
+     * @var array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem> $lineitems
      */
 	#[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\PaymenntLinkLineitem>')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\PaymentLinkLineitem>')]
     public array $lineitems;
     
 	#[\JMS\Serializer\Annotation\SerializedName('payment_id')]
@@ -71,20 +71,21 @@ class PaymentLink
     
 	#[\JMS\Serializer\Annotation\SerializedName('url')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $url;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $url = null;
     
 	public function __construct()
 	{
-		$this->amount = null;
+		$this->amount = 0;
 		$this->contactId = null;
 		$this->createdAt = null;
 		$this->currency = null;
 		$this->id = null;
-		$this->isActive = false;
+		$this->isActive = null;
 		$this->lineitems = [];
 		$this->paymentId = null;
 		$this->raw = null;
 		$this->updatedAt = null;
-		$this->url = "";
+		$this->url = null;
 	}
 }

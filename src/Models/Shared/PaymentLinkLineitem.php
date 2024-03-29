@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class PaymenntLinkLineitem
+class PaymentLinkLineitem
 {
 	#[\JMS\Serializer\Annotation\SerializedName('account_id')]
     #[\JMS\Serializer\Annotation\Type('string')]

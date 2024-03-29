@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b5ccecd8b5925543c5229bd68d6cacb3
+  docChecksum: 9969df7d3e03cdc2a49e94cb47ce90ff
   docVersion: "1.0"
-  speakeasyVersion: 1.221.0
-  generationVersion: 2.287.0
-  releaseVersion: 0.14.5
-  configChecksum: ad55a49024bdf227b05242c4691a1ec5
+  speakeasyVersion: 1.228.1
+  generationVersion: 2.292.0
+  releaseVersion: 0.14.6
+  configChecksum: 326548d80ed700833a28bc22485532d6
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -684,7 +684,7 @@ generatedFiles:
   - src/Models/Shared/MarketingEmailType.php
   - src/Models/Shared/MarketingEmail.php
   - src/Models/Shared/PaymentLink.php
-  - src/Models/Shared/PaymenntLinkLineitem.php
+  - src/Models/Shared/PaymentLinkLineitem.php
   - src/Models/Shared/PaymentPayment.php
   - src/Models/Shared/PaymentPayoutStatus.php
   - src/Models/Shared/PaymentPayout.php
@@ -1315,7 +1315,7 @@ generatedFiles:
   - docs/Models/Shared/MarketingEmailType.md
   - docs/Models/Shared/MarketingEmail.md
   - docs/Models/Shared/PaymentLink.md
-  - docs/Models/Shared/PaymenntLinkLineitem.md
+  - docs/Models/Shared/PaymentLinkLineitem.md
   - docs/Models/Shared/PaymentPayment.md
   - docs/Models/Shared/PaymentPayoutStatus.md
   - docs/Models/Shared/PaymentPayout.md
