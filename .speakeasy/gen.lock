@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: c0feefab18e1757955e61afa41102a4c
+  docChecksum: 2d9519a9ae45cc997b9772dfea3b96f5
   docVersion: "1.0"
-  speakeasyVersion: 1.228.1
-  generationVersion: 2.292.0
-  releaseVersion: 0.14.7
-  configChecksum: 7fdb11182cd42c0e3fed669c3eccc024
+  speakeasyVersion: 1.235.2
+  generationVersion: 2.298.2
+  releaseVersion: 0.14.8
+  configChecksum: 9cc71eec10df59d24895d0c044ee04b7
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -50,6 +50,8 @@ generatedFiles:
   - src/Hris.php
   - src/Employee.php
   - src/Group.php
+  - src/Payslip.php
+  - src/Timeoff.php
   - src/Martech.php
   - src/ListT.php
   - src/Member.php
@@ -393,10 +395,18 @@ generatedFiles:
   - src/Models/Operations/GetHrisEmployeeResponse.php
   - src/Models/Operations/GetHrisGroupRequest.php
   - src/Models/Operations/GetHrisGroupResponse.php
+  - src/Models/Operations/GetHrisPayslipRequest.php
+  - src/Models/Operations/GetHrisPayslipResponse.php
+  - src/Models/Operations/GetHrisTimeoffRequest.php
+  - src/Models/Operations/GetHrisTimeoffResponse.php
   - src/Models/Operations/ListHrisEmployeesRequest.php
   - src/Models/Operations/ListHrisEmployeesResponse.php
   - src/Models/Operations/ListHrisGroupsRequest.php
   - src/Models/Operations/ListHrisGroupsResponse.php
+  - src/Models/Operations/ListHrisPayslipsRequest.php
+  - src/Models/Operations/ListHrisPayslipsResponse.php
+  - src/Models/Operations/ListHrisTimeoffsRequest.php
+  - src/Models/Operations/ListHrisTimeoffsResponse.php
   - src/Models/Operations/PatchHrisEmployeeRequest.php
   - src/Models/Operations/PatchHrisEmployeeResponse.php
   - src/Models/Operations/PatchHrisGroupRequest.php
@@ -679,6 +689,13 @@ generatedFiles:
   - src/Models/Shared/PropertyHrisEmployeeAddress.php
   - src/Models/Shared/HrisGroupType.php
   - src/Models/Shared/HrisGroup.php
+  - src/Models/Shared/PaymentType.php
+  - src/Models/Shared/HrisPayslip.php
+  - src/Models/Shared/HrisPayslipDetailType.php
+  - src/Models/Shared/HrisPayslipDetail.php
+  - src/Models/Shared/HrisTimeoffStatus.php
+  - src/Models/Shared/HrisTimeoffType.php
+  - src/Models/Shared/HrisTimeoff.php
   - src/Models/Shared/MarketingList.php
   - src/Models/Shared/MarketingMember.php
   - src/Models/Shared/MarketingEmailType.php
@@ -1024,10 +1041,18 @@ generatedFiles:
   - docs/Models/Operations/GetHrisEmployeeResponse.md
   - docs/Models/Operations/GetHrisGroupRequest.md
   - docs/Models/Operations/GetHrisGroupResponse.md
+  - docs/Models/Operations/GetHrisPayslipRequest.md
+  - docs/Models/Operations/GetHrisPayslipResponse.md
+  - docs/Models/Operations/GetHrisTimeoffRequest.md
+  - docs/Models/Operations/GetHrisTimeoffResponse.md
   - docs/Models/Operations/ListHrisEmployeesRequest.md
   - docs/Models/Operations/ListHrisEmployeesResponse.md
   - docs/Models/Operations/ListHrisGroupsRequest.md
   - docs/Models/Operations/ListHrisGroupsResponse.md
+  - docs/Models/Operations/ListHrisPayslipsRequest.md
+  - docs/Models/Operations/ListHrisPayslipsResponse.md
+  - docs/Models/Operations/ListHrisTimeoffsRequest.md
+  - docs/Models/Operations/ListHrisTimeoffsResponse.md
   - docs/Models/Operations/PatchHrisEmployeeRequest.md
   - docs/Models/Operations/PatchHrisEmployeeResponse.md
   - docs/Models/Operations/PatchHrisGroupRequest.md
@@ -1310,6 +1335,13 @@ generatedFiles:
   - docs/Models/Shared/PropertyHrisEmployeeAddress.md
   - docs/Models/Shared/HrisGroupType.md
   - docs/Models/Shared/HrisGroup.md
+  - docs/Models/Shared/PaymentType.md
+  - docs/Models/Shared/HrisPayslip.md
+  - docs/Models/Shared/HrisPayslipDetailType.md
+  - docs/Models/Shared/HrisPayslipDetail.md
+  - docs/Models/Shared/HrisTimeoffStatus.md
+  - docs/Models/Shared/HrisTimeoffType.md
+  - docs/Models/Shared/HrisTimeoff.md
   - docs/Models/Shared/MarketingList.md
   - docs/Models/Shared/MarketingMember.md
   - docs/Models/Shared/MarketingEmailType.md
@@ -1390,6 +1422,8 @@ generatedFiles:
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md
+  - docs/sdks/payslip/README.md
+  - docs/sdks/timeoff/README.md
   - docs/sdks/martech/README.md
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md

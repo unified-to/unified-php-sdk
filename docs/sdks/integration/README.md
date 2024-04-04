@@ -38,7 +38,7 @@ try {
     $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisEmployeeWrite,
+        Operations\Scopes::HrisPayslipWrite,
     ];
     $request->state = 'New Jersey';
     $request->subdomain = '<value>';

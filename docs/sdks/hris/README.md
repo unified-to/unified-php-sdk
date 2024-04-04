@@ -7,8 +7,12 @@
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [getHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
+* [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
+* [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [listHrisEmployees](#listhrisemployees) - List all employees
 * [listHrisGroups](#listhrisgroups) - List all groups
+* [listHrisPayslips](#listhrispayslips) - List all payslip
+* [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
@@ -274,6 +278,110 @@ try {
 **[?\Unified\Unified_to\Models\Operations\GetHrisGroupResponse](../../Models/Operations/GetHrisGroupResponse.md)**
 
 
+## getHrisPayslip
+
+Retrieve a payslip
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\GetHrisPayslipRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->id = '<id>';;
+
+    $response = $sdk->hris->getHrisPayslip($request);
+
+    if ($response->hrisPayslip !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetHrisPayslipRequest](../../Models/Operations/GetHrisPayslipRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetHrisPayslipResponse](../../Models/Operations/GetHrisPayslipResponse.md)**
+
+
+## getHrisTimeoff
+
+Retrieve a timeoff
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\GetHrisTimeoffRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->id = '<id>';;
+
+    $response = $sdk->hris->getHrisTimeoff($request);
+
+    if ($response->hrisTimeoff !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest](../../Models/Operations/GetHrisTimeoffRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse](../../Models/Operations/GetHrisTimeoffResponse.md)**
+
+
 ## listHrisEmployees
 
 List all employees
@@ -386,6 +494,122 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\ListHrisGroupsResponse](../../Models/Operations/ListHrisGroupsResponse.md)**
+
+
+## listHrisPayslips
+
+List all payslip
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListHrisPayslipsRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->limit = 254.98;
+    $request->offset = 7922.79;
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T03:49:22.310Z');
+    $request->userId = '<value>';;
+
+    $response = $sdk->hris->listHrisPayslips($request);
+
+    if ($response->hrisPayslips !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest](../../Models/Operations/ListHrisPayslipsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse](../../Models/Operations/ListHrisPayslipsResponse.md)**
+
+
+## listHrisTimeoffs
+
+List all timeoffs
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListHrisTimeoffsRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->limit = 1802.06;
+    $request->offset = 8928.71;
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-20T05:14:17.047Z');
+    $request->userId = '<value>';;
+
+    $response = $sdk->hris->listHrisTimeoffs($request);
+
+    if ($response->hrisTimeoffs !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest](../../Models/Operations/ListHrisTimeoffsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse](../../Models/Operations/ListHrisTimeoffsResponse.md)**
 
 
 ## patchHrisEmployee

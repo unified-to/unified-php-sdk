@@ -184,6 +184,84 @@ class Hris
     }
 	
     /**
+     * Retrieve a payslip
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
+     */
+	public function getHrisPayslip(
+        ?\Unified\Unified_to\Models\Operations\GetHrisPayslipRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip/{id}', \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisPayslipRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisPayslip = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisPayslip', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a timeoff
+     * 
+     * @param \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
+     */
+	public function getHrisTimeoff(
+        ?\Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisTimeoff = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisTimeoff', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * List all employees
      * 
      * @param \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request
@@ -255,6 +333,84 @@ class Hris
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->hrisGroups = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisGroup>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List all payslip
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
+     */
+	public function listHrisPayslips(
+        ?\Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip', \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisPayslips = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisPayslip>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List all timeoffs
+     * 
+     * @param \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
+     */
+	public function listHrisTimeoffs(
+        ?\Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff', \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisTimeoffs = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisTimeoff>', 'json');
             }
         }
 

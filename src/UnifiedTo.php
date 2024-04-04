@@ -87,6 +87,10 @@ class UnifiedTo
 	
 	public Group $group;
 	
+	public Payslip $payslip;
+	
+	public Timeoff $timeoff;
+	
 	public Martech $martech;
 	
 	public ListT $list;
@@ -216,6 +220,10 @@ class UnifiedTo
 		$this->employee = new Employee($this->sdkConfiguration);
 		
 		$this->group = new Group($this->sdkConfiguration);
+		
+		$this->payslip = new Payslip($this->sdkConfiguration);
+		
+		$this->timeoff = new Timeoff($this->sdkConfiguration);
 		
 		$this->martech = new Martech($this->sdkConfiguration);
 		

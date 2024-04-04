@@ -42,6 +42,8 @@ enum ObjectType: string
     case CrmPipeline = 'crm_pipeline';
     case HrisEmployee = 'hris_employee';
     case HrisGroup = 'hris_group';
+    case HrisPayslip = 'hris_payslip';
+    case HrisTimeoff = 'hris_timeoff';
     case MartechList = 'martech_list';
     case MartechMember = 'martech_member';
     case Passthrough = 'passthrough';

@@ -93,7 +93,7 @@ try {
     $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T14:19:55.077Z');
     $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T09:01:24.591Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::TicketingCustomerRead,
+        Shared\PropertyConnectionPermissions::TicketingNoteRead,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-22T10:28:46.343Z');
     $request->workspaceId = '<value>';;
@@ -159,7 +159,7 @@ try {
     $request->webhook->meta = [
         'Borders' => '<value>',
     ];
-    $request->webhook->objectType = Shared\ObjectType::CrmPipeline;
+    $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
     $request->webhook->pageMaxLimit = 9505.78;
     $request->webhook->runs = [
         '<value>',
@@ -318,7 +318,7 @@ try {
     $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisEmployeeWrite,
+        Operations\Scopes::HrisPayslipWrite,
     ];
     $request->state = 'New Jersey';
     $request->subdomain = '<value>';
@@ -805,7 +805,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-24T01:15:30.014Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-20T21:38:39.955Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::AtsInterviewRead,
+        Shared\PropertyConnectionPermissions::AtsJobRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T02:30:18.551Z');
     $request->connection->workspaceId = '<value>';

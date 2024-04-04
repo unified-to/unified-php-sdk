@@ -454,8 +454,12 @@ try {
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [getHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
+* [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
+* [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [listHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
+* [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslip
+* [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
@@ -480,6 +484,16 @@ try {
 * [patchHrisGroup](docs/sdks/group/README.md#patchhrisgroup) - Update a group
 * [removeHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
 * [updateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
+
+### [Payslip](docs/sdks/payslip/README.md)
+
+* [getHrisPayslip](docs/sdks/payslip/README.md#gethrispayslip) - Retrieve a payslip
+* [listHrisPayslips](docs/sdks/payslip/README.md#listhrispayslips) - List all payslip
+
+### [Timeoff](docs/sdks/timeoff/README.md)
+
+* [getHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
+* [listHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
 
 ### [Martech](docs/sdks/martech/README.md)
 
