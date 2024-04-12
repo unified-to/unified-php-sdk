@@ -11,10 +11,11 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum IssueStatus: string
 {
-    case OnHold = 'ON_HOLD';
+    case Completed = 'COMPLETED';
     case New = 'NEW';
+    case Roadmap = 'ROADMAP';
     case InProgress = 'IN_PROGRESS';
+    case OnHold = 'ON_HOLD';
     case Validating = 'VALIDATING';
-    case Complete = 'COMPLETE';
     case Rejected = 'REJECTED';
 }

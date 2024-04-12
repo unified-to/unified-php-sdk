@@ -57,7 +57,7 @@ class Issue
 		$this->createdAt = null;
 		$this->id = null;
 		$this->resolutionTime = null;
-		$this->status = \Unified\Unified_to\Models\Shared\IssueStatus::OnHold;
+		$this->status = \Unified\Unified_to\Models\Shared\IssueStatus::Completed;
 		$this->title = "";
 		$this->type = \Unified\Unified_to\Models\Shared\IssueType::Bug;
 		$this->updatedAt = null;
