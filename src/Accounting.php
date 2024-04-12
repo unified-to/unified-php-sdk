@@ -106,7 +106,7 @@ class Accounting
     }
 	
     /**
-     * Create a invoice
+     * Create an invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse
@@ -310,7 +310,7 @@ class Accounting
     }
 	
     /**
-     * Retrieve a invoice
+     * Retrieve an invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse
@@ -784,7 +784,7 @@ class Accounting
     }
 	
     /**
-     * Update a invoice
+     * Update an invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse
@@ -990,7 +990,7 @@ class Accounting
     }
 	
     /**
-     * Remove a invoice
+     * Remove an invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse
@@ -1194,7 +1194,7 @@ class Accounting
     }
 	
     /**
-     * Update a invoice
+     * Update an invoice
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse

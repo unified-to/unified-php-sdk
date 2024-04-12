@@ -36,6 +36,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listCandidateId = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('list_collection_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listCollectionId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('list_company_id')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -66,6 +71,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listInvoiceId = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('list_item_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listItemId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('list_job_id')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -80,6 +90,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listListId = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('list_location_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listLocationId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('list_offset')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -187,15 +202,18 @@ class IntegrationSupport
 		$this->listAccountId = null;
 		$this->listApplicationId = null;
 		$this->listCandidateId = null;
+		$this->listCollectionId = null;
 		$this->listCompanyId = null;
 		$this->listContactId = null;
 		$this->listCustomerId = null;
 		$this->listDealId = null;
 		$this->listInterviewId = null;
 		$this->listInvoiceId = null;
+		$this->listItemId = null;
 		$this->listJobId = null;
 		$this->listLimit = null;
 		$this->listListId = null;
+		$this->listLocationId = null;
 		$this->listOffset = null;
 		$this->listOrder = null;
 		$this->listParentId = null;

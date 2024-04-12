@@ -27,22 +27,12 @@ class ListCommerceInventoriesRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
     
-    /**
-     * The item/product ID to filter results
-     * 
-     * @var ?string $itemId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=item_id')]
     public ?string $itemId = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
     
-    /**
-     * The location ID to filter results
-     * 
-     * @var ?string $locationId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=location_id')]
     public ?string $locationId = null;
     

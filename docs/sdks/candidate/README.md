@@ -51,7 +51,7 @@ try {
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->externalIdentifier = '<value>';
     $request->atsCandidate->id = '<id>';
     $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
@@ -73,6 +73,7 @@ try {
     ];
     $request->atsCandidate->title = '<value>';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T06:32:21.998Z');
+    $request->atsCandidate->userId = '<value>';
     $request->connectionId = '<value>';;
 
     $response = $sdk->candidate->createAtsCandidate($request);
@@ -247,7 +248,7 @@ try {
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->externalIdentifier = '<value>';
     $request->atsCandidate->id = '<id>';
     $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
@@ -269,6 +270,7 @@ try {
     ];
     $request->atsCandidate->title = '<value>';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-30T15:05:49.494Z');
+    $request->atsCandidate->userId = '<value>';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
@@ -384,7 +386,7 @@ try {
     $request->atsCandidate->emails = [
         new Shared\AtsEmail(),
     ];
-    $request->atsCandidate->externalId = '<value>';
+    $request->atsCandidate->externalIdentifier = '<value>';
     $request->atsCandidate->id = '<id>';
     $request->atsCandidate->imageUrl = '<value>';
     $request->atsCandidate->linkUrls = [
@@ -406,6 +408,7 @@ try {
     ];
     $request->atsCandidate->title = '<value>';
     $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-19T09:22:29.995Z');
+    $request->atsCandidate->userId = '<value>';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 

@@ -36,11 +36,6 @@ class ListPaymentRefundsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
     public ?string $order = null;
     
-    /**
-     * The payment ID to filter results
-     * 
-     * @var ?string $paymentId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=payment_id')]
     public ?string $paymentId = null;
     

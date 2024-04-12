@@ -22,7 +22,7 @@ class Interview
 	}
 	
     /**
-     * Create a interview
+     * Create an interview
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
@@ -64,7 +64,7 @@ class Interview
     }
 	
     /**
-     * Retrieve a interview
+     * Retrieve an interview
      * 
      * @param \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
@@ -142,7 +142,7 @@ class Interview
     }
 	
     /**
-     * Update a interview
+     * Update an interview
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
@@ -184,7 +184,7 @@ class Interview
     }
 	
     /**
-     * Remove a interview
+     * Remove an interview
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
@@ -224,7 +224,7 @@ class Interview
     }
 	
     /**
-     * Update a interview
+     * Update an interview
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse

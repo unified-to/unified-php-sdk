@@ -11,19 +11,9 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListAtsScorecardsRequest
 {
-    /**
-     * The application ID to filter results
-     * 
-     * @var ?string $applicationId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=application_id')]
     public ?string $applicationId = null;
     
-    /**
-     * The candidate ID to filter results
-     * 
-     * @var ?string $candidateId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=candidate_id')]
     public ?string $candidateId = null;
     
@@ -43,19 +33,9 @@ class ListAtsScorecardsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
     
-    /**
-     * The interview ID to filter results
-     * 
-     * @var ?string $interviewId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=interview_id')]
     public ?string $interviewId = null;
     
-    /**
-     * The job ID to filter results
-     * 
-     * @var ?string $jobId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
     public ?string $jobId = null;
     

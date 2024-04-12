@@ -340,7 +340,7 @@ class Hris
     }
 	
     /**
-     * List all payslip
+     * List all payslips
      * 
      * @param \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse

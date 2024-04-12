@@ -47,11 +47,6 @@ class ListAccountingContactsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
     public ?string $sort = null;
     
-    /**
-     * The type of contact to filter results
-     * 
-     * @var ?string $type
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
     public ?string $type = null;
     

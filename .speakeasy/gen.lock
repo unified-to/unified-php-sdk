@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 2d9519a9ae45cc997b9772dfea3b96f5
+  docChecksum: 42509dc22478b1eda57f88512a90e005
   docVersion: "1.0"
-  speakeasyVersion: 1.235.2
-  generationVersion: 2.298.2
-  releaseVersion: 0.14.8
-  configChecksum: 9cc71eec10df59d24895d0c044ee04b7
+  speakeasyVersion: 1.250.0
+  generationVersion: 2.304.1
+  releaseVersion: 0.14.9
+  configChecksum: 08bff0397ac6fd68666523990500c2b4
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -647,6 +647,7 @@ generatedFiles:
   - src/Models/Shared/EnrichTelephoneType.php
   - src/Models/Shared/EnrichTelephone.php
   - src/Models/Shared/PropertyEnrichCompanyAddress.php
+  - src/Models/Shared/CommerceCollectionType.php
   - src/Models/Shared/CommerceCollection.php
   - src/Models/Shared/CommerceItemMediaType.php
   - src/Models/Shared/CommerceItemMedia.php
@@ -1293,6 +1294,7 @@ generatedFiles:
   - docs/Models/Shared/EnrichTelephoneType.md
   - docs/Models/Shared/EnrichTelephone.md
   - docs/Models/Shared/PropertyEnrichCompanyAddress.md
+  - docs/Models/Shared/CommerceCollectionType.md
   - docs/Models/Shared/CommerceCollection.md
   - docs/Models/Shared/CommerceItemMediaType.md
   - docs/Models/Shared/CommerceItemMedia.md

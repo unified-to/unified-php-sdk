@@ -47,16 +47,6 @@ class CommerceCollection
     public ?bool $isVisible = null;
     
     /**
-     * $itemIds
-     * 
-     * @var ?array<string> $itemIds
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('item_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $itemIds = null;
-    
-    /**
      * $media
      * 
      * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
@@ -100,6 +90,11 @@ class CommerceCollection
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('type')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\CommerceCollectionType>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CommerceCollectionType $type = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -113,13 +108,13 @@ class CommerceCollection
 		$this->isActive = null;
 		$this->isFeatured = null;
 		$this->isVisible = null;
-		$this->itemIds = null;
 		$this->media = null;
 		$this->name = "";
 		$this->publicDescription = null;
 		$this->publicName = null;
 		$this->raw = null;
 		$this->tags = null;
+		$this->type = null;
 		$this->updatedAt = null;
 	}
 }

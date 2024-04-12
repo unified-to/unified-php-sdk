@@ -11,6 +11,9 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListCommerceItemsRequest
 {
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=collection_id')]
+    public ?string $collectionId = null;
+    
     /**
      * ID of the connection
      * 
@@ -57,6 +60,7 @@ class ListCommerceItemsRequest
     
 	public function __construct()
 	{
+		$this->collectionId = null;
 		$this->connectionId = "";
 		$this->fields = null;
 		$this->limit = null;

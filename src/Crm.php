@@ -148,7 +148,7 @@ class Crm
     }
 	
     /**
-     * Create a event
+     * Create an event
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
@@ -391,7 +391,7 @@ class Crm
     }
 	
     /**
-     * Retrieve a event
+     * Retrieve an event
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
@@ -868,7 +868,7 @@ class Crm
     }
 	
     /**
-     * Update a event
+     * Update an event
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
@@ -1114,7 +1114,7 @@ class Crm
     }
 	
     /**
-     * Remove a event
+     * Remove an event
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
@@ -1360,7 +1360,7 @@ class Crm
     }
 	
     /**
-     * Update a event
+     * Update an event
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse

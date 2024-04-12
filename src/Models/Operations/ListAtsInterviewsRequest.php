@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListAtsInterviewsRequest
 {
-    /**
-     * The application ID to filter results
-     * 
-     * @var ?string $applicationId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=application_id')]
     public ?string $applicationId = null;
     

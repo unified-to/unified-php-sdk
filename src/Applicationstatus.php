@@ -22,7 +22,7 @@ class Applicationstatus
 	}
 	
     /**
-     * List all application statuses
+     * List all applicationstatuses
      * 
      * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse

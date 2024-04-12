@@ -158,6 +158,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCommerceItemsRequest();
+    $request->collectionId = '<value>';
     $request->connectionId = '<value>';
     $request->fields = [
         '<value>',

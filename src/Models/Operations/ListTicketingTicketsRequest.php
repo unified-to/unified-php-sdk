@@ -19,11 +19,6 @@ class ListTicketingTicketsRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
     
-    /**
-     * The customer ID to filter results
-     * 
-     * @var ?string $customerId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=customer_id')]
     public ?string $customerId = null;
     
@@ -63,11 +58,6 @@ class ListTicketingTicketsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
     
-    /**
-     * The user/agent ID to filter results
-     * 
-     * @var ?string $userId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
     public ?string $userId = null;
     

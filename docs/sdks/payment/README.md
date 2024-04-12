@@ -3,26 +3,26 @@
 
 ### Available Operations
 
-* [createPaymentLink](#createpaymentlink) - Create a payment link
+* [createPaymentLink](#createpaymentlink) - Create a link
 * [createPaymentPayment](#createpaymentpayment) - Create a payment
-* [getPaymentLink](#getpaymentlink) - Retrieve a payment link
+* [getPaymentLink](#getpaymentlink) - Retrieve a link
 * [getPaymentPayment](#getpaymentpayment) - Retrieve a payment
 * [getPaymentPayout](#getpaymentpayout) - Retrieve a payout
 * [getPaymentRefund](#getpaymentrefund) - Retrieve a refund
-* [listPaymentLinks](#listpaymentlinks) - List all payment links
+* [listPaymentLinks](#listpaymentlinks) - List all links
 * [listPaymentPayments](#listpaymentpayments) - List all payments
 * [listPaymentPayouts](#listpaymentpayouts) - List all payouts
 * [listPaymentRefunds](#listpaymentrefunds) - List all refunds
-* [patchPaymentLink](#patchpaymentlink) - Update a payment link
+* [patchPaymentLink](#patchpaymentlink) - Update a link
 * [patchPaymentPayment](#patchpaymentpayment) - Update a payment
-* [removePaymentLink](#removepaymentlink) - Remove a payment link
+* [removePaymentLink](#removepaymentlink) - Remove a link
 * [removePaymentPayment](#removepaymentpayment) - Remove a payment
-* [updatePaymentLink](#updatepaymentlink) - Update a payment link
+* [updatePaymentLink](#updatepaymentlink) - Update a link
 * [updatePaymentPayment](#updatepaymentpayment) - Update a payment
 
 ## createPaymentLink
 
-Create a payment link
+Create a link
 
 ### Example Usage
 
@@ -149,7 +149,7 @@ try {
 
 ## getPaymentLink
 
-Retrieve a payment link
+Retrieve a link
 
 ### Example Usage
 
@@ -357,7 +357,7 @@ try {
 
 ## listPaymentLinks
 
-List all payment links
+List all links
 
 ### Example Usage
 
@@ -590,7 +590,7 @@ try {
 
 ## patchPaymentLink
 
-Update a payment link
+Update a link
 
 ### Example Usage
 
@@ -719,7 +719,7 @@ try {
 
 ## removePaymentLink
 
-Remove a payment link
+Remove a link
 
 ### Example Usage
 
@@ -817,7 +817,7 @@ try {
 
 ## updatePaymentLink
 
-Update a payment link
+Update a link
 
 ### Example Usage
 

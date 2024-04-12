@@ -55,11 +55,6 @@ class ListHrisTimeoffsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
     
-    /**
-     * Employee ID
-     * 
-     * @var ?string $userId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
     public ?string $userId = null;
     

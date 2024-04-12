@@ -7,7 +7,7 @@
 * [getMartechMember](#getmartechmember) - Retrieve a member
 * [listMartechMembers](#listmartechmembers) - List all members
 * [patchMartechMember](#patchmartechmember) - Update a member
-* [removeMartechMember](#removemartechmember) - Remove member
+* [removeMartechMember](#removemartechmember) - Remove a member
 * [updateMartechMember](#updatemartechmember) - Update a member
 
 ## createMartechMember
@@ -253,7 +253,7 @@ try {
 
 ## removeMartechMember
 
-Remove member
+Remove a member
 
 ### Example Usage
 

@@ -19,11 +19,6 @@ class ListPaymentPaymentsRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
     
-    /**
-     * The customer/supplier ID to filter results
-     * 
-     * @var ?string $contactId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
     public ?string $contactId = null;
     
@@ -35,11 +30,6 @@ class ListPaymentPaymentsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
     
-    /**
-     * The invoice ID to filter results
-     * 
-     * @var ?string $invoiceId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=invoice_id')]
     public ?string $invoiceId = null;
     

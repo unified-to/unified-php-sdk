@@ -11,11 +11,6 @@ namespace Unified\Unified_to\Models\Operations;
 use \Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListCrmEventsRequest
 {
-    /**
-     * The company ID to filter results
-     * 
-     * @var ?string $companyId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
     public ?string $companyId = null;
     
@@ -27,19 +22,9 @@ class ListCrmEventsRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
     
-    /**
-     * The contact ID to filter results
-     * 
-     * @var ?string $contactId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
     public ?string $contactId = null;
     
-    /**
-     * The deal ID to filter results
-     * 
-     * @var ?string $dealId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=deal_id')]
     public ?string $dealId = null;
     
@@ -82,11 +67,6 @@ class ListCrmEventsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
     
-    /**
-     * The user/owner ID to filter results
-     * 
-     * @var ?string $userId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
     public ?string $userId = null;
     

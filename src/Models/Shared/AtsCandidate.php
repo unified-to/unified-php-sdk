@@ -46,10 +46,10 @@ class AtsCandidate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('external_id')]
+	#[\JMS\Serializer\Annotation\SerializedName('external_identifier')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $externalId = null;
+    public ?string $externalIdentifier = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -131,6 +131,11 @@ class AtsCandidate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
 		$this->address = null;
@@ -139,7 +144,7 @@ class AtsCandidate
 		$this->createdAt = null;
 		$this->dateOfBirth = null;
 		$this->emails = null;
-		$this->externalId = null;
+		$this->externalIdentifier = null;
 		$this->id = null;
 		$this->imageUrl = null;
 		$this->linkUrls = null;
@@ -151,5 +156,6 @@ class AtsCandidate
 		$this->telephones = null;
 		$this->title = null;
 		$this->updatedAt = null;
+		$this->userId = null;
 	}
 }

@@ -30,11 +30,6 @@ class ListMartechMembersRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
     
-    /**
-     * Usually required
-     * 
-     * @var ?string $listId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=list_id')]
     public ?string $listId = null;
     

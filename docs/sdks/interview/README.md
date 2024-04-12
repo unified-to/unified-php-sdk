@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createAtsInterview](#createatsinterview) - Create a interview
-* [getAtsInterview](#getatsinterview) - Retrieve a interview
+* [createAtsInterview](#createatsinterview) - Create an interview
+* [getAtsInterview](#getatsinterview) - Retrieve an interview
 * [listAtsInterviews](#listatsinterviews) - List all interviews
-* [patchAtsInterview](#patchatsinterview) - Update a interview
-* [removeAtsInterview](#removeatsinterview) - Remove a interview
-* [updateAtsInterview](#updateatsinterview) - Update a interview
+* [patchAtsInterview](#patchatsinterview) - Update an interview
+* [removeAtsInterview](#removeatsinterview) - Remove an interview
+* [updateAtsInterview](#updateatsinterview) - Update an interview
 
 ## createAtsInterview
 
-Create a interview
+Create an interview
 
 ### Example Usage
 
@@ -78,7 +78,7 @@ try {
 
 ## getAtsInterview
 
-Retrieve a interview
+Retrieve an interview
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ try {
 
 ## patchAtsInterview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ try {
 
 ## removeAtsInterview
 
-Remove a interview
+Remove an interview
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ try {
 
 ## updateAtsInterview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 

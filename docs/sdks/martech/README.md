@@ -12,7 +12,7 @@
 * [patchMartechList](#patchmartechlist) - Update a list
 * [patchMartechMember](#patchmartechmember) - Update a member
 * [removeMartechList](#removemartechlist) - Remove a list
-* [removeMartechMember](#removemartechmember) - Remove member
+* [removeMartechMember](#removemartechmember) - Remove a member
 * [updateMartechList](#updatemartechlist) - Update a list
 * [updateMartechMember](#updatemartechmember) - Update a member
 
@@ -530,7 +530,7 @@ try {
 
 ## removeMartechMember
 
-Remove member
+Remove a member
 
 ### Example Usage
 

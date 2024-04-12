@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createPaymentLink](#createpaymentlink) - Create a payment link
-* [getPaymentLink](#getpaymentlink) - Retrieve a payment link
-* [listPaymentLinks](#listpaymentlinks) - List all payment links
-* [patchPaymentLink](#patchpaymentlink) - Update a payment link
-* [removePaymentLink](#removepaymentlink) - Remove a payment link
-* [updatePaymentLink](#updatepaymentlink) - Update a payment link
+* [createPaymentLink](#createpaymentlink) - Create a link
+* [getPaymentLink](#getpaymentlink) - Retrieve a link
+* [listPaymentLinks](#listpaymentlinks) - List all links
+* [patchPaymentLink](#patchpaymentlink) - Update a link
+* [removePaymentLink](#removepaymentlink) - Remove a link
+* [updatePaymentLink](#updatepaymentlink) - Update a link
 
 ## createPaymentLink
 
-Create a payment link
+Create a link
 
 ### Example Usage
 
@@ -76,7 +76,7 @@ try {
 
 ## getPaymentLink
 
-Retrieve a payment link
+Retrieve a link
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ try {
 
 ## listPaymentLinks
 
-List all payment links
+List all links
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ try {
 
 ## patchPaymentLink
 
-Update a payment link
+Update a link
 
 ### Example Usage
 
@@ -252,7 +252,7 @@ try {
 
 ## removePaymentLink
 
-Remove a payment link
+Remove a link
 
 ### Example Usage
 
@@ -301,7 +301,7 @@ try {
 
 ## updatePaymentLink
 
-Update a payment link
+Update a link
 
 ### Example Usage
 

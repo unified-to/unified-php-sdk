@@ -47,11 +47,6 @@ class ListTicketingNotesRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
     public ?string $sort = null;
     
-    /**
-     * Usually required
-     * 
-     * @var ?string $ticketId
-     */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=ticket_id')]
     public ?string $ticketId = null;
     

@@ -184,7 +184,7 @@ class Member
     }
 	
     /**
-     * Remove member
+     * Remove a member
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse

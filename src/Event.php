@@ -22,7 +22,7 @@ class Event
 	}
 	
     /**
-     * Create a event
+     * Create an event
      * 
      * @param \Unified\Unified_to\Models\Operations\CreateCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
@@ -64,7 +64,7 @@ class Event
     }
 	
     /**
-     * Retrieve a event
+     * Retrieve an event
      * 
      * @param \Unified\Unified_to\Models\Operations\GetCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
@@ -142,7 +142,7 @@ class Event
     }
 	
     /**
-     * Update a event
+     * Update an event
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
@@ -184,7 +184,7 @@ class Event
     }
 	
     /**
-     * Remove a event
+     * Remove an event
      * 
      * @param \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
@@ -224,7 +224,7 @@ class Event
     }
 	
     /**
-     * Update a event
+     * Update an event
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse

@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createAccountingInvoice](#createaccountinginvoice) - Create a invoice
-* [getAccountingInvoice](#getaccountinginvoice) - Retrieve a invoice
+* [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
+* [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
-* [patchAccountingInvoice](#patchaccountinginvoice) - Update a invoice
-* [removeAccountingInvoice](#removeaccountinginvoice) - Remove a invoice
-* [updateAccountingInvoice](#updateaccountinginvoice) - Update a invoice
+* [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
+* [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
+* [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 
 ## createAccountingInvoice
 
-Create a invoice
+Create an invoice
 
 ### Example Usage
 
@@ -88,7 +88,7 @@ try {
 
 ## getAccountingInvoice
 
-Retrieve a invoice
+Retrieve an invoice
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ try {
 
 ## patchAccountingInvoice
 
-Update a invoice
+Update an invoice
 
 ### Example Usage
 
@@ -275,7 +275,7 @@ try {
 
 ## removeAccountingInvoice
 
-Remove a invoice
+Remove an invoice
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ try {
 
 ## updateAccountingInvoice
 
-Update a invoice
+Update an invoice
 
 ### Example Usage
 

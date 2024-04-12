@@ -22,7 +22,7 @@ class Payment
 	}
 	
     /**
-     * Create a payment link
+     * Create a link
      * 
      * @param \Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest $request
      * @return \Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse
@@ -106,7 +106,7 @@ class Payment
     }
 	
     /**
-     * Retrieve a payment link
+     * Retrieve a link
      * 
      * @param \Unified\Unified_to\Models\Operations\GetPaymentLinkRequest $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentLinkResponse
@@ -262,7 +262,7 @@ class Payment
     }
 	
     /**
-     * List all payment links
+     * List all links
      * 
      * @param \Unified\Unified_to\Models\Operations\ListPaymentLinksRequest $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentLinksResponse
@@ -418,7 +418,7 @@ class Payment
     }
 	
     /**
-     * Update a payment link
+     * Update a link
      * 
      * @param \Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest $request
      * @return \Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse
@@ -502,7 +502,7 @@ class Payment
     }
 	
     /**
-     * Remove a payment link
+     * Remove a link
      * 
      * @param \Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest $request
      * @return \Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse
@@ -582,7 +582,7 @@ class Payment
     }
 	
     /**
-     * Update a payment link
+     * Update a link
      * 
      * @param \Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse

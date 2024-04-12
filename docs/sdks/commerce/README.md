@@ -59,9 +59,6 @@ try {
     $request->commerceCollection->isActive = false;
     $request->commerceCollection->isFeatured = false;
     $request->commerceCollection->isVisible = false;
-    $request->commerceCollection->itemIds = [
-        '<value>',
-    ];
     $request->commerceCollection->media = [
         new Shared\CommerceItemMedia(),
     ];
@@ -74,7 +71,8 @@ try {
     $request->commerceCollection->tags = [
         '<value>',
     ];
-    $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-13T10:39:45.495Z');
+    $request->commerceCollection->type = Shared\CommerceCollectionType::Category;
+    $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-05T09:05:38.009Z');
     $request->connectionId = '<value>';;
 
     $response = $sdk->commerce->createCommerceCollection($request);
@@ -537,6 +535,7 @@ try {
     $request->order = '<value>';
     $request->query = '<value>';
     $request->sort = '<value>';
+    $request->type = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T20:40:35.103Z');;
 
     $response = $sdk->commerce->listCommerceCollections($request);
@@ -644,6 +643,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListCommerceItemsRequest();
+    $request->collectionId = '<value>';
     $request->connectionId = '<value>';
     $request->fields = [
         '<value>',
@@ -765,9 +765,6 @@ try {
     $request->commerceCollection->isActive = false;
     $request->commerceCollection->isFeatured = false;
     $request->commerceCollection->isVisible = false;
-    $request->commerceCollection->itemIds = [
-        '<value>',
-    ];
     $request->commerceCollection->media = [
         new Shared\CommerceItemMedia(),
     ];
@@ -780,7 +777,8 @@ try {
     $request->commerceCollection->tags = [
         '<value>',
     ];
-    $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-29T23:35:48.700Z');
+    $request->commerceCollection->type = Shared\CommerceCollectionType::SavedSearch;
+    $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-04T22:23:37.874Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
@@ -1233,9 +1231,6 @@ try {
     $request->commerceCollection->isActive = false;
     $request->commerceCollection->isFeatured = false;
     $request->commerceCollection->isVisible = false;
-    $request->commerceCollection->itemIds = [
-        '<value>',
-    ];
     $request->commerceCollection->media = [
         new Shared\CommerceItemMedia(),
     ];
@@ -1248,7 +1243,8 @@ try {
     $request->commerceCollection->tags = [
         '<value>',
     ];
-    $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-08T04:19:59.358Z');
+    $request->commerceCollection->type = Shared\CommerceCollectionType::Collection;
+    $request->commerceCollection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-17T22:11:40.268Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
