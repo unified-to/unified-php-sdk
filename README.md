@@ -667,6 +667,7 @@ try {
 * [listUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
+* [listUnifiedSupports](docs/sdks/unified/README.md#listunifiedsupports) - Get support info
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
@@ -707,6 +708,7 @@ try {
 ### [Issue](docs/sdks/issue/README.md)
 
 * [listUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
+* [listUnifiedSupports](docs/sdks/issue/README.md#listunifiedsupports) - Get support info
 
 ### [Webhook](docs/sdks/webhook/README.md)
 

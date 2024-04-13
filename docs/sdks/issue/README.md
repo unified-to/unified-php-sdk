@@ -4,6 +4,7 @@
 ### Available Operations
 
 * [listUnifiedIssues](#listunifiedissues) - List support issues
+* [listUnifiedSupports](#listunifiedsupports) - Get support info
 
 ## listUnifiedIssues
 
@@ -55,4 +56,42 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse](../../Models/Operations/ListUnifiedIssuesResponse.md)**
+
+
+## listUnifiedSupports
+
+Get support info
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+    $response = $sdk->issue->listUnifiedSupports();
+
+    if ($response->undefined !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListUnifiedSupportsResponse](../../Models/Operations/ListUnifiedSupportsResponse.md)**
 

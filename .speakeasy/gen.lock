@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b49207a22215a71078d123979c29d05c
+  docChecksum: befc5e4546349064e32bd6f1b8d5d55b
   docVersion: "1.0"
-  speakeasyVersion: 1.251.0
-  generationVersion: 2.305.1
-  releaseVersion: 0.14.10
-  configChecksum: c0870d273b55ec205a066a63b1ab8e4c
+  speakeasyVersion: 1.252.0
+  generationVersion: 2.306.0
+  releaseVersion: 0.14.11
+  configChecksum: 771003a76bd7434491a014d56004448b
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -560,6 +560,7 @@ generatedFiles:
   - src/Models/Operations/ListUnifiedIntegrationsResponse.php
   - src/Models/Operations/ListUnifiedIssuesRequest.php
   - src/Models/Operations/ListUnifiedIssuesResponse.php
+  - src/Models/Operations/ListUnifiedSupportsResponse.php
   - src/Models/Operations/ListUnifiedWebhooksRequest.php
   - src/Models/Operations/ListUnifiedWebhooksResponse.php
   - src/Models/Operations/PatchUnifiedConnectionRequest.php
@@ -725,6 +726,7 @@ generatedFiles:
   - src/Models/Shared/PropertyUcCallTelephone.php
   - src/Models/Shared/Connection.php
   - src/Models/Shared/PropertyConnectionPermissions.php
+  - src/Models/Shared/Undefined.php
   - src/Models/Shared/PropertyConnectionCategories.php
   - src/Models/Shared/PropertyConnectionAuth.php
   - src/Models/Shared/Event.php
@@ -1207,6 +1209,7 @@ generatedFiles:
   - docs/Models/Operations/ListUnifiedIntegrationsResponse.md
   - docs/Models/Operations/ListUnifiedIssuesRequest.md
   - docs/Models/Operations/ListUnifiedIssuesResponse.md
+  - docs/Models/Operations/ListUnifiedSupportsResponse.md
   - docs/Models/Operations/ListUnifiedWebhooksRequest.md
   - docs/Models/Operations/ListUnifiedWebhooksResponse.md
   - docs/Models/Operations/PatchUnifiedConnectionRequest.md
@@ -1372,6 +1375,7 @@ generatedFiles:
   - docs/Models/Shared/PropertyUcCallTelephone.md
   - docs/Models/Shared/Connection.md
   - docs/Models/Shared/PropertyConnectionPermissions.md
+  - docs/Models/Shared/Undefined.md
   - docs/Models/Shared/PropertyConnectionCategories.md
   - docs/Models/Shared/PropertyConnectionAuth.md
   - docs/Models/Shared/Event.md
