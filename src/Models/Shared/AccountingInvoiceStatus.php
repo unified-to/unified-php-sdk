@@ -14,4 +14,8 @@ enum AccountingInvoiceStatus: string
     case Draft = 'DRAFT';
     case Voided = 'VOIDED';
     case Authorized = 'AUTHORIZED';
+    case Paid = 'PAID';
+    case PartiallyPaid = 'PARTIALLY_PAID';
+    case PartiallyRefunded = 'PARTIALLY_REFUNDED';
+    case Refunded = 'REFUNDED';
 }

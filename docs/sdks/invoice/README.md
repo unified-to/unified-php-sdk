@@ -57,7 +57,7 @@ try {
     $request->accountingInvoice->refundAmount = 5503.49;
     $request->accountingInvoice->refundReason = '<value>';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-02T02:10:22.972Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::PartiallyPaid;
     $request->accountingInvoice->taxAmount = 6873.46;
     $request->accountingInvoice->totalAmount = 6276.92;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-31T14:28:49.824Z');
@@ -243,7 +243,7 @@ try {
     $request->accountingInvoice->refundAmount = 3028.19;
     $request->accountingInvoice->refundReason = '<value>';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T22:52:23.132Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Voided;
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Paid;
     $request->accountingInvoice->taxAmount = 6957.18;
     $request->accountingInvoice->totalAmount = 2520.91;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-16T16:44:58.399Z');
@@ -369,7 +369,7 @@ try {
     $request->accountingInvoice->refundAmount = 2939.97;
     $request->accountingInvoice->refundReason = '<value>';
     $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T18:41:11.569Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Authorized;
+    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Refunded;
     $request->accountingInvoice->taxAmount = 126.09;
     $request->accountingInvoice->totalAmount = 8760.89;
     $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-21T11:15:42.077Z');
