@@ -181,10 +181,10 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $searchEmail = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('search_linkedin_url')]
+	#[\JMS\Serializer\Annotation\SerializedName('search_linkedinurl')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $searchLinkedinUrl = null;
+    public ?bool $searchLinkedinurl = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('search_name')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -234,7 +234,7 @@ class IntegrationSupport
 		$this->outboundFields = null;
 		$this->searchDomain = null;
 		$this->searchEmail = null;
-		$this->searchLinkedinUrl = null;
+		$this->searchLinkedinurl = null;
 		$this->searchName = null;
 		$this->searchTwitter = null;
 		$this->webhookEvents = null;
