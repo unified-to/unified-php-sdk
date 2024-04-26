@@ -45,6 +45,16 @@ class Webhook
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $fields = null;
     
+    /**
+     * $filters
+     * 
+     * @var ?array<string, string> $filters
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('filters')]
+    #[\JMS\Serializer\Annotation\Type('array<string, string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $filters = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('hook_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $hookUrl;
@@ -121,6 +131,7 @@ class Webhook
 		$this->environment = null;
 		$this->event = \Unified\Unified_to\Models\Shared\Event::Updated;
 		$this->fields = null;
+		$this->filters = null;
 		$this->hookUrl = "";
 		$this->id = null;
 		$this->integrationType = null;

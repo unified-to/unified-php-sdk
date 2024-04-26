@@ -41,21 +41,24 @@ try {
     $request->webhook->environment = '<value>';
     $request->webhook->event = Shared\Event::Created;
     $request->webhook->fields = '<value>';
+    $request->webhook->filters = [
+        'male' => '<value>',
+    ];
     $request->webhook->hookUrl = '<value>';
     $request->webhook->id = '<id>';
     $request->webhook->integrationType = '<value>';
-    $request->webhook->interval = 6142.55;
+    $request->webhook->interval = 6806.55;
     $request->webhook->isHealthy = false;
     $request->webhook->meta = [
-        'Borders' => '<value>',
+        'tune' => '<value>',
     ];
-    $request->webhook->objectType = Shared\ObjectType::HrisEmployee;
-    $request->webhook->pageMaxLimit = 9505.78;
+    $request->webhook->objectType = Shared\ObjectType::CommerceInventory;
+    $request->webhook->pageMaxLimit = 4025.83;
     $request->webhook->runs = [
         '<value>',
     ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-20T21:50:16.199Z');
-    $request->webhook->webhookType = Shared\WebhookType::Virtual;
+    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-26T01:52:06.569Z');
+    $request->webhook->webhookType = Shared\WebhookType::Native;
     $request->webhook->workspaceId = '<value>';
     $request->includeAll = false;;
 
