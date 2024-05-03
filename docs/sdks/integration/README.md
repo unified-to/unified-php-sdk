@@ -38,7 +38,7 @@ try {
     $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisPayslipWrite,
+        Operations\Scopes::HrisTimeoffWrite,
     ];
     $request->state = 'New Jersey';
     $request->subdomain = '<value>';
@@ -150,7 +150,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
-        Operations\ListUnifiedIntegrationsQueryParamCategories::Crm,
+        Operations\ListUnifiedIntegrationsQueryParamCategories::Enrich,
     ];
     $request->env = '<value>';
     $request->limit = 7382.58;

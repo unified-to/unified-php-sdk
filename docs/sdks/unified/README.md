@@ -78,7 +78,7 @@ try {
     $request->auth->tokenUrl = '<value>';
     $request->authAwsArn = '<value>';
     $request->categories = [
-        Shared\PropertyConnectionCategories::Ticketing,
+        Shared\PropertyConnectionCategories::Uc,
     ];
     $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-05T07:37:37.431Z');
     $request->cursorsCache = [
@@ -92,7 +92,7 @@ try {
     $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-21T18:48:43.528Z');
     $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T14:41:39.477Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::TicketingTicketWrite,
+        Shared\PropertyConnectionPermissions::HrisEmployeeRead,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T14:19:55.077Z');
     $request->workspaceId = '<value>';;
@@ -161,7 +161,7 @@ try {
     $request->webhook->meta = [
         'tune' => '<value>',
     ];
-    $request->webhook->objectType = Shared\ObjectType::CommerceInventory;
+    $request->webhook->objectType = Shared\ObjectType::CommerceLocation;
     $request->webhook->pageMaxLimit = 4025.83;
     $request->webhook->runs = [
         '<value>',
@@ -320,7 +320,7 @@ try {
     $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisPayslipWrite,
+        Operations\Scopes::HrisTimeoffWrite,
     ];
     $request->state = 'New Jersey';
     $request->subdomain = '<value>';
@@ -480,7 +480,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListUnifiedConnectionsRequest();
     $request->categories = [
-        Operations\Categories::Martech,
+        Operations\Categories::Ticketing,
     ];
     $request->env = '<value>';
     $request->externalXref = '<value>';
@@ -595,7 +595,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
-        Operations\ListUnifiedIntegrationsQueryParamCategories::Crm,
+        Operations\ListUnifiedIntegrationsQueryParamCategories::Enrich,
     ];
     $request->env = '<value>';
     $request->limit = 7382.58;
@@ -829,7 +829,7 @@ try {
     $request->connection->auth->tokenUrl = '<value>';
     $request->connection->authAwsArn = '<value>';
     $request->connection->categories = [
-        Shared\PropertyConnectionCategories::Martech,
+        Shared\PropertyConnectionCategories::Ticketing,
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T05:49:12.923Z');
     $request->connection->cursorsCache = [
@@ -843,7 +843,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-03T13:20:07.463Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T11:43:14.112Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::StorageFileRead,
+        Shared\PropertyConnectionPermissions::GenaiModelRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-20T21:38:39.955Z');
     $request->connection->workspaceId = '<value>';
@@ -1086,7 +1086,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T16:11:04.721Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-20T19:30:15.010Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::HrisPayslipRead,
+        Shared\PropertyConnectionPermissions::HrisTimeoffWrite,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T13:28:25.633Z');
     $request->connection->workspaceId = '<value>';

@@ -55,4 +55,6 @@ enum ObjectType: string
     case EnrichPerson = 'enrich_person';
     case EnrichCompany = 'enrich_company';
     case StorageFile = 'storage_file';
+    case GenaiModel = 'genai_model';
+    case GenaiPrompt = 'genai_prompt';
 }

@@ -448,6 +448,19 @@ try {
 
 * [listEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
+### [Genai](docs/sdks/genai/README.md)
+
+* [createGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
+* [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
+
+### [Model](docs/sdks/model/README.md)
+
+* [listGenaiModels](docs/sdks/model/README.md#listgenaimodels) - List all models
+
+### [Prompt](docs/sdks/prompt/README.md)
+
+* [createGenaiPrompt](docs/sdks/prompt/README.md#creategenaiprompt) - Create a prompt
+
 ### [Hris](docs/sdks/hris/README.md)
 
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee

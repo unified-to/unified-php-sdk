@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: fa589021db4663f2ad26cc32352a343e
+  docChecksum: e7d06a9f72eccefa7c7d5ca65b619e24
   docVersion: "1.0"
-  speakeasyVersion: 1.274.1
-  generationVersion: 2.314.0
-  releaseVersion: 0.14.14
-  configChecksum: 9de112f2f9a8c90dc7b9814ab4ecf0ee
+  speakeasyVersion: 1.277.8
+  generationVersion: 2.319.10
+  releaseVersion: 0.14.15
+  configChecksum: 66e98e8e87e2a4254956508dc150f2ec
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 features:
   php:
-    core: 3.3.3
+    core: 3.3.4
     globalSecurity: 2.81.6
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -47,6 +47,9 @@ generatedFiles:
   - src/Pipeline.php
   - src/Enrich.php
   - src/Person.php
+  - src/Genai.php
+  - src/Model.php
+  - src/Prompt.php
   - src/Hris.php
   - src/Employee.php
   - src/Group.php
@@ -387,6 +390,10 @@ generatedFiles:
   - src/Models/Operations/UpdateCrmPipelineResponse.php
   - src/Models/Operations/ListEnrichPeopleRequest.php
   - src/Models/Operations/ListEnrichPeopleResponse.php
+  - src/Models/Operations/CreateGenaiPromptRequest.php
+  - src/Models/Operations/CreateGenaiPromptResponse.php
+  - src/Models/Operations/ListGenaiModelsRequest.php
+  - src/Models/Operations/ListGenaiModelsResponse.php
   - src/Models/Operations/CreateHrisEmployeeRequest.php
   - src/Models/Operations/CreateHrisEmployeeResponse.php
   - src/Models/Operations/CreateHrisGroupRequest.php
@@ -679,6 +686,10 @@ generatedFiles:
   - src/Models/Shared/EnrichEmailType.php
   - src/Models/Shared/EnrichEmail.php
   - src/Models/Shared/PropertyEnrichPersonAddress.php
+  - src/Models/Shared/GenaiPrompt.php
+  - src/Models/Shared/Role.php
+  - src/Models/Shared/GenaiContent.php
+  - src/Models/Shared/GenaiModel.php
   - src/Models/Shared/EmploymentStatus.php
   - src/Models/Shared/HrisEmployeeEmploymentType.php
   - src/Models/Shared/HrisEmployeeGender.php
@@ -1036,6 +1047,10 @@ generatedFiles:
   - docs/Models/Operations/UpdateCrmPipelineResponse.md
   - docs/Models/Operations/ListEnrichPeopleRequest.md
   - docs/Models/Operations/ListEnrichPeopleResponse.md
+  - docs/Models/Operations/CreateGenaiPromptRequest.md
+  - docs/Models/Operations/CreateGenaiPromptResponse.md
+  - docs/Models/Operations/ListGenaiModelsRequest.md
+  - docs/Models/Operations/ListGenaiModelsResponse.md
   - docs/Models/Operations/CreateHrisEmployeeRequest.md
   - docs/Models/Operations/CreateHrisEmployeeResponse.md
   - docs/Models/Operations/CreateHrisGroupRequest.md
@@ -1328,6 +1343,10 @@ generatedFiles:
   - docs/Models/Shared/EnrichEmailType.md
   - docs/Models/Shared/EnrichEmail.md
   - docs/Models/Shared/PropertyEnrichPersonAddress.md
+  - docs/Models/Shared/GenaiPrompt.md
+  - docs/Models/Shared/Role.md
+  - docs/Models/Shared/GenaiContent.md
+  - docs/Models/Shared/GenaiModel.md
   - docs/Models/Shared/EmploymentStatus.md
   - docs/Models/Shared/HrisEmployeeEmploymentType.md
   - docs/Models/Shared/HrisEmployeeGender.md
@@ -1425,6 +1444,9 @@ generatedFiles:
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/person/README.md
+  - docs/sdks/genai/README.md
+  - docs/sdks/model/README.md
+  - docs/sdks/prompt/README.md
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md

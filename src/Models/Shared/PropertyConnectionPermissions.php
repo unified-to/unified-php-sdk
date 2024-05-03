@@ -87,4 +87,7 @@ enum PropertyConnectionPermissions: string
     case StorageFileRead = 'storage_file_read';
     case StorageFileWrite = 'storage_file_write';
     case Webhook = 'webhook';
+    case GenaiModelRead = 'genai_model_read';
+    case GenaiPromptRead = 'genai_prompt_read';
+    case GenaiPromptWrite = 'genai_prompt_write';
 }

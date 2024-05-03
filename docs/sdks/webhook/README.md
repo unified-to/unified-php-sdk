@@ -52,7 +52,7 @@ try {
     $request->webhook->meta = [
         'tune' => '<value>',
     ];
-    $request->webhook->objectType = Shared\ObjectType::CommerceInventory;
+    $request->webhook->objectType = Shared\ObjectType::CommerceLocation;
     $request->webhook->pageMaxLimit = 4025.83;
     $request->webhook->runs = [
         '<value>',

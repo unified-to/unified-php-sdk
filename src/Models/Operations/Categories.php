@@ -24,4 +24,5 @@ enum Categories: string
     case Storage = 'storage';
     case Commerce = 'commerce';
     case Payment = 'payment';
+    case Genai = 'genai';
 }
