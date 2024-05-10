@@ -21,6 +21,11 @@ class CommerceItemMedia
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $height = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $id = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('position')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -44,6 +49,7 @@ class CommerceItemMedia
 	{
 		$this->alt = null;
 		$this->height = null;
+		$this->id = null;
 		$this->position = null;
 		$this->type = null;
 		$this->url = "";

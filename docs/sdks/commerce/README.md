@@ -263,13 +263,14 @@ try {
     $request->commerceLocation->address->region = '<value>';
     $request->commerceLocation->address->regionCode = '<value>';
     $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-11T11:46:34.114Z');
+    $request->commerceLocation->description = 'Persevering 5th generation capability';
     $request->commerceLocation->id = '<id>';
     $request->commerceLocation->isActive = false;
     $request->commerceLocation->name = '<value>';
     $request->commerceLocation->raw = [
-        'Rock' => '<value>',
+        'Planner' => '<value>',
     ];
-    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-13T08:13:54.098Z');
+    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-11T11:05:08.665Z');
     $request->connectionId = '<value>';;
 
     $response = $sdk->commerce->createCommerceLocation($request);
@@ -972,13 +973,14 @@ try {
     $request->commerceLocation->address->region = '<value>';
     $request->commerceLocation->address->regionCode = '<value>';
     $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-12T06:32:06.220Z');
+    $request->commerceLocation->description = 'Managed real-time forecast';
     $request->commerceLocation->id = '<id>';
     $request->commerceLocation->isActive = false;
     $request->commerceLocation->name = '<value>';
     $request->commerceLocation->raw = [
-        'Syrian' => '<value>',
+        'COM' => '<value>',
     ];
-    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-27T18:21:44.446Z');
+    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-02T05:15:52.185Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
@@ -1438,13 +1440,14 @@ try {
     $request->commerceLocation->address->region = '<value>';
     $request->commerceLocation->address->regionCode = '<value>';
     $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-19T11:29:36.755Z');
+    $request->commerceLocation->description = 'Customizable interactive Graphic Interface';
     $request->commerceLocation->id = '<id>';
     $request->commerceLocation->isActive = false;
     $request->commerceLocation->name = '<value>';
     $request->commerceLocation->raw = [
-        'Street' => '<value>',
+        'Van' => '<value>',
     ];
-    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-09T05:57:43.241Z');
+    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T20:47:46.586Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 

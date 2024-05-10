@@ -21,6 +21,11 @@ class CommerceLocation
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('description')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $description = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -54,6 +59,7 @@ class CommerceLocation
 	{
 		$this->address = null;
 		$this->createdAt = null;
+		$this->description = null;
 		$this->id = null;
 		$this->isActive = null;
 		$this->name = "";

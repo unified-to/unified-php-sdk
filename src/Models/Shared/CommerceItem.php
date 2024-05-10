@@ -48,7 +48,8 @@ class CommerceItem
     
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $name;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $name = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('public_description')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -113,7 +114,7 @@ class CommerceItem
 		$this->isActive = null;
 		$this->isTaxable = null;
 		$this->media = null;
-		$this->name = "";
+		$this->name = null;
 		$this->publicDescription = null;
 		$this->publicName = null;
 		$this->raw = null;
