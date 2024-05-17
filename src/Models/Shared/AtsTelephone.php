@@ -11,18 +11,18 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsTelephone
 {
-	#[\JMS\Serializer\Annotation\SerializedName('telephone')]
+    #[\JMS\Serializer\Annotation\SerializedName('telephone')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $telephone;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('type')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsTelephoneType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsTelephoneType $type = null;
-    
-	public function __construct()
-	{
-		$this->telephone = "";
-		$this->type = null;
-	}
+
+    public function __construct()
+    {
+        $this->telephone = '';
+        $this->type = null;
+    }
 }

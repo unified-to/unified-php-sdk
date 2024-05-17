@@ -11,19 +11,19 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmEmail
 {
-	#[\JMS\Serializer\Annotation\SerializedName('email')]
+    #[\JMS\Serializer\Annotation\SerializedName('email')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $email = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('type')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\CrmEmailType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CrmEmailType $type = null;
-    
-	public function __construct()
-	{
-		$this->email = null;
-		$this->type = null;
-	}
+
+    public function __construct()
+    {
+        $this->email = null;
+        $this->type = null;
+    }
 }

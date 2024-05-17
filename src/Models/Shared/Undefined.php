@@ -11,13 +11,13 @@ namespace Unified\Unified_to\Models\Shared;
 
 class Undefined
 {
-	#[\JMS\Serializer\Annotation\SerializedName('support_url')]
+    #[\JMS\Serializer\Annotation\SerializedName('support_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $supportUrl = null;
-    
-	public function __construct()
-	{
-		$this->supportUrl = null;
-	}
+
+    public function __construct()
+    {
+        $this->supportUrl = null;
+    }
 }

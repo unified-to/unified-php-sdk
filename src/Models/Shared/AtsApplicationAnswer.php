@@ -13,20 +13,20 @@ class AtsApplicationAnswer
 {
     /**
      * $answers
-     * 
+     *
      * @var array<string> $answers
      */
-	#[\JMS\Serializer\Annotation\SerializedName('answers')]
+    #[\JMS\Serializer\Annotation\SerializedName('answers')]
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     public array $answers;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('question_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('question_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $questionId;
-    
-	public function __construct()
-	{
-		$this->answers = [];
-		$this->questionId = "";
-	}
+
+    public function __construct()
+    {
+        $this->answers = [];
+        $this->questionId = '';
+    }
 }

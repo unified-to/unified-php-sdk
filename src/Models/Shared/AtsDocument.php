@@ -11,84 +11,84 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsDocument
 {
-	#[\JMS\Serializer\Annotation\SerializedName('application_id')]
+    #[\JMS\Serializer\Annotation\SerializedName('application_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $applicationId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $candidateId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('document_data')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('document_data')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $documentData = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('document_url')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('document_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $documentUrl = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('filename')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('filename')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $filename = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('job_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('job_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $jobId = null;
-    
+
     /**
      * $raw
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('type')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsDocumentType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsDocumentType $type = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('user_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
-    
-	public function __construct()
-	{
-		$this->applicationId = null;
-		$this->candidateId = null;
-		$this->createdAt = null;
-		$this->documentData = null;
-		$this->documentUrl = null;
-		$this->filename = null;
-		$this->id = null;
-		$this->jobId = null;
-		$this->raw = null;
-		$this->type = null;
-		$this->updatedAt = null;
-		$this->userId = null;
-	}
+
+    public function __construct()
+    {
+        $this->applicationId = null;
+        $this->candidateId = null;
+        $this->createdAt = null;
+        $this->documentData = null;
+        $this->documentUrl = null;
+        $this->filename = null;
+        $this->id = null;
+        $this->jobId = null;
+        $this->raw = null;
+        $this->type = null;
+        $this->updatedAt = null;
+        $this->userId = null;
+    }
 }

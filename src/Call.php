@@ -8,39 +8,34 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Call 
+class Call
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * List all calls
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListUcCallsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListUcCallsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      */
-	public function listUcCalls(
+    public function listUcCalls(
         ?\Unified\Unified_to\Models\Operations\ListUcCallsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListUcCallsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListUcCallsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', \Unified\Unified_to\Models\Operations\ListUcCallsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUcCallsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -49,11 +44,10 @@ class Call
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ucCalls = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\UcCall>', 'json');
+                $response->ucCalls = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\UcCall>', 'json');
             }
         }
 

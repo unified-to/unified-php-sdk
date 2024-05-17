@@ -9,155 +9,150 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/**
- * CrmEvent - An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
- * 
- * @package Unified\Unified_to\Models\Shared
- * @access public
- */
+/** CrmEvent - An event represents an event, activity, or engagement and is always associated with a deal, contact, or company */
 class CrmEvent
 {
     /**
      * The call object, when type = call
-     * 
+     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventCall $call
      */
-	#[\JMS\Serializer\Annotation\SerializedName('call')]
+    #[\JMS\Serializer\Annotation\SerializedName('call')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventCall')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventCall $call = null;
-    
+
     /**
      * An array of company IDs associated with this event
-     * 
+     *
      * @var ?array<string> $companyIds
      */
-	#[\JMS\Serializer\Annotation\SerializedName('company_ids')]
+    #[\JMS\Serializer\Annotation\SerializedName('company_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $companyIds = null;
-    
+
     /**
      * An array of contact IDs associated with this event
-     * 
+     *
      * @var ?array<string> $contactIds
      */
-	#[\JMS\Serializer\Annotation\SerializedName('contact_ids')]
+    #[\JMS\Serializer\Annotation\SerializedName('contact_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $contactIds = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
-    
+
     /**
      * An array of deal IDs associated with this event
-     * 
+     *
      * @var ?array<string> $dealIds
      */
-	#[\JMS\Serializer\Annotation\SerializedName('deal_ids')]
+    #[\JMS\Serializer\Annotation\SerializedName('deal_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $dealIds = null;
-    
+
     /**
      * The email object, when type = email
-     * 
+     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventEmail $email
      */
-	#[\JMS\Serializer\Annotation\SerializedName('email')]
+    #[\JMS\Serializer\Annotation\SerializedName('email')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventEmail')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventEmail $email = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
+
     /**
      * $leadIds
-     * 
+     *
      * @var ?array<string> $leadIds
      */
-	#[\JMS\Serializer\Annotation\SerializedName('lead_ids')]
+    #[\JMS\Serializer\Annotation\SerializedName('lead_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $leadIds = null;
-    
+
     /**
      * The meeting object, when type = meeting
-     * 
+     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting $meeting
      */
-	#[\JMS\Serializer\Annotation\SerializedName('meeting')]
+    #[\JMS\Serializer\Annotation\SerializedName('meeting')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventMeeting $meeting = null;
-    
+
     /**
      * The note object, when type = note
-     * 
+     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventNote $note
      */
-	#[\JMS\Serializer\Annotation\SerializedName('note')]
+    #[\JMS\Serializer\Annotation\SerializedName('note')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventNote')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventNote $note = null;
-    
+
     /**
      * The raw data returned by the integration for this event.
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
+
     /**
      * The task object, when type = task
-     * 
+     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventTask $task
      */
-	#[\JMS\Serializer\Annotation\SerializedName('task')]
+    #[\JMS\Serializer\Annotation\SerializedName('task')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventTask')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventTask $task = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('type')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\CrmEventType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CrmEventType $type = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('user_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
-    
-	public function __construct()
-	{
-		$this->call = null;
-		$this->companyIds = null;
-		$this->contactIds = null;
-		$this->createdAt = null;
-		$this->dealIds = null;
-		$this->email = null;
-		$this->id = null;
-		$this->leadIds = null;
-		$this->meeting = null;
-		$this->note = null;
-		$this->raw = null;
-		$this->task = null;
-		$this->type = null;
-		$this->updatedAt = null;
-		$this->userId = null;
-	}
+
+    public function __construct()
+    {
+        $this->call = null;
+        $this->companyIds = null;
+        $this->contactIds = null;
+        $this->createdAt = null;
+        $this->dealIds = null;
+        $this->email = null;
+        $this->id = null;
+        $this->leadIds = null;
+        $this->meeting = null;
+        $this->note = null;
+        $this->raw = null;
+        $this->task = null;
+        $this->type = null;
+        $this->updatedAt = null;
+        $this->userId = null;
+    }
 }

@@ -8,32 +8,32 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-use \Unified\Unified_to\Utils\SpeakeasyMetadata;
+use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreatePassthroughRequest
 {
     /**
      * integration-specific payload
-     * 
+     *
      * @var ?array<string, mixed> $requestBody
      */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?array $requestBody = null;
-    
+
     /**
      * ID of the connection
-     * 
+     *
      * @var string $connectionId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-    
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=path')]
+
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=path')]
     public string $path;
-    
-	public function __construct()
-	{
-		$this->requestBody = null;
-		$this->connectionId = "";
-		$this->path = "";
-	}
+
+    public function __construct()
+    {
+        $this->requestBody = null;
+        $this->connectionId = '';
+        $this->path = '';
+    }
 }

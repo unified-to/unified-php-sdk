@@ -8,28 +8,28 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-use \Unified\Unified_to\Utils\SpeakeasyMetadata;
+use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateUcContactRequest
 {
     /**
      * A contact represents a person that optionally is associated with a call
-     * 
+     *
      * @var ?\Unified\Unified_to\Models\Shared\UcContact $ucContact
      */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?\Unified\Unified_to\Models\Shared\UcContact $ucContact = null;
-    
+
     /**
      * ID of the connection
-     * 
+     *
      * @var string $connectionId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-    
-	public function __construct()
-	{
-		$this->ucContact = null;
-		$this->connectionId = "";
-	}
+
+    public function __construct()
+    {
+        $this->ucContact = null;
+        $this->connectionId = '';
+    }
 }

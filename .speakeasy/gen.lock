@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 902b970f6ea17ef9a8dfd2f897ee1bcf
+  docChecksum: cac851e827962125d308fa3642856814
   docVersion: "1.0"
-  speakeasyVersion: 1.285.4
-  generationVersion: 2.326.3
-  releaseVersion: 0.14.16
-  configChecksum: f0aee947e9bb31cc96b3d657201e1c37
+  speakeasyVersion: 1.293.0
+  generationVersion: 2.332.4
+  releaseVersion: 0.14.17
+  configChecksum: 628e1b6bc353915a6d1f6e94ee9506aa
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -83,6 +83,7 @@ generatedFiles:
   - src/UnifiedToBuilder.php
   - composer.json
   - phpstan.neon
+  - pint.json
   - rector.php
   - src/Utils/EnumHandler.php
   - src/Utils/FormMetadata.php

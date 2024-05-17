@@ -10,25 +10,33 @@ namespace Unified\Unified_to;
 
 class SDKConfiguration
 {
-	public ?\GuzzleHttp\ClientInterface $defaultClient = null;
-	public ?\GuzzleHttp\ClientInterface $securityClient = null;
-	public ?Models\Shared\Security $security = null;
-	public string $serverUrl = '';
-	public int $serverIndex = 0;
-	public string $language = 'php';
-	public string $openapiDocVersion = '1.0';
-	public string $sdkVersion = '0.14.16';
-	public string $genVersion = '2.326.3';
-	public string $userAgent = 'speakeasy-sdk/php 0.14.16 2.326.3 1.0 unified/unified-to';
-	
+    public ?\GuzzleHttp\ClientInterface $defaultClient = null;
 
-	public function getServerUrl(): string
-	{
-		
-		if ($this->serverUrl !== '') {
-			return $this->serverUrl;
-		};
-		return UnifiedTo::SERVERS[$this->serverIndex];
-	}
-	
+    public ?\GuzzleHttp\ClientInterface $securityClient = null;
+
+    public ?Models\Shared\Security $security = null;
+
+    public string $serverUrl = '';
+
+    public int $serverIndex = 0;
+
+    public string $language = 'php';
+
+    public string $openapiDocVersion = '1.0';
+
+    public string $sdkVersion = '0.14.17';
+
+    public string $genVersion = '2.332.4';
+
+    public string $userAgent = 'speakeasy-sdk/php 0.14.17 2.332.4 1.0 unified/unified-to';
+
+    public function getServerUrl(): string
+    {
+
+        if ($this->serverUrl !== '') {
+            return $this->serverUrl;
+        }
+
+        return UnifiedTo::SERVERS[$this->serverIndex];
+    }
 }

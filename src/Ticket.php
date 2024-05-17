@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Ticket 
+class Ticket
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create a ticket
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
      */
-	public function createTicketingTicket(
+    public function createTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "ticketingTicket", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,37 +47,32 @@ class Ticket
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTicket = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
+                $response->ticketingTicket = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a ticket
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
      */
-	public function getTicketingTicket(
+    public function getTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\GetTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingTicketRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -91,37 +81,32 @@ class Ticket
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTicket = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
+                $response->ticketingTicket = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all tickets
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
      */
-	public function listTicketingTickets(
+    public function listTicketingTickets(
         ?\Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -130,40 +115,35 @@ class Ticket
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTickets = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TicketingTicket>', 'json');
+                $response->ticketingTickets = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TicketingTicket>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a ticket
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
      */
-	public function patchTicketingTicket(
+    public function patchTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "ticketingTicket", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,36 +152,31 @@ class Ticket
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTicket = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
+                $response->ticketingTicket = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a ticket
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
      */
-	public function removeTicketingTicket(
+    public function removeTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -210,42 +185,36 @@ class Ticket
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a ticket
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse
      */
-	public function updateTicketingTicket(
+    public function updateTicketingTicket(
         ?\Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "ticketingTicket", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -254,11 +223,10 @@ class Ticket
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTicket = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
+                $response->ticketingTicket = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
             }
         }
 

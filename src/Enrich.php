@@ -8,39 +8,34 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Enrich 
+class Enrich
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Retrieve enrichment information for a company
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
      */
-	public function listEnrichCompanies(
+    public function listEnrichCompanies(
         ?\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/company', \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -49,37 +44,32 @@ class Enrich
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->enrichCompany = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\EnrichCompany', 'json');
+                $response->enrichCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\EnrichCompany', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve enrichment information for a person
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
      */
-	public function listEnrichPeople(
+    public function listEnrichPeople(
         ?\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/person', \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -88,11 +78,10 @@ class Enrich
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->enrichPerson = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\EnrichPerson', 'json');
+                $response->enrichPerson = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\EnrichPerson', 'json');
             }
         }
 

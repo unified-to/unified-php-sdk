@@ -8,70 +8,70 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-use \Unified\Unified_to\Utils\SpeakeasyMetadata;
+use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListCommerceInventoriesRequest
 {
     /**
      * ID of the connection
-     * 
+     *
      * @var string $connectionId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-    
+
     /**
      * Comma-delimited fields to return
-     * 
+     *
      * @var ?array<string> $fields
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=item_id')]
-    public ?string $itemId = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=item_variant_id')]
+    public ?string $itemVariantId = null;
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=location_id')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=location_id')]
     public ?string $locationId = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
     public ?string $order = null;
-    
+
     /**
      * Query string to search. eg. email address or name
-     * 
+     *
      * @var ?string $query
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
     public ?string $query = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
     public ?string $sort = null;
-    
+
     /**
      * Return only results whose updated date is equal or greater to this value
-     * 
+     *
      * @var ?\DateTime $updatedGte
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
-    
-	public function __construct()
-	{
-		$this->connectionId = "";
-		$this->fields = null;
-		$this->itemId = null;
-		$this->limit = null;
-		$this->locationId = null;
-		$this->offset = null;
-		$this->order = null;
-		$this->query = null;
-		$this->sort = null;
-		$this->updatedGte = null;
-	}
+
+    public function __construct()
+    {
+        $this->connectionId = '';
+        $this->fields = null;
+        $this->itemVariantId = null;
+        $this->limit = null;
+        $this->locationId = null;
+        $this->offset = null;
+        $this->order = null;
+        $this->query = null;
+        $this->sort = null;
+        $this->updatedGte = null;
+    }
 }

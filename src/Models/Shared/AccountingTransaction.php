@@ -11,76 +11,76 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingTransaction
 {
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('currency')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('currency')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('description')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $id;
-    
+
     /**
      * new field name
-     * 
+     *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineitem> $lineitems
      */
-	#[\JMS\Serializer\Annotation\SerializedName('lineitems')]
+    #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
     #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingTransactionLineitem>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineitems = null;
-    
+
     /**
      * $raw
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('reference')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('reference')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $reference = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $taxAmount = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('taxrate_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('taxrate_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $taxrateId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
-    
-	public function __construct()
-	{
-		$this->createdAt = null;
-		$this->currency = null;
-		$this->description = null;
-		$this->id = "";
-		$this->lineitems = null;
-		$this->raw = null;
-		$this->reference = null;
-		$this->taxAmount = null;
-		$this->taxrateId = null;
-		$this->updatedAt = null;
-	}
+
+    public function __construct()
+    {
+        $this->createdAt = null;
+        $this->currency = null;
+        $this->description = null;
+        $this->id = '';
+        $this->lineitems = null;
+        $this->raw = null;
+        $this->reference = null;
+        $this->taxAmount = null;
+        $this->taxrateId = null;
+        $this->updatedAt = null;
+    }
 }

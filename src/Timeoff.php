@@ -8,39 +8,34 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Timeoff 
+class Timeoff
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Retrieve a timeoff
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
      */
-	public function getHrisTimeoff(
+    public function getHrisTimeoff(
         ?\Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -49,37 +44,32 @@ class Timeoff
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisTimeoff = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisTimeoff', 'json');
+                $response->hrisTimeoff = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisTimeoff', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all timeoffs
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
      */
-	public function listHrisTimeoffs(
+    public function listHrisTimeoffs(
         ?\Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff', \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -88,11 +78,10 @@ class Timeoff
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisTimeoffs = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisTimeoff>', 'json');
+                $response->hrisTimeoffs = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisTimeoff>', 'json');
             }
         }
 

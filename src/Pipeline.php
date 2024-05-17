@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Pipeline 
+class Pipeline
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create a pipeline
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
      */
-	public function createCrmPipeline(
+    public function createCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmPipeline", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'crmPipeline', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,37 +47,32 @@ class Pipeline
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmPipeline = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmPipeline', 'json');
+                $response->crmPipeline = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmPipeline', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a pipeline
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
      */
-	public function getCrmPipeline(
+    public function getCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\GetCrmPipelineRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmPipelineRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -91,37 +81,32 @@ class Pipeline
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmPipeline = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmPipeline', 'json');
+                $response->crmPipeline = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmPipeline', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all pipelines
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
      */
-	public function listCrmPipelines(
+    public function listCrmPipelines(
         ?\Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -130,40 +115,35 @@ class Pipeline
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmPipelines = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CrmPipeline>', 'json');
+                $response->crmPipelines = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CrmPipeline>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a pipeline
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
      */
-	public function patchCrmPipeline(
+    public function patchCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmPipeline", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'crmPipeline', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,36 +152,31 @@ class Pipeline
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmPipeline = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmPipeline', 'json');
+                $response->crmPipeline = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmPipeline', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a pipeline
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
      */
-	public function removeCrmPipeline(
+    public function removeCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -210,42 +185,36 @@ class Pipeline
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a pipeline
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
      */
-	public function updateCrmPipeline(
+    public function updateCrmPipeline(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmPipeline", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'crmPipeline', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -254,11 +223,10 @@ class Pipeline
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmPipeline = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmPipeline', 'json');
+                $response->crmPipeline = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmPipeline', 'json');
             }
         }
 

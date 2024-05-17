@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Commerce 
+class Commerce
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create a collection
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
      */
-	public function createCommerceCollection(
+    public function createCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceCollection", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,40 +47,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollection = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
+                $response->commerceCollection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create an inventory
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
      */
-	public function createCommerceInventory(
+    public function createCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory', \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceInventory", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceInventory', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -94,40 +84,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceInventory = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceInventory', 'json');
+                $response->commerceInventory = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceInventory', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create an item
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      */
-	public function createCommerceItem(
+    public function createCommerceItem(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item', \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceItem", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceItem', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -136,40 +121,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
+                $response->commerceItem = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create a location
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      */
-	public function createCommerceLocation(
+    public function createCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceLocation", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -178,37 +158,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceLocation = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceLocation', 'json');
+                $response->commerceLocation = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceLocation', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a collection
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
      */
-	public function getCommerceCollection(
+    public function getCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -217,37 +192,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollection = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
+                $response->commerceCollection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve an inventory
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
      */
-	public function getCommerceInventory(
+    public function getCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -256,37 +226,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceInventory = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceInventory', 'json');
+                $response->commerceInventory = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceInventory', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve an item
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      */
-	public function getCommerceItem(
+    public function getCommerceItem(
         ?\Unified\Unified_to\Models\Operations\GetCommerceItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetCommerceItemResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\GetCommerceItemRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceItemRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -295,37 +260,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
+                $response->commerceItem = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a location
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
      */
-	public function getCommerceLocation(
+    public function getCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\GetCommerceLocationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceLocationRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -334,37 +294,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceLocation = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceLocation', 'json');
+                $response->commerceLocation = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceLocation', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all collections
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
      */
-	public function listCommerceCollections(
+    public function listCommerceCollections(
         ?\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -373,37 +328,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollections = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceCollection>', 'json');
+                $response->commerceCollections = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceCollection>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all inventories
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
      */
-	public function listCommerceInventories(
+    public function listCommerceInventories(
         ?\Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory', \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -412,37 +362,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceInventories = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceInventory>', 'json');
+                $response->commerceInventories = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceInventory>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all items
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
      */
-	public function listCommerceItems(
+    public function listCommerceItems(
         ?\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item', \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -451,37 +396,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceItems = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceItem>', 'json');
+                $response->commerceItems = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceItem>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all locations
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
      */
-	public function listCommerceLocations(
+    public function listCommerceLocations(
         ?\Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -490,40 +430,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceLocations = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceLocation>', 'json');
+                $response->commerceLocations = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceLocation>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a collection
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
      */
-	public function patchCommerceCollection(
+    public function patchCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceCollection", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -532,40 +467,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollection = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
+                $response->commerceCollection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an inventory
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
      */
-	public function patchCommerceInventory(
+    public function patchCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceInventory", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceInventory', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -574,40 +504,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceInventory = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceInventory', 'json');
+                $response->commerceInventory = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceInventory', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an item
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
      */
-	public function patchCommerceItem(
+    public function patchCommerceItem(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceItem", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceItem', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -616,40 +541,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
+                $response->commerceItem = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a location
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
      */
-	public function patchCommerceLocation(
+    public function patchCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceLocation", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -658,36 +578,31 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceLocation = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceLocation', 'json');
+                $response->commerceLocation = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceLocation', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a collection
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
      */
-	public function removeCommerceCollection(
+    public function removeCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -696,38 +611,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove an inventory
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
      */
-	public function removeCommerceInventory(
+    public function removeCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -736,38 +645,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove an item
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      */
-	public function removeCommerceItem(
+    public function removeCommerceItem(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -776,38 +679,32 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a location
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      */
-	public function removeCommerceLocation(
+    public function removeCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -816,42 +713,36 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a collection
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
      */
-	public function updateCommerceCollection(
+    public function updateCommerceCollection(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceCollection", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -860,40 +751,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollection = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
+                $response->commerceCollection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an inventory
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
      */
-	public function updateCommerceInventory(
+    public function updateCommerceInventory(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceInventory", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceInventory', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -902,40 +788,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceInventory = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceInventory', 'json');
+                $response->commerceInventory = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceInventory', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an item
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
      */
-	public function updateCommerceItem(
+    public function updateCommerceItem(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceItem", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceItem', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -944,40 +825,35 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceItem = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
+                $response->commerceItem = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceItem', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a location
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
      */
-	public function updateCommerceLocation(
+    public function updateCommerceLocation(
         ?\Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "commerceLocation", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -986,11 +862,10 @@ class Commerce
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceLocation = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceLocation', 'json');
+                $response->commerceLocation = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceLocation', 'json');
             }
         }
 

@@ -8,28 +8,28 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-use \Unified\Unified_to\Utils\SpeakeasyMetadata;
+use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class RemoveHrisEmployeeRequest
 {
     /**
      * ID of the connection
-     * 
+     *
      * @var string $connectionId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-    
+
     /**
      * ID of the Employee
-     * 
+     *
      * @var string $id
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
-    
-	public function __construct()
-	{
-		$this->connectionId = "";
-		$this->id = "";
-	}
+
+    public function __construct()
+    {
+        $this->connectionId = '';
+        $this->id = '';
+    }
 }

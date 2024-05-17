@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Passthrough 
+class Passthrough
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Passthrough POST
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreatePassthroughRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreatePassthroughRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePassthroughResponse
      */
-	public function createPassthrough(
+    public function createPassthrough(
         ?\Unified\Unified_to\Models\Operations\CreatePassthroughRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreatePassthroughResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreatePassthroughResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\CreatePassthroughRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,36 +47,31 @@ class Passthrough
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->result = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->result = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Passthrough GET
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListPassthroughsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListPassthroughsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPassthroughsResponse
      */
-	public function listPassthroughs(
+    public function listPassthroughs(
         ?\Unified\Unified_to\Models\Operations\ListPassthroughsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListPassthroughsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListPassthroughsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\ListPassthroughsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -90,40 +80,35 @@ class Passthrough
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->result = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->result = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Passthrough PUT
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchPassthroughRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchPassthroughRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchPassthroughResponse
      */
-	public function patchPassthrough(
+    public function patchPassthrough(
         ?\Unified\Unified_to\Models\Operations\PatchPassthroughRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchPassthroughResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchPassthroughResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\PatchPassthroughRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -132,36 +117,31 @@ class Passthrough
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->result = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->result = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Passthrough DELETE
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemovePassthroughRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemovePassthroughRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemovePassthroughResponse
      */
-	public function removePassthrough(
+    public function removePassthrough(
         ?\Unified\Unified_to\Models\Operations\RemovePassthroughRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemovePassthroughResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemovePassthroughResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\RemovePassthroughRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -170,40 +150,35 @@ class Passthrough
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->result = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->result = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Passthrough PUT
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdatePassthroughRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePassthroughRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePassthroughResponse
      */
-	public function updatePassthrough(
+    public function updatePassthrough(
         ?\Unified\Unified_to\Models\Operations\UpdatePassthroughRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdatePassthroughResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdatePassthroughResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', \Unified\Unified_to\Models\Operations\UpdatePassthroughRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -212,11 +187,10 @@ class Passthrough
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->result = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->result = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 

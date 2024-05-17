@@ -11,59 +11,59 @@ namespace Unified\Unified_to\Models\Shared;
 
 class PaymentPayout
 {
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('currency')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('currency')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('notes')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('notes')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $notes = null;
-    
+
     /**
      * $raw
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('status')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PaymentPayoutStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PaymentPayoutStatus $status = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('total_amount')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     public float $totalAmount;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
-    
-	public function __construct()
-	{
-		$this->createdAt = null;
-		$this->currency = null;
-		$this->id = null;
-		$this->notes = null;
-		$this->raw = null;
-		$this->status = null;
-		$this->totalAmount = 0;
-		$this->updatedAt = null;
-	}
+
+    public function __construct()
+    {
+        $this->createdAt = null;
+        $this->currency = null;
+        $this->id = null;
+        $this->notes = null;
+        $this->raw = null;
+        $this->status = null;
+        $this->totalAmount = 0;
+        $this->updatedAt = null;
+    }
 }

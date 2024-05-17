@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Taxrate 
+class Taxrate
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create a taxrate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse
      */
-	public function createAccountingTaxrate(
+    public function createAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingTaxrate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'accountingTaxrate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,37 +47,32 @@ class Taxrate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTaxrate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json');
+                $response->accountingTaxrate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a taxrate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse
      */
-	public function getAccountingTaxrate(
+    public function getAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', \Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -91,37 +81,32 @@ class Taxrate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTaxrate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json');
+                $response->accountingTaxrate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all taxrates
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse
      */
-	public function listAccountingTaxrates(
+    public function listAccountingTaxrates(
         ?\Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', \Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -130,40 +115,35 @@ class Taxrate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTaxrates = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AccountingTaxrate>', 'json');
+                $response->accountingTaxrates = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AccountingTaxrate>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a taxrate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse
      */
-	public function patchAccountingTaxrate(
+    public function patchAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingTaxrate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'accountingTaxrate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,36 +152,31 @@ class Taxrate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTaxrate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json');
+                $response->accountingTaxrate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a taxrate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse
      */
-	public function removeAccountingTaxrate(
+    public function removeAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -210,42 +185,36 @@ class Taxrate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a taxrate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse
      */
-	public function updateAccountingTaxrate(
+    public function updateAccountingTaxrate(
         ?\Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingTaxrate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'accountingTaxrate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -254,11 +223,10 @@ class Taxrate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTaxrate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json');
+                $response->accountingTaxrate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json');
             }
         }
 

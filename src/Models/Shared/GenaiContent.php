@@ -11,18 +11,18 @@ namespace Unified\Unified_to\Models\Shared;
 
 class GenaiContent
 {
-	#[\JMS\Serializer\Annotation\SerializedName('content')]
+    #[\JMS\Serializer\Annotation\SerializedName('content')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $content;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('role')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('role')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Role>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Role $role = null;
-    
-	public function __construct()
-	{
-		$this->content = "";
-		$this->role = null;
-	}
+
+    public function __construct()
+    {
+        $this->content = '';
+        $this->role = null;
+    }
 }

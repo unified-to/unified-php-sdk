@@ -11,53 +11,53 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingTransactionLineitem
 {
-	#[\JMS\Serializer\Annotation\SerializedName('account_id')]
+    #[\JMS\Serializer\Annotation\SerializedName('account_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $accountId;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('contact_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $contactId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('description')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('invoice_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('invoice_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $invoiceId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('payment_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('payment_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $paymentId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $taxAmount = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('total_amount')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     public float $totalAmount;
-    
-	public function __construct()
-	{
-		$this->accountId = "";
-		$this->contactId = null;
-		$this->description = null;
-		$this->id = null;
-		$this->invoiceId = null;
-		$this->paymentId = null;
-		$this->taxAmount = null;
-		$this->totalAmount = 0;
-	}
+
+    public function __construct()
+    {
+        $this->accountId = '';
+        $this->contactId = null;
+        $this->description = null;
+        $this->id = null;
+        $this->invoiceId = null;
+        $this->paymentId = null;
+        $this->taxAmount = null;
+        $this->totalAmount = 0;
+    }
 }

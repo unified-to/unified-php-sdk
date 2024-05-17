@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Hris 
+class Hris
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
      */
-	public function createHrisEmployee(
+    public function createHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisEmployee', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,40 +47,35 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->hrisEmployee = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create a group
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
      */
-	public function createHrisGroup(
+    public function createHrisGroup(
         ?\Unified\Unified_to\Models\Operations\CreateHrisGroupRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisGroup", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisGroup', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -94,37 +84,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
+                $response->hrisGroup = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
      */
-	public function getHrisEmployee(
+    public function getHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -133,37 +118,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->hrisEmployee = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a group
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisGroupRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
      */
-	public function getHrisGroup(
+    public function getHrisGroup(
         ?\Unified\Unified_to\Models\Operations\GetHrisGroupRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetHrisGroupResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\GetHrisGroupRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisGroupRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,37 +152,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
+                $response->hrisGroup = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a payslip
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
      */
-	public function getHrisPayslip(
+    public function getHrisPayslip(
         ?\Unified\Unified_to\Models\Operations\GetHrisPayslipRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip/{id}', \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisPayslipRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -211,37 +186,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisPayslip = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisPayslip', 'json');
+                $response->hrisPayslip = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisPayslip', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a timeoff
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
      */
-	public function getHrisTimeoff(
+    public function getHrisTimeoff(
         ?\Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -250,37 +220,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisTimeoff = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisTimeoff', 'json');
+                $response->hrisTimeoff = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisTimeoff', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all employees
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
      */
-	public function listHrisEmployees(
+    public function listHrisEmployees(
         ?\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -289,37 +254,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployees = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisEmployee>', 'json');
+                $response->hrisEmployees = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisEmployee>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all groups
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
      */
-	public function listHrisGroups(
+    public function listHrisGroups(
         ?\Unified\Unified_to\Models\Operations\ListHrisGroupsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisGroupsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -328,37 +288,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisGroups = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisGroup>', 'json');
+                $response->hrisGroups = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisGroup>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all payslips
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
      */
-	public function listHrisPayslips(
+    public function listHrisPayslips(
         ?\Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip', \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -367,37 +322,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisPayslips = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisPayslip>', 'json');
+                $response->hrisPayslips = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisPayslip>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all timeoffs
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
      */
-	public function listHrisTimeoffs(
+    public function listHrisTimeoffs(
         ?\Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff', \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -406,40 +356,35 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisTimeoffs = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisTimeoff>', 'json');
+                $response->hrisTimeoffs = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisTimeoff>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
      */
-	public function patchHrisEmployee(
+    public function patchHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisEmployee', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -448,40 +393,35 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->hrisEmployee = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a group
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
      */
-	public function patchHrisGroup(
+    public function patchHrisGroup(
         ?\Unified\Unified_to\Models\Operations\PatchHrisGroupRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisGroup", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisGroup', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -490,36 +430,31 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
+                $response->hrisGroup = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
      */
-	public function removeHrisEmployee(
+    public function removeHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -528,38 +463,32 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a group
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
      */
-	public function removeHrisGroup(
+    public function removeHrisGroup(
         ?\Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -568,42 +497,36 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
      */
-	public function updateHrisEmployee(
+    public function updateHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisEmployee', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -612,40 +535,35 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->hrisEmployee = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a group
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
      */
-	public function updateHrisGroup(
+    public function updateHrisGroup(
         ?\Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisGroup", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisGroup', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -654,11 +572,10 @@ class Hris
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
+                $response->hrisGroup = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
             }
         }
 

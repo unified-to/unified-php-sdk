@@ -11,81 +11,81 @@ namespace Unified\Unified_to\Models\Shared;
 
 class PaymentLink
 {
-	#[\JMS\Serializer\Annotation\SerializedName('amount')]
+    #[\JMS\Serializer\Annotation\SerializedName('amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     public float $amount;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('contact_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $contactId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('currency')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('currency')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('is_active')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('is_active')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
-    
+
     /**
      * $lineitems
-     * 
+     *
      * @var array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem> $lineitems
      */
-	#[\JMS\Serializer\Annotation\SerializedName('lineitems')]
+    #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
     #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\PaymentLinkLineitem>')]
     public array $lineitems;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('payment_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('payment_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $paymentId = null;
-    
+
     /**
      * $raw
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('url')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $url = null;
-    
-	public function __construct()
-	{
-		$this->amount = 0;
-		$this->contactId = null;
-		$this->createdAt = null;
-		$this->currency = null;
-		$this->id = null;
-		$this->isActive = null;
-		$this->lineitems = [];
-		$this->paymentId = null;
-		$this->raw = null;
-		$this->updatedAt = null;
-		$this->url = null;
-	}
+
+    public function __construct()
+    {
+        $this->amount = 0;
+        $this->contactId = null;
+        $this->createdAt = null;
+        $this->currency = null;
+        $this->id = null;
+        $this->isActive = null;
+        $this->lineitems = [];
+        $this->paymentId = null;
+        $this->raw = null;
+        $this->updatedAt = null;
+        $this->url = null;
+    }
 }

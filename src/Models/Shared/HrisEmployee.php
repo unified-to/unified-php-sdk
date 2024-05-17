@@ -11,172 +11,172 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisEmployee
 {
-	#[\JMS\Serializer\Annotation\SerializedName('address')]
+    #[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyHrisEmployeeAddress $address = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('currency')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('currency')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('date_of_birth')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('date_of_birth')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $dateOfBirth = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('department')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('department')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $department = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('division')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('division')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $division = null;
-    
+
     /**
      * $emails
-     * 
+     *
      * @var ?array<\Unified\Unified_to\Models\Shared\HrisEmail> $emails
      */
-	#[\JMS\Serializer\Annotation\SerializedName('emails')]
+    #[\JMS\Serializer\Annotation\SerializedName('emails')]
     #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\HrisEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('employee_number')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('employee_number')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $employeeNumber = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('employment_status')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('employment_status')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\EmploymentStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?EmploymentStatus $employmentStatus = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('employment_type')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('employment_type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisEmployeeEmploymentType $employmentType = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('gender')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('gender')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisEmployeeGender>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisEmployeeGender $gender = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('hired_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('hired_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $hiredAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('image_url')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('image_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $imageUrl = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('language_locale')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('language_locale')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $languageLocale = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('location')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('location')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $location = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('manager_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('manager_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $managerId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('marital_status')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('marital_status')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\MaritalStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?MaritalStatus $maritalStatus = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('name')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
-    
+
     /**
      * $raw
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
+
     /**
      * $telephones
-     * 
+     *
      * @var ?array<\Unified\Unified_to\Models\Shared\HrisTelephone> $telephones
      */
-	#[\JMS\Serializer\Annotation\SerializedName('telephones')]
+    #[\JMS\Serializer\Annotation\SerializedName('telephones')]
     #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\HrisTelephone>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('terminated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('terminated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $terminatedAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('timezone')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('timezone')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $timezone = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('title')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('title')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $title = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
-    
-	public function __construct()
-	{
-		$this->address = null;
-		$this->createdAt = null;
-		$this->currency = null;
-		$this->dateOfBirth = null;
-		$this->department = null;
-		$this->division = null;
-		$this->emails = null;
-		$this->employeeNumber = null;
-		$this->employmentStatus = null;
-		$this->employmentType = null;
-		$this->gender = null;
-		$this->hiredAt = null;
-		$this->id = null;
-		$this->imageUrl = null;
-		$this->languageLocale = null;
-		$this->location = null;
-		$this->managerId = null;
-		$this->maritalStatus = null;
-		$this->name = null;
-		$this->raw = null;
-		$this->telephones = null;
-		$this->terminatedAt = null;
-		$this->timezone = null;
-		$this->title = null;
-		$this->updatedAt = null;
-	}
+
+    public function __construct()
+    {
+        $this->address = null;
+        $this->createdAt = null;
+        $this->currency = null;
+        $this->dateOfBirth = null;
+        $this->department = null;
+        $this->division = null;
+        $this->emails = null;
+        $this->employeeNumber = null;
+        $this->employmentStatus = null;
+        $this->employmentType = null;
+        $this->gender = null;
+        $this->hiredAt = null;
+        $this->id = null;
+        $this->imageUrl = null;
+        $this->languageLocale = null;
+        $this->location = null;
+        $this->managerId = null;
+        $this->maritalStatus = null;
+        $this->name = null;
+        $this->raw = null;
+        $this->telephones = null;
+        $this->terminatedAt = null;
+        $this->timezone = null;
+        $this->title = null;
+        $this->updatedAt = null;
+    }
 }

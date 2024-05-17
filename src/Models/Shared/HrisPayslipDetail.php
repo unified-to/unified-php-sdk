@@ -11,42 +11,42 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisPayslipDetail
 {
-	#[\JMS\Serializer\Annotation\SerializedName('amount')]
+    #[\JMS\Serializer\Annotation\SerializedName('amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     public float $amount;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('company_amount')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('company_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $companyAmount = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('description')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('employee_amount')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('employee_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $employeeAmount = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('name')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('type')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisPayslipDetailType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisPayslipDetailType $type = null;
-    
-	public function __construct()
-	{
-		$this->amount = 0;
-		$this->companyAmount = null;
-		$this->description = null;
-		$this->employeeAmount = null;
-		$this->name = null;
-		$this->type = null;
-	}
+
+    public function __construct()
+    {
+        $this->amount = 0;
+        $this->companyAmount = null;
+        $this->description = null;
+        $this->employeeAmount = null;
+        $this->name = null;
+        $this->type = null;
+    }
 }

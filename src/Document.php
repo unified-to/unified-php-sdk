@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Document 
+class Document
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
      */
-	public function createAtsDocument(
+    public function createAtsDocument(
         ?\Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsDocument", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,37 +47,32 @@ class Document
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
+                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
      */
-	public function getAtsDocument(
+    public function getAtsDocument(
         ?\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -91,37 +81,32 @@ class Document
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
+                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all documents
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
      */
-	public function listAtsDocuments(
+    public function listAtsDocuments(
         ?\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -130,40 +115,35 @@ class Document
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocuments = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsDocument>', 'json');
+                $response->atsDocuments = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsDocument>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
      */
-	public function patchAtsDocument(
+    public function patchAtsDocument(
         ?\Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsDocument", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,36 +152,31 @@ class Document
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
+                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
      */
-	public function removeAtsDocument(
+    public function removeAtsDocument(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -210,42 +185,36 @@ class Document
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
      */
-	public function updateAtsDocument(
+    public function updateAtsDocument(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsDocument", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -254,11 +223,10 @@ class Document
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
+                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
             }
         }
 

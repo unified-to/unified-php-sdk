@@ -8,39 +8,34 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Refund 
+class Refund
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Retrieve a refund
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetPaymentRefundRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentRefundRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentRefundResponse
      */
-	public function getPaymentRefund(
+    public function getPaymentRefund(
         ?\Unified\Unified_to\Models\Operations\GetPaymentRefundRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetPaymentRefundResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetPaymentRefundResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund/{id}', \Unified\Unified_to\Models\Operations\GetPaymentRefundRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetPaymentRefundRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -49,37 +44,32 @@ class Refund
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->paymentRefund = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\PaymentRefund', 'json');
+                $response->paymentRefund = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\PaymentRefund', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all refunds
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse
      */
-	public function listPaymentRefunds(
+    public function listPaymentRefunds(
         ?\Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund', \Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -88,11 +78,10 @@ class Refund
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->paymentRefunds = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\PaymentRefund>', 'json');
+                $response->paymentRefunds = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\PaymentRefund>', 'json');
             }
         }
 

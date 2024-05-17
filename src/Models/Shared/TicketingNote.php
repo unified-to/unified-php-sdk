@@ -11,60 +11,60 @@ namespace Unified\Unified_to\Models\Shared;
 
 class TicketingNote
 {
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('customer_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('customer_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $customerId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('description')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
+
     /**
      * $raw
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('ticket_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('ticket_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $ticketId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('user_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('user_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
-    
-	public function __construct()
-	{
-		$this->createdAt = null;
-		$this->customerId = null;
-		$this->description = null;
-		$this->id = null;
-		$this->raw = null;
-		$this->ticketId = null;
-		$this->updatedAt = null;
-		$this->userId = null;
-	}
+
+    public function __construct()
+    {
+        $this->createdAt = null;
+        $this->customerId = null;
+        $this->description = null;
+        $this->id = null;
+        $this->raw = null;
+        $this->ticketId = null;
+        $this->updatedAt = null;
+        $this->userId = null;
+    }
 }

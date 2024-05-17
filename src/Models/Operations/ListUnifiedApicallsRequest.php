@@ -8,84 +8,84 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-use \Unified\Unified_to\Utils\SpeakeasyMetadata;
+use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListUnifiedApicallsRequest
 {
     /**
      * Filter the results to just this integration's API calls
-     * 
+     *
      * @var ?string $connectionId
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=connection_id')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=connection_id')]
     public ?string $connectionId = null;
-    
+
     /**
      * Return only results whose updated date is equal or less to this value
-     * 
+     *
      * @var ?\DateTime $createdLte
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_lte,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_lte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $createdLte = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
     public ?string $env = null;
-    
+
     /**
      * Filter the results for API Calls with errors
-     * 
+     *
      * @var ?bool $error
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=error')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=error')]
     public ?bool $error = null;
-    
+
     /**
      * Filter the results to only those integrations for your user referenced by this value
-     * 
+     *
      * @var ?string $externalXref
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=external_xref')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=external_xref')]
     public ?string $externalXref = null;
-    
+
     /**
      * Filter the results for connections with this integration
-     * 
+     *
      * @var ?string $integrationType
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=integration_type')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=integration_type')]
     public ?string $integrationType = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
     public ?string $order = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
     public ?string $sort = null;
-    
+
     /**
      * Return only results whose updated date is equal or greater to this value
-     * 
+     *
      * @var ?\DateTime $updatedGte
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
-    
-	public function __construct()
-	{
-		$this->connectionId = null;
-		$this->createdLte = null;
-		$this->env = null;
-		$this->error = null;
-		$this->externalXref = null;
-		$this->integrationType = null;
-		$this->limit = null;
-		$this->offset = null;
-		$this->order = null;
-		$this->sort = null;
-		$this->updatedGte = null;
-	}
+
+    public function __construct()
+    {
+        $this->connectionId = null;
+        $this->createdLte = null;
+        $this->env = null;
+        $this->error = null;
+        $this->externalXref = null;
+        $this->integrationType = null;
+        $this->limit = null;
+        $this->offset = null;
+        $this->order = null;
+        $this->sort = null;
+        $this->updatedGte = null;
+    }
 }

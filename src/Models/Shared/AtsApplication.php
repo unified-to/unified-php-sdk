@@ -13,99 +13,99 @@ class AtsApplication
 {
     /**
      * $answers
-     * 
+     *
      * @var ?array<\Unified\Unified_to\Models\Shared\AtsApplicationAnswer> $answers
      */
-	#[\JMS\Serializer\Annotation\SerializedName('answers')]
+    #[\JMS\Serializer\Annotation\SerializedName('answers')]
     #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsApplicationAnswer>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $answers = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('applied_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('applied_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $appliedAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $candidateId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('hired_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('hired_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $hiredAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('job_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('job_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $jobId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('original_status')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('original_status')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $originalStatus = null;
-    
+
     /**
      * $raw
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('rejected_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('rejected_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $rejectedAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('rejected_reason')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('rejected_reason')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $rejectedReason = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('source')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('source')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $source = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('status')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsApplicationStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsApplicationStatus $status = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
-    
-	public function __construct()
-	{
-		$this->answers = null;
-		$this->appliedAt = null;
-		$this->candidateId = null;
-		$this->createdAt = null;
-		$this->hiredAt = null;
-		$this->id = null;
-		$this->jobId = null;
-		$this->originalStatus = null;
-		$this->raw = null;
-		$this->rejectedAt = null;
-		$this->rejectedReason = null;
-		$this->source = null;
-		$this->status = null;
-		$this->updatedAt = null;
-	}
+
+    public function __construct()
+    {
+        $this->answers = null;
+        $this->appliedAt = null;
+        $this->candidateId = null;
+        $this->createdAt = null;
+        $this->hiredAt = null;
+        $this->id = null;
+        $this->jobId = null;
+        $this->originalStatus = null;
+        $this->raw = null;
+        $this->rejectedAt = null;
+        $this->rejectedReason = null;
+        $this->source = null;
+        $this->status = null;
+        $this->updatedAt = null;
+    }
 }

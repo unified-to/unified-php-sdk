@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Event 
+class Event
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create an event
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateCrmEventRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
      */
-	public function createCrmEvent(
+    public function createCrmEvent(
         ?\Unified\Unified_to\Models\Operations\CreateCrmEventRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateCrmEventResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', \Unified\Unified_to\Models\Operations\CreateCrmEventRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmEvent", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,37 +47,32 @@ class Event
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmEvent = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmEvent', 'json');
+                $response->crmEvent = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmEvent', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve an event
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetCrmEventRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
      */
-	public function getCrmEvent(
+    public function getCrmEvent(
         ?\Unified\Unified_to\Models\Operations\GetCrmEventRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCrmEventResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetCrmEventResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', \Unified\Unified_to\Models\Operations\GetCrmEventRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmEventRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -91,37 +81,32 @@ class Event
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmEvent = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmEvent', 'json');
+                $response->crmEvent = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmEvent', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all events
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListCrmEventsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
      */
-	public function listCrmEvents(
+    public function listCrmEvents(
         ?\Unified\Unified_to\Models\Operations\ListCrmEventsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListCrmEventsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', \Unified\Unified_to\Models\Operations\ListCrmEventsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmEventsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -130,40 +115,35 @@ class Event
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmEvents = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CrmEvent>', 'json');
+                $response->crmEvents = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CrmEvent>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an event
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchCrmEventRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
      */
-	public function patchCrmEvent(
+    public function patchCrmEvent(
         ?\Unified\Unified_to\Models\Operations\PatchCrmEventRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchCrmEventResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', \Unified\Unified_to\Models\Operations\PatchCrmEventRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmEvent", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,36 +152,31 @@ class Event
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmEvent = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmEvent', 'json');
+                $response->crmEvent = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmEvent', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove an event
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
      */
-	public function removeCrmEvent(
+    public function removeCrmEvent(
         ?\Unified\Unified_to\Models\Operations\RemoveCrmEventRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -210,42 +185,36 @@ class Event
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an event
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
      */
-	public function updateCrmEvent(
+    public function updateCrmEvent(
         ?\Unified\Unified_to\Models\Operations\UpdateCrmEventRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "crmEvent", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -254,11 +223,10 @@ class Event
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->crmEvent = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmEvent', 'json');
+                $response->crmEvent = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmEvent', 'json');
             }
         }
 

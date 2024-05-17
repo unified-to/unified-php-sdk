@@ -9,83 +9,78 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/**
- * MarketingMember - A member represents a person
- * 
- * @package Unified\Unified_to\Models\Shared
- * @access public
- */
+/** MarketingMember - A member represents a person */
 class MarketingMember
 {
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
-    
+
     /**
      * An array of email addresses for this member
-     * 
+     *
      * @var ?array<\Unified\Unified_to\Models\Shared\MarketingEmail> $emails
      */
-	#[\JMS\Serializer\Annotation\SerializedName('emails')]
+    #[\JMS\Serializer\Annotation\SerializedName('emails')]
     #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\MarketingEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
+
     /**
      * An array of list IDs associated with this member
-     * 
+     *
      * @var ?array<string> $listIds
      */
-	#[\JMS\Serializer\Annotation\SerializedName('list_ids')]
+    #[\JMS\Serializer\Annotation\SerializedName('list_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $listIds = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('name')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
-    
+
     /**
      * The raw data returned by the integration for this member
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
+
     /**
      * An array of tags associated with this member
-     * 
+     *
      * @var ?array<string> $tags
      */
-	#[\JMS\Serializer\Annotation\SerializedName('tags')]
+    #[\JMS\Serializer\Annotation\SerializedName('tags')]
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
-    
-	public function __construct()
-	{
-		$this->createdAt = null;
-		$this->emails = null;
-		$this->id = null;
-		$this->listIds = null;
-		$this->name = null;
-		$this->raw = null;
-		$this->tags = null;
-		$this->updatedAt = null;
-	}
+
+    public function __construct()
+    {
+        $this->createdAt = null;
+        $this->emails = null;
+        $this->id = null;
+        $this->listIds = null;
+        $this->name = null;
+        $this->raw = null;
+        $this->tags = null;
+        $this->updatedAt = null;
+    }
 }

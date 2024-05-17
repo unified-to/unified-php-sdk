@@ -11,48 +11,48 @@ namespace Unified\Unified_to\Models\Shared;
 
 class EnrichPersonWorkHistory
 {
-	#[\JMS\Serializer\Annotation\SerializedName('company_domain')]
+    #[\JMS\Serializer\Annotation\SerializedName('company_domain')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyDomain = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('company_id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('company_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyId = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('company_name')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('company_name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyName = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('end_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('end_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $endAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('location')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('location')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $location = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('start_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('start_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $startAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('title')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('title')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $title;
-    
-	public function __construct()
-	{
-		$this->companyDomain = null;
-		$this->companyId = null;
-		$this->companyName = null;
-		$this->endAt = null;
-		$this->location = null;
-		$this->startAt = null;
-		$this->title = "";
-	}
+
+    public function __construct()
+    {
+        $this->companyDomain = null;
+        $this->companyId = null;
+        $this->companyName = null;
+        $this->endAt = null;
+        $this->location = null;
+        $this->startAt = null;
+        $this->title = '';
+    }
 }

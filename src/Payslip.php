@@ -8,39 +8,34 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Payslip 
+class Payslip
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Retrieve a payslip
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
      */
-	public function getHrisPayslip(
+    public function getHrisPayslip(
         ?\Unified\Unified_to\Models\Operations\GetHrisPayslipRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip/{id}', \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisPayslipRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -49,37 +44,32 @@ class Payslip
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisPayslip = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisPayslip', 'json');
+                $response->hrisPayslip = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisPayslip', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all payslips
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
      */
-	public function listHrisPayslips(
+    public function listHrisPayslips(
         ?\Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip', \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -88,11 +78,10 @@ class Payslip
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisPayslips = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisPayslip>', 'json');
+                $response->hrisPayslips = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisPayslip>', 'json');
             }
         }
 

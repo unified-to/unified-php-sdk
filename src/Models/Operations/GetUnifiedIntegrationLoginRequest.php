@@ -8,63 +8,63 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-use \Unified\Unified_to\Utils\SpeakeasyMetadata;
+use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class GetUnifiedIntegrationLoginRequest
 {
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
     public ?string $env = null;
-    
+
     /**
      * The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
-     * 
+     *
      * @var ?string $failureRedirect
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=failure_redirect')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=failure_redirect')]
     public ?string $failureRedirect = null;
-    
+
     /**
      * Type of the supported integration
-     * 
+     *
      * @var string $integrationType
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=integration_type')]
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=integration_type')]
     public string $integrationType;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=redirect')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=redirect')]
     public ?bool $redirect = null;
-    
+
     /**
      * Extra state to send back to your success URL
-     * 
+     *
      * @var ?string $state
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=state')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=state')]
     public ?string $state = null;
-    
+
     /**
      * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
-     * 
+     *
      * @var ?string $successRedirect
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=success_redirect')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=success_redirect')]
     public ?string $successRedirect = null;
-    
+
     /**
      * The ID of the workspace
-     * 
+     *
      * @var string $workspaceId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=workspace_id')]
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=workspace_id')]
     public string $workspaceId;
-    
-	public function __construct()
-	{
-		$this->env = null;
-		$this->failureRedirect = null;
-		$this->integrationType = "";
-		$this->redirect = null;
-		$this->state = null;
-		$this->successRedirect = null;
-		$this->workspaceId = "";
-	}
+
+    public function __construct()
+    {
+        $this->env = null;
+        $this->failureRedirect = null;
+        $this->integrationType = '';
+        $this->redirect = null;
+        $this->state = null;
+        $this->successRedirect = null;
+        $this->workspaceId = '';
+    }
 }

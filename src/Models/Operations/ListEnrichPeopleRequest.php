@@ -8,64 +8,64 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-use \Unified\Unified_to\Utils\SpeakeasyMetadata;
+use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListEnrichPeopleRequest
 {
     /**
      * The name of the company the person is associated with.  Not valid by itself.
-     * 
+     *
      * @var ?string $companyName
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_name')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_name')]
     public ?string $companyName = null;
-    
+
     /**
      * ID of the connection
-     * 
+     *
      * @var string $connectionId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-    
+
     /**
      * The email of the person to search
-     * 
+     *
      * @var ?string $email
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=email')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=email')]
     public ?string $email = null;
-    
+
     /**
      * The LinkedIn URL of the person to search
-     * 
+     *
      * @var ?string $linkedinUrl
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=linkedin_url')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=linkedin_url')]
     public ?string $linkedinUrl = null;
-    
+
     /**
      * The name of the person to search
-     * 
+     *
      * @var ?string $name
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=name')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=name')]
     public ?string $name = null;
-    
+
     /**
      * The twitter handle of the person to search
-     * 
+     *
      * @var ?string $twitter
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=twitter')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=twitter')]
     public ?string $twitter = null;
-    
-	public function __construct()
-	{
-		$this->companyName = null;
-		$this->connectionId = "";
-		$this->email = null;
-		$this->linkedinUrl = null;
-		$this->name = null;
-		$this->twitter = null;
-	}
+
+    public function __construct()
+    {
+        $this->companyName = null;
+        $this->connectionId = '';
+        $this->email = null;
+        $this->linkedinUrl = null;
+        $this->name = null;
+        $this->twitter = null;
+    }
 }

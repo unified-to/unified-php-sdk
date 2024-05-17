@@ -9,39 +9,34 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/**
- * PropertyCrmEventTask - The task object, when type = task
- * 
- * @package Unified\Unified_to\Models\Shared
- * @access public
- */
+/** PropertyCrmEventTask - The task object, when type = task */
 class PropertyCrmEventTask
 {
-	#[\JMS\Serializer\Annotation\SerializedName('description')]
+    #[\JMS\Serializer\Annotation\SerializedName('description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('due_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('due_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $dueAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('name')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('status')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventTaskStatus $status = null;
-    
-	public function __construct()
-	{
-		$this->description = null;
-		$this->dueAt = null;
-		$this->name = null;
-		$this->status = null;
-	}
+
+    public function __construct()
+    {
+        $this->description = null;
+        $this->dueAt = null;
+        $this->name = null;
+        $this->status = null;
+    }
 }

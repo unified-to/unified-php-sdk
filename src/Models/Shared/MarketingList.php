@@ -9,50 +9,45 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/**
- * MarketingList - Mailing List
- * 
- * @package Unified\Unified_to\Models\Shared
- * @access public
- */
+/** MarketingList - Mailing List */
 class MarketingList
 {
-	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('id')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('name')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
-    
+
     /**
      * The raw data returned by the integration for this list
-     * 
+     *
      * @var ?array<string, mixed> $raw
      */
-	#[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('updated_at')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
-    
-	public function __construct()
-	{
-		$this->createdAt = null;
-		$this->id = null;
-		$this->name = null;
-		$this->raw = null;
-		$this->updatedAt = null;
-	}
+
+    public function __construct()
+    {
+        $this->createdAt = null;
+        $this->id = null;
+        $this->name = null;
+        $this->raw = null;
+        $this->updatedAt = null;
+    }
 }

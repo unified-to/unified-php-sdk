@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Employee 
+class Employee
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
      */
-	public function createHrisEmployee(
+    public function createHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisEmployee', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,37 +47,32 @@ class Employee
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->hrisEmployee = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
      */
-	public function getHrisEmployee(
+    public function getHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -91,37 +81,32 @@ class Employee
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->hrisEmployee = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all employees
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
      */
-	public function listHrisEmployees(
+    public function listHrisEmployees(
         ?\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -130,40 +115,35 @@ class Employee
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployees = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisEmployee>', 'json');
+                $response->hrisEmployees = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisEmployee>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
      */
-	public function patchHrisEmployee(
+    public function patchHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisEmployee', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,36 +152,31 @@ class Employee
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->hrisEmployee = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
      */
-	public function removeHrisEmployee(
+    public function removeHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -210,42 +185,36 @@ class Employee
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an employee
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
      */
-	public function updateHrisEmployee(
+    public function updateHrisEmployee(
         ?\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "hrisEmployee", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisEmployee', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -254,11 +223,10 @@ class Employee
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->hrisEmployee = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
+                $response->hrisEmployee = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisEmployee', 'json');
             }
         }
 

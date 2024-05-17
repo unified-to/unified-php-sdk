@@ -8,48 +8,48 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-use \Unified\Unified_to\Utils\SpeakeasyMetadata;
+use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListUnifiedWebhooksRequest
 {
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
     public ?string $env = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
-    
+
     /**
      * Filter the results for webhooks for only this object
-     * 
+     *
      * @var ?string $object
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=object')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=object')]
     public ?string $object = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
     public ?string $order = null;
-    
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
+
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
     public ?string $sort = null;
-    
+
     /**
      * Return only results whose updated date is equal or greater to this value
-     * 
+     *
      * @var ?\DateTime $updatedGte
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
-    
-	public function __construct()
-	{
-		$this->env = null;
-		$this->limit = null;
-		$this->object = null;
-		$this->offset = null;
-		$this->order = null;
-		$this->sort = null;
-		$this->updatedGte = null;
-	}
+
+    public function __construct()
+    {
+        $this->env = null;
+        $this->limit = null;
+        $this->object = null;
+        $this->offset = null;
+        $this->order = null;
+        $this->sort = null;
+        $this->updatedGte = null;
+    }
 }

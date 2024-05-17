@@ -11,36 +11,36 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsCompensation
 {
-	#[\JMS\Serializer\Annotation\SerializedName('currency')]
+    #[\JMS\Serializer\Annotation\SerializedName('currency')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('frequency')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('frequency')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Frequency>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Frequency $frequency = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('max')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('max')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $max = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('min')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('min')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $min = null;
-    
-	#[\JMS\Serializer\Annotation\SerializedName('type')]
+
+    #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsCompensationType>')]
     public AtsCompensationType $type;
-    
-	public function __construct()
-	{
-		$this->currency = null;
-		$this->frequency = null;
-		$this->max = null;
-		$this->min = null;
-		$this->type = \Unified\Unified_to\Models\Shared\AtsCompensationType::Salary;
-	}
+
+    public function __construct()
+    {
+        $this->currency = null;
+        $this->frequency = null;
+        $this->max = null;
+        $this->min = null;
+        $this->type = \Unified\Unified_to\Models\Shared\AtsCompensationType::Salary;
+    }
 }

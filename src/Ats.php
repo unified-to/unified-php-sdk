@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Ats 
+class Ats
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create an activity
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
      */
-	public function createAtsActivity(
+    public function createAtsActivity(
         ?\Unified\Unified_to\Models\Operations\CreateAtsActivityRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity', \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsActivity", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsActivity', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,40 +47,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsActivity = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
+                $response->atsActivity = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create an application
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
      */
-	public function createAtsApplication(
+    public function createAtsApplication(
         ?\Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsApplication", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsApplication', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -94,40 +84,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsApplication = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsApplication', 'json');
+                $response->atsApplication = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsApplication', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
      */
-	public function createAtsCandidate(
+    public function createAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate', \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsCandidate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsCandidate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -136,40 +121,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
+                $response->atsCandidate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
      */
-	public function createAtsDocument(
+    public function createAtsDocument(
         ?\Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsDocument", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -178,40 +158,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
+                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create an interview
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
      */
-	public function createAtsInterview(
+    public function createAtsInterview(
         ?\Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsInterview", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsInterview', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -220,40 +195,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
+                $response->atsInterview = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create a job
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
      */
-	public function createAtsJob(
+    public function createAtsJob(
         ?\Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', \Unified\Unified_to\Models\Operations\CreateAtsJobRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsJob", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsJob', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -262,40 +232,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
+                $response->atsJob = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Create a scorecard
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
      */
-	public function createAtsScorecard(
+    public function createAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsScorecard", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsScorecard', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -304,37 +269,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
+                $response->atsScorecard = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve an activity
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsActivityRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
      */
-	public function getAtsActivity(
+    public function getAtsActivity(
         ?\Unified\Unified_to\Models\Operations\GetAtsActivityRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsActivityResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', \Unified\Unified_to\Models\Operations\GetAtsActivityRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsActivityRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -343,37 +303,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsActivity = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
+                $response->atsActivity = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve an application
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
      */
-	public function getAtsApplication(
+    public function getAtsApplication(
         ?\Unified\Unified_to\Models\Operations\GetAtsApplicationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsApplicationRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -382,37 +337,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsApplication = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsApplication', 'json');
+                $response->atsApplication = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsApplication', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
      */
-	public function getAtsCandidate(
+    public function getAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\GetAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsCandidateRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -421,37 +371,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
+                $response->atsCandidate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a company
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
      */
-	public function getAtsCompany(
+    public function getAtsCompany(
         ?\Unified\Unified_to\Models\Operations\GetAtsCompanyRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsCompanyRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -460,37 +405,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCompany = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCompany', 'json');
+                $response->atsCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCompany', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
      */
-	public function getAtsDocument(
+    public function getAtsDocument(
         ?\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -499,37 +439,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
+                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve an interview
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
      */
-	public function getAtsInterview(
+    public function getAtsInterview(
         ?\Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsInterviewRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -538,37 +473,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
+                $response->atsInterview = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a job
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsJobRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
      */
-	public function getAtsJob(
+    public function getAtsJob(
         ?\Unified\Unified_to\Models\Operations\GetAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsJobResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\GetAtsJobRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsJobRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -577,37 +507,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
+                $response->atsJob = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a scorecard
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
      */
-	public function getAtsScorecard(
+    public function getAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\GetAtsScorecardRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsScorecardRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -616,37 +541,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
+                $response->atsScorecard = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all activities
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
      */
-	public function listAtsActivities(
+    public function listAtsActivities(
         ?\Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity', \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -655,37 +575,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsActivities = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsActivity>', 'json');
+                $response->atsActivities = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsActivity>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all applications
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
      */
-	public function listAtsApplications(
+    public function listAtsApplications(
         ?\Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -694,37 +609,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsApplications = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsApplication>', 'json');
+                $response->atsApplications = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsApplication>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all applicationstatuses
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
      */
-	public function listAtsApplicationstatuses(
+    public function listAtsApplicationstatuses(
         ?\Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/applicationstatus', \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -733,37 +643,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsStatuses = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsStatus>', 'json');
+                $response->atsStatuses = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsStatus>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all candidates
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
      */
-	public function listAtsCandidates(
+    public function listAtsCandidates(
         ?\Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate', \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -772,37 +677,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidates = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsCandidate>', 'json');
+                $response->atsCandidates = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsCandidate>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all companies
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
      */
-	public function listAtsCompanies(
+    public function listAtsCompanies(
         ?\Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company', \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -811,37 +711,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCompanies = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsCompany>', 'json');
+                $response->atsCompanies = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsCompany>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all documents
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
      */
-	public function listAtsDocuments(
+    public function listAtsDocuments(
         ?\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -850,37 +745,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocuments = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsDocument>', 'json');
+                $response->atsDocuments = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsDocument>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all interviews
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
      */
-	public function listAtsInterviews(
+    public function listAtsInterviews(
         ?\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -889,37 +779,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterviews = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsInterview>', 'json');
+                $response->atsInterviews = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsInterview>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all jobs
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsJobsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
      */
-	public function listAtsJobs(
+    public function listAtsJobs(
         ?\Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsJobsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', \Unified\Unified_to\Models\Operations\ListAtsJobsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsJobsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -928,37 +813,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJobs = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsJob>', 'json');
+                $response->atsJobs = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsJob>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all scorecards
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
      */
-	public function listAtsScorecards(
+    public function listAtsScorecards(
         ?\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -967,40 +847,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsScorecards = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsScorecard>', 'json');
+                $response->atsScorecards = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsScorecard>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an activity
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
      */
-	public function patchAtsActivity(
+    public function patchAtsActivity(
         ?\Unified\Unified_to\Models\Operations\PatchAtsActivityRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsActivity", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsActivity', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1009,40 +884,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsActivity = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
+                $response->atsActivity = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an application
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
      */
-	public function patchAtsApplication(
+    public function patchAtsApplication(
         ?\Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsApplication", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsApplication', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1051,40 +921,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsApplication = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsApplication', 'json');
+                $response->atsApplication = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsApplication', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
      */
-	public function patchAtsCandidate(
+    public function patchAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsCandidate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsCandidate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1093,40 +958,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
+                $response->atsCandidate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
      */
-	public function patchAtsDocument(
+    public function patchAtsDocument(
         ?\Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsDocument", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1135,40 +995,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
+                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an interview
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
      */
-	public function patchAtsInterview(
+    public function patchAtsInterview(
         ?\Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsInterview", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsInterview', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1177,40 +1032,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
+                $response->atsInterview = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a job
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
      */
-	public function patchAtsJob(
+    public function patchAtsJob(
         ?\Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\PatchAtsJobRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsJob", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsJob', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1219,40 +1069,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
+                $response->atsJob = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a scorecard
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
      */
-	public function patchAtsScorecard(
+    public function patchAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsScorecard", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsScorecard', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1261,36 +1106,31 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
+                $response->atsScorecard = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove an activity
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
      */
-	public function removeAtsActivity(
+    public function removeAtsActivity(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1299,38 +1139,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove an application
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
      */
-	public function removeAtsApplication(
+    public function removeAtsApplication(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1339,38 +1173,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
      */
-	public function removeAtsCandidate(
+    public function removeAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1379,38 +1207,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
      */
-	public function removeAtsDocument(
+    public function removeAtsDocument(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1419,38 +1241,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove an interview
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
      */
-	public function removeAtsInterview(
+    public function removeAtsInterview(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1459,38 +1275,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a job
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
      */
-	public function removeAtsJob(
+    public function removeAtsJob(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1499,38 +1309,32 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a scorecard
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
      */
-	public function removeAtsScorecard(
+    public function removeAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1539,42 +1343,36 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an activity
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
      */
-	public function updateAtsActivity(
+    public function updateAtsActivity(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsActivity", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsActivity', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1583,40 +1381,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsActivity = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
+                $response->atsActivity = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsActivity', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an application
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
      */
-	public function updateAtsApplication(
+    public function updateAtsApplication(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsApplication", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsApplication', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1625,40 +1418,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsApplication = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsApplication', 'json');
+                $response->atsApplication = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsApplication', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
      */
-	public function updateAtsCandidate(
+    public function updateAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsCandidate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsCandidate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1667,40 +1455,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
+                $response->atsCandidate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a document
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
      */
-	public function updateAtsDocument(
+    public function updateAtsDocument(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsDocument", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1709,40 +1492,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
+                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update an interview
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
      */
-	public function updateAtsInterview(
+    public function updateAtsInterview(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsInterview", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsInterview', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1751,40 +1529,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
+                $response->atsInterview = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a job
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
      */
-	public function updateAtsJob(
+    public function updateAtsJob(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsJob", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsJob', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1793,40 +1566,35 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
+                $response->atsJob = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a scorecard
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
      */
-	public function updateAtsScorecard(
+    public function updateAtsScorecard(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsScorecard", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsScorecard', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -1835,11 +1603,10 @@ class Ats
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsScorecard = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
+                $response->atsScorecard = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsScorecard', 'json');
             }
         }
 

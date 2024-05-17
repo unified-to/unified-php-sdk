@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Transaction 
+class Transaction
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create a transaction
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
      */
-	public function createAccountingTransaction(
+    public function createAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction', \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingTransaction", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'accountingTransaction', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,37 +47,32 @@ class Transaction
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTransaction = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTransaction', 'json');
+                $response->accountingTransaction = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTransaction', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a transaction
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
      */
-	public function getAccountingTransaction(
+    public function getAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -91,37 +81,32 @@ class Transaction
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTransaction = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTransaction', 'json');
+                $response->accountingTransaction = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTransaction', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all transactions
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
      */
-	public function listAccountingTransactions(
+    public function listAccountingTransactions(
         ?\Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction', \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -130,40 +115,35 @@ class Transaction
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTransactions = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AccountingTransaction>', 'json');
+                $response->accountingTransactions = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AccountingTransaction>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a transaction
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
      */
-	public function patchAccountingTransaction(
+    public function patchAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingTransaction", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'accountingTransaction', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,36 +152,31 @@ class Transaction
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTransaction = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTransaction', 'json');
+                $response->accountingTransaction = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTransaction', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a transaction
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
      */
-	public function removeAccountingTransaction(
+    public function removeAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -210,42 +185,36 @@ class Transaction
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a transaction
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse
      */
-	public function updateAccountingTransaction(
+    public function updateAccountingTransaction(
         ?\Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "accountingTransaction", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'accountingTransaction', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -254,11 +223,10 @@ class Transaction
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountingTransaction = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTransaction', 'json');
+                $response->accountingTransaction = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AccountingTransaction', 'json');
             }
         }
 

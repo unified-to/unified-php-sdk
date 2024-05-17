@@ -8,42 +8,37 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-class Candidate 
+class Candidate
 {
+    private SDKConfiguration $sdkConfiguration;
 
-	private SDKConfiguration $sdkConfiguration;
+    /**
+     * @param  SDKConfiguration  $sdkConfig
+     */
+    public function __construct(SDKConfiguration $sdkConfig)
+    {
+        $this->sdkConfiguration = $sdkConfig;
+    }
 
-	/**
-	 * @param SDKConfiguration $sdkConfig
-	 */
-	public function __construct(SDKConfiguration $sdkConfig)
-	{
-		$this->sdkConfiguration = $sdkConfig;
-	}
-	
     /**
      * Create a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
      */
-	public function createAtsCandidate(
+    public function createAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate', \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsCandidate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsCandidate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -52,37 +47,32 @@ class Candidate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
+                $response->atsCandidate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Retrieve a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
      */
-	public function getAtsCandidate(
+    public function getAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\GetAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsCandidateRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -91,37 +81,32 @@ class Candidate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
+                $response->atsCandidate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * List all candidates
-     * 
-     * @param \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
      */
-	public function listAtsCandidates(
+    public function listAtsCandidates(
         ?\Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate', \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -130,40 +115,35 @@ class Candidate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidates = $serializer->deserialize((string)$httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsCandidate>', 'json');
+                $response->atsCandidates = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsCandidate>', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
      */
-	public function patchAtsCandidate(
+    public function patchAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsCandidate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsCandidate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -172,36 +152,31 @@ class Candidate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
+                $response->atsCandidate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Remove a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
      */
-	public function removeAtsCandidate(
+    public function removeAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -210,42 +185,36 @@ class Candidate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
-        }
-        else {
+        } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
             }
         }
 
         return $response;
     }
-	
+
     /**
      * Update a candidate
-     * 
-     * @param \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest $request
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
      */
-	public function updateAtsCandidate(
+    public function updateAtsCandidate(
         ?\Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
-    {
+    ): \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest::class, $request);
-        
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "atsCandidate", "json");
+        $body = Utils\Utils::serializeRequestBody($request, 'atsCandidate', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-        
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
-        
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
@@ -254,11 +223,10 @@ class Candidate
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
-        
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsCandidate = $serializer->deserialize((string)$httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
+                $response->atsCandidate = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsCandidate', 'json');
             }
         }
 
