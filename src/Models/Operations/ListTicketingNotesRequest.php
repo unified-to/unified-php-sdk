@@ -19,6 +19,9 @@ class ListTicketingNotesRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=customer_id')]
+    public ?string $customerId = null;
+
     /**
      * Comma-delimited fields to return
      *
@@ -61,6 +64,7 @@ class ListTicketingNotesRequest
     public function __construct()
     {
         $this->connectionId = '';
+        $this->customerId = null;
         $this->fields = null;
         $this->limit = null;
         $this->offset = null;

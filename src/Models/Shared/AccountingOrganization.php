@@ -43,7 +43,8 @@ class AccountingOrganization
 
     #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $name;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $name = null;
 
     /**
      * $raw
@@ -83,7 +84,7 @@ class AccountingOrganization
         $this->fiscalYearEndMonth = null;
         $this->id = null;
         $this->legalName = null;
-        $this->name = '';
+        $this->name = null;
         $this->raw = null;
         $this->taxNumber = null;
         $this->timezone = null;

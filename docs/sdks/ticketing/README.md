@@ -452,6 +452,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListTicketingNotesRequest();
     $request->connectionId = '<value>';
+    $request->customerId = '<value>';
     $request->fields = [
         '<value>',
     ];
