@@ -48,7 +48,13 @@ class AccountingAccount
 
     #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $name;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $name = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('parent_account_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $parentAccountId = null;
 
     /**
      * $raw
@@ -84,7 +90,8 @@ class AccountingAccount
         $this->description = null;
         $this->id = null;
         $this->isPayable = null;
-        $this->name = '';
+        $this->name = null;
+        $this->parentAccountId = null;
         $this->raw = null;
         $this->status = null;
         $this->type = null;

@@ -51,6 +51,7 @@ try {
     $request->accountingAccount->id = '<id>';
     $request->accountingAccount->isPayable = false;
     $request->accountingAccount->name = '<value>';
+    $request->accountingAccount->parentAccountId = '<value>';
     $request->accountingAccount->raw = [
         'Ruble' => '<value>',
     ];

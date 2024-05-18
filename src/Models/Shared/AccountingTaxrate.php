@@ -33,11 +33,13 @@ class AccountingTaxrate
 
     #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $name;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $name = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('rate')]
     #[\JMS\Serializer\Annotation\Type('float')]
-    public float $rate;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $rate = null;
 
     /**
      * $raw
@@ -60,8 +62,8 @@ class AccountingTaxrate
         $this->description = null;
         $this->id = null;
         $this->isActive = null;
-        $this->name = '';
-        $this->rate = 0;
+        $this->name = null;
+        $this->rate = null;
         $this->raw = null;
         $this->updatedAt = null;
     }

@@ -13,7 +13,8 @@ class AccountingTransactionLineitem
 {
     #[\JMS\Serializer\Annotation\SerializedName('account_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $accountId;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $accountId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -47,17 +48,18 @@ class AccountingTransactionLineitem
 
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
-    public float $totalAmount;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $totalAmount = null;
 
     public function __construct()
     {
-        $this->accountId = '';
+        $this->accountId = null;
         $this->contactId = null;
         $this->description = null;
         $this->id = null;
         $this->invoiceId = null;
         $this->paymentId = null;
         $this->taxAmount = null;
-        $this->totalAmount = 0;
+        $this->totalAmount = null;
     }
 }

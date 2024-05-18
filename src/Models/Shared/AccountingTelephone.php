@@ -13,7 +13,8 @@ class AccountingTelephone
 {
     #[\JMS\Serializer\Annotation\SerializedName('telephone')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $telephone;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $telephone = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingTelephoneType>')]
@@ -22,7 +23,7 @@ class AccountingTelephone
 
     public function __construct()
     {
-        $this->telephone = '';
+        $this->telephone = null;
         $this->type = null;
     }
 }

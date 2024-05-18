@@ -34,11 +34,13 @@ class UnifiedToBuilder
     /**
      * setSecurity is used to configure the security required for the SDK.
      *
-     * @param  Models\Shared\Security  $security
+     * @param  string  $jwt
      * @return UnifiedToBuilder
      */
-    public function setSecurity(Models\Shared\Security $security): UnifiedToBuilder
+    public function setSecurity(string $jwt): UnifiedToBuilder
     {
+        $security = new Models\Shared\Security();
+        $security->jwt = $jwt;
         $this->sdkConfig->security = $security;
 
         return $this;

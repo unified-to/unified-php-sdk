@@ -28,7 +28,8 @@ class AccountingTransaction
 
     #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $id;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $id = null;
 
     /**
      * new field name
@@ -75,7 +76,7 @@ class AccountingTransaction
         $this->createdAt = null;
         $this->currency = null;
         $this->description = null;
-        $this->id = '';
+        $this->id = null;
         $this->lineitems = null;
         $this->raw = null;
         $this->reference = null;

@@ -13,7 +13,8 @@ class AccountingEmail
 {
     #[\JMS\Serializer\Annotation\SerializedName('email')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $email;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $email = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingEmailType>')]
@@ -22,7 +23,7 @@ class AccountingEmail
 
     public function __construct()
     {
-        $this->email = '';
+        $this->email = null;
         $this->type = null;
     }
 }
