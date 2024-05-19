@@ -18,12 +18,11 @@ class AccountingContactPaymentMethod
 
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AccountingContactPaymentMethodType $type = null;
+    public AccountingContactPaymentMethodType $type;
 
     public function __construct()
     {
         $this->name = null;
-        $this->type = null;
+        $this->type = \Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType::Ach;
     }
 }
