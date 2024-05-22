@@ -25,4 +25,6 @@ enum ListUnifiedIntegrationsQueryParamCategories: string
     case Commerce = 'commerce';
     case Payment = 'payment';
     case Genai = 'genai';
+    case Messaging = 'messaging';
+    case Kms = 'kms';
 }

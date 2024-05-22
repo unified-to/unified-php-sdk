@@ -38,7 +38,7 @@ try {
     $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisTimeoffWrite,
+        Operations\Scopes::MessagingMessageRead,
     ];
     $request->state = 'New Jersey';
     $request->subdomain = '<value>';
@@ -93,7 +93,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        Operations\QueryParamCategories::Storage,
+        Operations\QueryParamCategories::Payment,
     ];
     $request->env = '<value>';
     $request->limit = 9072.99;

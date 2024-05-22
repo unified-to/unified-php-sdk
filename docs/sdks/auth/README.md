@@ -37,7 +37,7 @@ try {
     $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisTimeoffWrite,
+        Operations\Scopes::MessagingMessageRead,
     ];
     $request->state = 'New Jersey';
     $request->subdomain = '<value>';

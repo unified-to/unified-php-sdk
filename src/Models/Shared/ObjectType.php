@@ -57,4 +57,8 @@ enum ObjectType: string
     case StorageFile = 'storage_file';
     case GenaiModel = 'genai_model';
     case GenaiPrompt = 'genai_prompt';
+    case MessagingMessage = 'messaging_message';
+    case MessagingChannel = 'messaging_channel';
+    case KmsSpace = 'kms_space';
+    case KmsPage = 'kms_page';
 }

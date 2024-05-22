@@ -78,7 +78,7 @@ try {
     $request->auth->tokenUrl = '<value>';
     $request->authAwsArn = '<value>';
     $request->categories = [
-        Shared\PropertyConnectionCategories::Uc,
+        Shared\PropertyConnectionCategories::Accounting,
     ];
     $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-05T07:37:37.431Z');
     $request->cursorsCache = [
@@ -92,7 +92,7 @@ try {
     $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-21T18:48:43.528Z');
     $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T14:41:39.477Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::HrisEmployeeRead,
+        Shared\PropertyConnectionPermissions::HrisTimeoffWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T14:19:55.077Z');
     $request->workspaceId = '<value>';;
@@ -161,7 +161,7 @@ try {
     $request->webhook->meta = [
         'tune' => '<value>',
     ];
-    $request->webhook->objectType = Shared\ObjectType::CommerceLocation;
+    $request->webhook->objectType = Shared\ObjectType::AtsActivity;
     $request->webhook->pageMaxLimit = 4025.83;
     $request->webhook->runs = [
         '<value>',
@@ -320,7 +320,7 @@ try {
     $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::HrisTimeoffWrite,
+        Operations\Scopes::MessagingMessageRead,
     ];
     $request->state = 'New Jersey';
     $request->subdomain = '<value>';
@@ -480,7 +480,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListUnifiedConnectionsRequest();
     $request->categories = [
-        Operations\Categories::Ticketing,
+        Operations\Categories::Uc,
     ];
     $request->env = '<value>';
     $request->externalXref = '<value>';
@@ -538,7 +538,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        Operations\QueryParamCategories::Storage,
+        Operations\QueryParamCategories::Payment,
     ];
     $request->env = '<value>';
     $request->limit = 9072.99;
@@ -829,7 +829,7 @@ try {
     $request->connection->auth->tokenUrl = '<value>';
     $request->connection->authAwsArn = '<value>';
     $request->connection->categories = [
-        Shared\PropertyConnectionCategories::Ticketing,
+        Shared\PropertyConnectionCategories::Uc,
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T05:49:12.923Z');
     $request->connection->cursorsCache = [
@@ -843,7 +843,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-03T13:20:07.463Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T11:43:14.112Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::GenaiModelRead,
+        Shared\PropertyConnectionPermissions::KmsPageRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-20T21:38:39.955Z');
     $request->connection->workspaceId = '<value>';
@@ -1072,7 +1072,7 @@ try {
     $request->connection->auth->tokenUrl = '<value>';
     $request->connection->authAwsArn = '<value>';
     $request->connection->categories = [
-        Shared\PropertyConnectionCategories::Martech,
+        Shared\PropertyConnectionCategories::Ticketing,
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-08T19:30:51.046Z');
     $request->connection->cursorsCache = [
@@ -1086,7 +1086,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T16:11:04.721Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-20T19:30:15.010Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::HrisTimeoffWrite,
+        Shared\PropertyConnectionPermissions::MessagingMessageRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T13:28:25.633Z');
     $request->connection->workspaceId = '<value>';

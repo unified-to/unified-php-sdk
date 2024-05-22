@@ -1,0 +1,10 @@
+# PatchMessagingMessageRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `messagingMessage`                                                                             | [?\Unified\Unified_to\Models\Shared\MessagingMessage](../../Models/Shared/MessagingMessage.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `connectionId`                                                                                 | *string*                                                                                       | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
+| `id`                                                                                           | *string*                                                                                       | :heavy_check_mark:                                                                             | ID of the Message                                                                              |

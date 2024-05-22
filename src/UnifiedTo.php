@@ -92,11 +92,23 @@ class UnifiedTo
 
     public Timeoff $timeoff;
 
+    public Kms $kms;
+
+    public Page $page;
+
+    public Space $space;
+
     public Martech $martech;
 
     public ListT $list;
 
     public Member $member;
+
+    public Messaging $messaging;
+
+    public Channel $channel;
+
+    public Message $message;
 
     public Passthrough $passthrough;
 
@@ -193,9 +205,15 @@ class UnifiedTo
         $this->group = new Group($this->sdkConfiguration);
         $this->payslip = new Payslip($this->sdkConfiguration);
         $this->timeoff = new Timeoff($this->sdkConfiguration);
+        $this->kms = new Kms($this->sdkConfiguration);
+        $this->page = new Page($this->sdkConfiguration);
+        $this->space = new Space($this->sdkConfiguration);
         $this->martech = new Martech($this->sdkConfiguration);
         $this->list = new ListT($this->sdkConfiguration);
         $this->member = new Member($this->sdkConfiguration);
+        $this->messaging = new Messaging($this->sdkConfiguration);
+        $this->channel = new Channel($this->sdkConfiguration);
+        $this->message = new Message($this->sdkConfiguration);
         $this->passthrough = new Passthrough($this->sdkConfiguration);
         $this->payment = new Payment($this->sdkConfiguration);
         $this->link = new Link($this->sdkConfiguration);

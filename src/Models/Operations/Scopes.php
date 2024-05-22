@@ -90,4 +90,13 @@ enum Scopes: string
     case GenaiModelRead = 'genai_model_read';
     case GenaiPromptRead = 'genai_prompt_read';
     case GenaiPromptWrite = 'genai_prompt_write';
+    case MessagingMessageRead = 'messaging_message_read';
+    case MessagingMessageWrite = 'messaging_message_write';
+    case MessagingChannelRead = 'messaging_channel_read';
+    case KmsSpaceRead = 'kms_space_read';
+    case KmsSpaceWrite = 'kms_space_write';
+    case KmsPageRead = 'kms_page_read';
+    case KmsPageWrite = 'kms_page_write';
+    case KmsCommentRead = 'kms_comment_read';
+    case KmsCommentWrite = 'kms_comment_write';
 }

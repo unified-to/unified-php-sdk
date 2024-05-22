@@ -36,6 +36,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listCandidateId = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('list_channel_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listChannelId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('list_collection_id')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -131,6 +136,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listSortByUpdatedAt = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('list_space_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listSpaceId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('list_ticket_id')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -207,6 +217,7 @@ class IntegrationSupport
         $this->listAccountId = null;
         $this->listApplicationId = null;
         $this->listCandidateId = null;
+        $this->listChannelId = null;
         $this->listCollectionId = null;
         $this->listCompanyId = null;
         $this->listContactId = null;
@@ -226,6 +237,7 @@ class IntegrationSupport
         $this->listSortByCreatedAt = null;
         $this->listSortByName = null;
         $this->listSortByUpdatedAt = null;
+        $this->listSpaceId = null;
         $this->listTicketId = null;
         $this->listType = null;
         $this->listUpdatedGte = null;

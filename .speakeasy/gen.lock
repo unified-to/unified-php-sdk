@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: e504248c88a06ddf4269b16d158025db
+  docChecksum: 06471d8199180f3f0c4d0f6efbb9b3a0
   docVersion: "1.0"
-  speakeasyVersion: 1.293.1
+  speakeasyVersion: 1.295.0
   generationVersion: 2.333.3
-  releaseVersion: 0.15.2
-  configChecksum: ea74a1c85f0692644b7ccf197190eb66
+  releaseVersion: 0.15.3
+  configChecksum: b235600841693d5ced90ab09287be8d7
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -56,9 +56,15 @@ generatedFiles:
   - src/Group.php
   - src/Payslip.php
   - src/Timeoff.php
+  - src/Kms.php
+  - src/Page.php
+  - src/Space.php
   - src/Martech.php
   - src/ListT.php
   - src/Member.php
+  - src/Messaging.php
+  - src/Channel.php
+  - src/Message.php
   - src/Passthrough.php
   - src/Payment.php
   - src/Link.php
@@ -428,6 +434,30 @@ generatedFiles:
   - src/Models/Operations/UpdateHrisEmployeeResponse.php
   - src/Models/Operations/UpdateHrisGroupRequest.php
   - src/Models/Operations/UpdateHrisGroupResponse.php
+  - src/Models/Operations/CreateKmsPageRequest.php
+  - src/Models/Operations/CreateKmsPageResponse.php
+  - src/Models/Operations/CreateKmsSpaceRequest.php
+  - src/Models/Operations/CreateKmsSpaceResponse.php
+  - src/Models/Operations/GetKmsPageRequest.php
+  - src/Models/Operations/GetKmsPageResponse.php
+  - src/Models/Operations/GetKmsSpaceRequest.php
+  - src/Models/Operations/GetKmsSpaceResponse.php
+  - src/Models/Operations/ListKmsPagesRequest.php
+  - src/Models/Operations/ListKmsPagesResponse.php
+  - src/Models/Operations/ListKmsSpacesRequest.php
+  - src/Models/Operations/ListKmsSpacesResponse.php
+  - src/Models/Operations/PatchKmsPageRequest.php
+  - src/Models/Operations/PatchKmsPageResponse.php
+  - src/Models/Operations/PatchKmsSpaceRequest.php
+  - src/Models/Operations/PatchKmsSpaceResponse.php
+  - src/Models/Operations/RemoveKmsPageRequest.php
+  - src/Models/Operations/RemoveKmsPageResponse.php
+  - src/Models/Operations/RemoveKmsSpaceRequest.php
+  - src/Models/Operations/RemoveKmsSpaceResponse.php
+  - src/Models/Operations/UpdateKmsPageRequest.php
+  - src/Models/Operations/UpdateKmsPageResponse.php
+  - src/Models/Operations/UpdateKmsSpaceRequest.php
+  - src/Models/Operations/UpdateKmsSpaceResponse.php
   - src/Models/Operations/CreateMartechListRequest.php
   - src/Models/Operations/CreateMartechListResponse.php
   - src/Models/Operations/CreateMartechMemberRequest.php
@@ -452,6 +482,22 @@ generatedFiles:
   - src/Models/Operations/UpdateMartechListResponse.php
   - src/Models/Operations/UpdateMartechMemberRequest.php
   - src/Models/Operations/UpdateMartechMemberResponse.php
+  - src/Models/Operations/CreateMessagingMessageRequest.php
+  - src/Models/Operations/CreateMessagingMessageResponse.php
+  - src/Models/Operations/GetMessagingChannelRequest.php
+  - src/Models/Operations/GetMessagingChannelResponse.php
+  - src/Models/Operations/GetMessagingMessageRequest.php
+  - src/Models/Operations/GetMessagingMessageResponse.php
+  - src/Models/Operations/ListMessagingChannelsRequest.php
+  - src/Models/Operations/ListMessagingChannelsResponse.php
+  - src/Models/Operations/ListMessagingMessagesRequest.php
+  - src/Models/Operations/ListMessagingMessagesResponse.php
+  - src/Models/Operations/PatchMessagingMessageRequest.php
+  - src/Models/Operations/PatchMessagingMessageResponse.php
+  - src/Models/Operations/RemoveMessagingMessageRequest.php
+  - src/Models/Operations/RemoveMessagingMessageResponse.php
+  - src/Models/Operations/UpdateMessagingMessageRequest.php
+  - src/Models/Operations/UpdateMessagingMessageResponse.php
   - src/Models/Operations/CreatePassthroughRequest.php
   - src/Models/Operations/CreatePassthroughResponse.php
   - src/Models/Operations/ListPassthroughsRequest.php
@@ -711,10 +757,17 @@ generatedFiles:
   - src/Models/Shared/HrisTimeoffStatus.php
   - src/Models/Shared/HrisTimeoffType.php
   - src/Models/Shared/HrisTimeoff.php
+  - src/Models/Shared/KmsPageType.php
+  - src/Models/Shared/KmsPage.php
+  - src/Models/Shared/KmsSpace.php
   - src/Models/Shared/MarketingList.php
   - src/Models/Shared/MarketingMember.php
   - src/Models/Shared/MarketingEmailType.php
   - src/Models/Shared/MarketingEmail.php
+  - src/Models/Shared/MessagingMessage.php
+  - src/Models/Shared/MessagingMember.php
+  - src/Models/Shared/PropertyMessagingMessageAuthorMember.php
+  - src/Models/Shared/MessagingChannel.php
   - src/Models/Shared/PaymentLink.php
   - src/Models/Shared/PaymentLinkLineitem.php
   - src/Models/Shared/PaymentPayment.php
@@ -1085,6 +1138,30 @@ generatedFiles:
   - docs/Models/Operations/UpdateHrisEmployeeResponse.md
   - docs/Models/Operations/UpdateHrisGroupRequest.md
   - docs/Models/Operations/UpdateHrisGroupResponse.md
+  - docs/Models/Operations/CreateKmsPageRequest.md
+  - docs/Models/Operations/CreateKmsPageResponse.md
+  - docs/Models/Operations/CreateKmsSpaceRequest.md
+  - docs/Models/Operations/CreateKmsSpaceResponse.md
+  - docs/Models/Operations/GetKmsPageRequest.md
+  - docs/Models/Operations/GetKmsPageResponse.md
+  - docs/Models/Operations/GetKmsSpaceRequest.md
+  - docs/Models/Operations/GetKmsSpaceResponse.md
+  - docs/Models/Operations/ListKmsPagesRequest.md
+  - docs/Models/Operations/ListKmsPagesResponse.md
+  - docs/Models/Operations/ListKmsSpacesRequest.md
+  - docs/Models/Operations/ListKmsSpacesResponse.md
+  - docs/Models/Operations/PatchKmsPageRequest.md
+  - docs/Models/Operations/PatchKmsPageResponse.md
+  - docs/Models/Operations/PatchKmsSpaceRequest.md
+  - docs/Models/Operations/PatchKmsSpaceResponse.md
+  - docs/Models/Operations/RemoveKmsPageRequest.md
+  - docs/Models/Operations/RemoveKmsPageResponse.md
+  - docs/Models/Operations/RemoveKmsSpaceRequest.md
+  - docs/Models/Operations/RemoveKmsSpaceResponse.md
+  - docs/Models/Operations/UpdateKmsPageRequest.md
+  - docs/Models/Operations/UpdateKmsPageResponse.md
+  - docs/Models/Operations/UpdateKmsSpaceRequest.md
+  - docs/Models/Operations/UpdateKmsSpaceResponse.md
   - docs/Models/Operations/CreateMartechListRequest.md
   - docs/Models/Operations/CreateMartechListResponse.md
   - docs/Models/Operations/CreateMartechMemberRequest.md
@@ -1109,6 +1186,22 @@ generatedFiles:
   - docs/Models/Operations/UpdateMartechListResponse.md
   - docs/Models/Operations/UpdateMartechMemberRequest.md
   - docs/Models/Operations/UpdateMartechMemberResponse.md
+  - docs/Models/Operations/CreateMessagingMessageRequest.md
+  - docs/Models/Operations/CreateMessagingMessageResponse.md
+  - docs/Models/Operations/GetMessagingChannelRequest.md
+  - docs/Models/Operations/GetMessagingChannelResponse.md
+  - docs/Models/Operations/GetMessagingMessageRequest.md
+  - docs/Models/Operations/GetMessagingMessageResponse.md
+  - docs/Models/Operations/ListMessagingChannelsRequest.md
+  - docs/Models/Operations/ListMessagingChannelsResponse.md
+  - docs/Models/Operations/ListMessagingMessagesRequest.md
+  - docs/Models/Operations/ListMessagingMessagesResponse.md
+  - docs/Models/Operations/PatchMessagingMessageRequest.md
+  - docs/Models/Operations/PatchMessagingMessageResponse.md
+  - docs/Models/Operations/RemoveMessagingMessageRequest.md
+  - docs/Models/Operations/RemoveMessagingMessageResponse.md
+  - docs/Models/Operations/UpdateMessagingMessageRequest.md
+  - docs/Models/Operations/UpdateMessagingMessageResponse.md
   - docs/Models/Operations/CreatePassthroughRequest.md
   - docs/Models/Operations/CreatePassthroughResponse.md
   - docs/Models/Operations/ListPassthroughsRequest.md
@@ -1368,10 +1461,17 @@ generatedFiles:
   - docs/Models/Shared/HrisTimeoffStatus.md
   - docs/Models/Shared/HrisTimeoffType.md
   - docs/Models/Shared/HrisTimeoff.md
+  - docs/Models/Shared/KmsPageType.md
+  - docs/Models/Shared/KmsPage.md
+  - docs/Models/Shared/KmsSpace.md
   - docs/Models/Shared/MarketingList.md
   - docs/Models/Shared/MarketingMember.md
   - docs/Models/Shared/MarketingEmailType.md
   - docs/Models/Shared/MarketingEmail.md
+  - docs/Models/Shared/MessagingMessage.md
+  - docs/Models/Shared/MessagingMember.md
+  - docs/Models/Shared/PropertyMessagingMessageAuthorMember.md
+  - docs/Models/Shared/MessagingChannel.md
   - docs/Models/Shared/PaymentLink.md
   - docs/Models/Shared/PaymentLinkLineitem.md
   - docs/Models/Shared/PaymentPayment.md
@@ -1454,9 +1554,15 @@ generatedFiles:
   - docs/sdks/group/README.md
   - docs/sdks/payslip/README.md
   - docs/sdks/timeoff/README.md
+  - docs/sdks/kms/README.md
+  - docs/sdks/page/README.md
+  - docs/sdks/space/README.md
   - docs/sdks/martech/README.md
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md
+  - docs/sdks/messaging/README.md
+  - docs/sdks/channel/README.md
+  - docs/sdks/message/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/payment/README.md
   - docs/sdks/link/README.md
