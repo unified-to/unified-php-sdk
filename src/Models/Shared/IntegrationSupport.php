@@ -91,6 +91,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $listLimit = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('list_link_id')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $listLinkId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('list_list_id')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -228,6 +233,7 @@ class IntegrationSupport
         $this->listItemId = null;
         $this->listJobId = null;
         $this->listLimit = null;
+        $this->listLinkId = null;
         $this->listListId = null;
         $this->listLocationId = null;
         $this->listOffset = null;

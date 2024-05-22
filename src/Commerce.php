@@ -38,6 +38,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -75,6 +76,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,6 +114,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -149,6 +152,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -183,6 +187,7 @@ class Commerce
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -217,6 +222,7 @@ class Commerce
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -251,6 +257,7 @@ class Commerce
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceItemRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -285,6 +292,7 @@ class Commerce
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceLocationRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -319,6 +327,7 @@ class Commerce
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -353,6 +362,7 @@ class Commerce
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -387,6 +397,7 @@ class Commerce
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceItemsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -421,6 +432,7 @@ class Commerce
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -458,6 +470,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -495,6 +508,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -532,6 +546,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -569,6 +584,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -602,6 +618,7 @@ class Commerce
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -636,6 +653,7 @@ class Commerce
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -670,6 +688,7 @@ class Commerce
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -704,6 +723,7 @@ class Commerce
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -742,6 +762,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -779,6 +800,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -816,6 +838,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -853,6 +876,7 @@ class Commerce
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

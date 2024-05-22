@@ -41,6 +41,7 @@ class Webhook
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -74,6 +75,7 @@ class Webhook
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -108,6 +110,7 @@ class Webhook
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -141,6 +144,7 @@ class Webhook
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -175,6 +179,7 @@ class Webhook
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -209,6 +214,7 @@ class Webhook
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

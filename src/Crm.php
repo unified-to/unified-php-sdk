@@ -38,6 +38,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -75,6 +76,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,6 +114,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -149,6 +152,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -186,6 +190,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -223,6 +228,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -257,6 +263,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmCompanyRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -291,6 +298,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmContactRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -325,6 +333,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmDealRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -359,6 +368,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmEventRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -393,6 +403,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmLeadRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -427,6 +438,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCrmPipelineRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -461,6 +473,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -495,6 +508,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmContactsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -529,6 +543,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmDealsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -563,6 +578,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmEventsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -597,6 +613,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmLeadsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -631,6 +648,7 @@ class Crm
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -668,6 +686,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -705,6 +724,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -742,6 +762,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -779,6 +800,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -816,6 +838,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -853,6 +876,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -886,6 +910,7 @@ class Crm
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -920,6 +945,7 @@ class Crm
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -954,6 +980,7 @@ class Crm
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -988,6 +1015,7 @@ class Crm
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1022,6 +1050,7 @@ class Crm
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1056,6 +1085,7 @@ class Crm
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1094,6 +1124,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1131,6 +1162,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1168,6 +1200,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1205,6 +1238,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1242,6 +1276,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1279,6 +1314,7 @@ class Crm
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

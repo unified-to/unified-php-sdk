@@ -47,6 +47,20 @@ class UnifiedToBuilder
     }
 
     /**
+     * setSecuritySource is usd to configure the security required for the SDK.
+     * unlike setSecurity, setSecuritySource accepts a closure that will be called to retrieve the security information.
+     *
+     * @param  pure-Closure(): string  $securitySource
+     * @return UnifiedToBuilder
+     */
+    public function setSecuritySource(\Closure $securitySource): UnifiedToBuilder
+    {
+        $this->sdkConfig->securitySource = $securitySource;
+
+        return $this;
+    }
+
+    /**
      * setServerUrl is used to configure the server URL for the SDK, and optionally template any parameters in the URL.
      *
      * @param  string  $serverUrl
@@ -85,8 +99,8 @@ class UnifiedToBuilder
                 'timeout' => 60,
             ]);
         }
-        if ($this->sdkConfig->security !== null) {
-            $this->sdkConfig->securityClient = Utils\Utils::configureSecurityClient($this->sdkConfig->defaultClient, $this->sdkConfig->security);
+        if ($this->sdkConfig->hasSecurity()) {
+            $this->sdkConfig->securityClient = Utils\Utils::configureSecurityClient($this->sdkConfig->defaultClient, $this->sdkConfig->getSecurity());
         }
         if ($this->sdkConfig->securityClient === null) {
             $this->sdkConfig->securityClient = $this->sdkConfig->defaultClient;

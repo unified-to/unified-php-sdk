@@ -38,6 +38,7 @@ class Kms
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -75,6 +76,7 @@ class Kms
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -109,6 +111,7 @@ class Kms
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetKmsPageRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -143,6 +146,7 @@ class Kms
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetKmsSpaceRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -177,6 +181,7 @@ class Kms
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListKmsPagesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -211,6 +216,7 @@ class Kms
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListKmsSpacesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -248,6 +254,7 @@ class Kms
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -285,6 +292,7 @@ class Kms
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -318,6 +326,7 @@ class Kms
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -352,6 +361,7 @@ class Kms
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -390,6 +400,7 @@ class Kms
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -427,6 +438,7 @@ class Kms
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

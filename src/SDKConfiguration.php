@@ -15,6 +15,8 @@ class SDKConfiguration
     public ?\GuzzleHttp\ClientInterface $securityClient = null;
 
     public ?Models\Shared\Security $security = null;
+    /** @var pure-Closure(): string */
+    public ?\Closure $securitySource = null;
 
     public string $serverUrl = '';
 
@@ -24,11 +26,11 @@ class SDKConfiguration
 
     public string $openapiDocVersion = '1.0';
 
-    public string $sdkVersion = '0.15.3';
+    public string $sdkVersion = '0.15.4';
 
-    public string $genVersion = '2.333.3';
+    public string $genVersion = '2.335.5';
 
-    public string $userAgent = 'speakeasy-sdk/php 0.15.3 2.333.3 1.0 unified/unified-to';
+    public string $userAgent = 'speakeasy-sdk/php 0.15.4 2.335.5 1.0 unified/unified-to';
 
     public function getServerUrl(): string
     {
@@ -38,5 +40,21 @@ class SDKConfiguration
         }
 
         return UnifiedTo::SERVERS[$this->serverIndex];
+    }
+    public function hasSecurity(): bool
+    {
+        return $this->security !== null || $this->securitySource !== null;
+    }
+
+    public function getSecurity(): ?Models\Shared\Security
+    {
+        if ($this->securitySource !== null) {
+            $security = new Models\Shared\Security();
+            $security->jwt = $this->securitySource->call($this);
+
+            return $security;
+        } else {
+            return $this->security;
+        }
     }
 }

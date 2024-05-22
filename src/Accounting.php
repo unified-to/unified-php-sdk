@@ -38,6 +38,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -75,6 +76,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,6 +114,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -149,6 +152,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -186,6 +190,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -220,6 +225,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingAccountRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -254,6 +260,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingContactRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -288,6 +295,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -322,6 +330,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingOrganizationRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -356,6 +365,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -390,6 +400,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -424,6 +435,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingAccountsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -458,6 +470,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingContactsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -492,6 +505,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -526,6 +540,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingOrganizationsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -560,6 +575,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -594,6 +610,7 @@ class Accounting
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -631,6 +648,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -668,6 +686,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -705,6 +724,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -742,6 +762,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -779,6 +800,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -812,6 +834,7 @@ class Accounting
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -846,6 +869,7 @@ class Accounting
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -880,6 +904,7 @@ class Accounting
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -914,6 +939,7 @@ class Accounting
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -948,6 +974,7 @@ class Accounting
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -986,6 +1013,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1023,6 +1051,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1060,6 +1089,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1097,6 +1127,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1134,6 +1165,7 @@ class Accounting
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

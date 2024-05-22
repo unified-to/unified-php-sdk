@@ -81,7 +81,7 @@ class AtsActivity
     public ?\DateTime $updatedAt = null;
 
     /**
-     * $userIds
+     * id values of the recruiters associated with the activity.
      *
      * @var ?array<string> $userIds
      */
