@@ -186,6 +186,16 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $outboundFields = null;
 
+    /**
+     * objects that we map from in the integration
+     *
+     * @var ?array<string> $rawObjects
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('raw_objects')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $rawObjects = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('search_domain')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -250,6 +260,7 @@ class IntegrationSupport
         $this->listUserId = null;
         $this->methods = null;
         $this->outboundFields = null;
+        $this->rawObjects = null;
         $this->searchDomain = null;
         $this->searchEmail = null;
         $this->searchLinkedinurl = null;
