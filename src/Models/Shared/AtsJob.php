@@ -97,7 +97,7 @@ class AtsJob
     public ?float $numberOfOpenings = null;
 
     /**
-     * $publicJobUrls
+     * URLs for pages containing public listings for the job
      *
      * @var ?array<string> $publicJobUrls
      */

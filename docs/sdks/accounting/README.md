@@ -134,12 +134,14 @@ try {
     $request->accountingContact->billingAddress->postalCode = '48359-3238';
     $request->accountingContact->billingAddress->region = '<value>';
     $request->accountingContact->billingAddress->regionCode = '<value>';
-    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-19T03:22:44.048Z');
-    $request->accountingContact->currency = 'Peso Uruguayo';
+    $request->accountingContact->companyName = 'Spinka, Ziemann and West';
+    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-29T13:45:40.964Z');
+    $request->accountingContact->currency = 'US Dollar';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
     $request->accountingContact->id = '<id>';
+    $request->accountingContact->identification = '<value>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
@@ -149,23 +151,23 @@ try {
     ];
     $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
-        'unfold' => '<value>',
+        'throughout' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = '<value>';
     $request->accountingContact->shippingAddress->address2 = '<value>';
-    $request->accountingContact->shippingAddress->city = 'Port Wilberfield';
-    $request->accountingContact->shippingAddress->country = 'Bouvet Island (Bouvetoya)';
-    $request->accountingContact->shippingAddress->countryCode = 'AM';
-    $request->accountingContact->shippingAddress->postalCode = '62093';
+    $request->accountingContact->shippingAddress->city = 'North Jazmynefurt';
+    $request->accountingContact->shippingAddress->country = 'France';
+    $request->accountingContact->shippingAddress->countryCode = 'BE';
+    $request->accountingContact->shippingAddress->postalCode = '36835-6542';
     $request->accountingContact->shippingAddress->region = '<value>';
     $request->accountingContact->shippingAddress->regionCode = '<value>';
-    $request->accountingContact->taxExemption = Shared\TaxExemption::EducationalOrg;
+    $request->accountingContact->taxExemption = Shared\TaxExemption::FederalGov;
     $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-29T11:32:51.059Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-05T13:56:20.676Z');
     $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingContact($request);
@@ -1143,12 +1145,14 @@ try {
     $request->accountingContact->billingAddress->postalCode = '34531-3519';
     $request->accountingContact->billingAddress->region = '<value>';
     $request->accountingContact->billingAddress->regionCode = '<value>';
-    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-14T18:48:39.369Z');
-    $request->accountingContact->currency = 'Singapore Dollar';
+    $request->accountingContact->companyName = 'Reichel, Luettgen and Bins';
+    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-21T23:25:22.442Z');
+    $request->accountingContact->currency = 'Kip';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
     $request->accountingContact->id = '<id>';
+    $request->accountingContact->identification = '<value>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
@@ -1158,23 +1162,23 @@ try {
     ];
     $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
-        'bypass' => '<value>',
+        'orchid' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = '<value>';
     $request->accountingContact->shippingAddress->address2 = '<value>';
-    $request->accountingContact->shippingAddress->city = 'Koeppfield';
-    $request->accountingContact->shippingAddress->country = 'Netherlands Antilles';
-    $request->accountingContact->shippingAddress->countryCode = 'NE';
-    $request->accountingContact->shippingAddress->postalCode = '36791';
+    $request->accountingContact->shippingAddress->city = 'Friesenbury';
+    $request->accountingContact->shippingAddress->country = 'Nepal';
+    $request->accountingContact->shippingAddress->countryCode = 'PT';
+    $request->accountingContact->shippingAddress->postalCode = '12514-2095';
     $request->accountingContact->shippingAddress->region = '<value>';
     $request->accountingContact->shippingAddress->regionCode = '<value>';
-    $request->accountingContact->taxExemption = Shared\TaxExemption::TribalGov;
+    $request->accountingContact->taxExemption = Shared\TaxExemption::FederalGov;
     $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-15T21:20:14.932Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-16T14:39:43.192Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
@@ -1745,12 +1749,14 @@ try {
     $request->accountingContact->billingAddress->postalCode = '16521-4269';
     $request->accountingContact->billingAddress->region = '<value>';
     $request->accountingContact->billingAddress->regionCode = '<value>';
-    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T04:27:23.372Z');
-    $request->accountingContact->currency = 'European Monetary Unit (E.M.U.-6)';
+    $request->accountingContact->companyName = 'Turner - Cruickshank';
+    $request->accountingContact->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-17T02:48:58.014Z');
+    $request->accountingContact->currency = 'Kyat';
     $request->accountingContact->emails = [
         new Shared\AccountingEmail(),
     ];
     $request->accountingContact->id = '<id>';
+    $request->accountingContact->identification = '<value>';
     $request->accountingContact->isActive = false;
     $request->accountingContact->isCustomer = false;
     $request->accountingContact->isSupplier = false;
@@ -1760,23 +1766,23 @@ try {
     ];
     $request->accountingContact->portalUrl = '<value>';
     $request->accountingContact->raw = [
-        'salmon' => '<value>',
+        'Intersex' => '<value>',
     ];
     $request->accountingContact->shippingAddress = new Shared\PropertyAccountingContactShippingAddress();
     $request->accountingContact->shippingAddress->address1 = '<value>';
     $request->accountingContact->shippingAddress->address2 = '<value>';
-    $request->accountingContact->shippingAddress->city = 'Lelahport';
-    $request->accountingContact->shippingAddress->country = 'Dominica';
-    $request->accountingContact->shippingAddress->countryCode = 'SJ';
-    $request->accountingContact->shippingAddress->postalCode = '63899';
+    $request->accountingContact->shippingAddress->city = 'Berkeley';
+    $request->accountingContact->shippingAddress->country = 'Norway';
+    $request->accountingContact->shippingAddress->countryCode = 'GP';
+    $request->accountingContact->shippingAddress->postalCode = '99093-9229';
     $request->accountingContact->shippingAddress->region = '<value>';
     $request->accountingContact->shippingAddress->regionCode = '<value>';
-    $request->accountingContact->taxExemption = Shared\TaxExemption::FederalGov;
+    $request->accountingContact->taxExemption = Shared\TaxExemption::MedicalOrg;
     $request->accountingContact->taxNumber = '<value>';
     $request->accountingContact->telephones = [
         new Shared\AccountingTelephone(),
     ];
-    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-28T03:42:59.577Z');
+    $request->accountingContact->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-30T07:55:45.909Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 

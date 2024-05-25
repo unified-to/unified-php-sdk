@@ -16,6 +16,11 @@ class AccountingContact
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyAccountingContactBillingAddress $billingAddress = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('company_name')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $companyName = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -40,6 +45,11 @@ class AccountingContact
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('identification')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $identification = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -119,10 +129,12 @@ class AccountingContact
     public function __construct()
     {
         $this->billingAddress = null;
+        $this->companyName = null;
         $this->createdAt = null;
         $this->currency = null;
         $this->emails = null;
         $this->id = null;
+        $this->identification = null;
         $this->isActive = null;
         $this->isCustomer = null;
         $this->isSupplier = null;

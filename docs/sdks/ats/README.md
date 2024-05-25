@@ -301,14 +301,14 @@ try {
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-25T01:00:46.478Z');
     $request->atsDocument->documentData = '<value>';
     $request->atsDocument->documentUrl = '<value>';
-    $request->atsDocument->filename = 'mouse_per_missouri.mp4';
+    $request->atsDocument->filename = 'your_file_here';
     $request->atsDocument->id = '<id>';
     $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'empowering' => '<value>',
+        'female' => '<value>',
     ];
     $request->atsDocument->type = Shared\AtsDocumentType::CoverLetter;
-    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T09:03:14.368Z');
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-21T14:39:08.865Z');
     $request->atsDocument->userId = '<value>';
     $request->connectionId = '<value>';;
 
@@ -1748,14 +1748,14 @@ try {
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-01T11:33:08.084Z');
     $request->atsDocument->documentData = '<value>';
     $request->atsDocument->documentUrl = '<value>';
-    $request->atsDocument->filename = 'future_underpin.mp4v';
+    $request->atsDocument->filename = 'your_file_here';
     $request->atsDocument->id = '<id>';
     $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'ipsam' => '<value>',
+        'Other' => '<value>',
     ];
-    $request->atsDocument->type = Shared\AtsDocumentType::Other;
-    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-04T16:17:46.270Z');
+    $request->atsDocument->type = Shared\AtsDocumentType::CoverLetter;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-19T12:06:56.902Z');
     $request->atsDocument->userId = '<value>';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
@@ -2599,14 +2599,14 @@ try {
     $request->atsDocument->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-05T17:05:49.106Z');
     $request->atsDocument->documentData = '<value>';
     $request->atsDocument->documentUrl = '<value>';
-    $request->atsDocument->filename = 'unbranded_reprehenderit.jpg';
+    $request->atsDocument->filename = 'your_file_here';
     $request->atsDocument->id = '<id>';
     $request->atsDocument->jobId = '<value>';
     $request->atsDocument->raw = [
-        'GB' => '<value>',
+        'DRAM' => '<value>',
     ];
-    $request->atsDocument->type = Shared\AtsDocumentType::OfferPacket;
-    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-21T13:20:57.007Z');
+    $request->atsDocument->type = Shared\AtsDocumentType::Other;
+    $request->atsDocument->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-09T02:38:30.011Z');
     $request->atsDocument->userId = '<value>';
     $request->connectionId = '<value>';
     $request->id = '<id>';;

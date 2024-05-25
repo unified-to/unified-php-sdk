@@ -58,7 +58,7 @@ class AccountingAccount
     public ?string $parentAccountId = null;
 
     /**
-     * $raw
+     * The original data from the integration's API
      *
      * @var ?array<string, mixed> $raw
      */
