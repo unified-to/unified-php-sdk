@@ -36,6 +36,9 @@ class ListMessagingChannelsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
     public ?string $order = null;
 
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
+    public ?string $parentId = null;
+
     /**
      * Query string to search. eg. email address or name
      *
@@ -62,6 +65,7 @@ class ListMessagingChannelsRequest
         $this->limit = null;
         $this->offset = null;
         $this->order = null;
+        $this->parentId = null;
         $this->query = null;
         $this->sort = null;
         $this->updatedGte = null;
