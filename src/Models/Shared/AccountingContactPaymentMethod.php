@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingContactPaymentMethod
 {
+    #[\JMS\Serializer\Annotation\SerializedName('id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $id = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -22,6 +27,7 @@ class AccountingContactPaymentMethod
 
     public function __construct()
     {
+        $this->id = null;
         $this->name = null;
         $this->type = \Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType::Ach;
     }
