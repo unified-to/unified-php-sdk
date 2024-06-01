@@ -33,7 +33,8 @@ class AtsCompensation
 
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsCompensationType>')]
-    public AtsCompensationType $type;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?AtsCompensationType $type = null;
 
     public function __construct()
     {
@@ -41,6 +42,6 @@ class AtsCompensation
         $this->frequency = null;
         $this->max = null;
         $this->min = null;
-        $this->type = \Unified\Unified_to\Models\Shared\AtsCompensationType::Salary;
+        $this->type = null;
     }
 }
