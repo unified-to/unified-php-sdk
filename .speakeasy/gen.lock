@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 74c64e97761c01481c293203e99f2a2f
+  docChecksum: 9a5990618c970a819b6235d1b48f2259
   docVersion: "1.0"
-  speakeasyVersion: 1.299.4
-  generationVersion: 2.338.7
-  releaseVersion: 0.15.10
-  configChecksum: a44df9180846ba52c9c82da8fa493b24
+  speakeasyVersion: 1.299.7
+  generationVersion: 2.338.12
+  releaseVersion: 0.15.11
+  configChecksum: 2eb686a271fd5caacb2f53d1a8184bf4
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 features:
   php:
-    core: 3.3.4
+    core: 3.3.5
     globalSecurity: 2.81.6
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.1
@@ -802,6 +802,41 @@ generatedFiles:
   - src/Models/Shared/ApiCallType.php
   - src/Models/Shared/ApiCall.php
   - src/Models/Shared/Integration.php
+  - src/Models/Shared/FromWebhook.php
+  - src/Models/Shared/ListAccountId.php
+  - src/Models/Shared/ListApplicationId.php
+  - src/Models/Shared/ListCandidateId.php
+  - src/Models/Shared/ListChannelId.php
+  - src/Models/Shared/ListCollectionId.php
+  - src/Models/Shared/ListCompanyId.php
+  - src/Models/Shared/ListContactId.php
+  - src/Models/Shared/ListCustomerId.php
+  - src/Models/Shared/ListDealId.php
+  - src/Models/Shared/ListInterviewId.php
+  - src/Models/Shared/ListInvoiceId.php
+  - src/Models/Shared/ListItemId.php
+  - src/Models/Shared/ListJobId.php
+  - src/Models/Shared/ListLimit.php
+  - src/Models/Shared/ListLinkId.php
+  - src/Models/Shared/ListListId.php
+  - src/Models/Shared/ListLocationId.php
+  - src/Models/Shared/ListOffset.php
+  - src/Models/Shared/ListOrder.php
+  - src/Models/Shared/ListParentId.php
+  - src/Models/Shared/ListQuery.php
+  - src/Models/Shared/ListSortByCreatedAt.php
+  - src/Models/Shared/ListSortByName.php
+  - src/Models/Shared/ListSortByUpdatedAt.php
+  - src/Models/Shared/ListSpaceId.php
+  - src/Models/Shared/ListTicketId.php
+  - src/Models/Shared/ListType.php
+  - src/Models/Shared/ListUpdatedGte.php
+  - src/Models/Shared/ListUserId.php
+  - src/Models/Shared/SearchDomain.php
+  - src/Models/Shared/SearchEmail.php
+  - src/Models/Shared/SearchLinkedinurl.php
+  - src/Models/Shared/SearchName.php
+  - src/Models/Shared/SearchTwitter.php
   - src/Models/Shared/IntegrationSupport.php
   - src/Models/Shared/PropertyIntegrationSupportWebhookEvents.php
   - src/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.php
@@ -1506,6 +1541,41 @@ generatedFiles:
   - docs/Models/Shared/ApiCallType.md
   - docs/Models/Shared/ApiCall.md
   - docs/Models/Shared/Integration.md
+  - docs/Models/Shared/FromWebhook.md
+  - docs/Models/Shared/ListAccountId.md
+  - docs/Models/Shared/ListApplicationId.md
+  - docs/Models/Shared/ListCandidateId.md
+  - docs/Models/Shared/ListChannelId.md
+  - docs/Models/Shared/ListCollectionId.md
+  - docs/Models/Shared/ListCompanyId.md
+  - docs/Models/Shared/ListContactId.md
+  - docs/Models/Shared/ListCustomerId.md
+  - docs/Models/Shared/ListDealId.md
+  - docs/Models/Shared/ListInterviewId.md
+  - docs/Models/Shared/ListInvoiceId.md
+  - docs/Models/Shared/ListItemId.md
+  - docs/Models/Shared/ListJobId.md
+  - docs/Models/Shared/ListLimit.md
+  - docs/Models/Shared/ListLinkId.md
+  - docs/Models/Shared/ListListId.md
+  - docs/Models/Shared/ListLocationId.md
+  - docs/Models/Shared/ListOffset.md
+  - docs/Models/Shared/ListOrder.md
+  - docs/Models/Shared/ListParentId.md
+  - docs/Models/Shared/ListQuery.md
+  - docs/Models/Shared/ListSortByCreatedAt.md
+  - docs/Models/Shared/ListSortByName.md
+  - docs/Models/Shared/ListSortByUpdatedAt.md
+  - docs/Models/Shared/ListSpaceId.md
+  - docs/Models/Shared/ListTicketId.md
+  - docs/Models/Shared/ListType.md
+  - docs/Models/Shared/ListUpdatedGte.md
+  - docs/Models/Shared/ListUserId.md
+  - docs/Models/Shared/SearchDomain.md
+  - docs/Models/Shared/SearchEmail.md
+  - docs/Models/Shared/SearchLinkedinurl.md
+  - docs/Models/Shared/SearchName.md
+  - docs/Models/Shared/SearchTwitter.md
   - docs/Models/Shared/IntegrationSupport.md
   - docs/Models/Shared/PropertyIntegrationSupportWebhookEvents.md
   - docs/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.md

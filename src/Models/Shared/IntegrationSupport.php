@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Shared;
 
 class IntegrationSupport
 {
+    #[\JMS\Serializer\Annotation\SerializedName('from_webhook')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\FromWebhook>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?FromWebhook $fromWebhook = null;
+
     /**
      * $inboundFields
      *
@@ -22,149 +27,149 @@ class IntegrationSupport
     public ?array $inboundFields = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_account_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListAccountId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listAccountId = null;
+    public ?ListAccountId $listAccountId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_application_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListApplicationId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listApplicationId = null;
+    public ?ListApplicationId $listApplicationId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_candidate_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListCandidateId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listCandidateId = null;
+    public ?ListCandidateId $listCandidateId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_channel_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListChannelId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listChannelId = null;
+    public ?ListChannelId $listChannelId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_collection_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListCollectionId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listCollectionId = null;
+    public ?ListCollectionId $listCollectionId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_company_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListCompanyId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listCompanyId = null;
+    public ?ListCompanyId $listCompanyId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_contact_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListContactId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listContactId = null;
+    public ?ListContactId $listContactId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_customer_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListCustomerId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listCustomerId = null;
+    public ?ListCustomerId $listCustomerId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_deal_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListDealId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listDealId = null;
+    public ?ListDealId $listDealId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_interview_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListInterviewId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listInterviewId = null;
+    public ?ListInterviewId $listInterviewId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_invoice_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListInvoiceId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listInvoiceId = null;
+    public ?ListInvoiceId $listInvoiceId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_item_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListItemId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listItemId = null;
+    public ?ListItemId $listItemId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_job_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListJobId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listJobId = null;
+    public ?ListJobId $listJobId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_limit')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListLimit>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listLimit = null;
+    public ?ListLimit $listLimit = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_link_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListLinkId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listLinkId = null;
+    public ?ListLinkId $listLinkId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_list_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListListId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listListId = null;
+    public ?ListListId $listListId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_location_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListLocationId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listLocationId = null;
+    public ?ListLocationId $listLocationId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_offset')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListOffset>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listOffset = null;
+    public ?ListOffset $listOffset = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_order')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListOrder>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listOrder = null;
+    public ?ListOrder $listOrder = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_parent_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListParentId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listParentId = null;
+    public ?ListParentId $listParentId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_query')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListQuery>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listQuery = null;
+    public ?ListQuery $listQuery = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_created_at')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListSortByCreatedAt>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listSortByCreatedAt = null;
+    public ?ListSortByCreatedAt $listSortByCreatedAt = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_name')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListSortByName>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listSortByName = null;
+    public ?ListSortByName $listSortByName = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_updated_at')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListSortByUpdatedAt>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listSortByUpdatedAt = null;
+    public ?ListSortByUpdatedAt $listSortByUpdatedAt = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_space_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListSpaceId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listSpaceId = null;
+    public ?ListSpaceId $listSpaceId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_ticket_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListTicketId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listTicketId = null;
+    public ?ListTicketId $listTicketId = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_type')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listType = null;
+    public ?ListType $listType = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_updated_gte')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListUpdatedGte>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listUpdatedGte = null;
+    public ?ListUpdatedGte $listUpdatedGte = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('list_user_id')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListUserId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $listUserId = null;
+    public ?ListUserId $listUserId = null;
 
     /**
      * $methods
@@ -197,29 +202,29 @@ class IntegrationSupport
     public ?array $rawObjects = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('search_domain')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\SearchDomain>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $searchDomain = null;
+    public ?SearchDomain $searchDomain = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('search_email')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\SearchEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $searchEmail = null;
+    public ?SearchEmail $searchEmail = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('search_linkedinurl')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\SearchLinkedinurl>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $searchLinkedinurl = null;
+    public ?SearchLinkedinurl $searchLinkedinurl = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('search_name')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\SearchName>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $searchName = null;
+    public ?SearchName $searchName = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('search_twitter')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\SearchTwitter>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $searchTwitter = null;
+    public ?SearchTwitter $searchTwitter = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('webhook_events')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents')]
@@ -228,6 +233,7 @@ class IntegrationSupport
 
     public function __construct()
     {
+        $this->fromWebhook = null;
         $this->inboundFields = null;
         $this->listAccountId = null;
         $this->listApplicationId = null;
