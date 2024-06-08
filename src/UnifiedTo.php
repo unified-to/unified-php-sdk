@@ -124,6 +124,10 @@ class UnifiedTo
 
     public File $file;
 
+    public Task $task;
+
+    public Project $project;
+
     public Ticketing $ticketing;
 
     public Customer $customer;
@@ -221,6 +225,8 @@ class UnifiedTo
         $this->refund = new Refund($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
+        $this->task = new Task($this->sdkConfiguration);
+        $this->project = new Project($this->sdkConfiguration);
         $this->ticketing = new Ticketing($this->sdkConfiguration);
         $this->customer = new Customer($this->sdkConfiguration);
         $this->note = new Note($this->sdkConfiguration);

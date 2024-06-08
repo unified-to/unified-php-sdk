@@ -99,4 +99,8 @@ enum PropertyConnectionPermissions: string
     case KmsPageWrite = 'kms_page_write';
     case KmsCommentRead = 'kms_comment_read';
     case KmsCommentWrite = 'kms_comment_write';
+    case TaskProjectRead = 'task_project_read';
+    case TaskProjectWrite = 'task_project_write';
+    case TaskTaskRead = 'task_task_read';
+    case TaskTaskWrite = 'task_task_write';
 }

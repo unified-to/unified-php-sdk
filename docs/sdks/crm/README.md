@@ -242,12 +242,14 @@ try {
     $request->crmDeal->lostReason = '<value>';
     $request->crmDeal->name = '<value>';
     $request->crmDeal->pipeline = '<value>';
+    $request->crmDeal->pipelineId = '<value>';
     $request->crmDeal->probability = 1087.81;
     $request->crmDeal->raw = [
         'Rap' => '<value>',
     ];
     $request->crmDeal->source = '<value>';
     $request->crmDeal->stage = '<value>';
+    $request->crmDeal->stageId = '<value>';
     $request->crmDeal->tags = [
         '<value>',
     ];
@@ -489,6 +491,9 @@ try {
     $request->crmPipeline->name = '<value>';
     $request->crmPipeline->raw = [
         'Vista' => '<value>',
+    ];
+    $request->crmPipeline->stages = [
+        new Shared\CrmStage(),
     ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-13T04:30:34.696Z');
     $request->connectionId = '<value>';;
@@ -1390,12 +1395,14 @@ try {
     $request->crmDeal->lostReason = '<value>';
     $request->crmDeal->name = '<value>';
     $request->crmDeal->pipeline = '<value>';
+    $request->crmDeal->pipelineId = '<value>';
     $request->crmDeal->probability = 9555.58;
     $request->crmDeal->raw = [
         'female' => '<value>',
     ];
     $request->crmDeal->source = '<value>';
     $request->crmDeal->stage = '<value>';
+    $request->crmDeal->stageId = '<value>';
     $request->crmDeal->tags = [
         '<value>',
     ];
@@ -1640,6 +1647,9 @@ try {
     $request->crmPipeline->name = '<value>';
     $request->crmPipeline->raw = [
         'Costa' => '<value>',
+    ];
+    $request->crmPipeline->stages = [
+        new Shared\CrmStage(),
     ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T20:45:57.138Z');
     $request->connectionId = '<value>';
@@ -2165,12 +2175,14 @@ try {
     $request->crmDeal->lostReason = '<value>';
     $request->crmDeal->name = '<value>';
     $request->crmDeal->pipeline = '<value>';
+    $request->crmDeal->pipelineId = '<value>';
     $request->crmDeal->probability = 2970.01;
     $request->crmDeal->raw = [
         'female' => '<value>',
     ];
     $request->crmDeal->source = '<value>';
     $request->crmDeal->stage = '<value>';
+    $request->crmDeal->stageId = '<value>';
     $request->crmDeal->tags = [
         '<value>',
     ];
@@ -2415,6 +2427,9 @@ try {
     $request->crmPipeline->name = '<value>';
     $request->crmPipeline->raw = [
         'Androgyne' => '<value>',
+    ];
+    $request->crmPipeline->stages = [
+        new Shared\CrmStage(),
     ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-08T17:12:56.773Z');
     $request->connectionId = '<value>';

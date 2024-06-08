@@ -44,6 +44,9 @@ try {
     $request->crmPipeline->raw = [
         'Vista' => '<value>',
     ];
+    $request->crmPipeline->stages = [
+        new Shared\CrmStage(),
+    ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-13T04:30:34.696Z');
     $request->connectionId = '<value>';;
 
@@ -212,6 +215,9 @@ try {
     $request->crmPipeline->raw = [
         'Costa' => '<value>',
     ];
+    $request->crmPipeline->stages = [
+        new Shared\CrmStage(),
+    ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-03T20:45:57.138Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
@@ -320,6 +326,9 @@ try {
     $request->crmPipeline->name = '<value>';
     $request->crmPipeline->raw = [
         'Androgyne' => '<value>',
+    ];
+    $request->crmPipeline->stages = [
+        new Shared\CrmStage(),
     ];
     $request->crmPipeline->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-08T17:12:56.773Z');
     $request->connectionId = '<value>';

@@ -27,4 +27,5 @@ enum PropertyIntegrationCategories: string
     case Genai = 'genai';
     case Messaging = 'messaging';
     case Kms = 'kms';
+    case Task = 'task';
 }

@@ -52,6 +52,11 @@ class CrmDeal
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $pipeline = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('pipeline_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $pipelineId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('probability')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -76,6 +81,11 @@ class CrmDeal
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $stage = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('stage_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $stageId = null;
 
     /**
      * $tags
@@ -112,10 +122,12 @@ class CrmDeal
         $this->lostReason = null;
         $this->name = null;
         $this->pipeline = null;
+        $this->pipelineId = null;
         $this->probability = null;
         $this->raw = null;
         $this->source = null;
         $this->stage = null;
+        $this->stageId = null;
         $this->tags = null;
         $this->updatedAt = null;
         $this->userId = null;

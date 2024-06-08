@@ -38,7 +38,7 @@ try {
     $request->lang = '<value>';
     $request->redirect = false;
     $request->scopes = [
-        Operations\Scopes::MessagingMessageRead,
+        Operations\Scopes::KmsSpaceWrite,
     ];
     $request->state = 'New Jersey';
     $request->subdomain = '<value>';
@@ -93,7 +93,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
     $request->active = false;
     $request->categories = [
-        Operations\QueryParamCategories::Payment,
+        Operations\QueryParamCategories::Genai,
     ];
     $request->env = '<value>';
     $request->limit = 9072.99;
@@ -150,7 +150,7 @@ try {
         $request = new Operations\ListUnifiedIntegrationsRequest();
     $request->active = false;
     $request->categories = [
-        Operations\ListUnifiedIntegrationsQueryParamCategories::Enrich,
+        Operations\ListUnifiedIntegrationsQueryParamCategories::Martech,
     ];
     $request->env = '<value>';
     $request->limit = 7382.58;

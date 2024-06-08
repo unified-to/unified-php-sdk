@@ -36,6 +36,16 @@ class GenaiModel
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     * $raw
+     *
+     * @var ?array<string, mixed> $raw
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('raw')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $raw = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('web_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -48,6 +58,7 @@ class GenaiModel
         $this->id = null;
         $this->maxTokens = null;
         $this->name = null;
+        $this->raw = null;
         $this->webUrl = null;
     }
 }

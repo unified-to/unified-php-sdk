@@ -126,6 +126,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListParentId $listParentId = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('list_project_id')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListProjectId>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ListProjectId $listProjectId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('list_query')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListQuery>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -255,6 +260,7 @@ class IntegrationSupport
         $this->listOffset = null;
         $this->listOrder = null;
         $this->listParentId = null;
+        $this->listProjectId = null;
         $this->listQuery = null;
         $this->listSortByCreatedAt = null;
         $this->listSortByName = null;

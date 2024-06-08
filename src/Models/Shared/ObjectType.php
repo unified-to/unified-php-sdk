@@ -61,4 +61,6 @@ enum ObjectType: string
     case MessagingChannel = 'messaging_channel';
     case KmsSpace = 'kms_space';
     case KmsPage = 'kms_page';
+    case TaskProject = 'task_project';
+    case TaskTask = 'task_task';
 }

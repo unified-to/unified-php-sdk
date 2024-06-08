@@ -43,12 +43,14 @@ try {
     $request->crmDeal->lostReason = '<value>';
     $request->crmDeal->name = '<value>';
     $request->crmDeal->pipeline = '<value>';
+    $request->crmDeal->pipelineId = '<value>';
     $request->crmDeal->probability = 1087.81;
     $request->crmDeal->raw = [
         'Rap' => '<value>',
     ];
     $request->crmDeal->source = '<value>';
     $request->crmDeal->stage = '<value>';
+    $request->crmDeal->stageId = '<value>';
     $request->crmDeal->tags = [
         '<value>',
     ];
@@ -224,12 +226,14 @@ try {
     $request->crmDeal->lostReason = '<value>';
     $request->crmDeal->name = '<value>';
     $request->crmDeal->pipeline = '<value>';
+    $request->crmDeal->pipelineId = '<value>';
     $request->crmDeal->probability = 9555.58;
     $request->crmDeal->raw = [
         'female' => '<value>',
     ];
     $request->crmDeal->source = '<value>';
     $request->crmDeal->stage = '<value>';
+    $request->crmDeal->stageId = '<value>';
     $request->crmDeal->tags = [
         '<value>',
     ];
@@ -343,12 +347,14 @@ try {
     $request->crmDeal->lostReason = '<value>';
     $request->crmDeal->name = '<value>';
     $request->crmDeal->pipeline = '<value>';
+    $request->crmDeal->pipelineId = '<value>';
     $request->crmDeal->probability = 2970.01;
     $request->crmDeal->raw = [
         'female' => '<value>',
     ];
     $request->crmDeal->source = '<value>';
     $request->crmDeal->stage = '<value>';
+    $request->crmDeal->stageId = '<value>';
     $request->crmDeal->tags = [
         '<value>',
     ];

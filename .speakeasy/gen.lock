@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 9a5990618c970a819b6235d1b48f2259
+  docChecksum: 34d8e45448aaadab7271416cea77fcaf
   docVersion: "1.0"
-  speakeasyVersion: 1.299.7
-  generationVersion: 2.338.12
-  releaseVersion: 0.15.11
-  configChecksum: 2eb686a271fd5caacb2f53d1a8184bf4
+  speakeasyVersion: 1.300.1
+  generationVersion: 2.339.1
+  releaseVersion: 0.15.12
+  configChecksum: 07fb328570ff5c45b0f011e74b51c1a8
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -72,6 +72,8 @@ generatedFiles:
   - src/Refund.php
   - src/Storage.php
   - src/File.php
+  - src/Task.php
+  - src/Project.php
   - src/Ticketing.php
   - src/Customer.php
   - src/Note.php
@@ -552,6 +554,30 @@ generatedFiles:
   - src/Models/Operations/RemoveStorageFileResponse.php
   - src/Models/Operations/UpdateStorageFileRequest.php
   - src/Models/Operations/UpdateStorageFileResponse.php
+  - src/Models/Operations/CreateTaskProjectRequest.php
+  - src/Models/Operations/CreateTaskProjectResponse.php
+  - src/Models/Operations/CreateTaskTaskRequest.php
+  - src/Models/Operations/CreateTaskTaskResponse.php
+  - src/Models/Operations/GetTaskProjectRequest.php
+  - src/Models/Operations/GetTaskProjectResponse.php
+  - src/Models/Operations/GetTaskTaskRequest.php
+  - src/Models/Operations/GetTaskTaskResponse.php
+  - src/Models/Operations/ListTaskProjectsRequest.php
+  - src/Models/Operations/ListTaskProjectsResponse.php
+  - src/Models/Operations/ListTaskTasksRequest.php
+  - src/Models/Operations/ListTaskTasksResponse.php
+  - src/Models/Operations/PatchTaskProjectRequest.php
+  - src/Models/Operations/PatchTaskProjectResponse.php
+  - src/Models/Operations/PatchTaskTaskRequest.php
+  - src/Models/Operations/PatchTaskTaskResponse.php
+  - src/Models/Operations/RemoveTaskProjectRequest.php
+  - src/Models/Operations/RemoveTaskProjectResponse.php
+  - src/Models/Operations/RemoveTaskTaskRequest.php
+  - src/Models/Operations/RemoveTaskTaskResponse.php
+  - src/Models/Operations/UpdateTaskProjectRequest.php
+  - src/Models/Operations/UpdateTaskProjectResponse.php
+  - src/Models/Operations/UpdateTaskTaskRequest.php
+  - src/Models/Operations/UpdateTaskTaskResponse.php
   - src/Models/Operations/CreateTicketingCustomerRequest.php
   - src/Models/Operations/CreateTicketingCustomerResponse.php
   - src/Models/Operations/CreateTicketingNoteRequest.php
@@ -728,6 +754,7 @@ generatedFiles:
   - src/Models/Shared/CrmLead.php
   - src/Models/Shared/PropertyCrmLeadAddress.php
   - src/Models/Shared/CrmPipeline.php
+  - src/Models/Shared/CrmStage.php
   - src/Models/Shared/Gender.php
   - src/Models/Shared/EnrichPerson.php
   - src/Models/Shared/EnrichPersonWorkHistory.php
@@ -779,6 +806,9 @@ generatedFiles:
   - src/Models/Shared/StorageFile.php
   - src/Models/Shared/StoragePermission.php
   - src/Models/Shared/PropertyStoragePermissionRoles.php
+  - src/Models/Shared/TaskProject.php
+  - src/Models/Shared/TaskTaskStatus.php
+  - src/Models/Shared/TaskTask.php
   - src/Models/Shared/TicketingCustomer.php
   - src/Models/Shared/TicketingTelephoneType.php
   - src/Models/Shared/TicketingTelephone.php
@@ -823,6 +853,7 @@ generatedFiles:
   - src/Models/Shared/ListOffset.php
   - src/Models/Shared/ListOrder.php
   - src/Models/Shared/ListParentId.php
+  - src/Models/Shared/ListProjectId.php
   - src/Models/Shared/ListQuery.php
   - src/Models/Shared/ListSortByCreatedAt.php
   - src/Models/Shared/ListSortByName.php
@@ -1291,6 +1322,30 @@ generatedFiles:
   - docs/Models/Operations/RemoveStorageFileResponse.md
   - docs/Models/Operations/UpdateStorageFileRequest.md
   - docs/Models/Operations/UpdateStorageFileResponse.md
+  - docs/Models/Operations/CreateTaskProjectRequest.md
+  - docs/Models/Operations/CreateTaskProjectResponse.md
+  - docs/Models/Operations/CreateTaskTaskRequest.md
+  - docs/Models/Operations/CreateTaskTaskResponse.md
+  - docs/Models/Operations/GetTaskProjectRequest.md
+  - docs/Models/Operations/GetTaskProjectResponse.md
+  - docs/Models/Operations/GetTaskTaskRequest.md
+  - docs/Models/Operations/GetTaskTaskResponse.md
+  - docs/Models/Operations/ListTaskProjectsRequest.md
+  - docs/Models/Operations/ListTaskProjectsResponse.md
+  - docs/Models/Operations/ListTaskTasksRequest.md
+  - docs/Models/Operations/ListTaskTasksResponse.md
+  - docs/Models/Operations/PatchTaskProjectRequest.md
+  - docs/Models/Operations/PatchTaskProjectResponse.md
+  - docs/Models/Operations/PatchTaskTaskRequest.md
+  - docs/Models/Operations/PatchTaskTaskResponse.md
+  - docs/Models/Operations/RemoveTaskProjectRequest.md
+  - docs/Models/Operations/RemoveTaskProjectResponse.md
+  - docs/Models/Operations/RemoveTaskTaskRequest.md
+  - docs/Models/Operations/RemoveTaskTaskResponse.md
+  - docs/Models/Operations/UpdateTaskProjectRequest.md
+  - docs/Models/Operations/UpdateTaskProjectResponse.md
+  - docs/Models/Operations/UpdateTaskTaskRequest.md
+  - docs/Models/Operations/UpdateTaskTaskResponse.md
   - docs/Models/Operations/CreateTicketingCustomerRequest.md
   - docs/Models/Operations/CreateTicketingCustomerResponse.md
   - docs/Models/Operations/CreateTicketingNoteRequest.md
@@ -1467,6 +1522,7 @@ generatedFiles:
   - docs/Models/Shared/CrmLead.md
   - docs/Models/Shared/PropertyCrmLeadAddress.md
   - docs/Models/Shared/CrmPipeline.md
+  - docs/Models/Shared/CrmStage.md
   - docs/Models/Shared/Gender.md
   - docs/Models/Shared/EnrichPerson.md
   - docs/Models/Shared/EnrichPersonWorkHistory.md
@@ -1518,6 +1574,9 @@ generatedFiles:
   - docs/Models/Shared/StorageFile.md
   - docs/Models/Shared/StoragePermission.md
   - docs/Models/Shared/PropertyStoragePermissionRoles.md
+  - docs/Models/Shared/TaskProject.md
+  - docs/Models/Shared/TaskTaskStatus.md
+  - docs/Models/Shared/TaskTask.md
   - docs/Models/Shared/TicketingCustomer.md
   - docs/Models/Shared/TicketingTelephoneType.md
   - docs/Models/Shared/TicketingTelephone.md
@@ -1562,6 +1621,7 @@ generatedFiles:
   - docs/Models/Shared/ListOffset.md
   - docs/Models/Shared/ListOrder.md
   - docs/Models/Shared/ListParentId.md
+  - docs/Models/Shared/ListProjectId.md
   - docs/Models/Shared/ListQuery.md
   - docs/Models/Shared/ListSortByCreatedAt.md
   - docs/Models/Shared/ListSortByName.md
@@ -1640,6 +1700,8 @@ generatedFiles:
   - docs/sdks/refund/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
+  - docs/sdks/task/README.md
+  - docs/sdks/project/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/note/README.md

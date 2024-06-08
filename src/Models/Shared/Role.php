@@ -11,6 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum Role: string
 {
-    case System = 'system';
-    case User = 'user';
+    case System = 'SYSTEM';
+    case User = 'USER';
 }

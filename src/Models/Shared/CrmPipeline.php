@@ -51,6 +51,16 @@ class CrmPipeline
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     * $stages
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmStage> $stages
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('stages')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CrmStage>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $stages = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -65,6 +75,7 @@ class CrmPipeline
         $this->isActive = null;
         $this->name = null;
         $this->raw = null;
+        $this->stages = null;
         $this->updatedAt = null;
     }
 }
