@@ -83,6 +83,8 @@ enum PropertyConnectionPermissions: string
     case HrisPayslipWrite = 'hris_payslip_write';
     case HrisTimeoffRead = 'hris_timeoff_read';
     case HrisTimeoffWrite = 'hris_timeoff_write';
+    case HrisCompanyRead = 'hris_company_read';
+    case HrisCompanyWrite = 'hris_company_write';
     case UcCallRead = 'uc_call_read';
     case StorageFileRead = 'storage_file_read';
     case StorageFileWrite = 'storage_file_write';

@@ -79,7 +79,7 @@ try {
     $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-21T18:48:43.528Z');
     $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T14:41:39.477Z');
     $request->permissions = [
-        Shared\PropertyConnectionPermissions::Webhook,
+        Shared\PropertyConnectionPermissions::StorageFileWrite,
     ];
     $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T14:19:55.077Z');
     $request->workspaceId = '<value>';;

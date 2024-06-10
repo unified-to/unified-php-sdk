@@ -4,14 +4,20 @@
 ### Available Operations
 
 * [createCrmCompany](#createcrmcompany) - Create a company
+* [createHrisCompany](#createhriscompany) - Create a company
 * [getAtsCompany](#getatscompany) - Retrieve a company
 * [getCrmCompany](#getcrmcompany) - Retrieve a company
+* [getHrisCompany](#gethriscompany) - Retrieve a company
 * [listAtsCompanies](#listatscompanies) - List all companies
 * [listCrmCompanies](#listcrmcompanies) - List all companies
 * [listEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
+* [listHrisCompanies](#listhriscompanies) - List all companies
 * [patchCrmCompany](#patchcrmcompany) - Update a company
+* [patchHrisCompany](#patchhriscompany) - Update a company
 * [removeCrmCompany](#removecrmcompany) - Remove a company
+* [removeHrisCompany](#removehriscompany) - Remove a company
 * [updateCrmCompany](#updatecrmcompany) - Update a company
+* [updateHrisCompany](#updatehriscompany) - Update a company
 
 ## createCrmCompany
 
@@ -100,6 +106,72 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse](../../Models/Operations/CreateCrmCompanyResponse.md)**
+
+
+## createHrisCompany
+
+Create a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\CreateHrisCompanyRequest();
+    $request->hrisCompany = new Shared\HrisCompany();
+    $request->hrisCompany->address = new Shared\PropertyHrisCompanyAddress();
+    $request->hrisCompany->address->address1 = '<value>';
+    $request->hrisCompany->address->address2 = '<value>';
+    $request->hrisCompany->address->city = 'Leuschketon';
+    $request->hrisCompany->address->country = 'Greenland';
+    $request->hrisCompany->address->countryCode = 'UG';
+    $request->hrisCompany->address->postalCode = '28999';
+    $request->hrisCompany->address->region = '<value>';
+    $request->hrisCompany->address->regionCode = '<value>';
+    $request->hrisCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-26T14:41:42.849Z');
+    $request->hrisCompany->id = '<id>';
+    $request->hrisCompany->legalName = '<value>';
+    $request->hrisCompany->name = '<value>';
+    $request->hrisCompany->raw = [
+        'Account' => '<value>',
+    ];
+    $request->hrisCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-14T07:52:45.369Z');
+    $request->connectionId = '<value>';;
+
+    $response = $sdk->company->createHrisCompany($request);
+
+    if ($response->hrisCompany !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest](../../Models/Operations/CreateHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse](../../Models/Operations/CreateHrisCompanyResponse.md)**
 
 
 ## getAtsCompany
@@ -204,6 +276,58 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\GetCrmCompanyResponse](../../Models/Operations/GetCrmCompanyResponse.md)**
+
+
+## getHrisCompany
+
+Retrieve a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\GetHrisCompanyRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->id = '<id>';;
+
+    $response = $sdk->company->getHrisCompany($request);
+
+    if ($response->hrisCompany !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetHrisCompanyRequest](../../Models/Operations/GetHrisCompanyRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetHrisCompanyResponse](../../Models/Operations/GetHrisCompanyResponse.md)**
 
 
 ## listAtsCompanies
@@ -373,6 +497,63 @@ try {
 **[?\Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse](../../Models/Operations/ListEnrichCompaniesResponse.md)**
 
 
+## listHrisCompanies
+
+List all companies
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListHrisCompaniesRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->limit = 9887.05;
+    $request->offset = 4708.81;
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-23T09:20:33.437Z');;
+
+    $response = $sdk->company->listHrisCompanies($request);
+
+    if ($response->hrisCompanies !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest](../../Models/Operations/ListHrisCompaniesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse](../../Models/Operations/ListHrisCompaniesResponse.md)**
+
+
 ## patchCrmCompany
 
 Update a company
@@ -463,6 +644,73 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse](../../Models/Operations/PatchCrmCompanyResponse.md)**
 
 
+## patchHrisCompany
+
+Update a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\PatchHrisCompanyRequest();
+    $request->hrisCompany = new Shared\HrisCompany();
+    $request->hrisCompany->address = new Shared\PropertyHrisCompanyAddress();
+    $request->hrisCompany->address->address1 = '<value>';
+    $request->hrisCompany->address->address2 = '<value>';
+    $request->hrisCompany->address->city = 'West Tressashire';
+    $request->hrisCompany->address->country = 'Norfolk Island';
+    $request->hrisCompany->address->countryCode = 'MW';
+    $request->hrisCompany->address->postalCode = '36009-7244';
+    $request->hrisCompany->address->region = '<value>';
+    $request->hrisCompany->address->regionCode = '<value>';
+    $request->hrisCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-23T19:08:18.404Z');
+    $request->hrisCompany->id = '<id>';
+    $request->hrisCompany->legalName = '<value>';
+    $request->hrisCompany->name = '<value>';
+    $request->hrisCompany->raw = [
+        'Chief' => '<value>',
+    ];
+    $request->hrisCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-30T10:26:34.618Z');
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->company->patchHrisCompany($request);
+
+    if ($response->hrisCompany !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest](../../Models/Operations/PatchHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse](../../Models/Operations/PatchHrisCompanyResponse.md)**
+
+
 ## removeCrmCompany
 
 Remove a company
@@ -510,6 +758,55 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse](../../Models/Operations/RemoveCrmCompanyResponse.md)**
+
+
+## removeHrisCompany
+
+Remove a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\RemoveHrisCompanyRequest();
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->company->removeHrisCompany($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest](../../Models/Operations/RemoveHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse](../../Models/Operations/RemoveHrisCompanyResponse.md)**
 
 
 ## updateCrmCompany
@@ -600,4 +897,71 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse](../../Models/Operations/UpdateCrmCompanyResponse.md)**
+
+
+## updateHrisCompany
+
+Update a company
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\UpdateHrisCompanyRequest();
+    $request->hrisCompany = new Shared\HrisCompany();
+    $request->hrisCompany->address = new Shared\PropertyHrisCompanyAddress();
+    $request->hrisCompany->address->address1 = '<value>';
+    $request->hrisCompany->address->address2 = '<value>';
+    $request->hrisCompany->address->city = 'Rancho Santa Margarita';
+    $request->hrisCompany->address->country = 'Somalia';
+    $request->hrisCompany->address->countryCode = 'CL';
+    $request->hrisCompany->address->postalCode = '49321';
+    $request->hrisCompany->address->region = '<value>';
+    $request->hrisCompany->address->regionCode = '<value>';
+    $request->hrisCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-24T00:12:57.019Z');
+    $request->hrisCompany->id = '<id>';
+    $request->hrisCompany->legalName = '<value>';
+    $request->hrisCompany->name = '<value>';
+    $request->hrisCompany->raw = [
+        'Coordinator' => '<value>',
+    ];
+    $request->hrisCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-01T17:36:17.033Z');
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->company->updateHrisCompany($request);
+
+    if ($response->hrisCompany !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest](../../Models/Operations/UpdateHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse](../../Models/Operations/UpdateHrisCompanyResponse.md)**
 

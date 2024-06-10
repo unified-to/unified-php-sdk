@@ -9,11 +9,8 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListHrisGroupsRequest
+class ListHrisCompaniesRequest
 {
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
-    public ?string $companyId = null;
-
     /**
      * ID of the connection
      *
@@ -60,7 +57,6 @@ class ListHrisGroupsRequest
 
     public function __construct()
     {
-        $this->companyId = null;
         $this->connectionId = '';
         $this->fields = null;
         $this->limit = null;

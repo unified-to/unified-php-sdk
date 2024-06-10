@@ -11,6 +11,11 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisGroup
 {
+    #[\JMS\Serializer\Annotation\SerializedName('company_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $companyId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -83,6 +88,7 @@ class HrisGroup
 
     public function __construct()
     {
+        $this->companyId = null;
         $this->createdAt = null;
         $this->description = null;
         $this->id = null;

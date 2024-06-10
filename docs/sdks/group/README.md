@@ -35,6 +35,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateHrisGroupRequest();
     $request->hrisGroup = new Shared\HrisGroup();
+    $request->hrisGroup->companyId = '<value>';
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-12T02:07:27.193Z');
     $request->hrisGroup->description = 'Self-enabling system-worthy collaboration';
     $request->hrisGroup->id = '<id>';
@@ -152,6 +153,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListHrisGroupsRequest();
+    $request->companyId = '<value>';
     $request->connectionId = '<value>';
     $request->fields = [
         '<value>',
@@ -210,6 +212,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchHrisGroupRequest();
     $request->hrisGroup = new Shared\HrisGroup();
+    $request->hrisGroup->companyId = '<value>';
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-10T03:17:00.454Z');
     $request->hrisGroup->description = 'Compatible contextually-based local area network';
     $request->hrisGroup->id = '<id>';
@@ -326,6 +329,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateHrisGroupRequest();
     $request->hrisGroup = new Shared\HrisGroup();
+    $request->hrisGroup->companyId = '<value>';
     $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-07T01:08:49.621Z');
     $request->hrisGroup->description = 'Integrated empowering productivity';
     $request->hrisGroup->id = '<id>';

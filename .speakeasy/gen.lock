@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 34d8e45448aaadab7271416cea77fcaf
+  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
   docVersion: "1.0"
   speakeasyVersion: 1.300.1
   generationVersion: 2.339.1
-  releaseVersion: 0.15.12
-  configChecksum: 07fb328570ff5c45b0f011e74b51c1a8
+  releaseVersion: 0.15.13
+  configChecksum: 9d05997c66d9e10b033b51940f4efad1
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -290,18 +290,30 @@ generatedFiles:
   - src/Models/Operations/UpdateAtsScorecardResponse.php
   - src/Models/Operations/CreateCrmCompanyRequest.php
   - src/Models/Operations/CreateCrmCompanyResponse.php
+  - src/Models/Operations/CreateHrisCompanyRequest.php
+  - src/Models/Operations/CreateHrisCompanyResponse.php
   - src/Models/Operations/GetCrmCompanyRequest.php
   - src/Models/Operations/GetCrmCompanyResponse.php
+  - src/Models/Operations/GetHrisCompanyRequest.php
+  - src/Models/Operations/GetHrisCompanyResponse.php
   - src/Models/Operations/ListCrmCompaniesRequest.php
   - src/Models/Operations/ListCrmCompaniesResponse.php
   - src/Models/Operations/ListEnrichCompaniesRequest.php
   - src/Models/Operations/ListEnrichCompaniesResponse.php
+  - src/Models/Operations/ListHrisCompaniesRequest.php
+  - src/Models/Operations/ListHrisCompaniesResponse.php
   - src/Models/Operations/PatchCrmCompanyRequest.php
   - src/Models/Operations/PatchCrmCompanyResponse.php
+  - src/Models/Operations/PatchHrisCompanyRequest.php
+  - src/Models/Operations/PatchHrisCompanyResponse.php
   - src/Models/Operations/RemoveCrmCompanyRequest.php
   - src/Models/Operations/RemoveCrmCompanyResponse.php
+  - src/Models/Operations/RemoveHrisCompanyRequest.php
+  - src/Models/Operations/RemoveHrisCompanyResponse.php
   - src/Models/Operations/UpdateCrmCompanyRequest.php
   - src/Models/Operations/UpdateCrmCompanyResponse.php
+  - src/Models/Operations/UpdateHrisCompanyRequest.php
+  - src/Models/Operations/UpdateHrisCompanyResponse.php
   - src/Models/Operations/CreateCommerceCollectionRequest.php
   - src/Models/Operations/CreateCommerceCollectionResponse.php
   - src/Models/Operations/CreateCommerceInventoryRequest.php
@@ -725,6 +737,8 @@ generatedFiles:
   - src/Models/Shared/AtsStatus.php
   - src/Models/Shared/CrmCompany.php
   - src/Models/Shared/PropertyCrmCompanyAddress.php
+  - src/Models/Shared/HrisCompany.php
+  - src/Models/Shared/PropertyHrisCompanyAddress.php
   - src/Models/Shared/EnrichCompany.php
   - src/Models/Shared/EnrichTelephoneType.php
   - src/Models/Shared/EnrichTelephone.php
@@ -1058,18 +1072,30 @@ generatedFiles:
   - docs/Models/Operations/UpdateAtsScorecardResponse.md
   - docs/Models/Operations/CreateCrmCompanyRequest.md
   - docs/Models/Operations/CreateCrmCompanyResponse.md
+  - docs/Models/Operations/CreateHrisCompanyRequest.md
+  - docs/Models/Operations/CreateHrisCompanyResponse.md
   - docs/Models/Operations/GetCrmCompanyRequest.md
   - docs/Models/Operations/GetCrmCompanyResponse.md
+  - docs/Models/Operations/GetHrisCompanyRequest.md
+  - docs/Models/Operations/GetHrisCompanyResponse.md
   - docs/Models/Operations/ListCrmCompaniesRequest.md
   - docs/Models/Operations/ListCrmCompaniesResponse.md
   - docs/Models/Operations/ListEnrichCompaniesRequest.md
   - docs/Models/Operations/ListEnrichCompaniesResponse.md
+  - docs/Models/Operations/ListHrisCompaniesRequest.md
+  - docs/Models/Operations/ListHrisCompaniesResponse.md
   - docs/Models/Operations/PatchCrmCompanyRequest.md
   - docs/Models/Operations/PatchCrmCompanyResponse.md
+  - docs/Models/Operations/PatchHrisCompanyRequest.md
+  - docs/Models/Operations/PatchHrisCompanyResponse.md
   - docs/Models/Operations/RemoveCrmCompanyRequest.md
   - docs/Models/Operations/RemoveCrmCompanyResponse.md
+  - docs/Models/Operations/RemoveHrisCompanyRequest.md
+  - docs/Models/Operations/RemoveHrisCompanyResponse.md
   - docs/Models/Operations/UpdateCrmCompanyRequest.md
   - docs/Models/Operations/UpdateCrmCompanyResponse.md
+  - docs/Models/Operations/UpdateHrisCompanyRequest.md
+  - docs/Models/Operations/UpdateHrisCompanyResponse.md
   - docs/Models/Operations/CreateCommerceCollectionRequest.md
   - docs/Models/Operations/CreateCommerceCollectionResponse.md
   - docs/Models/Operations/CreateCommerceInventoryRequest.md
@@ -1493,6 +1519,8 @@ generatedFiles:
   - docs/Models/Shared/AtsStatus.md
   - docs/Models/Shared/CrmCompany.md
   - docs/Models/Shared/PropertyCrmCompanyAddress.md
+  - docs/Models/Shared/HrisCompany.md
+  - docs/Models/Shared/PropertyHrisCompanyAddress.md
   - docs/Models/Shared/EnrichCompany.md
   - docs/Models/Shared/EnrichTelephoneType.md
   - docs/Models/Shared/EnrichTelephone.md

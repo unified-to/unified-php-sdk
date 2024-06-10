@@ -16,6 +16,11 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyHrisEmployeeAddress $address = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('company_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $companyId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -154,6 +159,7 @@ class HrisEmployee
     public function __construct()
     {
         $this->address = null;
+        $this->companyId = null;
         $this->createdAt = null;
         $this->currency = null;
         $this->dateOfBirth = null;

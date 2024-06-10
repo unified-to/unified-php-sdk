@@ -59,6 +59,44 @@ class Company
     }
 
     /**
+     * Create a company
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse
+     */
+    public function createHrisCompany(
+        ?\Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company', \Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisCompany', 'json');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisCompany', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
      * Retrieve a company
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest  $request
@@ -122,6 +160,41 @@ class Company
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->crmCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmCompany', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
+     * Retrieve a company
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisCompanyResponse
+     */
+    public function getHrisCompany(
+        ?\Unified\Unified_to\Models\Operations\GetHrisCompanyRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetHrisCompanyResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', \Unified\Unified_to\Models\Operations\GetHrisCompanyRequest::class, $request);
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisCompanyRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\GetHrisCompanyResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisCompany', 'json');
             }
         }
 
@@ -234,6 +307,41 @@ class Company
     }
 
     /**
+     * List all companies
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse
+     */
+    public function listHrisCompanies(
+        ?\Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company', \Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest::class, $request);
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisCompanies = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisCompany>', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
      * Update a company
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest  $request
@@ -272,6 +380,44 @@ class Company
     }
 
     /**
+     * Update a company
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse
+     */
+    public function patchHrisCompany(
+        ?\Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', \Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisCompany', 'json');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisCompany', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
      * Remove a company
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest  $request
@@ -292,6 +438,41 @@ class Company
         $statusCode = $httpResponse->getStatusCode();
 
         $response = new \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if (($httpResponse->getStatusCode() >= 200 && $httpResponse->getStatusCode() < 300)) {
+        } else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
+     * Remove a company
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse
+     */
+    public function removeHrisCompany(
+        ?\Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', \Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest::class, $request);
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -338,6 +519,44 @@ class Company
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->crmCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CrmCompany', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
+     * Update a company
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse
+     */
+    public function updateHrisCompany(
+        ?\Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', \Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisCompany', 'json');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisCompany', 'json');
             }
         }
 

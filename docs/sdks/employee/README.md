@@ -44,6 +44,7 @@ try {
     $request->hrisEmployee->address->postalCode = '23995';
     $request->hrisEmployee->address->region = '<value>';
     $request->hrisEmployee->address->regionCode = '<value>';
+    $request->hrisEmployee->companyId = '<value>';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-07T16:11:17.542Z');
     $request->hrisEmployee->currency = 'Tunisian Dinar';
     $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-15T21:52:09.133Z');
@@ -174,6 +175,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListHrisEmployeesRequest();
+    $request->companyId = '<value>';
     $request->connectionId = '<value>';
     $request->fields = [
         '<value>',
@@ -241,6 +243,7 @@ try {
     $request->hrisEmployee->address->postalCode = '87892';
     $request->hrisEmployee->address->region = '<value>';
     $request->hrisEmployee->address->regionCode = '<value>';
+    $request->hrisEmployee->companyId = '<value>';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-12T22:40:07.218Z');
     $request->hrisEmployee->currency = 'Venezuelan bolívar';
     $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-04T03:46:56.564Z');
@@ -379,6 +382,7 @@ try {
     $request->hrisEmployee->address->postalCode = '60601-3179';
     $request->hrisEmployee->address->region = '<value>';
     $request->hrisEmployee->address->regionCode = '<value>';
+    $request->hrisEmployee->companyId = '<value>';
     $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-07T16:21:55.126Z');
     $request->hrisEmployee->currency = 'Zimbabwe Dollar';
     $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-03T23:33:19.708Z');
