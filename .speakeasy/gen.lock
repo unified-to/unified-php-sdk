@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
+  docChecksum: f0fea8601a16d51b9c2316f7dec21d35
   docVersion: "1.0"
-  speakeasyVersion: 1.300.1
-  generationVersion: 2.339.1
-  releaseVersion: 0.15.13
-  configChecksum: 9d05997c66d9e10b033b51940f4efad1
+  speakeasyVersion: 1.305.0
+  generationVersion: 2.340.3
+  releaseVersion: 0.15.14
+  configChecksum: b70d55bb041332d1007ce1c665800a83
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -759,6 +759,7 @@ generatedFiles:
   - src/Models/Shared/CrmDeal.php
   - src/Models/Shared/CrmEventType.php
   - src/Models/Shared/CrmEvent.php
+  - src/Models/Shared/Priority.php
   - src/Models/Shared/PropertyCrmEventTaskStatus.php
   - src/Models/Shared/PropertyCrmEventTask.php
   - src/Models/Shared/PropertyCrmEventNote.php
@@ -1541,6 +1542,7 @@ generatedFiles:
   - docs/Models/Shared/CrmDeal.md
   - docs/Models/Shared/CrmEventType.md
   - docs/Models/Shared/CrmEvent.md
+  - docs/Models/Shared/Priority.md
   - docs/Models/Shared/PropertyCrmEventTaskStatus.md
   - docs/Models/Shared/PropertyCrmEventTask.md
   - docs/Models/Shared/PropertyCrmEventNote.md

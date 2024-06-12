@@ -27,6 +27,11 @@ class PropertyCrmEventTask
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('priority')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Priority>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?Priority $priority = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -37,6 +42,7 @@ class PropertyCrmEventTask
         $this->description = null;
         $this->dueAt = null;
         $this->name = null;
+        $this->priority = null;
         $this->status = null;
     }
 }

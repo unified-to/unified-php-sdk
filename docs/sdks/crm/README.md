@@ -351,9 +351,10 @@ try {
     $request->crmEvent->task->description = 'Multi-tiered impactful attitude';
     $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-26T13:32:41.446Z');
     $request->crmEvent->task->name = '<value>';
+    $request->crmEvent->task->priority = Shared\Priority::High;
     $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
-    $request->crmEvent->type = Shared\CrmEventType::Note;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-09T05:29:10.624Z');
+    $request->crmEvent->type = Shared\CrmEventType::Call;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-08T21:07:05.273Z');
     $request->crmEvent->userId = '<value>';
     $request->connectionId = '<value>';;
 
@@ -1505,9 +1506,10 @@ try {
     $request->crmEvent->task->description = 'Intuitive zero administration complexity';
     $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T21:56:51.556Z');
     $request->crmEvent->task->name = '<value>';
-    $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Completed;
-    $request->crmEvent->type = Shared\CrmEventType::Call;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-23T20:19:34.007Z');
+    $request->crmEvent->task->priority = Shared\Priority::High;
+    $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::Deferred;
+    $request->crmEvent->type = Shared\CrmEventType::Meeting;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-28T07:08:29.227Z');
     $request->crmEvent->userId = '<value>';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
@@ -2285,9 +2287,10 @@ try {
     $request->crmEvent->task->description = 'Diverse clear-thinking success';
     $request->crmEvent->task->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-10T18:42:32.729Z');
     $request->crmEvent->task->name = '<value>';
-    $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::NotStarted;
-    $request->crmEvent->type = Shared\CrmEventType::Task;
-    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-12T06:25:41.650Z');
+    $request->crmEvent->task->priority = Shared\Priority::Medium;
+    $request->crmEvent->task->status = Shared\PropertyCrmEventTaskStatus::WorkInProgress;
+    $request->crmEvent->type = Shared\CrmEventType::Call;
+    $request->crmEvent->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-02-09T21:25:40.068Z');
     $request->crmEvent->userId = '<value>';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
