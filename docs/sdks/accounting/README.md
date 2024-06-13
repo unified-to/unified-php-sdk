@@ -6,35 +6,35 @@
 * [createAccountingAccount](#createaccountingaccount) - Create an account
 * [createAccountingContact](#createaccountingcontact) - Create a contact
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
+* [createAccountingJournal](#createaccountingjournal) - Create a journal
 * [createAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
-* [createAccountingTransaction](#createaccountingtransaction) - Create a transaction
 * [getAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [getAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
+* [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
-* [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [listAccountingContacts](#listaccountingcontacts) - List all contacts
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
+* [listAccountingJournals](#listaccountingjournals) - List all journals
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
-* [listAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
 * [patchAccountingContact](#patchaccountingcontact) - Update a contact
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
+* [patchAccountingJournal](#patchaccountingjournal) - Update a journal
 * [patchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
-* [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [removeAccountingAccount](#removeaccountingaccount) - Remove an account
 * [removeAccountingContact](#removeaccountingcontact) - Remove a contact
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
+* [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
 * [removeAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
-* [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingAccount](#updateaccountingaccount) - Update an account
 * [updateAccountingContact](#updateaccountingcontact) - Update a contact
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
+* [updateAccountingJournal](#updateaccountingjournal) - Update a journal
 * [updateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
-* [updateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
 
 ## createAccountingAccount
 
@@ -268,6 +268,69 @@ try {
 **[?\Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse](../../Models/Operations/CreateAccountingInvoiceResponse.md)**
 
 
+## createAccountingJournal
+
+Create a journal
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\CreateAccountingJournalRequest();
+    $request->accountingJournal = new Shared\AccountingJournal();
+    $request->accountingJournal->createdAt = '<value>';
+    $request->accountingJournal->currency = 'North Korean Won';
+    $request->accountingJournal->description = 'Polarised heuristic time-frame';
+    $request->accountingJournal->id = '<id>';
+    $request->accountingJournal->lineitems = [
+        new Shared\AccountingJournalLineitem(),
+    ];
+    $request->accountingJournal->raw = [
+        'Profound' => '<value>',
+    ];
+    $request->accountingJournal->reference = '<value>';
+    $request->accountingJournal->taxAmount = 2389.02;
+    $request->accountingJournal->taxrateId = '<value>';
+    $request->accountingJournal->updatedAt = '<value>';
+    $request->connectionId = '<value>';;
+
+    $response = $sdk->accounting->createAccountingJournal($request);
+
+    if ($response->accountingJournal !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateAccountingJournalRequest](../../Models/Operations/CreateAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\CreateAccountingJournalResponse](../../Models/Operations/CreateAccountingJournalResponse.md)**
+
+
 ## createAccountingTaxrate
 
 Create a taxrate
@@ -325,69 +388,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse](../../Models/Operations/CreateAccountingTaxrateResponse.md)**
-
-
-## createAccountingTransaction
-
-Create a transaction
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\CreateAccountingTransactionRequest();
-    $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = '<value>';
-    $request->accountingTransaction->currency = 'Libyan Dinar';
-    $request->accountingTransaction->description = 'Pre-emptive multimedia benchmark';
-    $request->accountingTransaction->id = '<id>';
-    $request->accountingTransaction->lineitems = [
-        new Shared\AccountingTransactionLineitem(),
-    ];
-    $request->accountingTransaction->raw = [
-        'Metal' => '<value>',
-    ];
-    $request->accountingTransaction->reference = '<value>';
-    $request->accountingTransaction->taxAmount = 8276.07;
-    $request->accountingTransaction->taxrateId = '<value>';
-    $request->accountingTransaction->updatedAt = '<value>';
-    $request->connectionId = '<value>';;
-
-    $response = $sdk->accounting->createAccountingTransaction($request);
-
-    if ($response->accountingTransaction !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest](../../Models/Operations/CreateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse](../../Models/Operations/CreateAccountingTransactionResponse.md)**
 
 
 ## getAccountingAccount
@@ -546,6 +546,58 @@ try {
 **[?\Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse](../../Models/Operations/GetAccountingInvoiceResponse.md)**
 
 
+## getAccountingJournal
+
+Retrieve a journal
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\GetAccountingJournalRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->id = '<id>';;
+
+    $response = $sdk->accounting->getAccountingJournal($request);
+
+    if ($response->accountingJournal !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAccountingJournalRequest](../../Models/Operations/GetAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\GetAccountingJournalResponse](../../Models/Operations/GetAccountingJournalResponse.md)**
+
+
 ## getAccountingOrganization
 
 Retrieve an organization
@@ -648,58 +700,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse](../../Models/Operations/GetAccountingTaxrateResponse.md)**
-
-
-## getAccountingTransaction
-
-Retrieve a transaction
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\GetAccountingTransactionRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
-    $response = $sdk->accounting->getAccountingTransaction($request);
-
-    if ($response->accountingTransaction !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest](../../Models/Operations/GetAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse](../../Models/Operations/GetAccountingTransactionResponse.md)**
 
 
 ## listAccountingAccounts
@@ -875,6 +875,63 @@ try {
 **[?\Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse](../../Models/Operations/ListAccountingInvoicesResponse.md)**
 
 
+## listAccountingJournals
+
+List all journals
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListAccountingJournalsRequest();
+    $request->connectionId = '<value>';
+    $request->fields = [
+        '<value>',
+    ];
+    $request->limit = 3732.99;
+    $request->offset = 235.51;
+    $request->order = '<value>';
+    $request->query = '<value>';
+    $request->sort = '<value>';
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-02T07:29:24.179Z');;
+
+    $response = $sdk->accounting->listAccountingJournals($request);
+
+    if ($response->accountingJournals !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListAccountingJournalsRequest](../../Models/Operations/ListAccountingJournalsRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\ListAccountingJournalsResponse](../../Models/Operations/ListAccountingJournalsResponse.md)**
+
+
 ## listAccountingOrganizations
 
 List all organizations
@@ -987,63 +1044,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse](../../Models/Operations/ListAccountingTaxratesResponse.md)**
-
-
-## listAccountingTransactions
-
-List all transactions
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\ListAccountingTransactionsRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 7894.5;
-    $request->offset = 4597.84;
-    $request->order = '<value>';
-    $request->query = '<value>';
-    $request->sort = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-02T12:20:43.572Z');;
-
-    $response = $sdk->accounting->listAccountingTransactions($request);
-
-    if ($response->accountingTransactions !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest](../../Models/Operations/ListAccountingTransactionsRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse](../../Models/Operations/ListAccountingTransactionsResponse.md)**
 
 
 ## patchAccountingAccount
@@ -1281,6 +1281,70 @@ try {
 **[?\Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse](../../Models/Operations/PatchAccountingInvoiceResponse.md)**
 
 
+## patchAccountingJournal
+
+Update a journal
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\PatchAccountingJournalRequest();
+    $request->accountingJournal = new Shared\AccountingJournal();
+    $request->accountingJournal->createdAt = '<value>';
+    $request->accountingJournal->currency = 'Malaysian Ringgit';
+    $request->accountingJournal->description = 'Digitized directional function';
+    $request->accountingJournal->id = '<id>';
+    $request->accountingJournal->lineitems = [
+        new Shared\AccountingJournalLineitem(),
+    ];
+    $request->accountingJournal->raw = [
+        'South' => '<value>',
+    ];
+    $request->accountingJournal->reference = '<value>';
+    $request->accountingJournal->taxAmount = 3075.33;
+    $request->accountingJournal->taxrateId = '<value>';
+    $request->accountingJournal->updatedAt = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->accounting->patchAccountingJournal($request);
+
+    if ($response->accountingJournal !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchAccountingJournalRequest](../../Models/Operations/PatchAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\PatchAccountingJournalResponse](../../Models/Operations/PatchAccountingJournalResponse.md)**
+
+
 ## patchAccountingTaxrate
 
 Update a taxrate
@@ -1339,70 +1403,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse](../../Models/Operations/PatchAccountingTaxrateResponse.md)**
-
-
-## patchAccountingTransaction
-
-Update a transaction
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\PatchAccountingTransactionRequest();
-    $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = '<value>';
-    $request->accountingTransaction->currency = 'Kwacha';
-    $request->accountingTransaction->description = 'Multi-channelled transitional function';
-    $request->accountingTransaction->id = '<id>';
-    $request->accountingTransaction->lineitems = [
-        new Shared\AccountingTransactionLineitem(),
-    ];
-    $request->accountingTransaction->raw = [
-        'Gambia' => '<value>',
-    ];
-    $request->accountingTransaction->reference = '<value>';
-    $request->accountingTransaction->taxAmount = 259.82;
-    $request->accountingTransaction->taxrateId = '<value>';
-    $request->accountingTransaction->updatedAt = '<value>';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
-    $response = $sdk->accounting->patchAccountingTransaction($request);
-
-    if ($response->accountingTransaction !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest](../../Models/Operations/PatchAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse](../../Models/Operations/PatchAccountingTransactionResponse.md)**
 
 
 ## removeAccountingAccount
@@ -1552,6 +1552,55 @@ try {
 **[?\Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse](../../Models/Operations/RemoveAccountingInvoiceResponse.md)**
 
 
+## removeAccountingJournal
+
+Remove a journal
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\RemoveAccountingJournalRequest();
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->accounting->removeAccountingJournal($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveAccountingJournalRequest](../../Models/Operations/RemoveAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\RemoveAccountingJournalResponse](../../Models/Operations/RemoveAccountingJournalResponse.md)**
+
+
 ## removeAccountingTaxrate
 
 Remove a taxrate
@@ -1599,55 +1648,6 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse](../../Models/Operations/RemoveAccountingTaxrateResponse.md)**
-
-
-## removeAccountingTransaction
-
-Remove a transaction
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\RemoveAccountingTransactionRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
-    $response = $sdk->accounting->removeAccountingTransaction($request);
-
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest](../../Models/Operations/RemoveAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse](../../Models/Operations/RemoveAccountingTransactionResponse.md)**
 
 
 ## updateAccountingAccount
@@ -1885,6 +1885,70 @@ try {
 **[?\Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse](../../Models/Operations/UpdateAccountingInvoiceResponse.md)**
 
 
+## updateAccountingJournal
+
+Update a journal
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \Unified\Unified_to;
+use \Unified\Unified_to\Models\Shared;
+use \Unified\Unified_to\Models\Operations;
+
+$security = new Shared\Security();
+$security->jwt = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\UpdateAccountingJournalRequest();
+    $request->accountingJournal = new Shared\AccountingJournal();
+    $request->accountingJournal->createdAt = '<value>';
+    $request->accountingJournal->currency = 'Riel';
+    $request->accountingJournal->description = 'Fundamental contextually-based challenge';
+    $request->accountingJournal->id = '<id>';
+    $request->accountingJournal->lineitems = [
+        new Shared\AccountingJournalLineitem(),
+    ];
+    $request->accountingJournal->raw = [
+        'Forward' => '<value>',
+    ];
+    $request->accountingJournal->reference = '<value>';
+    $request->accountingJournal->taxAmount = 5223.16;
+    $request->accountingJournal->taxrateId = '<value>';
+    $request->accountingJournal->updatedAt = '<value>';
+    $request->connectionId = '<value>';
+    $request->id = '<id>';;
+
+    $response = $sdk->accounting->updateAccountingJournal($request);
+
+    if ($response->accountingJournal !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateAccountingJournalRequest](../../Models/Operations/UpdateAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+
+### Response
+
+**[?\Unified\Unified_to\Models\Operations\UpdateAccountingJournalResponse](../../Models/Operations/UpdateAccountingJournalResponse.md)**
+
+
 ## updateAccountingTaxrate
 
 Update a taxrate
@@ -1943,68 +2007,4 @@ try {
 ### Response
 
 **[?\Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse](../../Models/Operations/UpdateAccountingTaxrateResponse.md)**
-
-
-## updateAccountingTransaction
-
-Update a transaction
-
-### Example Usage
-
-```php
-<?php
-
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
-
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-try {
-        $request = new Operations\UpdateAccountingTransactionRequest();
-    $request->accountingTransaction = new Shared\AccountingTransaction();
-    $request->accountingTransaction->createdAt = '<value>';
-    $request->accountingTransaction->currency = 'Zloty';
-    $request->accountingTransaction->description = 'Organic web-enabled orchestration';
-    $request->accountingTransaction->id = '<id>';
-    $request->accountingTransaction->lineitems = [
-        new Shared\AccountingTransactionLineitem(),
-    ];
-    $request->accountingTransaction->raw = [
-        'Intelligent' => '<value>',
-    ];
-    $request->accountingTransaction->reference = '<value>';
-    $request->accountingTransaction->taxAmount = 421.84;
-    $request->accountingTransaction->taxrateId = '<value>';
-    $request->accountingTransaction->updatedAt = '<value>';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
-    $response = $sdk->accounting->updateAccountingTransaction($request);
-
-    if ($response->accountingTransaction !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest](../../Models/Operations/UpdateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-
-
-### Response
-
-**[?\Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse](../../Models/Operations/UpdateAccountingTransactionResponse.md)**
 

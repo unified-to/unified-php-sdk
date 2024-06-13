@@ -429,7 +429,7 @@ try {
     $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T16:11:04.721Z');
     $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-20T19:30:15.010Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::KmsSpaceWrite,
+        Shared\PropertyConnectionPermissions::KmsSpaceRead,
     ];
     $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T13:28:25.633Z');
     $request->connection->workspaceId = '<value>';

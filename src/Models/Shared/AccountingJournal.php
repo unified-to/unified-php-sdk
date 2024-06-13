@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class AccountingTransaction
+class AccountingJournal
 {
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -34,10 +34,10 @@ class AccountingTransaction
     /**
      * new field name
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem> $lineitems
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingTransactionLineitem>')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingJournalLineitem>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineitems = null;
 

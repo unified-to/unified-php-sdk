@@ -9,11 +9,8 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class PatchAccountingTransactionRequest
+class GetAccountingJournalRequest
 {
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AccountingTransaction $accountingTransaction = null;
-
     /**
      * ID of the connection
      *
@@ -23,7 +20,15 @@ class PatchAccountingTransactionRequest
     public string $connectionId;
 
     /**
-     * ID of the Transaction
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * ID of the Journal
      *
      * @var string $id
      */
@@ -32,8 +37,8 @@ class PatchAccountingTransactionRequest
 
     public function __construct()
     {
-        $this->accountingTransaction = null;
         $this->connectionId = '';
+        $this->fields = null;
         $this->id = '';
     }
 }

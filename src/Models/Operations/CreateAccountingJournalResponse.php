@@ -9,8 +9,15 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 
-class RemoveAccountingTransactionResponse
+class CreateAccountingJournalResponse
 {
+    /**
+     * Successful
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal
+     */
+    public ?\Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal = null;
+
     /**
      * HTTP response content type for this operation
      *
@@ -32,18 +39,11 @@ class RemoveAccountingTransactionResponse
      */
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
 
-    /**
-     * Successful
-     *
-     * @var ?string $string
-     */
-    public ?string $string = null;
-
     public function __construct()
     {
+        $this->accountingJournal = null;
         $this->contentType = '';
         $this->statusCode = 0;
         $this->rawResponse = null;
-        $this->string = null;
     }
 }

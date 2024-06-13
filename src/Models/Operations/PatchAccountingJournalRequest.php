@@ -9,8 +9,11 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class RemoveAccountingTransactionRequest
+class PatchAccountingJournalRequest
 {
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal = null;
+
     /**
      * ID of the connection
      *
@@ -20,7 +23,7 @@ class RemoveAccountingTransactionRequest
     public string $connectionId;
 
     /**
-     * ID of the Transaction
+     * ID of the Journal
      *
      * @var string $id
      */
@@ -29,6 +32,7 @@ class RemoveAccountingTransactionRequest
 
     public function __construct()
     {
+        $this->accountingJournal = null;
         $this->connectionId = '';
         $this->id = '';
     }

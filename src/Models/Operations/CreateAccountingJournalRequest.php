@@ -9,10 +9,10 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class CreateAccountingTransactionRequest
+class CreateAccountingJournalRequest
 {
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AccountingTransaction $accountingTransaction = null;
+    public ?\Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal = null;
 
     /**
      * ID of the connection
@@ -24,7 +24,7 @@ class CreateAccountingTransactionRequest
 
     public function __construct()
     {
-        $this->accountingTransaction = null;
+        $this->accountingJournal = null;
         $this->connectionId = '';
     }
 }

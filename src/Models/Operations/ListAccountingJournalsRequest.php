@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListAccountingTransactionsRequest
+class ListAccountingJournalsRequest
 {
     /**
      * ID of the connection

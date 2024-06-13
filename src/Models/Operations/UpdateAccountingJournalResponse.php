@@ -9,14 +9,14 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 
-class CreateAccountingTransactionResponse
+class UpdateAccountingJournalResponse
 {
     /**
      * Successful
      *
-     * @var ?\Unified\Unified_to\Models\Shared\AccountingTransaction $accountingTransaction
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal
      */
-    public ?\Unified\Unified_to\Models\Shared\AccountingTransaction $accountingTransaction = null;
+    public ?\Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal = null;
 
     /**
      * HTTP response content type for this operation
@@ -41,7 +41,7 @@ class CreateAccountingTransactionResponse
 
     public function __construct()
     {
-        $this->accountingTransaction = null;
+        $this->accountingJournal = null;
         $this->contentType = '';
         $this->statusCode = 0;
         $this->rawResponse = null;

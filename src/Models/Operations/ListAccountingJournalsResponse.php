@@ -9,14 +9,14 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 
-class PatchAccountingTransactionResponse
+class ListAccountingJournalsResponse
 {
     /**
      * Successful
      *
-     * @var ?\Unified\Unified_to\Models\Shared\AccountingTransaction $accountingTransaction
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingJournal> $accountingJournals
      */
-    public ?\Unified\Unified_to\Models\Shared\AccountingTransaction $accountingTransaction = null;
+    public ?array $accountingJournals = null;
 
     /**
      * HTTP response content type for this operation
@@ -41,7 +41,7 @@ class PatchAccountingTransactionResponse
 
     public function __construct()
     {
-        $this->accountingTransaction = null;
+        $this->accountingJournals = null;
         $this->contentType = '';
         $this->statusCode = 0;
         $this->rawResponse = null;

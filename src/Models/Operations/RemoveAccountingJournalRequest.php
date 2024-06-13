@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class GetAccountingTransactionRequest
+class RemoveAccountingJournalRequest
 {
     /**
      * ID of the connection
@@ -20,15 +20,7 @@ class GetAccountingTransactionRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
-     *
-     * @var ?array<string> $fields
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-
-    /**
-     * ID of the Transaction
+     * ID of the Journal
      *
      * @var string $id
      */
@@ -38,7 +30,6 @@ class GetAccountingTransactionRequest
     public function __construct()
     {
         $this->connectionId = '';
-        $this->fields = null;
         $this->id = '';
     }
 }

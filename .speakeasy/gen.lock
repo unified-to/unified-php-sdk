@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: f0fea8601a16d51b9c2316f7dec21d35
+  docChecksum: 5644d053fad87c74eb97f4e8f727fa1d
   docVersion: "1.0"
-  speakeasyVersion: 1.305.0
+  speakeasyVersion: 1.306.0
   generationVersion: 2.340.3
-  releaseVersion: 0.15.14
-  configChecksum: b70d55bb041332d1007ce1c665800a83
+  releaseVersion: 0.15.15
+  configChecksum: b1c6b5d55cd99dc34e1e5c303cba3125
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -23,9 +23,9 @@ generatedFiles:
   - src/Account.php
   - src/Contact.php
   - src/Invoice.php
+  - src/Journal.php
   - src/Organization.php
   - src/Taxrate.php
-  - src/Transaction.php
   - src/Ats.php
   - src/Activity.php
   - src/Application.php
@@ -116,64 +116,64 @@ generatedFiles:
   - src/Models/Operations/CreateAccountingContactResponse.php
   - src/Models/Operations/CreateAccountingInvoiceRequest.php
   - src/Models/Operations/CreateAccountingInvoiceResponse.php
+  - src/Models/Operations/CreateAccountingJournalRequest.php
+  - src/Models/Operations/CreateAccountingJournalResponse.php
   - src/Models/Operations/CreateAccountingTaxrateRequest.php
   - src/Models/Operations/CreateAccountingTaxrateResponse.php
-  - src/Models/Operations/CreateAccountingTransactionRequest.php
-  - src/Models/Operations/CreateAccountingTransactionResponse.php
   - src/Models/Operations/GetAccountingAccountRequest.php
   - src/Models/Operations/GetAccountingAccountResponse.php
   - src/Models/Operations/GetAccountingContactRequest.php
   - src/Models/Operations/GetAccountingContactResponse.php
   - src/Models/Operations/GetAccountingInvoiceRequest.php
   - src/Models/Operations/GetAccountingInvoiceResponse.php
+  - src/Models/Operations/GetAccountingJournalRequest.php
+  - src/Models/Operations/GetAccountingJournalResponse.php
   - src/Models/Operations/GetAccountingOrganizationRequest.php
   - src/Models/Operations/GetAccountingOrganizationResponse.php
   - src/Models/Operations/GetAccountingTaxrateRequest.php
   - src/Models/Operations/GetAccountingTaxrateResponse.php
-  - src/Models/Operations/GetAccountingTransactionRequest.php
-  - src/Models/Operations/GetAccountingTransactionResponse.php
   - src/Models/Operations/ListAccountingAccountsRequest.php
   - src/Models/Operations/ListAccountingAccountsResponse.php
   - src/Models/Operations/ListAccountingContactsRequest.php
   - src/Models/Operations/ListAccountingContactsResponse.php
   - src/Models/Operations/ListAccountingInvoicesRequest.php
   - src/Models/Operations/ListAccountingInvoicesResponse.php
+  - src/Models/Operations/ListAccountingJournalsRequest.php
+  - src/Models/Operations/ListAccountingJournalsResponse.php
   - src/Models/Operations/ListAccountingOrganizationsRequest.php
   - src/Models/Operations/ListAccountingOrganizationsResponse.php
   - src/Models/Operations/ListAccountingTaxratesRequest.php
   - src/Models/Operations/ListAccountingTaxratesResponse.php
-  - src/Models/Operations/ListAccountingTransactionsRequest.php
-  - src/Models/Operations/ListAccountingTransactionsResponse.php
   - src/Models/Operations/PatchAccountingAccountRequest.php
   - src/Models/Operations/PatchAccountingAccountResponse.php
   - src/Models/Operations/PatchAccountingContactRequest.php
   - src/Models/Operations/PatchAccountingContactResponse.php
   - src/Models/Operations/PatchAccountingInvoiceRequest.php
   - src/Models/Operations/PatchAccountingInvoiceResponse.php
+  - src/Models/Operations/PatchAccountingJournalRequest.php
+  - src/Models/Operations/PatchAccountingJournalResponse.php
   - src/Models/Operations/PatchAccountingTaxrateRequest.php
   - src/Models/Operations/PatchAccountingTaxrateResponse.php
-  - src/Models/Operations/PatchAccountingTransactionRequest.php
-  - src/Models/Operations/PatchAccountingTransactionResponse.php
   - src/Models/Operations/RemoveAccountingAccountRequest.php
   - src/Models/Operations/RemoveAccountingAccountResponse.php
   - src/Models/Operations/RemoveAccountingContactRequest.php
   - src/Models/Operations/RemoveAccountingContactResponse.php
   - src/Models/Operations/RemoveAccountingInvoiceRequest.php
   - src/Models/Operations/RemoveAccountingInvoiceResponse.php
+  - src/Models/Operations/RemoveAccountingJournalRequest.php
+  - src/Models/Operations/RemoveAccountingJournalResponse.php
   - src/Models/Operations/RemoveAccountingTaxrateRequest.php
   - src/Models/Operations/RemoveAccountingTaxrateResponse.php
-  - src/Models/Operations/RemoveAccountingTransactionRequest.php
-  - src/Models/Operations/RemoveAccountingTransactionResponse.php
   - src/Models/Operations/UpdateAccountingAccountRequest.php
   - src/Models/Operations/UpdateAccountingAccountResponse.php
   - src/Models/Operations/UpdateAccountingContactRequest.php
   - src/Models/Operations/UpdateAccountingContactResponse.php
   - src/Models/Operations/UpdateAccountingInvoiceRequest.php
   - src/Models/Operations/UpdateAccountingInvoiceResponse.php
+  - src/Models/Operations/UpdateAccountingJournalRequest.php
+  - src/Models/Operations/UpdateAccountingJournalResponse.php
   - src/Models/Operations/UpdateAccountingTaxrateRequest.php
   - src/Models/Operations/UpdateAccountingTaxrateResponse.php
-  - src/Models/Operations/UpdateAccountingTransactionRequest.php
-  - src/Models/Operations/UpdateAccountingTransactionResponse.php
   - src/Models/Operations/CreateCrmContactRequest.php
   - src/Models/Operations/CreateCrmContactResponse.php
   - src/Models/Operations/CreateUcContactRequest.php
@@ -687,9 +687,9 @@ generatedFiles:
   - src/Models/Shared/AccountingInvoiceStatus.php
   - src/Models/Shared/AccountingInvoice.php
   - src/Models/Shared/AccountingLineitem.php
+  - src/Models/Shared/AccountingJournal.php
+  - src/Models/Shared/AccountingJournalLineitem.php
   - src/Models/Shared/AccountingTaxrate.php
-  - src/Models/Shared/AccountingTransaction.php
-  - src/Models/Shared/AccountingTransactionLineitem.php
   - src/Models/Shared/AccountingOrganization.php
   - src/Models/Shared/PropertyAccountingOrganizationAddress.php
   - src/Models/Shared/CrmContact.php
@@ -899,64 +899,64 @@ generatedFiles:
   - docs/Models/Operations/CreateAccountingContactResponse.md
   - docs/Models/Operations/CreateAccountingInvoiceRequest.md
   - docs/Models/Operations/CreateAccountingInvoiceResponse.md
+  - docs/Models/Operations/CreateAccountingJournalRequest.md
+  - docs/Models/Operations/CreateAccountingJournalResponse.md
   - docs/Models/Operations/CreateAccountingTaxrateRequest.md
   - docs/Models/Operations/CreateAccountingTaxrateResponse.md
-  - docs/Models/Operations/CreateAccountingTransactionRequest.md
-  - docs/Models/Operations/CreateAccountingTransactionResponse.md
   - docs/Models/Operations/GetAccountingAccountRequest.md
   - docs/Models/Operations/GetAccountingAccountResponse.md
   - docs/Models/Operations/GetAccountingContactRequest.md
   - docs/Models/Operations/GetAccountingContactResponse.md
   - docs/Models/Operations/GetAccountingInvoiceRequest.md
   - docs/Models/Operations/GetAccountingInvoiceResponse.md
+  - docs/Models/Operations/GetAccountingJournalRequest.md
+  - docs/Models/Operations/GetAccountingJournalResponse.md
   - docs/Models/Operations/GetAccountingOrganizationRequest.md
   - docs/Models/Operations/GetAccountingOrganizationResponse.md
   - docs/Models/Operations/GetAccountingTaxrateRequest.md
   - docs/Models/Operations/GetAccountingTaxrateResponse.md
-  - docs/Models/Operations/GetAccountingTransactionRequest.md
-  - docs/Models/Operations/GetAccountingTransactionResponse.md
   - docs/Models/Operations/ListAccountingAccountsRequest.md
   - docs/Models/Operations/ListAccountingAccountsResponse.md
   - docs/Models/Operations/ListAccountingContactsRequest.md
   - docs/Models/Operations/ListAccountingContactsResponse.md
   - docs/Models/Operations/ListAccountingInvoicesRequest.md
   - docs/Models/Operations/ListAccountingInvoicesResponse.md
+  - docs/Models/Operations/ListAccountingJournalsRequest.md
+  - docs/Models/Operations/ListAccountingJournalsResponse.md
   - docs/Models/Operations/ListAccountingOrganizationsRequest.md
   - docs/Models/Operations/ListAccountingOrganizationsResponse.md
   - docs/Models/Operations/ListAccountingTaxratesRequest.md
   - docs/Models/Operations/ListAccountingTaxratesResponse.md
-  - docs/Models/Operations/ListAccountingTransactionsRequest.md
-  - docs/Models/Operations/ListAccountingTransactionsResponse.md
   - docs/Models/Operations/PatchAccountingAccountRequest.md
   - docs/Models/Operations/PatchAccountingAccountResponse.md
   - docs/Models/Operations/PatchAccountingContactRequest.md
   - docs/Models/Operations/PatchAccountingContactResponse.md
   - docs/Models/Operations/PatchAccountingInvoiceRequest.md
   - docs/Models/Operations/PatchAccountingInvoiceResponse.md
+  - docs/Models/Operations/PatchAccountingJournalRequest.md
+  - docs/Models/Operations/PatchAccountingJournalResponse.md
   - docs/Models/Operations/PatchAccountingTaxrateRequest.md
   - docs/Models/Operations/PatchAccountingTaxrateResponse.md
-  - docs/Models/Operations/PatchAccountingTransactionRequest.md
-  - docs/Models/Operations/PatchAccountingTransactionResponse.md
   - docs/Models/Operations/RemoveAccountingAccountRequest.md
   - docs/Models/Operations/RemoveAccountingAccountResponse.md
   - docs/Models/Operations/RemoveAccountingContactRequest.md
   - docs/Models/Operations/RemoveAccountingContactResponse.md
   - docs/Models/Operations/RemoveAccountingInvoiceRequest.md
   - docs/Models/Operations/RemoveAccountingInvoiceResponse.md
+  - docs/Models/Operations/RemoveAccountingJournalRequest.md
+  - docs/Models/Operations/RemoveAccountingJournalResponse.md
   - docs/Models/Operations/RemoveAccountingTaxrateRequest.md
   - docs/Models/Operations/RemoveAccountingTaxrateResponse.md
-  - docs/Models/Operations/RemoveAccountingTransactionRequest.md
-  - docs/Models/Operations/RemoveAccountingTransactionResponse.md
   - docs/Models/Operations/UpdateAccountingAccountRequest.md
   - docs/Models/Operations/UpdateAccountingAccountResponse.md
   - docs/Models/Operations/UpdateAccountingContactRequest.md
   - docs/Models/Operations/UpdateAccountingContactResponse.md
   - docs/Models/Operations/UpdateAccountingInvoiceRequest.md
   - docs/Models/Operations/UpdateAccountingInvoiceResponse.md
+  - docs/Models/Operations/UpdateAccountingJournalRequest.md
+  - docs/Models/Operations/UpdateAccountingJournalResponse.md
   - docs/Models/Operations/UpdateAccountingTaxrateRequest.md
   - docs/Models/Operations/UpdateAccountingTaxrateResponse.md
-  - docs/Models/Operations/UpdateAccountingTransactionRequest.md
-  - docs/Models/Operations/UpdateAccountingTransactionResponse.md
   - docs/Models/Operations/CreateCrmContactRequest.md
   - docs/Models/Operations/CreateCrmContactResponse.md
   - docs/Models/Operations/CreateUcContactRequest.md
@@ -1470,9 +1470,9 @@ generatedFiles:
   - docs/Models/Shared/AccountingInvoiceStatus.md
   - docs/Models/Shared/AccountingInvoice.md
   - docs/Models/Shared/AccountingLineitem.md
+  - docs/Models/Shared/AccountingJournal.md
+  - docs/Models/Shared/AccountingJournalLineitem.md
   - docs/Models/Shared/AccountingTaxrate.md
-  - docs/Models/Shared/AccountingTransaction.md
-  - docs/Models/Shared/AccountingTransactionLineitem.md
   - docs/Models/Shared/AccountingOrganization.md
   - docs/Models/Shared/PropertyAccountingOrganizationAddress.md
   - docs/Models/Shared/CrmContact.md
@@ -1681,9 +1681,9 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
+  - docs/sdks/journal/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/taxrate/README.md
-  - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/activity/README.md
   - docs/sdks/application/README.md
