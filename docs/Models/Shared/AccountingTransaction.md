@@ -1,0 +1,24 @@
+# AccountingTransaction
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `accountId`                                                   | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `contactId`                                                   | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `createdAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `currency`                                                    | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `customerMessage`                                             | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `id`                                                          | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `memo`                                                        | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `paymentMethod`                                               | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `paymentTerms`                                                | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `raw`                                                         | array<string, *mixed*>                                        | :heavy_minus_sign:                                            | N/A                                                           |
+| `reference`                                                   | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `splitAccountId`                                              | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `subTotalAmount`                                              | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `taxAmount`                                                   | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `totalAmount`                                                 | *float*                                                       | :heavy_check_mark:                                            | N/A                                                           |
+| `type`                                                        | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `updatedAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |

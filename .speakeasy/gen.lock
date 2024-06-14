@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 5644d053fad87c74eb97f4e8f727fa1d
+  docChecksum: beb5ec210d7103d860c8cfde440f2674
   docVersion: "1.0"
-  speakeasyVersion: 1.306.0
-  generationVersion: 2.340.3
-  releaseVersion: 0.15.15
-  configChecksum: b1c6b5d55cd99dc34e1e5c303cba3125
+  speakeasyVersion: 1.308.0
+  generationVersion: 2.342.2
+  releaseVersion: 0.15.16
+  configChecksum: e2f5b466914044f10aa50402ae558848
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -26,6 +26,7 @@ generatedFiles:
   - src/Journal.php
   - src/Organization.php
   - src/Taxrate.php
+  - src/Transaction.php
   - src/Ats.php
   - src/Activity.php
   - src/Application.php
@@ -120,6 +121,8 @@ generatedFiles:
   - src/Models/Operations/CreateAccountingJournalResponse.php
   - src/Models/Operations/CreateAccountingTaxrateRequest.php
   - src/Models/Operations/CreateAccountingTaxrateResponse.php
+  - src/Models/Operations/CreateAccountingTransactionRequest.php
+  - src/Models/Operations/CreateAccountingTransactionResponse.php
   - src/Models/Operations/GetAccountingAccountRequest.php
   - src/Models/Operations/GetAccountingAccountResponse.php
   - src/Models/Operations/GetAccountingContactRequest.php
@@ -132,6 +135,8 @@ generatedFiles:
   - src/Models/Operations/GetAccountingOrganizationResponse.php
   - src/Models/Operations/GetAccountingTaxrateRequest.php
   - src/Models/Operations/GetAccountingTaxrateResponse.php
+  - src/Models/Operations/GetAccountingTransactionRequest.php
+  - src/Models/Operations/GetAccountingTransactionResponse.php
   - src/Models/Operations/ListAccountingAccountsRequest.php
   - src/Models/Operations/ListAccountingAccountsResponse.php
   - src/Models/Operations/ListAccountingContactsRequest.php
@@ -144,6 +149,8 @@ generatedFiles:
   - src/Models/Operations/ListAccountingOrganizationsResponse.php
   - src/Models/Operations/ListAccountingTaxratesRequest.php
   - src/Models/Operations/ListAccountingTaxratesResponse.php
+  - src/Models/Operations/ListAccountingTransactionsRequest.php
+  - src/Models/Operations/ListAccountingTransactionsResponse.php
   - src/Models/Operations/PatchAccountingAccountRequest.php
   - src/Models/Operations/PatchAccountingAccountResponse.php
   - src/Models/Operations/PatchAccountingContactRequest.php
@@ -154,6 +161,8 @@ generatedFiles:
   - src/Models/Operations/PatchAccountingJournalResponse.php
   - src/Models/Operations/PatchAccountingTaxrateRequest.php
   - src/Models/Operations/PatchAccountingTaxrateResponse.php
+  - src/Models/Operations/PatchAccountingTransactionRequest.php
+  - src/Models/Operations/PatchAccountingTransactionResponse.php
   - src/Models/Operations/RemoveAccountingAccountRequest.php
   - src/Models/Operations/RemoveAccountingAccountResponse.php
   - src/Models/Operations/RemoveAccountingContactRequest.php
@@ -164,6 +173,8 @@ generatedFiles:
   - src/Models/Operations/RemoveAccountingJournalResponse.php
   - src/Models/Operations/RemoveAccountingTaxrateRequest.php
   - src/Models/Operations/RemoveAccountingTaxrateResponse.php
+  - src/Models/Operations/RemoveAccountingTransactionRequest.php
+  - src/Models/Operations/RemoveAccountingTransactionResponse.php
   - src/Models/Operations/UpdateAccountingAccountRequest.php
   - src/Models/Operations/UpdateAccountingAccountResponse.php
   - src/Models/Operations/UpdateAccountingContactRequest.php
@@ -174,6 +185,8 @@ generatedFiles:
   - src/Models/Operations/UpdateAccountingJournalResponse.php
   - src/Models/Operations/UpdateAccountingTaxrateRequest.php
   - src/Models/Operations/UpdateAccountingTaxrateResponse.php
+  - src/Models/Operations/UpdateAccountingTransactionRequest.php
+  - src/Models/Operations/UpdateAccountingTransactionResponse.php
   - src/Models/Operations/CreateCrmContactRequest.php
   - src/Models/Operations/CreateCrmContactResponse.php
   - src/Models/Operations/CreateUcContactRequest.php
@@ -690,6 +703,7 @@ generatedFiles:
   - src/Models/Shared/AccountingJournal.php
   - src/Models/Shared/AccountingJournalLineitem.php
   - src/Models/Shared/AccountingTaxrate.php
+  - src/Models/Shared/AccountingTransaction.php
   - src/Models/Shared/AccountingOrganization.php
   - src/Models/Shared/PropertyAccountingOrganizationAddress.php
   - src/Models/Shared/CrmContact.php
@@ -903,6 +917,8 @@ generatedFiles:
   - docs/Models/Operations/CreateAccountingJournalResponse.md
   - docs/Models/Operations/CreateAccountingTaxrateRequest.md
   - docs/Models/Operations/CreateAccountingTaxrateResponse.md
+  - docs/Models/Operations/CreateAccountingTransactionRequest.md
+  - docs/Models/Operations/CreateAccountingTransactionResponse.md
   - docs/Models/Operations/GetAccountingAccountRequest.md
   - docs/Models/Operations/GetAccountingAccountResponse.md
   - docs/Models/Operations/GetAccountingContactRequest.md
@@ -915,6 +931,8 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingOrganizationResponse.md
   - docs/Models/Operations/GetAccountingTaxrateRequest.md
   - docs/Models/Operations/GetAccountingTaxrateResponse.md
+  - docs/Models/Operations/GetAccountingTransactionRequest.md
+  - docs/Models/Operations/GetAccountingTransactionResponse.md
   - docs/Models/Operations/ListAccountingAccountsRequest.md
   - docs/Models/Operations/ListAccountingAccountsResponse.md
   - docs/Models/Operations/ListAccountingContactsRequest.md
@@ -927,6 +945,8 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingOrganizationsResponse.md
   - docs/Models/Operations/ListAccountingTaxratesRequest.md
   - docs/Models/Operations/ListAccountingTaxratesResponse.md
+  - docs/Models/Operations/ListAccountingTransactionsRequest.md
+  - docs/Models/Operations/ListAccountingTransactionsResponse.md
   - docs/Models/Operations/PatchAccountingAccountRequest.md
   - docs/Models/Operations/PatchAccountingAccountResponse.md
   - docs/Models/Operations/PatchAccountingContactRequest.md
@@ -937,6 +957,8 @@ generatedFiles:
   - docs/Models/Operations/PatchAccountingJournalResponse.md
   - docs/Models/Operations/PatchAccountingTaxrateRequest.md
   - docs/Models/Operations/PatchAccountingTaxrateResponse.md
+  - docs/Models/Operations/PatchAccountingTransactionRequest.md
+  - docs/Models/Operations/PatchAccountingTransactionResponse.md
   - docs/Models/Operations/RemoveAccountingAccountRequest.md
   - docs/Models/Operations/RemoveAccountingAccountResponse.md
   - docs/Models/Operations/RemoveAccountingContactRequest.md
@@ -947,6 +969,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveAccountingJournalResponse.md
   - docs/Models/Operations/RemoveAccountingTaxrateRequest.md
   - docs/Models/Operations/RemoveAccountingTaxrateResponse.md
+  - docs/Models/Operations/RemoveAccountingTransactionRequest.md
+  - docs/Models/Operations/RemoveAccountingTransactionResponse.md
   - docs/Models/Operations/UpdateAccountingAccountRequest.md
   - docs/Models/Operations/UpdateAccountingAccountResponse.md
   - docs/Models/Operations/UpdateAccountingContactRequest.md
@@ -957,6 +981,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateAccountingJournalResponse.md
   - docs/Models/Operations/UpdateAccountingTaxrateRequest.md
   - docs/Models/Operations/UpdateAccountingTaxrateResponse.md
+  - docs/Models/Operations/UpdateAccountingTransactionRequest.md
+  - docs/Models/Operations/UpdateAccountingTransactionResponse.md
   - docs/Models/Operations/CreateCrmContactRequest.md
   - docs/Models/Operations/CreateCrmContactResponse.md
   - docs/Models/Operations/CreateUcContactRequest.md
@@ -1473,6 +1499,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingJournal.md
   - docs/Models/Shared/AccountingJournalLineitem.md
   - docs/Models/Shared/AccountingTaxrate.md
+  - docs/Models/Shared/AccountingTransaction.md
   - docs/Models/Shared/AccountingOrganization.md
   - docs/Models/Shared/PropertyAccountingOrganizationAddress.md
   - docs/Models/Shared/CrmContact.md
@@ -1684,6 +1711,7 @@ generatedFiles:
   - docs/sdks/journal/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/taxrate/README.md
+  - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/activity/README.md
   - docs/sdks/application/README.md

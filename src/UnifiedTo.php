@@ -32,6 +32,8 @@ class UnifiedTo
 
     public Taxrate $taxrate;
 
+    public Transaction $transaction;
+
     public Ats $ats;
 
     public Activity $activity;
@@ -179,6 +181,7 @@ class UnifiedTo
         $this->journal = new Journal($this->sdkConfiguration);
         $this->organization = new Organization($this->sdkConfiguration);
         $this->taxrate = new Taxrate($this->sdkConfiguration);
+        $this->transaction = new Transaction($this->sdkConfiguration);
         $this->ats = new Ats($this->sdkConfiguration);
         $this->activity = new Activity($this->sdkConfiguration);
         $this->application = new Application($this->sdkConfiguration);
