@@ -180,7 +180,8 @@ try {
     $request->order = '<value>';
     $request->query = '<value>';
     $request->sort = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-04T01:14:05.456Z');;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-04T01:14:05.456Z');
+    $request->userId = '<value>';;
 
     $response = $sdk->job->listAtsJobs($request);
 

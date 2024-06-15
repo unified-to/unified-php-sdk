@@ -27,6 +27,9 @@ class ListCommerceInventoriesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=item_id')]
+    public ?string $itemId = null;
+
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=item_variant_id')]
     public ?string $itemVariantId = null;
 
@@ -65,6 +68,7 @@ class ListCommerceInventoriesRequest
     {
         $this->connectionId = '';
         $this->fields = null;
+        $this->itemId = null;
         $this->itemVariantId = null;
         $this->limit = null;
         $this->locationId = null;

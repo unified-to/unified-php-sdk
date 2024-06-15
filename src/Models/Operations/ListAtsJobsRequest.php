@@ -55,6 +55,9 @@ class ListAtsJobsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+
     public function __construct()
     {
         $this->connectionId = '';
@@ -65,5 +68,6 @@ class ListAtsJobsRequest
         $this->query = null;
         $this->sort = null;
         $this->updatedGte = null;
+        $this->userId = null;
     }
 }
