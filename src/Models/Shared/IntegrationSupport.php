@@ -86,6 +86,11 @@ class IntegrationSupport
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListItemId $listItemId = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('list_item_variant_id')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListItemVariantId>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ListItemVariantId $listItemVariantId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('list_job_id')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ListJobId>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -252,6 +257,7 @@ class IntegrationSupport
         $this->listInterviewId = null;
         $this->listInvoiceId = null;
         $this->listItemId = null;
+        $this->listItemVariantId = null;
         $this->listJobId = null;
         $this->listLimit = null;
         $this->listLinkId = null;

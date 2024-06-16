@@ -149,7 +149,6 @@ try {
     $request->fields = [
         '<value>',
     ];
-    $request->itemId = '<value>';
     $request->itemVariantId = '<value>';
     $request->limit = 2481.16;
     $request->locationId = '<value>';
