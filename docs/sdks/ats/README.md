@@ -157,7 +157,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-21T21:31:42.360Z');
     $request->atsApplication->rejectedReason = '<value>';
     $request->atsApplication->source = '<value>';
-    $request->atsApplication->status = Shared\AtsApplicationStatus::SecondInterview;
+    $request->atsApplication->status = Shared\AtsApplicationStatus::ThirdInterview;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T22:56:51.478Z');
     $request->connectionId = '<value>';;
 
@@ -1603,7 +1603,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-24T17:35:54.628Z');
     $request->atsApplication->rejectedReason = '<value>';
     $request->atsApplication->source = '<value>';
-    $request->atsApplication->status = Shared\AtsApplicationStatus::Offered;
+    $request->atsApplication->status = Shared\AtsApplicationStatus::Accepted;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-18T16:36:51.738Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
@@ -2454,7 +2454,7 @@ try {
     $request->atsApplication->rejectedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-17T03:12:00.865Z');
     $request->atsApplication->rejectedReason = '<value>';
     $request->atsApplication->source = '<value>';
-    $request->atsApplication->status = Shared\AtsApplicationStatus::Rejected;
+    $request->atsApplication->status = Shared\AtsApplicationStatus::Declined;
     $request->atsApplication->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T12:26:06.546Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;

@@ -55,6 +55,11 @@ class CommerceCollection
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    #[\JMS\Serializer\Annotation\SerializedName('parent_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $parentId = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('public_description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -105,6 +110,7 @@ class CommerceCollection
         $this->isVisible = null;
         $this->media = null;
         $this->name = '';
+        $this->parentId = null;
         $this->publicDescription = null;
         $this->publicName = null;
         $this->raw = null;

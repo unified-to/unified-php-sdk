@@ -11,6 +11,7 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum ListItemVariantId: string
 {
+    case SupportedRequired = 'supported-required';
     case Supported = 'supported';
     case NotSupported = 'not-supported';
 }

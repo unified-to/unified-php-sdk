@@ -45,6 +45,7 @@ try {
         new Shared\CommerceItemMedia(),
     ];
     $request->commerceCollection->name = '<value>';
+    $request->commerceCollection->parentId = '<value>';
     $request->commerceCollection->publicDescription = '<value>';
     $request->commerceCollection->publicName = '<value>';
     $request->commerceCollection->raw = [
@@ -224,6 +225,7 @@ try {
         new Shared\CommerceItemMedia(),
     ];
     $request->commerceCollection->name = '<value>';
+    $request->commerceCollection->parentId = '<value>';
     $request->commerceCollection->publicDescription = '<value>';
     $request->commerceCollection->publicName = '<value>';
     $request->commerceCollection->raw = [
@@ -343,6 +345,7 @@ try {
         new Shared\CommerceItemMedia(),
     ];
     $request->commerceCollection->name = '<value>';
+    $request->commerceCollection->parentId = '<value>';
     $request->commerceCollection->publicDescription = '<value>';
     $request->commerceCollection->publicName = '<value>';
     $request->commerceCollection->raw = [
