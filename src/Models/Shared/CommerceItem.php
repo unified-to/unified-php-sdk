@@ -71,6 +71,11 @@ class CommerceItem
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('slug')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $slug = null;
+
     /**
      * $tags
      *
@@ -118,6 +123,7 @@ class CommerceItem
         $this->publicDescription = null;
         $this->publicName = null;
         $this->raw = null;
+        $this->slug = null;
         $this->tags = null;
         $this->type = null;
         $this->updatedAt = null;

@@ -49,6 +49,7 @@ try {
     $request->commerceItem->raw = [
         'Awesome' => '<value>',
     ];
+    $request->commerceItem->slug = '<value>';
     $request->commerceItem->tags = [
         '<value>',
     ];
@@ -231,6 +232,7 @@ try {
     $request->commerceItem->raw = [
         'Dollar' => '<value>',
     ];
+    $request->commerceItem->slug = '<value>';
     $request->commerceItem->tags = [
         '<value>',
     ];
@@ -353,6 +355,7 @@ try {
     $request->commerceItem->raw = [
         'fuga' => '<value>',
     ];
+    $request->commerceItem->slug = '<value>';
     $request->commerceItem->tags = [
         '<value>',
     ];
