@@ -36,6 +36,9 @@ class ListCommerceCollectionsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
     public ?string $order = null;
 
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
+    public ?string $parentId = null;
+
     /**
      * Query string to search. eg. email address or name
      *
@@ -65,6 +68,7 @@ class ListCommerceCollectionsRequest
         $this->limit = null;
         $this->offset = null;
         $this->order = null;
+        $this->parentId = null;
         $this->query = null;
         $this->sort = null;
         $this->type = null;
