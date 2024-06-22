@@ -69,19 +69,21 @@ try {
     ];
     $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-05T07:37:37.431Z');
     $request->cursorsCache = [
-        new Shared\Undefined(),
+        [
+            'Van' => '<value>',
+        ],
     ];
     $request->environment = '<value>';
     $request->externalXref = '<value>';
     $request->id = '<id>';
     $request->integrationType = '<value>';
     $request->isPaused = false;
-    $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-21T18:48:43.528Z');
-    $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-29T14:41:39.477Z');
+    $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T14:19:55.077Z');
+    $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T09:01:24.591Z');
     $request->permissions = [
         Shared\PropertyConnectionPermissions::StorageFileWrite,
     ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T14:19:55.077Z');
+    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-22T10:28:46.343Z');
     $request->workspaceId = '<value>';;
 
     $response = $sdk->connection->createUnifiedConnection($request);
@@ -272,19 +274,21 @@ try {
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T05:49:12.923Z');
     $request->connection->cursorsCache = [
-        new Shared\Undefined(),
+        [
+            'Gasoline' => '<value>',
+        ],
     ];
     $request->connection->environment = '<value>';
     $request->connection->externalXref = '<value>';
     $request->connection->id = '<id>';
     $request->connection->integrationType = '<value>';
     $request->connection->isPaused = false;
-    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-03T13:20:07.463Z');
-    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-09T11:43:14.112Z');
+    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-24T01:15:30.014Z');
+    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-20T21:38:39.955Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::TaskProjectRead,
+        Shared\PropertyConnectionPermissions::CrmCompanyWrite,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-20T21:38:39.955Z');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T02:30:18.551Z');
     $request->connection->workspaceId = '<value>';
     $request->id = '<id>';;
 
@@ -419,19 +423,21 @@ try {
     ];
     $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-08T19:30:51.046Z');
     $request->connection->cursorsCache = [
-        new Shared\Undefined(),
+        [
+            'Intuitive' => '<value>',
+        ],
     ];
     $request->connection->environment = '<value>';
     $request->connection->externalXref = '<value>';
     $request->connection->id = '<id>';
     $request->connection->integrationType = '<value>';
     $request->connection->isPaused = false;
-    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-09T16:11:04.721Z');
-    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-20T19:30:15.010Z');
+    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-19T21:47:47.558Z');
+    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T13:28:25.633Z');
     $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::KmsSpaceRead,
+        Shared\PropertyConnectionPermissions::CommerceItemWrite,
     ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T13:28:25.633Z');
+    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-11T02:04:24.912Z');
     $request->connection->workspaceId = '<value>';
     $request->id = '<id>';;
 

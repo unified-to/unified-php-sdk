@@ -44,10 +44,10 @@ class Connection
     /**
      * $cursorsCache
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\Undefined> $cursorsCache
+     * @var ?array<array<string, mixed>> $cursorsCache
      */
     #[\JMS\Serializer\Annotation\SerializedName('cursors_cache')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\Undefined>')]
+    #[\JMS\Serializer\Annotation\Type('array<array<string, mixed>>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $cursorsCache = null;
 

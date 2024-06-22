@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: fc1188a2db372bfe9795cefed41fedb9
+  docChecksum: 8cd5f0b8f9ac7da8e963b9b8716b4f9a
   docVersion: "1.0"
-  speakeasyVersion: 1.313.0
-  generationVersion: 2.347.8
-  releaseVersion: 0.15.21
-  configChecksum: 3d7c821da1b611716b79a6b6a77881f8
+  speakeasyVersion: 1.314.2
+  generationVersion: 2.349.6
+  releaseVersion: 0.15.22
+  configChecksum: ced885e92c4465ca239189c5cea1818d
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 features:
   php:
-    core: 3.3.5
+    core: 3.3.6
     globalSecurity: 2.81.6
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.1
@@ -666,7 +666,6 @@ generatedFiles:
   - src/Models/Operations/ListUnifiedIntegrationsResponse.php
   - src/Models/Operations/ListUnifiedIssuesRequest.php
   - src/Models/Operations/ListUnifiedIssuesResponse.php
-  - src/Models/Operations/ListUnifiedSupportsResponse.php
   - src/Models/Operations/ListUnifiedWebhooksRequest.php
   - src/Models/Operations/ListUnifiedWebhooksResponse.php
   - src/Models/Operations/PatchUnifiedConnectionRequest.php
@@ -851,7 +850,6 @@ generatedFiles:
   - src/Models/Shared/PropertyUcCallTelephone.php
   - src/Models/Shared/Connection.php
   - src/Models/Shared/PropertyConnectionPermissions.php
-  - src/Models/Shared/Undefined.php
   - src/Models/Shared/PropertyConnectionCategories.php
   - src/Models/Shared/PropertyConnectionAuth.php
   - src/Models/Shared/Event.php
@@ -1463,7 +1461,6 @@ generatedFiles:
   - docs/Models/Operations/ListUnifiedIntegrationsResponse.md
   - docs/Models/Operations/ListUnifiedIssuesRequest.md
   - docs/Models/Operations/ListUnifiedIssuesResponse.md
-  - docs/Models/Operations/ListUnifiedSupportsResponse.md
   - docs/Models/Operations/ListUnifiedWebhooksRequest.md
   - docs/Models/Operations/ListUnifiedWebhooksResponse.md
   - docs/Models/Operations/PatchUnifiedConnectionRequest.md
@@ -1648,7 +1645,6 @@ generatedFiles:
   - docs/Models/Shared/PropertyUcCallTelephone.md
   - docs/Models/Shared/Connection.md
   - docs/Models/Shared/PropertyConnectionPermissions.md
-  - docs/Models/Shared/Undefined.md
   - docs/Models/Shared/PropertyConnectionCategories.md
   - docs/Models/Shared/PropertyConnectionAuth.md
   - docs/Models/Shared/Event.md

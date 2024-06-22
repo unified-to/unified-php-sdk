@@ -415,38 +415,6 @@ class Unified
     }
 
     /**
-     * Get support info
-     *
-     * @return \Unified\Unified_to\Models\Operations\ListUnifiedSupportsResponse
-     */
-    public function listUnifiedSupports(
-    ): \Unified\Unified_to\Models\Operations\ListUnifiedSupportsResponse {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/support');
-        $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
-        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
-
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedSupportsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->undefined = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Undefined', 'json');
-            }
-        }
-
-        return $response;
-    }
-
-    /**
      * Returns all registered webhooks
      *
      * @param  \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest  $request
