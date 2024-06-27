@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 8cd5f0b8f9ac7da8e963b9b8716b4f9a
+  docChecksum: d30cc8ed3fe26eee9d880fe9074cfb0b
   docVersion: "1.0"
-  speakeasyVersion: 1.314.2
-  generationVersion: 2.349.6
-  releaseVersion: 0.15.22
-  configChecksum: ced885e92c4465ca239189c5cea1818d
+  speakeasyVersion: 1.321.0
+  generationVersion: 2.354.2
+  releaseVersion: 0.15.23
+  configChecksum: 5741c0ac4ca056f0793c8d14374fc577
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -903,7 +903,6 @@ generatedFiles:
   - src/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.php
   - src/Models/Shared/PropertyIntegrationCategories.php
   - src/Models/Shared/IssueStatus.php
-  - src/Models/Shared/IssueType.php
   - src/Models/Shared/Issue.php
   - src/Models/Shared/Security.php
   - docs/Models/Operations/CreateAccountingAccountRequest.md
@@ -1698,7 +1697,6 @@ generatedFiles:
   - docs/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.md
   - docs/Models/Shared/PropertyIntegrationCategories.md
   - docs/Models/Shared/IssueStatus.md
-  - docs/Models/Shared/IssueType.md
   - docs/Models/Shared/Issue.md
   - docs/Models/Shared/Security.md
   - docs/sdks/unifiedto/README.md

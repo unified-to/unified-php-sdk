@@ -30,13 +30,23 @@ class Issue
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\IssueStatus>')]
     public IssueStatus $status;
 
+    #[\JMS\Serializer\Annotation\SerializedName('ticket_ref')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $ticketRef;
+
     #[\JMS\Serializer\Annotation\SerializedName('title')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $title;
 
+    /**
+     * $type
+     *
+     * @var ?array<string> $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\IssueType>')]
-    public IssueType $type;
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $type = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -58,8 +68,9 @@ class Issue
         $this->id = null;
         $this->resolutionTime = null;
         $this->status = \Unified\Unified_to\Models\Shared\IssueStatus::Completed;
+        $this->ticketRef = '';
         $this->title = '';
-        $this->type = \Unified\Unified_to\Models\Shared\IssueType::Bug;
+        $this->type = null;
         $this->updatedAt = null;
         $this->url = null;
         $this->workspaceId = '';
