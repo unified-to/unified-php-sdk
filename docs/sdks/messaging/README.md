@@ -54,6 +54,7 @@ try {
         new Shared\MessagingMember(),
     ];
     $request->messagingMessage->message = '<value>';
+    $request->messagingMessage->messageHtml = '<value>';
     $request->messagingMessage->parentMessageId = '<value>';
     $request->messagingMessage->raw = [
         'holistic' => '<value>',
@@ -348,6 +349,7 @@ try {
         new Shared\MessagingMember(),
     ];
     $request->messagingMessage->message = '<value>';
+    $request->messagingMessage->messageHtml = '<value>';
     $request->messagingMessage->parentMessageId = '<value>';
     $request->messagingMessage->raw = [
         'Implementation' => '<value>',
@@ -471,6 +473,7 @@ try {
         new Shared\MessagingMember(),
     ];
     $request->messagingMessage->message = '<value>';
+    $request->messagingMessage->messageHtml = '<value>';
     $request->messagingMessage->parentMessageId = '<value>';
     $request->messagingMessage->raw = [
         'Bicycle' => '<value>',

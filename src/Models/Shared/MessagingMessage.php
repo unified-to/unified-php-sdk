@@ -13,7 +13,8 @@ class MessagingMessage
 {
     #[\JMS\Serializer\Annotation\SerializedName('author_member')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember')]
-    public PropertyMessagingMessageAuthorMember $authorMember;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyMessagingMessageAuthorMember $authorMember = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('channel_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -64,6 +65,11 @@ class MessagingMessage
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $message;
 
+    #[\JMS\Serializer\Annotation\SerializedName('message_html')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $messageHtml = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('parent_message_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -96,7 +102,7 @@ class MessagingMessage
 
     public function __construct()
     {
-        $this->authorMember = new \Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember();
+        $this->authorMember = null;
         $this->channelId = null;
         $this->createdAt = null;
         $this->destinationMembers = null;
@@ -104,6 +110,7 @@ class MessagingMessage
         $this->id = null;
         $this->mentionedMembers = null;
         $this->message = '';
+        $this->messageHtml = null;
         $this->parentMessageId = null;
         $this->raw = null;
         $this->subject = null;
