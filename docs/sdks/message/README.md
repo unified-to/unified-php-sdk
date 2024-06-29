@@ -35,6 +35,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateMessagingMessageRequest();
     $request->messagingMessage = new Shared\MessagingMessage();
+    $request->messagingMessage->attachments = [
+        new Shared\MessagingAttachment(),
+    ];
     $request->messagingMessage->authorMember = new Shared\PropertyMessagingMessageAuthorMember();
     $request->messagingMessage->authorMember->email = 'Eugene54@gmail.com';
     $request->messagingMessage->authorMember->name = '<value>';
@@ -220,6 +223,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchMessagingMessageRequest();
     $request->messagingMessage = new Shared\MessagingMessage();
+    $request->messagingMessage->attachments = [
+        new Shared\MessagingAttachment(),
+    ];
     $request->messagingMessage->authorMember = new Shared\PropertyMessagingMessageAuthorMember();
     $request->messagingMessage->authorMember->email = 'Desmond.Pagac78@gmail.com';
     $request->messagingMessage->authorMember->name = '<value>';
@@ -344,6 +350,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateMessagingMessageRequest();
     $request->messagingMessage = new Shared\MessagingMessage();
+    $request->messagingMessage->attachments = [
+        new Shared\MessagingAttachment(),
+    ];
     $request->messagingMessage->authorMember = new Shared\PropertyMessagingMessageAuthorMember();
     $request->messagingMessage->authorMember->email = 'Johnpaul.Jenkins99@yahoo.com';
     $request->messagingMessage->authorMember->name = '<value>';

@@ -11,6 +11,16 @@ namespace Unified\Unified_to\Models\Shared;
 
 class MessagingMessage
 {
+    /**
+     * $attachments
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingAttachment> $attachments
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('attachments')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\MessagingAttachment>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $attachments = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('author_member')]
     #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -63,7 +73,8 @@ class MessagingMessage
 
     #[\JMS\Serializer\Annotation\SerializedName('message')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $message;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $message = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('message_html')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -102,6 +113,7 @@ class MessagingMessage
 
     public function __construct()
     {
+        $this->attachments = null;
         $this->authorMember = null;
         $this->channelId = null;
         $this->createdAt = null;
@@ -109,7 +121,7 @@ class MessagingMessage
         $this->hiddenMembers = null;
         $this->id = null;
         $this->mentionedMembers = null;
-        $this->message = '';
+        $this->message = null;
         $this->messageHtml = null;
         $this->parentMessageId = null;
         $this->raw = null;

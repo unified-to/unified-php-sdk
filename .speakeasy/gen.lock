@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: bdc716c1ec699c0df9357438a35e33f6
+  docChecksum: 47c3e061b14a46be0740453c7c5f67d6
   docVersion: "1.0"
-  speakeasyVersion: 1.322.1
+  speakeasyVersion: 1.322.3
   generationVersion: 2.354.2
-  releaseVersion: 0.15.24
-  configChecksum: 4eff4dc19c4c65c17f7c1967aeb6f1fa
+  releaseVersion: 0.15.25
+  configChecksum: d01f8d53b9e18edf5b8b9812c55e9033
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -822,6 +822,7 @@ generatedFiles:
   - src/Models/Shared/MessagingMessage.php
   - src/Models/Shared/MessagingMember.php
   - src/Models/Shared/PropertyMessagingMessageAuthorMember.php
+  - src/Models/Shared/MessagingAttachment.php
   - src/Models/Shared/MessagingChannel.php
   - src/Models/Shared/PaymentLink.php
   - src/Models/Shared/PaymentLinkLineitem.php
@@ -1616,6 +1617,7 @@ generatedFiles:
   - docs/Models/Shared/MessagingMessage.md
   - docs/Models/Shared/MessagingMember.md
   - docs/Models/Shared/PropertyMessagingMessageAuthorMember.md
+  - docs/Models/Shared/MessagingAttachment.md
   - docs/Models/Shared/MessagingChannel.md
   - docs/Models/Shared/PaymentLink.md
   - docs/Models/Shared/PaymentLinkLineitem.md
