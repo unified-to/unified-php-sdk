@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 47c3e061b14a46be0740453c7c5f67d6
+  docChecksum: ae2ed3981ced9c41a08d5e707d7c8c86
   docVersion: "1.0"
   speakeasyVersion: 1.322.3
   generationVersion: 2.354.2
-  releaseVersion: 0.15.25
-  configChecksum: d01f8d53b9e18edf5b8b9812c55e9033
+  releaseVersion: 0.15.26
+  configChecksum: 5be9b503f733b73147d7a0947eabbcf7
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -800,8 +800,10 @@ generatedFiles:
   - src/Models/Shared/HrisEmployee.php
   - src/Models/Shared/HrisTelephoneType.php
   - src/Models/Shared/HrisTelephone.php
+  - src/Models/Shared/PropertyHrisEmployeeEmployeeRoles.php
   - src/Models/Shared/HrisEmailType.php
   - src/Models/Shared/HrisEmail.php
+  - src/Models/Shared/HrisCompensation.php
   - src/Models/Shared/PropertyHrisEmployeeAddress.php
   - src/Models/Shared/HrisGroupType.php
   - src/Models/Shared/HrisGroup.php
@@ -1595,8 +1597,10 @@ generatedFiles:
   - docs/Models/Shared/HrisEmployee.md
   - docs/Models/Shared/HrisTelephoneType.md
   - docs/Models/Shared/HrisTelephone.md
+  - docs/Models/Shared/PropertyHrisEmployeeEmployeeRoles.md
   - docs/Models/Shared/HrisEmailType.md
   - docs/Models/Shared/HrisEmail.md
+  - docs/Models/Shared/HrisCompensation.md
   - docs/Models/Shared/PropertyHrisEmployeeAddress.md
   - docs/Models/Shared/HrisGroupType.md
   - docs/Models/Shared/HrisGroup.md

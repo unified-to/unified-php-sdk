@@ -16,10 +16,25 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyHrisEmployeeAddress $address = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('bio')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $bio = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyId = null;
+
+    /**
+     * $compensation
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisCompensation> $compensation
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('compensation')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\HrisCompensation>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $compensation = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
@@ -60,6 +75,16 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $employeeNumber = null;
+
+    /**
+     * $employeeRoles
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles> $employeeRoles
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('employee_roles')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $employeeRoles = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('employment_status')]
     #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\EmploymentStatus>')]
@@ -116,6 +141,11 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('pronouns')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $pronouns = null;
+
     /**
      * $raw
      *
@@ -125,6 +155,16 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('salutation')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $salutation = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('ssn_sin')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $ssnSin = null;
 
     /**
      * $telephones
@@ -159,7 +199,9 @@ class HrisEmployee
     public function __construct()
     {
         $this->address = null;
+        $this->bio = null;
         $this->companyId = null;
+        $this->compensation = null;
         $this->createdAt = null;
         $this->currency = null;
         $this->dateOfBirth = null;
@@ -167,6 +209,7 @@ class HrisEmployee
         $this->division = null;
         $this->emails = null;
         $this->employeeNumber = null;
+        $this->employeeRoles = null;
         $this->employmentStatus = null;
         $this->employmentType = null;
         $this->gender = null;
@@ -178,7 +221,10 @@ class HrisEmployee
         $this->managerId = null;
         $this->maritalStatus = null;
         $this->name = null;
+        $this->pronouns = null;
         $this->raw = null;
+        $this->salutation = null;
+        $this->ssnSin = null;
         $this->telephones = null;
         $this->terminatedAt = null;
         $this->timezone = null;
