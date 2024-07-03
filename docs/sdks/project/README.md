@@ -153,10 +153,8 @@ try {
     ];
     $request->limit = 8217.75;
     $request->offset = 5158.61;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-11T05:04:28.347Z');;
 
     $response = $sdk->project->listTaskProjects($request);

@@ -158,9 +158,7 @@ try {
     $request->limit = 1432.99;
     $request->listId = '<value>';
     $request->offset = 4150.29;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-09T12:30:23.054Z');;
 
     $response = $sdk->member->listMartechMembers($request);

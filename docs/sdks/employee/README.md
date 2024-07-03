@@ -192,9 +192,7 @@ try {
     ];
     $request->limit = 5148.12;
     $request->offset = 2185.43;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-10T00:54:40.984Z');;
 
     $response = $sdk->employee->listHrisEmployees($request);

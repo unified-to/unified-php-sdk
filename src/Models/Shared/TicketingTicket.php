@@ -91,6 +91,11 @@ class TicketingTicket
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('url')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $url = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -112,6 +117,7 @@ class TicketingTicket
         $this->subject = null;
         $this->tags = null;
         $this->updatedAt = null;
+        $this->url = null;
         $this->userId = null;
     }
 }

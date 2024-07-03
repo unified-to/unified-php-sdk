@@ -152,10 +152,8 @@ try {
     ];
     $request->limit = 9216.91;
     $request->offset = 2110.39;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T23:16:42.907Z');;
 
     $response = $sdk->space->listKmsSpaces($request);

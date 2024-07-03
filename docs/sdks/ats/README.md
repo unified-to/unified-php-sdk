@@ -1001,9 +1001,7 @@ try {
     $request->jobId = '<value>';
     $request->limit = 2367.19;
     $request->offset = 8254.25;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-13T18:19:17.967Z');
     $request->userId = '<value>';;
 
@@ -1061,9 +1059,7 @@ try {
     $request->jobId = '<value>';
     $request->limit = 441.56;
     $request->offset = 1448.74;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-21T20:30:01.596Z');;
 
     $response = $sdk->ats->listAtsApplications($request);
@@ -1118,9 +1114,7 @@ try {
     ];
     $request->limit = 5199.96;
     $request->offset = 7673.65;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-25T18:11:33.180Z');;
 
     $response = $sdk->ats->listAtsApplicationstatuses($request);
@@ -1175,9 +1169,7 @@ try {
     ];
     $request->limit = 6384.09;
     $request->offset = 7452.94;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T00:58:25.541Z');;
 
     $response = $sdk->ats->listAtsCandidates($request);
@@ -1232,9 +1224,7 @@ try {
     ];
     $request->limit = 6933.84;
     $request->offset = 7946.52;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T21:39:38.971Z');;
 
     $response = $sdk->ats->listAtsCompanies($request);
@@ -1290,9 +1280,7 @@ try {
     ];
     $request->limit = 9635.37;
     $request->offset = 8402.77;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T00:55:54.895Z');;
 
     $response = $sdk->ats->listAtsDocuments($request);
@@ -1348,9 +1336,7 @@ try {
     ];
     $request->limit = 2562.12;
     $request->offset = 1185.02;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-28T15:15:00.508Z');;
 
     $response = $sdk->ats->listAtsInterviews($request);
@@ -1405,9 +1391,7 @@ try {
     ];
     $request->limit = 3958.99;
     $request->offset = 3223.84;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-04T01:14:05.456Z');
     $request->userId = '<value>';;
 
@@ -1467,9 +1451,7 @@ try {
     $request->jobId = '<value>';
     $request->limit = 5126.98;
     $request->offset = 8077.44;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-19T14:46:22.333Z');;
 
     $response = $sdk->ats->listAtsScorecards($request);

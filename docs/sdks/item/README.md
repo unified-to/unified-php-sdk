@@ -166,9 +166,7 @@ try {
     ];
     $request->limit = 2553.93;
     $request->offset = 4072.28;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-10T19:08:09.923Z');;
 
     $response = $sdk->item->listCommerceItems($request);

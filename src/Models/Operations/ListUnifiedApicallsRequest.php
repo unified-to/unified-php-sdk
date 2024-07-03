@@ -60,12 +60,6 @@ class ListUnifiedApicallsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
-    public ?string $order = null;
-
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
-    public ?string $sort = null;
-
     /**
      * Return only results whose updated date is equal or greater to this value
      *
@@ -84,8 +78,6 @@ class ListUnifiedApicallsRequest
         $this->integrationType = null;
         $this->limit = null;
         $this->offset = null;
-        $this->order = null;
-        $this->sort = null;
         $this->updatedGte = null;
     }
 }

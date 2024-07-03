@@ -548,9 +548,7 @@ try {
     ];
     $request->limit = 9887.05;
     $request->offset = 4708.81;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-23T09:20:33.437Z');;
 
     $response = $sdk->hris->listHrisCompanies($request);
@@ -606,9 +604,7 @@ try {
     ];
     $request->limit = 5148.12;
     $request->offset = 2185.43;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-10T00:54:40.984Z');;
 
     $response = $sdk->hris->listHrisEmployees($request);
@@ -664,9 +660,7 @@ try {
     ];
     $request->limit = 4815.14;
     $request->offset = 2554.75;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T00:40:26.357Z');;
 
     $response = $sdk->hris->listHrisGroups($request);
@@ -721,9 +715,7 @@ try {
     ];
     $request->limit = 254.98;
     $request->offset = 7922.79;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T03:49:22.310Z');
     $request->userId = '<value>';;
 
@@ -779,9 +771,7 @@ try {
     ];
     $request->limit = 1802.06;
     $request->offset = 8928.71;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-20T05:14:17.047Z');
     $request->userId = '<value>';;
 

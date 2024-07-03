@@ -180,9 +180,7 @@ try {
     ];
     $request->limit = 6384.09;
     $request->offset = 7452.94;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T00:58:25.541Z');;
 
     $response = $sdk->candidate->listAtsCandidates($request);

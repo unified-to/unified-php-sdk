@@ -33,9 +33,6 @@ class ListCommerceCollectionsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
-    public ?string $order = null;
-
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
     public ?string $parentId = null;
 
@@ -46,9 +43,6 @@ class ListCommerceCollectionsRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
     public ?string $query = null;
-
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
-    public ?string $sort = null;
 
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
     public ?string $type = null;
@@ -67,10 +61,8 @@ class ListCommerceCollectionsRequest
         $this->fields = null;
         $this->limit = null;
         $this->offset = null;
-        $this->order = null;
         $this->parentId = null;
         $this->query = null;
-        $this->sort = null;
         $this->type = null;
         $this->updatedGte = null;
     }

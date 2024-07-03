@@ -35,9 +35,7 @@ try {
     ];
     $request->limit = 5199.96;
     $request->offset = 7673.65;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-25T18:11:33.180Z');;
 
     $response = $sdk->applicationstatus->listAtsApplicationstatuses($request);

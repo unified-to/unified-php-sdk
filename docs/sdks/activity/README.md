@@ -164,9 +164,7 @@ try {
     $request->jobId = '<value>';
     $request->limit = 2367.19;
     $request->offset = 8254.25;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-13T18:19:17.967Z');
     $request->userId = '<value>';;
 

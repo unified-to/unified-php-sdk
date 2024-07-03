@@ -430,8 +430,6 @@ try {
     $request->integrationType = '<value>';
     $request->limit = 494.66;
     $request->offset = 5267.27;
-    $request->order = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-10T02:33:44.403Z');;
 
     $response = $sdk->unified->listUnifiedApicalls($request);
@@ -487,8 +485,6 @@ try {
     $request->externalXref = '<value>';
     $request->limit = 9638.08;
     $request->offset = 15.12;
-    $request->order = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-20T13:59:12.388Z');;
 
     $response = $sdk->unified->listUnifiedConnections($request);
@@ -655,8 +651,6 @@ try {
         $request = new Operations\ListUnifiedIssuesRequest();
     $request->limit = 7069.08;
     $request->offset = 7461.37;
-    $request->order = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T01:55:24.746Z');;
 
     $response = $sdk->unified->listUnifiedIssues($request);
@@ -709,8 +703,6 @@ try {
     $request->limit = 1162.24;
     $request->object = '<value>';
     $request->offset = 5094.7;
-    $request->order = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-20T17:03:56.207Z');;
 
     $response = $sdk->unified->listUnifiedWebhooks($request);

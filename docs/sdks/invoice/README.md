@@ -169,9 +169,7 @@ try {
     ];
     $request->limit = 6788.11;
     $request->offset = 5122.49;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-23T19:02:52.454Z');;
 
     $response = $sdk->invoice->listAccountingInvoices($request);

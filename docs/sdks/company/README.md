@@ -360,9 +360,7 @@ try {
     ];
     $request->limit = 6933.84;
     $request->offset = 7946.52;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-01T21:39:38.971Z');;
 
     $response = $sdk->company->listAtsCompanies($request);
@@ -419,9 +417,7 @@ try {
     ];
     $request->limit = 9883.97;
     $request->offset = 5913.88;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');
     $request->userId = '<value>';;
 
@@ -527,9 +523,7 @@ try {
     ];
     $request->limit = 9887.05;
     $request->offset = 4708.81;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-23T09:20:33.437Z');;
 
     $response = $sdk->company->listHrisCompanies($request);

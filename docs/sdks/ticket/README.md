@@ -53,6 +53,7 @@ try {
         '<value>',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-31T16:32:54.987Z');
+    $request->ticketingTicket->url = 'https://pristine-luck.com';
     $request->ticketingTicket->userId = '<value>';
     $request->connectionId = '<value>';;
 
@@ -161,9 +162,7 @@ try {
     ];
     $request->limit = 6139.39;
     $request->offset = 1839.22;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-28T23:31:15.090Z');
     $request->userId = '<value>';;
 
@@ -232,6 +231,7 @@ try {
         '<value>',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-08T14:40:04.177Z');
+    $request->ticketingTicket->url = 'http://staid-ectodermal.name';
     $request->ticketingTicket->userId = '<value>';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
@@ -350,6 +350,7 @@ try {
         '<value>',
     ];
     $request->ticketingTicket->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-17T20:35:00.553Z');
+    $request->ticketingTicket->url = 'http://gullible-replication.com';
     $request->ticketingTicket->userId = '<value>';
     $request->connectionId = '<value>';
     $request->id = '<id>';;

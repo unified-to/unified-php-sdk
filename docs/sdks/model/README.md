@@ -35,9 +35,7 @@ try {
     ];
     $request->limit = 9118.49;
     $request->offset = 7503.47;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-26T16:13:56.581Z');;
 
     $response = $sdk->model->listGenaiModels($request);

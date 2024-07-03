@@ -155,9 +155,7 @@ try {
     ];
     $request->limit = 3732.99;
     $request->offset = 235.51;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-02T07:29:24.179Z');;
 
     $response = $sdk->journal->listAccountingJournals($request);

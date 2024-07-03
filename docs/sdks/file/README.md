@@ -159,10 +159,8 @@ try {
     ];
     $request->limit = 1047.26;
     $request->offset = 7962.22;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-28T04:36:03.817Z');;
 
     $response = $sdk->file->listStorageFiles($request);

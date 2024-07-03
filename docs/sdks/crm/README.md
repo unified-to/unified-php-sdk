@@ -865,9 +865,7 @@ try {
     ];
     $request->limit = 9883.97;
     $request->offset = 5913.88;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-02T17:52:08.731Z');
     $request->userId = '<value>';;
 
@@ -925,9 +923,7 @@ try {
     ];
     $request->limit = 7110.24;
     $request->offset = 2657.43;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:36:59.401Z');
     $request->userId = '<value>';;
 
@@ -985,9 +981,7 @@ try {
     ];
     $request->limit = 917.49;
     $request->offset = 8216.92;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T01:39:26.472Z');
     $request->userId = '<value>';;
 
@@ -1046,9 +1040,7 @@ try {
     ];
     $request->limit = 4453.11;
     $request->offset = 4555.2;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->type = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-30T03:39:38.103Z');
     $request->userId = '<value>';;
@@ -1107,9 +1099,7 @@ try {
     ];
     $request->limit = 2895.08;
     $request->offset = 6446.8;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-12T07:27:29.016Z');
     $request->userId = '<value>';;
 
@@ -1165,9 +1155,7 @@ try {
     ];
     $request->limit = 3318.18;
     $request->offset = 4834.28;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-29T18:23:30.472Z');;
 
     $response = $sdk->crm->listCrmPipelines($request);

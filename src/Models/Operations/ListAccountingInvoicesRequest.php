@@ -36,9 +36,6 @@ class ListAccountingInvoicesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
-    public ?string $order = null;
-
     /**
      * Query string to search. eg. email address or name
      *
@@ -46,9 +43,6 @@ class ListAccountingInvoicesRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
     public ?string $query = null;
-
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
-    public ?string $sort = null;
 
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -65,9 +59,7 @@ class ListAccountingInvoicesRequest
         $this->fields = null;
         $this->limit = null;
         $this->offset = null;
-        $this->order = null;
         $this->query = null;
-        $this->sort = null;
         $this->updatedGte = null;
     }
 }

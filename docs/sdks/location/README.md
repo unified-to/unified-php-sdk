@@ -159,9 +159,7 @@ try {
     ];
     $request->limit = 2087.22;
     $request->offset = 1166.59;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T14:52:37.550Z');;
 
     $response = $sdk->location->listCommerceLocations($request);

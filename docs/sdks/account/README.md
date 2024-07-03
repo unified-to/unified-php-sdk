@@ -156,9 +156,7 @@ try {
     ];
     $request->limit = 9476.86;
     $request->offset = 5444.77;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-19T21:33:28.191Z');;
 
     $response = $sdk->account->listAccountingAccounts($request);

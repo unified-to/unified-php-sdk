@@ -161,9 +161,7 @@ try {
     $request->jobId = '<value>';
     $request->limit = 5126.98;
     $request->offset = 8077.44;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-19T14:46:22.333Z');;
 
     $response = $sdk->scorecard->listAtsScorecards($request);

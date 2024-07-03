@@ -88,9 +88,7 @@ try {
     ];
     $request->limit = 4896.89;
     $request->offset = 9817.05;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-02T18:55:09.644Z');;
 
     $response = $sdk->organization->listAccountingOrganizations($request);

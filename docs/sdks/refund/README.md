@@ -88,10 +88,8 @@ try {
     ];
     $request->limit = 5820.28;
     $request->offset = 6141.19;
-    $request->order = '<value>';
     $request->paymentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-03T22:54:27.299Z');;
 
     $response = $sdk->refund->listPaymentRefunds($request);

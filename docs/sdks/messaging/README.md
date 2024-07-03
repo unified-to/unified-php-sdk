@@ -223,10 +223,8 @@ try {
     ];
     $request->limit = 8836;
     $request->offset = 9706.94;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-12T05:55:39.243Z');;
 
     $response = $sdk->messaging->listMessagingChannels($request);
@@ -282,10 +280,8 @@ try {
     ];
     $request->limit = 4272.96;
     $request->offset = 6110.39;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-14T22:11:58.965Z');;
 
     $response = $sdk->messaging->listMessagingMessages($request);

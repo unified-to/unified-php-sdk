@@ -151,9 +151,7 @@ try {
     ];
     $request->limit = 1599.19;
     $request->offset = 1097.48;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T14:31:13.247Z');;
 
     $response = $sdk->taxrate->listAccountingTaxrates($request);

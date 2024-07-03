@@ -161,9 +161,7 @@ try {
     ];
     $request->limit = 7894.5;
     $request->offset = 4597.84;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-02T12:20:43.572Z');;
 
     $response = $sdk->transaction->listAccountingTransactions($request);

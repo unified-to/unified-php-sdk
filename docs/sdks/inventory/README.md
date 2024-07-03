@@ -153,9 +153,7 @@ try {
     $request->limit = 2481.16;
     $request->locationId = '<value>';
     $request->offset = 9476.38;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-15T22:28:16.925Z');;
 
     $response = $sdk->inventory->listCommerceInventories($request);

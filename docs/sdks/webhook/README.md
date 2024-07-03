@@ -160,8 +160,6 @@ try {
     $request->limit = 1162.24;
     $request->object = '<value>';
     $request->offset = 5094.7;
-    $request->order = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-20T17:03:56.207Z');;
 
     $response = $sdk->webhook->listUnifiedWebhooks($request);

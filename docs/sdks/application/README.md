@@ -161,9 +161,7 @@ try {
     $request->jobId = '<value>';
     $request->limit = 441.56;
     $request->offset = 1448.74;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-21T20:30:01.596Z');;
 
     $response = $sdk->application->listAtsApplications($request);

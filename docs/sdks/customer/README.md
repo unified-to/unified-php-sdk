@@ -157,9 +157,7 @@ try {
     ];
     $request->limit = 3917.11;
     $request->offset = 274.81;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-05T19:45:16.674Z');;
 
     $response = $sdk->customer->listTicketingCustomers($request);

@@ -148,9 +148,7 @@ try {
     ];
     $request->limit = 9665.22;
     $request->offset = 367.94;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-12T12:19:08.506Z');;
 
     $response = $sdk->list->listMartechLists($request);

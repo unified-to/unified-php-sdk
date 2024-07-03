@@ -88,9 +88,7 @@ try {
     ];
     $request->limit = 254.98;
     $request->offset = 7922.79;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T03:49:22.310Z');
     $request->userId = '<value>';;
 

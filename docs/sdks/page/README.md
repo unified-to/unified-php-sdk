@@ -154,10 +154,8 @@ try {
     ];
     $request->limit = 549.23;
     $request->offset = 3993.53;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->spaceId = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-01T15:54:02.024Z');;
 

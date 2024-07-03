@@ -160,9 +160,7 @@ try {
     ];
     $request->limit = 4815.14;
     $request->offset = 2554.75;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T00:40:26.357Z');;
 
     $response = $sdk->group->listHrisGroups($request);

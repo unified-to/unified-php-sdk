@@ -88,9 +88,7 @@ try {
     ];
     $request->limit = 5474.75;
     $request->offset = 586.95;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-05T08:15:58.034Z');;
 
     $response = $sdk->payout->listPaymentPayouts($request);

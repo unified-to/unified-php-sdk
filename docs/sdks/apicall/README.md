@@ -86,8 +86,6 @@ try {
     $request->integrationType = '<value>';
     $request->limit = 494.66;
     $request->offset = 5267.27;
-    $request->order = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-10T02:33:44.403Z');;
 
     $response = $sdk->apicall->listUnifiedApicalls($request);

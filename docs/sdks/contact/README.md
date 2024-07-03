@@ -444,9 +444,7 @@ try {
     ];
     $request->limit = 4596.32;
     $request->offset = 8881.9;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->type = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T14:00:38.736Z');;
 
@@ -504,9 +502,7 @@ try {
     ];
     $request->limit = 7110.24;
     $request->offset = 2657.43;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-15T19:36:59.401Z');
     $request->userId = '<value>';;
 
@@ -562,9 +558,7 @@ try {
     ];
     $request->limit = 5333.71;
     $request->offset = 7775.9;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-26T05:35:01.805Z');
     $request->userId = '<value>';;
 

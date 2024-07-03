@@ -154,9 +154,7 @@ try {
     ];
     $request->limit = 3318.18;
     $request->offset = 4834.28;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-29T18:23:30.472Z');;
 
     $response = $sdk->pipeline->listCrmPipelines($request);

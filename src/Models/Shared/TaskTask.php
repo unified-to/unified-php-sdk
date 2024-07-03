@@ -110,6 +110,11 @@ class TaskTask
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('url')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $url = null;
+
     public function __construct()
     {
         $this->assignedUserIds = null;
@@ -128,5 +133,6 @@ class TaskTask
         $this->status = null;
         $this->tags = null;
         $this->updatedAt = null;
+        $this->url = null;
     }
 }

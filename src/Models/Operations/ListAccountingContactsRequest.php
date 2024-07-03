@@ -33,9 +33,6 @@ class ListAccountingContactsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
-    public ?string $order = null;
-
     /**
      * Query string to search. eg. email address or name
      *
@@ -43,9 +40,6 @@ class ListAccountingContactsRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
     public ?string $query = null;
-
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
-    public ?string $sort = null;
 
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
     public ?string $type = null;
@@ -64,9 +58,7 @@ class ListAccountingContactsRequest
         $this->fields = null;
         $this->limit = null;
         $this->offset = null;
-        $this->order = null;
         $this->query = null;
-        $this->sort = null;
         $this->type = null;
         $this->updatedGte = null;
     }

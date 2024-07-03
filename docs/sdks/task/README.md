@@ -126,6 +126,7 @@ try {
         '<value>',
     ];
     $request->taskTask->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-27T19:58:19.279Z');
+    $request->taskTask->url = 'https://exhausted-tweet.biz';
     $request->connectionId = '<value>';;
 
     $response = $sdk->task->createTaskTask($request);
@@ -284,10 +285,8 @@ try {
     ];
     $request->limit = 8217.75;
     $request->offset = 5158.61;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-11T05:04:28.347Z');;
 
     $response = $sdk->task->listTaskProjects($request);
@@ -342,11 +341,9 @@ try {
     ];
     $request->limit = 1136.46;
     $request->offset = 3107.28;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->projectId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-31T09:49:07.594Z');;
 
     $response = $sdk->task->listTaskTasks($request);
@@ -482,6 +479,7 @@ try {
         '<value>',
     ];
     $request->taskTask->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-04T15:52:35.151Z');
+    $request->taskTask->url = 'http://baggy-depot.biz';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
@@ -716,6 +714,7 @@ try {
         '<value>',
     ];
     $request->taskTask->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-14T20:29:52.594Z');
+    $request->taskTask->url = 'https://vacant-jar.name';
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 

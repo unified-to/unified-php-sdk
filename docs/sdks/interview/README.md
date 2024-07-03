@@ -159,9 +159,7 @@ try {
     ];
     $request->limit = 2562.12;
     $request->offset = 1185.02;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-28T15:15:00.508Z');;
 
     $response = $sdk->interview->listAtsInterviews($request);

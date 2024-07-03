@@ -187,8 +187,6 @@ try {
     $request->externalXref = '<value>';
     $request->limit = 9638.08;
     $request->offset = 15.12;
-    $request->order = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-20T13:59:12.388Z');;
 
     $response = $sdk->connection->listUnifiedConnections($request);

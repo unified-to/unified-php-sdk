@@ -157,10 +157,8 @@ try {
     ];
     $request->limit = 5840.47;
     $request->offset = 2505.87;
-    $request->order = '<value>';
     $request->paymentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-19T04:38:46.756Z');;
 
     $response = $sdk->link->listPaymentLinks($request);

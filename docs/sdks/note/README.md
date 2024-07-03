@@ -152,9 +152,7 @@ try {
     ];
     $request->limit = 6345.23;
     $request->offset = 8100.5;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->ticketId = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-20T16:07:42.054Z');;
 

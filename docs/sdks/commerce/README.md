@@ -535,10 +535,8 @@ try {
     ];
     $request->limit = 2972.15;
     $request->offset = 5933.83;
-    $request->order = '<value>';
     $request->parentId = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->type = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T20:40:35.103Z');;
 
@@ -596,9 +594,7 @@ try {
     $request->limit = 2481.16;
     $request->locationId = '<value>';
     $request->offset = 9476.38;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-15T22:28:16.925Z');;
 
     $response = $sdk->commerce->listCommerceInventories($request);
@@ -654,9 +650,7 @@ try {
     ];
     $request->limit = 2553.93;
     $request->offset = 4072.28;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-10T19:08:09.923Z');;
 
     $response = $sdk->commerce->listCommerceItems($request);
@@ -711,9 +705,7 @@ try {
     ];
     $request->limit = 2087.22;
     $request->offset = 1166.59;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T14:52:37.550Z');;
 
     $response = $sdk->commerce->listCommerceLocations($request);

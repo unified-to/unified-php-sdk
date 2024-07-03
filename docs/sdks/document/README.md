@@ -156,9 +156,7 @@ try {
     ];
     $request->limit = 9635.37;
     $request->offset = 8402.77;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T00:55:54.895Z');;
 
     $response = $sdk->document->listAtsDocuments($request);

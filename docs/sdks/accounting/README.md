@@ -858,9 +858,7 @@ try {
     ];
     $request->limit = 9476.86;
     $request->offset = 5444.77;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-04-19T21:33:28.191Z');;
 
     $response = $sdk->accounting->listAccountingAccounts($request);
@@ -915,9 +913,7 @@ try {
     ];
     $request->limit = 4596.32;
     $request->offset = 8881.9;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->type = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-26T14:00:38.736Z');;
 
@@ -974,9 +970,7 @@ try {
     ];
     $request->limit = 6788.11;
     $request->offset = 5122.49;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-23T19:02:52.454Z');;
 
     $response = $sdk->accounting->listAccountingInvoices($request);
@@ -1031,9 +1025,7 @@ try {
     ];
     $request->limit = 3732.99;
     $request->offset = 235.51;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-02T07:29:24.179Z');;
 
     $response = $sdk->accounting->listAccountingJournals($request);
@@ -1088,9 +1080,7 @@ try {
     ];
     $request->limit = 4896.89;
     $request->offset = 9817.05;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-02T18:55:09.644Z');;
 
     $response = $sdk->accounting->listAccountingOrganizations($request);
@@ -1145,9 +1135,7 @@ try {
     ];
     $request->limit = 1599.19;
     $request->offset = 1097.48;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T14:31:13.247Z');;
 
     $response = $sdk->accounting->listAccountingTaxrates($request);
@@ -1203,9 +1191,7 @@ try {
     ];
     $request->limit = 7894.5;
     $request->offset = 4597.84;
-    $request->order = '<value>';
     $request->query = '<value>';
-    $request->sort = '<value>';
     $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-02T12:20:43.572Z');;
 
     $response = $sdk->accounting->listAccountingTransactions($request);
