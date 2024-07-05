@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 1c9d25d2726d323697b110e342adfad9
+  docChecksum: 9e3d4190c54f7a4d24ccbf1101f05382
   docVersion: "1.0"
-  speakeasyVersion: 1.326.0
-  generationVersion: 2.359.0
-  releaseVersion: 0.15.27
-  configChecksum: ada9af51fc9b96d8be94739e36afdb79
+  speakeasyVersion: 1.326.3
+  generationVersion: 2.359.6
+  releaseVersion: 0.15.28
+  configChecksum: a82285d328df49a4b12bd1db747f36ef
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -803,6 +803,8 @@ generatedFiles:
   - src/Models/Shared/PropertyHrisEmployeeEmployeeRoles.php
   - src/Models/Shared/HrisEmailType.php
   - src/Models/Shared/HrisEmail.php
+  - src/Models/Shared/HrisCompensationFrequency.php
+  - src/Models/Shared/HrisCompensationType.php
   - src/Models/Shared/HrisCompensation.php
   - src/Models/Shared/PropertyHrisEmployeeAddress.php
   - src/Models/Shared/HrisGroupType.php
@@ -1600,6 +1602,8 @@ generatedFiles:
   - docs/Models/Shared/PropertyHrisEmployeeEmployeeRoles.md
   - docs/Models/Shared/HrisEmailType.md
   - docs/Models/Shared/HrisEmail.md
+  - docs/Models/Shared/HrisCompensationFrequency.md
+  - docs/Models/Shared/HrisCompensationType.md
   - docs/Models/Shared/HrisCompensation.md
   - docs/Models/Shared/PropertyHrisEmployeeAddress.md
   - docs/Models/Shared/HrisGroupType.md

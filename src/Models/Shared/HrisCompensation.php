@@ -11,7 +11,31 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisCompensation
 {
+    #[\JMS\Serializer\Annotation\SerializedName('amount')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $amount = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('currency')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $currency = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('frequency')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisCompensationFrequency>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?HrisCompensationFrequency $frequency = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('type')]
+    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisCompensationType>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?HrisCompensationType $type = null;
+
     public function __construct()
     {
+        $this->amount = null;
+        $this->currency = null;
+        $this->frequency = null;
+        $this->type = null;
     }
 }
