@@ -88,7 +88,8 @@ class AccountingTransaction
 
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
-    public float $totalAmount;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $totalAmount = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -116,7 +117,7 @@ class AccountingTransaction
         $this->splitAccountId = null;
         $this->subTotalAmount = null;
         $this->taxAmount = null;
-        $this->totalAmount = 0;
+        $this->totalAmount = null;
         $this->type = null;
         $this->updatedAt = null;
     }
