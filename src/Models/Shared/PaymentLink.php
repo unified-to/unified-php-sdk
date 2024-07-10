@@ -13,7 +13,8 @@ class PaymentLink
 {
     #[\JMS\Serializer\Annotation\SerializedName('amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
-    public float $amount;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $amount = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -43,11 +44,12 @@ class PaymentLink
     /**
      * $lineitems
      *
-     * @var array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem> $lineitems
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
     #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\PaymentLinkLineitem>')]
-    public array $lineitems;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $lineitems = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('payment_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -76,13 +78,13 @@ class PaymentLink
 
     public function __construct()
     {
-        $this->amount = 0;
+        $this->amount = null;
         $this->contactId = null;
         $this->createdAt = null;
         $this->currency = null;
         $this->id = null;
         $this->isActive = null;
-        $this->lineitems = [];
+        $this->lineitems = null;
         $this->paymentId = null;
         $this->raw = null;
         $this->updatedAt = null;
