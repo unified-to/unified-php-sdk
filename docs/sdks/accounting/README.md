@@ -434,12 +434,15 @@ try {
         'Direct' => '<value>',
     ];
     $request->accountingTransaction->reference = '<value>';
+    $request->accountingTransaction->referenceObject = [
+        'Metal' => '<value>',
+    ];
     $request->accountingTransaction->splitAccountId = '<value>';
-    $request->accountingTransaction->subTotalAmount = 2477.45;
-    $request->accountingTransaction->taxAmount = 7389.88;
-    $request->accountingTransaction->totalAmount = 8276.07;
+    $request->accountingTransaction->subTotalAmount = 8276.07;
+    $request->accountingTransaction->taxAmount = 4121.55;
+    $request->accountingTransaction->totalAmount = 9038.49;
     $request->accountingTransaction->type = '<value>';
-    $request->accountingTransaction->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-28T17:20:22.599Z');
+    $request->accountingTransaction->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-04T14:31:36.184Z');
     $request->connectionId = '<value>';;
 
     $response = $sdk->accounting->createAccountingTransaction($request);
@@ -1613,12 +1616,15 @@ try {
         'instead' => '<value>',
     ];
     $request->accountingTransaction->reference = '<value>';
+    $request->accountingTransaction->referenceObject = [
+        'Gambia' => '<value>',
+    ];
     $request->accountingTransaction->splitAccountId = '<value>';
-    $request->accountingTransaction->subTotalAmount = 535.65;
-    $request->accountingTransaction->taxAmount = 3153.09;
-    $request->accountingTransaction->totalAmount = 259.82;
+    $request->accountingTransaction->subTotalAmount = 259.82;
+    $request->accountingTransaction->taxAmount = 8716.58;
+    $request->accountingTransaction->totalAmount = 1651.43;
     $request->accountingTransaction->type = '<value>';
-    $request->accountingTransaction->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-13T08:04:48.029Z');
+    $request->accountingTransaction->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-31T11:09:54.950Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 
@@ -2335,12 +2341,15 @@ try {
         'protest' => '<value>',
     ];
     $request->accountingTransaction->reference = '<value>';
+    $request->accountingTransaction->referenceObject = [
+        'Intelligent' => '<value>',
+    ];
     $request->accountingTransaction->splitAccountId = '<value>';
-    $request->accountingTransaction->subTotalAmount = 2397.73;
-    $request->accountingTransaction->taxAmount = 1897.48;
-    $request->accountingTransaction->totalAmount = 421.84;
+    $request->accountingTransaction->subTotalAmount = 421.84;
+    $request->accountingTransaction->taxAmount = 8603.41;
+    $request->accountingTransaction->totalAmount = 7972.27;
     $request->accountingTransaction->type = '<value>';
-    $request->accountingTransaction->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-31T22:23:34.525Z');
+    $request->accountingTransaction->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-19T21:37:54.606Z');
     $request->connectionId = '<value>';
     $request->id = '<id>';;
 

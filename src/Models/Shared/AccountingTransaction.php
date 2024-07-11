@@ -71,6 +71,16 @@ class AccountingTransaction
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $reference = null;
 
+    /**
+     * This is a unified object that this transaction references
+     *
+     * @var ?array<string, mixed> $referenceObject
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('reference_object')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $referenceObject = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('split_account_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -114,6 +124,7 @@ class AccountingTransaction
         $this->paymentTerms = null;
         $this->raw = null;
         $this->reference = null;
+        $this->referenceObject = null;
         $this->splitAccountId = null;
         $this->subTotalAmount = null;
         $this->taxAmount = null;
