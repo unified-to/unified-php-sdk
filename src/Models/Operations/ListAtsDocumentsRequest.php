@@ -14,6 +14,9 @@ class ListAtsDocumentsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=application_id')]
     public ?string $applicationId = null;
 
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=candidate_id')]
+    public ?string $candidateId = null;
+
     /**
      * ID of the connection
      *
@@ -55,6 +58,7 @@ class ListAtsDocumentsRequest
     public function __construct()
     {
         $this->applicationId = null;
+        $this->candidateId = null;
         $this->connectionId = '';
         $this->fields = null;
         $this->limit = null;

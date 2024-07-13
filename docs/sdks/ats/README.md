@@ -1274,6 +1274,7 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListAtsDocumentsRequest();
     $request->applicationId = '<value>';
+    $request->candidateId = '<value>';
     $request->connectionId = '<value>';
     $request->fields = [
         '<value>',
