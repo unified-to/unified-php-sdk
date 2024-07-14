@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: baed20d00770c3529ab25ff351c386de
+  docChecksum: 447f3fb120945ec501fc264fcc573697
   docVersion: "1.0"
   speakeasyVersion: 1.335.0
   generationVersion: 2.370.2
-  releaseVersion: 0.15.32
-  configChecksum: 8f713808a71c07890414346bd94734b1
+  releaseVersion: 0.15.33
+  configChecksum: fbddf9b7af2f7f3e43495453cfd63a26
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -703,6 +703,7 @@ generatedFiles:
   - src/Models/Shared/AccountingJournalLineitem.php
   - src/Models/Shared/AccountingTaxrate.php
   - src/Models/Shared/AccountingTransaction.php
+  - src/Models/Shared/AccountingTransactionLineItem.php
   - src/Models/Shared/AccountingOrganization.php
   - src/Models/Shared/PropertyAccountingOrganizationAddress.php
   - src/Models/Shared/CrmContact.php
@@ -1502,6 +1503,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingJournalLineitem.md
   - docs/Models/Shared/AccountingTaxrate.md
   - docs/Models/Shared/AccountingTransaction.md
+  - docs/Models/Shared/AccountingTransactionLineItem.md
   - docs/Models/Shared/AccountingOrganization.md
   - docs/Models/Shared/PropertyAccountingOrganizationAddress.md
   - docs/Models/Shared/CrmContact.md

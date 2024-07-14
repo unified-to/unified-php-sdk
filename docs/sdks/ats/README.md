@@ -1167,6 +1167,7 @@ try {
     $request->fields = [
         '<value>',
     ];
+    $request->jobId = '<value>';
     $request->limit = 6384.09;
     $request->offset = 7452.94;
     $request->query = '<value>';

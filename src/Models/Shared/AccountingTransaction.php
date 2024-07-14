@@ -41,6 +41,16 @@ class AccountingTransaction
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     * $lineitems
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem> $lineitems
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $lineitems = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('memo')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -70,16 +80,6 @@ class AccountingTransaction
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $reference = null;
-
-    /**
-     * This is a unified object that this transaction references
-     *
-     * @var ?array<string, mixed> $referenceObject
-     */
-    #[\JMS\Serializer\Annotation\SerializedName('reference_object')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $referenceObject = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('split_account_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -119,12 +119,12 @@ class AccountingTransaction
         $this->currency = null;
         $this->customerMessage = null;
         $this->id = null;
+        $this->lineitems = null;
         $this->memo = null;
         $this->paymentMethod = null;
         $this->paymentTerms = null;
         $this->raw = null;
         $this->reference = null;
-        $this->referenceObject = null;
         $this->splitAccountId = null;
         $this->subTotalAmount = null;
         $this->taxAmount = null;

@@ -27,6 +27,9 @@ class ListAtsCandidatesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
+    public ?string $jobId = null;
+
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
@@ -53,6 +56,7 @@ class ListAtsCandidatesRequest
     {
         $this->connectionId = '';
         $this->fields = null;
+        $this->jobId = null;
         $this->limit = null;
         $this->offset = null;
         $this->query = null;
