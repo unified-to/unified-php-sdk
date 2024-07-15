@@ -58,7 +58,8 @@ class TaskTask
 
     #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $name;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $name = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('notes')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -124,7 +125,7 @@ class TaskTask
         $this->dueAt = null;
         $this->followerUserIds = null;
         $this->id = null;
-        $this->name = '';
+        $this->name = null;
         $this->notes = null;
         $this->parentId = null;
         $this->priority = null;
