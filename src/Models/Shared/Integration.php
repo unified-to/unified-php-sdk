@@ -12,6 +12,21 @@ namespace Unified\Unified_to\Models\Shared;
 /** Integration - Informational object for supported integrations. */
 class Integration
 {
+    #[\JMS\Serializer\Annotation\SerializedName('active_healthy_connections')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $activeHealthyConnections = null;
+
+    /**
+     * $api
+     *
+     * @var ?array<string, mixed> $api
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('api')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $api = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('api_docs_url')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -41,10 +56,20 @@ class Integration
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('description')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $description = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('fa_icon')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $faIcon = null;
+
+    #[\JMS\Serializer\Annotation\SerializedName('featured')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $featured = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('in_progress')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -64,6 +89,11 @@ class Integration
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    #[\JMS\Serializer\Annotation\SerializedName('popularity')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $popularity = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('rate_limit_description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -72,11 +102,12 @@ class Integration
     /**
      * $support
      *
-     * @var array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport> $support
+     * @var ?array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport> $support
      */
     #[\JMS\Serializer\Annotation\SerializedName('support')]
     #[\JMS\Serializer\Annotation\Type('array<string, Unified\Unified_to\Models\Shared\IntegrationSupport>')]
-    public array $support;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $support = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('tested_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
@@ -124,18 +155,23 @@ class Integration
 
     public function __construct()
     {
+        $this->activeHealthyConnections = null;
+        $this->api = null;
         $this->apiDocsUrl = null;
         $this->beta = null;
         $this->categories = [];
         $this->color = null;
         $this->createdAt = null;
+        $this->description = null;
         $this->faIcon = null;
+        $this->featured = null;
         $this->inProgress = false;
         $this->isActive = null;
         $this->logoUrl = null;
         $this->name = '';
+        $this->popularity = null;
         $this->rateLimitDescription = null;
-        $this->support = [];
+        $this->support = null;
         $this->testedAt = null;
         $this->textColor = null;
         $this->tokenInstructions = null;
