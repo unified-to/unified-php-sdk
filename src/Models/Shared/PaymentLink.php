@@ -41,6 +41,11 @@ class PaymentLink
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    #[\JMS\Serializer\Annotation\SerializedName('is_chargeable_now')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $isChargeableNow = null;
+
     /**
      * $lineitems
      *
@@ -84,6 +89,7 @@ class PaymentLink
         $this->currency = null;
         $this->id = null;
         $this->isActive = null;
+        $this->isChargeableNow = null;
         $this->lineitems = null;
         $this->paymentId = null;
         $this->raw = null;

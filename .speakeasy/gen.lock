@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0ffd229fc984e79a989b59bc7e76be0d
+  docChecksum: 6d51b60c29950dfc2984759824e2e857
   docVersion: "1.0"
-  speakeasyVersion: 1.335.2
-  generationVersion: 2.372.3
-  releaseVersion: 0.15.35
-  configChecksum: 1e31a6e968c4a901c92d33f83c87d4a2
+  speakeasyVersion: 1.337.1
+  generationVersion: 2.373.2
+  releaseVersion: 0.15.36
+  configChecksum: bbdc4d481dd2254cb791c844bb935d11
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 features:
   php:
-    core: 3.3.7
+    core: 3.3.8
     globalSecurity: 2.81.6
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.1
@@ -1784,3 +1784,4 @@ generatedFiles:
   - docs/sdks/webhook/README.md
   - USAGE.md
   - .gitattributes
+  - CONTRIBUTING.md

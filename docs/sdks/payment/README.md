@@ -51,6 +51,7 @@ try {
     $request->paymentLink->currency = 'Aruban Guilder';
     $request->paymentLink->id = '<id>';
     $request->paymentLink->isActive = false;
+    $request->paymentLink->isChargeableNow = false;
     $request->paymentLink->lineitems = [
         new Shared\PaymentLinkLineitem(),
     ];
@@ -611,6 +612,7 @@ try {
     $request->paymentLink->currency = 'UIC-Franc';
     $request->paymentLink->id = '<id>';
     $request->paymentLink->isActive = false;
+    $request->paymentLink->isChargeableNow = false;
     $request->paymentLink->lineitems = [
         new Shared\PaymentLinkLineitem(),
     ];
@@ -838,6 +840,7 @@ try {
     $request->paymentLink->currency = 'Gibraltar Pound';
     $request->paymentLink->id = '<id>';
     $request->paymentLink->isActive = false;
+    $request->paymentLink->isChargeableNow = false;
     $request->paymentLink->lineitems = [
         new Shared\PaymentLinkLineitem(),
     ];
