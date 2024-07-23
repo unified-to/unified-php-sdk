@@ -35,6 +35,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateCommerceItemRequest();
     $request->commerceItem = new Shared\CommerceItem();
+    $request->commerceItem->collectionIds = [
+        '<value>',
+    ];
     $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-27T05:28:51.414Z');
     $request->commerceItem->description = 'Object-based local intranet';
     $request->commerceItem->id = '<id>';
@@ -216,6 +219,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\PatchCommerceItemRequest();
     $request->commerceItem = new Shared\CommerceItem();
+    $request->commerceItem->collectionIds = [
+        '<value>',
+    ];
     $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-21T03:47:22.544Z');
     $request->commerceItem->description = 'Front-line explicit circuit';
     $request->commerceItem->id = '<id>';
@@ -339,6 +345,9 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateCommerceItemRequest();
     $request->commerceItem = new Shared\CommerceItem();
+    $request->commerceItem->collectionIds = [
+        '<value>',
+    ];
     $request->commerceItem->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-27T01:13:33.758Z');
     $request->commerceItem->description = 'Advanced intangible toolset';
     $request->commerceItem->id = '<id>';

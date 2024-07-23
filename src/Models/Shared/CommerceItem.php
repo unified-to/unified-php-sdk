@@ -11,6 +11,16 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CommerceItem
 {
+    /**
+     * $collectionIds
+     *
+     * @var ?array<string> $collectionIds
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('collection_ids')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $collectionIds = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -113,6 +123,7 @@ class CommerceItem
 
     public function __construct()
     {
+        $this->collectionIds = null;
         $this->createdAt = null;
         $this->description = null;
         $this->id = null;
