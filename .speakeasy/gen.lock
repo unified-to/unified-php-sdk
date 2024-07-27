@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b51483e0ba5da702b0a6782d1c3502c1
+  docChecksum: 398329e502d5c762a74ed9d5f4600441
   docVersion: "1.0"
-  speakeasyVersion: 1.346.0
-  generationVersion: 2.379.3
-  releaseVersion: 0.15.38
-  configChecksum: c9269a377120bcba353cc1e62926070a
+  speakeasyVersion: 1.346.3
+  generationVersion: 2.379.6
+  releaseVersion: 0.15.39
+  configChecksum: 180c3a9f8d728f36e700c7e6d120d30a
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -666,6 +666,8 @@ generatedFiles:
   - src/Models/Operations/ListUnifiedIntegrationsResponse.php
   - src/Models/Operations/ListUnifiedIssuesRequest.php
   - src/Models/Operations/ListUnifiedIssuesResponse.php
+  - src/Models/Operations/ConnectionId.php
+  - src/Models/Operations/IntegrationType.php
   - src/Models/Operations/ListUnifiedWebhooksRequest.php
   - src/Models/Operations/ListUnifiedWebhooksResponse.php
   - src/Models/Operations/PatchUnifiedConnectionRequest.php
@@ -1466,6 +1468,8 @@ generatedFiles:
   - docs/Models/Operations/ListUnifiedIntegrationsResponse.md
   - docs/Models/Operations/ListUnifiedIssuesRequest.md
   - docs/Models/Operations/ListUnifiedIssuesResponse.md
+  - docs/Models/Operations/ConnectionId.md
+  - docs/Models/Operations/IntegrationType.md
   - docs/Models/Operations/ListUnifiedWebhooksRequest.md
   - docs/Models/Operations/ListUnifiedWebhooksResponse.md
   - docs/Models/Operations/PatchUnifiedConnectionRequest.md

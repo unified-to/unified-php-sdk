@@ -423,14 +423,13 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListUnifiedApicallsRequest();
     $request->connectionId = '<value>';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T17:47:53.304Z');
     $request->env = '<value>';
     $request->error = false;
     $request->externalXref = '<value>';
     $request->integrationType = '<value>';
-    $request->limit = 494.66;
-    $request->offset = 5267.27;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-10T02:33:44.403Z');;
+    $request->limit = 8683.78;
+    $request->offset = 494.66;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-01T07:02:03.842Z');;
 
     $response = $sdk->unified->listUnifiedApicalls($request);
 
@@ -699,11 +698,14 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListUnifiedWebhooksRequest();
+    $request->connectionId = new Operations\ConnectionId();
+    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-08T09:09:29.992Z');
     $request->env = '<value>';
-    $request->limit = 1162.24;
+    $request->integrationType = new Operations\IntegrationType();
+    $request->limit = 5094.7;
     $request->object = '<value>';
-    $request->offset = 5094.7;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-20T17:03:56.207Z');;
+    $request->offset = 1001.01;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-16T05:14:02.871Z');;
 
     $response = $sdk->unified->listUnifiedWebhooks($request);
 

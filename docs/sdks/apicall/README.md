@@ -79,14 +79,13 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListUnifiedApicallsRequest();
     $request->connectionId = '<value>';
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T17:47:53.304Z');
     $request->env = '<value>';
     $request->error = false;
     $request->externalXref = '<value>';
     $request->integrationType = '<value>';
-    $request->limit = 494.66;
-    $request->offset = 5267.27;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-10T02:33:44.403Z');;
+    $request->limit = 8683.78;
+    $request->offset = 494.66;
+    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-01T07:02:03.842Z');;
 
     $response = $sdk->apicall->listUnifiedApicalls($request);
 
