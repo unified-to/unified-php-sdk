@@ -68,7 +68,8 @@ class CommerceItemVariant
 
     #[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $name;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $name = null;
 
     /**
      * $options
@@ -157,7 +158,7 @@ class CommerceItemVariant
         $this->isVisible = null;
         $this->length = null;
         $this->media = null;
-        $this->name = '';
+        $this->name = null;
         $this->options = null;
         $this->prices = null;
         $this->publicDescription = null;

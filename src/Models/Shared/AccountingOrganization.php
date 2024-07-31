@@ -45,6 +45,11 @@ class AccountingOrganization
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    #[\JMS\Serializer\Annotation\SerializedName('organization_code')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $organizationCode = null;
+
     /**
      * $raw
      *
@@ -84,6 +89,7 @@ class AccountingOrganization
         $this->id = null;
         $this->legalName = null;
         $this->name = '';
+        $this->organizationCode = null;
         $this->raw = null;
         $this->taxNumber = null;
         $this->timezone = null;
