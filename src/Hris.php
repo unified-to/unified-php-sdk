@@ -135,6 +135,44 @@ class Hris
     }
 
     /**
+     * Create a location
+     *
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisLocationResponse
+     */
+    public function createHrisLocation(
+        ?\Unified\Unified_to\Models\Operations\CreateHrisLocationRequest $request,
+    ): \Unified\Unified_to\Models\Operations\CreateHrisLocationResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location', \Unified\Unified_to\Models\Operations\CreateHrisLocationRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\CreateHrisLocationResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisLocation = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisLocation', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
      * Retrieve a company
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisCompanyRequest  $request
@@ -233,6 +271,41 @@ class Hris
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->hrisGroup = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
+     * Retrieve a location
+     *
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisLocationResponse
+     */
+    public function getHrisLocation(
+        ?\Unified\Unified_to\Models\Operations\GetHrisLocationRequest $request,
+    ): \Unified\Unified_to\Models\Operations\GetHrisLocationResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', \Unified\Unified_to\Models\Operations\GetHrisLocationRequest::class, $request);
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetHrisLocationRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\GetHrisLocationResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisLocation = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisLocation', 'json');
             }
         }
 
@@ -408,6 +481,41 @@ class Hris
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->hrisGroups = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisGroup>', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
+     * List all locations
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisLocationsResponse
+     */
+    public function listHrisLocations(
+        ?\Unified\Unified_to\Models\Operations\ListHrisLocationsRequest $request,
+    ): \Unified\Unified_to\Models\Operations\ListHrisLocationsResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location', \Unified\Unified_to\Models\Operations\ListHrisLocationsRequest::class, $request);
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListHrisLocationsRequest::class, $request, null));
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\ListHrisLocationsResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisLocations = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\HrisLocation>', 'json');
             }
         }
 
@@ -599,6 +707,44 @@ class Hris
     }
 
     /**
+     * Update a location
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisLocationResponse
+     */
+    public function patchHrisLocation(
+        ?\Unified\Unified_to\Models\Operations\PatchHrisLocationRequest $request,
+    ): \Unified\Unified_to\Models\Operations\PatchHrisLocationResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', \Unified\Unified_to\Models\Operations\PatchHrisLocationRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\PatchHrisLocationResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisLocation = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisLocation', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
      * Remove a company
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest  $request
@@ -687,6 +833,40 @@ class Hris
         $statusCode = $httpResponse->getStatusCode();
 
         $response = new \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
+     * Remove a location
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse
+     */
+    public function removeHrisLocation(
+        ?\Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest $request,
+    ): \Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', \Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest::class, $request);
+        $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse();
         $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -808,6 +988,44 @@ class Hris
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->hrisGroup = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisGroup', 'json');
+            }
+        }
+
+        return $response;
+    }
+
+    /**
+     * Update a location
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse
+     */
+    public function updateHrisLocation(
+        ?\Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest $request,
+    ): \Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', \Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+
+        $response = new \Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse();
+        $response->statusCode = $statusCode;
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->hrisLocation = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\HrisLocation', 'json');
             }
         }
 

@@ -64,11 +64,17 @@ try {
     $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Active;
     $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::Other;
     $request->hrisEmployee->gender = Shared\HrisEmployeeGender::Intersex;
+    $request->hrisEmployee->groups = [
+        new Shared\HrisGroup(),
+    ];
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-30T17:54:25.597Z');
     $request->hrisEmployee->id = '<id>';
     $request->hrisEmployee->imageUrl = '<value>';
     $request->hrisEmployee->languageLocale = '<value>';
     $request->hrisEmployee->location = '<value>';
+    $request->hrisEmployee->locations = [
+        new Shared\HrisLocation(),
+    ];
     $request->hrisEmployee->managerId = '<value>';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Married;
     $request->hrisEmployee->name = '<value>';
@@ -271,11 +277,17 @@ try {
     $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Active;
     $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::FullTime;
     $request->hrisEmployee->gender = Shared\HrisEmployeeGender::Intersex;
+    $request->hrisEmployee->groups = [
+        new Shared\HrisGroup(),
+    ];
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-24T06:10:11.552Z');
     $request->hrisEmployee->id = '<id>';
     $request->hrisEmployee->imageUrl = '<value>';
     $request->hrisEmployee->languageLocale = '<value>';
     $request->hrisEmployee->location = '<value>';
+    $request->hrisEmployee->locations = [
+        new Shared\HrisLocation(),
+    ];
     $request->hrisEmployee->managerId = '<value>';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
     $request->hrisEmployee->name = '<value>';
@@ -420,11 +432,17 @@ try {
     $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Inactive;
     $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::Freelance;
     $request->hrisEmployee->gender = Shared\HrisEmployeeGender::NonBinary;
+    $request->hrisEmployee->groups = [
+        new Shared\HrisGroup(),
+    ];
     $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-07T07:57:10.914Z');
     $request->hrisEmployee->id = '<id>';
     $request->hrisEmployee->imageUrl = '<value>';
     $request->hrisEmployee->languageLocale = '<value>';
     $request->hrisEmployee->location = '<value>';
+    $request->hrisEmployee->locations = [
+        new Shared\HrisLocation(),
+    ];
     $request->hrisEmployee->managerId = '<value>';
     $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
     $request->hrisEmployee->name = '<value>';

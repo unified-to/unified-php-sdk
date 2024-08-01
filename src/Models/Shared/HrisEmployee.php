@@ -101,6 +101,16 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisEmployeeGender $gender = null;
 
+    /**
+     * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisGroup> $groups
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('groups')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\HrisGroup>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $groups = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('hired_at')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -125,6 +135,16 @@ class HrisEmployee
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $location = null;
+
+    /**
+     * $locations
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisLocation> $locations
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('locations')]
+    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\HrisLocation>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $locations = null;
 
     #[\JMS\Serializer\Annotation\SerializedName('manager_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -213,11 +233,13 @@ class HrisEmployee
         $this->employmentStatus = null;
         $this->employmentType = null;
         $this->gender = null;
+        $this->groups = null;
         $this->hiredAt = null;
         $this->id = null;
         $this->imageUrl = null;
         $this->languageLocale = null;
         $this->location = null;
+        $this->locations = null;
         $this->managerId = null;
         $this->maritalStatus = null;
         $this->name = null;

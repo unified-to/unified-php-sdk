@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 939256dd6599a9b1968cce234d1549cc
+  docChecksum: e746fd806f5907d68d5ba126113c72ae
   docVersion: "1.0"
-  speakeasyVersion: 1.349.0
-  generationVersion: 2.382.0
-  releaseVersion: 0.15.40
-  configChecksum: bd6231f426d3b5c06ed6a70d6a4664b0
+  speakeasyVersion: 1.349.2
+  generationVersion: 2.382.2
+  releaseVersion: 0.15.41
+  configChecksum: f7f4093f3ef32dac0403333725f9a067
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -375,6 +375,18 @@ generatedFiles:
   - src/Models/Operations/UpdateCommerceItemResponse.php
   - src/Models/Operations/UpdateCommerceLocationRequest.php
   - src/Models/Operations/UpdateCommerceLocationResponse.php
+  - src/Models/Operations/CreateHrisLocationRequest.php
+  - src/Models/Operations/CreateHrisLocationResponse.php
+  - src/Models/Operations/GetHrisLocationRequest.php
+  - src/Models/Operations/GetHrisLocationResponse.php
+  - src/Models/Operations/ListHrisLocationsRequest.php
+  - src/Models/Operations/ListHrisLocationsResponse.php
+  - src/Models/Operations/PatchHrisLocationRequest.php
+  - src/Models/Operations/PatchHrisLocationResponse.php
+  - src/Models/Operations/RemoveHrisLocationRequest.php
+  - src/Models/Operations/RemoveHrisLocationResponse.php
+  - src/Models/Operations/UpdateHrisLocationRequest.php
+  - src/Models/Operations/UpdateHrisLocationResponse.php
   - src/Models/Operations/CreateCrmDealRequest.php
   - src/Models/Operations/CreateCrmDealResponse.php
   - src/Models/Operations/CreateCrmEventRequest.php
@@ -772,6 +784,10 @@ generatedFiles:
   - src/Models/Shared/CommerceItemOption.php
   - src/Models/Shared/CommerceLocation.php
   - src/Models/Shared/PropertyCommerceLocationAddress.php
+  - src/Models/Shared/HrisLocation.php
+  - src/Models/Shared/HrisTelephoneType.php
+  - src/Models/Shared/HrisTelephone.php
+  - src/Models/Shared/PropertyHrisLocationAddress.php
   - src/Models/Shared/CrmDeal.php
   - src/Models/Shared/CrmEventType.php
   - src/Models/Shared/CrmEvent.php
@@ -801,8 +817,8 @@ generatedFiles:
   - src/Models/Shared/HrisEmployeeGender.php
   - src/Models/Shared/MaritalStatus.php
   - src/Models/Shared/HrisEmployee.php
-  - src/Models/Shared/HrisTelephoneType.php
-  - src/Models/Shared/HrisTelephone.php
+  - src/Models/Shared/HrisGroupType.php
+  - src/Models/Shared/HrisGroup.php
   - src/Models/Shared/PropertyHrisEmployeeEmployeeRoles.php
   - src/Models/Shared/HrisEmailType.php
   - src/Models/Shared/HrisEmail.php
@@ -810,8 +826,6 @@ generatedFiles:
   - src/Models/Shared/HrisCompensationType.php
   - src/Models/Shared/HrisCompensation.php
   - src/Models/Shared/PropertyHrisEmployeeAddress.php
-  - src/Models/Shared/HrisGroupType.php
-  - src/Models/Shared/HrisGroup.php
   - src/Models/Shared/PaymentType.php
   - src/Models/Shared/HrisPayslip.php
   - src/Models/Shared/HrisPayslipDetailType.php
@@ -1177,6 +1191,18 @@ generatedFiles:
   - docs/Models/Operations/UpdateCommerceItemResponse.md
   - docs/Models/Operations/UpdateCommerceLocationRequest.md
   - docs/Models/Operations/UpdateCommerceLocationResponse.md
+  - docs/Models/Operations/CreateHrisLocationRequest.md
+  - docs/Models/Operations/CreateHrisLocationResponse.md
+  - docs/Models/Operations/GetHrisLocationRequest.md
+  - docs/Models/Operations/GetHrisLocationResponse.md
+  - docs/Models/Operations/ListHrisLocationsRequest.md
+  - docs/Models/Operations/ListHrisLocationsResponse.md
+  - docs/Models/Operations/PatchHrisLocationRequest.md
+  - docs/Models/Operations/PatchHrisLocationResponse.md
+  - docs/Models/Operations/RemoveHrisLocationRequest.md
+  - docs/Models/Operations/RemoveHrisLocationResponse.md
+  - docs/Models/Operations/UpdateHrisLocationRequest.md
+  - docs/Models/Operations/UpdateHrisLocationResponse.md
   - docs/Models/Operations/CreateCrmDealRequest.md
   - docs/Models/Operations/CreateCrmDealResponse.md
   - docs/Models/Operations/CreateCrmEventRequest.md
@@ -1574,6 +1600,10 @@ generatedFiles:
   - docs/Models/Shared/CommerceItemOption.md
   - docs/Models/Shared/CommerceLocation.md
   - docs/Models/Shared/PropertyCommerceLocationAddress.md
+  - docs/Models/Shared/HrisLocation.md
+  - docs/Models/Shared/HrisTelephoneType.md
+  - docs/Models/Shared/HrisTelephone.md
+  - docs/Models/Shared/PropertyHrisLocationAddress.md
   - docs/Models/Shared/CrmDeal.md
   - docs/Models/Shared/CrmEventType.md
   - docs/Models/Shared/CrmEvent.md
@@ -1603,8 +1633,8 @@ generatedFiles:
   - docs/Models/Shared/HrisEmployeeGender.md
   - docs/Models/Shared/MaritalStatus.md
   - docs/Models/Shared/HrisEmployee.md
-  - docs/Models/Shared/HrisTelephoneType.md
-  - docs/Models/Shared/HrisTelephone.md
+  - docs/Models/Shared/HrisGroupType.md
+  - docs/Models/Shared/HrisGroup.md
   - docs/Models/Shared/PropertyHrisEmployeeEmployeeRoles.md
   - docs/Models/Shared/HrisEmailType.md
   - docs/Models/Shared/HrisEmail.md
@@ -1612,8 +1642,6 @@ generatedFiles:
   - docs/Models/Shared/HrisCompensationType.md
   - docs/Models/Shared/HrisCompensation.md
   - docs/Models/Shared/PropertyHrisEmployeeAddress.md
-  - docs/Models/Shared/HrisGroupType.md
-  - docs/Models/Shared/HrisGroup.md
   - docs/Models/Shared/PaymentType.md
   - docs/Models/Shared/HrisPayslip.md
   - docs/Models/Shared/HrisPayslipDetailType.md
