@@ -499,7 +499,7 @@ class Unified
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
@@ -512,10 +512,6 @@ class Unified
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -533,7 +529,7 @@ class Unified
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -546,10 +542,6 @@ class Unified
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -567,7 +559,7 @@ class Unified
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -580,10 +572,6 @@ class Unified
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -639,7 +627,7 @@ class Unified
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
@@ -652,10 +640,6 @@ class Unified
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;

@@ -32,18 +32,10 @@ class RemoveAtsApplicationResponse
      */
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
 
-    /**
-     * Successful
-     *
-     * @var ?string $string
-     */
-    public ?string $string = null;
-
     public function __construct()
     {
         $this->contentType = '';
         $this->statusCode = 0;
         $this->rawResponse = null;
-        $this->string = null;
     }
 }

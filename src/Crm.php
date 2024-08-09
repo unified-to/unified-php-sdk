@@ -908,7 +908,7 @@ class Crm
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -921,10 +921,6 @@ class Crm
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -942,7 +938,7 @@ class Crm
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -955,10 +951,6 @@ class Crm
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -976,7 +968,7 @@ class Crm
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -989,10 +981,6 @@ class Crm
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -1010,7 +998,7 @@ class Crm
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -1023,10 +1011,6 @@ class Crm
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -1044,7 +1028,7 @@ class Crm
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -1057,10 +1041,6 @@ class Crm
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -1078,7 +1058,7 @@ class Crm
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -1091,10 +1071,6 @@ class Crm
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;

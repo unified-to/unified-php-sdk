@@ -464,7 +464,7 @@ class Payment
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', \Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -477,10 +477,6 @@ class Payment
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -498,7 +494,7 @@ class Payment
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payment/{id}', \Unified\Unified_to\Models\Operations\RemovePaymentPaymentRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -511,10 +507,6 @@ class Payment
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;

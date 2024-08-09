@@ -37,6 +37,9 @@ try {
     $request->taskProject = new Shared\TaskProject();
     $request->taskProject->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-11T14:12:01.452Z');
     $request->taskProject->description = 'Proactive zero defect encryption';
+    $request->taskProject->groupIds = [
+        '<value>',
+    ];
     $request->taskProject->id = '<id>';
     $request->taskProject->name = '<value>';
     $request->taskProject->parentId = '<value>';
@@ -206,6 +209,9 @@ try {
     $request->taskProject = new Shared\TaskProject();
     $request->taskProject->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-29T23:19:02.666Z');
     $request->taskProject->description = 'Horizontal responsive time-frame';
+    $request->taskProject->groupIds = [
+        '<value>',
+    ];
     $request->taskProject->id = '<id>';
     $request->taskProject->name = '<value>';
     $request->taskProject->parentId = '<value>';
@@ -317,6 +323,9 @@ try {
     $request->taskProject = new Shared\TaskProject();
     $request->taskProject->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-15T14:58:26.353Z');
     $request->taskProject->description = 'Seamless impactful circuit';
+    $request->taskProject->groupIds = [
+        '<value>',
+    ];
     $request->taskProject->id = '<id>';
     $request->taskProject->name = '<value>';
     $request->taskProject->parentId = '<value>';

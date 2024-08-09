@@ -43,6 +43,9 @@ try {
     $request->taskProject = new Shared\TaskProject();
     $request->taskProject->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-11T14:12:01.452Z');
     $request->taskProject->description = 'Proactive zero defect encryption';
+    $request->taskProject->groupIds = [
+        '<value>',
+    ];
     $request->taskProject->id = '<id>';
     $request->taskProject->name = '<value>';
     $request->taskProject->parentId = '<value>';
@@ -110,6 +113,9 @@ try {
     $request->taskTask->creatorUserId = '<value>';
     $request->taskTask->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-26T21:06:20.789Z');
     $request->taskTask->followerUserIds = [
+        '<value>',
+    ];
+    $request->taskTask->groupIds = [
         '<value>',
     ];
     $request->taskTask->id = '<id>';
@@ -395,6 +401,9 @@ try {
     $request->taskProject = new Shared\TaskProject();
     $request->taskProject->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-29T23:19:02.666Z');
     $request->taskProject->description = 'Horizontal responsive time-frame';
+    $request->taskProject->groupIds = [
+        '<value>',
+    ];
     $request->taskProject->id = '<id>';
     $request->taskProject->name = '<value>';
     $request->taskProject->parentId = '<value>';
@@ -463,6 +472,9 @@ try {
     $request->taskTask->creatorUserId = '<value>';
     $request->taskTask->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-08T12:45:42.064Z');
     $request->taskTask->followerUserIds = [
+        '<value>',
+    ];
+    $request->taskTask->groupIds = [
         '<value>',
     ];
     $request->taskTask->id = '<id>';
@@ -630,6 +642,9 @@ try {
     $request->taskProject = new Shared\TaskProject();
     $request->taskProject->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-15T14:58:26.353Z');
     $request->taskProject->description = 'Seamless impactful circuit';
+    $request->taskProject->groupIds = [
+        '<value>',
+    ];
     $request->taskProject->id = '<id>';
     $request->taskProject->name = '<value>';
     $request->taskProject->parentId = '<value>';
@@ -698,6 +713,9 @@ try {
     $request->taskTask->creatorUserId = '<value>';
     $request->taskTask->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-18T11:46:55.022Z');
     $request->taskTask->followerUserIds = [
+        '<value>',
+    ];
+    $request->taskTask->groupIds = [
         '<value>',
     ];
     $request->taskTask->id = '<id>';

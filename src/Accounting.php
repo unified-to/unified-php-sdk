@@ -978,7 +978,7 @@ class Accounting
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -991,10 +991,6 @@ class Accounting
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -1012,7 +1008,7 @@ class Accounting
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -1025,10 +1021,6 @@ class Accounting
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -1046,7 +1038,7 @@ class Accounting
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -1059,10 +1051,6 @@ class Accounting
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -1080,7 +1068,7 @@ class Accounting
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -1093,10 +1081,6 @@ class Accounting
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -1114,7 +1098,7 @@ class Accounting
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -1127,10 +1111,6 @@ class Accounting
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -1148,7 +1128,7 @@ class Accounting
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -1161,10 +1141,6 @@ class Accounting
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;

@@ -51,6 +51,16 @@ class TaskTask
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $followerUserIds = null;
 
+    /**
+     * $groupIds
+     *
+     * @var ?array<string> $groupIds
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('group_ids')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $groupIds = null;
+
     #[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -124,6 +134,7 @@ class TaskTask
         $this->creatorUserId = null;
         $this->dueAt = null;
         $this->followerUserIds = null;
+        $this->groupIds = null;
         $this->id = null;
         $this->name = null;
         $this->notes = null;

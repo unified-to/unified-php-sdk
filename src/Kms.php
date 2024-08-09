@@ -324,7 +324,7 @@ class Kms
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', \Unified\Unified_to\Models\Operations\RemoveKmsPageRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -337,10 +337,6 @@ class Kms
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
@@ -358,7 +354,7 @@ class Kms
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/space/{id}', \Unified\Unified_to\Models\Operations\RemoveKmsSpaceRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
 
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -371,10 +367,6 @@ class Kms
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         if (true) { /** @phpstan-ignore-line */
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->string = $serializer->deserialize((string) $httpResponse->getBody(), 'string', 'json');
-            }
         }
 
         return $response;
