@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmLeadRequest
 {
+    /**
+     *
+     * @var ?Shared\CrmLead $crmLead
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\CrmLead $crmLead = null;
+    public ?Shared\CrmLead $crmLead = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateCrmLeadRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\CrmLead  $crmLead
+     */
+    public function __construct(?string $connectionId = null, ?Shared\CrmLead $crmLead = null)
     {
-        $this->crmLead = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->crmLead = $crmLead;
     }
 }

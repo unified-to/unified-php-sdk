@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAtsInterviewRequest
 {
+    /**
+     *
+     * @var ?Shared\AtsInterview $atsInterview
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AtsInterview $atsInterview = null;
+    public ?Shared\AtsInterview $atsInterview = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateAtsInterviewRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\AtsInterview  $atsInterview
+     */
+    public function __construct(?string $connectionId = null, ?Shared\AtsInterview $atsInterview = null)
     {
-        $this->atsInterview = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->atsInterview = $atsInterview;
     }
 }

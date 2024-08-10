@@ -11,43 +11,67 @@ namespace Unified\Unified_to\Models\Shared;
 
 class PaymentPayment
 {
+    /**
+     *
+     * @var ?string $accountId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('account_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $accountId = null;
 
+    /**
+     *
+     * @var ?string $contactId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $contactId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $invoiceId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('invoice_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $invoiceId = null;
 
+    /**
+     *
+     * @var ?string $notes
+     */
     #[\JMS\Serializer\Annotation\SerializedName('notes')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $notes = null;
 
+    /**
+     *
+     * @var ?string $paymentMethod
+     */
     #[\JMS\Serializer\Annotation\SerializedName('payment_method')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $paymentMethod = null;
 
@@ -61,34 +85,57 @@ class PaymentPayment
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $reference
+     */
     #[\JMS\Serializer\Annotation\SerializedName('reference')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $reference = null;
 
+    /**
+     *
+     * @var ?float $totalAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $totalAmount = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $accountId
+     * @param  ?string  $contactId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $id
+     * @param  ?string  $invoiceId
+     * @param  ?string  $notes
+     * @param  ?string  $paymentMethod
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $reference
+     * @param  ?float  $totalAmount
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?string $accountId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $invoiceId = null, ?string $notes = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
-        $this->accountId = null;
-        $this->contactId = null;
-        $this->createdAt = null;
-        $this->currency = null;
-        $this->id = null;
-        $this->invoiceId = null;
-        $this->notes = null;
-        $this->paymentMethod = null;
-        $this->raw = null;
-        $this->reference = null;
-        $this->totalAmount = null;
-        $this->updatedAt = null;
+        $this->accountId = $accountId;
+        $this->contactId = $contactId;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->id = $id;
+        $this->invoiceId = $invoiceId;
+        $this->notes = $notes;
+        $this->paymentMethod = $paymentMethod;
+        $this->raw = $raw;
+        $this->reference = $reference;
+        $this->totalAmount = $totalAmount;
+        $this->updatedAt = $updatedAt;
     }
 }

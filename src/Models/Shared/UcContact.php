@@ -12,33 +12,45 @@ namespace Unified\Unified_to\Models\Shared;
 /** UcContact - A contact represents a person that optionally is associated with a call */
 class UcContact
 {
+    /**
+     *
+     * @var ?string $company
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $company = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
     /**
      * An array of email addresses for this contact
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\UcEmail> $emails
+     * @var ?array<UcEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\UcEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -55,33 +67,50 @@ class UcContact
     /**
      * An array of telephones for this contact
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\UcTelephone> $telephones
+     * @var ?array<UcTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\UcTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcTelephone>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 
+    /**
+     *
+     * @var ?string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $title = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $company
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<UcEmail>  $emails
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<UcTelephone>  $telephones
+     * @param  ?string  $title
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
-        $this->company = null;
-        $this->createdAt = null;
-        $this->emails = null;
-        $this->id = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->telephones = null;
-        $this->title = null;
-        $this->updatedAt = null;
+        $this->company = $company;
+        $this->createdAt = $createdAt;
+        $this->emails = $emails;
+        $this->id = $id;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->telephones = $telephones;
+        $this->title = $title;
+        $this->updatedAt = $updatedAt;
     }
 }

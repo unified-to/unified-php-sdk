@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Collection
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,14 +26,15 @@ class Collection
     /**
      * Create a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
+     * @param  Operations\CreateCommerceCollectionRequest  $request
+     * @return Operations\CreateCommerceCollectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceCollection(
-        ?\Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse {
+        ?Operations\CreateCommerceCollectionRequest $request,
+    ): Operations\CreateCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\CreateCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
         if ($body !== null) {
@@ -38,107 +42,134 @@ class Collection
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateCommerceCollectionResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceCollection: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
+     * @param  Operations\GetCommerceCollectionRequest  $request
+     * @return Operations\GetCommerceCollectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceCollection(
-        ?\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse {
+        ?Operations\GetCommerceCollectionRequest $request,
+    ): Operations\GetCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\GetCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetCommerceCollectionRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetCommerceCollectionResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceCollection: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all collections
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
+     * @param  Operations\ListCommerceCollectionsRequest  $request
+     * @return Operations\ListCommerceCollectionsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceCollections(
-        ?\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse {
+        ?Operations\ListCommerceCollectionsRequest $request,
+    ): Operations\ListCommerceCollectionsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\ListCommerceCollectionsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListCommerceCollectionsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollections = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\CommerceCollection>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\CommerceCollection>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListCommerceCollectionsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceCollections: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
+     * @param  Operations\PatchCommerceCollectionRequest  $request
+     * @return Operations\PatchCommerceCollectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceCollection(
-        ?\Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse {
+        ?Operations\PatchCommerceCollectionRequest $request,
+    ): Operations\PatchCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\PatchCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
         if ($body !== null) {
@@ -146,67 +177,79 @@ class Collection
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchCommerceCollectionResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceCollection: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Remove a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
+     * @param  Operations\RemoveCommerceCollectionRequest  $request
+     * @return Operations\RemoveCommerceCollectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceCollection(
-        ?\Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse {
+        ?Operations\RemoveCommerceCollectionRequest $request,
+    ): Operations\RemoveCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\RemoveCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveCommerceCollectionResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
+     * @param  Operations\UpdateCommerceCollectionRequest  $request
+     * @return Operations\UpdateCommerceCollectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceCollection(
-        ?\Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse {
+        ?Operations\UpdateCommerceCollectionRequest $request,
+    ): Operations\UpdateCommerceCollectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\UpdateCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
         if ($body !== null) {
@@ -214,23 +257,31 @@ class Collection
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->commerceCollection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\CommerceCollection', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateCommerceCollectionResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceCollection: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

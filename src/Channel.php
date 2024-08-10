@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Channel
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,70 +26,88 @@ class Channel
     /**
      * Retrieve a channel
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetMessagingChannelRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetMessagingChannelResponse
+     * @param  Operations\GetMessagingChannelRequest  $request
+     * @return Operations\GetMessagingChannelResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMessagingChannel(
-        ?\Unified\Unified_to\Models\Operations\GetMessagingChannelRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetMessagingChannelResponse {
+        ?Operations\GetMessagingChannelRequest $request,
+    ): Operations\GetMessagingChannelResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/channel/{id}', \Unified\Unified_to\Models\Operations\GetMessagingChannelRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/channel/{id}', Operations\GetMessagingChannelRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetMessagingChannelRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetMessagingChannelRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetMessagingChannelResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->messagingChannel = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\MessagingChannel', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\MessagingChannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetMessagingChannelResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    messagingChannel: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all channels
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListMessagingChannelsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListMessagingChannelsResponse
+     * @param  Operations\ListMessagingChannelsRequest  $request
+     * @return Operations\ListMessagingChannelsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMessagingChannels(
-        ?\Unified\Unified_to\Models\Operations\ListMessagingChannelsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListMessagingChannelsResponse {
+        ?Operations\ListMessagingChannelsRequest $request,
+    ): Operations\ListMessagingChannelsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/channel', \Unified\Unified_to\Models\Operations\ListMessagingChannelsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/channel', Operations\ListMessagingChannelsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListMessagingChannelsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListMessagingChannelsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListMessagingChannelsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->messagingChannels = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\MessagingChannel>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\MessagingChannel>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListMessagingChannelsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    messagingChannels: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

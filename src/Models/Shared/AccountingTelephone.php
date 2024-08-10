@@ -11,19 +11,30 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingTelephone
 {
+    /**
+     *
+     * @var ?string $telephone
+     */
     #[\JMS\Serializer\Annotation\SerializedName('telephone')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $telephone = null;
 
+    /**
+     *
+     * @var ?AccountingTelephoneType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingTelephoneType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingTelephoneType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AccountingTelephoneType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $telephone
+     * @param  ?AccountingTelephoneType  $type
+     */
+    public function __construct(?string $telephone = null, ?AccountingTelephoneType $type = null)
     {
-        $this->telephone = null;
-        $this->type = null;
+        $this->telephone = $telephone;
+        $this->type = $type;
     }
 }

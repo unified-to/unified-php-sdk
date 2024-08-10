@@ -14,7 +14,7 @@ class ListUnifiedWebhooksRequest
     /**
      * A connection represents a specific authentication of an integration.
      *
-     * @var ?\Unified\Unified_to\Models\Operations\ConnectionId $connectionId
+     * @var ?ConnectionId $connectionId
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=connection_id')]
     public ?ConnectionId $connectionId = null;
@@ -27,17 +27,25 @@ class ListUnifiedWebhooksRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_lte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $createdLte = null;
 
+    /**
+     *
+     * @var ?string $env
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
     public ?string $env = null;
 
     /**
      * Informational object for supported integrations.
      *
-     * @var ?\Unified\Unified_to\Models\Operations\IntegrationType $integrationType
+     * @var ?IntegrationType $integrationType
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=integration_type')]
     public ?IntegrationType $integrationType = null;
 
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
@@ -49,6 +57,10 @@ class ListUnifiedWebhooksRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=object')]
     public ?string $object = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
@@ -60,15 +72,25 @@ class ListUnifiedWebhooksRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
-    public function __construct()
+    /**
+     * @param  ?ConnectionId  $connectionId
+     * @param  ?\DateTime  $createdLte
+     * @param  ?string  $env
+     * @param  ?IntegrationType  $integrationType
+     * @param  ?float  $limit
+     * @param  ?string  $object
+     * @param  ?float  $offset
+     * @param  ?\DateTime  $updatedGte
+     */
+    public function __construct(?ConnectionId $connectionId = null, ?\DateTime $createdLte = null, ?string $env = null, ?IntegrationType $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?\DateTime $updatedGte = null)
     {
-        $this->connectionId = null;
-        $this->createdLte = null;
-        $this->env = null;
-        $this->integrationType = null;
-        $this->limit = null;
-        $this->object = null;
-        $this->offset = null;
-        $this->updatedGte = null;
+        $this->connectionId = $connectionId;
+        $this->createdLte = $createdLte;
+        $this->env = $env;
+        $this->integrationType = $integrationType;
+        $this->limit = $limit;
+        $this->object = $object;
+        $this->offset = $offset;
+        $this->updatedGte = $updatedGte;
     }
 }

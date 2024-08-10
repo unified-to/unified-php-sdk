@@ -11,18 +11,29 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmTelephone
 {
+    /**
+     *
+     * @var string $telephone
+     */
     #[\JMS\Serializer\Annotation\SerializedName('telephone')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $telephone;
 
+    /**
+     *
+     * @var ?CrmTelephoneType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\CrmTelephoneType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmTelephoneType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CrmTelephoneType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $telephone
+     * @param  ?CrmTelephoneType  $type
+     */
+    public function __construct(?string $telephone = null, ?CrmTelephoneType $type = null)
     {
-        $this->telephone = '';
-        $this->type = null;
+        $this->telephone = $telephone;
+        $this->type = $type;
     }
 }

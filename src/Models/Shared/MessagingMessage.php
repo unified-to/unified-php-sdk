@@ -14,75 +14,97 @@ class MessagingMessage
     /**
      * $attachments
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingAttachment> $attachments
+     * @var ?array<MessagingAttachment> $attachments
      */
     #[\JMS\Serializer\Annotation\SerializedName('attachments')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\MessagingAttachment>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingAttachment>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $attachments = null;
 
+    /**
+     *
+     * @var ?PropertyMessagingMessageAuthorMember $authorMember
+     */
     #[\JMS\Serializer\Annotation\SerializedName('author_member')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyMessagingMessageAuthorMember $authorMember = null;
 
+    /**
+     *
+     * @var ?string $channelId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('channel_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $channelId = null;
 
+    /**
+     *
+     * @var ?string $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
 
     /**
      * $destinationMembers
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMember> $destinationMembers
+     * @var ?array<MessagingMember> $destinationMembers
      */
     #[\JMS\Serializer\Annotation\SerializedName('destination_members')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\MessagingMember>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $destinationMembers = null;
 
     /**
      * $hiddenMembers
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMember> $hiddenMembers
+     * @var ?array<MessagingMember> $hiddenMembers
      */
     #[\JMS\Serializer\Annotation\SerializedName('hidden_members')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\MessagingMember>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $hiddenMembers = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
     /**
      * $mentionedMembers
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMember> $mentionedMembers
+     * @var ?array<MessagingMember> $mentionedMembers
      */
     #[\JMS\Serializer\Annotation\SerializedName('mentioned_members')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\MessagingMember>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $mentionedMembers = null;
 
+    /**
+     *
+     * @var ?string $message
+     */
     #[\JMS\Serializer\Annotation\SerializedName('message')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $message = null;
 
+    /**
+     *
+     * @var ?string $messageHtml
+     */
     #[\JMS\Serializer\Annotation\SerializedName('message_html')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $messageHtml = null;
 
+    /**
+     *
+     * @var ?string $parentMessageId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_message_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentMessageId = null;
 
@@ -96,37 +118,63 @@ class MessagingMessage
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $subject
+     */
     #[\JMS\Serializer\Annotation\SerializedName('subject')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $subject = null;
 
+    /**
+     *
+     * @var ?string $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $webUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('web_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $webUrl = null;
 
-    public function __construct()
+    /**
+     * @param  ?array<MessagingAttachment>  $attachments
+     * @param  ?PropertyMessagingMessageAuthorMember  $authorMember
+     * @param  ?string  $channelId
+     * @param  ?string  $createdAt
+     * @param  ?array<MessagingMember>  $destinationMembers
+     * @param  ?array<MessagingMember>  $hiddenMembers
+     * @param  ?string  $id
+     * @param  ?array<MessagingMember>  $mentionedMembers
+     * @param  ?string  $message
+     * @param  ?string  $messageHtml
+     * @param  ?string  $parentMessageId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $subject
+     * @param  ?string  $updatedAt
+     * @param  ?string  $webUrl
+     */
+    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?string $createdAt = null, ?array $destinationMembers = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $subject = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
-        $this->attachments = null;
-        $this->authorMember = null;
-        $this->channelId = null;
-        $this->createdAt = null;
-        $this->destinationMembers = null;
-        $this->hiddenMembers = null;
-        $this->id = null;
-        $this->mentionedMembers = null;
-        $this->message = null;
-        $this->messageHtml = null;
-        $this->parentMessageId = null;
-        $this->raw = null;
-        $this->subject = null;
-        $this->updatedAt = null;
-        $this->webUrl = null;
+        $this->attachments = $attachments;
+        $this->authorMember = $authorMember;
+        $this->channelId = $channelId;
+        $this->createdAt = $createdAt;
+        $this->destinationMembers = $destinationMembers;
+        $this->hiddenMembers = $hiddenMembers;
+        $this->id = $id;
+        $this->mentionedMembers = $mentionedMembers;
+        $this->message = $message;
+        $this->messageHtml = $messageHtml;
+        $this->parentMessageId = $parentMessageId;
+        $this->raw = $raw;
+        $this->subject = $subject;
+        $this->updatedAt = $updatedAt;
+        $this->webUrl = $webUrl;
     }
 }

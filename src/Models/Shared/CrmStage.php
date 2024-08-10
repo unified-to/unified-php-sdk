@@ -11,49 +11,79 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmStage
 {
+    /**
+     *
+     * @var ?bool $active
+     */
     #[\JMS\Serializer\Annotation\SerializedName('active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $active = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?float $dealProbability
+     */
     #[\JMS\Serializer\Annotation\SerializedName('deal_probability')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $dealProbability = null;
 
+    /**
+     *
+     * @var ?float $displayOrder
+     */
     #[\JMS\Serializer\Annotation\SerializedName('display_order')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $displayOrder = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?bool  $active
+     * @param  ?\DateTime  $createdAt
+     * @param  ?float  $dealProbability
+     * @param  ?float  $displayOrder
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?bool $active = null, ?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?string $name = null, ?\DateTime $updatedAt = null)
     {
-        $this->active = null;
-        $this->createdAt = null;
-        $this->dealProbability = null;
-        $this->displayOrder = null;
-        $this->id = null;
-        $this->name = null;
-        $this->updatedAt = null;
+        $this->active = $active;
+        $this->createdAt = $createdAt;
+        $this->dealProbability = $dealProbability;
+        $this->displayOrder = $displayOrder;
+        $this->id = $id;
+        $this->name = $name;
+        $this->updatedAt = $updatedAt;
     }
 }

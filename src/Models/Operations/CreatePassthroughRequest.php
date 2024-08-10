@@ -27,13 +27,22 @@ class CreatePassthroughRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
+    /**
+     *
+     * @var string $path
+     */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=path')]
     public string $path;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $path
+     * @param  ?array<string, mixed>  $requestBody
+     */
+    public function __construct(?string $connectionId = null, ?string $path = null, ?array $requestBody = null)
     {
-        $this->requestBody = null;
-        $this->connectionId = '';
-        $this->path = '';
+        $this->connectionId = $connectionId;
+        $this->path = $path;
+        $this->requestBody = $requestBody;
     }
 }

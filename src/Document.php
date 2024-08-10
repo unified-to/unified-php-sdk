@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Document
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,14 +26,15 @@ class Document
     /**
      * Create a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
+     * @param  Operations\CreateAtsDocumentRequest  $request
+     * @return Operations\CreateAtsDocumentResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsDocument(
-        ?\Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse {
+        ?Operations\CreateAtsDocumentRequest $request,
+    ): Operations\CreateAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', Operations\CreateAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
@@ -38,107 +42,134 @@ class Document
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsDocument', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateAtsDocumentResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsDocument: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
+     * @param  Operations\GetAtsDocumentRequest  $request
+     * @return Operations\GetAtsDocumentResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsDocument(
-        ?\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse {
+        ?Operations\GetAtsDocumentRequest $request,
+    ): Operations\GetAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\GetAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsDocumentRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetAtsDocumentRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsDocument', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetAtsDocumentResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsDocument: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all documents
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
+     * @param  Operations\ListAtsDocumentsRequest  $request
+     * @return Operations\ListAtsDocumentsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsDocuments(
-        ?\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse {
+        ?Operations\ListAtsDocumentsRequest $request,
+    ): Operations\ListAtsDocumentsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', Operations\ListAtsDocumentsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListAtsDocumentsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocuments = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsDocument>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\AtsDocument>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListAtsDocumentsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsDocuments: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
+     * @param  Operations\PatchAtsDocumentRequest  $request
+     * @return Operations\PatchAtsDocumentResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsDocument(
-        ?\Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse {
+        ?Operations\PatchAtsDocumentRequest $request,
+    ): Operations\PatchAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\PatchAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
@@ -146,67 +177,79 @@ class Document
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsDocument', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchAtsDocumentResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsDocument: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Remove a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
+     * @param  Operations\RemoveAtsDocumentRequest  $request
+     * @return Operations\RemoveAtsDocumentResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsDocument(
-        ?\Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse {
+        ?Operations\RemoveAtsDocumentRequest $request,
+    ): Operations\RemoveAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\RemoveAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveAtsDocumentResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Update a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
+     * @param  Operations\UpdateAtsDocumentRequest  $request
+     * @return Operations\UpdateAtsDocumentResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsDocument(
-        ?\Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse {
+        ?Operations\UpdateAtsDocumentRequest $request,
+    ): Operations\UpdateAtsDocumentResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\UpdateAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsDocument', 'json');
         if ($body !== null) {
@@ -214,23 +257,31 @@ class Document
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsDocument = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsDocument', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsDocument', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateAtsDocumentResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsDocument: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

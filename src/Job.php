@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Job
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,14 +26,15 @@ class Job
     /**
      * Create a job
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAtsJobRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
+     * @param  Operations\CreateAtsJobRequest  $request
+     * @return Operations\CreateAtsJobResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsJob(
-        ?\Unified\Unified_to\Models\Operations\CreateAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsJobResponse {
+        ?Operations\CreateAtsJobRequest $request,
+    ): Operations\CreateAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', \Unified\Unified_to\Models\Operations\CreateAtsJobRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', Operations\CreateAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsJob', 'json');
         if ($body !== null) {
@@ -38,107 +42,134 @@ class Job
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateAtsJobResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsJob', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateAtsJobResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsJob: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a job
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAtsJobRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
+     * @param  Operations\GetAtsJobRequest  $request
+     * @return Operations\GetAtsJobResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsJob(
-        ?\Unified\Unified_to\Models\Operations\GetAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsJobResponse {
+        ?Operations\GetAtsJobRequest $request,
+    ): Operations\GetAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\GetAtsJobRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\GetAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsJobRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetAtsJobRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsJobResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsJob', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetAtsJobResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsJob: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all jobs
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAtsJobsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
+     * @param  Operations\ListAtsJobsRequest  $request
+     * @return Operations\ListAtsJobsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsJobs(
-        ?\Unified\Unified_to\Models\Operations\ListAtsJobsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsJobsResponse {
+        ?Operations\ListAtsJobsRequest $request,
+    ): Operations\ListAtsJobsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', \Unified\Unified_to\Models\Operations\ListAtsJobsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', Operations\ListAtsJobsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsJobsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListAtsJobsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListAtsJobsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJobs = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsJob>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\AtsJob>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListAtsJobsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsJobs: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a job
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAtsJobRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
+     * @param  Operations\PatchAtsJobRequest  $request
+     * @return Operations\PatchAtsJobResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsJob(
-        ?\Unified\Unified_to\Models\Operations\PatchAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsJobResponse {
+        ?Operations\PatchAtsJobRequest $request,
+    ): Operations\PatchAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\PatchAtsJobRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\PatchAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsJob', 'json');
         if ($body !== null) {
@@ -146,67 +177,79 @@ class Job
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchAtsJobResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsJob', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchAtsJobResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsJob: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Remove a job
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
+     * @param  Operations\RemoveAtsJobRequest  $request
+     * @return Operations\RemoveAtsJobResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsJob(
-        ?\Unified\Unified_to\Models\Operations\RemoveAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse {
+        ?Operations\RemoveAtsJobRequest $request,
+    ): Operations\RemoveAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\RemoveAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveAtsJobResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Update a job
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
+     * @param  Operations\UpdateAtsJobRequest  $request
+     * @return Operations\UpdateAtsJobResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsJob(
-        ?\Unified\Unified_to\Models\Operations\UpdateAtsJobRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse {
+        ?Operations\UpdateAtsJobRequest $request,
+    ): Operations\UpdateAtsJobResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\UpdateAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsJob', 'json');
         if ($body !== null) {
@@ -214,23 +257,31 @@ class Job
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsJob = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsJob', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsJob', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateAtsJobResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsJob: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

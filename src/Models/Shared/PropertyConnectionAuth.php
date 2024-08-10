@@ -12,48 +12,75 @@ namespace Unified\Unified_to\Models\Shared;
 /** PropertyConnectionAuth - An authentication object that represents a specific authorized user's connection to an integration. */
 class PropertyConnectionAuth
 {
+    /**
+     *
+     * @var ?string $accessToken
+     */
     #[\JMS\Serializer\Annotation\SerializedName('access_token')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $accessToken = null;
 
+    /**
+     *
+     * @var ?string $apiUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('api_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $apiUrl = null;
 
+    /**
+     *
+     * @var ?string $appId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('app_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $appId = null;
 
+    /**
+     *
+     * @var ?string $authorizeUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('authorize_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $authorizeUrl = null;
 
+    /**
+     *
+     * @var ?string $clientId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('client_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $clientId = null;
 
+    /**
+     *
+     * @var ?string $clientSecret
+     */
     #[\JMS\Serializer\Annotation\SerializedName('client_secret')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $clientSecret = null;
 
+    /**
+     *
+     * @var ?string $consumerKey
+     */
     #[\JMS\Serializer\Annotation\SerializedName('consumer_key')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $consumerKey = null;
 
+    /**
+     *
+     * @var ?string $consumerSecret
+     */
     #[\JMS\Serializer\Annotation\SerializedName('consumer_secret')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $consumerSecret = null;
 
+    /**
+     *
+     * @var ?string $devApiKey
+     */
     #[\JMS\Serializer\Annotation\SerializedName('dev_api_key')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $devApiKey = null;
 
@@ -67,18 +94,27 @@ class PropertyConnectionAuth
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?float $expiresIn
+     */
     #[\JMS\Serializer\Annotation\SerializedName('expires_in')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $expiresIn = null;
 
+    /**
+     *
+     * @var ?\DateTime $expiryDate
+     */
     #[\JMS\Serializer\Annotation\SerializedName('expiry_date')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $expiryDate = null;
 
+    /**
+     *
+     * @var ?string $key
+     */
     #[\JMS\Serializer\Annotation\SerializedName('key')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $key = null;
 
@@ -92,8 +128,11 @@ class PropertyConnectionAuth
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $meta = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -107,65 +146,111 @@ class PropertyConnectionAuth
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $otherAuthInfo = null;
 
+    /**
+     *
+     * @var ?string $pem
+     */
     #[\JMS\Serializer\Annotation\SerializedName('pem')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $pem = null;
 
+    /**
+     *
+     * @var ?string $refreshToken
+     */
     #[\JMS\Serializer\Annotation\SerializedName('refresh_token')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $refreshToken = null;
 
+    /**
+     *
+     * @var ?\DateTime $refreshTokenExpiresDate
+     */
     #[\JMS\Serializer\Annotation\SerializedName('refresh_token_expires_date')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $refreshTokenExpiresDate = null;
 
+    /**
+     *
+     * @var ?float $refreshTokenExpiresIn
+     */
     #[\JMS\Serializer\Annotation\SerializedName('refresh_token_expires_in')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $refreshTokenExpiresIn = null;
 
+    /**
+     *
+     * @var ?string $state
+     */
     #[\JMS\Serializer\Annotation\SerializedName('state')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $state = null;
 
+    /**
+     *
+     * @var ?string $token
+     */
     #[\JMS\Serializer\Annotation\SerializedName('token')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $token = null;
 
+    /**
+     *
+     * @var ?string $tokenUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('token_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $tokenUrl = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $accessToken
+     * @param  ?string  $apiUrl
+     * @param  ?string  $appId
+     * @param  ?string  $authorizeUrl
+     * @param  ?string  $clientId
+     * @param  ?string  $clientSecret
+     * @param  ?string  $consumerKey
+     * @param  ?string  $consumerSecret
+     * @param  ?string  $devApiKey
+     * @param  ?array<string>  $emails
+     * @param  ?float  $expiresIn
+     * @param  ?\DateTime  $expiryDate
+     * @param  ?string  $key
+     * @param  ?array<string, mixed>  $meta
+     * @param  ?string  $name
+     * @param  ?array<string>  $otherAuthInfo
+     * @param  ?string  $pem
+     * @param  ?string  $refreshToken
+     * @param  ?\DateTime  $refreshTokenExpiresDate
+     * @param  ?float  $refreshTokenExpiresIn
+     * @param  ?string  $state
+     * @param  ?string  $token
+     * @param  ?string  $tokenUrl
+     */
+    public function __construct(?string $accessToken = null, ?string $apiUrl = null, ?string $appId = null, ?string $authorizeUrl = null, ?string $clientId = null, ?string $clientSecret = null, ?string $consumerKey = null, ?string $consumerSecret = null, ?string $devApiKey = null, ?array $emails = null, ?float $expiresIn = null, ?\DateTime $expiryDate = null, ?string $key = null, ?array $meta = null, ?string $name = null, ?array $otherAuthInfo = null, ?string $pem = null, ?string $refreshToken = null, ?\DateTime $refreshTokenExpiresDate = null, ?float $refreshTokenExpiresIn = null, ?string $state = null, ?string $token = null, ?string $tokenUrl = null)
     {
-        $this->accessToken = null;
-        $this->apiUrl = null;
-        $this->appId = null;
-        $this->authorizeUrl = null;
-        $this->clientId = null;
-        $this->clientSecret = null;
-        $this->consumerKey = null;
-        $this->consumerSecret = null;
-        $this->devApiKey = null;
-        $this->emails = null;
-        $this->expiresIn = null;
-        $this->expiryDate = null;
-        $this->key = null;
-        $this->meta = null;
-        $this->name = null;
-        $this->otherAuthInfo = null;
-        $this->pem = null;
-        $this->refreshToken = null;
-        $this->refreshTokenExpiresDate = null;
-        $this->refreshTokenExpiresIn = null;
-        $this->state = null;
-        $this->token = null;
-        $this->tokenUrl = null;
+        $this->accessToken = $accessToken;
+        $this->apiUrl = $apiUrl;
+        $this->appId = $appId;
+        $this->authorizeUrl = $authorizeUrl;
+        $this->clientId = $clientId;
+        $this->clientSecret = $clientSecret;
+        $this->consumerKey = $consumerKey;
+        $this->consumerSecret = $consumerSecret;
+        $this->devApiKey = $devApiKey;
+        $this->emails = $emails;
+        $this->expiresIn = $expiresIn;
+        $this->expiryDate = $expiryDate;
+        $this->key = $key;
+        $this->meta = $meta;
+        $this->name = $name;
+        $this->otherAuthInfo = $otherAuthInfo;
+        $this->pem = $pem;
+        $this->refreshToken = $refreshToken;
+        $this->refreshTokenExpiresDate = $refreshTokenExpiresDate;
+        $this->refreshTokenExpiresIn = $refreshTokenExpiresIn;
+        $this->state = $state;
+        $this->token = $token;
+        $this->tokenUrl = $tokenUrl;
     }
 }

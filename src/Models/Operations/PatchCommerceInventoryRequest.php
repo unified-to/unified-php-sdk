@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchCommerceInventoryRequest
 {
+    /**
+     *
+     * @var ?Shared\CommerceInventory $commerceInventory
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\CommerceInventory $commerceInventory = null;
+    public ?Shared\CommerceInventory $commerceInventory = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class PatchCommerceInventoryRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\CommerceInventory  $commerceInventory
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\CommerceInventory $commerceInventory = null)
     {
-        $this->commerceInventory = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->commerceInventory = $commerceInventory;
     }
 }

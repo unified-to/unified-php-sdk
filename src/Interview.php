@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Interview
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,14 +26,15 @@ class Interview
     /**
      * Create an interview
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
+     * @param  Operations\CreateAtsInterviewRequest  $request
+     * @return Operations\CreateAtsInterviewResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsInterview(
-        ?\Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse {
+        ?Operations\CreateAtsInterviewRequest $request,
+    ): Operations\CreateAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', Operations\CreateAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsInterview', 'json');
         if ($body !== null) {
@@ -38,107 +42,134 @@ class Interview
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsInterview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateAtsInterviewResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsInterview: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve an interview
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
+     * @param  Operations\GetAtsInterviewRequest  $request
+     * @return Operations\GetAtsInterviewResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsInterview(
-        ?\Unified\Unified_to\Models\Operations\GetAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse {
+        ?Operations\GetAtsInterviewRequest $request,
+    ): Operations\GetAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\GetAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetAtsInterviewRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetAtsInterviewRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsInterview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetAtsInterviewResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsInterview: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all interviews
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
+     * @param  Operations\ListAtsInterviewsRequest  $request
+     * @return Operations\ListAtsInterviewsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsInterviews(
-        ?\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse {
+        ?Operations\ListAtsInterviewsRequest $request,
+    ): Operations\ListAtsInterviewsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', Operations\ListAtsInterviewsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListAtsInterviewsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterviews = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\AtsInterview>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\AtsInterview>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListAtsInterviewsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsInterviews: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update an interview
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
+     * @param  Operations\PatchAtsInterviewRequest  $request
+     * @return Operations\PatchAtsInterviewResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsInterview(
-        ?\Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse {
+        ?Operations\PatchAtsInterviewRequest $request,
+    ): Operations\PatchAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\PatchAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsInterview', 'json');
         if ($body !== null) {
@@ -146,67 +177,79 @@ class Interview
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsInterview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchAtsInterviewResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsInterview: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Remove an interview
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
+     * @param  Operations\RemoveAtsInterviewRequest  $request
+     * @return Operations\RemoveAtsInterviewResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsInterview(
-        ?\Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse {
+        ?Operations\RemoveAtsInterviewRequest $request,
+    ): Operations\RemoveAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\RemoveAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveAtsInterviewResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Update an interview
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
+     * @param  Operations\UpdateAtsInterviewRequest  $request
+     * @return Operations\UpdateAtsInterviewResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsInterview(
-        ?\Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse {
+        ?Operations\UpdateAtsInterviewRequest $request,
+    ): Operations\UpdateAtsInterviewResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\UpdateAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsInterview', 'json');
         if ($body !== null) {
@@ -214,23 +257,31 @@ class Interview
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->atsInterview = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\AtsInterview', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\AtsInterview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateAtsInterviewResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    atsInterview: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

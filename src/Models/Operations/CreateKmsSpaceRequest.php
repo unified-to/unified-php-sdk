@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateKmsSpaceRequest
 {
+    /**
+     *
+     * @var ?Shared\KmsSpace $kmsSpace
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\KmsSpace $kmsSpace = null;
+    public ?Shared\KmsSpace $kmsSpace = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateKmsSpaceRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\KmsSpace  $kmsSpace
+     */
+    public function __construct(?string $connectionId = null, ?Shared\KmsSpace $kmsSpace = null)
     {
-        $this->kmsSpace = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->kmsSpace = $kmsSpace;
     }
 }

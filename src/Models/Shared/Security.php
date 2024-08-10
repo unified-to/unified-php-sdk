@@ -11,11 +11,18 @@ namespace Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class Security
 {
+    /**
+     *
+     * @var ?string $jwt
+     */
     #[SpeakeasyMetadata('security:scheme=true,type=apiKey,subtype=header,name=authorization')]
     public ?string $jwt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $jwt
+     */
+    public function __construct(?string $jwt = null)
     {
-        $this->jwt = null;
+        $this->jwt = $jwt;
     }
 }

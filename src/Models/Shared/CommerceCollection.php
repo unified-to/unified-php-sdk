@@ -12,61 +12,91 @@ namespace Unified\Unified_to\Models\Shared;
 /** CommerceCollection - A collection of items/products/services */
 class CommerceCollection
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $id;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?bool $isFeatured
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_featured')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isFeatured = null;
 
+    /**
+     *
+     * @var ?bool $isVisible
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_visible')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isVisible = null;
 
     /**
      * $media
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
+     * @var ?array<CommerceItemMedia> $media
      */
     #[\JMS\Serializer\Annotation\SerializedName('media')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CommerceItemMedia>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $media = null;
 
+    /**
+     *
+     * @var string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    /**
+     *
+     * @var ?string $parentId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentId = null;
 
+    /**
+     *
+     * @var ?string $publicDescription
+     */
     #[\JMS\Serializer\Annotation\SerializedName('public_description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $publicDescription = null;
 
+    /**
+     *
+     * @var ?string $publicName
+     */
     #[\JMS\Serializer\Annotation\SerializedName('public_name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $publicName = null;
 
@@ -90,32 +120,56 @@ class CommerceCollection
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
+    /**
+     *
+     * @var ?CommerceCollectionType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\CommerceCollectionType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceCollectionType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CommerceCollectionType $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?bool  $isActive
+     * @param  ?bool  $isFeatured
+     * @param  ?bool  $isVisible
+     * @param  ?array<CommerceItemMedia>  $media
+     * @param  ?string  $parentId
+     * @param  ?string  $publicDescription
+     * @param  ?string  $publicName
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<string>  $tags
+     * @param  ?CommerceCollectionType  $type
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?string $id = null, ?string $name = null, ?\DateTime $createdAt = null, ?string $description = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $media = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->description = null;
-        $this->id = '';
-        $this->isActive = null;
-        $this->isFeatured = null;
-        $this->isVisible = null;
-        $this->media = null;
-        $this->name = '';
-        $this->parentId = null;
-        $this->publicDescription = null;
-        $this->publicName = null;
-        $this->raw = null;
-        $this->tags = null;
-        $this->type = null;
-        $this->updatedAt = null;
+        $this->id = $id;
+        $this->name = $name;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->isActive = $isActive;
+        $this->isFeatured = $isFeatured;
+        $this->isVisible = $isVisible;
+        $this->media = $media;
+        $this->parentId = $parentId;
+        $this->publicDescription = $publicDescription;
+        $this->publicName = $publicName;
+        $this->raw = $raw;
+        $this->tags = $tags;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
     }
 }

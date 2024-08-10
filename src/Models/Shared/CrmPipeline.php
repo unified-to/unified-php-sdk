@@ -11,33 +11,51 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmPipeline
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?float $dealProbability
+     */
     #[\JMS\Serializer\Annotation\SerializedName('deal_probability')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $dealProbability = null;
 
+    /**
+     *
+     * @var ?float $displayOrder
+     */
     #[\JMS\Serializer\Annotation\SerializedName('display_order')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $displayOrder = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -54,28 +72,42 @@ class CrmPipeline
     /**
      * $stages
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmStage> $stages
+     * @var ?array<CrmStage> $stages
      */
     #[\JMS\Serializer\Annotation\SerializedName('stages')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CrmStage>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmStage>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $stages = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?\DateTime  $createdAt
+     * @param  ?float  $dealProbability
+     * @param  ?float  $displayOrder
+     * @param  ?string  $id
+     * @param  ?bool  $isActive
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<CrmStage>  $stages
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?array $stages = null, ?\DateTime $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->dealProbability = null;
-        $this->displayOrder = null;
-        $this->id = null;
-        $this->isActive = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->stages = null;
-        $this->updatedAt = null;
+        $this->createdAt = $createdAt;
+        $this->dealProbability = $dealProbability;
+        $this->displayOrder = $displayOrder;
+        $this->id = $id;
+        $this->isActive = $isActive;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->stages = $stages;
+        $this->updatedAt = $updatedAt;
     }
 }

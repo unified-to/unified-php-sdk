@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateKmsPageRequest
 {
+    /**
+     *
+     * @var ?Shared\KmsPage $kmsPage
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\KmsPage $kmsPage = null;
+    public ?Shared\KmsPage $kmsPage = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateKmsPageRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\KmsPage  $kmsPage
+     */
+    public function __construct(?string $connectionId = null, ?Shared\KmsPage $kmsPage = null)
     {
-        $this->kmsPage = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->kmsPage = $kmsPage;
     }
 }

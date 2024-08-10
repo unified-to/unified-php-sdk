@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class ListCrmEventsResponse
 {
     /**
@@ -21,7 +21,7 @@ class ListCrmEventsResponse
     /**
      * Successful
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEvent> $crmEvents
+     * @var ?array<Shared\CrmEvent> $crmEvents
      */
     public ?array $crmEvents = null;
 
@@ -35,15 +35,21 @@ class ListCrmEventsResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?array<Shared\CrmEvent>  $crmEvents
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?array $crmEvents = null)
     {
-        $this->contentType = '';
-        $this->crmEvents = null;
-        $this->statusCode = 0;
-        $this->rawResponse = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->crmEvents = $crmEvents;
     }
 }

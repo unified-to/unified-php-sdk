@@ -11,6 +11,10 @@ namespace Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class GetUnifiedIntegrationAuthRequest
 {
+    /**
+     *
+     * @var ?string $env
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
     public ?string $env = null;
 
@@ -46,13 +50,17 @@ class GetUnifiedIntegrationAuthRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=lang')]
     public ?string $lang = null;
 
+    /**
+     *
+     * @var ?bool $redirect
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=redirect')]
     public ?bool $redirect = null;
 
     /**
      * $scopes
      *
-     * @var ?array<\Unified\Unified_to\Models\Operations\Scopes> $scopes
+     * @var ?array<Scopes> $scopes
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=scopes')]
     public ?array $scopes = null;
@@ -65,6 +73,10 @@ class GetUnifiedIntegrationAuthRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=state')]
     public ?string $state = null;
 
+    /**
+     *
+     * @var ?string $subdomain
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=subdomain')]
     public ?string $subdomain = null;
 
@@ -84,18 +96,31 @@ class GetUnifiedIntegrationAuthRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=workspace_id')]
     public string $workspaceId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $integrationType
+     * @param  ?string  $workspaceId
+     * @param  ?string  $env
+     * @param  ?string  $externalXref
+     * @param  ?string  $failureRedirect
+     * @param  ?string  $lang
+     * @param  ?bool  $redirect
+     * @param  ?array<Scopes>  $scopes
+     * @param  ?string  $state
+     * @param  ?string  $subdomain
+     * @param  ?string  $successRedirect
+     */
+    public function __construct(?string $integrationType = null, ?string $workspaceId = null, ?string $env = null, ?string $externalXref = null, ?string $failureRedirect = null, ?string $lang = null, ?bool $redirect = null, ?array $scopes = null, ?string $state = null, ?string $subdomain = null, ?string $successRedirect = null)
     {
-        $this->env = null;
-        $this->externalXref = null;
-        $this->failureRedirect = null;
-        $this->integrationType = '';
-        $this->lang = null;
-        $this->redirect = null;
-        $this->scopes = null;
-        $this->state = null;
-        $this->subdomain = null;
-        $this->successRedirect = null;
-        $this->workspaceId = '';
+        $this->integrationType = $integrationType;
+        $this->workspaceId = $workspaceId;
+        $this->env = $env;
+        $this->externalXref = $externalXref;
+        $this->failureRedirect = $failureRedirect;
+        $this->lang = $lang;
+        $this->redirect = $redirect;
+        $this->scopes = $scopes;
+        $this->state = $state;
+        $this->subdomain = $subdomain;
+        $this->successRedirect = $successRedirect;
     }
 }

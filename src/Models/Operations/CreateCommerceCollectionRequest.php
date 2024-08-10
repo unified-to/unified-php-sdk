@@ -8,16 +8,17 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCommerceCollectionRequest
 {
     /**
      * A collection of items/products/services
      *
-     * @var ?\Unified\Unified_to\Models\Shared\CommerceCollection $commerceCollection
+     * @var ?Shared\CommerceCollection $commerceCollection
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\CommerceCollection $commerceCollection = null;
+    public ?Shared\CommerceCollection $commerceCollection = null;
 
     /**
      * ID of the connection
@@ -27,9 +28,13 @@ class CreateCommerceCollectionRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\CommerceCollection  $commerceCollection
+     */
+    public function __construct(?string $connectionId = null, ?Shared\CommerceCollection $commerceCollection = null)
     {
-        $this->commerceCollection = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->commerceCollection = $commerceCollection;
     }
 }

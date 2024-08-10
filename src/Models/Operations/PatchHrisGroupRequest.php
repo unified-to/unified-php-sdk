@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchHrisGroupRequest
 {
+    /**
+     *
+     * @var ?Shared\HrisGroup $hrisGroup
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\HrisGroup $hrisGroup = null;
+    public ?Shared\HrisGroup $hrisGroup = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class PatchHrisGroupRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\HrisGroup  $hrisGroup
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\HrisGroup $hrisGroup = null)
     {
-        $this->hrisGroup = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->hrisGroup = $hrisGroup;
     }
 }

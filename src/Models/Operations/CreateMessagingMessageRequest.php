@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMessagingMessageRequest
 {
+    /**
+     *
+     * @var ?Shared\MessagingMessage $messagingMessage
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\MessagingMessage $messagingMessage = null;
+    public ?Shared\MessagingMessage $messagingMessage = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateMessagingMessageRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\MessagingMessage  $messagingMessage
+     */
+    public function __construct(?string $connectionId = null, ?Shared\MessagingMessage $messagingMessage = null)
     {
-        $this->messagingMessage = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->messagingMessage = $messagingMessage;
     }
 }

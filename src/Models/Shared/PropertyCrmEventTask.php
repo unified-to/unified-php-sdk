@@ -12,37 +12,61 @@ namespace Unified\Unified_to\Models\Shared;
 /** PropertyCrmEventTask - The task object, when type = task */
 class PropertyCrmEventTask
 {
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?\DateTime $dueAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('due_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $dueAt = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?Priority $priority
+     */
     #[\JMS\Serializer\Annotation\SerializedName('priority')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Priority>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Priority')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Priority $priority = null;
 
+    /**
+     *
+     * @var ?PropertyCrmEventTaskStatus $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventTaskStatus $status = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $description
+     * @param  ?\DateTime  $dueAt
+     * @param  ?string  $name
+     * @param  ?Priority  $priority
+     * @param  ?PropertyCrmEventTaskStatus  $status
+     */
+    public function __construct(?string $description = null, ?\DateTime $dueAt = null, ?string $name = null, ?Priority $priority = null, ?PropertyCrmEventTaskStatus $status = null)
     {
-        $this->description = null;
-        $this->dueAt = null;
-        $this->name = null;
-        $this->priority = null;
-        $this->status = null;
+        $this->description = $description;
+        $this->dueAt = $dueAt;
+        $this->name = $name;
+        $this->priority = $priority;
+        $this->status = $status;
     }
 }

@@ -21,53 +21,77 @@ class CommerceItem
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $collectionIds = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?bool $isTaxable
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_taxable')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isTaxable = null;
 
     /**
      * $media
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
+     * @var ?array<CommerceItemMedia> $media
      */
     #[\JMS\Serializer\Annotation\SerializedName('media')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CommerceItemMedia>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $media = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?string $publicDescription
+     */
     #[\JMS\Serializer\Annotation\SerializedName('public_description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $publicDescription = null;
 
+    /**
+     *
+     * @var ?string $publicName
+     */
     #[\JMS\Serializer\Annotation\SerializedName('public_name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $publicName = null;
 
@@ -81,8 +105,11 @@ class CommerceItem
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $slug
+     */
     #[\JMS\Serializer\Annotation\SerializedName('slug')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $slug = null;
 
@@ -96,49 +123,77 @@ class CommerceItem
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
+    /**
+     *
+     * @var ?string $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
     /**
      * first variant is the default variant
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemVariant> $variants
+     * @var ?array<CommerceItemVariant> $variants
      */
     #[\JMS\Serializer\Annotation\SerializedName('variants')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CommerceItemVariant>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemVariant>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $variants = null;
 
+    /**
+     *
+     * @var ?string $vendorName
+     */
     #[\JMS\Serializer\Annotation\SerializedName('vendor_name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $vendorName = null;
 
-    public function __construct()
+    /**
+     * @param  ?array<string>  $collectionIds
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?bool  $isActive
+     * @param  ?bool  $isTaxable
+     * @param  ?array<CommerceItemMedia>  $media
+     * @param  ?string  $name
+     * @param  ?string  $publicDescription
+     * @param  ?string  $publicName
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $slug
+     * @param  ?array<string>  $tags
+     * @param  ?string  $type
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?array<CommerceItemVariant>  $variants
+     * @param  ?string  $vendorName
+     */
+    public function __construct(?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
     {
-        $this->collectionIds = null;
-        $this->createdAt = null;
-        $this->description = null;
-        $this->id = null;
-        $this->isActive = null;
-        $this->isTaxable = null;
-        $this->media = null;
-        $this->name = null;
-        $this->publicDescription = null;
-        $this->publicName = null;
-        $this->raw = null;
-        $this->slug = null;
-        $this->tags = null;
-        $this->type = null;
-        $this->updatedAt = null;
-        $this->variants = null;
-        $this->vendorName = null;
+        $this->collectionIds = $collectionIds;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->id = $id;
+        $this->isActive = $isActive;
+        $this->isTaxable = $isTaxable;
+        $this->media = $media;
+        $this->name = $name;
+        $this->publicDescription = $publicDescription;
+        $this->publicName = $publicName;
+        $this->raw = $raw;
+        $this->slug = $slug;
+        $this->tags = $tags;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
+        $this->variants = $variants;
+        $this->vendorName = $vendorName;
     }
 }

@@ -12,31 +12,49 @@ namespace Unified\Unified_to\Models\Shared;
 /** PropertyCrmEventMeeting - The meeting object, when type = meeting */
 class PropertyCrmEventMeeting
 {
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('end_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $endAt = null;
 
+    /**
+     *
+     * @var ?\DateTime $startAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('start_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $startAt = null;
 
+    /**
+     *
+     * @var ?string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $title = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $description
+     * @param  ?\DateTime  $endAt
+     * @param  ?\DateTime  $startAt
+     * @param  ?string  $title
+     */
+    public function __construct(?string $description = null, ?\DateTime $endAt = null, ?\DateTime $startAt = null, ?string $title = null)
     {
-        $this->description = null;
-        $this->endAt = null;
-        $this->startAt = null;
-        $this->title = null;
+        $this->description = $description;
+        $this->endAt = $endAt;
+        $this->startAt = $startAt;
+        $this->title = $title;
     }
 }

@@ -15,10 +15,10 @@ class CrmEvent
     /**
      * The call object, when type = call
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventCall $call
+     * @var ?PropertyCrmEventCall $call
      */
     #[\JMS\Serializer\Annotation\SerializedName('call')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventCall')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventCall')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventCall $call = null;
 
@@ -42,8 +42,11 @@ class CrmEvent
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $contactIds = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
@@ -60,15 +63,18 @@ class CrmEvent
     /**
      * The email object, when type = email
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventEmail $email
+     * @var ?PropertyCrmEventEmail $email
      */
     #[\JMS\Serializer\Annotation\SerializedName('email')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventEmail')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventEmail')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventEmail $email = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
@@ -85,20 +91,20 @@ class CrmEvent
     /**
      * The meeting object, when type = meeting
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting $meeting
+     * @var ?PropertyCrmEventMeeting $meeting
      */
     #[\JMS\Serializer\Annotation\SerializedName('meeting')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventMeeting $meeting = null;
 
     /**
      * The note object, when type = note
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventNote $note
+     * @var ?PropertyCrmEventNote $note
      */
     #[\JMS\Serializer\Annotation\SerializedName('note')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventNote')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventNote')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventNote $note = null;
 
@@ -115,44 +121,71 @@ class CrmEvent
     /**
      * The task object, when type = task
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventTask $task
+     * @var ?PropertyCrmEventTask $task
      */
     #[\JMS\Serializer\Annotation\SerializedName('task')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmEventTask')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTask')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventTask $task = null;
 
+    /**
+     *
+     * @var ?CrmEventType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\CrmEventType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEventType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CrmEventType $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?PropertyCrmEventCall  $call
+     * @param  ?array<string>  $companyIds
+     * @param  ?array<string>  $contactIds
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<string>  $dealIds
+     * @param  ?PropertyCrmEventEmail  $email
+     * @param  ?string  $id
+     * @param  ?array<string>  $leadIds
+     * @param  ?PropertyCrmEventMeeting  $meeting
+     * @param  ?PropertyCrmEventNote  $note
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?PropertyCrmEventTask  $task
+     * @param  ?CrmEventType  $type
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?PropertyCrmEventCall $call = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?PropertyCrmEventEmail $email = null, ?string $id = null, ?array $leadIds = null, ?PropertyCrmEventMeeting $meeting = null, ?PropertyCrmEventNote $note = null, ?array $raw = null, ?PropertyCrmEventTask $task = null, ?CrmEventType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->call = null;
-        $this->companyIds = null;
-        $this->contactIds = null;
-        $this->createdAt = null;
-        $this->dealIds = null;
-        $this->email = null;
-        $this->id = null;
-        $this->leadIds = null;
-        $this->meeting = null;
-        $this->note = null;
-        $this->raw = null;
-        $this->task = null;
-        $this->type = null;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->call = $call;
+        $this->companyIds = $companyIds;
+        $this->contactIds = $contactIds;
+        $this->createdAt = $createdAt;
+        $this->dealIds = $dealIds;
+        $this->email = $email;
+        $this->id = $id;
+        $this->leadIds = $leadIds;
+        $this->meeting = $meeting;
+        $this->note = $note;
+        $this->raw = $raw;
+        $this->task = $task;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

@@ -8,16 +8,17 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmContactRequest
 {
     /**
      * A contact represents a person that optionally is associated with a deal and/or a company
      *
-     * @var ?\Unified\Unified_to\Models\Shared\CrmContact $crmContact
+     * @var ?Shared\CrmContact $crmContact
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\CrmContact $crmContact = null;
+    public ?Shared\CrmContact $crmContact = null;
 
     /**
      * ID of the connection
@@ -27,9 +28,13 @@ class CreateCrmContactRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\CrmContact  $crmContact
+     */
+    public function __construct(?string $connectionId = null, ?Shared\CrmContact $crmContact = null)
     {
-        $this->crmContact = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->crmContact = $crmContact;
     }
 }

@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchAccountingJournalRequest
 {
+    /**
+     *
+     * @var ?Shared\AccountingJournal $accountingJournal
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal = null;
+    public ?Shared\AccountingJournal $accountingJournal = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class PatchAccountingJournalRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\AccountingJournal  $accountingJournal
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AccountingJournal $accountingJournal = null)
     {
-        $this->accountingJournal = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->accountingJournal = $accountingJournal;
     }
 }

@@ -11,28 +11,43 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisGroup
 {
+    /**
+     *
+     * @var ?string $companyId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
@@ -46,13 +61,19 @@ class HrisGroup
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $managerIds = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?string $parentId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentId = null;
 
@@ -66,13 +87,20 @@ class HrisGroup
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?HrisGroupType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisGroupType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisGroupType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisGroupType $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
@@ -86,19 +114,33 @@ class HrisGroup
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $userIds = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $companyId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?bool  $isActive
+     * @param  ?array<string>  $managerIds
+     * @param  ?string  $name
+     * @param  ?string  $parentId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?HrisGroupType  $type
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?array<string>  $userIds
+     */
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $managerIds = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?HrisGroupType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
-        $this->companyId = null;
-        $this->createdAt = null;
-        $this->description = null;
-        $this->id = null;
-        $this->isActive = null;
-        $this->managerIds = null;
-        $this->name = null;
-        $this->parentId = null;
-        $this->raw = null;
-        $this->type = null;
-        $this->updatedAt = null;
-        $this->userIds = null;
+        $this->companyId = $companyId;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->id = $id;
+        $this->isActive = $isActive;
+        $this->managerIds = $managerIds;
+        $this->name = $name;
+        $this->parentId = $parentId;
+        $this->raw = $raw;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
+        $this->userIds = $userIds;
     }
 }

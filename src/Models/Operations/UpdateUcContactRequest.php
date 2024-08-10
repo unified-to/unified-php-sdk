@@ -8,16 +8,17 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateUcContactRequest
 {
     /**
      * A contact represents a person that optionally is associated with a call
      *
-     * @var ?\Unified\Unified_to\Models\Shared\UcContact $ucContact
+     * @var ?Shared\UcContact $ucContact
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\UcContact $ucContact = null;
+    public ?Shared\UcContact $ucContact = null;
 
     /**
      * ID of the connection
@@ -35,10 +36,15 @@ class UpdateUcContactRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\UcContact  $ucContact
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\UcContact $ucContact = null)
     {
-        $this->ucContact = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->ucContact = $ucContact;
     }
 }

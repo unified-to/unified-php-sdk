@@ -11,33 +11,51 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingTaxrate
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?float $rate
+     */
     #[\JMS\Serializer\Annotation\SerializedName('rate')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $rate = null;
 
@@ -51,20 +69,33 @@ class AccountingTaxrate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?bool  $isActive
+     * @param  ?string  $name
+     * @param  ?float  $rate
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?float $rate = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->description = null;
-        $this->id = null;
-        $this->isActive = null;
-        $this->name = null;
-        $this->rate = null;
-        $this->raw = null;
-        $this->updatedAt = null;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->id = $id;
+        $this->isActive = $isActive;
+        $this->name = $name;
+        $this->rate = $rate;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
     }
 }

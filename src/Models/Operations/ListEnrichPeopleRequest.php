@@ -59,13 +59,21 @@ class ListEnrichPeopleRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=twitter')]
     public ?string $twitter = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $companyName
+     * @param  ?string  $email
+     * @param  ?string  $linkedinUrl
+     * @param  ?string  $name
+     * @param  ?string  $twitter
+     */
+    public function __construct(?string $connectionId = null, ?string $companyName = null, ?string $email = null, ?string $linkedinUrl = null, ?string $name = null, ?string $twitter = null)
     {
-        $this->companyName = null;
-        $this->connectionId = '';
-        $this->email = null;
-        $this->linkedinUrl = null;
-        $this->name = null;
-        $this->twitter = null;
+        $this->connectionId = $connectionId;
+        $this->companyName = $companyName;
+        $this->email = $email;
+        $this->linkedinUrl = $linkedinUrl;
+        $this->name = $name;
+        $this->twitter = $twitter;
     }
 }

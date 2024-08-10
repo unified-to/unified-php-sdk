@@ -11,6 +11,10 @@ namespace Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListCommerceItemsRequest
 {
+    /**
+     *
+     * @var ?string $collectionId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=collection_id')]
     public ?string $collectionId = null;
 
@@ -30,9 +34,17 @@ class ListCommerceItemsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
@@ -52,14 +64,23 @@ class ListCommerceItemsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $collectionId
+     * @param  ?array<string>  $fields
+     * @param  ?float  $limit
+     * @param  ?float  $offset
+     * @param  ?string  $query
+     * @param  ?\DateTime  $updatedGte
+     */
+    public function __construct(?string $connectionId = null, ?string $collectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $query = null, ?\DateTime $updatedGte = null)
     {
-        $this->collectionId = null;
-        $this->connectionId = '';
-        $this->fields = null;
-        $this->limit = null;
-        $this->offset = null;
-        $this->query = null;
-        $this->updatedGte = null;
+        $this->connectionId = $connectionId;
+        $this->collectionId = $collectionId;
+        $this->fields = $fields;
+        $this->limit = $limit;
+        $this->offset = $offset;
+        $this->query = $query;
+        $this->updatedGte = $updatedGte;
     }
 }

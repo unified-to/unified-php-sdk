@@ -11,58 +11,86 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CrmLead
 {
+    /**
+     *
+     * @var ?PropertyCrmLeadAddress $address
+     */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmLeadAddress $address = null;
 
+    /**
+     *
+     * @var ?string $companyId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyId = null;
 
+    /**
+     *
+     * @var ?string $companyName
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyName = null;
 
+    /**
+     *
+     * @var ?string $contactId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $contactId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $creatorUserId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('creator_user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $creatorUserId = null;
 
     /**
      * $emails
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEmail> $emails
+     * @var ?array<CrmEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CrmEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -76,53 +104,83 @@ class CrmLead
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $source
+     */
     #[\JMS\Serializer\Annotation\SerializedName('source')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $source = null;
 
+    /**
+     *
+     * @var ?string $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $status = null;
 
     /**
      * $telephones
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmTelephone> $telephones
+     * @var ?array<CrmTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CrmTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmTelephone>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?PropertyCrmLeadAddress  $address
+     * @param  ?string  $companyId
+     * @param  ?string  $companyName
+     * @param  ?string  $contactId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $creatorUserId
+     * @param  ?array<CrmEmail>  $emails
+     * @param  ?string  $id
+     * @param  ?bool  $isActive
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $source
+     * @param  ?string  $status
+     * @param  ?array<CrmTelephone>  $telephones
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->address = null;
-        $this->companyId = null;
-        $this->companyName = null;
-        $this->contactId = null;
-        $this->createdAt = null;
-        $this->creatorUserId = null;
-        $this->emails = null;
-        $this->id = null;
-        $this->isActive = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->source = null;
-        $this->status = null;
-        $this->telephones = null;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->address = $address;
+        $this->companyId = $companyId;
+        $this->companyName = $companyName;
+        $this->contactId = $contactId;
+        $this->createdAt = $createdAt;
+        $this->creatorUserId = $creatorUserId;
+        $this->emails = $emails;
+        $this->id = $id;
+        $this->isActive = $isActive;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->source = $source;
+        $this->status = $status;
+        $this->telephones = $telephones;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

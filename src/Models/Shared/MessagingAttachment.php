@@ -11,37 +11,59 @@ namespace Unified\Unified_to\Models\Shared;
 
 class MessagingAttachment
 {
+    /**
+     *
+     * @var ?string $contentType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('content_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $contentType = null;
 
+    /**
+     *
+     * @var ?string $downloadUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('download_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $downloadUrl = null;
 
+    /**
+     *
+     * @var ?string $filename
+     */
     #[\JMS\Serializer\Annotation\SerializedName('filename')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $filename = null;
 
+    /**
+     *
+     * @var ?string $messageId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('message_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $messageId = null;
 
+    /**
+     *
+     * @var ?float $size
+     */
     #[\JMS\Serializer\Annotation\SerializedName('size')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $size = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?string  $downloadUrl
+     * @param  ?string  $filename
+     * @param  ?string  $messageId
+     * @param  ?float  $size
+     */
+    public function __construct(?string $contentType = null, ?string $downloadUrl = null, ?string $filename = null, ?string $messageId = null, ?float $size = null)
     {
-        $this->contentType = null;
-        $this->downloadUrl = null;
-        $this->filename = null;
-        $this->messageId = null;
-        $this->size = null;
+        $this->contentType = $contentType;
+        $this->downloadUrl = $downloadUrl;
+        $this->filename = $filename;
+        $this->messageId = $messageId;
+        $this->size = $size;
     }
 }

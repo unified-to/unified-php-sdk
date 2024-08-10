@@ -27,12 +27,24 @@ class ListKmsPagesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
+    /**
+     *
+     * @var ?string $parentId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
     public ?string $parentId = null;
 
@@ -44,6 +56,10 @@ class ListKmsPagesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
     public ?string $query = null;
 
+    /**
+     *
+     * @var ?string $spaceId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=space_id')]
     public ?string $spaceId = null;
 
@@ -55,15 +71,25 @@ class ListKmsPagesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?array<string>  $fields
+     * @param  ?float  $limit
+     * @param  ?float  $offset
+     * @param  ?string  $parentId
+     * @param  ?string  $query
+     * @param  ?string  $spaceId
+     * @param  ?\DateTime  $updatedGte
+     */
+    public function __construct(?string $connectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $parentId = null, ?string $query = null, ?string $spaceId = null, ?\DateTime $updatedGte = null)
     {
-        $this->connectionId = '';
-        $this->fields = null;
-        $this->limit = null;
-        $this->offset = null;
-        $this->parentId = null;
-        $this->query = null;
-        $this->spaceId = null;
-        $this->updatedGte = null;
+        $this->connectionId = $connectionId;
+        $this->fields = $fields;
+        $this->limit = $limit;
+        $this->offset = $offset;
+        $this->parentId = $parentId;
+        $this->query = $query;
+        $this->spaceId = $spaceId;
+        $this->updatedGte = $updatedGte;
     }
 }

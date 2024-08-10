@@ -22,8 +22,11 @@ class PropertyCrmEventEmail
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $attachmentFileIds = null;
 
+    /**
+     *
+     * @var ?string $body
+     */
     #[\JMS\Serializer\Annotation\SerializedName('body')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $body = null;
 
@@ -37,13 +40,19 @@ class PropertyCrmEventEmail
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $cc = null;
 
+    /**
+     *
+     * @var ?string $from
+     */
     #[\JMS\Serializer\Annotation\SerializedName('from')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $from = null;
 
+    /**
+     *
+     * @var ?string $subject
+     */
     #[\JMS\Serializer\Annotation\SerializedName('subject')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $subject = null;
 
@@ -57,13 +66,21 @@ class PropertyCrmEventEmail
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $to = null;
 
-    public function __construct()
+    /**
+     * @param  ?array<string>  $attachmentFileIds
+     * @param  ?string  $body
+     * @param  ?array<string>  $cc
+     * @param  ?string  $from
+     * @param  ?string  $subject
+     * @param  ?array<string>  $to
+     */
+    public function __construct(?array $attachmentFileIds = null, ?string $body = null, ?array $cc = null, ?string $from = null, ?string $subject = null, ?array $to = null)
     {
-        $this->attachmentFileIds = null;
-        $this->body = null;
-        $this->cc = null;
-        $this->from = null;
-        $this->subject = null;
-        $this->to = null;
+        $this->attachmentFileIds = $attachmentFileIds;
+        $this->body = $body;
+        $this->cc = $cc;
+        $this->from = $from;
+        $this->subject = $subject;
+        $this->to = $to;
     }
 }

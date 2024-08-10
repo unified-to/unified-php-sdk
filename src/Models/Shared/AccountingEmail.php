@@ -11,19 +11,30 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingEmail
 {
+    /**
+     *
+     * @var ?string $email
+     */
     #[\JMS\Serializer\Annotation\SerializedName('email')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $email = null;
 
+    /**
+     *
+     * @var ?AccountingEmailType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingEmailType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingEmailType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AccountingEmailType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $email
+     * @param  ?AccountingEmailType  $type
+     */
+    public function __construct(?string $email = null, ?AccountingEmailType $type = null)
     {
-        $this->email = null;
-        $this->type = null;
+        $this->email = $email;
+        $this->type = $type;
     }
 }

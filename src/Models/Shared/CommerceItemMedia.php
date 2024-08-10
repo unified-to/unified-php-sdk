@@ -11,48 +11,79 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CommerceItemMedia
 {
+    /**
+     *
+     * @var ?string $alt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('alt')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $alt = null;
 
+    /**
+     *
+     * @var ?float $height
+     */
     #[\JMS\Serializer\Annotation\SerializedName('height')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $height = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?float $position
+     */
     #[\JMS\Serializer\Annotation\SerializedName('position')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $position = null;
 
+    /**
+     *
+     * @var ?CommerceItemMediaType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\CommerceItemMediaType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMediaType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CommerceItemMediaType $type = null;
 
+    /**
+     *
+     * @var string $url
+     */
     #[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $url;
 
+    /**
+     *
+     * @var ?float $width
+     */
     #[\JMS\Serializer\Annotation\SerializedName('width')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $width = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $url
+     * @param  ?string  $alt
+     * @param  ?float  $height
+     * @param  ?string  $id
+     * @param  ?float  $position
+     * @param  ?CommerceItemMediaType  $type
+     * @param  ?float  $width
+     */
+    public function __construct(?string $url = null, ?string $alt = null, ?float $height = null, ?string $id = null, ?float $position = null, ?CommerceItemMediaType $type = null, ?float $width = null)
     {
-        $this->alt = null;
-        $this->height = null;
-        $this->id = null;
-        $this->position = null;
-        $this->type = null;
-        $this->url = '';
-        $this->width = null;
+        $this->url = $url;
+        $this->alt = $alt;
+        $this->height = $height;
+        $this->id = $id;
+        $this->position = $position;
+        $this->type = $type;
+        $this->width = $width;
     }
 }

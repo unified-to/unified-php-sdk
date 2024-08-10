@@ -39,15 +39,14 @@ Create a company
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -55,27 +54,29 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateHrisCompanyRequest();
-    $request->hrisCompany = new Shared\HrisCompany();
-    $request->hrisCompany->address = new Shared\PropertyHrisCompanyAddress();
-    $request->hrisCompany->address->address1 = '<value>';
-    $request->hrisCompany->address->address2 = '<value>';
-    $request->hrisCompany->address->city = 'Leuschketon';
-    $request->hrisCompany->address->country = 'Greenland';
-    $request->hrisCompany->address->countryCode = 'UG';
-    $request->hrisCompany->address->postalCode = '28999';
-    $request->hrisCompany->address->region = '<value>';
-    $request->hrisCompany->address->regionCode = '<value>';
-    $request->hrisCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-26T14:41:42.849Z');
-    $request->hrisCompany->id = '<id>';
-    $request->hrisCompany->legalName = '<value>';
-    $request->hrisCompany->name = '<value>';
-    $request->hrisCompany->raw = [
-        'Account' => '<value>',
-    ];
-    $request->hrisCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-14T07:52:45.369Z');
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateHrisCompanyRequest(
+        connectionId: '<value>',
+        hrisCompany: new Shared\HrisCompany(
+            address: new Shared\PropertyHrisCompanyAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Leuschketon',
+                country: 'Greenland',
+                countryCode: 'UG',
+                postalCode: '28999',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2024-11-26T14:41:42.849Z'),
+            id: '<id>',
+            legalName: '<value>',
+            name: '<value>',
+            raw: [
+                'Account' => '<value>',
+            ],
+            updatedAt: Utils\Utils::parseDateTime('2024-12-14T07:52:45.369Z'),
+        ),
+    );
     $response = $sdk->hris->createHrisCompany($request);
 
     if ($response->hrisCompany !== null) {
@@ -88,15 +89,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest](../../Models/Operations/CreateHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateHrisCompanyRequest](../../Models/Operations/CreateHrisCompanyRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse](../../Models/Operations/CreateHrisCompanyResponse.md)**
+**[?Operations\CreateHrisCompanyResponse](../../Models/Operations/CreateHrisCompanyResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## createHrisEmployee
 
@@ -105,15 +110,14 @@ Create an employee
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -121,66 +125,68 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateHrisEmployeeRequest();
-    $request->hrisEmployee = new Shared\HrisEmployee();
-    $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
-    $request->hrisEmployee->address->address1 = '<value>';
-    $request->hrisEmployee->address->address2 = '<value>';
-    $request->hrisEmployee->address->city = 'Armstrongborough';
-    $request->hrisEmployee->address->country = 'Indonesia';
-    $request->hrisEmployee->address->countryCode = 'MO';
-    $request->hrisEmployee->address->postalCode = '23995';
-    $request->hrisEmployee->address->region = '<value>';
-    $request->hrisEmployee->address->regionCode = '<value>';
-    $request->hrisEmployee->bio = '<value>';
-    $request->hrisEmployee->companyId = '<value>';
-    $request->hrisEmployee->compensation = [
-        new Shared\HrisCompensation(),
-    ];
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-07T16:11:17.542Z');
-    $request->hrisEmployee->currency = 'Tunisian Dinar';
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-15T21:52:09.133Z');
-    $request->hrisEmployee->department = '<value>';
-    $request->hrisEmployee->division = '<value>';
-    $request->hrisEmployee->emails = [
-        new Shared\HrisEmail(),
-    ];
-    $request->hrisEmployee->employeeNumber = '<value>';
-    $request->hrisEmployee->employeeRoles = [
-        Shared\PropertyHrisEmployeeEmployeeRoles::Recruiter,
-    ];
-    $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Active;
-    $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::Other;
-    $request->hrisEmployee->gender = Shared\HrisEmployeeGender::Intersex;
-    $request->hrisEmployee->groups = [
-        new Shared\HrisGroup(),
-    ];
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-30T17:54:25.597Z');
-    $request->hrisEmployee->id = '<id>';
-    $request->hrisEmployee->imageUrl = '<value>';
-    $request->hrisEmployee->languageLocale = '<value>';
-    $request->hrisEmployee->location = '<value>';
-    $request->hrisEmployee->locations = [
-        new Shared\HrisLocation(),
-    ];
-    $request->hrisEmployee->managerId = '<value>';
-    $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Married;
-    $request->hrisEmployee->name = '<value>';
-    $request->hrisEmployee->pronouns = '<value>';
-    $request->hrisEmployee->raw = [
-        'colorlessness' => '<value>',
-    ];
-    $request->hrisEmployee->salutation = '<value>';
-    $request->hrisEmployee->ssnSin = '<value>';
-    $request->hrisEmployee->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-01T23:26:55.787Z');
-    $request->hrisEmployee->timezone = 'Europe/Zagreb';
-    $request->hrisEmployee->title = '<value>';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-06T17:06:15.004Z');
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateHrisEmployeeRequest(
+        connectionId: '<value>',
+        hrisEmployee: new Shared\HrisEmployee(
+            address: new Shared\PropertyHrisEmployeeAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Armstrongborough',
+                country: 'Indonesia',
+                countryCode: 'MO',
+                postalCode: '23995',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            bio: '<value>',
+            companyId: '<value>',
+            compensation: [
+                new Shared\HrisCompensation,
+            ],
+            createdAt: Utils\Utils::parseDateTime('2024-10-07T16:11:17.542Z'),
+            currency: 'Tunisian Dinar',
+            dateOfBirth: Utils\Utils::parseDateTime('2022-09-15T21:52:09.133Z'),
+            department: '<value>',
+            division: '<value>',
+            emails: [
+                new Shared\HrisEmail,
+            ],
+            employeeNumber: '<value>',
+            employeeRoles: [
+                Shared\PropertyHrisEmployeeEmployeeRoles::Recruiter,
+            ],
+            employmentStatus: Shared\EmploymentStatus::Active,
+            employmentType: Shared\HrisEmployeeEmploymentType::Other,
+            gender: Shared\HrisEmployeeGender::Intersex,
+            groups: [
+                new Shared\HrisGroup,
+            ],
+            hiredAt: Utils\Utils::parseDateTime('2022-10-30T17:54:25.597Z'),
+            id: '<id>',
+            imageUrl: '<value>',
+            languageLocale: '<value>',
+            location: '<value>',
+            locations: [
+                new Shared\HrisLocation,
+            ],
+            managerId: '<value>',
+            maritalStatus: Shared\MaritalStatus::Married,
+            name: '<value>',
+            pronouns: '<value>',
+            raw: [
+                'colorlessness' => '<value>',
+            ],
+            salutation: '<value>',
+            ssnSin: '<value>',
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            terminatedAt: Utils\Utils::parseDateTime('2023-04-01T23:26:55.787Z'),
+            timezone: 'Europe/Zagreb',
+            title: '<value>',
+            updatedAt: Utils\Utils::parseDateTime('2022-06-06T17:06:15.004Z'),
+        ),
+    );
     $response = $sdk->hris->createHrisEmployee($request);
 
     if ($response->hrisEmployee !== null) {
@@ -193,15 +199,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest](../../Models/Operations/CreateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateHrisEmployeeRequest](../../Models/Operations/CreateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse](../../Models/Operations/CreateHrisEmployeeResponse.md)**
+**[?Operations\CreateHrisEmployeeResponse](../../Models/Operations/CreateHrisEmployeeResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## createHrisGroup
 
@@ -210,15 +220,14 @@ Create a group
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -226,28 +235,29 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateHrisGroupRequest();
-    $request->hrisGroup = new Shared\HrisGroup();
-    $request->hrisGroup->companyId = '<value>';
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-12T02:07:27.193Z');
-    $request->hrisGroup->description = 'Self-enabling system-worthy collaboration';
-    $request->hrisGroup->id = '<id>';
-    $request->hrisGroup->isActive = false;
-    $request->hrisGroup->managerIds = [
-        '<value>',
-    ];
-    $request->hrisGroup->name = '<value>';
-    $request->hrisGroup->parentId = '<value>';
-    $request->hrisGroup->raw = [
-        'South' => '<value>',
-    ];
-    $request->hrisGroup->type = Shared\HrisGroupType::Department;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-28T15:45:30.103Z');
-    $request->hrisGroup->userIds = [
-        '<value>',
-    ];
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateHrisGroupRequest(
+        connectionId: '<value>',
+        hrisGroup: new Shared\HrisGroup(
+            companyId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2023-08-12T02:07:27.193Z'),
+            description: 'Self-enabling system-worthy collaboration',
+            id: '<id>',
+            isActive: false,
+            managerIds: [
+                '<value>',
+            ],
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'South' => '<value>',
+            ],
+            type: Shared\HrisGroupType::Department,
+            updatedAt: Utils\Utils::parseDateTime('2023-11-28T15:45:30.103Z'),
+            userIds: [
+                '<value>',
+            ],
+        ),
+    );
     $response = $sdk->hris->createHrisGroup($request);
 
     if ($response->hrisGroup !== null) {
@@ -260,15 +270,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateHrisGroupRequest](../../Models/Operations/CreateHrisGroupRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateHrisGroupRequest](../../Models/Operations/CreateHrisGroupRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateHrisGroupResponse](../../Models/Operations/CreateHrisGroupResponse.md)**
+**[?Operations\CreateHrisGroupResponse](../../Models/Operations/CreateHrisGroupResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## createHrisLocation
 
@@ -277,15 +291,14 @@ Create a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -293,37 +306,39 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateHrisLocationRequest();
-    $request->hrisLocation = new Shared\HrisLocation();
-    $request->hrisLocation->address = new Shared\PropertyHrisLocationAddress();
-    $request->hrisLocation->address->address1 = '<value>';
-    $request->hrisLocation->address->address2 = '<value>';
-    $request->hrisLocation->address->city = 'Port Trinityshire';
-    $request->hrisLocation->address->country = 'Saint Pierre and Miquelon';
-    $request->hrisLocation->address->countryCode = 'GE';
-    $request->hrisLocation->address->postalCode = '72153';
-    $request->hrisLocation->address->region = '<value>';
-    $request->hrisLocation->address->regionCode = '<value>';
-    $request->hrisLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-01T01:29:28.442Z');
-    $request->hrisLocation->currency = 'CFA Franc BCEAO';
-    $request->hrisLocation->description = 'Persistent eco-centric pricing structure';
-    $request->hrisLocation->externalIdentifier = '<value>';
-    $request->hrisLocation->id = '<id>';
-    $request->hrisLocation->isActive = false;
-    $request->hrisLocation->isHq = false;
-    $request->hrisLocation->languageLocale = '<value>';
-    $request->hrisLocation->name = '<value>';
-    $request->hrisLocation->parentId = '<value>';
-    $request->hrisLocation->raw = [
-        'male' => '<value>',
-    ];
-    $request->hrisLocation->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisLocation->timezone = 'America/Argentina/Buenos_Aires';
-    $request->hrisLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-17T19:29:27.962Z');
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateHrisLocationRequest(
+        connectionId: '<value>',
+        hrisLocation: new Shared\HrisLocation(
+            address: new Shared\PropertyHrisLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Port Trinityshire',
+                country: 'Saint Pierre and Miquelon',
+                countryCode: 'GE',
+                postalCode: '72153',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2023-11-01T01:29:28.442Z'),
+            currency: 'CFA Franc BCEAO',
+            description: 'Persistent eco-centric pricing structure',
+            externalIdentifier: '<value>',
+            id: '<id>',
+            isActive: false,
+            isHq: false,
+            languageLocale: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'male' => '<value>',
+            ],
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            timezone: 'America/Argentina/Buenos_Aires',
+            updatedAt: Utils\Utils::parseDateTime('2023-07-17T19:29:27.962Z'),
+        ),
+    );
     $response = $sdk->hris->createHrisLocation($request);
 
     if ($response->hrisLocation !== null) {
@@ -336,15 +351,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateHrisLocationRequest](../../Models/Operations/CreateHrisLocationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateHrisLocationRequest](../../Models/Operations/CreateHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateHrisLocationResponse](../../Models/Operations/CreateHrisLocationResponse.md)**
+**[?Operations\CreateHrisLocationResponse](../../Models/Operations/CreateHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getHrisCompany
 
@@ -353,15 +372,13 @@ Retrieve a company
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -369,13 +386,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetHrisCompanyRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetHrisCompanyRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->hris->getHrisCompany($request);
 
     if ($response->hrisCompany !== null) {
@@ -388,15 +405,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetHrisCompanyRequest](../../Models/Operations/GetHrisCompanyRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetHrisCompanyRequest](../../Models/Operations/GetHrisCompanyRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetHrisCompanyResponse](../../Models/Operations/GetHrisCompanyResponse.md)**
+**[?Operations\GetHrisCompanyResponse](../../Models/Operations/GetHrisCompanyResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getHrisEmployee
 
@@ -405,15 +426,13 @@ Retrieve an employee
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -421,13 +440,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetHrisEmployeeRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetHrisEmployeeRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->hris->getHrisEmployee($request);
 
     if ($response->hrisEmployee !== null) {
@@ -440,15 +459,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest](../../Models/Operations/GetHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetHrisEmployeeRequest](../../Models/Operations/GetHrisEmployeeRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse](../../Models/Operations/GetHrisEmployeeResponse.md)**
+**[?Operations\GetHrisEmployeeResponse](../../Models/Operations/GetHrisEmployeeResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getHrisGroup
 
@@ -457,15 +480,13 @@ Retrieve a group
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -473,13 +494,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetHrisGroupRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetHrisGroupRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->hris->getHrisGroup($request);
 
     if ($response->hrisGroup !== null) {
@@ -492,15 +513,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\GetHrisGroupRequest](../../Models/Operations/GetHrisGroupRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetHrisGroupRequest](../../Models/Operations/GetHrisGroupRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetHrisGroupResponse](../../Models/Operations/GetHrisGroupResponse.md)**
+**[?Operations\GetHrisGroupResponse](../../Models/Operations/GetHrisGroupResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getHrisLocation
 
@@ -509,15 +534,13 @@ Retrieve a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -525,13 +548,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetHrisLocationRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetHrisLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->hris->getHrisLocation($request);
 
     if ($response->hrisLocation !== null) {
@@ -544,15 +567,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetHrisLocationRequest](../../Models/Operations/GetHrisLocationRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetHrisLocationRequest](../../Models/Operations/GetHrisLocationRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetHrisLocationResponse](../../Models/Operations/GetHrisLocationResponse.md)**
+**[?Operations\GetHrisLocationResponse](../../Models/Operations/GetHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getHrisPayslip
 
@@ -561,15 +588,13 @@ Retrieve a payslip
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -577,13 +602,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetHrisPayslipRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetHrisPayslipRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->hris->getHrisPayslip($request);
 
     if ($response->hrisPayslip !== null) {
@@ -596,15 +621,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetHrisPayslipRequest](../../Models/Operations/GetHrisPayslipRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetHrisPayslipRequest](../../Models/Operations/GetHrisPayslipRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetHrisPayslipResponse](../../Models/Operations/GetHrisPayslipResponse.md)**
+**[?Operations\GetHrisPayslipResponse](../../Models/Operations/GetHrisPayslipResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getHrisTimeoff
 
@@ -613,15 +642,13 @@ Retrieve a timeoff
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -629,13 +656,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetHrisTimeoffRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetHrisTimeoffRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->hris->getHrisTimeoff($request);
 
     if ($response->hrisTimeoff !== null) {
@@ -648,15 +675,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest](../../Models/Operations/GetHrisTimeoffRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetHrisTimeoffRequest](../../Models/Operations/GetHrisTimeoffRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse](../../Models/Operations/GetHrisTimeoffResponse.md)**
+**[?Operations\GetHrisTimeoffResponse](../../Models/Operations/GetHrisTimeoffResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listHrisCompanies
 
@@ -665,15 +696,14 @@ List all companies
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -681,16 +711,16 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListHrisCompaniesRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 9887.05;
-    $request->offset = 4708.81;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-23T09:20:33.437Z');;
-
+    $request = new Operations\ListHrisCompaniesRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 9887.05,
+        offset: 4708.81,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2024-12-23T09:20:33.437Z'),
+    );
     $response = $sdk->hris->listHrisCompanies($request);
 
     if ($response->hrisCompanies !== null) {
@@ -703,15 +733,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest](../../Models/Operations/ListHrisCompaniesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListHrisCompaniesRequest](../../Models/Operations/ListHrisCompaniesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse](../../Models/Operations/ListHrisCompaniesResponse.md)**
+**[?Operations\ListHrisCompaniesResponse](../../Models/Operations/ListHrisCompaniesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listHrisEmployees
 
@@ -720,15 +754,14 @@ List all employees
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -736,17 +769,17 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListHrisEmployeesRequest();
-    $request->companyId = '<value>';
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 5148.12;
-    $request->offset = 2185.43;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-10T00:54:40.984Z');;
-
+    $request = new Operations\ListHrisEmployeesRequest(
+        connectionId: '<value>',
+        companyId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 5148.12,
+        offset: 2185.43,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2023-04-10T00:54:40.984Z'),
+    );
     $response = $sdk->hris->listHrisEmployees($request);
 
     if ($response->hrisEmployees !== null) {
@@ -759,15 +792,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest](../../Models/Operations/ListHrisEmployeesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListHrisEmployeesRequest](../../Models/Operations/ListHrisEmployeesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse](../../Models/Operations/ListHrisEmployeesResponse.md)**
+**[?Operations\ListHrisEmployeesResponse](../../Models/Operations/ListHrisEmployeesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listHrisGroups
 
@@ -776,15 +813,14 @@ List all groups
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -792,17 +828,17 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListHrisGroupsRequest();
-    $request->companyId = '<value>';
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 4815.14;
-    $request->offset = 2554.75;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-30T00:40:26.357Z');;
-
+    $request = new Operations\ListHrisGroupsRequest(
+        connectionId: '<value>',
+        companyId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 4815.14,
+        offset: 2554.75,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-04-30T00:40:26.357Z'),
+    );
     $response = $sdk->hris->listHrisGroups($request);
 
     if ($response->hrisGroups !== null) {
@@ -815,15 +851,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\ListHrisGroupsRequest](../../Models/Operations/ListHrisGroupsRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListHrisGroupsRequest](../../Models/Operations/ListHrisGroupsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListHrisGroupsResponse](../../Models/Operations/ListHrisGroupsResponse.md)**
+**[?Operations\ListHrisGroupsResponse](../../Models/Operations/ListHrisGroupsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listHrisLocations
 
@@ -832,15 +872,14 @@ List all locations
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -848,16 +887,16 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListHrisLocationsRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 5896.74;
-    $request->offset = 7281.87;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-12T05:34:35.160Z');;
-
+    $request = new Operations\ListHrisLocationsRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 5896.74,
+        offset: 7281.87,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-05-12T05:34:35.160Z'),
+    );
     $response = $sdk->hris->listHrisLocations($request);
 
     if ($response->hrisLocations !== null) {
@@ -870,15 +909,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListHrisLocationsRequest](../../Models/Operations/ListHrisLocationsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListHrisLocationsRequest](../../Models/Operations/ListHrisLocationsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListHrisLocationsResponse](../../Models/Operations/ListHrisLocationsResponse.md)**
+**[?Operations\ListHrisLocationsResponse](../../Models/Operations/ListHrisLocationsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listHrisPayslips
 
@@ -887,15 +930,14 @@ List all payslips
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -903,17 +945,17 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListHrisPayslipsRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 254.98;
-    $request->offset = 7922.79;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T03:49:22.310Z');
-    $request->userId = '<value>';;
-
+    $request = new Operations\ListHrisPayslipsRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 254.98,
+        offset: 7922.79,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2023-04-05T03:49:22.310Z'),
+        userId: '<value>',
+    );
     $response = $sdk->hris->listHrisPayslips($request);
 
     if ($response->hrisPayslips !== null) {
@@ -926,15 +968,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest](../../Models/Operations/ListHrisPayslipsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListHrisPayslipsRequest](../../Models/Operations/ListHrisPayslipsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse](../../Models/Operations/ListHrisPayslipsResponse.md)**
+**[?Operations\ListHrisPayslipsResponse](../../Models/Operations/ListHrisPayslipsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listHrisTimeoffs
 
@@ -943,15 +989,14 @@ List all timeoffs
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -959,17 +1004,17 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListHrisTimeoffsRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 1802.06;
-    $request->offset = 8928.71;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-20T05:14:17.047Z');
-    $request->userId = '<value>';;
-
+    $request = new Operations\ListHrisTimeoffsRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 1802.06,
+        offset: 8928.71,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2024-11-20T05:14:17.047Z'),
+        userId: '<value>',
+    );
     $response = $sdk->hris->listHrisTimeoffs($request);
 
     if ($response->hrisTimeoffs !== null) {
@@ -982,15 +1027,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest](../../Models/Operations/ListHrisTimeoffsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListHrisTimeoffsRequest](../../Models/Operations/ListHrisTimeoffsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse](../../Models/Operations/ListHrisTimeoffsResponse.md)**
+**[?Operations\ListHrisTimeoffsResponse](../../Models/Operations/ListHrisTimeoffsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchHrisCompany
 
@@ -999,15 +1048,14 @@ Update a company
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1015,28 +1063,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchHrisCompanyRequest();
-    $request->hrisCompany = new Shared\HrisCompany();
-    $request->hrisCompany->address = new Shared\PropertyHrisCompanyAddress();
-    $request->hrisCompany->address->address1 = '<value>';
-    $request->hrisCompany->address->address2 = '<value>';
-    $request->hrisCompany->address->city = 'West Tressashire';
-    $request->hrisCompany->address->country = 'Norfolk Island';
-    $request->hrisCompany->address->countryCode = 'MW';
-    $request->hrisCompany->address->postalCode = '36009-7244';
-    $request->hrisCompany->address->region = '<value>';
-    $request->hrisCompany->address->regionCode = '<value>';
-    $request->hrisCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-23T19:08:18.404Z');
-    $request->hrisCompany->id = '<id>';
-    $request->hrisCompany->legalName = '<value>';
-    $request->hrisCompany->name = '<value>';
-    $request->hrisCompany->raw = [
-        'Chief' => '<value>',
-    ];
-    $request->hrisCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-30T10:26:34.618Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchHrisCompanyRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisCompany: new Shared\HrisCompany(
+            address: new Shared\PropertyHrisCompanyAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'West Tressashire',
+                country: 'Norfolk Island',
+                countryCode: 'MW',
+                postalCode: '36009-7244',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2023-12-23T19:08:18.404Z'),
+            id: '<id>',
+            legalName: '<value>',
+            name: '<value>',
+            raw: [
+                'Chief' => '<value>',
+            ],
+            updatedAt: Utils\Utils::parseDateTime('2023-08-30T10:26:34.618Z'),
+        ),
+    );
     $response = $sdk->hris->patchHrisCompany($request);
 
     if ($response->hrisCompany !== null) {
@@ -1049,15 +1099,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest](../../Models/Operations/PatchHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchHrisCompanyRequest](../../Models/Operations/PatchHrisCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse](../../Models/Operations/PatchHrisCompanyResponse.md)**
+**[?Operations\PatchHrisCompanyResponse](../../Models/Operations/PatchHrisCompanyResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchHrisEmployee
 
@@ -1066,15 +1120,14 @@ Update an employee
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1082,67 +1135,69 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchHrisEmployeeRequest();
-    $request->hrisEmployee = new Shared\HrisEmployee();
-    $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
-    $request->hrisEmployee->address->address1 = '<value>';
-    $request->hrisEmployee->address->address2 = '<value>';
-    $request->hrisEmployee->address->city = 'Zettaland';
-    $request->hrisEmployee->address->country = 'Mexico';
-    $request->hrisEmployee->address->countryCode = 'DJ';
-    $request->hrisEmployee->address->postalCode = '87892';
-    $request->hrisEmployee->address->region = '<value>';
-    $request->hrisEmployee->address->regionCode = '<value>';
-    $request->hrisEmployee->bio = '<value>';
-    $request->hrisEmployee->companyId = '<value>';
-    $request->hrisEmployee->compensation = [
-        new Shared\HrisCompensation(),
-    ];
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-12T22:40:07.218Z');
-    $request->hrisEmployee->currency = 'Venezuelan bolívar';
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-04T03:46:56.564Z');
-    $request->hrisEmployee->department = '<value>';
-    $request->hrisEmployee->division = '<value>';
-    $request->hrisEmployee->emails = [
-        new Shared\HrisEmail(),
-    ];
-    $request->hrisEmployee->employeeNumber = '<value>';
-    $request->hrisEmployee->employeeRoles = [
-        Shared\PropertyHrisEmployeeEmployeeRoles::Recruiter,
-    ];
-    $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Active;
-    $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::FullTime;
-    $request->hrisEmployee->gender = Shared\HrisEmployeeGender::Intersex;
-    $request->hrisEmployee->groups = [
-        new Shared\HrisGroup(),
-    ];
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-24T06:10:11.552Z');
-    $request->hrisEmployee->id = '<id>';
-    $request->hrisEmployee->imageUrl = '<value>';
-    $request->hrisEmployee->languageLocale = '<value>';
-    $request->hrisEmployee->location = '<value>';
-    $request->hrisEmployee->locations = [
-        new Shared\HrisLocation(),
-    ];
-    $request->hrisEmployee->managerId = '<value>';
-    $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
-    $request->hrisEmployee->name = '<value>';
-    $request->hrisEmployee->pronouns = '<value>';
-    $request->hrisEmployee->raw = [
-        'ohm' => '<value>',
-    ];
-    $request->hrisEmployee->salutation = '<value>';
-    $request->hrisEmployee->ssnSin = '<value>';
-    $request->hrisEmployee->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-18T06:05:07.523Z');
-    $request->hrisEmployee->timezone = 'Pacific/Auckland';
-    $request->hrisEmployee->title = '<value>';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-19T18:41:09.098Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchHrisEmployeeRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisEmployee: new Shared\HrisEmployee(
+            address: new Shared\PropertyHrisEmployeeAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Zettaland',
+                country: 'Mexico',
+                countryCode: 'DJ',
+                postalCode: '87892',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            bio: '<value>',
+            companyId: '<value>',
+            compensation: [
+                new Shared\HrisCompensation,
+            ],
+            createdAt: Utils\Utils::parseDateTime('2023-07-12T22:40:07.218Z'),
+            currency: 'Venezuelan bolívar',
+            dateOfBirth: Utils\Utils::parseDateTime('2024-05-04T03:46:56.564Z'),
+            department: '<value>',
+            division: '<value>',
+            emails: [
+                new Shared\HrisEmail,
+            ],
+            employeeNumber: '<value>',
+            employeeRoles: [
+                Shared\PropertyHrisEmployeeEmployeeRoles::Recruiter,
+            ],
+            employmentStatus: Shared\EmploymentStatus::Active,
+            employmentType: Shared\HrisEmployeeEmploymentType::FullTime,
+            gender: Shared\HrisEmployeeGender::Intersex,
+            groups: [
+                new Shared\HrisGroup,
+            ],
+            hiredAt: Utils\Utils::parseDateTime('2024-03-24T06:10:11.552Z'),
+            id: '<id>',
+            imageUrl: '<value>',
+            languageLocale: '<value>',
+            location: '<value>',
+            locations: [
+                new Shared\HrisLocation,
+            ],
+            managerId: '<value>',
+            maritalStatus: Shared\MaritalStatus::Single,
+            name: '<value>',
+            pronouns: '<value>',
+            raw: [
+                'ohm' => '<value>',
+            ],
+            salutation: '<value>',
+            ssnSin: '<value>',
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            terminatedAt: Utils\Utils::parseDateTime('2022-10-18T06:05:07.523Z'),
+            timezone: 'Pacific/Auckland',
+            title: '<value>',
+            updatedAt: Utils\Utils::parseDateTime('2024-03-19T18:41:09.098Z'),
+        ),
+    );
     $response = $sdk->hris->patchHrisEmployee($request);
 
     if ($response->hrisEmployee !== null) {
@@ -1155,15 +1210,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest](../../Models/Operations/PatchHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchHrisEmployeeRequest](../../Models/Operations/PatchHrisEmployeeRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse](../../Models/Operations/PatchHrisEmployeeResponse.md)**
+**[?Operations\PatchHrisEmployeeResponse](../../Models/Operations/PatchHrisEmployeeResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchHrisGroup
 
@@ -1172,15 +1231,14 @@ Update a group
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1188,29 +1246,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchHrisGroupRequest();
-    $request->hrisGroup = new Shared\HrisGroup();
-    $request->hrisGroup->companyId = '<value>';
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-10T03:17:00.454Z');
-    $request->hrisGroup->description = 'Compatible contextually-based local area network';
-    $request->hrisGroup->id = '<id>';
-    $request->hrisGroup->isActive = false;
-    $request->hrisGroup->managerIds = [
-        '<value>',
-    ];
-    $request->hrisGroup->name = '<value>';
-    $request->hrisGroup->parentId = '<value>';
-    $request->hrisGroup->raw = [
-        'indexing' => '<value>',
-    ];
-    $request->hrisGroup->type = Shared\HrisGroupType::BusinessUnit;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T11:47:16.863Z');
-    $request->hrisGroup->userIds = [
-        '<value>',
-    ];
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchHrisGroupRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisGroup: new Shared\HrisGroup(
+            companyId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2022-11-10T03:17:00.454Z'),
+            description: 'Compatible contextually-based local area network',
+            id: '<id>',
+            isActive: false,
+            managerIds: [
+                '<value>',
+            ],
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'indexing' => '<value>',
+            ],
+            type: Shared\HrisGroupType::BusinessUnit,
+            updatedAt: Utils\Utils::parseDateTime('2022-01-01T11:47:16.863Z'),
+            userIds: [
+                '<value>',
+            ],
+        ),
+    );
     $response = $sdk->hris->patchHrisGroup($request);
 
     if ($response->hrisGroup !== null) {
@@ -1223,15 +1282,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchHrisGroupRequest](../../Models/Operations/PatchHrisGroupRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchHrisGroupRequest](../../Models/Operations/PatchHrisGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchHrisGroupResponse](../../Models/Operations/PatchHrisGroupResponse.md)**
+**[?Operations\PatchHrisGroupResponse](../../Models/Operations/PatchHrisGroupResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchHrisLocation
 
@@ -1240,15 +1303,14 @@ Update a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1256,38 +1318,40 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchHrisLocationRequest();
-    $request->hrisLocation = new Shared\HrisLocation();
-    $request->hrisLocation->address = new Shared\PropertyHrisLocationAddress();
-    $request->hrisLocation->address->address1 = '<value>';
-    $request->hrisLocation->address->address2 = '<value>';
-    $request->hrisLocation->address->city = 'Jeanieshire';
-    $request->hrisLocation->address->country = 'Lao People\'s Democratic Republic';
-    $request->hrisLocation->address->countryCode = 'SA';
-    $request->hrisLocation->address->postalCode = '01257-5261';
-    $request->hrisLocation->address->region = '<value>';
-    $request->hrisLocation->address->regionCode = '<value>';
-    $request->hrisLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-19T04:39:31.681Z');
-    $request->hrisLocation->currency = 'Swiss Franc';
-    $request->hrisLocation->description = 'Multi-lateral maximized website';
-    $request->hrisLocation->externalIdentifier = '<value>';
-    $request->hrisLocation->id = '<id>';
-    $request->hrisLocation->isActive = false;
-    $request->hrisLocation->isHq = false;
-    $request->hrisLocation->languageLocale = '<value>';
-    $request->hrisLocation->name = '<value>';
-    $request->hrisLocation->parentId = '<value>';
-    $request->hrisLocation->raw = [
-        'like' => '<value>',
-    ];
-    $request->hrisLocation->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisLocation->timezone = 'Asia/Tehran';
-    $request->hrisLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T18:51:28.735Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchHrisLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisLocation: new Shared\HrisLocation(
+            address: new Shared\PropertyHrisLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Jeanieshire',
+                country: 'Lao People\'s Democratic Republic',
+                countryCode: 'SA',
+                postalCode: '01257-5261',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2024-01-19T04:39:31.681Z'),
+            currency: 'Swiss Franc',
+            description: 'Multi-lateral maximized website',
+            externalIdentifier: '<value>',
+            id: '<id>',
+            isActive: false,
+            isHq: false,
+            languageLocale: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'like' => '<value>',
+            ],
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            timezone: 'Asia/Tehran',
+            updatedAt: Utils\Utils::parseDateTime('2024-08-09T18:51:28.735Z'),
+        ),
+    );
     $response = $sdk->hris->patchHrisLocation($request);
 
     if ($response->hrisLocation !== null) {
@@ -1300,15 +1364,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchHrisLocationRequest](../../Models/Operations/PatchHrisLocationRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchHrisLocationRequest](../../Models/Operations/PatchHrisLocationRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchHrisLocationResponse](../../Models/Operations/PatchHrisLocationResponse.md)**
+**[?Operations\PatchHrisLocationResponse](../../Models/Operations/PatchHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeHrisCompany
 
@@ -1317,15 +1385,13 @@ Remove a company
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1333,10 +1399,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveHrisCompanyRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveHrisCompanyRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->hris->removeHrisCompany($request);
 
     if ($response->statusCode === 200) {
@@ -1349,15 +1415,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest](../../Models/Operations/RemoveHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveHrisCompanyRequest](../../Models/Operations/RemoveHrisCompanyRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse](../../Models/Operations/RemoveHrisCompanyResponse.md)**
+**[?Operations\RemoveHrisCompanyResponse](../../Models/Operations/RemoveHrisCompanyResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeHrisEmployee
 
@@ -1366,15 +1436,13 @@ Remove an employee
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1382,10 +1450,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveHrisEmployeeRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveHrisEmployeeRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->hris->removeHrisEmployee($request);
 
     if ($response->statusCode === 200) {
@@ -1398,15 +1466,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest](../../Models/Operations/RemoveHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveHrisEmployeeRequest](../../Models/Operations/RemoveHrisEmployeeRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse](../../Models/Operations/RemoveHrisEmployeeResponse.md)**
+**[?Operations\RemoveHrisEmployeeResponse](../../Models/Operations/RemoveHrisEmployeeResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeHrisGroup
 
@@ -1415,15 +1487,13 @@ Remove a group
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1431,10 +1501,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveHrisGroupRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveHrisGroupRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->hris->removeHrisGroup($request);
 
     if ($response->statusCode === 200) {
@@ -1447,15 +1517,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest](../../Models/Operations/RemoveHrisGroupRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveHrisGroupRequest](../../Models/Operations/RemoveHrisGroupRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse](../../Models/Operations/RemoveHrisGroupResponse.md)**
+**[?Operations\RemoveHrisGroupResponse](../../Models/Operations/RemoveHrisGroupResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeHrisLocation
 
@@ -1464,15 +1538,13 @@ Remove a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1480,10 +1552,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveHrisLocationRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveHrisLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->hris->removeHrisLocation($request);
 
     if ($response->statusCode === 200) {
@@ -1496,15 +1568,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest](../../Models/Operations/RemoveHrisLocationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveHrisLocationRequest](../../Models/Operations/RemoveHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse](../../Models/Operations/RemoveHrisLocationResponse.md)**
+**[?Operations\RemoveHrisLocationResponse](../../Models/Operations/RemoveHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateHrisCompany
 
@@ -1513,15 +1589,14 @@ Update a company
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1529,28 +1604,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateHrisCompanyRequest();
-    $request->hrisCompany = new Shared\HrisCompany();
-    $request->hrisCompany->address = new Shared\PropertyHrisCompanyAddress();
-    $request->hrisCompany->address->address1 = '<value>';
-    $request->hrisCompany->address->address2 = '<value>';
-    $request->hrisCompany->address->city = 'Rancho Santa Margarita';
-    $request->hrisCompany->address->country = 'Somalia';
-    $request->hrisCompany->address->countryCode = 'CL';
-    $request->hrisCompany->address->postalCode = '49321';
-    $request->hrisCompany->address->region = '<value>';
-    $request->hrisCompany->address->regionCode = '<value>';
-    $request->hrisCompany->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-24T00:12:57.019Z');
-    $request->hrisCompany->id = '<id>';
-    $request->hrisCompany->legalName = '<value>';
-    $request->hrisCompany->name = '<value>';
-    $request->hrisCompany->raw = [
-        'Coordinator' => '<value>',
-    ];
-    $request->hrisCompany->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-01T17:36:17.033Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateHrisCompanyRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisCompany: new Shared\HrisCompany(
+            address: new Shared\PropertyHrisCompanyAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Rancho Santa Margarita',
+                country: 'Somalia',
+                countryCode: 'CL',
+                postalCode: '49321',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2023-11-24T00:12:57.019Z'),
+            id: '<id>',
+            legalName: '<value>',
+            name: '<value>',
+            raw: [
+                'Coordinator' => '<value>',
+            ],
+            updatedAt: Utils\Utils::parseDateTime('2023-09-01T17:36:17.033Z'),
+        ),
+    );
     $response = $sdk->hris->updateHrisCompany($request);
 
     if ($response->hrisCompany !== null) {
@@ -1563,15 +1640,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest](../../Models/Operations/UpdateHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateHrisCompanyRequest](../../Models/Operations/UpdateHrisCompanyRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse](../../Models/Operations/UpdateHrisCompanyResponse.md)**
+**[?Operations\UpdateHrisCompanyResponse](../../Models/Operations/UpdateHrisCompanyResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateHrisEmployee
 
@@ -1580,15 +1661,14 @@ Update an employee
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1596,67 +1676,69 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateHrisEmployeeRequest();
-    $request->hrisEmployee = new Shared\HrisEmployee();
-    $request->hrisEmployee->address = new Shared\PropertyHrisEmployeeAddress();
-    $request->hrisEmployee->address->address1 = '<value>';
-    $request->hrisEmployee->address->address2 = '<value>';
-    $request->hrisEmployee->address->city = 'North Alfurt';
-    $request->hrisEmployee->address->country = 'Thailand';
-    $request->hrisEmployee->address->countryCode = 'ST';
-    $request->hrisEmployee->address->postalCode = '60601-3179';
-    $request->hrisEmployee->address->region = '<value>';
-    $request->hrisEmployee->address->regionCode = '<value>';
-    $request->hrisEmployee->bio = '<value>';
-    $request->hrisEmployee->companyId = '<value>';
-    $request->hrisEmployee->compensation = [
-        new Shared\HrisCompensation(),
-    ];
-    $request->hrisEmployee->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-07T16:21:55.126Z');
-    $request->hrisEmployee->currency = 'Zimbabwe Dollar';
-    $request->hrisEmployee->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-03T23:33:19.708Z');
-    $request->hrisEmployee->department = '<value>';
-    $request->hrisEmployee->division = '<value>';
-    $request->hrisEmployee->emails = [
-        new Shared\HrisEmail(),
-    ];
-    $request->hrisEmployee->employeeNumber = '<value>';
-    $request->hrisEmployee->employeeRoles = [
-        Shared\PropertyHrisEmployeeEmployeeRoles::Admin,
-    ];
-    $request->hrisEmployee->employmentStatus = Shared\EmploymentStatus::Inactive;
-    $request->hrisEmployee->employmentType = Shared\HrisEmployeeEmploymentType::Freelance;
-    $request->hrisEmployee->gender = Shared\HrisEmployeeGender::NonBinary;
-    $request->hrisEmployee->groups = [
-        new Shared\HrisGroup(),
-    ];
-    $request->hrisEmployee->hiredAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-07T07:57:10.914Z');
-    $request->hrisEmployee->id = '<id>';
-    $request->hrisEmployee->imageUrl = '<value>';
-    $request->hrisEmployee->languageLocale = '<value>';
-    $request->hrisEmployee->location = '<value>';
-    $request->hrisEmployee->locations = [
-        new Shared\HrisLocation(),
-    ];
-    $request->hrisEmployee->managerId = '<value>';
-    $request->hrisEmployee->maritalStatus = Shared\MaritalStatus::Single;
-    $request->hrisEmployee->name = '<value>';
-    $request->hrisEmployee->pronouns = '<value>';
-    $request->hrisEmployee->raw = [
-        'Borders' => '<value>',
-    ];
-    $request->hrisEmployee->salutation = '<value>';
-    $request->hrisEmployee->ssnSin = '<value>';
-    $request->hrisEmployee->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisEmployee->terminatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-30T02:26:59.988Z');
-    $request->hrisEmployee->timezone = 'Asia/Bangkok';
-    $request->hrisEmployee->title = '<value>';
-    $request->hrisEmployee->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-31T18:44:44.765Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateHrisEmployeeRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisEmployee: new Shared\HrisEmployee(
+            address: new Shared\PropertyHrisEmployeeAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'North Alfurt',
+                country: 'Thailand',
+                countryCode: 'ST',
+                postalCode: '60601-3179',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            bio: '<value>',
+            companyId: '<value>',
+            compensation: [
+                new Shared\HrisCompensation,
+            ],
+            createdAt: Utils\Utils::parseDateTime('2024-06-07T16:21:55.126Z'),
+            currency: 'Zimbabwe Dollar',
+            dateOfBirth: Utils\Utils::parseDateTime('2024-05-03T23:33:19.708Z'),
+            department: '<value>',
+            division: '<value>',
+            emails: [
+                new Shared\HrisEmail,
+            ],
+            employeeNumber: '<value>',
+            employeeRoles: [
+                Shared\PropertyHrisEmployeeEmployeeRoles::Admin,
+            ],
+            employmentStatus: Shared\EmploymentStatus::Inactive,
+            employmentType: Shared\HrisEmployeeEmploymentType::Freelance,
+            gender: Shared\HrisEmployeeGender::NonBinary,
+            groups: [
+                new Shared\HrisGroup,
+            ],
+            hiredAt: Utils\Utils::parseDateTime('2024-01-07T07:57:10.914Z'),
+            id: '<id>',
+            imageUrl: '<value>',
+            languageLocale: '<value>',
+            location: '<value>',
+            locations: [
+                new Shared\HrisLocation,
+            ],
+            managerId: '<value>',
+            maritalStatus: Shared\MaritalStatus::Single,
+            name: '<value>',
+            pronouns: '<value>',
+            raw: [
+                'Borders' => '<value>',
+            ],
+            salutation: '<value>',
+            ssnSin: '<value>',
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            terminatedAt: Utils\Utils::parseDateTime('2022-10-30T02:26:59.988Z'),
+            timezone: 'Asia/Bangkok',
+            title: '<value>',
+            updatedAt: Utils\Utils::parseDateTime('2023-05-31T18:44:44.765Z'),
+        ),
+    );
     $response = $sdk->hris->updateHrisEmployee($request);
 
     if ($response->hrisEmployee !== null) {
@@ -1669,15 +1751,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest](../../Models/Operations/UpdateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateHrisEmployeeRequest](../../Models/Operations/UpdateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse](../../Models/Operations/UpdateHrisEmployeeResponse.md)**
+**[?Operations\UpdateHrisEmployeeResponse](../../Models/Operations/UpdateHrisEmployeeResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateHrisGroup
 
@@ -1686,15 +1772,14 @@ Update a group
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1702,29 +1787,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateHrisGroupRequest();
-    $request->hrisGroup = new Shared\HrisGroup();
-    $request->hrisGroup->companyId = '<value>';
-    $request->hrisGroup->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-07T01:08:49.621Z');
-    $request->hrisGroup->description = 'Integrated empowering productivity';
-    $request->hrisGroup->id = '<id>';
-    $request->hrisGroup->isActive = false;
-    $request->hrisGroup->managerIds = [
-        '<value>',
-    ];
-    $request->hrisGroup->name = '<value>';
-    $request->hrisGroup->parentId = '<value>';
-    $request->hrisGroup->raw = [
-        'Southwest' => '<value>',
-    ];
-    $request->hrisGroup->type = Shared\HrisGroupType::Team;
-    $request->hrisGroup->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-09T14:54:15.549Z');
-    $request->hrisGroup->userIds = [
-        '<value>',
-    ];
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateHrisGroupRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisGroup: new Shared\HrisGroup(
+            companyId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2022-12-07T01:08:49.621Z'),
+            description: 'Integrated empowering productivity',
+            id: '<id>',
+            isActive: false,
+            managerIds: [
+                '<value>',
+            ],
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'Southwest' => '<value>',
+            ],
+            type: Shared\HrisGroupType::Team,
+            updatedAt: Utils\Utils::parseDateTime('2022-03-09T14:54:15.549Z'),
+            userIds: [
+                '<value>',
+            ],
+        ),
+    );
     $response = $sdk->hris->updateHrisGroup($request);
 
     if ($response->hrisGroup !== null) {
@@ -1737,15 +1823,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest](../../Models/Operations/UpdateHrisGroupRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\UpdateHrisGroupRequest](../../Models/Operations/UpdateHrisGroupRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse](../../Models/Operations/UpdateHrisGroupResponse.md)**
+**[?Operations\UpdateHrisGroupResponse](../../Models/Operations/UpdateHrisGroupResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateHrisLocation
 
@@ -1754,15 +1844,14 @@ Update a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1770,38 +1859,40 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateHrisLocationRequest();
-    $request->hrisLocation = new Shared\HrisLocation();
-    $request->hrisLocation->address = new Shared\PropertyHrisLocationAddress();
-    $request->hrisLocation->address->address1 = '<value>';
-    $request->hrisLocation->address->address2 = '<value>';
-    $request->hrisLocation->address->city = 'Willieton';
-    $request->hrisLocation->address->country = 'Antarctica (the territory South of 60 deg S)';
-    $request->hrisLocation->address->countryCode = 'AM';
-    $request->hrisLocation->address->postalCode = '16560';
-    $request->hrisLocation->address->region = '<value>';
-    $request->hrisLocation->address->regionCode = '<value>';
-    $request->hrisLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-06T16:46:59.275Z');
-    $request->hrisLocation->currency = 'Guinea Franc';
-    $request->hrisLocation->description = 'Horizontal solution-oriented conglomeration';
-    $request->hrisLocation->externalIdentifier = '<value>';
-    $request->hrisLocation->id = '<id>';
-    $request->hrisLocation->isActive = false;
-    $request->hrisLocation->isHq = false;
-    $request->hrisLocation->languageLocale = '<value>';
-    $request->hrisLocation->name = '<value>';
-    $request->hrisLocation->parentId = '<value>';
-    $request->hrisLocation->raw = [
-        'West' => '<value>',
-    ];
-    $request->hrisLocation->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisLocation->timezone = 'Asia/Kamchatka';
-    $request->hrisLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-23T01:10:31.769Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateHrisLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisLocation: new Shared\HrisLocation(
+            address: new Shared\PropertyHrisLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Willieton',
+                country: 'Antarctica (the territory South of 60 deg S)',
+                countryCode: 'AM',
+                postalCode: '16560',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2023-02-06T16:46:59.275Z'),
+            currency: 'Guinea Franc',
+            description: 'Horizontal solution-oriented conglomeration',
+            externalIdentifier: '<value>',
+            id: '<id>',
+            isActive: false,
+            isHq: false,
+            languageLocale: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'West' => '<value>',
+            ],
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            timezone: 'Asia/Kamchatka',
+            updatedAt: Utils\Utils::parseDateTime('2024-02-23T01:10:31.769Z'),
+        ),
+    );
     $response = $sdk->hris->updateHrisLocation($request);
 
     if ($response->hrisLocation !== null) {
@@ -1814,12 +1905,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest](../../Models/Operations/UpdateHrisLocationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateHrisLocationRequest](../../Models/Operations/UpdateHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse](../../Models/Operations/UpdateHrisLocationResponse.md)**
+**[?Operations\UpdateHrisLocationResponse](../../Models/Operations/UpdateHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

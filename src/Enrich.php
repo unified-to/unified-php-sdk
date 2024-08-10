@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Enrich
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,70 +26,88 @@ class Enrich
     /**
      * Retrieve enrichment information for a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
+     * @param  Operations\ListEnrichCompaniesRequest  $request
+     * @return Operations\ListEnrichCompaniesResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listEnrichCompanies(
-        ?\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse {
+        ?Operations\ListEnrichCompaniesRequest $request,
+    ): Operations\ListEnrichCompaniesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/company', \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/company', Operations\ListEnrichCompaniesRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListEnrichCompaniesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->enrichCompany = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\EnrichCompany', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\EnrichCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListEnrichCompaniesResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    enrichCompany: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve enrichment information for a person
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
+     * @param  Operations\ListEnrichPeopleRequest  $request
+     * @return Operations\ListEnrichPeopleResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listEnrichPeople(
-        ?\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse {
+        ?Operations\ListEnrichPeopleRequest $request,
+    ): Operations\ListEnrichPeopleResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/person', \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/person', Operations\ListEnrichPeopleRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListEnrichPeopleRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->enrichPerson = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\EnrichPerson', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\EnrichPerson', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListEnrichPeopleResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    enrichPerson: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

@@ -11,23 +11,35 @@ namespace Unified\Unified_to\Models\Shared;
 
 class PaymentPayout
 {
+    /**
+     *
+     * @var ?string $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $notes
+     */
     #[\JMS\Serializer\Annotation\SerializedName('notes')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $notes = null;
 
@@ -41,29 +53,49 @@ class PaymentPayout
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?PaymentPayoutStatus $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PaymentPayoutStatus>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentPayoutStatus')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PaymentPayoutStatus $status = null;
 
+    /**
+     *
+     * @var float $totalAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     public float $totalAmount;
 
+    /**
+     *
+     * @var ?string $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?float  $totalAmount
+     * @param  ?string  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $id
+     * @param  ?string  $notes
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?PaymentPayoutStatus  $status
+     * @param  ?string  $updatedAt
+     */
+    public function __construct(?float $totalAmount = null, ?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?string $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->currency = null;
-        $this->id = null;
-        $this->notes = null;
-        $this->raw = null;
-        $this->status = null;
-        $this->totalAmount = 0;
-        $this->updatedAt = null;
+        $this->totalAmount = $totalAmount;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->id = $id;
+        $this->notes = $notes;
+        $this->raw = $raw;
+        $this->status = $status;
+        $this->updatedAt = $updatedAt;
     }
 }

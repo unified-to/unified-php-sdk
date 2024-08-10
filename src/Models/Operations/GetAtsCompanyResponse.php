@@ -8,15 +8,15 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class GetAtsCompanyResponse
 {
     /**
      * Successful
      *
-     * @var ?\Unified\Unified_to\Models\Shared\AtsCompany $atsCompany
+     * @var ?Shared\AtsCompany $atsCompany
      */
-    public ?\Unified\Unified_to\Models\Shared\AtsCompany $atsCompany = null;
+    public ?Shared\AtsCompany $atsCompany = null;
 
     /**
      * HTTP response content type for this operation
@@ -35,15 +35,21 @@ class GetAtsCompanyResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?Shared\AtsCompany  $atsCompany
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?Shared\AtsCompany $atsCompany = null)
     {
-        $this->atsCompany = null;
-        $this->contentType = '';
-        $this->statusCode = 0;
-        $this->rawResponse = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->atsCompany = $atsCompany;
     }
 }

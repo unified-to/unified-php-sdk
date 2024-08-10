@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Operations;
 /** ConnectionId - A connection represents a specific authentication of an integration. */
 class ConnectionId
 {
+
     public function __construct()
     {
     }

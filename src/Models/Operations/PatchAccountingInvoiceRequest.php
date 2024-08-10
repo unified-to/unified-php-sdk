@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchAccountingInvoiceRequest
 {
+    /**
+     *
+     * @var ?Shared\AccountingInvoice $accountingInvoice
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AccountingInvoice $accountingInvoice = null;
+    public ?Shared\AccountingInvoice $accountingInvoice = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class PatchAccountingInvoiceRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\AccountingInvoice  $accountingInvoice
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AccountingInvoice $accountingInvoice = null)
     {
-        $this->accountingInvoice = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->accountingInvoice = $accountingInvoice;
     }
 }

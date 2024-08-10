@@ -39,8 +39,9 @@ class UnifiedToBuilder
      */
     public function setSecurity(string $jwt): UnifiedToBuilder
     {
-        $security = new Models\Shared\Security();
-        $security->jwt = $jwt;
+        $security = new Models\Shared\Security(
+            jwt: $jwt
+        );
         $this->sdkConfig->security = $security;
 
         return $this;

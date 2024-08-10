@@ -17,15 +17,14 @@ Create a candidate
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -33,49 +32,51 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateAtsCandidateRequest();
-    $request->atsCandidate = new Shared\AtsCandidate();
-    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = '<value>';
-    $request->atsCandidate->address->address2 = '<value>';
-    $request->atsCandidate->address->city = 'South Hill';
-    $request->atsCandidate->address->country = 'Denmark';
-    $request->atsCandidate->address->countryCode = 'KM';
-    $request->atsCandidate->address->postalCode = '72991-5163';
-    $request->atsCandidate->address->region = '<value>';
-    $request->atsCandidate->address->regionCode = '<value>';
-    $request->atsCandidate->companyId = '<value>';
-    $request->atsCandidate->companyName = 'Pollich - Lubowitz';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-06T00:47:39.352Z');
-    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-19T09:25:00.753Z');
-    $request->atsCandidate->emails = [
-        new Shared\AtsEmail(),
-    ];
-    $request->atsCandidate->externalIdentifier = '<value>';
-    $request->atsCandidate->id = '<id>';
-    $request->atsCandidate->imageUrl = '<value>';
-    $request->atsCandidate->linkUrls = [
-        '<value>',
-    ];
-    $request->atsCandidate->name = '<value>';
-    $request->atsCandidate->origin = Shared\Origin::Sourced;
-    $request->atsCandidate->raw = [
-        'Legacy' => '<value>',
-    ];
-    $request->atsCandidate->sources = [
-        '<value>',
-    ];
-    $request->atsCandidate->tags = [
-        '<value>',
-    ];
-    $request->atsCandidate->telephones = [
-        new Shared\AtsTelephone(),
-    ];
-    $request->atsCandidate->title = '<value>';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-27T06:32:21.998Z');
-    $request->atsCandidate->userId = '<value>';
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateAtsCandidateRequest(
+        connectionId: '<value>',
+        atsCandidate: new Shared\AtsCandidate(
+            address: new Shared\PropertyAtsCandidateAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'South Hill',
+                country: 'Denmark',
+                countryCode: 'KM',
+                postalCode: '72991-5163',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            companyId: '<value>',
+            companyName: 'Pollich - Lubowitz',
+            createdAt: Utils\Utils::parseDateTime('2022-03-06T00:47:39.352Z'),
+            dateOfBirth: Utils\Utils::parseDateTime('2023-11-19T09:25:00.753Z'),
+            emails: [
+                new Shared\AtsEmail,
+            ],
+            externalIdentifier: '<value>',
+            id: '<id>',
+            imageUrl: '<value>',
+            linkUrls: [
+                '<value>',
+            ],
+            name: '<value>',
+            origin: Shared\Origin::Sourced,
+            raw: [
+                'Legacy' => '<value>',
+            ],
+            sources: [
+                '<value>',
+            ],
+            tags: [
+                '<value>',
+            ],
+            telephones: [
+                new Shared\AtsTelephone,
+            ],
+            title: '<value>',
+            updatedAt: Utils\Utils::parseDateTime('2022-09-27T06:32:21.998Z'),
+            userId: '<value>',
+        ),
+    );
     $response = $sdk->candidate->createAtsCandidate($request);
 
     if ($response->atsCandidate !== null) {
@@ -88,15 +89,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest](../../Models/Operations/CreateAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateAtsCandidateRequest](../../Models/Operations/CreateAtsCandidateRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse](../../Models/Operations/CreateAtsCandidateResponse.md)**
+**[?Operations\CreateAtsCandidateResponse](../../Models/Operations/CreateAtsCandidateResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getAtsCandidate
 
@@ -105,15 +110,13 @@ Retrieve a candidate
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -121,13 +124,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetAtsCandidateRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetAtsCandidateRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->candidate->getAtsCandidate($request);
 
     if ($response->atsCandidate !== null) {
@@ -140,15 +143,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetAtsCandidateRequest](../../Models/Operations/GetAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAtsCandidateRequest](../../Models/Operations/GetAtsCandidateRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAtsCandidateResponse](../../Models/Operations/GetAtsCandidateResponse.md)**
+**[?Operations\GetAtsCandidateResponse](../../Models/Operations/GetAtsCandidateResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listAtsCandidates
 
@@ -157,15 +164,14 @@ List all candidates
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -173,17 +179,17 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListAtsCandidatesRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->jobId = '<value>';
-    $request->limit = 6384.09;
-    $request->offset = 7452.94;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-18T00:58:25.541Z');;
-
+    $request = new Operations\ListAtsCandidatesRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        jobId: '<value>',
+        limit: 6384.09,
+        offset: 7452.94,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-03-18T00:58:25.541Z'),
+    );
     $response = $sdk->candidate->listAtsCandidates($request);
 
     if ($response->atsCandidates !== null) {
@@ -196,15 +202,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest](../../Models/Operations/ListAtsCandidatesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAtsCandidatesRequest](../../Models/Operations/ListAtsCandidatesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse](../../Models/Operations/ListAtsCandidatesResponse.md)**
+**[?Operations\ListAtsCandidatesResponse](../../Models/Operations/ListAtsCandidatesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchAtsCandidate
 
@@ -213,15 +223,14 @@ Update a candidate
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -229,50 +238,52 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchAtsCandidateRequest();
-    $request->atsCandidate = new Shared\AtsCandidate();
-    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = '<value>';
-    $request->atsCandidate->address->address2 = '<value>';
-    $request->atsCandidate->address->city = 'Fort Bridget';
-    $request->atsCandidate->address->country = 'Sri Lanka';
-    $request->atsCandidate->address->countryCode = 'GI';
-    $request->atsCandidate->address->postalCode = '46054';
-    $request->atsCandidate->address->region = '<value>';
-    $request->atsCandidate->address->regionCode = '<value>';
-    $request->atsCandidate->companyId = '<value>';
-    $request->atsCandidate->companyName = 'Donnelly - Bartell';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-07T04:20:35.612Z');
-    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-20T03:10:26.424Z');
-    $request->atsCandidate->emails = [
-        new Shared\AtsEmail(),
-    ];
-    $request->atsCandidate->externalIdentifier = '<value>';
-    $request->atsCandidate->id = '<id>';
-    $request->atsCandidate->imageUrl = '<value>';
-    $request->atsCandidate->linkUrls = [
-        '<value>',
-    ];
-    $request->atsCandidate->name = '<value>';
-    $request->atsCandidate->origin = Shared\Origin::Applied;
-    $request->atsCandidate->raw = [
-        'Van' => '<value>',
-    ];
-    $request->atsCandidate->sources = [
-        '<value>',
-    ];
-    $request->atsCandidate->tags = [
-        '<value>',
-    ];
-    $request->atsCandidate->telephones = [
-        new Shared\AtsTelephone(),
-    ];
-    $request->atsCandidate->title = '<value>';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-01-30T15:05:49.494Z');
-    $request->atsCandidate->userId = '<value>';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchAtsCandidateRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        atsCandidate: new Shared\AtsCandidate(
+            address: new Shared\PropertyAtsCandidateAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Fort Bridget',
+                country: 'Sri Lanka',
+                countryCode: 'GI',
+                postalCode: '46054',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            companyId: '<value>',
+            companyName: 'Donnelly - Bartell',
+            createdAt: Utils\Utils::parseDateTime('2024-01-07T04:20:35.612Z'),
+            dateOfBirth: Utils\Utils::parseDateTime('2023-10-20T03:10:26.424Z'),
+            emails: [
+                new Shared\AtsEmail,
+            ],
+            externalIdentifier: '<value>',
+            id: '<id>',
+            imageUrl: '<value>',
+            linkUrls: [
+                '<value>',
+            ],
+            name: '<value>',
+            origin: Shared\Origin::Applied,
+            raw: [
+                'Van' => '<value>',
+            ],
+            sources: [
+                '<value>',
+            ],
+            tags: [
+                '<value>',
+            ],
+            telephones: [
+                new Shared\AtsTelephone,
+            ],
+            title: '<value>',
+            updatedAt: Utils\Utils::parseDateTime('2023-01-30T15:05:49.494Z'),
+            userId: '<value>',
+        ),
+    );
     $response = $sdk->candidate->patchAtsCandidate($request);
 
     if ($response->atsCandidate !== null) {
@@ -285,15 +296,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest](../../Models/Operations/PatchAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchAtsCandidateRequest](../../Models/Operations/PatchAtsCandidateRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse](../../Models/Operations/PatchAtsCandidateResponse.md)**
+**[?Operations\PatchAtsCandidateResponse](../../Models/Operations/PatchAtsCandidateResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeAtsCandidate
 
@@ -302,15 +317,13 @@ Remove a candidate
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -318,10 +331,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveAtsCandidateRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveAtsCandidateRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->candidate->removeAtsCandidate($request);
 
     if ($response->statusCode === 200) {
@@ -334,15 +347,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest](../../Models/Operations/RemoveAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveAtsCandidateRequest](../../Models/Operations/RemoveAtsCandidateRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse](../../Models/Operations/RemoveAtsCandidateResponse.md)**
+**[?Operations\RemoveAtsCandidateResponse](../../Models/Operations/RemoveAtsCandidateResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateAtsCandidate
 
@@ -351,15 +368,14 @@ Update a candidate
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -367,50 +383,52 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateAtsCandidateRequest();
-    $request->atsCandidate = new Shared\AtsCandidate();
-    $request->atsCandidate->address = new Shared\PropertyAtsCandidateAddress();
-    $request->atsCandidate->address->address1 = '<value>';
-    $request->atsCandidate->address->address2 = '<value>';
-    $request->atsCandidate->address->city = 'Hintzborough';
-    $request->atsCandidate->address->country = 'Afghanistan';
-    $request->atsCandidate->address->countryCode = 'TF';
-    $request->atsCandidate->address->postalCode = '39423';
-    $request->atsCandidate->address->region = '<value>';
-    $request->atsCandidate->address->regionCode = '<value>';
-    $request->atsCandidate->companyId = '<value>';
-    $request->atsCandidate->companyName = 'O\'Reilly Inc';
-    $request->atsCandidate->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-31T03:55:05.691Z');
-    $request->atsCandidate->dateOfBirth = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-18T17:01:22.026Z');
-    $request->atsCandidate->emails = [
-        new Shared\AtsEmail(),
-    ];
-    $request->atsCandidate->externalIdentifier = '<value>';
-    $request->atsCandidate->id = '<id>';
-    $request->atsCandidate->imageUrl = '<value>';
-    $request->atsCandidate->linkUrls = [
-        '<value>',
-    ];
-    $request->atsCandidate->name = '<value>';
-    $request->atsCandidate->origin = Shared\Origin::Agency;
-    $request->atsCandidate->raw = [
-        'Potassium' => '<value>',
-    ];
-    $request->atsCandidate->sources = [
-        '<value>',
-    ];
-    $request->atsCandidate->tags = [
-        '<value>',
-    ];
-    $request->atsCandidate->telephones = [
-        new Shared\AtsTelephone(),
-    ];
-    $request->atsCandidate->title = '<value>';
-    $request->atsCandidate->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-19T09:22:29.995Z');
-    $request->atsCandidate->userId = '<value>';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateAtsCandidateRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        atsCandidate: new Shared\AtsCandidate(
+            address: new Shared\PropertyAtsCandidateAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Hintzborough',
+                country: 'Afghanistan',
+                countryCode: 'TF',
+                postalCode: '39423',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            companyId: '<value>',
+            companyName: 'O\'Reilly Inc',
+            createdAt: Utils\Utils::parseDateTime('2023-08-31T03:55:05.691Z'),
+            dateOfBirth: Utils\Utils::parseDateTime('2023-12-18T17:01:22.026Z'),
+            emails: [
+                new Shared\AtsEmail,
+            ],
+            externalIdentifier: '<value>',
+            id: '<id>',
+            imageUrl: '<value>',
+            linkUrls: [
+                '<value>',
+            ],
+            name: '<value>',
+            origin: Shared\Origin::Agency,
+            raw: [
+                'Potassium' => '<value>',
+            ],
+            sources: [
+                '<value>',
+            ],
+            tags: [
+                '<value>',
+            ],
+            telephones: [
+                new Shared\AtsTelephone,
+            ],
+            title: '<value>',
+            updatedAt: Utils\Utils::parseDateTime('2023-02-19T09:22:29.995Z'),
+            userId: '<value>',
+        ),
+    );
     $response = $sdk->candidate->updateAtsCandidate($request);
 
     if ($response->atsCandidate !== null) {
@@ -423,12 +441,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest](../../Models/Operations/UpdateAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateAtsCandidateRequest](../../Models/Operations/UpdateAtsCandidateRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse](../../Models/Operations/UpdateAtsCandidateResponse.md)**
+**[?Operations\UpdateAtsCandidateResponse](../../Models/Operations/UpdateAtsCandidateResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

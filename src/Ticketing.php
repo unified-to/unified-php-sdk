@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Ticketing
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,14 +26,15 @@ class Ticketing
     /**
      * Create a customer
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTicketingCustomerResponse
+     * @param  Operations\CreateTicketingCustomerRequest  $request
+     * @return Operations\CreateTicketingCustomerResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingCustomer(
-        ?\Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateTicketingCustomerResponse {
+        ?Operations\CreateTicketingCustomerRequest $request,
+    ): Operations\CreateTicketingCustomerResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer', \Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer', Operations\CreateTicketingCustomerRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingCustomer', 'json');
         if ($body !== null) {
@@ -38,37 +42,46 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateTicketingCustomerResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingCustomer = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingCustomer', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingCustomer', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateTicketingCustomerResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingCustomer: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Create a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
+     * @param  Operations\CreateTicketingNoteRequest  $request
+     * @return Operations\CreateTicketingNoteResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingNote(
-        ?\Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse {
+        ?Operations\CreateTicketingNoteRequest $request,
+    ): Operations\CreateTicketingNoteResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', Operations\CreateTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingNote', 'json');
         if ($body !== null) {
@@ -76,37 +89,46 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingNote = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingNote', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingNote', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateTicketingNoteResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingNote: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Create a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
+     * @param  Operations\CreateTicketingTicketRequest  $request
+     * @return Operations\CreateTicketingTicketResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingTicket(
-        ?\Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse {
+        ?Operations\CreateTicketingTicketRequest $request,
+    ): Operations\CreateTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', Operations\CreateTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
         if ($body !== null) {
@@ -114,247 +136,310 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTicket = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingTicket', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateTicketingTicketResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingTicket: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a customer
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingCustomerResponse
+     * @param  Operations\GetTicketingCustomerRequest  $request
+     * @return Operations\GetTicketingCustomerResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingCustomer(
-        ?\Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetTicketingCustomerResponse {
+        ?Operations\GetTicketingCustomerRequest $request,
+    ): Operations\GetTicketingCustomerResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', Operations\GetTicketingCustomerRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetTicketingCustomerRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetTicketingCustomerResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingCustomer = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingCustomer', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingCustomer', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetTicketingCustomerResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingCustomer: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
+     * @param  Operations\GetTicketingNoteRequest  $request
+     * @return Operations\GetTicketingNoteResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingNote(
-        ?\Unified\Unified_to\Models\Operations\GetTicketingNoteRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse {
+        ?Operations\GetTicketingNoteRequest $request,
+    ): Operations\GetTicketingNoteResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\GetTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingNoteRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetTicketingNoteRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingNote = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingNote', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingNote', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetTicketingNoteResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingNote: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
+     * @param  Operations\GetTicketingTicketRequest  $request
+     * @return Operations\GetTicketingTicketResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingTicket(
-        ?\Unified\Unified_to\Models\Operations\GetTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse {
+        ?Operations\GetTicketingTicketRequest $request,
+    ): Operations\GetTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\GetTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTicketingTicketRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetTicketingTicketRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTicket = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingTicket', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetTicketingTicketResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingTicket: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all customers
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTicketingCustomersResponse
+     * @param  Operations\ListTicketingCustomersRequest  $request
+     * @return Operations\ListTicketingCustomersResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingCustomers(
-        ?\Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListTicketingCustomersResponse {
+        ?Operations\ListTicketingCustomersRequest $request,
+    ): Operations\ListTicketingCustomersResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer', \Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer', Operations\ListTicketingCustomersRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListTicketingCustomersRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListTicketingCustomersResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingCustomers = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TicketingCustomer>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\TicketingCustomer>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListTicketingCustomersResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingCustomers: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all notes
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
+     * @param  Operations\ListTicketingNotesRequest  $request
+     * @return Operations\ListTicketingNotesResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingNotes(
-        ?\Unified\Unified_to\Models\Operations\ListTicketingNotesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse {
+        ?Operations\ListTicketingNotesRequest $request,
+    ): Operations\ListTicketingNotesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', Operations\ListTicketingNotesRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTicketingNotesRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListTicketingNotesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingNotes = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TicketingNote>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\TicketingNote>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListTicketingNotesResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingNotes: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all tickets
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
+     * @param  Operations\ListTicketingTicketsRequest  $request
+     * @return Operations\ListTicketingTicketsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingTickets(
-        ?\Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse {
+        ?Operations\ListTicketingTicketsRequest $request,
+    ): Operations\ListTicketingTicketsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', Operations\ListTicketingTicketsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListTicketingTicketsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTickets = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TicketingTicket>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\TicketingTicket>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListTicketingTicketsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingTickets: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a customer
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTicketingCustomerResponse
+     * @param  Operations\PatchTicketingCustomerRequest  $request
+     * @return Operations\PatchTicketingCustomerResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingCustomer(
-        ?\Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchTicketingCustomerResponse {
+        ?Operations\PatchTicketingCustomerRequest $request,
+    ): Operations\PatchTicketingCustomerResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', Operations\PatchTicketingCustomerRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingCustomer', 'json');
         if ($body !== null) {
@@ -362,37 +447,46 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchTicketingCustomerResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingCustomer = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingCustomer', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingCustomer', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchTicketingCustomerResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingCustomer: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
+     * @param  Operations\PatchTicketingNoteRequest  $request
+     * @return Operations\PatchTicketingNoteResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingNote(
-        ?\Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse {
+        ?Operations\PatchTicketingNoteRequest $request,
+    ): Operations\PatchTicketingNoteResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\PatchTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingNote', 'json');
         if ($body !== null) {
@@ -400,37 +494,46 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingNote = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingNote', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingNote', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchTicketingNoteResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingNote: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
+     * @param  Operations\PatchTicketingTicketRequest  $request
+     * @return Operations\PatchTicketingTicketResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingTicket(
-        ?\Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse {
+        ?Operations\PatchTicketingTicketRequest $request,
+    ): Operations\PatchTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\PatchTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
         if ($body !== null) {
@@ -438,127 +541,145 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTicket = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingTicket', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchTicketingTicketResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingTicket: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Remove a customer
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerResponse
+     * @param  Operations\RemoveTicketingCustomerRequest  $request
+     * @return Operations\RemoveTicketingCustomerResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingCustomer(
-        ?\Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerResponse {
+        ?Operations\RemoveTicketingCustomerRequest $request,
+    ): Operations\RemoveTicketingCustomerResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', Operations\RemoveTicketingCustomerRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveTicketingCustomerResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Remove a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
+     * @param  Operations\RemoveTicketingNoteRequest  $request
+     * @return Operations\RemoveTicketingNoteResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingNote(
-        ?\Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse {
+        ?Operations\RemoveTicketingNoteRequest $request,
+    ): Operations\RemoveTicketingNoteResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\RemoveTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveTicketingNoteResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Remove a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
+     * @param  Operations\RemoveTicketingTicketRequest  $request
+     * @return Operations\RemoveTicketingTicketResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingTicket(
-        ?\Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse {
+        ?Operations\RemoveTicketingTicketRequest $request,
+    ): Operations\RemoveTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\RemoveTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveTicketingTicketResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Update a customer
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerResponse
+     * @param  Operations\UpdateTicketingCustomerRequest  $request
+     * @return Operations\UpdateTicketingCustomerResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingCustomer(
-        ?\Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerResponse {
+        ?Operations\UpdateTicketingCustomerRequest $request,
+    ): Operations\UpdateTicketingCustomerResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/customer/{id}', Operations\UpdateTicketingCustomerRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingCustomer', 'json');
         if ($body !== null) {
@@ -566,37 +687,46 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingCustomer = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingCustomer', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingCustomer', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateTicketingCustomerResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingCustomer: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
+     * @param  Operations\UpdateTicketingNoteRequest  $request
+     * @return Operations\UpdateTicketingNoteResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingNote(
-        ?\Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse {
+        ?Operations\UpdateTicketingNoteRequest $request,
+    ): Operations\UpdateTicketingNoteResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\UpdateTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingNote', 'json');
         if ($body !== null) {
@@ -604,37 +734,46 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingNote = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingNote', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingNote', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateTicketingNoteResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingNote: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse
+     * @param  Operations\UpdateTicketingTicketRequest  $request
+     * @return Operations\UpdateTicketingTicketResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingTicket(
-        ?\Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse {
+        ?Operations\UpdateTicketingTicketRequest $request,
+    ): Operations\UpdateTicketingTicketResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\UpdateTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
         if ($body !== null) {
@@ -642,23 +781,31 @@ class Ticketing
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ticketingTicket = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TicketingTicket', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TicketingTicket', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateTicketingTicketResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    ticketingTicket: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

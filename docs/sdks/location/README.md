@@ -23,15 +23,14 @@ Create a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -39,28 +38,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateCommerceLocationRequest();
-    $request->commerceLocation = new Shared\CommerceLocation();
-    $request->commerceLocation->address = new Shared\PropertyCommerceLocationAddress();
-    $request->commerceLocation->address->address1 = '<value>';
-    $request->commerceLocation->address->address2 = '<value>';
-    $request->commerceLocation->address->city = 'North Marysecester';
-    $request->commerceLocation->address->country = 'Maldives';
-    $request->commerceLocation->address->countryCode = 'CU';
-    $request->commerceLocation->address->postalCode = '81935';
-    $request->commerceLocation->address->region = '<value>';
-    $request->commerceLocation->address->regionCode = '<value>';
-    $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-11T11:46:34.114Z');
-    $request->commerceLocation->description = 'Persevering 5th generation capability';
-    $request->commerceLocation->id = '<id>';
-    $request->commerceLocation->isActive = false;
-    $request->commerceLocation->name = '<value>';
-    $request->commerceLocation->raw = [
-        'Planner' => '<value>',
-    ];
-    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-11T11:05:08.665Z');
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateCommerceLocationRequest(
+        connectionId: '<value>',
+        commerceLocation: new Shared\CommerceLocation(
+            name: '<value>',
+            address: new Shared\PropertyCommerceLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'North Marysecester',
+                country: 'Maldives',
+                countryCode: 'CU',
+                postalCode: '81935',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2024-01-11T11:46:34.114Z'),
+            description: 'Persevering 5th generation capability',
+            id: '<id>',
+            isActive: false,
+            raw: [
+                'Planner' => '<value>',
+            ],
+            updatedAt: Utils\Utils::parseDateTime('2022-07-11T11:05:08.665Z'),
+        ),
+    );
     $response = $sdk->location->createCommerceLocation($request);
 
     if ($response->commerceLocation !== null) {
@@ -73,15 +74,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest](../../Models/Operations/CreateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateCommerceLocationRequest](../../Models/Operations/CreateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse](../../Models/Operations/CreateCommerceLocationResponse.md)**
+**[?Operations\CreateCommerceLocationResponse](../../Models/Operations/CreateCommerceLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## createHrisLocation
 
@@ -90,15 +95,14 @@ Create a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -106,37 +110,39 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateHrisLocationRequest();
-    $request->hrisLocation = new Shared\HrisLocation();
-    $request->hrisLocation->address = new Shared\PropertyHrisLocationAddress();
-    $request->hrisLocation->address->address1 = '<value>';
-    $request->hrisLocation->address->address2 = '<value>';
-    $request->hrisLocation->address->city = 'Port Trinityshire';
-    $request->hrisLocation->address->country = 'Saint Pierre and Miquelon';
-    $request->hrisLocation->address->countryCode = 'GE';
-    $request->hrisLocation->address->postalCode = '72153';
-    $request->hrisLocation->address->region = '<value>';
-    $request->hrisLocation->address->regionCode = '<value>';
-    $request->hrisLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-01T01:29:28.442Z');
-    $request->hrisLocation->currency = 'CFA Franc BCEAO';
-    $request->hrisLocation->description = 'Persistent eco-centric pricing structure';
-    $request->hrisLocation->externalIdentifier = '<value>';
-    $request->hrisLocation->id = '<id>';
-    $request->hrisLocation->isActive = false;
-    $request->hrisLocation->isHq = false;
-    $request->hrisLocation->languageLocale = '<value>';
-    $request->hrisLocation->name = '<value>';
-    $request->hrisLocation->parentId = '<value>';
-    $request->hrisLocation->raw = [
-        'male' => '<value>',
-    ];
-    $request->hrisLocation->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisLocation->timezone = 'America/Argentina/Buenos_Aires';
-    $request->hrisLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-17T19:29:27.962Z');
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateHrisLocationRequest(
+        connectionId: '<value>',
+        hrisLocation: new Shared\HrisLocation(
+            address: new Shared\PropertyHrisLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Port Trinityshire',
+                country: 'Saint Pierre and Miquelon',
+                countryCode: 'GE',
+                postalCode: '72153',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2023-11-01T01:29:28.442Z'),
+            currency: 'CFA Franc BCEAO',
+            description: 'Persistent eco-centric pricing structure',
+            externalIdentifier: '<value>',
+            id: '<id>',
+            isActive: false,
+            isHq: false,
+            languageLocale: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'male' => '<value>',
+            ],
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            timezone: 'America/Argentina/Buenos_Aires',
+            updatedAt: Utils\Utils::parseDateTime('2023-07-17T19:29:27.962Z'),
+        ),
+    );
     $response = $sdk->location->createHrisLocation($request);
 
     if ($response->hrisLocation !== null) {
@@ -149,15 +155,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\CreateHrisLocationRequest](../../Models/Operations/CreateHrisLocationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateHrisLocationRequest](../../Models/Operations/CreateHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateHrisLocationResponse](../../Models/Operations/CreateHrisLocationResponse.md)**
+**[?Operations\CreateHrisLocationResponse](../../Models/Operations/CreateHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getCommerceLocation
 
@@ -166,15 +176,13 @@ Retrieve a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -182,13 +190,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetCommerceLocationRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetCommerceLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->location->getCommerceLocation($request);
 
     if ($response->commerceLocation !== null) {
@@ -201,15 +209,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\GetCommerceLocationRequest](../../Models/Operations/GetCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetCommerceLocationRequest](../../Models/Operations/GetCommerceLocationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetCommerceLocationResponse](../../Models/Operations/GetCommerceLocationResponse.md)**
+**[?Operations\GetCommerceLocationResponse](../../Models/Operations/GetCommerceLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getHrisLocation
 
@@ -218,15 +230,13 @@ Retrieve a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -234,13 +244,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetHrisLocationRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetHrisLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->location->getHrisLocation($request);
 
     if ($response->hrisLocation !== null) {
@@ -253,15 +263,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Unified\Unified_to\Models\Operations\GetHrisLocationRequest](../../Models/Operations/GetHrisLocationRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetHrisLocationRequest](../../Models/Operations/GetHrisLocationRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetHrisLocationResponse](../../Models/Operations/GetHrisLocationResponse.md)**
+**[?Operations\GetHrisLocationResponse](../../Models/Operations/GetHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listCommerceLocations
 
@@ -270,15 +284,14 @@ List all locations
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -286,16 +299,16 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListCommerceLocationsRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 2087.22;
-    $request->offset = 1166.59;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-09T14:52:37.550Z');;
-
+    $request = new Operations\ListCommerceLocationsRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 2087.22,
+        offset: 1166.59,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-06-09T14:52:37.550Z'),
+    );
     $response = $sdk->location->listCommerceLocations($request);
 
     if ($response->commerceLocations !== null) {
@@ -308,15 +321,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest](../../Models/Operations/ListCommerceLocationsRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListCommerceLocationsRequest](../../Models/Operations/ListCommerceLocationsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse](../../Models/Operations/ListCommerceLocationsResponse.md)**
+**[?Operations\ListCommerceLocationsResponse](../../Models/Operations/ListCommerceLocationsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listHrisLocations
 
@@ -325,15 +342,14 @@ List all locations
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -341,16 +357,16 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListHrisLocationsRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 5896.74;
-    $request->offset = 7281.87;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-12T05:34:35.160Z');;
-
+    $request = new Operations\ListHrisLocationsRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 5896.74,
+        offset: 7281.87,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-05-12T05:34:35.160Z'),
+    );
     $response = $sdk->location->listHrisLocations($request);
 
     if ($response->hrisLocations !== null) {
@@ -363,15 +379,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListHrisLocationsRequest](../../Models/Operations/ListHrisLocationsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListHrisLocationsRequest](../../Models/Operations/ListHrisLocationsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListHrisLocationsResponse](../../Models/Operations/ListHrisLocationsResponse.md)**
+**[?Operations\ListHrisLocationsResponse](../../Models/Operations/ListHrisLocationsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchCommerceLocation
 
@@ -380,15 +400,14 @@ Update a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -396,29 +415,31 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchCommerceLocationRequest();
-    $request->commerceLocation = new Shared\CommerceLocation();
-    $request->commerceLocation->address = new Shared\PropertyCommerceLocationAddress();
-    $request->commerceLocation->address->address1 = '<value>';
-    $request->commerceLocation->address->address2 = '<value>';
-    $request->commerceLocation->address->city = 'Lonniefurt';
-    $request->commerceLocation->address->country = 'Libyan Arab Jamahiriya';
-    $request->commerceLocation->address->countryCode = 'KM';
-    $request->commerceLocation->address->postalCode = '64647';
-    $request->commerceLocation->address->region = '<value>';
-    $request->commerceLocation->address->regionCode = '<value>';
-    $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-12T06:32:06.220Z');
-    $request->commerceLocation->description = 'Managed real-time forecast';
-    $request->commerceLocation->id = '<id>';
-    $request->commerceLocation->isActive = false;
-    $request->commerceLocation->name = '<value>';
-    $request->commerceLocation->raw = [
-        'COM' => '<value>',
-    ];
-    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-02T05:15:52.185Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchCommerceLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        commerceLocation: new Shared\CommerceLocation(
+            name: '<value>',
+            address: new Shared\PropertyCommerceLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Lonniefurt',
+                country: 'Libyan Arab Jamahiriya',
+                countryCode: 'KM',
+                postalCode: '64647',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2023-03-12T06:32:06.220Z'),
+            description: 'Managed real-time forecast',
+            id: '<id>',
+            isActive: false,
+            raw: [
+                'COM' => '<value>',
+            ],
+            updatedAt: Utils\Utils::parseDateTime('2022-04-02T05:15:52.185Z'),
+        ),
+    );
     $response = $sdk->location->patchCommerceLocation($request);
 
     if ($response->commerceLocation !== null) {
@@ -431,15 +452,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest](../../Models/Operations/PatchCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchCommerceLocationRequest](../../Models/Operations/PatchCommerceLocationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse](../../Models/Operations/PatchCommerceLocationResponse.md)**
+**[?Operations\PatchCommerceLocationResponse](../../Models/Operations/PatchCommerceLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchHrisLocation
 
@@ -448,15 +473,14 @@ Update a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -464,38 +488,40 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchHrisLocationRequest();
-    $request->hrisLocation = new Shared\HrisLocation();
-    $request->hrisLocation->address = new Shared\PropertyHrisLocationAddress();
-    $request->hrisLocation->address->address1 = '<value>';
-    $request->hrisLocation->address->address2 = '<value>';
-    $request->hrisLocation->address->city = 'Jeanieshire';
-    $request->hrisLocation->address->country = 'Lao People\'s Democratic Republic';
-    $request->hrisLocation->address->countryCode = 'SA';
-    $request->hrisLocation->address->postalCode = '01257-5261';
-    $request->hrisLocation->address->region = '<value>';
-    $request->hrisLocation->address->regionCode = '<value>';
-    $request->hrisLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-19T04:39:31.681Z');
-    $request->hrisLocation->currency = 'Swiss Franc';
-    $request->hrisLocation->description = 'Multi-lateral maximized website';
-    $request->hrisLocation->externalIdentifier = '<value>';
-    $request->hrisLocation->id = '<id>';
-    $request->hrisLocation->isActive = false;
-    $request->hrisLocation->isHq = false;
-    $request->hrisLocation->languageLocale = '<value>';
-    $request->hrisLocation->name = '<value>';
-    $request->hrisLocation->parentId = '<value>';
-    $request->hrisLocation->raw = [
-        'like' => '<value>',
-    ];
-    $request->hrisLocation->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisLocation->timezone = 'Asia/Tehran';
-    $request->hrisLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-09T18:51:28.735Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchHrisLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisLocation: new Shared\HrisLocation(
+            address: new Shared\PropertyHrisLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Jeanieshire',
+                country: 'Lao People\'s Democratic Republic',
+                countryCode: 'SA',
+                postalCode: '01257-5261',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2024-01-19T04:39:31.681Z'),
+            currency: 'Swiss Franc',
+            description: 'Multi-lateral maximized website',
+            externalIdentifier: '<value>',
+            id: '<id>',
+            isActive: false,
+            isHq: false,
+            languageLocale: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'like' => '<value>',
+            ],
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            timezone: 'Asia/Tehran',
+            updatedAt: Utils\Utils::parseDateTime('2024-08-09T18:51:28.735Z'),
+        ),
+    );
     $response = $sdk->location->patchHrisLocation($request);
 
     if ($response->hrisLocation !== null) {
@@ -508,15 +534,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\PatchHrisLocationRequest](../../Models/Operations/PatchHrisLocationRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchHrisLocationRequest](../../Models/Operations/PatchHrisLocationRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchHrisLocationResponse](../../Models/Operations/PatchHrisLocationResponse.md)**
+**[?Operations\PatchHrisLocationResponse](../../Models/Operations/PatchHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeCommerceLocation
 
@@ -525,15 +555,13 @@ Remove a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -541,10 +569,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveCommerceLocationRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveCommerceLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->location->removeCommerceLocation($request);
 
     if ($response->statusCode === 200) {
@@ -557,15 +585,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest](../../Models/Operations/RemoveCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveCommerceLocationRequest](../../Models/Operations/RemoveCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse](../../Models/Operations/RemoveCommerceLocationResponse.md)**
+**[?Operations\RemoveCommerceLocationResponse](../../Models/Operations/RemoveCommerceLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeHrisLocation
 
@@ -574,15 +606,13 @@ Remove a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -590,10 +620,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveHrisLocationRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveHrisLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->location->removeHrisLocation($request);
 
     if ($response->statusCode === 200) {
@@ -606,15 +636,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest](../../Models/Operations/RemoveHrisLocationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveHrisLocationRequest](../../Models/Operations/RemoveHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse](../../Models/Operations/RemoveHrisLocationResponse.md)**
+**[?Operations\RemoveHrisLocationResponse](../../Models/Operations/RemoveHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateCommerceLocation
 
@@ -623,15 +657,14 @@ Update a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -639,29 +672,31 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateCommerceLocationRequest();
-    $request->commerceLocation = new Shared\CommerceLocation();
-    $request->commerceLocation->address = new Shared\PropertyCommerceLocationAddress();
-    $request->commerceLocation->address->address1 = '<value>';
-    $request->commerceLocation->address->address2 = '<value>';
-    $request->commerceLocation->address->city = 'Stillwater';
-    $request->commerceLocation->address->country = 'Sierra Leone';
-    $request->commerceLocation->address->countryCode = 'AL';
-    $request->commerceLocation->address->postalCode = '49876-8332';
-    $request->commerceLocation->address->region = '<value>';
-    $request->commerceLocation->address->regionCode = '<value>';
-    $request->commerceLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-19T11:29:36.755Z');
-    $request->commerceLocation->description = 'Customizable interactive Graphic Interface';
-    $request->commerceLocation->id = '<id>';
-    $request->commerceLocation->isActive = false;
-    $request->commerceLocation->name = '<value>';
-    $request->commerceLocation->raw = [
-        'Van' => '<value>',
-    ];
-    $request->commerceLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-22T20:47:46.586Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateCommerceLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        commerceLocation: new Shared\CommerceLocation(
+            name: '<value>',
+            address: new Shared\PropertyCommerceLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Stillwater',
+                country: 'Sierra Leone',
+                countryCode: 'AL',
+                postalCode: '49876-8332',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2022-04-19T11:29:36.755Z'),
+            description: 'Customizable interactive Graphic Interface',
+            id: '<id>',
+            isActive: false,
+            raw: [
+                'Van' => '<value>',
+            ],
+            updatedAt: Utils\Utils::parseDateTime('2022-04-22T20:47:46.586Z'),
+        ),
+    );
     $response = $sdk->location->updateCommerceLocation($request);
 
     if ($response->commerceLocation !== null) {
@@ -674,15 +709,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest](../../Models/Operations/UpdateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateCommerceLocationRequest](../../Models/Operations/UpdateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse](../../Models/Operations/UpdateCommerceLocationResponse.md)**
+**[?Operations\UpdateCommerceLocationResponse](../../Models/Operations/UpdateCommerceLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateHrisLocation
 
@@ -691,15 +730,14 @@ Update a location
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -707,38 +745,40 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateHrisLocationRequest();
-    $request->hrisLocation = new Shared\HrisLocation();
-    $request->hrisLocation->address = new Shared\PropertyHrisLocationAddress();
-    $request->hrisLocation->address->address1 = '<value>';
-    $request->hrisLocation->address->address2 = '<value>';
-    $request->hrisLocation->address->city = 'Willieton';
-    $request->hrisLocation->address->country = 'Antarctica (the territory South of 60 deg S)';
-    $request->hrisLocation->address->countryCode = 'AM';
-    $request->hrisLocation->address->postalCode = '16560';
-    $request->hrisLocation->address->region = '<value>';
-    $request->hrisLocation->address->regionCode = '<value>';
-    $request->hrisLocation->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-06T16:46:59.275Z');
-    $request->hrisLocation->currency = 'Guinea Franc';
-    $request->hrisLocation->description = 'Horizontal solution-oriented conglomeration';
-    $request->hrisLocation->externalIdentifier = '<value>';
-    $request->hrisLocation->id = '<id>';
-    $request->hrisLocation->isActive = false;
-    $request->hrisLocation->isHq = false;
-    $request->hrisLocation->languageLocale = '<value>';
-    $request->hrisLocation->name = '<value>';
-    $request->hrisLocation->parentId = '<value>';
-    $request->hrisLocation->raw = [
-        'West' => '<value>',
-    ];
-    $request->hrisLocation->telephones = [
-        new Shared\HrisTelephone(),
-    ];
-    $request->hrisLocation->timezone = 'Asia/Kamchatka';
-    $request->hrisLocation->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-23T01:10:31.769Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateHrisLocationRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        hrisLocation: new Shared\HrisLocation(
+            address: new Shared\PropertyHrisLocationAddress(
+                address1: '<value>',
+                address2: '<value>',
+                city: 'Willieton',
+                country: 'Antarctica (the territory South of 60 deg S)',
+                countryCode: 'AM',
+                postalCode: '16560',
+                region: '<value>',
+                regionCode: '<value>',
+            ),
+            createdAt: Utils\Utils::parseDateTime('2023-02-06T16:46:59.275Z'),
+            currency: 'Guinea Franc',
+            description: 'Horizontal solution-oriented conglomeration',
+            externalIdentifier: '<value>',
+            id: '<id>',
+            isActive: false,
+            isHq: false,
+            languageLocale: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            raw: [
+                'West' => '<value>',
+            ],
+            telephones: [
+                new Shared\HrisTelephone,
+            ],
+            timezone: 'Asia/Kamchatka',
+            updatedAt: Utils\Utils::parseDateTime('2024-02-23T01:10:31.769Z'),
+        ),
+    );
     $response = $sdk->location->updateHrisLocation($request);
 
     if ($response->hrisLocation !== null) {
@@ -751,12 +791,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest](../../Models/Operations/UpdateHrisLocationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateHrisLocationRequest](../../Models/Operations/UpdateHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse](../../Models/Operations/UpdateHrisLocationResponse.md)**
+**[?Operations\UpdateHrisLocationResponse](../../Models/Operations/UpdateHrisLocationResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

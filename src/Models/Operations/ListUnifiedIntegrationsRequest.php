@@ -22,26 +22,50 @@ class ListUnifiedIntegrationsRequest
     /**
      * Filter the results on these categories
      *
-     * @var ?array<\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsQueryParamCategories> $categories
+     * @var ?array<ListUnifiedIntegrationsQueryParamCategories> $categories
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=categories')]
     public ?array $categories = null;
 
+    /**
+     *
+     * @var ?string $env
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
     public ?string $env = null;
 
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
+    /**
+     *
+     * @var ?string $order
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
     public ?string $order = null;
 
+    /**
+     *
+     * @var ?string $sort
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
     public ?string $sort = null;
 
+    /**
+     *
+     * @var ?bool $summary
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=summary')]
     public ?bool $summary = null;
 
@@ -53,20 +77,36 @@ class ListUnifiedIntegrationsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
     public ?string $type = null;
 
+    /**
+     *
+     * @var ?string $updatedGte
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
     public ?string $updatedGte = null;
 
-    public function __construct()
+    /**
+     * @param  ?bool  $active
+     * @param  ?array<ListUnifiedIntegrationsQueryParamCategories>  $categories
+     * @param  ?string  $env
+     * @param  ?float  $limit
+     * @param  ?float  $offset
+     * @param  ?string  $order
+     * @param  ?string  $sort
+     * @param  ?bool  $summary
+     * @param  ?string  $type
+     * @param  ?string  $updatedGte
+     */
+    public function __construct(?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?bool $summary = null, ?string $type = null, ?string $updatedGte = null)
     {
-        $this->active = null;
-        $this->categories = null;
-        $this->env = null;
-        $this->limit = null;
-        $this->offset = null;
-        $this->order = null;
-        $this->sort = null;
-        $this->summary = null;
-        $this->type = null;
-        $this->updatedGte = null;
+        $this->active = $active;
+        $this->categories = $categories;
+        $this->env = $env;
+        $this->limit = $limit;
+        $this->offset = $offset;
+        $this->order = $order;
+        $this->sort = $sort;
+        $this->summary = $summary;
+        $this->type = $type;
+        $this->updatedGte = $updatedGte;
     }
 }

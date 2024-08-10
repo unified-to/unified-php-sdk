@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Operations;
 /** IntegrationType - Informational object for supported integrations. */
 class IntegrationType
 {
+
     public function __construct()
     {
     }

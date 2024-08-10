@@ -27,15 +27,31 @@ class ListCommerceInventoriesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
+    /**
+     *
+     * @var ?string $itemVariantId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=item_variant_id')]
     public ?string $itemVariantId = null;
 
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
+    /**
+     *
+     * @var ?string $locationId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=location_id')]
     public ?string $locationId = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
@@ -55,15 +71,25 @@ class ListCommerceInventoriesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?array<string>  $fields
+     * @param  ?string  $itemVariantId
+     * @param  ?float  $limit
+     * @param  ?string  $locationId
+     * @param  ?float  $offset
+     * @param  ?string  $query
+     * @param  ?\DateTime  $updatedGte
+     */
+    public function __construct(?string $connectionId = null, ?array $fields = null, ?string $itemVariantId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $query = null, ?\DateTime $updatedGte = null)
     {
-        $this->connectionId = '';
-        $this->fields = null;
-        $this->itemVariantId = null;
-        $this->limit = null;
-        $this->locationId = null;
-        $this->offset = null;
-        $this->query = null;
-        $this->updatedGte = null;
+        $this->connectionId = $connectionId;
+        $this->fields = $fields;
+        $this->itemVariantId = $itemVariantId;
+        $this->limit = $limit;
+        $this->locationId = $locationId;
+        $this->offset = $offset;
+        $this->query = $query;
+        $this->updatedGte = $updatedGte;
     }
 }

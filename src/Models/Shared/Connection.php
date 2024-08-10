@@ -15,29 +15,35 @@ class Connection
     /**
      * An authentication object that represents a specific authorized user's connection to an integration.
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyConnectionAuth $auth
+     * @var ?PropertyConnectionAuth $auth
      */
     #[\JMS\Serializer\Annotation\SerializedName('auth')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyConnectionAuth')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyConnectionAuth')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyConnectionAuth $auth = null;
 
+    /**
+     *
+     * @var ?string $authAwsArn
+     */
     #[\JMS\Serializer\Annotation\SerializedName('auth_aws_arn')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $authAwsArn = null;
 
     /**
      * The Integration categories that this connection supports
      *
-     * @var array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories> $categories
+     * @var array<PropertyConnectionCategories> $categories
      */
     #[\JMS\Serializer\Annotation\SerializedName('categories')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyConnectionCategories>>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories>')]
     public array $categories;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
@@ -51,75 +57,119 @@ class Connection
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $cursorsCache = null;
 
+    /**
+     *
+     * @var ?string $environment
+     */
     #[\JMS\Serializer\Annotation\SerializedName('environment')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $environment = null;
 
+    /**
+     *
+     * @var ?string $externalXref
+     */
     #[\JMS\Serializer\Annotation\SerializedName('external_xref')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $externalXref = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var string $integrationType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('integration_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $integrationType;
 
+    /**
+     *
+     * @var ?bool $isPaused
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_paused')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isPaused = null;
 
+    /**
+     *
+     * @var ?\DateTime $lastHealthyAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('last_healthy_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $lastHealthyAt = null;
 
+    /**
+     *
+     * @var ?\DateTime $lastUnhealthyAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('last_unhealthy_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $lastUnhealthyAt = null;
 
     /**
      * $permissions
      *
-     * @var array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions> $permissions
+     * @var array<PropertyConnectionPermissions> $permissions
      */
     #[\JMS\Serializer\Annotation\SerializedName('permissions')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>')]
     public array $permissions;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $workspaceId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $workspaceId = null;
 
-    public function __construct()
+    /**
+     * @param  ?array<PropertyConnectionCategories>  $categories
+     * @param  ?string  $integrationType
+     * @param  ?array<PropertyConnectionPermissions>  $permissions
+     * @param  ?PropertyConnectionAuth  $auth
+     * @param  ?string  $authAwsArn
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<array<string, mixed>>  $cursorsCache
+     * @param  ?string  $environment
+     * @param  ?string  $externalXref
+     * @param  ?string  $id
+     * @param  ?bool  $isPaused
+     * @param  ?\DateTime  $lastHealthyAt
+     * @param  ?\DateTime  $lastUnhealthyAt
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $workspaceId
+     */
+    public function __construct(?array $categories = null, ?string $integrationType = null, ?array $permissions = null, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?array $cursorsCache = null, ?string $environment = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null)
     {
-        $this->auth = null;
-        $this->authAwsArn = null;
-        $this->categories = [];
-        $this->createdAt = null;
-        $this->cursorsCache = null;
-        $this->environment = null;
-        $this->externalXref = null;
-        $this->id = null;
-        $this->integrationType = '';
-        $this->isPaused = null;
-        $this->lastHealthyAt = null;
-        $this->lastUnhealthyAt = null;
-        $this->permissions = [];
-        $this->updatedAt = null;
-        $this->workspaceId = null;
+        $this->categories = $categories;
+        $this->integrationType = $integrationType;
+        $this->permissions = $permissions;
+        $this->auth = $auth;
+        $this->authAwsArn = $authAwsArn;
+        $this->createdAt = $createdAt;
+        $this->cursorsCache = $cursorsCache;
+        $this->environment = $environment;
+        $this->externalXref = $externalXref;
+        $this->id = $id;
+        $this->isPaused = $isPaused;
+        $this->lastHealthyAt = $lastHealthyAt;
+        $this->lastUnhealthyAt = $lastUnhealthyAt;
+        $this->updatedAt = $updatedAt;
+        $this->workspaceId = $workspaceId;
     }
 }

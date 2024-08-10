@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateHrisLocationRequest
 {
+    /**
+     *
+     * @var ?Shared\HrisLocation $hrisLocation
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\HrisLocation $hrisLocation = null;
+    public ?Shared\HrisLocation $hrisLocation = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateHrisLocationRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\HrisLocation  $hrisLocation
+     */
+    public function __construct(?string $connectionId = null, ?Shared\HrisLocation $hrisLocation = null)
     {
-        $this->hrisLocation = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->hrisLocation = $hrisLocation;
     }
 }

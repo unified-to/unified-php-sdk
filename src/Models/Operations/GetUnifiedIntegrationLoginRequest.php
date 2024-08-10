@@ -11,6 +11,10 @@ namespace Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class GetUnifiedIntegrationLoginRequest
 {
+    /**
+     *
+     * @var ?string $env
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
     public ?string $env = null;
 
@@ -30,6 +34,10 @@ class GetUnifiedIntegrationLoginRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=integration_type')]
     public string $integrationType;
 
+    /**
+     *
+     * @var ?bool $redirect
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=redirect')]
     public ?bool $redirect = null;
 
@@ -57,14 +65,23 @@ class GetUnifiedIntegrationLoginRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=workspace_id')]
     public string $workspaceId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $integrationType
+     * @param  ?string  $workspaceId
+     * @param  ?string  $env
+     * @param  ?string  $failureRedirect
+     * @param  ?bool  $redirect
+     * @param  ?string  $state
+     * @param  ?string  $successRedirect
+     */
+    public function __construct(?string $integrationType = null, ?string $workspaceId = null, ?string $env = null, ?string $failureRedirect = null, ?bool $redirect = null, ?string $state = null, ?string $successRedirect = null)
     {
-        $this->env = null;
-        $this->failureRedirect = null;
-        $this->integrationType = '';
-        $this->redirect = null;
-        $this->state = null;
-        $this->successRedirect = null;
-        $this->workspaceId = '';
+        $this->integrationType = $integrationType;
+        $this->workspaceId = $workspaceId;
+        $this->env = $env;
+        $this->failureRedirect = $failureRedirect;
+        $this->redirect = $redirect;
+        $this->state = $state;
+        $this->successRedirect = $successRedirect;
     }
 }

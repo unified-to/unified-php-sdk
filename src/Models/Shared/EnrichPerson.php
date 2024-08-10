@@ -15,85 +15,125 @@ class EnrichPerson
     /**
      * The address of the person
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress $address
+     * @var ?PropertyEnrichPersonAddress $address
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyEnrichPersonAddress $address = null;
 
+    /**
+     *
+     * @var ?string $bio
+     */
     #[\JMS\Serializer\Annotation\SerializedName('bio')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $bio = null;
 
+    /**
+     *
+     * @var ?string $birthdate
+     */
     #[\JMS\Serializer\Annotation\SerializedName('birthdate')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $birthdate = null;
 
+    /**
+     *
+     * @var ?string $company
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $company = null;
 
+    /**
+     *
+     * @var ?string $companyDomain
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_domain')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyDomain = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
     /**
      * An array of email addresses for this person
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\EnrichEmail> $emails
+     * @var ?array<EnrichEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\EnrichEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?string $facebookUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('facebook_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $facebookUrl = null;
 
+    /**
+     *
+     * @var ?Gender $gender
+     */
     #[\JMS\Serializer\Annotation\SerializedName('gender')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Gender>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Gender')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Gender $gender = null;
 
+    /**
+     *
+     * @var ?string $githubUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('github_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $githubUrl = null;
 
+    /**
+     *
+     * @var ?string $githubUsername
+     */
     #[\JMS\Serializer\Annotation\SerializedName('github_username')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $githubUsername = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $imageUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('image_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $imageUrl = null;
 
+    /**
+     *
+     * @var ?string $linkedinUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('linkedin_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $linkedinUrl = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -110,78 +150,122 @@ class EnrichPerson
     /**
      * An array of telephones for this person
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\EnrichTelephone> $telephones
+     * @var ?array<EnrichTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\EnrichTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 
+    /**
+     *
+     * @var ?string $timezone
+     */
     #[\JMS\Serializer\Annotation\SerializedName('timezone')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $timezone = null;
 
+    /**
+     *
+     * @var ?string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $title = null;
 
+    /**
+     *
+     * @var ?string $twitterHandle
+     */
     #[\JMS\Serializer\Annotation\SerializedName('twitter_handle')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $twitterHandle = null;
 
+    /**
+     *
+     * @var ?string $twitterUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('twitter_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $twitterUrl = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?float $utcOffset
+     */
     #[\JMS\Serializer\Annotation\SerializedName('utc_offset')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $utcOffset = null;
 
     /**
      * $workHistories
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory> $workHistories
+     * @var ?array<EnrichPersonWorkHistory> $workHistories
      */
     #[\JMS\Serializer\Annotation\SerializedName('work_histories')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $workHistories = null;
 
-    public function __construct()
+    /**
+     * @param  ?PropertyEnrichPersonAddress  $address
+     * @param  ?string  $bio
+     * @param  ?string  $birthdate
+     * @param  ?string  $company
+     * @param  ?string  $companyDomain
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<EnrichEmail>  $emails
+     * @param  ?string  $facebookUrl
+     * @param  ?Gender  $gender
+     * @param  ?string  $githubUrl
+     * @param  ?string  $githubUsername
+     * @param  ?string  $id
+     * @param  ?string  $imageUrl
+     * @param  ?string  $linkedinUrl
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<EnrichTelephone>  $telephones
+     * @param  ?string  $timezone
+     * @param  ?string  $title
+     * @param  ?string  $twitterHandle
+     * @param  ?string  $twitterUrl
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?float  $utcOffset
+     * @param  ?array<EnrichPersonWorkHistory>  $workHistories
+     */
+    public function __construct(?PropertyEnrichPersonAddress $address = null, ?string $bio = null, ?string $birthdate = null, ?string $company = null, ?string $companyDomain = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $facebookUrl = null, ?Gender $gender = null, ?string $githubUrl = null, ?string $githubUsername = null, ?string $id = null, ?string $imageUrl = null, ?string $linkedinUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?string $title = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $utcOffset = null, ?array $workHistories = null)
     {
-        $this->address = null;
-        $this->bio = null;
-        $this->birthdate = null;
-        $this->company = null;
-        $this->companyDomain = null;
-        $this->createdAt = null;
-        $this->emails = null;
-        $this->facebookUrl = null;
-        $this->gender = null;
-        $this->githubUrl = null;
-        $this->githubUsername = null;
-        $this->id = null;
-        $this->imageUrl = null;
-        $this->linkedinUrl = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->telephones = null;
-        $this->timezone = null;
-        $this->title = null;
-        $this->twitterHandle = null;
-        $this->twitterUrl = null;
-        $this->updatedAt = null;
-        $this->utcOffset = null;
-        $this->workHistories = null;
+        $this->address = $address;
+        $this->bio = $bio;
+        $this->birthdate = $birthdate;
+        $this->company = $company;
+        $this->companyDomain = $companyDomain;
+        $this->createdAt = $createdAt;
+        $this->emails = $emails;
+        $this->facebookUrl = $facebookUrl;
+        $this->gender = $gender;
+        $this->githubUrl = $githubUrl;
+        $this->githubUsername = $githubUsername;
+        $this->id = $id;
+        $this->imageUrl = $imageUrl;
+        $this->linkedinUrl = $linkedinUrl;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->telephones = $telephones;
+        $this->timezone = $timezone;
+        $this->title = $title;
+        $this->twitterHandle = $twitterHandle;
+        $this->twitterUrl = $twitterUrl;
+        $this->updatedAt = $updatedAt;
+        $this->utcOffset = $utcOffset;
+        $this->workHistories = $workHistories;
     }
 }

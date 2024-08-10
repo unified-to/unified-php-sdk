@@ -8,15 +8,15 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class UpdateAtsCandidateResponse
 {
     /**
      * Successful
      *
-     * @var ?\Unified\Unified_to\Models\Shared\AtsCandidate $atsCandidate
+     * @var ?Shared\AtsCandidate $atsCandidate
      */
-    public ?\Unified\Unified_to\Models\Shared\AtsCandidate $atsCandidate = null;
+    public ?Shared\AtsCandidate $atsCandidate = null;
 
     /**
      * HTTP response content type for this operation
@@ -35,15 +35,21 @@ class UpdateAtsCandidateResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?Shared\AtsCandidate  $atsCandidate
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?Shared\AtsCandidate $atsCandidate = null)
     {
-        $this->atsCandidate = null;
-        $this->contentType = '';
-        $this->statusCode = 0;
-        $this->rawResponse = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->atsCandidate = $atsCandidate;
     }
 }

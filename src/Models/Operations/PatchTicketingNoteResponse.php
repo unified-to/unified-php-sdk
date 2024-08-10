@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class PatchTicketingNoteResponse
 {
     /**
@@ -28,22 +28,28 @@ class PatchTicketingNoteResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
      * Successful
      *
-     * @var ?\Unified\Unified_to\Models\Shared\TicketingNote $ticketingNote
+     * @var ?Shared\TicketingNote $ticketingNote
      */
-    public ?\Unified\Unified_to\Models\Shared\TicketingNote $ticketingNote = null;
+    public ?Shared\TicketingNote $ticketingNote = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?Shared\TicketingNote  $ticketingNote
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?Shared\TicketingNote $ticketingNote = null)
     {
-        $this->contentType = '';
-        $this->statusCode = 0;
-        $this->rawResponse = null;
-        $this->ticketingNote = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->ticketingNote = $ticketingNote;
     }
 }

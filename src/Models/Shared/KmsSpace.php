@@ -11,31 +11,49 @@ namespace Unified\Unified_to\Models\Shared;
 
 class KmsSpace
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $id;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    /**
+     *
+     * @var ?string $parentSpaceId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_space_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentSpaceId = null;
 
@@ -49,26 +67,43 @@ class KmsSpace
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?bool  $isActive
+     * @param  ?string  $parentSpaceId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?string $id = null, ?string $name = null, ?\DateTime $createdAt = null, ?string $description = null, ?bool $isActive = null, ?string $parentSpaceId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->createdAt = null;
-        $this->description = null;
-        $this->id = '';
-        $this->isActive = null;
-        $this->name = '';
-        $this->parentSpaceId = null;
-        $this->raw = null;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->id = $id;
+        $this->name = $name;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->isActive = $isActive;
+        $this->parentSpaceId = $parentSpaceId;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

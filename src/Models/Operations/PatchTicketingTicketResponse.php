@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class PatchTicketingTicketResponse
 {
     /**
@@ -28,22 +28,28 @@ class PatchTicketingTicketResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
      * Successful
      *
-     * @var ?\Unified\Unified_to\Models\Shared\TicketingTicket $ticketingTicket
+     * @var ?Shared\TicketingTicket $ticketingTicket
      */
-    public ?\Unified\Unified_to\Models\Shared\TicketingTicket $ticketingTicket = null;
+    public ?Shared\TicketingTicket $ticketingTicket = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?Shared\TicketingTicket  $ticketingTicket
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?Shared\TicketingTicket $ticketingTicket = null)
     {
-        $this->contentType = '';
-        $this->statusCode = 0;
-        $this->rawResponse = null;
-        $this->ticketingTicket = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->ticketingTicket = $ticketingTicket;
     }
 }

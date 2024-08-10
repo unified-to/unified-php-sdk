@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAccountingContactRequest
 {
+    /**
+     *
+     * @var ?Shared\AccountingContact $accountingContact
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AccountingContact $accountingContact = null;
+    public ?Shared\AccountingContact $accountingContact = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateAccountingContactRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\AccountingContact  $accountingContact
+     */
+    public function __construct(?string $connectionId = null, ?Shared\AccountingContact $accountingContact = null)
     {
-        $this->accountingContact = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->accountingContact = $accountingContact;
     }
 }

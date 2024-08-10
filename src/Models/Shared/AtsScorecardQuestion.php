@@ -11,24 +11,38 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsScorecardQuestion
 {
+    /**
+     *
+     * @var ?string $answer
+     */
     #[\JMS\Serializer\Annotation\SerializedName('answer')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $answer = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var string $text
+     */
     #[\JMS\Serializer\Annotation\SerializedName('text')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $text;
 
-    public function __construct()
+    /**
+     * @param  ?string  $text
+     * @param  ?string  $answer
+     * @param  ?string  $description
+     */
+    public function __construct(?string $text = null, ?string $answer = null, ?string $description = null)
     {
-        $this->answer = null;
-        $this->description = null;
-        $this->text = '';
+        $this->text = $text;
+        $this->answer = $answer;
+        $this->description = $description;
     }
 }

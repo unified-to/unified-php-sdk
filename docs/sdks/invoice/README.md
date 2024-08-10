@@ -17,15 +17,14 @@ Create an invoice
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -33,37 +32,38 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateAccountingInvoiceRequest();
-    $request->accountingInvoice = new Shared\AccountingInvoice();
-    $request->accountingInvoice->balanceAmount = 6736.06;
-    $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-27T09:14:42.959Z');
-    $request->accountingInvoice->contactId = '<value>';
-    $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-05T18:32:52.109Z');
-    $request->accountingInvoice->currency = 'Uzbekistan Sum';
-    $request->accountingInvoice->discountAmount = 259.66;
-    $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-30T15:54:59.455Z');
-    $request->accountingInvoice->id = '<id>';
-    $request->accountingInvoice->invoiceNumber = '<value>';
-    $request->accountingInvoice->lineitems = [
-        new Shared\AccountingLineitem(),
-    ];
-    $request->accountingInvoice->notes = '<value>';
-    $request->accountingInvoice->paidAmount = 7142.37;
-    $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-16T02:12:20.862Z');
-    $request->accountingInvoice->paymentCollectionMethod = Shared\PaymentCollectionMethod::ChargeAutomatically;
-    $request->accountingInvoice->raw = [
-        'hacking' => '<value>',
-    ];
-    $request->accountingInvoice->refundAmount = 5503.49;
-    $request->accountingInvoice->refundReason = '<value>';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-02T02:10:22.972Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::PartiallyPaid;
-    $request->accountingInvoice->taxAmount = 6873.46;
-    $request->accountingInvoice->totalAmount = 6276.92;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-31T14:28:49.824Z');
-    $request->accountingInvoice->url = 'http://irresponsible-elite.biz';
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateAccountingInvoiceRequest(
+        connectionId: '<value>',
+        accountingInvoice: new Shared\AccountingInvoice(
+            balanceAmount: 6736.06,
+            cancelledAt: Utils\Utils::parseDateTime('2022-06-27T09:14:42.959Z'),
+            contactId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2022-07-05T18:32:52.109Z'),
+            currency: 'Uzbekistan Sum',
+            discountAmount: 259.66,
+            dueAt: Utils\Utils::parseDateTime('2023-04-30T15:54:59.455Z'),
+            id: '<id>',
+            invoiceNumber: '<value>',
+            lineitems: [
+                new Shared\AccountingLineitem,
+            ],
+            notes: '<value>',
+            paidAmount: 7142.37,
+            paidAt: Utils\Utils::parseDateTime('2023-09-16T02:12:20.862Z'),
+            paymentCollectionMethod: Shared\PaymentCollectionMethod::ChargeAutomatically,
+            raw: [
+                'hacking' => '<value>',
+            ],
+            refundAmount: 5503.49,
+            refundReason: '<value>',
+            refundedAt: Utils\Utils::parseDateTime('2024-06-02T02:10:22.972Z'),
+            status: Shared\AccountingInvoiceStatus::PartiallyPaid,
+            taxAmount: 6873.46,
+            totalAmount: 6276.92,
+            updatedAt: Utils\Utils::parseDateTime('2023-05-31T14:28:49.824Z'),
+            url: 'http://irresponsible-elite.biz',
+        ),
+    );
     $response = $sdk->invoice->createAccountingInvoice($request);
 
     if ($response->accountingInvoice !== null) {
@@ -76,15 +76,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest](../../Models/Operations/CreateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingInvoiceRequest](../../Models/Operations/CreateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse](../../Models/Operations/CreateAccountingInvoiceResponse.md)**
+**[?Operations\CreateAccountingInvoiceResponse](../../Models/Operations/CreateAccountingInvoiceResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getAccountingInvoice
 
@@ -93,15 +97,13 @@ Retrieve an invoice
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -109,13 +111,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetAccountingInvoiceRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetAccountingInvoiceRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->invoice->getAccountingInvoice($request);
 
     if ($response->accountingInvoice !== null) {
@@ -128,15 +130,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest](../../Models/Operations/GetAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingInvoiceRequest](../../Models/Operations/GetAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse](../../Models/Operations/GetAccountingInvoiceResponse.md)**
+**[?Operations\GetAccountingInvoiceResponse](../../Models/Operations/GetAccountingInvoiceResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listAccountingInvoices
 
@@ -145,15 +151,14 @@ List all invoices
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -161,17 +166,17 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListAccountingInvoicesRequest();
-    $request->connectionId = '<value>';
-    $request->contactId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 6788.11;
-    $request->offset = 5122.49;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-23T19:02:52.454Z');;
-
+    $request = new Operations\ListAccountingInvoicesRequest(
+        connectionId: '<value>',
+        contactId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 6788.11,
+        offset: 5122.49,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-05-23T19:02:52.454Z'),
+    );
     $response = $sdk->invoice->listAccountingInvoices($request);
 
     if ($response->accountingInvoices !== null) {
@@ -184,15 +189,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest](../../Models/Operations/ListAccountingInvoicesRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingInvoicesRequest](../../Models/Operations/ListAccountingInvoicesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse](../../Models/Operations/ListAccountingInvoicesResponse.md)**
+**[?Operations\ListAccountingInvoicesResponse](../../Models/Operations/ListAccountingInvoicesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchAccountingInvoice
 
@@ -201,15 +210,14 @@ Update an invoice
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -217,38 +225,39 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchAccountingInvoiceRequest();
-    $request->accountingInvoice = new Shared\AccountingInvoice();
-    $request->accountingInvoice->balanceAmount = 7374.1;
-    $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-18T11:25:21.140Z');
-    $request->accountingInvoice->contactId = '<value>';
-    $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-14T05:39:15.854Z');
-    $request->accountingInvoice->currency = 'Gold';
-    $request->accountingInvoice->discountAmount = 9127.96;
-    $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-07-05T05:55:55.560Z');
-    $request->accountingInvoice->id = '<id>';
-    $request->accountingInvoice->invoiceNumber = '<value>';
-    $request->accountingInvoice->lineitems = [
-        new Shared\AccountingLineitem(),
-    ];
-    $request->accountingInvoice->notes = '<value>';
-    $request->accountingInvoice->paidAmount = 7810.81;
-    $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-02T21:47:54.080Z');
-    $request->accountingInvoice->paymentCollectionMethod = Shared\PaymentCollectionMethod::SendInvoice;
-    $request->accountingInvoice->raw = [
-        'Credit' => '<value>',
-    ];
-    $request->accountingInvoice->refundAmount = 3028.19;
-    $request->accountingInvoice->refundReason = '<value>';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-05T22:52:23.132Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Paid;
-    $request->accountingInvoice->taxAmount = 6957.18;
-    $request->accountingInvoice->totalAmount = 2520.91;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-16T16:44:58.399Z');
-    $request->accountingInvoice->url = 'http://tame-jellybeans.biz';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchAccountingInvoiceRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        accountingInvoice: new Shared\AccountingInvoice(
+            balanceAmount: 7374.1,
+            cancelledAt: Utils\Utils::parseDateTime('2024-12-18T11:25:21.140Z'),
+            contactId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2023-06-14T05:39:15.854Z'),
+            currency: 'Gold',
+            discountAmount: 9127.96,
+            dueAt: Utils\Utils::parseDateTime('2024-07-05T05:55:55.560Z'),
+            id: '<id>',
+            invoiceNumber: '<value>',
+            lineitems: [
+                new Shared\AccountingLineitem,
+            ],
+            notes: '<value>',
+            paidAmount: 7810.81,
+            paidAt: Utils\Utils::parseDateTime('2023-03-02T21:47:54.080Z'),
+            paymentCollectionMethod: Shared\PaymentCollectionMethod::SendInvoice,
+            raw: [
+                'Credit' => '<value>',
+            ],
+            refundAmount: 3028.19,
+            refundReason: '<value>',
+            refundedAt: Utils\Utils::parseDateTime('2022-05-05T22:52:23.132Z'),
+            status: Shared\AccountingInvoiceStatus::Paid,
+            taxAmount: 6957.18,
+            totalAmount: 2520.91,
+            updatedAt: Utils\Utils::parseDateTime('2022-06-16T16:44:58.399Z'),
+            url: 'http://tame-jellybeans.biz',
+        ),
+    );
     $response = $sdk->invoice->patchAccountingInvoice($request);
 
     if ($response->accountingInvoice !== null) {
@@ -261,15 +270,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest](../../Models/Operations/PatchAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingInvoiceRequest](../../Models/Operations/PatchAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse](../../Models/Operations/PatchAccountingInvoiceResponse.md)**
+**[?Operations\PatchAccountingInvoiceResponse](../../Models/Operations/PatchAccountingInvoiceResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeAccountingInvoice
 
@@ -278,15 +291,13 @@ Remove an invoice
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -294,10 +305,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveAccountingInvoiceRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveAccountingInvoiceRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->invoice->removeAccountingInvoice($request);
 
     if ($response->statusCode === 200) {
@@ -310,15 +321,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest](../../Models/Operations/RemoveAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingInvoiceRequest](../../Models/Operations/RemoveAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse](../../Models/Operations/RemoveAccountingInvoiceResponse.md)**
+**[?Operations\RemoveAccountingInvoiceResponse](../../Models/Operations/RemoveAccountingInvoiceResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateAccountingInvoice
 
@@ -327,15 +342,14 @@ Update an invoice
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -343,38 +357,39 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateAccountingInvoiceRequest();
-    $request->accountingInvoice = new Shared\AccountingInvoice();
-    $request->accountingInvoice->balanceAmount = 6974.28;
-    $request->accountingInvoice->cancelledAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-03T06:46:26.704Z');
-    $request->accountingInvoice->contactId = '<value>';
-    $request->accountingInvoice->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-10T23:29:44.275Z');
-    $request->accountingInvoice->currency = 'Forint';
-    $request->accountingInvoice->discountAmount = 2579.09;
-    $request->accountingInvoice->dueAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-25T16:24:30.030Z');
-    $request->accountingInvoice->id = '<id>';
-    $request->accountingInvoice->invoiceNumber = '<value>';
-    $request->accountingInvoice->lineitems = [
-        new Shared\AccountingLineitem(),
-    ];
-    $request->accountingInvoice->notes = '<value>';
-    $request->accountingInvoice->paidAmount = 3682.14;
-    $request->accountingInvoice->paidAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-27T09:53:44.172Z');
-    $request->accountingInvoice->paymentCollectionMethod = Shared\PaymentCollectionMethod::SendInvoice;
-    $request->accountingInvoice->raw = [
-        'Nick' => '<value>',
-    ];
-    $request->accountingInvoice->refundAmount = 2939.97;
-    $request->accountingInvoice->refundReason = '<value>';
-    $request->accountingInvoice->refundedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-13T18:41:11.569Z');
-    $request->accountingInvoice->status = Shared\AccountingInvoiceStatus::Refunded;
-    $request->accountingInvoice->taxAmount = 126.09;
-    $request->accountingInvoice->totalAmount = 8760.89;
-    $request->accountingInvoice->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-08-21T11:15:42.077Z');
-    $request->accountingInvoice->url = 'https://long-term-expedition.org';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateAccountingInvoiceRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        accountingInvoice: new Shared\AccountingInvoice(
+            balanceAmount: 6974.28,
+            cancelledAt: Utils\Utils::parseDateTime('2023-06-03T06:46:26.704Z'),
+            contactId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2022-07-10T23:29:44.275Z'),
+            currency: 'Forint',
+            discountAmount: 2579.09,
+            dueAt: Utils\Utils::parseDateTime('2023-12-25T16:24:30.030Z'),
+            id: '<id>',
+            invoiceNumber: '<value>',
+            lineitems: [
+                new Shared\AccountingLineitem,
+            ],
+            notes: '<value>',
+            paidAmount: 3682.14,
+            paidAt: Utils\Utils::parseDateTime('2024-09-27T09:53:44.172Z'),
+            paymentCollectionMethod: Shared\PaymentCollectionMethod::SendInvoice,
+            raw: [
+                'Nick' => '<value>',
+            ],
+            refundAmount: 2939.97,
+            refundReason: '<value>',
+            refundedAt: Utils\Utils::parseDateTime('2022-08-13T18:41:11.569Z'),
+            status: Shared\AccountingInvoiceStatus::Refunded,
+            taxAmount: 126.09,
+            totalAmount: 8760.89,
+            updatedAt: Utils\Utils::parseDateTime('2024-08-21T11:15:42.077Z'),
+            url: 'https://long-term-expedition.org',
+        ),
+    );
     $response = $sdk->invoice->updateAccountingInvoice($request);
 
     if ($response->accountingInvoice !== null) {
@@ -387,12 +402,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest](../../Models/Operations/UpdateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateAccountingInvoiceRequest](../../Models/Operations/UpdateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse](../../Models/Operations/UpdateAccountingInvoiceResponse.md)**
+**[?Operations\UpdateAccountingInvoiceResponse](../../Models/Operations/UpdateAccountingInvoiceResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

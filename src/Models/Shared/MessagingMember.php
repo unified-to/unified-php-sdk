@@ -11,25 +11,39 @@ namespace Unified\Unified_to\Models\Shared;
 
 class MessagingMember
 {
+    /**
+     *
+     * @var ?string $email
+     */
     #[\JMS\Serializer\Annotation\SerializedName('email')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $email = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $email
+     * @param  ?string  $name
+     * @param  ?string  $userId
+     */
+    public function __construct(?string $email = null, ?string $name = null, ?string $userId = null)
     {
-        $this->email = null;
-        $this->name = null;
-        $this->userId = null;
+        $this->email = $email;
+        $this->name = $name;
+        $this->userId = $userId;
     }
 }

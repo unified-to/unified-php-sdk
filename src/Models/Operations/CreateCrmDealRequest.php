@@ -8,16 +8,17 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmDealRequest
 {
     /**
      * A deal represents an opportunity with companies and/or contacts
      *
-     * @var ?\Unified\Unified_to\Models\Shared\CrmDeal $crmDeal
+     * @var ?Shared\CrmDeal $crmDeal
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\CrmDeal $crmDeal = null;
+    public ?Shared\CrmDeal $crmDeal = null;
 
     /**
      * ID of the connection
@@ -27,9 +28,13 @@ class CreateCrmDealRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\CrmDeal  $crmDeal
+     */
+    public function __construct(?string $connectionId = null, ?Shared\CrmDeal $crmDeal = null)
     {
-        $this->crmDeal = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->crmDeal = $crmDeal;
     }
 }

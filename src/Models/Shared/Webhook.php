@@ -12,31 +12,50 @@ namespace Unified\Unified_to\Models\Shared;
 /** Webhook - A webhook is used to POST new/updated information to your server. */
 class Webhook
 {
+    /**
+     *
+     * @var ?\DateTime $checkedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('checked_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $checkedAt = null;
 
+    /**
+     *
+     * @var string $connectionId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('connection_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $connectionId;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $environment
+     */
     #[\JMS\Serializer\Annotation\SerializedName('environment')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $environment = null;
 
+    /**
+     *
+     * @var Event $event
+     */
     #[\JMS\Serializer\Annotation\SerializedName('event')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Event>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Event')]
     public Event $event;
 
+    /**
+     *
+     * @var ?string $fields
+     */
     #[\JMS\Serializer\Annotation\SerializedName('fields')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $fields = null;
 
@@ -50,27 +69,42 @@ class Webhook
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $filters = null;
 
+    /**
+     *
+     * @var string $hookUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('hook_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $hookUrl;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $integrationType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('integration_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $integrationType = null;
 
+    /**
+     *
+     * @var ?float $interval
+     */
     #[\JMS\Serializer\Annotation\SerializedName('interval')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $interval = null;
 
+    /**
+     *
+     * @var ?bool $isHealthy
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_healthy')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isHealthy = null;
 
@@ -84,12 +118,19 @@ class Webhook
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $meta = null;
 
+    /**
+     *
+     * @var ObjectType $objectType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('object_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ObjectType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ObjectType')]
     public ObjectType $objectType;
 
+    /**
+     *
+     * @var ?float $pageMaxLimit
+     */
     #[\JMS\Serializer\Annotation\SerializedName('page_max_limit')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $pageMaxLimit = null;
 
@@ -103,41 +144,72 @@ class Webhook
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $runs = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?WebhookType $webhookType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('webhook_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\WebhookType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WebhookType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?WebhookType $webhookType = null;
 
+    /**
+     *
+     * @var ?string $workspaceId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $workspaceId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Event  $event
+     * @param  ?string  $hookUrl
+     * @param  ?ObjectType  $objectType
+     * @param  ?\DateTime  $checkedAt
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $environment
+     * @param  ?string  $fields
+     * @param  ?array<string, string>  $filters
+     * @param  ?string  $id
+     * @param  ?string  $integrationType
+     * @param  ?float  $interval
+     * @param  ?bool  $isHealthy
+     * @param  ?array<string, mixed>  $meta
+     * @param  ?float  $pageMaxLimit
+     * @param  ?array<string>  $runs
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?WebhookType  $webhookType
+     * @param  ?string  $workspaceId
+     */
+    public function __construct(?string $connectionId = null, ?Event $event = null, ?string $hookUrl = null, ?ObjectType $objectType = null, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $fields = null, ?array $filters = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?array $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null)
     {
-        $this->checkedAt = null;
-        $this->connectionId = '';
-        $this->createdAt = null;
-        $this->environment = null;
-        $this->event = \Unified\Unified_to\Models\Shared\Event::Updated;
-        $this->fields = null;
-        $this->filters = null;
-        $this->hookUrl = '';
-        $this->id = null;
-        $this->integrationType = null;
-        $this->interval = null;
-        $this->isHealthy = null;
-        $this->meta = null;
-        $this->objectType = \Unified\Unified_to\Models\Shared\ObjectType::AccountingAccount;
-        $this->pageMaxLimit = null;
-        $this->runs = null;
-        $this->updatedAt = null;
-        $this->webhookType = null;
-        $this->workspaceId = null;
+        $this->connectionId = $connectionId;
+        $this->event = $event;
+        $this->hookUrl = $hookUrl;
+        $this->objectType = $objectType;
+        $this->checkedAt = $checkedAt;
+        $this->createdAt = $createdAt;
+        $this->environment = $environment;
+        $this->fields = $fields;
+        $this->filters = $filters;
+        $this->id = $id;
+        $this->integrationType = $integrationType;
+        $this->interval = $interval;
+        $this->isHealthy = $isHealthy;
+        $this->meta = $meta;
+        $this->pageMaxLimit = $pageMaxLimit;
+        $this->runs = $runs;
+        $this->updatedAt = $updatedAt;
+        $this->webhookType = $webhookType;
+        $this->workspaceId = $workspaceId;
     }
 }

@@ -11,58 +11,85 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingTransaction
 {
+    /**
+     *
+     * @var ?string $accountId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('account_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $accountId = null;
 
+    /**
+     *
+     * @var ?string $contactId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $contactId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?string $customerMessage
+     */
     #[\JMS\Serializer\Annotation\SerializedName('customer_message')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $customerMessage = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
     /**
      * $lineitems
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem> $lineitems
+     * @var ?array<AccountingTransactionLineItem> $lineitems
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineitems = null;
 
+    /**
+     *
+     * @var ?string $memo
+     */
     #[\JMS\Serializer\Annotation\SerializedName('memo')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $memo = null;
 
+    /**
+     *
+     * @var ?string $paymentMethod
+     */
     #[\JMS\Serializer\Annotation\SerializedName('payment_method')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $paymentMethod = null;
 
+    /**
+     *
+     * @var ?string $paymentTerms
+     */
     #[\JMS\Serializer\Annotation\SerializedName('payment_terms')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $paymentTerms = null;
 
@@ -76,60 +103,101 @@ class AccountingTransaction
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $reference
+     */
     #[\JMS\Serializer\Annotation\SerializedName('reference')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $reference = null;
 
+    /**
+     *
+     * @var ?string $splitAccountId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('split_account_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $splitAccountId = null;
 
+    /**
+     *
+     * @var ?float $subTotalAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('sub_total_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $subTotalAmount = null;
 
+    /**
+     *
+     * @var ?float $taxAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $taxAmount = null;
 
+    /**
+     *
+     * @var ?float $totalAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $totalAmount = null;
 
+    /**
+     *
+     * @var ?string $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $accountId
+     * @param  ?string  $contactId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $customerMessage
+     * @param  ?string  $id
+     * @param  ?array<AccountingTransactionLineItem>  $lineitems
+     * @param  ?string  $memo
+     * @param  ?string  $paymentMethod
+     * @param  ?string  $paymentTerms
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $reference
+     * @param  ?string  $splitAccountId
+     * @param  ?float  $subTotalAmount
+     * @param  ?float  $taxAmount
+     * @param  ?float  $totalAmount
+     * @param  ?string  $type
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?string $accountId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
-        $this->accountId = null;
-        $this->contactId = null;
-        $this->createdAt = null;
-        $this->currency = null;
-        $this->customerMessage = null;
-        $this->id = null;
-        $this->lineitems = null;
-        $this->memo = null;
-        $this->paymentMethod = null;
-        $this->paymentTerms = null;
-        $this->raw = null;
-        $this->reference = null;
-        $this->splitAccountId = null;
-        $this->subTotalAmount = null;
-        $this->taxAmount = null;
-        $this->totalAmount = null;
-        $this->type = null;
-        $this->updatedAt = null;
+        $this->accountId = $accountId;
+        $this->contactId = $contactId;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->customerMessage = $customerMessage;
+        $this->id = $id;
+        $this->lineitems = $lineitems;
+        $this->memo = $memo;
+        $this->paymentMethod = $paymentMethod;
+        $this->paymentTerms = $paymentTerms;
+        $this->raw = $raw;
+        $this->reference = $reference;
+        $this->splitAccountId = $splitAccountId;
+        $this->subTotalAmount = $subTotalAmount;
+        $this->taxAmount = $taxAmount;
+        $this->totalAmount = $totalAmount;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
     }
 }

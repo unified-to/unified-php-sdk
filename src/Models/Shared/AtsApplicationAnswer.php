@@ -20,13 +20,20 @@ class AtsApplicationAnswer
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     public array $answers;
 
+    /**
+     *
+     * @var string $questionId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('question_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $questionId;
 
-    public function __construct()
+    /**
+     * @param  ?array<string>  $answers
+     * @param  ?string  $questionId
+     */
+    public function __construct(?array $answers = null, ?string $questionId = null)
     {
-        $this->answers = [];
-        $this->questionId = '';
+        $this->answers = $answers;
+        $this->questionId = $questionId;
     }
 }

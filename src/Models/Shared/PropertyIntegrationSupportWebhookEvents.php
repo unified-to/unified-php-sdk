@@ -14,37 +14,42 @@ class PropertyIntegrationSupportWebhookEvents
     /**
      * $created
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated> $created
+     * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsCreated> $created
      */
     #[\JMS\Serializer\Annotation\SerializedName('created')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated>>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $created = null;
 
     /**
      * $deleted
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted> $deleted
+     * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsDeleted> $deleted
      */
     #[\JMS\Serializer\Annotation\SerializedName('deleted')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted>>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $deleted = null;
 
     /**
      * $updated
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated> $updated
+     * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsUpdated> $updated
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated>>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $updated = null;
 
-    public function __construct()
+    /**
+     * @param  ?array<PropertyPropertyIntegrationSupportWebhookEventsCreated>  $created
+     * @param  ?array<PropertyPropertyIntegrationSupportWebhookEventsDeleted>  $deleted
+     * @param  ?array<PropertyPropertyIntegrationSupportWebhookEventsUpdated>  $updated
+     */
+    public function __construct(?array $created = null, ?array $deleted = null, ?array $updated = null)
     {
-        $this->created = null;
-        $this->deleted = null;
-        $this->updated = null;
+        $this->created = $created;
+        $this->deleted = $deleted;
+        $this->updated = $updated;
     }
 }

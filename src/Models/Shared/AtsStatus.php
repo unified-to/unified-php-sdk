@@ -11,18 +11,27 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsStatus
 {
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $originalStatus
+     */
     #[\JMS\Serializer\Annotation\SerializedName('original_status')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $originalStatus = null;
 
@@ -36,17 +45,28 @@ class AtsStatus
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?AtsStatusStatus $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsStatusStatus>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsStatusStatus')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsStatusStatus $status = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?string  $originalStatus
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?AtsStatusStatus  $status
+     */
+    public function __construct(?string $description = null, ?string $id = null, ?string $originalStatus = null, ?array $raw = null, ?AtsStatusStatus $status = null)
     {
-        $this->description = null;
-        $this->id = null;
-        $this->originalStatus = null;
-        $this->raw = null;
-        $this->status = null;
+        $this->description = $description;
+        $this->id = $id;
+        $this->originalStatus = $originalStatus;
+        $this->raw = $raw;
+        $this->status = $status;
     }
 }

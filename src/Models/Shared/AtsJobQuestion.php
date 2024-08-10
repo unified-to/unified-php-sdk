@@ -11,13 +11,19 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsJobQuestion
 {
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
@@ -31,32 +37,54 @@ class AtsJobQuestion
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $options = null;
 
+    /**
+     *
+     * @var ?string $prompt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('prompt')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $prompt = null;
 
+    /**
+     *
+     * @var string $question
+     */
     #[\JMS\Serializer\Annotation\SerializedName('question')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $question;
 
+    /**
+     *
+     * @var ?bool $required
+     */
     #[\JMS\Serializer\Annotation\SerializedName('required')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $required = null;
 
+    /**
+     *
+     * @var AtsJobQuestionType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsJobQuestionType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobQuestionType')]
     public AtsJobQuestionType $type;
 
-    public function __construct()
+    /**
+     * @param  ?string  $question
+     * @param  ?AtsJobQuestionType  $type
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?array<string>  $options
+     * @param  ?string  $prompt
+     * @param  ?bool  $required
+     */
+    public function __construct(?string $question = null, ?AtsJobQuestionType $type = null, ?string $description = null, ?string $id = null, ?array $options = null, ?string $prompt = null, ?bool $required = null)
     {
-        $this->description = null;
-        $this->id = null;
-        $this->options = null;
-        $this->prompt = null;
-        $this->question = '';
-        $this->required = null;
-        $this->type = \Unified\Unified_to\Models\Shared\AtsJobQuestionType::Text;
+        $this->question = $question;
+        $this->type = $type;
+        $this->description = $description;
+        $this->id = $id;
+        $this->options = $options;
+        $this->prompt = $prompt;
+        $this->required = $required;
     }
 }

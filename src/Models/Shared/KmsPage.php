@@ -11,26 +11,41 @@ namespace Unified\Unified_to\Models\Shared;
 
 class KmsPage
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var string $downloadUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('download_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $downloadUrl;
 
+    /**
+     *
+     * @var string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $id;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?string $parentPageId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_page_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentPageId = null;
 
@@ -44,40 +59,69 @@ class KmsPage
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var string $spaceId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('space_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $spaceId;
 
+    /**
+     *
+     * @var string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $title;
 
+    /**
+     *
+     * @var KmsPageType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\KmsPageType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageType')]
     public KmsPageType $type;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $downloadUrl
+     * @param  ?string  $id
+     * @param  ?string  $spaceId
+     * @param  ?string  $title
+     * @param  ?KmsPageType  $type
+     * @param  ?\DateTime  $createdAt
+     * @param  ?bool  $isActive
+     * @param  ?string  $parentPageId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?string $downloadUrl = null, ?string $id = null, ?string $spaceId = null, ?string $title = null, ?KmsPageType $type = null, ?\DateTime $createdAt = null, ?bool $isActive = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->createdAt = null;
-        $this->downloadUrl = '';
-        $this->id = '';
-        $this->isActive = null;
-        $this->parentPageId = null;
-        $this->raw = null;
-        $this->spaceId = '';
-        $this->title = '';
-        $this->type = \Unified\Unified_to\Models\Shared\KmsPageType::Html;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->downloadUrl = $downloadUrl;
+        $this->id = $id;
+        $this->spaceId = $spaceId;
+        $this->title = $title;
+        $this->type = $type;
+        $this->createdAt = $createdAt;
+        $this->isActive = $isActive;
+        $this->parentPageId = $parentPageId;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

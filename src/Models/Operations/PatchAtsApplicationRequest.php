@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchAtsApplicationRequest
 {
+    /**
+     *
+     * @var ?Shared\AtsApplication $atsApplication
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AtsApplication $atsApplication = null;
+    public ?Shared\AtsApplication $atsApplication = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class PatchAtsApplicationRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\AtsApplication  $atsApplication
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AtsApplication $atsApplication = null)
     {
-        $this->atsApplication = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->atsApplication = $atsApplication;
     }
 }

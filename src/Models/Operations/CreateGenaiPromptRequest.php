@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateGenaiPromptRequest
 {
+    /**
+     *
+     * @var ?Shared\GenaiPrompt $genaiPrompt
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\GenaiPrompt $genaiPrompt = null;
+    public ?Shared\GenaiPrompt $genaiPrompt = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateGenaiPromptRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\GenaiPrompt  $genaiPrompt
+     */
+    public function __construct(?string $connectionId = null, ?Shared\GenaiPrompt $genaiPrompt = null)
     {
-        $this->genaiPrompt = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->genaiPrompt = $genaiPrompt;
     }
 }

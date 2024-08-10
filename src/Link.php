@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Link
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,14 +26,15 @@ class Link
     /**
      * Create a link
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse
+     * @param  Operations\CreatePaymentLinkRequest  $request
+     * @return Operations\CreatePaymentLinkResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createPaymentLink(
-        ?\Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse {
+        ?Operations\CreatePaymentLinkRequest $request,
+    ): Operations\CreatePaymentLinkResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link', \Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link', Operations\CreatePaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'paymentLink', 'json');
         if ($body !== null) {
@@ -38,107 +42,134 @@ class Link
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->paymentLink = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\PaymentLink', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\PaymentLink', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreatePaymentLinkResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    paymentLink: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a link
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetPaymentLinkRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetPaymentLinkResponse
+     * @param  Operations\GetPaymentLinkRequest  $request
+     * @return Operations\GetPaymentLinkResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentLink(
-        ?\Unified\Unified_to\Models\Operations\GetPaymentLinkRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetPaymentLinkResponse {
+        ?Operations\GetPaymentLinkRequest $request,
+    ): Operations\GetPaymentLinkResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', \Unified\Unified_to\Models\Operations\GetPaymentLinkRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', Operations\GetPaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetPaymentLinkRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetPaymentLinkRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetPaymentLinkResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->paymentLink = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\PaymentLink', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\PaymentLink', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetPaymentLinkResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    paymentLink: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all links
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListPaymentLinksRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListPaymentLinksResponse
+     * @param  Operations\ListPaymentLinksRequest  $request
+     * @return Operations\ListPaymentLinksResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentLinks(
-        ?\Unified\Unified_to\Models\Operations\ListPaymentLinksRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListPaymentLinksResponse {
+        ?Operations\ListPaymentLinksRequest $request,
+    ): Operations\ListPaymentLinksResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link', \Unified\Unified_to\Models\Operations\ListPaymentLinksRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link', Operations\ListPaymentLinksRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListPaymentLinksRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListPaymentLinksRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListPaymentLinksResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->paymentLinks = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\PaymentLink>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\PaymentLink>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListPaymentLinksResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    paymentLinks: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a link
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse
+     * @param  Operations\PatchPaymentLinkRequest  $request
+     * @return Operations\PatchPaymentLinkResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchPaymentLink(
-        ?\Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse {
+        ?Operations\PatchPaymentLinkRequest $request,
+    ): Operations\PatchPaymentLinkResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', \Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', Operations\PatchPaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'paymentLink', 'json');
         if ($body !== null) {
@@ -146,67 +177,79 @@ class Link
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->paymentLink = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\PaymentLink', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\PaymentLink', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchPaymentLinkResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    paymentLink: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Remove a link
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse
+     * @param  Operations\RemovePaymentLinkRequest  $request
+     * @return Operations\RemovePaymentLinkResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removePaymentLink(
-        ?\Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse {
+        ?Operations\RemovePaymentLinkRequest $request,
+    ): Operations\RemovePaymentLinkResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', \Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', Operations\RemovePaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemovePaymentLinkResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Update a link
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse
+     * @param  Operations\UpdatePaymentLinkRequest  $request
+     * @return Operations\UpdatePaymentLinkResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updatePaymentLink(
-        ?\Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse {
+        ?Operations\UpdatePaymentLinkRequest $request,
+    ): Operations\UpdatePaymentLinkResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', \Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', Operations\UpdatePaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'paymentLink', 'json');
         if ($body !== null) {
@@ -214,23 +257,31 @@ class Link
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->paymentLink = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\PaymentLink', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\PaymentLink', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdatePaymentLinkResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    paymentLink: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

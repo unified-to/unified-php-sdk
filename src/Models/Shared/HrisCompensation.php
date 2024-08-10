@@ -11,31 +11,51 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisCompensation
 {
+    /**
+     *
+     * @var ?float $amount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $amount = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?HrisCompensationFrequency $frequency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('frequency')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisCompensationFrequency>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompensationFrequency')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisCompensationFrequency $frequency = null;
 
+    /**
+     *
+     * @var ?HrisCompensationType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisCompensationType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompensationType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisCompensationType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?float  $amount
+     * @param  ?string  $currency
+     * @param  ?HrisCompensationFrequency  $frequency
+     * @param  ?HrisCompensationType  $type
+     */
+    public function __construct(?float $amount = null, ?string $currency = null, ?HrisCompensationFrequency $frequency = null, ?HrisCompensationType $type = null)
     {
-        $this->amount = null;
-        $this->currency = null;
-        $this->frequency = null;
-        $this->type = null;
+        $this->amount = $amount;
+        $this->currency = $currency;
+        $this->frequency = $frequency;
+        $this->type = $type;
     }
 }

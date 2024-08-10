@@ -12,13 +12,20 @@ namespace Unified\Unified_to\Models\Shared;
 /** CrmCompany - A company represents an organization that optionally is associated with a deal and/or contacts */
 class CrmCompany
 {
+    /**
+     *
+     * @var ?PropertyCrmCompanyAddress $address
+     */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmCompanyAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmCompanyAddress $address = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
@@ -32,38 +39,53 @@ class CrmCompany
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $dealIds = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
     /**
      * $emails
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEmail> $emails
+     * @var ?array<CrmEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CrmEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?float $employees
+     */
     #[\JMS\Serializer\Annotation\SerializedName('employees')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $employees = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $industry
+     */
     #[\JMS\Serializer\Annotation\SerializedName('industry')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $industry = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
@@ -77,8 +99,11 @@ class CrmCompany
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $linkUrls = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -105,25 +130,34 @@ class CrmCompany
     /**
      * $telephones
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmTelephone> $telephones
+     * @var ?array<CrmTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CrmTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmTelephone>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 
+    /**
+     *
+     * @var ?string $timezone
+     */
     #[\JMS\Serializer\Annotation\SerializedName('timezone')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $timezone = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
@@ -137,25 +171,45 @@ class CrmCompany
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $websites = null;
 
-    public function __construct()
+    /**
+     * @param  ?PropertyCrmCompanyAddress  $address
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<string>  $dealIds
+     * @param  ?string  $description
+     * @param  ?array<CrmEmail>  $emails
+     * @param  ?float  $employees
+     * @param  ?string  $id
+     * @param  ?string  $industry
+     * @param  ?bool  $isActive
+     * @param  ?array<string>  $linkUrls
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<string>  $tags
+     * @param  ?array<CrmTelephone>  $telephones
+     * @param  ?string  $timezone
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     * @param  ?array<string>  $websites
+     */
+    public function __construct(?PropertyCrmCompanyAddress $address = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
     {
-        $this->address = null;
-        $this->createdAt = null;
-        $this->dealIds = null;
-        $this->description = null;
-        $this->emails = null;
-        $this->employees = null;
-        $this->id = null;
-        $this->industry = null;
-        $this->isActive = null;
-        $this->linkUrls = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->tags = null;
-        $this->telephones = null;
-        $this->timezone = null;
-        $this->updatedAt = null;
-        $this->userId = null;
-        $this->websites = null;
+        $this->address = $address;
+        $this->createdAt = $createdAt;
+        $this->dealIds = $dealIds;
+        $this->description = $description;
+        $this->emails = $emails;
+        $this->employees = $employees;
+        $this->id = $id;
+        $this->industry = $industry;
+        $this->isActive = $isActive;
+        $this->linkUrls = $linkUrls;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->tags = $tags;
+        $this->telephones = $telephones;
+        $this->timezone = $timezone;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
+        $this->websites = $websites;
     }
 }

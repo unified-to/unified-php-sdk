@@ -11,53 +11,77 @@ namespace Unified\Unified_to\Models\Shared;
 
 class PaymentLink
 {
+    /**
+     *
+     * @var ?float $amount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $amount = null;
 
+    /**
+     *
+     * @var ?string $contactId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $contactId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?bool $isChargeableNow
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_chargeable_now')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isChargeableNow = null;
 
     /**
      * $lineitems
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem> $lineitems
+     * @var ?array<PaymentLinkLineitem> $lineitems
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\PaymentLinkLineitem>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineitems = null;
 
+    /**
+     *
+     * @var ?string $paymentId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('payment_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $paymentId = null;
 
@@ -71,29 +95,49 @@ class PaymentLink
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $url
+     */
     #[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $url = null;
 
-    public function __construct()
+    /**
+     * @param  ?float  $amount
+     * @param  ?string  $contactId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $id
+     * @param  ?bool  $isActive
+     * @param  ?bool  $isChargeableNow
+     * @param  ?array<PaymentLinkLineitem>  $lineitems
+     * @param  ?string  $paymentId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $url
+     */
+    public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?string $paymentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
-        $this->amount = null;
-        $this->contactId = null;
-        $this->createdAt = null;
-        $this->currency = null;
-        $this->id = null;
-        $this->isActive = null;
-        $this->isChargeableNow = null;
-        $this->lineitems = null;
-        $this->paymentId = null;
-        $this->raw = null;
-        $this->updatedAt = null;
-        $this->url = null;
+        $this->amount = $amount;
+        $this->contactId = $contactId;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->id = $id;
+        $this->isActive = $isActive;
+        $this->isChargeableNow = $isChargeableNow;
+        $this->lineitems = $lineitems;
+        $this->paymentId = $paymentId;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
+        $this->url = $url;
     }
 }

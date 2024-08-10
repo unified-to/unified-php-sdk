@@ -12,18 +12,29 @@ namespace Unified\Unified_to\Models\Shared;
 /** PropertyUcCallTelephone - The telephone number called */
 class PropertyUcCallTelephone
 {
+    /**
+     *
+     * @var string $telephone
+     */
     #[\JMS\Serializer\Annotation\SerializedName('telephone')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $telephone;
 
+    /**
+     *
+     * @var ?PropertyUcCallTelephoneType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PropertyUcCallTelephoneType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephoneType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyUcCallTelephoneType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $telephone
+     * @param  ?PropertyUcCallTelephoneType  $type
+     */
+    public function __construct(?string $telephone = null, ?PropertyUcCallTelephoneType $type = null)
     {
-        $this->telephone = '';
-        $this->type = null;
+        $this->telephone = $telephone;
+        $this->type = $type;
     }
 }

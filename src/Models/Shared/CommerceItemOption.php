@@ -11,16 +11,25 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CommerceItemOption
 {
+    /**
+     *
+     * @var string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $id;
 
+    /**
+     *
+     * @var string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    /**
+     *
+     * @var ?float $position
+     */
     #[\JMS\Serializer\Annotation\SerializedName('position')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $position = null;
 
@@ -33,11 +42,17 @@ class CommerceItemOption
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     public array $values;
 
-    public function __construct()
+    /**
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?array<string>  $values
+     * @param  ?float  $position
+     */
+    public function __construct(?string $id = null, ?string $name = null, ?array $values = null, ?float $position = null)
     {
-        $this->id = '';
-        $this->name = '';
-        $this->position = null;
-        $this->values = [];
+        $this->id = $id;
+        $this->name = $name;
+        $this->values = $values;
+        $this->position = $position;
     }
 }

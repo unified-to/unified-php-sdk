@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmPipelineRequest
 {
+    /**
+     *
+     * @var ?Shared\CrmPipeline $crmPipeline
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\CrmPipeline $crmPipeline = null;
+    public ?Shared\CrmPipeline $crmPipeline = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateCrmPipelineRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\CrmPipeline  $crmPipeline
+     */
+    public function __construct(?string $connectionId = null, ?Shared\CrmPipeline $crmPipeline = null)
     {
-        $this->crmPipeline = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->crmPipeline = $crmPipeline;
     }
 }

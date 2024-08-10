@@ -11,32 +11,50 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CommerceInventory
 {
+    /**
+     *
+     * @var float $available
+     */
     #[\JMS\Serializer\Annotation\SerializedName('available')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     public float $available;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $itemId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('item_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $itemId = null;
 
+    /**
+     *
+     * @var ?string $itemOptionId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('item_option_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $itemOptionId = null;
 
+    /**
+     *
+     * @var ?string $itemVariantId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('item_variant_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $itemVariantId = null;
 
+    /**
+     *
+     * @var ?string $locationId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('location_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $locationId = null;
 
@@ -50,20 +68,33 @@ class CommerceInventory
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?float  $available
+     * @param  ?string  $id
+     * @param  ?string  $itemId
+     * @param  ?string  $itemOptionId
+     * @param  ?string  $itemVariantId
+     * @param  ?string  $locationId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?float $available = null, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
-        $this->available = 0;
-        $this->id = null;
-        $this->itemId = null;
-        $this->itemOptionId = null;
-        $this->itemVariantId = null;
-        $this->locationId = null;
-        $this->raw = null;
-        $this->updatedAt = null;
+        $this->available = $available;
+        $this->id = $id;
+        $this->itemId = $itemId;
+        $this->itemOptionId = $itemOptionId;
+        $this->itemVariantId = $itemVariantId;
+        $this->locationId = $locationId;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
     }
 }

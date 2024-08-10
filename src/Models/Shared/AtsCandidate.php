@@ -11,53 +11,78 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsCandidate
 {
+    /**
+     *
+     * @var ?PropertyAtsCandidateAddress $address
+     */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyAtsCandidateAddress $address = null;
 
+    /**
+     *
+     * @var ?string $companyId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyId = null;
 
+    /**
+     *
+     * @var ?string $companyName
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyName = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?\DateTime $dateOfBirth
+     */
     #[\JMS\Serializer\Annotation\SerializedName('date_of_birth')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $dateOfBirth = null;
 
     /**
      * $emails
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AtsEmail> $emails
+     * @var ?array<AtsEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?string $externalIdentifier
+     */
     #[\JMS\Serializer\Annotation\SerializedName('external_identifier')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $externalIdentifier = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $imageUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('image_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $imageUrl = null;
 
@@ -71,13 +96,20 @@ class AtsCandidate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $linkUrls = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?Origin $origin
+     */
     #[\JMS\Serializer\Annotation\SerializedName('origin')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Origin>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Origin')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Origin $origin = null;
 
@@ -114,48 +146,78 @@ class AtsCandidate
     /**
      * $telephones
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AtsTelephone> $telephones
+     * @var ?array<AtsTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsTelephone>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 
+    /**
+     *
+     * @var ?string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $title = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?PropertyAtsCandidateAddress  $address
+     * @param  ?string  $companyId
+     * @param  ?string  $companyName
+     * @param  ?\DateTime  $createdAt
+     * @param  ?\DateTime  $dateOfBirth
+     * @param  ?array<AtsEmail>  $emails
+     * @param  ?string  $externalIdentifier
+     * @param  ?string  $id
+     * @param  ?string  $imageUrl
+     * @param  ?array<string>  $linkUrls
+     * @param  ?string  $name
+     * @param  ?Origin  $origin
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<string>  $sources
+     * @param  ?array<string>  $tags
+     * @param  ?array<AtsTelephone>  $telephones
+     * @param  ?string  $title
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $externalIdentifier = null, ?string $id = null, ?string $imageUrl = null, ?array $linkUrls = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->address = null;
-        $this->companyId = null;
-        $this->companyName = null;
-        $this->createdAt = null;
-        $this->dateOfBirth = null;
-        $this->emails = null;
-        $this->externalIdentifier = null;
-        $this->id = null;
-        $this->imageUrl = null;
-        $this->linkUrls = null;
-        $this->name = null;
-        $this->origin = null;
-        $this->raw = null;
-        $this->sources = null;
-        $this->tags = null;
-        $this->telephones = null;
-        $this->title = null;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->address = $address;
+        $this->companyId = $companyId;
+        $this->companyName = $companyName;
+        $this->createdAt = $createdAt;
+        $this->dateOfBirth = $dateOfBirth;
+        $this->emails = $emails;
+        $this->externalIdentifier = $externalIdentifier;
+        $this->id = $id;
+        $this->imageUrl = $imageUrl;
+        $this->linkUrls = $linkUrls;
+        $this->name = $name;
+        $this->origin = $origin;
+        $this->raw = $raw;
+        $this->sources = $sources;
+        $this->tags = $tags;
+        $this->telephones = $telephones;
+        $this->title = $title;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

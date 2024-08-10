@@ -19,6 +19,10 @@ class ListUnifiedApicallsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=connection_id')]
     public ?string $connectionId = null;
 
+    /**
+     *
+     * @var ?string $env
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=env')]
     public ?string $env = null;
 
@@ -46,9 +50,17 @@ class ListUnifiedApicallsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=integration_type')]
     public ?string $integrationType = null;
 
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
@@ -60,15 +72,25 @@ class ListUnifiedApicallsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $env
+     * @param  ?bool  $error
+     * @param  ?string  $externalXref
+     * @param  ?string  $integrationType
+     * @param  ?float  $limit
+     * @param  ?float  $offset
+     * @param  ?\DateTime  $updatedGte
+     */
+    public function __construct(?string $connectionId = null, ?string $env = null, ?bool $error = null, ?string $externalXref = null, ?string $integrationType = null, ?float $limit = null, ?float $offset = null, ?\DateTime $updatedGte = null)
     {
-        $this->connectionId = null;
-        $this->env = null;
-        $this->error = null;
-        $this->externalXref = null;
-        $this->integrationType = null;
-        $this->limit = null;
-        $this->offset = null;
-        $this->updatedGte = null;
+        $this->connectionId = $connectionId;
+        $this->env = $env;
+        $this->error = $error;
+        $this->externalXref = $externalXref;
+        $this->integrationType = $integrationType;
+        $this->limit = $limit;
+        $this->offset = $offset;
+        $this->updatedGte = $updatedGte;
     }
 }

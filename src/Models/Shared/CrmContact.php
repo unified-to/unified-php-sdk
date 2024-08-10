@@ -12,13 +12,20 @@ namespace Unified\Unified_to\Models\Shared;
 /** CrmContact - A contact represents a person that optionally is associated with a deal and/or a company */
 class CrmContact
 {
+    /**
+     *
+     * @var ?PropertyCrmContactAddress $address
+     */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyCrmContactAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmContactAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmContactAddress $address = null;
 
+    /**
+     *
+     * @var ?string $company
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $company = null;
 
@@ -32,8 +39,11 @@ class CrmContact
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $companyIds = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
@@ -50,20 +60,26 @@ class CrmContact
     /**
      * An array of email addresses for this contact
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEmail> $emails
+     * @var ?array<CrmEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CrmEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -80,42 +96,66 @@ class CrmContact
     /**
      * An array of telephones for this contact
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmTelephone> $telephones
+     * @var ?array<CrmTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CrmTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmTelephone>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 
+    /**
+     *
+     * @var ?string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $title = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?PropertyCrmContactAddress  $address
+     * @param  ?string  $company
+     * @param  ?array<string>  $companyIds
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<string>  $dealIds
+     * @param  ?array<CrmEmail>  $emails
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<CrmTelephone>  $telephones
+     * @param  ?string  $title
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->address = null;
-        $this->company = null;
-        $this->companyIds = null;
-        $this->createdAt = null;
-        $this->dealIds = null;
-        $this->emails = null;
-        $this->id = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->telephones = null;
-        $this->title = null;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->address = $address;
+        $this->company = $company;
+        $this->companyIds = $companyIds;
+        $this->createdAt = $createdAt;
+        $this->dealIds = $dealIds;
+        $this->emails = $emails;
+        $this->id = $id;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->telephones = $telephones;
+        $this->title = $title;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

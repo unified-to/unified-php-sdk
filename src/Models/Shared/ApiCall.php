@@ -11,90 +11,153 @@ namespace Unified\Unified_to\Models\Shared;
 
 class ApiCall
 {
+    /**
+     *
+     * @var ?string $connectionId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('connection_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $connectionId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $environment
+     */
     #[\JMS\Serializer\Annotation\SerializedName('environment')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $environment = null;
 
+    /**
+     *
+     * @var ?string $error
+     */
     #[\JMS\Serializer\Annotation\SerializedName('error')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $error = null;
 
+    /**
+     *
+     * @var ?string $externalXref
+     */
     #[\JMS\Serializer\Annotation\SerializedName('external_xref')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $externalXref = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var string $integrationType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('integration_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $integrationType;
 
+    /**
+     *
+     * @var ?string $ipAddress
+     */
     #[\JMS\Serializer\Annotation\SerializedName('ip_address')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $ipAddress = null;
 
+    /**
+     *
+     * @var string $method
+     */
     #[\JMS\Serializer\Annotation\SerializedName('method')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $method;
 
+    /**
+     *
+     * @var string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    /**
+     *
+     * @var string $path
+     */
     #[\JMS\Serializer\Annotation\SerializedName('path')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $path;
 
+    /**
+     *
+     * @var ?float $size
+     */
     #[\JMS\Serializer\Annotation\SerializedName('size')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $size = null;
 
+    /**
+     *
+     * @var string $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $status;
 
+    /**
+     *
+     * @var ApiCallType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\ApiCallType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ApiCallType')]
     public ApiCallType $type;
 
+    /**
+     *
+     * @var string $workspaceId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $workspaceId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $integrationType
+     * @param  ?string  $method
+     * @param  ?string  $name
+     * @param  ?string  $path
+     * @param  ?string  $status
+     * @param  ?ApiCallType  $type
+     * @param  ?string  $workspaceId
+     * @param  ?string  $connectionId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $environment
+     * @param  ?string  $error
+     * @param  ?string  $externalXref
+     * @param  ?string  $id
+     * @param  ?string  $ipAddress
+     * @param  ?float  $size
+     */
+    public function __construct(?string $integrationType = null, ?string $method = null, ?string $name = null, ?string $path = null, ?string $status = null, ?ApiCallType $type = null, ?string $workspaceId = null, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?float $size = null)
     {
-        $this->connectionId = null;
-        $this->createdAt = null;
-        $this->environment = null;
-        $this->error = null;
-        $this->externalXref = null;
-        $this->id = null;
-        $this->integrationType = '';
-        $this->ipAddress = null;
-        $this->method = '';
-        $this->name = '';
-        $this->path = '';
-        $this->size = null;
-        $this->status = '';
-        $this->type = \Unified\Unified_to\Models\Shared\ApiCallType::Login;
-        $this->workspaceId = '';
+        $this->integrationType = $integrationType;
+        $this->method = $method;
+        $this->name = $name;
+        $this->path = $path;
+        $this->status = $status;
+        $this->type = $type;
+        $this->workspaceId = $workspaceId;
+        $this->connectionId = $connectionId;
+        $this->createdAt = $createdAt;
+        $this->environment = $environment;
+        $this->error = $error;
+        $this->externalXref = $externalXref;
+        $this->id = $id;
+        $this->ipAddress = $ipAddress;
+        $this->size = $size;
     }
 }

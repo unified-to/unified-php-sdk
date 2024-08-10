@@ -11,37 +11,61 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsCompensation
 {
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?Frequency $frequency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('frequency')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Frequency>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Frequency')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Frequency $frequency = null;
 
+    /**
+     *
+     * @var ?float $max
+     */
     #[\JMS\Serializer\Annotation\SerializedName('max')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $max = null;
 
+    /**
+     *
+     * @var ?float $min
+     */
     #[\JMS\Serializer\Annotation\SerializedName('min')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $min = null;
 
+    /**
+     *
+     * @var ?AtsCompensationType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsCompensationType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCompensationType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsCompensationType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $currency
+     * @param  ?Frequency  $frequency
+     * @param  ?float  $max
+     * @param  ?float  $min
+     * @param  ?AtsCompensationType  $type
+     */
+    public function __construct(?string $currency = null, ?Frequency $frequency = null, ?float $max = null, ?float $min = null, ?AtsCompensationType $type = null)
     {
-        $this->currency = null;
-        $this->frequency = null;
-        $this->max = null;
-        $this->min = null;
-        $this->type = null;
+        $this->currency = $currency;
+        $this->frequency = $frequency;
+        $this->max = $max;
+        $this->min = $min;
+        $this->type = $type;
     }
 }

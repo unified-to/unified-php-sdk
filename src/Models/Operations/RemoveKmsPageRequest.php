@@ -27,9 +27,13 @@ class RemoveKmsPageRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null)
     {
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
     }
 }

@@ -11,55 +11,89 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingTransactionLineItem
 {
+    /**
+     *
+     * @var ?string $accountId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('account_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $accountId = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?string $objectType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('object_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $objectType = null;
 
+    /**
+     *
+     * @var ?float $totalAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $totalAmount = null;
 
+    /**
+     *
+     * @var ?float $unitAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('unit_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $unitAmount = null;
 
+    /**
+     *
+     * @var ?float $unitQuantity
+     */
     #[\JMS\Serializer\Annotation\SerializedName('unit_quantity')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $unitQuantity = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $accountId
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?string  $objectType
+     * @param  ?float  $totalAmount
+     * @param  ?float  $unitAmount
+     * @param  ?float  $unitQuantity
+     */
+    public function __construct(?string $accountId = null, ?string $description = null, ?string $id = null, ?string $name = null, ?string $objectType = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null)
     {
-        $this->accountId = null;
-        $this->description = null;
-        $this->id = null;
-        $this->name = null;
-        $this->objectType = null;
-        $this->totalAmount = null;
-        $this->unitAmount = null;
-        $this->unitQuantity = null;
+        $this->accountId = $accountId;
+        $this->description = $description;
+        $this->id = $id;
+        $this->name = $name;
+        $this->objectType = $objectType;
+        $this->totalAmount = $totalAmount;
+        $this->unitAmount = $unitAmount;
+        $this->unitQuantity = $unitQuantity;
     }
 }

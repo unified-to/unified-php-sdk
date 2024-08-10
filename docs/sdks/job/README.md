@@ -17,15 +17,14 @@ Create a job
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -33,46 +32,47 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateAtsJobRequest();
-    $request->atsJob = new Shared\AtsJob();
-    $request->atsJob->addresses = [
-        new Shared\AtsAddress(),
-    ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-14T18:31:06.376Z');
-    $request->atsJob->companyId = '<value>';
-    $request->atsJob->compensation = [
-        new Shared\AtsCompensation(),
-    ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-05T09:16:07.639Z');
-    $request->atsJob->departments = [
-        '<value>',
-    ];
-    $request->atsJob->description = 'Secured fault-tolerant internet solution';
-    $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
-    $request->atsJob->hiringManagerIds = [
-        '<value>',
-    ];
-    $request->atsJob->id = '<id>';
-    $request->atsJob->languageLocale = '<value>';
-    $request->atsJob->name = '<value>';
-    $request->atsJob->numberOfOpenings = 6151.12;
-    $request->atsJob->publicJobUrls = [
-        '<value>',
-    ];
-    $request->atsJob->questions = [
-        new Shared\AtsJobQuestion(),
-    ];
-    $request->atsJob->raw = [
-        'wherever' => '<value>',
-    ];
-    $request->atsJob->recruiterIds = [
-        '<value>',
-    ];
-    $request->atsJob->remote = false;
-    $request->atsJob->status = Shared\AtsJobStatus::Open;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-18T02:03:06.250Z');
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateAtsJobRequest(
+        connectionId: '<value>',
+        atsJob: new Shared\AtsJob(
+            addresses: [
+                new Shared\AtsAddress,
+            ],
+            closedAt: Utils\Utils::parseDateTime('2022-01-14T18:31:06.376Z'),
+            companyId: '<value>',
+            compensation: [
+                new Shared\AtsCompensation,
+            ],
+            createdAt: Utils\Utils::parseDateTime('2023-04-05T09:16:07.639Z'),
+            departments: [
+                '<value>',
+            ],
+            description: 'Secured fault-tolerant internet solution',
+            employmentType: Shared\EmploymentType::FullTime,
+            hiringManagerIds: [
+                '<value>',
+            ],
+            id: '<id>',
+            languageLocale: '<value>',
+            name: '<value>',
+            numberOfOpenings: 6151.12,
+            publicJobUrls: [
+                '<value>',
+            ],
+            questions: [
+                new Shared\AtsJobQuestion,
+            ],
+            raw: [
+                'wherever' => '<value>',
+            ],
+            recruiterIds: [
+                '<value>',
+            ],
+            remote: false,
+            status: Shared\AtsJobStatus::Open,
+            updatedAt: Utils\Utils::parseDateTime('2024-11-18T02:03:06.250Z'),
+        ),
+    );
     $response = $sdk->job->createAtsJob($request);
 
     if ($response->atsJob !== null) {
@@ -85,15 +85,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\CreateAtsJobRequest](../../Models/Operations/CreateAtsJobRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\CreateAtsJobRequest](../../Models/Operations/CreateAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateAtsJobResponse](../../Models/Operations/CreateAtsJobResponse.md)**
+**[?Operations\CreateAtsJobResponse](../../Models/Operations/CreateAtsJobResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getAtsJob
 
@@ -102,15 +106,13 @@ Retrieve a job
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -118,13 +120,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetAtsJobRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetAtsJobRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->job->getAtsJob($request);
 
     if ($response->atsJob !== null) {
@@ -137,15 +139,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                            | [\Unified\Unified_to\Models\Operations\GetAtsJobRequest](../../Models/Operations/GetAtsJobRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `$request`                                                                 | [Operations\GetAtsJobRequest](../../Models/Operations/GetAtsJobRequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAtsJobResponse](../../Models/Operations/GetAtsJobResponse.md)**
+**[?Operations\GetAtsJobResponse](../../Models/Operations/GetAtsJobResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listAtsJobs
 
@@ -154,15 +160,14 @@ List all jobs
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -170,17 +175,17 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListAtsJobsRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 3958.99;
-    $request->offset = 3223.84;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-04T01:14:05.456Z');
-    $request->userId = '<value>';;
-
+    $request = new Operations\ListAtsJobsRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 3958.99,
+        offset: 3223.84,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2023-03-04T01:14:05.456Z'),
+        userId: '<value>',
+    );
     $response = $sdk->job->listAtsJobs($request);
 
     if ($response->atsJobs !== null) {
@@ -193,15 +198,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\Unified\Unified_to\Models\Operations\ListAtsJobsRequest](../../Models/Operations/ListAtsJobsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\ListAtsJobsRequest](../../Models/Operations/ListAtsJobsRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListAtsJobsResponse](../../Models/Operations/ListAtsJobsResponse.md)**
+**[?Operations\ListAtsJobsResponse](../../Models/Operations/ListAtsJobsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchAtsJob
 
@@ -210,15 +219,14 @@ Update a job
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -226,47 +234,48 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchAtsJobRequest();
-    $request->atsJob = new Shared\AtsJob();
-    $request->atsJob->addresses = [
-        new Shared\AtsAddress(),
-    ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T17:44:16.617Z');
-    $request->atsJob->companyId = '<value>';
-    $request->atsJob->compensation = [
-        new Shared\AtsCompensation(),
-    ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-09T17:48:14.891Z');
-    $request->atsJob->departments = [
-        '<value>',
-    ];
-    $request->atsJob->description = 'Seamless analyzing definition';
-    $request->atsJob->employmentType = Shared\EmploymentType::Intern;
-    $request->atsJob->hiringManagerIds = [
-        '<value>',
-    ];
-    $request->atsJob->id = '<id>';
-    $request->atsJob->languageLocale = '<value>';
-    $request->atsJob->name = '<value>';
-    $request->atsJob->numberOfOpenings = 6182.06;
-    $request->atsJob->publicJobUrls = [
-        '<value>',
-    ];
-    $request->atsJob->questions = [
-        new Shared\AtsJobQuestion(),
-    ];
-    $request->atsJob->raw = [
-        'North' => '<value>',
-    ];
-    $request->atsJob->recruiterIds = [
-        '<value>',
-    ];
-    $request->atsJob->remote = false;
-    $request->atsJob->status = Shared\AtsJobStatus::Closed;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-08T17:34:59.133Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchAtsJobRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        atsJob: new Shared\AtsJob(
+            addresses: [
+                new Shared\AtsAddress,
+            ],
+            closedAt: Utils\Utils::parseDateTime('2022-08-09T17:44:16.617Z'),
+            companyId: '<value>',
+            compensation: [
+                new Shared\AtsCompensation,
+            ],
+            createdAt: Utils\Utils::parseDateTime('2022-07-09T17:48:14.891Z'),
+            departments: [
+                '<value>',
+            ],
+            description: 'Seamless analyzing definition',
+            employmentType: Shared\EmploymentType::Intern,
+            hiringManagerIds: [
+                '<value>',
+            ],
+            id: '<id>',
+            languageLocale: '<value>',
+            name: '<value>',
+            numberOfOpenings: 6182.06,
+            publicJobUrls: [
+                '<value>',
+            ],
+            questions: [
+                new Shared\AtsJobQuestion,
+            ],
+            raw: [
+                'North' => '<value>',
+            ],
+            recruiterIds: [
+                '<value>',
+            ],
+            remote: false,
+            status: Shared\AtsJobStatus::Closed,
+            updatedAt: Utils\Utils::parseDateTime('2023-08-08T17:34:59.133Z'),
+        ),
+    );
     $response = $sdk->job->patchAtsJob($request);
 
     if ($response->atsJob !== null) {
@@ -279,15 +288,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\Unified\Unified_to\Models\Operations\PatchAtsJobRequest](../../Models/Operations/PatchAtsJobRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\PatchAtsJobRequest](../../Models/Operations/PatchAtsJobRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchAtsJobResponse](../../Models/Operations/PatchAtsJobResponse.md)**
+**[?Operations\PatchAtsJobResponse](../../Models/Operations/PatchAtsJobResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeAtsJob
 
@@ -296,15 +309,13 @@ Remove a job
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -312,10 +323,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveAtsJobRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveAtsJobRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->job->removeAtsJob($request);
 
     if ($response->statusCode === 200) {
@@ -328,15 +339,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\RemoveAtsJobRequest](../../Models/Operations/RemoveAtsJobRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\RemoveAtsJobRequest](../../Models/Operations/RemoveAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveAtsJobResponse](../../Models/Operations/RemoveAtsJobResponse.md)**
+**[?Operations\RemoveAtsJobResponse](../../Models/Operations/RemoveAtsJobResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateAtsJob
 
@@ -345,15 +360,14 @@ Update a job
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -361,47 +375,48 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateAtsJobRequest();
-    $request->atsJob = new Shared\AtsJob();
-    $request->atsJob->addresses = [
-        new Shared\AtsAddress(),
-    ];
-    $request->atsJob->closedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-21T07:41:08.131Z');
-    $request->atsJob->companyId = '<value>';
-    $request->atsJob->compensation = [
-        new Shared\AtsCompensation(),
-    ];
-    $request->atsJob->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-28T21:47:53.309Z');
-    $request->atsJob->departments = [
-        '<value>',
-    ];
-    $request->atsJob->description = 'Implemented even-keeled parallelism';
-    $request->atsJob->employmentType = Shared\EmploymentType::FullTime;
-    $request->atsJob->hiringManagerIds = [
-        '<value>',
-    ];
-    $request->atsJob->id = '<id>';
-    $request->atsJob->languageLocale = '<value>';
-    $request->atsJob->name = '<value>';
-    $request->atsJob->numberOfOpenings = 9080.02;
-    $request->atsJob->publicJobUrls = [
-        '<value>',
-    ];
-    $request->atsJob->questions = [
-        new Shared\AtsJobQuestion(),
-    ];
-    $request->atsJob->raw = [
-        'Direct' => '<value>',
-    ];
-    $request->atsJob->recruiterIds = [
-        '<value>',
-    ];
-    $request->atsJob->remote = false;
-    $request->atsJob->status = Shared\AtsJobStatus::Draft;
-    $request->atsJob->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-01-04T04:44:52.139Z');
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateAtsJobRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        atsJob: new Shared\AtsJob(
+            addresses: [
+                new Shared\AtsAddress,
+            ],
+            closedAt: Utils\Utils::parseDateTime('2023-10-21T07:41:08.131Z'),
+            companyId: '<value>',
+            compensation: [
+                new Shared\AtsCompensation,
+            ],
+            createdAt: Utils\Utils::parseDateTime('2022-09-28T21:47:53.309Z'),
+            departments: [
+                '<value>',
+            ],
+            description: 'Implemented even-keeled parallelism',
+            employmentType: Shared\EmploymentType::FullTime,
+            hiringManagerIds: [
+                '<value>',
+            ],
+            id: '<id>',
+            languageLocale: '<value>',
+            name: '<value>',
+            numberOfOpenings: 9080.02,
+            publicJobUrls: [
+                '<value>',
+            ],
+            questions: [
+                new Shared\AtsJobQuestion,
+            ],
+            raw: [
+                'Direct' => '<value>',
+            ],
+            recruiterIds: [
+                '<value>',
+            ],
+            remote: false,
+            status: Shared\AtsJobStatus::Draft,
+            updatedAt: Utils\Utils::parseDateTime('2024-01-04T04:44:52.139Z'),
+        ),
+    );
     $response = $sdk->job->updateAtsJob($request);
 
     if ($response->atsJob !== null) {
@@ -414,12 +429,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Unified\Unified_to\Models\Operations\UpdateAtsJobRequest](../../Models/Operations/UpdateAtsJobRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\UpdateAtsJobRequest](../../Models/Operations/UpdateAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateAtsJobResponse](../../Models/Operations/UpdateAtsJobResponse.md)**
+**[?Operations\UpdateAtsJobResponse](../../Models/Operations/UpdateAtsJobResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

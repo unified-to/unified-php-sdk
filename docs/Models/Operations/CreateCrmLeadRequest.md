@@ -3,7 +3,7 @@
 
 ## Fields
 
-| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `crmLead`                                                                    | [?\Unified\Unified_to\Models\Shared\CrmLead](../../Models/Shared/CrmLead.md) | :heavy_minus_sign:                                                           | N/A                                                                          |
-| `connectionId`                                                               | *string*                                                                     | :heavy_check_mark:                                                           | ID of the connection                                                         |
+| Field                                             | Type                                              | Required                                          | Description                                       |
+| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| `connectionId`                                    | *string*                                          | :heavy_check_mark:                                | ID of the connection                              |
+| `crmLead`                                         | [?Shared\CrmLead](../../Models/Shared/CrmLead.md) | :heavy_minus_sign:                                | N/A                                               |

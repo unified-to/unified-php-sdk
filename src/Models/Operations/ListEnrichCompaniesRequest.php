@@ -35,10 +35,15 @@ class ListEnrichCompaniesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=name')]
     public ?string $name = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $domain
+     * @param  ?string  $name
+     */
+    public function __construct(?string $connectionId = null, ?string $domain = null, ?string $name = null)
     {
-        $this->connectionId = '';
-        $this->domain = null;
-        $this->name = null;
+        $this->connectionId = $connectionId;
+        $this->domain = $domain;
+        $this->name = $name;
     }
 }

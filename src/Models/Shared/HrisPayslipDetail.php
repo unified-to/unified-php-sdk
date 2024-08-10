@@ -11,42 +11,69 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisPayslipDetail
 {
+    /**
+     *
+     * @var float $amount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     public float $amount;
 
+    /**
+     *
+     * @var ?float $companyAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $companyAmount = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?float $employeeAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('employee_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $employeeAmount = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?HrisPayslipDetailType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisPayslipDetailType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisPayslipDetailType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisPayslipDetailType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?float  $amount
+     * @param  ?float  $companyAmount
+     * @param  ?string  $description
+     * @param  ?float  $employeeAmount
+     * @param  ?string  $name
+     * @param  ?HrisPayslipDetailType  $type
+     */
+    public function __construct(?float $amount = null, ?float $companyAmount = null, ?string $description = null, ?float $employeeAmount = null, ?string $name = null, ?HrisPayslipDetailType $type = null)
     {
-        $this->amount = 0;
-        $this->companyAmount = null;
-        $this->description = null;
-        $this->employeeAmount = null;
-        $this->name = null;
-        $this->type = null;
+        $this->amount = $amount;
+        $this->companyAmount = $companyAmount;
+        $this->description = $description;
+        $this->employeeAmount = $employeeAmount;
+        $this->name = $name;
+        $this->type = $type;
     }
 }

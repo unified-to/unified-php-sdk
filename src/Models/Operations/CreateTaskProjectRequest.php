@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateTaskProjectRequest
 {
+    /**
+     *
+     * @var ?Shared\TaskProject $taskProject
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\TaskProject $taskProject = null;
+    public ?Shared\TaskProject $taskProject = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateTaskProjectRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\TaskProject  $taskProject
+     */
+    public function __construct(?string $connectionId = null, ?Shared\TaskProject $taskProject = null)
     {
-        $this->taskProject = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->taskProject = $taskProject;
     }
 }

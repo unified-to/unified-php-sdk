@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateUnifiedWebhookRequest
 {
+    /**
+     *
+     * @var ?Shared\Webhook $webhook
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\Webhook $webhook = null;
+    public ?Shared\Webhook $webhook = null;
 
     /**
      * When set, all of the existing data will sent back to your server.
@@ -22,9 +27,13 @@ class CreateUnifiedWebhookRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=include_all')]
     public ?bool $includeAll = null;
 
-    public function __construct()
+    /**
+     * @param  ?Shared\Webhook  $webhook
+     * @param  ?bool  $includeAll
+     */
+    public function __construct(?Shared\Webhook $webhook = null, ?bool $includeAll = null)
     {
-        $this->webhook = null;
-        $this->includeAll = null;
+        $this->webhook = $webhook;
+        $this->includeAll = $includeAll;
     }
 }

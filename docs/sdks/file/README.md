@@ -17,15 +17,14 @@ Create a file
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -33,28 +32,29 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateStorageFileRequest();
-    $request->storageFile = new Shared\StorageFile();
-    $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-26T17:10:46.324Z');
-    $request->storageFile->description = 'Digitized systematic Graphic Interface';
-    $request->storageFile->downloadUrl = '<value>';
-    $request->storageFile->hash = '<value>';
-    $request->storageFile->id = '<id>';
-    $request->storageFile->mimeType = '<value>';
-    $request->storageFile->name = '<value>';
-    $request->storageFile->parentId = '<value>';
-    $request->storageFile->permissions = [
-        new Shared\StoragePermission(),
-    ];
-    $request->storageFile->raw = [
-        'astride' => '<value>',
-    ];
-    $request->storageFile->size = 3999.85;
-    $request->storageFile->type = Shared\StorageFileType::Folder;
-    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-07T14:24:08.441Z');
-    $request->storageFile->userId = '<value>';
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateStorageFileRequest(
+        connectionId: '<value>',
+        storageFile: new Shared\StorageFile(
+            createdAt: Utils\Utils::parseDateTime('2024-11-26T17:10:46.324Z'),
+            description: 'Digitized systematic Graphic Interface',
+            downloadUrl: '<value>',
+            hash: '<value>',
+            id: '<id>',
+            mimeType: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            permissions: [
+                new Shared\StoragePermission,
+            ],
+            raw: [
+                'astride' => '<value>',
+            ],
+            size: 3999.85,
+            type: Shared\StorageFileType::Folder,
+            updatedAt: Utils\Utils::parseDateTime('2024-03-07T14:24:08.441Z'),
+            userId: '<value>',
+        ),
+    );
     $response = $sdk->file->createStorageFile($request);
 
     if ($response->storageFile !== null) {
@@ -67,15 +67,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateStorageFileRequest](../../Models/Operations/CreateStorageFileRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateStorageFileRequest](../../Models/Operations/CreateStorageFileRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateStorageFileResponse](../../Models/Operations/CreateStorageFileResponse.md)**
+**[?Operations\CreateStorageFileResponse](../../Models/Operations/CreateStorageFileResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getStorageFile
 
@@ -84,15 +88,13 @@ Retrieve a file
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -100,13 +102,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetStorageFileRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetStorageFileRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->file->getStorageFile($request);
 
     if ($response->storageFile !== null) {
@@ -119,15 +121,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetStorageFileRequest](../../Models/Operations/GetStorageFileRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetStorageFileRequest](../../Models/Operations/GetStorageFileRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetStorageFileResponse](../../Models/Operations/GetStorageFileResponse.md)**
+**[?Operations\GetStorageFileResponse](../../Models/Operations/GetStorageFileResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listStorageFiles
 
@@ -136,15 +142,14 @@ List all files
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -152,17 +157,17 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListStorageFilesRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 1047.26;
-    $request->offset = 7962.22;
-    $request->parentId = '<value>';
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-28T04:36:03.817Z');;
-
+    $request = new Operations\ListStorageFilesRequest(
+        connectionId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 1047.26,
+        offset: 7962.22,
+        parentId: '<value>',
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-01-28T04:36:03.817Z'),
+    );
     $response = $sdk->file->listStorageFiles($request);
 
     if ($response->storageFiles !== null) {
@@ -175,15 +180,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\ListStorageFilesRequest](../../Models/Operations/ListStorageFilesRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListStorageFilesRequest](../../Models/Operations/ListStorageFilesRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListStorageFilesResponse](../../Models/Operations/ListStorageFilesResponse.md)**
+**[?Operations\ListStorageFilesResponse](../../Models/Operations/ListStorageFilesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchStorageFile
 
@@ -192,15 +201,14 @@ Update a file
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -208,29 +216,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchStorageFileRequest();
-    $request->storageFile = new Shared\StorageFile();
-    $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-01T13:48:26.867Z');
-    $request->storageFile->description = 'Customer-focused mission-critical monitoring';
-    $request->storageFile->downloadUrl = '<value>';
-    $request->storageFile->hash = '<value>';
-    $request->storageFile->id = '<id>';
-    $request->storageFile->mimeType = '<value>';
-    $request->storageFile->name = '<value>';
-    $request->storageFile->parentId = '<value>';
-    $request->storageFile->permissions = [
-        new Shared\StoragePermission(),
-    ];
-    $request->storageFile->raw = [
-        'green' => '<value>',
-    ];
-    $request->storageFile->size = 2253.31;
-    $request->storageFile->type = Shared\StorageFileType::File;
-    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-11-03T15:19:05.454Z');
-    $request->storageFile->userId = '<value>';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchStorageFileRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        storageFile: new Shared\StorageFile(
+            createdAt: Utils\Utils::parseDateTime('2022-03-01T13:48:26.867Z'),
+            description: 'Customer-focused mission-critical monitoring',
+            downloadUrl: '<value>',
+            hash: '<value>',
+            id: '<id>',
+            mimeType: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            permissions: [
+                new Shared\StoragePermission,
+            ],
+            raw: [
+                'green' => '<value>',
+            ],
+            size: 2253.31,
+            type: Shared\StorageFileType::File,
+            updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:19:05.454Z'),
+            userId: '<value>',
+        ),
+    );
     $response = $sdk->file->patchStorageFile($request);
 
     if ($response->storageFile !== null) {
@@ -243,15 +252,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchStorageFileRequest](../../Models/Operations/PatchStorageFileRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchStorageFileRequest](../../Models/Operations/PatchStorageFileRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchStorageFileResponse](../../Models/Operations/PatchStorageFileResponse.md)**
+**[?Operations\PatchStorageFileResponse](../../Models/Operations/PatchStorageFileResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeStorageFile
 
@@ -260,15 +273,13 @@ Remove a file
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -276,10 +287,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveStorageFileRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveStorageFileRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->file->removeStorageFile($request);
 
     if ($response->statusCode === 200) {
@@ -292,15 +303,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveStorageFileRequest](../../Models/Operations/RemoveStorageFileRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveStorageFileRequest](../../Models/Operations/RemoveStorageFileRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveStorageFileResponse](../../Models/Operations/RemoveStorageFileResponse.md)**
+**[?Operations\RemoveStorageFileResponse](../../Models/Operations/RemoveStorageFileResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateStorageFile
 
@@ -309,15 +324,14 @@ Update a file
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -325,29 +339,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateStorageFileRequest();
-    $request->storageFile = new Shared\StorageFile();
-    $request->storageFile->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-06T15:38:39.174Z');
-    $request->storageFile->description = 'Polarised intangible architecture';
-    $request->storageFile->downloadUrl = '<value>';
-    $request->storageFile->hash = '<value>';
-    $request->storageFile->id = '<id>';
-    $request->storageFile->mimeType = '<value>';
-    $request->storageFile->name = '<value>';
-    $request->storageFile->parentId = '<value>';
-    $request->storageFile->permissions = [
-        new Shared\StoragePermission(),
-    ];
-    $request->storageFile->raw = [
-        'male' => '<value>',
-    ];
-    $request->storageFile->size = 4091;
-    $request->storageFile->type = Shared\StorageFileType::Folder;
-    $request->storageFile->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-25T21:16:43.994Z');
-    $request->storageFile->userId = '<value>';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateStorageFileRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        storageFile: new Shared\StorageFile(
+            createdAt: Utils\Utils::parseDateTime('2024-06-06T15:38:39.174Z'),
+            description: 'Polarised intangible architecture',
+            downloadUrl: '<value>',
+            hash: '<value>',
+            id: '<id>',
+            mimeType: '<value>',
+            name: '<value>',
+            parentId: '<value>',
+            permissions: [
+                new Shared\StoragePermission,
+            ],
+            raw: [
+                'male' => '<value>',
+            ],
+            size: 4091,
+            type: Shared\StorageFileType::Folder,
+            updatedAt: Utils\Utils::parseDateTime('2022-06-25T21:16:43.994Z'),
+            userId: '<value>',
+        ),
+    );
     $response = $sdk->file->updateStorageFile($request);
 
     if ($response->storageFile !== null) {
@@ -360,12 +375,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateStorageFileRequest](../../Models/Operations/UpdateStorageFileRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateStorageFileRequest](../../Models/Operations/UpdateStorageFileRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateStorageFileResponse](../../Models/Operations/UpdateStorageFileResponse.md)**
+**[?Operations\UpdateStorageFileResponse](../../Models/Operations/UpdateStorageFileResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

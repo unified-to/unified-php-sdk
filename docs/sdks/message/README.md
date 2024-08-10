@@ -17,15 +17,13 @@ Create a message
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -33,38 +31,40 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateMessagingMessageRequest();
-    $request->messagingMessage = new Shared\MessagingMessage();
-    $request->messagingMessage->attachments = [
-        new Shared\MessagingAttachment(),
-    ];
-    $request->messagingMessage->authorMember = new Shared\PropertyMessagingMessageAuthorMember();
-    $request->messagingMessage->authorMember->email = 'Eugene54@gmail.com';
-    $request->messagingMessage->authorMember->name = '<value>';
-    $request->messagingMessage->authorMember->userId = '<value>';
-    $request->messagingMessage->channelId = '<value>';
-    $request->messagingMessage->createdAt = '<value>';
-    $request->messagingMessage->destinationMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->hiddenMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->id = '<id>';
-    $request->messagingMessage->mentionedMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->message = '<value>';
-    $request->messagingMessage->messageHtml = '<value>';
-    $request->messagingMessage->parentMessageId = '<value>';
-    $request->messagingMessage->raw = [
-        'holistic' => '<value>',
-    ];
-    $request->messagingMessage->subject = '<value>';
-    $request->messagingMessage->updatedAt = '<value>';
-    $request->messagingMessage->webUrl = '<value>';
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateMessagingMessageRequest(
+        connectionId: '<value>',
+        messagingMessage: new Shared\MessagingMessage(
+            attachments: [
+                new Shared\MessagingAttachment,
+            ],
+            authorMember: new Shared\PropertyMessagingMessageAuthorMember(
+                email: 'Eugene54@gmail.com',
+                name: '<value>',
+                userId: '<value>',
+            ),
+            channelId: '<value>',
+            createdAt: '<value>',
+            destinationMembers: [
+                new Shared\MessagingMember,
+            ],
+            hiddenMembers: [
+                new Shared\MessagingMember,
+            ],
+            id: '<id>',
+            mentionedMembers: [
+                new Shared\MessagingMember,
+            ],
+            message: '<value>',
+            messageHtml: '<value>',
+            parentMessageId: '<value>',
+            raw: [
+                'holistic' => '<value>',
+            ],
+            subject: '<value>',
+            updatedAt: '<value>',
+            webUrl: '<value>',
+        ),
+    );
     $response = $sdk->message->createMessagingMessage($request);
 
     if ($response->messagingMessage !== null) {
@@ -77,15 +77,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\CreateMessagingMessageRequest](../../Models/Operations/CreateMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateMessagingMessageRequest](../../Models/Operations/CreateMessagingMessageRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateMessagingMessageResponse](../../Models/Operations/CreateMessagingMessageResponse.md)**
+**[?Operations\CreateMessagingMessageResponse](../../Models/Operations/CreateMessagingMessageResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getMessagingMessage
 
@@ -94,15 +98,13 @@ Retrieve a message
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -110,13 +112,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetMessagingMessageRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetMessagingMessageRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->message->getMessagingMessage($request);
 
     if ($response->messagingMessage !== null) {
@@ -129,15 +131,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\GetMessagingMessageRequest](../../Models/Operations/GetMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetMessagingMessageRequest](../../Models/Operations/GetMessagingMessageRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetMessagingMessageResponse](../../Models/Operations/GetMessagingMessageResponse.md)**
+**[?Operations\GetMessagingMessageResponse](../../Models/Operations/GetMessagingMessageResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listMessagingMessages
 
@@ -146,15 +152,14 @@ List all messages
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -162,18 +167,18 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListMessagingMessagesRequest();
-    $request->channelId = '<value>';
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->limit = 4272.96;
-    $request->offset = 6110.39;
-    $request->parentId = '<value>';
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-14T22:11:58.965Z');;
-
+    $request = new Operations\ListMessagingMessagesRequest(
+        connectionId: '<value>',
+        channelId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        limit: 4272.96,
+        offset: 6110.39,
+        parentId: '<value>',
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-11-14T22:11:58.965Z'),
+    );
     $response = $sdk->message->listMessagingMessages($request);
 
     if ($response->messagingMessages !== null) {
@@ -186,15 +191,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\ListMessagingMessagesRequest](../../Models/Operations/ListMessagingMessagesRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListMessagingMessagesRequest](../../Models/Operations/ListMessagingMessagesRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListMessagingMessagesResponse](../../Models/Operations/ListMessagingMessagesResponse.md)**
+**[?Operations\ListMessagingMessagesResponse](../../Models/Operations/ListMessagingMessagesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchMessagingMessage
 
@@ -203,15 +212,13 @@ Update a message
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -219,39 +226,41 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchMessagingMessageRequest();
-    $request->messagingMessage = new Shared\MessagingMessage();
-    $request->messagingMessage->attachments = [
-        new Shared\MessagingAttachment(),
-    ];
-    $request->messagingMessage->authorMember = new Shared\PropertyMessagingMessageAuthorMember();
-    $request->messagingMessage->authorMember->email = 'Desmond.Pagac78@gmail.com';
-    $request->messagingMessage->authorMember->name = '<value>';
-    $request->messagingMessage->authorMember->userId = '<value>';
-    $request->messagingMessage->channelId = '<value>';
-    $request->messagingMessage->createdAt = '<value>';
-    $request->messagingMessage->destinationMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->hiddenMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->id = '<id>';
-    $request->messagingMessage->mentionedMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->message = '<value>';
-    $request->messagingMessage->messageHtml = '<value>';
-    $request->messagingMessage->parentMessageId = '<value>';
-    $request->messagingMessage->raw = [
-        'Implementation' => '<value>',
-    ];
-    $request->messagingMessage->subject = '<value>';
-    $request->messagingMessage->updatedAt = '<value>';
-    $request->messagingMessage->webUrl = '<value>';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchMessagingMessageRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        messagingMessage: new Shared\MessagingMessage(
+            attachments: [
+                new Shared\MessagingAttachment,
+            ],
+            authorMember: new Shared\PropertyMessagingMessageAuthorMember(
+                email: 'Desmond.Pagac78@gmail.com',
+                name: '<value>',
+                userId: '<value>',
+            ),
+            channelId: '<value>',
+            createdAt: '<value>',
+            destinationMembers: [
+                new Shared\MessagingMember,
+            ],
+            hiddenMembers: [
+                new Shared\MessagingMember,
+            ],
+            id: '<id>',
+            mentionedMembers: [
+                new Shared\MessagingMember,
+            ],
+            message: '<value>',
+            messageHtml: '<value>',
+            parentMessageId: '<value>',
+            raw: [
+                'Implementation' => '<value>',
+            ],
+            subject: '<value>',
+            updatedAt: '<value>',
+            webUrl: '<value>',
+        ),
+    );
     $response = $sdk->message->patchMessagingMessage($request);
 
     if ($response->messagingMessage !== null) {
@@ -264,15 +273,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Unified\Unified_to\Models\Operations\PatchMessagingMessageRequest](../../Models/Operations/PatchMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchMessagingMessageRequest](../../Models/Operations/PatchMessagingMessageRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchMessagingMessageResponse](../../Models/Operations/PatchMessagingMessageResponse.md)**
+**[?Operations\PatchMessagingMessageResponse](../../Models/Operations/PatchMessagingMessageResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeMessagingMessage
 
@@ -281,15 +294,13 @@ Remove a message
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -297,10 +308,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveMessagingMessageRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveMessagingMessageRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->message->removeMessagingMessage($request);
 
     if ($response->statusCode === 200) {
@@ -313,15 +324,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\RemoveMessagingMessageRequest](../../Models/Operations/RemoveMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveMessagingMessageRequest](../../Models/Operations/RemoveMessagingMessageRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveMessagingMessageResponse](../../Models/Operations/RemoveMessagingMessageResponse.md)**
+**[?Operations\RemoveMessagingMessageResponse](../../Models/Operations/RemoveMessagingMessageResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateMessagingMessage
 
@@ -330,15 +345,13 @@ Update a message
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -346,39 +359,41 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateMessagingMessageRequest();
-    $request->messagingMessage = new Shared\MessagingMessage();
-    $request->messagingMessage->attachments = [
-        new Shared\MessagingAttachment(),
-    ];
-    $request->messagingMessage->authorMember = new Shared\PropertyMessagingMessageAuthorMember();
-    $request->messagingMessage->authorMember->email = 'Johnpaul.Jenkins99@yahoo.com';
-    $request->messagingMessage->authorMember->name = '<value>';
-    $request->messagingMessage->authorMember->userId = '<value>';
-    $request->messagingMessage->channelId = '<value>';
-    $request->messagingMessage->createdAt = '<value>';
-    $request->messagingMessage->destinationMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->hiddenMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->id = '<id>';
-    $request->messagingMessage->mentionedMembers = [
-        new Shared\MessagingMember(),
-    ];
-    $request->messagingMessage->message = '<value>';
-    $request->messagingMessage->messageHtml = '<value>';
-    $request->messagingMessage->parentMessageId = '<value>';
-    $request->messagingMessage->raw = [
-        'Bicycle' => '<value>',
-    ];
-    $request->messagingMessage->subject = '<value>';
-    $request->messagingMessage->updatedAt = '<value>';
-    $request->messagingMessage->webUrl = '<value>';
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateMessagingMessageRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        messagingMessage: new Shared\MessagingMessage(
+            attachments: [
+                new Shared\MessagingAttachment,
+            ],
+            authorMember: new Shared\PropertyMessagingMessageAuthorMember(
+                email: 'Johnpaul.Jenkins99@yahoo.com',
+                name: '<value>',
+                userId: '<value>',
+            ),
+            channelId: '<value>',
+            createdAt: '<value>',
+            destinationMembers: [
+                new Shared\MessagingMember,
+            ],
+            hiddenMembers: [
+                new Shared\MessagingMember,
+            ],
+            id: '<id>',
+            mentionedMembers: [
+                new Shared\MessagingMember,
+            ],
+            message: '<value>',
+            messageHtml: '<value>',
+            parentMessageId: '<value>',
+            raw: [
+                'Bicycle' => '<value>',
+            ],
+            subject: '<value>',
+            updatedAt: '<value>',
+            webUrl: '<value>',
+        ),
+    );
     $response = $sdk->message->updateMessagingMessage($request);
 
     if ($response->messagingMessage !== null) {
@@ -391,12 +406,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\UpdateMessagingMessageRequest](../../Models/Operations/UpdateMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateMessagingMessageRequest](../../Models/Operations/UpdateMessagingMessageRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateMessagingMessageResponse](../../Models/Operations/UpdateMessagingMessageResponse.md)**
+**[?Operations\UpdateMessagingMessageResponse](../../Models/Operations/UpdateMessagingMessageResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

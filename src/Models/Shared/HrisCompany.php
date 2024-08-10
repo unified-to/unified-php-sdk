@@ -11,28 +11,44 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisCompany
 {
+    /**
+     *
+     * @var ?PropertyHrisCompanyAddress $address
+     */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyHrisCompanyAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisCompanyAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyHrisCompanyAddress $address = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $legalName
+     */
     #[\JMS\Serializer\Annotation\SerializedName('legal_name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $legalName = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -46,19 +62,31 @@ class HrisCompany
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?PropertyHrisCompanyAddress  $address
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $id
+     * @param  ?string  $legalName
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?PropertyHrisCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $legalName = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
-        $this->address = null;
-        $this->createdAt = null;
-        $this->id = null;
-        $this->legalName = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->updatedAt = null;
+        $this->address = $address;
+        $this->createdAt = $createdAt;
+        $this->id = $id;
+        $this->legalName = $legalName;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
     }
 }

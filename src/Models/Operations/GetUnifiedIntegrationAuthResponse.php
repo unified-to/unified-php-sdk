@@ -28,9 +28,9 @@ class GetUnifiedIntegrationAuthResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
      * Successful
@@ -39,11 +39,17 @@ class GetUnifiedIntegrationAuthResponse
      */
     public ?string $res = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?string  $res
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?string $res = null)
     {
-        $this->contentType = '';
-        $this->statusCode = 0;
-        $this->rawResponse = null;
-        $this->res = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->res = $res;
     }
 }

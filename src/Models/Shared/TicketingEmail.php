@@ -11,18 +11,29 @@ namespace Unified\Unified_to\Models\Shared;
 
 class TicketingEmail
 {
+    /**
+     *
+     * @var string $email
+     */
     #[\JMS\Serializer\Annotation\SerializedName('email')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $email;
 
+    /**
+     *
+     * @var ?TicketingEmailType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\TicketingEmailType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingEmailType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?TicketingEmailType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $email
+     * @param  ?TicketingEmailType  $type
+     */
+    public function __construct(?string $email = null, ?TicketingEmailType $type = null)
     {
-        $this->email = '';
-        $this->type = null;
+        $this->email = $email;
+        $this->type = $type;
     }
 }

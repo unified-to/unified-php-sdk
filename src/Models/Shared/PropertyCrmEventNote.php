@@ -12,19 +12,29 @@ namespace Unified\Unified_to\Models\Shared;
 /** PropertyCrmEventNote - The note object, when type = note */
 class PropertyCrmEventNote
 {
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $title = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $description
+     * @param  ?string  $title
+     */
+    public function __construct(?string $description = null, ?string $title = null)
     {
-        $this->description = null;
-        $this->title = null;
+        $this->description = $description;
+        $this->title = $title;
     }
 }

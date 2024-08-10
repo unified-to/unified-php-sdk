@@ -11,33 +11,51 @@ namespace Unified\Unified_to\Models\Shared;
 
 class HrisTimeoff
 {
+    /**
+     *
+     * @var ?\DateTime $approvedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('approved_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $approvedAt = null;
 
+    /**
+     *
+     * @var ?string $approverUserId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('approver_user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $approverUserId = null;
 
+    /**
+     *
+     * @var ?string $comments
+     */
     #[\JMS\Serializer\Annotation\SerializedName('comments')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $comments = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('end_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $endAt = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
@@ -51,42 +69,73 @@ class HrisTimeoff
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var \DateTime $startAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('start_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     public \DateTime $startAt;
 
+    /**
+     *
+     * @var ?HrisTimeoffStatus $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisTimeoffStatus>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffStatus')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisTimeoffStatus $status = null;
 
+    /**
+     *
+     * @var ?HrisTimeoffType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\HrisTimeoffType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisTimeoffType $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $userId;
 
-    public function __construct()
+    /**
+     * @param  ?\DateTime  $startAt
+     * @param  ?string  $userId
+     * @param  ?\DateTime  $approvedAt
+     * @param  ?string  $approverUserId
+     * @param  ?string  $comments
+     * @param  ?\DateTime  $createdAt
+     * @param  ?\DateTime  $endAt
+     * @param  ?string  $id
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?HrisTimeoffStatus  $status
+     * @param  ?HrisTimeoffType  $type
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?\DateTime $startAt = null, ?string $userId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $raw = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
     {
-        $this->approvedAt = null;
-        $this->approverUserId = null;
-        $this->comments = null;
-        $this->createdAt = null;
-        $this->endAt = null;
-        $this->id = null;
-        $this->raw = null;
-        $this->startAt = new \DateTime();
-        $this->status = null;
-        $this->type = null;
-        $this->updatedAt = null;
-        $this->userId = '';
+        $this->startAt = $startAt;
+        $this->userId = $userId;
+        $this->approvedAt = $approvedAt;
+        $this->approverUserId = $approverUserId;
+        $this->comments = $comments;
+        $this->createdAt = $createdAt;
+        $this->endAt = $endAt;
+        $this->id = $id;
+        $this->raw = $raw;
+        $this->status = $status;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
     }
 }

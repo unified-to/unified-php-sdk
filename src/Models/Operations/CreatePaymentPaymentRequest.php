@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreatePaymentPaymentRequest
 {
+    /**
+     *
+     * @var ?Shared\PaymentPayment $paymentPayment
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\PaymentPayment $paymentPayment = null;
+    public ?Shared\PaymentPayment $paymentPayment = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreatePaymentPaymentRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\PaymentPayment  $paymentPayment
+     */
+    public function __construct(?string $connectionId = null, ?Shared\PaymentPayment $paymentPayment = null)
     {
-        $this->paymentPayment = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->paymentPayment = $paymentPayment;
     }
 }

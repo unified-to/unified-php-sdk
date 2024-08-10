@@ -11,9 +11,17 @@ namespace Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListUnifiedIssuesRequest
 {
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
@@ -25,10 +33,15 @@ class ListUnifiedIssuesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
-    public function __construct()
+    /**
+     * @param  ?float  $limit
+     * @param  ?float  $offset
+     * @param  ?\DateTime  $updatedGte
+     */
+    public function __construct(?float $limit = null, ?float $offset = null, ?\DateTime $updatedGte = null)
     {
-        $this->limit = null;
-        $this->offset = null;
-        $this->updatedGte = null;
+        $this->limit = $limit;
+        $this->offset = $offset;
+        $this->updatedGte = $updatedGte;
     }
 }

@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateStorageFileRequest
 {
+    /**
+     *
+     * @var ?Shared\StorageFile $storageFile
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\StorageFile $storageFile = null;
+    public ?Shared\StorageFile $storageFile = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateStorageFileRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\StorageFile  $storageFile
+     */
+    public function __construct(?string $connectionId = null, ?Shared\StorageFile $storageFile = null)
     {
-        $this->storageFile = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->storageFile = $storageFile;
     }
 }

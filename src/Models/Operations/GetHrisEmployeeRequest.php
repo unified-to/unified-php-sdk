@@ -35,10 +35,15 @@ class GetHrisEmployeeRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?array $fields = null)
     {
-        $this->connectionId = '';
-        $this->fields = null;
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->fields = $fields;
     }
 }

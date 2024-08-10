@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCommerceLocationRequest
 {
+    /**
+     *
+     * @var ?Shared\CommerceLocation $commerceLocation
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\CommerceLocation $commerceLocation = null;
+    public ?Shared\CommerceLocation $commerceLocation = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateCommerceLocationRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\CommerceLocation  $commerceLocation
+     */
+    public function __construct(?string $connectionId = null, ?Shared\CommerceLocation $commerceLocation = null)
     {
-        $this->commerceLocation = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->commerceLocation = $commerceLocation;
     }
 }

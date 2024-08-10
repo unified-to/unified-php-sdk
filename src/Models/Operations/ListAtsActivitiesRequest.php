@@ -11,9 +11,17 @@ namespace Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListAtsActivitiesRequest
 {
+    /**
+     *
+     * @var ?string $applicationId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=application_id')]
     public ?string $applicationId = null;
 
+    /**
+     *
+     * @var ?string $candidateId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=candidate_id')]
     public ?string $candidateId = null;
 
@@ -25,6 +33,10 @@ class ListAtsActivitiesRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
+    /**
+     *
+     * @var ?string $documentId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=document_id')]
     public ?string $documentId = null;
 
@@ -36,15 +48,31 @@ class ListAtsActivitiesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
+    /**
+     *
+     * @var ?string $interviewId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=interview_id')]
     public ?string $interviewId = null;
 
+    /**
+     *
+     * @var ?string $jobId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
     public ?string $jobId = null;
 
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
@@ -64,22 +92,40 @@ class ListAtsActivitiesRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $applicationId
+     * @param  ?string  $candidateId
+     * @param  ?string  $documentId
+     * @param  ?array<string>  $fields
+     * @param  ?string  $interviewId
+     * @param  ?string  $jobId
+     * @param  ?float  $limit
+     * @param  ?float  $offset
+     * @param  ?string  $query
+     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $userId
+     */
+    public function __construct(?string $connectionId = null, ?string $applicationId = null, ?string $candidateId = null, ?string $documentId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $query = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
-        $this->applicationId = null;
-        $this->candidateId = null;
-        $this->connectionId = '';
-        $this->documentId = null;
-        $this->fields = null;
-        $this->interviewId = null;
-        $this->jobId = null;
-        $this->limit = null;
-        $this->offset = null;
-        $this->query = null;
-        $this->updatedGte = null;
-        $this->userId = null;
+        $this->connectionId = $connectionId;
+        $this->applicationId = $applicationId;
+        $this->candidateId = $candidateId;
+        $this->documentId = $documentId;
+        $this->fields = $fields;
+        $this->interviewId = $interviewId;
+        $this->jobId = $jobId;
+        $this->limit = $limit;
+        $this->offset = $offset;
+        $this->query = $query;
+        $this->updatedGte = $updatedGte;
+        $this->userId = $userId;
     }
 }

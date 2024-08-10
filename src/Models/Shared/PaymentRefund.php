@@ -11,28 +11,43 @@ namespace Unified\Unified_to\Models\Shared;
 
 class PaymentRefund
 {
+    /**
+     *
+     * @var ?string $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $notes
+     */
     #[\JMS\Serializer\Annotation\SerializedName('notes')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $notes = null;
 
+    /**
+     *
+     * @var string $paymentId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('payment_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $paymentId;
 
     /**
@@ -45,36 +60,61 @@ class PaymentRefund
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $reference
+     */
     #[\JMS\Serializer\Annotation\SerializedName('reference')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $reference = null;
 
+    /**
+     *
+     * @var ?PaymentRefundStatus $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\PaymentRefundStatus>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentRefundStatus')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PaymentRefundStatus $status = null;
 
+    /**
+     *
+     * @var float $totalAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     public float $totalAmount;
 
+    /**
+     *
+     * @var ?string $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $paymentId
+     * @param  ?float  $totalAmount
+     * @param  ?string  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $id
+     * @param  ?string  $notes
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $reference
+     * @param  ?PaymentRefundStatus  $status
+     * @param  ?string  $updatedAt
+     */
+    public function __construct(?string $paymentId = null, ?float $totalAmount = null, ?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?string $reference = null, ?PaymentRefundStatus $status = null, ?string $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->currency = null;
-        $this->id = null;
-        $this->notes = null;
-        $this->paymentId = '';
-        $this->raw = null;
-        $this->reference = null;
-        $this->status = null;
-        $this->totalAmount = 0;
-        $this->updatedAt = null;
+        $this->paymentId = $paymentId;
+        $this->totalAmount = $totalAmount;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->id = $id;
+        $this->notes = $notes;
+        $this->raw = $raw;
+        $this->reference = $reference;
+        $this->status = $status;
+        $this->updatedAt = $updatedAt;
     }
 }

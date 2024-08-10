@@ -12,8 +12,11 @@ namespace Unified\Unified_to\Models\Shared;
 /** Integration - Informational object for supported integrations. */
 class Integration
 {
+    /**
+     *
+     * @var ?float $activeHealthyConnections
+     */
     #[\JMS\Serializer\Annotation\SerializedName('active_healthy_connections')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $activeHealthyConnections = null;
 
@@ -27,95 +30,140 @@ class Integration
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $api = null;
 
+    /**
+     *
+     * @var ?string $apiDocsUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('api_docs_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $apiDocsUrl = null;
 
+    /**
+     *
+     * @var ?bool $beta
+     */
     #[\JMS\Serializer\Annotation\SerializedName('beta')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $beta = null;
 
     /**
      * The categories of support solutions that this integration has
      *
-     * @var array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories> $categories
+     * @var array<PropertyIntegrationCategories> $categories
      */
     #[\JMS\Serializer\Annotation\SerializedName('categories')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyIntegrationCategories>>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories>')]
     public array $categories;
 
+    /**
+     *
+     * @var ?string $color
+     */
     #[\JMS\Serializer\Annotation\SerializedName('color')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $color = null;
 
+    /**
+     *
+     * @var ?string $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $faIcon
+     */
     #[\JMS\Serializer\Annotation\SerializedName('fa_icon')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $faIcon = null;
 
+    /**
+     *
+     * @var ?bool $featured
+     */
     #[\JMS\Serializer\Annotation\SerializedName('featured')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $featured = null;
 
+    /**
+     *
+     * @var bool $inProgress
+     */
     #[\JMS\Serializer\Annotation\SerializedName('in_progress')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     public bool $inProgress;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?string $logoUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('logo_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $logoUrl = null;
 
+    /**
+     *
+     * @var string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    /**
+     *
+     * @var ?float $popularity
+     */
     #[\JMS\Serializer\Annotation\SerializedName('popularity')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $popularity = null;
 
+    /**
+     *
+     * @var ?string $rateLimitDescription
+     */
     #[\JMS\Serializer\Annotation\SerializedName('rate_limit_description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $rateLimitDescription = null;
 
     /**
      * $support
      *
-     * @var ?array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport> $support
+     * @var ?array<string, IntegrationSupport> $support
      */
     #[\JMS\Serializer\Annotation\SerializedName('support')]
-    #[\JMS\Serializer\Annotation\Type('array<string, Unified\Unified_to\Models\Shared\IntegrationSupport>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $support = null;
 
+    /**
+     *
+     * @var ?\DateTime $testedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('tested_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $testedAt = null;
 
+    /**
+     *
+     * @var ?string $textColor
+     */
     #[\JMS\Serializer\Annotation\SerializedName('text_color')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $textColor = null;
 
@@ -139,45 +187,80 @@ class Integration
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tokenNames = null;
 
+    /**
+     *
+     * @var string $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $type;
 
+    /**
+     *
+     * @var ?string $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $webUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('web_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $webUrl = null;
 
-    public function __construct()
+    /**
+     * @param  ?array<PropertyIntegrationCategories>  $categories
+     * @param  ?bool  $inProgress
+     * @param  ?string  $name
+     * @param  ?string  $type
+     * @param  ?float  $activeHealthyConnections
+     * @param  ?array<string, mixed>  $api
+     * @param  ?string  $apiDocsUrl
+     * @param  ?bool  $beta
+     * @param  ?string  $color
+     * @param  ?string  $createdAt
+     * @param  ?string  $description
+     * @param  ?string  $faIcon
+     * @param  ?bool  $featured
+     * @param  ?bool  $isActive
+     * @param  ?string  $logoUrl
+     * @param  ?float  $popularity
+     * @param  ?string  $rateLimitDescription
+     * @param  ?array<string, IntegrationSupport>  $support
+     * @param  ?\DateTime  $testedAt
+     * @param  ?string  $textColor
+     * @param  ?array<string>  $tokenInstructions
+     * @param  ?array<string>  $tokenNames
+     * @param  ?string  $updatedAt
+     * @param  ?string  $webUrl
+     */
+    public function __construct(?array $categories = null, ?bool $inProgress = null, ?string $name = null, ?string $type = null, ?float $activeHealthyConnections = null, ?array $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $isActive = null, ?string $logoUrl = null, ?float $popularity = null, ?string $rateLimitDescription = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
-        $this->activeHealthyConnections = null;
-        $this->api = null;
-        $this->apiDocsUrl = null;
-        $this->beta = null;
-        $this->categories = [];
-        $this->color = null;
-        $this->createdAt = null;
-        $this->description = null;
-        $this->faIcon = null;
-        $this->featured = null;
-        $this->inProgress = false;
-        $this->isActive = null;
-        $this->logoUrl = null;
-        $this->name = '';
-        $this->popularity = null;
-        $this->rateLimitDescription = null;
-        $this->support = null;
-        $this->testedAt = null;
-        $this->textColor = null;
-        $this->tokenInstructions = null;
-        $this->tokenNames = null;
-        $this->type = '';
-        $this->updatedAt = null;
-        $this->webUrl = null;
+        $this->categories = $categories;
+        $this->inProgress = $inProgress;
+        $this->name = $name;
+        $this->type = $type;
+        $this->activeHealthyConnections = $activeHealthyConnections;
+        $this->api = $api;
+        $this->apiDocsUrl = $apiDocsUrl;
+        $this->beta = $beta;
+        $this->color = $color;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->faIcon = $faIcon;
+        $this->featured = $featured;
+        $this->isActive = $isActive;
+        $this->logoUrl = $logoUrl;
+        $this->popularity = $popularity;
+        $this->rateLimitDescription = $rateLimitDescription;
+        $this->support = $support;
+        $this->testedAt = $testedAt;
+        $this->textColor = $textColor;
+        $this->tokenInstructions = $tokenInstructions;
+        $this->tokenNames = $tokenNames;
+        $this->updatedAt = $updatedAt;
+        $this->webUrl = $webUrl;
     }
 }

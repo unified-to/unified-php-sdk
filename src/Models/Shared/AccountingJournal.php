@@ -11,33 +11,45 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingJournal
 {
+    /**
+     *
+     * @var ?string $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
     /**
      * new field name
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem> $lineitems
+     * @var ?array<AccountingJournalLineitem> $lineitems
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AccountingJournalLineitem>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineitems = null;
 
@@ -51,37 +63,61 @@ class AccountingJournal
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $reference
+     */
     #[\JMS\Serializer\Annotation\SerializedName('reference')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $reference = null;
 
+    /**
+     *
+     * @var ?float $taxAmount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $taxAmount = null;
 
+    /**
+     *
+     * @var ?string $taxrateId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('taxrate_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $taxrateId = null;
 
+    /**
+     *
+     * @var ?string $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?array<AccountingJournalLineitem>  $lineitems
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $reference
+     * @param  ?float  $taxAmount
+     * @param  ?string  $taxrateId
+     * @param  ?string  $updatedAt
+     */
+    public function __construct(?string $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?array $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?string $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->currency = null;
-        $this->description = null;
-        $this->id = null;
-        $this->lineitems = null;
-        $this->raw = null;
-        $this->reference = null;
-        $this->taxAmount = null;
-        $this->taxrateId = null;
-        $this->updatedAt = null;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->description = $description;
+        $this->id = $id;
+        $this->lineitems = $lineitems;
+        $this->raw = $raw;
+        $this->reference = $reference;
+        $this->taxAmount = $taxAmount;
+        $this->taxrateId = $taxrateId;
+        $this->updatedAt = $updatedAt;
     }
 }

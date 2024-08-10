@@ -12,48 +12,75 @@ namespace Unified\Unified_to\Models\Shared;
 /** AccountingAccount - Chart of accounts */
 class AccountingAccount
 {
+    /**
+     *
+     * @var ?float $balance
+     */
     #[\JMS\Serializer\Annotation\SerializedName('balance')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $balance = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?string $customerDefinedCode
+     */
     #[\JMS\Serializer\Annotation\SerializedName('customer_defined_code')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $customerDefinedCode = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?bool $isPayable
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_payable')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isPayable = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?string $parentAccountId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_account_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentAccountId = null;
 
@@ -67,35 +94,61 @@ class AccountingAccount
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?Status $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Status>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Status')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Status $status = null;
 
+    /**
+     *
+     * @var ?Type $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\Type>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Type')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Type $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?float  $balance
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $customerDefinedCode
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?bool  $isPayable
+     * @param  ?string  $name
+     * @param  ?string  $parentAccountId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?Status  $status
+     * @param  ?Type  $type
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentAccountId = null, ?array $raw = null, ?Status $status = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {
-        $this->balance = null;
-        $this->createdAt = null;
-        $this->currency = null;
-        $this->customerDefinedCode = null;
-        $this->description = null;
-        $this->id = null;
-        $this->isPayable = null;
-        $this->name = null;
-        $this->parentAccountId = null;
-        $this->raw = null;
-        $this->status = null;
-        $this->type = null;
-        $this->updatedAt = null;
+        $this->balance = $balance;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->customerDefinedCode = $customerDefinedCode;
+        $this->description = $description;
+        $this->id = $id;
+        $this->isPayable = $isPayable;
+        $this->name = $name;
+        $this->parentAccountId = $parentAccountId;
+        $this->raw = $raw;
+        $this->status = $status;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
     }
 }

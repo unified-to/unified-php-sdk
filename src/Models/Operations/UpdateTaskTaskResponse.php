@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class UpdateTaskTaskResponse
 {
     /**
@@ -28,22 +28,28 @@ class UpdateTaskTaskResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
      * Successful
      *
-     * @var ?\Unified\Unified_to\Models\Shared\TaskTask $taskTask
+     * @var ?Shared\TaskTask $taskTask
      */
-    public ?\Unified\Unified_to\Models\Shared\TaskTask $taskTask = null;
+    public ?Shared\TaskTask $taskTask = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?Shared\TaskTask  $taskTask
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?Shared\TaskTask $taskTask = null)
     {
-        $this->contentType = '';
-        $this->statusCode = 0;
-        $this->rawResponse = null;
-        $this->taskTask = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->taskTask = $taskTask;
     }
 }

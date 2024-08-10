@@ -11,108 +11,154 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CommerceItemVariant
 {
+    /**
+     *
+     * @var ?\DateTime $availableAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('available_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $availableAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?float $height
+     */
     #[\JMS\Serializer\Annotation\SerializedName('height')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $height = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $inventoryId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('inventory_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $inventoryId = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?bool $isFeatured
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_featured')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isFeatured = null;
 
+    /**
+     *
+     * @var ?bool $isVisible
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_visible')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isVisible = null;
 
+    /**
+     *
+     * @var ?float $length
+     */
     #[\JMS\Serializer\Annotation\SerializedName('length')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $length = null;
 
     /**
      * $media
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
+     * @var ?array<CommerceItemMedia> $media
      */
     #[\JMS\Serializer\Annotation\SerializedName('media')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CommerceItemMedia>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $media = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
     /**
      * $options
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemOption> $options
+     * @var ?array<CommerceItemOption> $options
      */
     #[\JMS\Serializer\Annotation\SerializedName('options')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CommerceItemOption>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemOption>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $options = null;
 
     /**
      * $prices
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemPrice> $prices
+     * @var ?array<CommerceItemPrice> $prices
      */
     #[\JMS\Serializer\Annotation\SerializedName('prices')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\CommerceItemPrice>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemPrice>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $prices = null;
 
+    /**
+     *
+     * @var ?string $publicDescription
+     */
     #[\JMS\Serializer\Annotation\SerializedName('public_description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $publicDescription = null;
 
+    /**
+     *
+     * @var ?string $publicName
+     */
     #[\JMS\Serializer\Annotation\SerializedName('public_name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $publicName = null;
 
+    /**
+     *
+     * @var ?bool $requiresShipping
+     */
     #[\JMS\Serializer\Annotation\SerializedName('requires_shipping')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $requiresShipping = null;
 
+    /**
+     *
+     * @var ?SizeUnit $sizeUnit
+     */
     #[\JMS\Serializer\Annotation\SerializedName('size_unit')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\SizeUnit>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SizeUnit')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?SizeUnit $sizeUnit = null;
 
+    /**
+     *
+     * @var ?string $sku
+     */
     #[\JMS\Serializer\Annotation\SerializedName('sku')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $sku = null;
 
@@ -126,50 +172,88 @@ class CommerceItemVariant
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
+    /**
+     *
+     * @var ?float $totalStock
+     */
     #[\JMS\Serializer\Annotation\SerializedName('total_stock')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $totalStock = null;
 
+    /**
+     *
+     * @var ?float $weight
+     */
     #[\JMS\Serializer\Annotation\SerializedName('weight')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $weight = null;
 
+    /**
+     *
+     * @var ?WeightUnit $weightUnit
+     */
     #[\JMS\Serializer\Annotation\SerializedName('weight_unit')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\WeightUnit>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WeightUnit')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?WeightUnit $weightUnit = null;
 
+    /**
+     *
+     * @var ?float $width
+     */
     #[\JMS\Serializer\Annotation\SerializedName('width')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $width = null;
 
-    public function __construct()
+    /**
+     * @param  ?\DateTime  $availableAt
+     * @param  ?string  $description
+     * @param  ?float  $height
+     * @param  ?string  $id
+     * @param  ?string  $inventoryId
+     * @param  ?bool  $isActive
+     * @param  ?bool  $isFeatured
+     * @param  ?bool  $isVisible
+     * @param  ?float  $length
+     * @param  ?array<CommerceItemMedia>  $media
+     * @param  ?string  $name
+     * @param  ?array<CommerceItemOption>  $options
+     * @param  ?array<CommerceItemPrice>  $prices
+     * @param  ?string  $publicDescription
+     * @param  ?string  $publicName
+     * @param  ?bool  $requiresShipping
+     * @param  ?SizeUnit  $sizeUnit
+     * @param  ?string  $sku
+     * @param  ?array<string>  $tags
+     * @param  ?float  $totalStock
+     * @param  ?float  $weight
+     * @param  ?WeightUnit  $weightUnit
+     * @param  ?float  $width
+     */
+    public function __construct(?\DateTime $availableAt = null, ?string $description = null, ?float $height = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?float $length = null, ?array $media = null, ?string $name = null, ?array $options = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?bool $requiresShipping = null, ?SizeUnit $sizeUnit = null, ?string $sku = null, ?array $tags = null, ?float $totalStock = null, ?float $weight = null, ?WeightUnit $weightUnit = null, ?float $width = null)
     {
-        $this->availableAt = null;
-        $this->description = null;
-        $this->height = null;
-        $this->id = null;
-        $this->inventoryId = null;
-        $this->isActive = null;
-        $this->isFeatured = null;
-        $this->isVisible = null;
-        $this->length = null;
-        $this->media = null;
-        $this->name = null;
-        $this->options = null;
-        $this->prices = null;
-        $this->publicDescription = null;
-        $this->publicName = null;
-        $this->requiresShipping = null;
-        $this->sizeUnit = null;
-        $this->sku = null;
-        $this->tags = null;
-        $this->totalStock = null;
-        $this->weight = null;
-        $this->weightUnit = null;
-        $this->width = null;
+        $this->availableAt = $availableAt;
+        $this->description = $description;
+        $this->height = $height;
+        $this->id = $id;
+        $this->inventoryId = $inventoryId;
+        $this->isActive = $isActive;
+        $this->isFeatured = $isFeatured;
+        $this->isVisible = $isVisible;
+        $this->length = $length;
+        $this->media = $media;
+        $this->name = $name;
+        $this->options = $options;
+        $this->prices = $prices;
+        $this->publicDescription = $publicDescription;
+        $this->publicName = $publicName;
+        $this->requiresShipping = $requiresShipping;
+        $this->sizeUnit = $sizeUnit;
+        $this->sku = $sku;
+        $this->tags = $tags;
+        $this->totalStock = $totalStock;
+        $this->weight = $weight;
+        $this->weightUnit = $weightUnit;
+        $this->width = $width;
     }
 }

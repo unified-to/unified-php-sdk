@@ -8,16 +8,17 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMartechMemberRequest
 {
     /**
      * A member represents a person
      *
-     * @var ?\Unified\Unified_to\Models\Shared\MarketingMember $marketingMember
+     * @var ?Shared\MarketingMember $marketingMember
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\MarketingMember $marketingMember = null;
+    public ?Shared\MarketingMember $marketingMember = null;
 
     /**
      * ID of the connection
@@ -27,9 +28,13 @@ class CreateMartechMemberRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\MarketingMember  $marketingMember
+     */
+    public function __construct(?string $connectionId = null, ?Shared\MarketingMember $marketingMember = null)
     {
-        $this->marketingMember = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->marketingMember = $marketingMember;
     }
 }

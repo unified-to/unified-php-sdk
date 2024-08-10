@@ -11,18 +11,29 @@ namespace Unified\Unified_to\Models\Shared;
 
 class MarketingEmail
 {
+    /**
+     *
+     * @var string $email
+     */
     #[\JMS\Serializer\Annotation\SerializedName('email')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $email;
 
+    /**
+     *
+     * @var ?MarketingEmailType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\MarketingEmailType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingEmailType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?MarketingEmailType $type = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $email
+     * @param  ?MarketingEmailType  $type
+     */
+    public function __construct(?string $email = null, ?MarketingEmailType $type = null)
     {
-        $this->email = '';
-        $this->type = null;
+        $this->email = $email;
+        $this->type = $type;
     }
 }

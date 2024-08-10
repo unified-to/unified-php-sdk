@@ -11,48 +11,78 @@ namespace Unified\Unified_to\Models\Shared;
 
 class EnrichPersonWorkHistory
 {
+    /**
+     *
+     * @var ?string $companyDomain
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_domain')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyDomain = null;
 
+    /**
+     *
+     * @var ?string $companyId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyId = null;
 
+    /**
+     *
+     * @var ?string $companyName
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyName = null;
 
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('end_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $endAt = null;
 
+    /**
+     *
+     * @var ?string $location
+     */
     #[\JMS\Serializer\Annotation\SerializedName('location')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $location = null;
 
+    /**
+     *
+     * @var ?\DateTime $startAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('start_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $startAt = null;
 
+    /**
+     *
+     * @var string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $title;
 
-    public function __construct()
+    /**
+     * @param  ?string  $title
+     * @param  ?string  $companyDomain
+     * @param  ?string  $companyId
+     * @param  ?string  $companyName
+     * @param  ?\DateTime  $endAt
+     * @param  ?string  $location
+     * @param  ?\DateTime  $startAt
+     */
+    public function __construct(?string $title = null, ?string $companyDomain = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $endAt = null, ?string $location = null, ?\DateTime $startAt = null)
     {
-        $this->companyDomain = null;
-        $this->companyId = null;
-        $this->companyName = null;
-        $this->endAt = null;
-        $this->location = null;
-        $this->startAt = null;
-        $this->title = '';
+        $this->title = $title;
+        $this->companyDomain = $companyDomain;
+        $this->companyId = $companyId;
+        $this->companyName = $companyName;
+        $this->endAt = $endAt;
+        $this->location = $location;
+        $this->startAt = $startAt;
     }
 }

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3d2d1fa6e398c56e2c8906b5627dc43e
+  docChecksum: 97bee75349492db718a1db2995576f85
   docVersion: "1.0"
-  speakeasyVersion: 1.358.0
-  generationVersion: 2.390.6
-  releaseVersion: 0.15.42
-  configChecksum: 0678b3aae519b4c9cc00de863fe974e5
+  speakeasyVersion: 1.360.0
+  generationVersion: 2.392.0
+  releaseVersion: 0.16.0
+  configChecksum: 3fe7eb47407b2e529c9d26e85c6b956c
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -17,6 +17,7 @@ features:
     globalSecurity: 2.81.7
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.1
+    responseFormat: 0.1.0
 generatedFiles:
   - src/SDKConfiguration.php
   - src/Accounting.php
@@ -93,8 +94,13 @@ generatedFiles:
   - src/UnifiedToBuilder.php
   - composer.json
   - phpstan.neon
+  - phpunit.xml
   - pint.json
   - rector.php
+  - src/Utils/DateHandler.php
+  - src/Utils/DateTimeHandler.php
+  - src/Utils/DefaultResponse.php
+  - src/Utils/DefaultStream.php
   - src/Utils/EnumHandler.php
   - src/Utils/FormMetadata.php
   - src/Utils/Headers.php
@@ -103,6 +109,7 @@ generatedFiles:
   - src/Utils/MultipartMetadata.php
   - src/Utils/ParamsMetadata.php
   - src/Utils/PathParameters.php
+  - src/Utils/PhpDocTypeParser.php
   - src/Utils/QueryParameters.php
   - src/Utils/RequestBodies.php
   - src/Utils/RequestMetadata.php
@@ -110,7 +117,9 @@ generatedFiles:
   - src/Utils/SecurityClient.php
   - src/Utils/SecurityMetadata.php
   - src/Utils/SpeakeasyMetadata.php
+  - src/Utils/UnionHandler.php
   - src/Utils/Utils.php
+  - src/Models/Errors/SDKException.php
   - src/Models/Operations/CreateAccountingAccountRequest.php
   - src/Models/Operations/CreateAccountingAccountResponse.php
   - src/Models/Operations/CreateAccountingContactRequest.php

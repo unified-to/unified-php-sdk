@@ -11,52 +11,76 @@ namespace Unified\Unified_to\Models\Shared;
 
 class MessagingChannel
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?bool $hasSubchannels
+     */
     #[\JMS\Serializer\Annotation\SerializedName('has_subchannels')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $hasSubchannels = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?bool $isActive
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isActive = null;
 
+    /**
+     *
+     * @var ?bool $isPrivate
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_private')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isPrivate = null;
 
     /**
      * $members
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMember> $members
+     * @var ?array<MessagingMember> $members
      */
     #[\JMS\Serializer\Annotation\SerializedName('members')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\MessagingMember>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $members = null;
 
+    /**
+     *
+     * @var string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
 
+    /**
+     *
+     * @var ?string $parentChannelId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_channel_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentChannelId = null;
 
@@ -70,29 +94,49 @@ class MessagingChannel
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $webUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('web_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $webUrl = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $name
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?bool  $hasSubchannels
+     * @param  ?string  $id
+     * @param  ?bool  $isActive
+     * @param  ?bool  $isPrivate
+     * @param  ?array<MessagingMember>  $members
+     * @param  ?string  $parentChannelId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $updatedAt
+     * @param  ?string  $webUrl
+     */
+    public function __construct(?string $name = null, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $parentChannelId = null, ?array $raw = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
-        $this->createdAt = null;
-        $this->description = null;
-        $this->hasSubchannels = null;
-        $this->id = null;
-        $this->isActive = null;
-        $this->isPrivate = null;
-        $this->members = null;
-        $this->name = '';
-        $this->parentChannelId = null;
-        $this->raw = null;
-        $this->updatedAt = null;
-        $this->webUrl = null;
+        $this->name = $name;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->hasSubchannels = $hasSubchannels;
+        $this->id = $id;
+        $this->isActive = $isActive;
+        $this->isPrivate = $isPrivate;
+        $this->members = $members;
+        $this->parentChannelId = $parentChannelId;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
+        $this->webUrl = $webUrl;
     }
 }

@@ -11,13 +11,19 @@ namespace Unified\Unified_to\Models\Shared;
 
 class TaskProject
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
@@ -31,18 +37,27 @@ class TaskProject
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $groupIds = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?string $parentId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentId = null;
 
@@ -56,8 +71,11 @@ class TaskProject
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
@@ -71,16 +89,27 @@ class TaskProject
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $userIds = null;
 
-    public function __construct()
+    /**
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?array<string>  $groupIds
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?string  $parentId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?array<string>  $userIds
+     */
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?array $groupIds = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
-        $this->createdAt = null;
-        $this->description = null;
-        $this->groupIds = null;
-        $this->id = null;
-        $this->name = null;
-        $this->parentId = null;
-        $this->raw = null;
-        $this->updatedAt = null;
-        $this->userIds = null;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->groupIds = $groupIds;
+        $this->id = $id;
+        $this->name = $name;
+        $this->parentId = $parentId;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
+        $this->userIds = $userIds;
     }
 }

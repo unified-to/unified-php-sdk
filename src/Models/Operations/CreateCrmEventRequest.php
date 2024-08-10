@@ -8,16 +8,17 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmEventRequest
 {
     /**
      * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
      *
-     * @var ?\Unified\Unified_to\Models\Shared\CrmEvent $crmEvent
+     * @var ?Shared\CrmEvent $crmEvent
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\CrmEvent $crmEvent = null;
+    public ?Shared\CrmEvent $crmEvent = null;
 
     /**
      * ID of the connection
@@ -27,9 +28,13 @@ class CreateCrmEventRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\CrmEvent  $crmEvent
+     */
+    public function __construct(?string $connectionId = null, ?Shared\CrmEvent $crmEvent = null)
     {
-        $this->crmEvent = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->crmEvent = $crmEvent;
     }
 }

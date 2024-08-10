@@ -11,6 +11,10 @@ namespace Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListCrmDealsRequest
 {
+    /**
+     *
+     * @var ?string $companyId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
     public ?string $companyId = null;
 
@@ -22,6 +26,10 @@ class ListCrmDealsRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
+    /**
+     *
+     * @var ?string $contactId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
     public ?string $contactId = null;
 
@@ -33,9 +41,17 @@ class ListCrmDealsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
+    /**
+     *
+     * @var ?float $limit
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
 
+    /**
+     *
+     * @var ?float $offset
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?float $offset = null;
 
@@ -55,19 +71,34 @@ class ListCrmDealsRequest
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $updatedGte = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $companyId
+     * @param  ?string  $contactId
+     * @param  ?array<string>  $fields
+     * @param  ?float  $limit
+     * @param  ?float  $offset
+     * @param  ?string  $query
+     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $userId
+     */
+    public function __construct(?string $connectionId = null, ?string $companyId = null, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $query = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
-        $this->companyId = null;
-        $this->connectionId = '';
-        $this->contactId = null;
-        $this->fields = null;
-        $this->limit = null;
-        $this->offset = null;
-        $this->query = null;
-        $this->updatedGte = null;
-        $this->userId = null;
+        $this->connectionId = $connectionId;
+        $this->companyId = $companyId;
+        $this->contactId = $contactId;
+        $this->fields = $fields;
+        $this->limit = $limit;
+        $this->offset = $offset;
+        $this->query = $query;
+        $this->updatedGte = $updatedGte;
+        $this->userId = $userId;
     }
 }

@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAtsJobRequest
 {
+    /**
+     *
+     * @var ?Shared\AtsJob $atsJob
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AtsJob $atsJob = null;
+    public ?Shared\AtsJob $atsJob = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class UpdateAtsJobRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\AtsJob  $atsJob
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AtsJob $atsJob = null)
     {
-        $this->atsJob = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->atsJob = $atsJob;
     }
 }

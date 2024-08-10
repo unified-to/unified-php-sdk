@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class GetPaymentLinkResponse
 {
     /**
@@ -21,9 +21,9 @@ class GetPaymentLinkResponse
     /**
      * Successful
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PaymentLink $paymentLink
+     * @var ?Shared\PaymentLink $paymentLink
      */
-    public ?\Unified\Unified_to\Models\Shared\PaymentLink $paymentLink = null;
+    public ?Shared\PaymentLink $paymentLink = null;
 
     /**
      * HTTP response status code for this operation
@@ -35,15 +35,21 @@ class GetPaymentLinkResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?Shared\PaymentLink  $paymentLink
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?Shared\PaymentLink $paymentLink = null)
     {
-        $this->contentType = '';
-        $this->paymentLink = null;
-        $this->statusCode = 0;
-        $this->rawResponse = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->paymentLink = $paymentLink;
     }
 }

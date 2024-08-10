@@ -8,6 +8,10 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
 class Unified
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,12 +27,13 @@ class Unified
     /**
      * Create connection
      *
-     * @param  \Unified\Unified_to\Models\Shared\Connection  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse
+     * @param  Shared\Connection  $request
+     * @return Operations\CreateUnifiedConnectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUnifiedConnection(
-        ?\Unified\Unified_to\Models\Shared\Connection $request,
-    ): \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse {
+        ?Shared\Connection $request,
+    ): Operations\CreateUnifiedConnectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
         $options = ['http_errors' => false];
@@ -38,24 +43,32 @@ class Unified
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->connection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Connection', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\Connection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateUnifiedConnectionResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    connection: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
@@ -63,12 +76,13 @@ class Unified
      *
      * The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
+     * @param  Operations\CreateUnifiedWebhookRequest  $request
+     * @return Operations\CreateUnifiedWebhookResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUnifiedWebhook(
-        ?\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse {
+        ?Operations\CreateUnifiedWebhookRequest $request,
+    ): Operations\CreateUnifiedWebhookResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
         $options = ['http_errors' => false];
@@ -76,95 +90,121 @@ class Unified
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\CreateUnifiedWebhookRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->webhook = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\Webhook', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateUnifiedWebhookResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    webhook: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve specific API Call by its ID
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
+     * @param  Operations\GetUnifiedApicallRequest  $request
+     * @return Operations\GetUnifiedApicallResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedApicall(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse {
+        ?Operations\GetUnifiedApicallRequest $request,
+    ): Operations\GetUnifiedApicallResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall/{id}', Operations\GetUnifiedApicallRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->apiCall = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\ApiCall', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\ApiCall', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetUnifiedApicallResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    apiCall: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve connection
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
+     * @param  Operations\GetUnifiedConnectionRequest  $request
+     * @return Operations\GetUnifiedConnectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedConnection(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse {
+        ?Operations\GetUnifiedConnectionRequest $request,
+    ): Operations\GetUnifiedConnectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\GetUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->connection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Connection', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\Connection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetUnifiedConnectionResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    connection: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
@@ -172,139 +212,174 @@ class Unified
      *
      * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse
+     * @param  Operations\GetUnifiedIntegrationAuthRequest  $request
+     * @return Operations\GetUnifiedIntegrationAuthResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedIntegrationAuth(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse {
+        ?Operations\GetUnifiedIntegrationAuthRequest $request,
+    ): Operations\GetUnifiedIntegrationAuthResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationAuthRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetUnifiedIntegrationAuthRequest::class, $request, null));
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'text/plain')) {
-                $response->res = $httpResponse->getBody()->getContents();
-            }
-        }
+                $obj = $httpResponse->getBody()->getContents();
 
-        return $response;
+                return new Operations\GetUnifiedIntegrationAuthResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    res: $obj);
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve webhook by its ID
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
+     * @param  Operations\GetUnifiedWebhookRequest  $request
+     * @return Operations\GetUnifiedWebhookResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedWebhook(
-        ?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse {
+        ?Operations\GetUnifiedWebhookRequest $request,
+    ): Operations\GetUnifiedWebhookResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', Operations\GetUnifiedWebhookRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->webhook = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Webhook', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\Webhook', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetUnifiedWebhookResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    webhook: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Returns API Calls
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
+     * @param  Operations\ListUnifiedApicallsRequest  $request
+     * @return Operations\ListUnifiedApicallsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedApicalls(
-        ?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse {
+        ?Operations\ListUnifiedApicallsRequest $request,
+    ): Operations\ListUnifiedApicallsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall');
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListUnifiedApicallsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->apiCalls = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\ApiCall>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\ApiCall>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListUnifiedApicallsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    apiCalls: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all connections
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse
+     * @param  Operations\ListUnifiedConnectionsRequest  $request
+     * @return Operations\ListUnifiedConnectionsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedConnections(
-        ?\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse {
+        ?Operations\ListUnifiedConnectionsRequest $request,
+    ): Operations\ListUnifiedConnectionsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListUnifiedConnectionsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->connections = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Connection>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\Connection>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListUnifiedConnectionsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    connections: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
@@ -312,154 +387,191 @@ class Unified
      *
      * No authentication required as this is to be used by front-end interface
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse
+     * @param  Operations\ListUnifiedIntegrationWorkspacesRequest  $request
+     * @return Operations\ListUnifiedIntegrationWorkspacesResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIntegrationWorkspaces(
-        ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse {
+        ?Operations\ListUnifiedIntegrationWorkspacesRequest $request,
+    ): Operations\ListUnifiedIntegrationWorkspacesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/workspace/{workspace_id}', \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/workspace/{workspace_id}', Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->integrations = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Integration>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\Integration>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListUnifiedIntegrationWorkspacesResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    integrations: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Returns all integrations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
+     * @param  Operations\ListUnifiedIntegrationsRequest  $request
+     * @return Operations\ListUnifiedIntegrationsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIntegrations(
-        ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse {
+        ?Operations\ListUnifiedIntegrationsRequest $request,
+    ): Operations\ListUnifiedIntegrationsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration');
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListUnifiedIntegrationsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->integrations = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Integration>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\Integration>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListUnifiedIntegrationsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    integrations: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List support issues
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse
+     * @param  Operations\ListUnifiedIssuesRequest  $request
+     * @return Operations\ListUnifiedIssuesResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIssues(
-        ?\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse {
+        ?Operations\ListUnifiedIssuesRequest $request,
+    ): Operations\ListUnifiedIssuesResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/issue');
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListUnifiedIssuesRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->issues = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Issue>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\Issue>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListUnifiedIssuesResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    issues: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Returns all registered webhooks
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
+     * @param  Operations\ListUnifiedWebhooksRequest  $request
+     * @return Operations\ListUnifiedWebhooksResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedWebhooks(
-        ?\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse {
+        ?Operations\ListUnifiedWebhooksRequest $request,
+    ): Operations\ListUnifiedWebhooksResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListUnifiedWebhooksRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->webhooks = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\Webhook>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\Webhook>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListUnifiedWebhooksResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    webhooks: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update connection
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse
+     * @param  Operations\PatchUnifiedConnectionRequest  $request
+     * @return Operations\PatchUnifiedConnectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUnifiedConnection(
-        ?\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse {
+        ?Operations\PatchUnifiedConnectionRequest $request,
+    ): Operations\PatchUnifiedConnectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\PatchUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'connection', 'json');
         if ($body !== null) {
@@ -467,127 +579,145 @@ class Unified
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->connection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Connection', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\Connection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchUnifiedConnectionResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    connection: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Trigger webhook
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
+     * @param  Operations\PatchUnifiedWebhookTriggerRequest  $request
+     * @return Operations\PatchUnifiedWebhookTriggerResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUnifiedWebhookTrigger(
-        ?\Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse {
+        ?Operations\PatchUnifiedWebhookTriggerRequest $request,
+    ): Operations\PatchUnifiedWebhookTriggerResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', Operations\PatchUnifiedWebhookTriggerRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\PatchUnifiedWebhookTriggerResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Remove connection
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse
+     * @param  Operations\RemoveUnifiedConnectionRequest  $request
+     * @return Operations\RemoveUnifiedConnectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUnifiedConnection(
-        ?\Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse {
+        ?Operations\RemoveUnifiedConnectionRequest $request,
+    ): Operations\RemoveUnifiedConnectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\RemoveUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveUnifiedConnectionResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Remove webhook subscription
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
+     * @param  Operations\RemoveUnifiedWebhookRequest  $request
+     * @return Operations\RemoveUnifiedWebhookResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUnifiedWebhook(
-        ?\Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse {
+        ?Operations\RemoveUnifiedWebhookRequest $request,
+    ): Operations\RemoveUnifiedWebhookResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', Operations\RemoveUnifiedWebhookRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveUnifiedWebhookResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Update connection
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse
+     * @param  Operations\UpdateUnifiedConnectionRequest  $request
+     * @return Operations\UpdateUnifiedConnectionResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUnifiedConnection(
-        ?\Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse {
+        ?Operations\UpdateUnifiedConnectionRequest $request,
+    ): Operations\UpdateUnifiedConnectionResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\UpdateUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'connection', 'json');
         if ($body !== null) {
@@ -595,53 +725,64 @@ class Unified
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->connection = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\Connection', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\Connection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateUnifiedConnectionResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    connection: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Trigger webhook
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
+     * @param  Operations\UpdateUnifiedWebhookTriggerRequest  $request
+     * @return Operations\UpdateUnifiedWebhookTriggerResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUnifiedWebhookTrigger(
-        ?\Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse {
+        ?Operations\UpdateUnifiedWebhookTriggerRequest $request,
+    ): Operations\UpdateUnifiedWebhookTriggerResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', Operations\UpdateUnifiedWebhookTriggerRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\UpdateUnifiedWebhookTriggerResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 }

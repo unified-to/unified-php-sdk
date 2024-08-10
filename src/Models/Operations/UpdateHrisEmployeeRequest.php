@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateHrisEmployeeRequest
 {
+    /**
+     *
+     * @var ?Shared\HrisEmployee $hrisEmployee
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\HrisEmployee $hrisEmployee = null;
+    public ?Shared\HrisEmployee $hrisEmployee = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class UpdateHrisEmployeeRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\HrisEmployee  $hrisEmployee
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\HrisEmployee $hrisEmployee = null)
     {
-        $this->hrisEmployee = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->hrisEmployee = $hrisEmployee;
     }
 }

@@ -12,23 +12,29 @@ namespace Unified\Unified_to\Models\Shared;
 /** MarketingMember - A member represents a person */
 class MarketingMember
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
     /**
      * An array of email addresses for this member
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\MarketingEmail> $emails
+     * @var ?array<MarketingEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\MarketingEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
@@ -42,8 +48,11 @@ class MarketingMember
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $listIds = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -67,20 +76,33 @@ class MarketingMember
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<MarketingEmail>  $emails
+     * @param  ?string  $id
+     * @param  ?array<string>  $listIds
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<string>  $tags
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?array $listIds = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->emails = null;
-        $this->id = null;
-        $this->listIds = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->tags = null;
-        $this->updatedAt = null;
+        $this->createdAt = $createdAt;
+        $this->emails = $emails;
+        $this->id = $id;
+        $this->listIds = $listIds;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->tags = $tags;
+        $this->updatedAt = $updatedAt;
     }
 }

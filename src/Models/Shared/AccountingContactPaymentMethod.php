@@ -11,30 +11,49 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AccountingContactPaymentMethod
 {
+    /**
+     *
+     * @var ?bool $default
+     */
     #[\JMS\Serializer\Annotation\SerializedName('default')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $default = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var AccountingContactPaymentMethodType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType')]
     public AccountingContactPaymentMethodType $type;
 
-    public function __construct()
+    /**
+     * @param  ?AccountingContactPaymentMethodType  $type
+     * @param  ?bool  $default
+     * @param  ?string  $id
+     * @param  ?string  $name
+     */
+    public function __construct(?AccountingContactPaymentMethodType $type = null, ?bool $default = null, ?string $id = null, ?string $name = null)
     {
-        $this->default = null;
-        $this->id = null;
-        $this->name = null;
-        $this->type = \Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType::Ach;
+        $this->type = $type;
+        $this->default = $default;
+        $this->id = $id;
+        $this->name = $name;
     }
 }

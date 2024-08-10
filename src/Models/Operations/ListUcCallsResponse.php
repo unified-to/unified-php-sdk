@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class ListUcCallsResponse
 {
     /**
@@ -28,22 +28,28 @@ class ListUcCallsResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
      * Successful
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\UcCall> $ucCalls
+     * @var ?array<Shared\UcCall> $ucCalls
      */
     public ?array $ucCalls = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?array<Shared\UcCall>  $ucCalls
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?array $ucCalls = null)
     {
-        $this->contentType = '';
-        $this->statusCode = 0;
-        $this->rawResponse = null;
-        $this->ucCalls = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->ucCalls = $ucCalls;
     }
 }

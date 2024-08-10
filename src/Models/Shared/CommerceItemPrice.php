@@ -11,24 +11,38 @@ namespace Unified\Unified_to\Models\Shared;
 
 class CommerceItemPrice
 {
+    /**
+     *
+     * @var ?float $compareAtPrice
+     */
     #[\JMS\Serializer\Annotation\SerializedName('compare_at_price')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $compareAtPrice = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var float $price
+     */
     #[\JMS\Serializer\Annotation\SerializedName('price')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     public float $price;
 
-    public function __construct()
+    /**
+     * @param  ?float  $price
+     * @param  ?float  $compareAtPrice
+     * @param  ?string  $currency
+     */
+    public function __construct(?float $price = null, ?float $compareAtPrice = null, ?string $currency = null)
     {
-        $this->compareAtPrice = null;
-        $this->currency = null;
-        $this->price = 0;
+        $this->price = $price;
+        $this->compareAtPrice = $compareAtPrice;
+        $this->currency = $currency;
     }
 }

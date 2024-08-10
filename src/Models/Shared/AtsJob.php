@@ -14,35 +14,44 @@ class AtsJob
     /**
      * $addresses
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AtsAddress> $addresses
+     * @var ?array<AtsAddress> $addresses
      */
     #[\JMS\Serializer\Annotation\SerializedName('addresses')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsAddress>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsAddress>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $addresses = null;
 
+    /**
+     *
+     * @var ?\DateTime $closedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('closed_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $closedAt = null;
 
+    /**
+     *
+     * @var ?string $companyId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $companyId = null;
 
     /**
      * $compensation
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AtsCompensation> $compensation
+     * @var ?array<AtsCompensation> $compensation
      */
     #[\JMS\Serializer\Annotation\SerializedName('compensation')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsCompensation>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCompensation>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $compensation = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
@@ -56,13 +65,20 @@ class AtsJob
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $departments = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?EmploymentType $employmentType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('employment_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\EmploymentType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?EmploymentType $employmentType = null;
 
@@ -76,23 +92,35 @@ class AtsJob
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $hiringManagerIds = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $languageLocale
+     */
     #[\JMS\Serializer\Annotation\SerializedName('language_locale')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $languageLocale = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?float $numberOfOpenings
+     */
     #[\JMS\Serializer\Annotation\SerializedName('number_of_openings')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $numberOfOpenings = null;
 
@@ -109,10 +137,10 @@ class AtsJob
     /**
      * $questions
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AtsJobQuestion> $questions
+     * @var ?array<AtsJobQuestion> $questions
      */
     #[\JMS\Serializer\Annotation\SerializedName('questions')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\AtsJobQuestion>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsJobQuestion>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $questions = null;
 
@@ -136,42 +164,74 @@ class AtsJob
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $recruiterIds = null;
 
+    /**
+     *
+     * @var ?bool $remote
+     */
     #[\JMS\Serializer\Annotation\SerializedName('remote')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $remote = null;
 
+    /**
+     *
+     * @var ?AtsJobStatus $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsJobStatus>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobStatus')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsJobStatus $status = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?array<AtsAddress>  $addresses
+     * @param  ?\DateTime  $closedAt
+     * @param  ?string  $companyId
+     * @param  ?array<AtsCompensation>  $compensation
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<string>  $departments
+     * @param  ?string  $description
+     * @param  ?EmploymentType  $employmentType
+     * @param  ?array<string>  $hiringManagerIds
+     * @param  ?string  $id
+     * @param  ?string  $languageLocale
+     * @param  ?string  $name
+     * @param  ?float  $numberOfOpenings
+     * @param  ?array<string>  $publicJobUrls
+     * @param  ?array<AtsJobQuestion>  $questions
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<string>  $recruiterIds
+     * @param  ?bool  $remote
+     * @param  ?AtsJobStatus  $status
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
     {
-        $this->addresses = null;
-        $this->closedAt = null;
-        $this->companyId = null;
-        $this->compensation = null;
-        $this->createdAt = null;
-        $this->departments = null;
-        $this->description = null;
-        $this->employmentType = null;
-        $this->hiringManagerIds = null;
-        $this->id = null;
-        $this->languageLocale = null;
-        $this->name = null;
-        $this->numberOfOpenings = null;
-        $this->publicJobUrls = null;
-        $this->questions = null;
-        $this->raw = null;
-        $this->recruiterIds = null;
-        $this->remote = null;
-        $this->status = null;
-        $this->updatedAt = null;
+        $this->addresses = $addresses;
+        $this->closedAt = $closedAt;
+        $this->companyId = $companyId;
+        $this->compensation = $compensation;
+        $this->createdAt = $createdAt;
+        $this->departments = $departments;
+        $this->description = $description;
+        $this->employmentType = $employmentType;
+        $this->hiringManagerIds = $hiringManagerIds;
+        $this->id = $id;
+        $this->languageLocale = $languageLocale;
+        $this->name = $name;
+        $this->numberOfOpenings = $numberOfOpenings;
+        $this->publicJobUrls = $publicJobUrls;
+        $this->questions = $questions;
+        $this->raw = $raw;
+        $this->recruiterIds = $recruiterIds;
+        $this->remote = $remote;
+        $this->status = $status;
+        $this->updatedAt = $updatedAt;
     }
 }

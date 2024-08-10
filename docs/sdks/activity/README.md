@@ -17,15 +17,14 @@ Create an activity
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -33,28 +32,29 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateAtsActivityRequest();
-    $request->atsActivity = new Shared\AtsActivity();
-    $request->atsActivity->applicationId = '<value>';
-    $request->atsActivity->candidateId = '<value>';
-    $request->atsActivity->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-03T02:06:02.932Z');
-    $request->atsActivity->description = 'Future-proofed non-volatile artificial intelligence';
-    $request->atsActivity->documentId = '<value>';
-    $request->atsActivity->id = '<id>';
-    $request->atsActivity->interviewId = '<value>';
-    $request->atsActivity->isPrivate = false;
-    $request->atsActivity->jobId = '<value>';
-    $request->atsActivity->raw = [
-        'delectus' => '<value>',
-    ];
-    $request->atsActivity->title = '<value>';
-    $request->atsActivity->type = Shared\AtsActivityType::Note;
-    $request->atsActivity->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-23T01:05:37.510Z');
-    $request->atsActivity->userIds = [
-        '<value>',
-    ];
-    $request->connectionId = '<value>';;
-
+    $request = new Operations\CreateAtsActivityRequest(
+        connectionId: '<value>',
+        atsActivity: new Shared\AtsActivity(
+            title: '<value>',
+            applicationId: '<value>',
+            candidateId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2022-11-03T02:06:02.932Z'),
+            description: 'Future-proofed non-volatile artificial intelligence',
+            documentId: '<value>',
+            id: '<id>',
+            interviewId: '<value>',
+            isPrivate: false,
+            jobId: '<value>',
+            raw: [
+                'delectus' => '<value>',
+            ],
+            type: Shared\AtsActivityType::Note,
+            updatedAt: Utils\Utils::parseDateTime('2022-09-23T01:05:37.510Z'),
+            userIds: [
+                '<value>',
+            ],
+        ),
+    );
     $response = $sdk->activity->createAtsActivity($request);
 
     if ($response->atsActivity !== null) {
@@ -67,15 +67,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\CreateAtsActivityRequest](../../Models/Operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateAtsActivityRequest](../../Models/Operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateAtsActivityResponse](../../Models/Operations/CreateAtsActivityResponse.md)**
+**[?Operations\CreateAtsActivityResponse](../../Models/Operations/CreateAtsActivityResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getAtsActivity
 
@@ -84,15 +88,13 @@ Retrieve an activity
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -100,13 +102,13 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetAtsActivityRequest();
-    $request->connectionId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->id = '<id>';;
-
+    $request = new Operations\GetAtsActivityRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        fields: [
+            '<value>',
+        ],
+    );
     $response = $sdk->activity->getAtsActivity($request);
 
     if ($response->atsActivity !== null) {
@@ -119,15 +121,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Unified\Unified_to\Models\Operations\GetAtsActivityRequest](../../Models/Operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetAtsActivityRequest](../../Models/Operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetAtsActivityResponse](../../Models/Operations/GetAtsActivityResponse.md)**
+**[?Operations\GetAtsActivityResponse](../../Models/Operations/GetAtsActivityResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listAtsActivities
 
@@ -136,15 +142,14 @@ List all activities
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -152,22 +157,22 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListAtsActivitiesRequest();
-    $request->applicationId = '<value>';
-    $request->candidateId = '<value>';
-    $request->connectionId = '<value>';
-    $request->documentId = '<value>';
-    $request->fields = [
-        '<value>',
-    ];
-    $request->interviewId = '<value>';
-    $request->jobId = '<value>';
-    $request->limit = 2367.19;
-    $request->offset = 8254.25;
-    $request->query = '<value>';
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-13T18:19:17.967Z');
-    $request->userId = '<value>';;
-
+    $request = new Operations\ListAtsActivitiesRequest(
+        connectionId: '<value>',
+        applicationId: '<value>',
+        candidateId: '<value>',
+        documentId: '<value>',
+        fields: [
+            '<value>',
+        ],
+        interviewId: '<value>',
+        jobId: '<value>',
+        limit: 2367.19,
+        offset: 8254.25,
+        query: '<value>',
+        updatedGte: Utils\Utils::parseDateTime('2022-11-13T18:19:17.967Z'),
+        userId: '<value>',
+    );
     $response = $sdk->activity->listAtsActivities($request);
 
     if ($response->atsActivities !== null) {
@@ -180,15 +185,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest](../../Models/Operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAtsActivitiesRequest](../../Models/Operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse](../../Models/Operations/ListAtsActivitiesResponse.md)**
+**[?Operations\ListAtsActivitiesResponse](../../Models/Operations/ListAtsActivitiesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchAtsActivity
 
@@ -197,15 +206,14 @@ Update an activity
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -213,29 +221,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchAtsActivityRequest();
-    $request->atsActivity = new Shared\AtsActivity();
-    $request->atsActivity->applicationId = '<value>';
-    $request->atsActivity->candidateId = '<value>';
-    $request->atsActivity->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-03T16:46:57.187Z');
-    $request->atsActivity->description = 'Compatible reciprocal archive';
-    $request->atsActivity->documentId = '<value>';
-    $request->atsActivity->id = '<id>';
-    $request->atsActivity->interviewId = '<value>';
-    $request->atsActivity->isPrivate = false;
-    $request->atsActivity->jobId = '<value>';
-    $request->atsActivity->raw = [
-        'bypass' => '<value>',
-    ];
-    $request->atsActivity->title = '<value>';
-    $request->atsActivity->type = Shared\AtsActivityType::Note;
-    $request->atsActivity->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-01T06:46:19.269Z');
-    $request->atsActivity->userIds = [
-        '<value>',
-    ];
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchAtsActivityRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        atsActivity: new Shared\AtsActivity(
+            title: '<value>',
+            applicationId: '<value>',
+            candidateId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2024-11-03T16:46:57.187Z'),
+            description: 'Compatible reciprocal archive',
+            documentId: '<value>',
+            id: '<id>',
+            interviewId: '<value>',
+            isPrivate: false,
+            jobId: '<value>',
+            raw: [
+                'bypass' => '<value>',
+            ],
+            type: Shared\AtsActivityType::Note,
+            updatedAt: Utils\Utils::parseDateTime('2022-09-01T06:46:19.269Z'),
+            userIds: [
+                '<value>',
+            ],
+        ),
+    );
     $response = $sdk->activity->patchAtsActivity($request);
 
     if ($response->atsActivity !== null) {
@@ -248,15 +257,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Unified\Unified_to\Models\Operations\PatchAtsActivityRequest](../../Models/Operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchAtsActivityRequest](../../Models/Operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchAtsActivityResponse](../../Models/Operations/PatchAtsActivityResponse.md)**
+**[?Operations\PatchAtsActivityResponse](../../Models/Operations/PatchAtsActivityResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeAtsActivity
 
@@ -265,15 +278,13 @@ Remove an activity
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -281,10 +292,10 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveAtsActivityRequest();
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveAtsActivityRequest(
+        connectionId: '<value>',
+        id: '<id>',
+    );
     $response = $sdk->activity->removeAtsActivity($request);
 
     if ($response->statusCode === 200) {
@@ -297,15 +308,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest](../../Models/Operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveAtsActivityRequest](../../Models/Operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse](../../Models/Operations/RemoveAtsActivityResponse.md)**
+**[?Operations\RemoveAtsActivityResponse](../../Models/Operations/RemoveAtsActivityResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateAtsActivity
 
@@ -314,15 +329,14 @@ Update an activity
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -330,29 +344,30 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateAtsActivityRequest();
-    $request->atsActivity = new Shared\AtsActivity();
-    $request->atsActivity->applicationId = '<value>';
-    $request->atsActivity->candidateId = '<value>';
-    $request->atsActivity->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-06-06T07:57:58.715Z');
-    $request->atsActivity->description = 'Total fault-tolerant collaboration';
-    $request->atsActivity->documentId = '<value>';
-    $request->atsActivity->id = '<id>';
-    $request->atsActivity->interviewId = '<value>';
-    $request->atsActivity->isPrivate = false;
-    $request->atsActivity->jobId = '<value>';
-    $request->atsActivity->raw = [
-        'Northwest' => '<value>',
-    ];
-    $request->atsActivity->title = '<value>';
-    $request->atsActivity->type = Shared\AtsActivityType::Task;
-    $request->atsActivity->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-23T02:31:19.090Z');
-    $request->atsActivity->userIds = [
-        '<value>',
-    ];
-    $request->connectionId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateAtsActivityRequest(
+        connectionId: '<value>',
+        id: '<id>',
+        atsActivity: new Shared\AtsActivity(
+            title: '<value>',
+            applicationId: '<value>',
+            candidateId: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2024-06-06T07:57:58.715Z'),
+            description: 'Total fault-tolerant collaboration',
+            documentId: '<value>',
+            id: '<id>',
+            interviewId: '<value>',
+            isPrivate: false,
+            jobId: '<value>',
+            raw: [
+                'Northwest' => '<value>',
+            ],
+            type: Shared\AtsActivityType::Task,
+            updatedAt: Utils\Utils::parseDateTime('2023-09-23T02:31:19.090Z'),
+            userIds: [
+                '<value>',
+            ],
+        ),
+    );
     $response = $sdk->activity->updateAtsActivity($request);
 
     if ($response->atsActivity !== null) {
@@ -365,12 +380,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest](../../Models/Operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateAtsActivityRequest](../../Models/Operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse](../../Models/Operations/UpdateAtsActivityResponse.md)**
+**[?Operations\UpdateAtsActivityResponse](../../Models/Operations/UpdateAtsActivityResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

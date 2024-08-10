@@ -11,29 +11,40 @@ namespace Unified\Unified_to\Models\Shared;
 
 class StoragePermission
 {
+    /**
+     *
+     * @var ?string $groupId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('group_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $groupId = null;
 
     /**
      * $roles
      *
-     * @var array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles> $roles
+     * @var array<PropertyStoragePermissionRoles> $roles
      */
     #[\JMS\Serializer\Annotation\SerializedName('roles')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles>>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles>')]
     public array $roles;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?array<PropertyStoragePermissionRoles>  $roles
+     * @param  ?string  $groupId
+     * @param  ?string  $userId
+     */
+    public function __construct(?array $roles = null, ?string $groupId = null, ?string $userId = null)
     {
-        $this->groupId = null;
-        $this->roles = [];
-        $this->userId = null;
+        $this->roles = $roles;
+        $this->groupId = $groupId;
+        $this->userId = $userId;
     }
 }

@@ -8,16 +8,17 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAccountingAccountRequest
 {
     /**
      * Chart of accounts
      *
-     * @var ?\Unified\Unified_to\Models\Shared\AccountingAccount $accountingAccount
+     * @var ?Shared\AccountingAccount $accountingAccount
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AccountingAccount $accountingAccount = null;
+    public ?Shared\AccountingAccount $accountingAccount = null;
 
     /**
      * ID of the connection
@@ -35,10 +36,15 @@ class UpdateAccountingAccountRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\AccountingAccount  $accountingAccount
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AccountingAccount $accountingAccount = null)
     {
-        $this->accountingAccount = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->accountingAccount = $accountingAccount;
     }
 }

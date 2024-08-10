@@ -8,6 +8,9 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use JMS\Serializer\DeserializationContext;
+use Unified\Unified_to\Models\Operations;
+
 class Task
 {
     private SDKConfiguration $sdkConfiguration;
@@ -23,14 +26,15 @@ class Task
     /**
      * Create a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTaskProjectRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTaskProjectResponse
+     * @param  Operations\CreateTaskProjectRequest  $request
+     * @return Operations\CreateTaskProjectResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTaskProject(
-        ?\Unified\Unified_to\Models\Operations\CreateTaskProjectRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateTaskProjectResponse {
+        ?Operations\CreateTaskProjectRequest $request,
+    ): Operations\CreateTaskProjectResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', \Unified\Unified_to\Models\Operations\CreateTaskProjectRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', Operations\CreateTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskProject', 'json');
         if ($body !== null) {
@@ -38,37 +42,46 @@ class Task
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateTaskProjectResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskProject = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TaskProject', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TaskProject', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateTaskProjectResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskProject: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Create a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTaskTaskRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTaskTaskResponse
+     * @param  Operations\CreateTaskTaskRequest  $request
+     * @return Operations\CreateTaskTaskResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTaskTask(
-        ?\Unified\Unified_to\Models\Operations\CreateTaskTaskRequest $request,
-    ): \Unified\Unified_to\Models\Operations\CreateTaskTaskResponse {
+        ?Operations\CreateTaskTaskRequest $request,
+    ): Operations\CreateTaskTaskResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task', \Unified\Unified_to\Models\Operations\CreateTaskTaskRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task', Operations\CreateTaskTaskRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskTask', 'json');
         if ($body !== null) {
@@ -76,177 +89,222 @@ class Task
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\CreateTaskTaskResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskTask = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TaskTask', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TaskTask', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateTaskTaskResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskTask: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTaskProjectRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTaskProjectResponse
+     * @param  Operations\GetTaskProjectRequest  $request
+     * @return Operations\GetTaskProjectResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTaskProject(
-        ?\Unified\Unified_to\Models\Operations\GetTaskProjectRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetTaskProjectResponse {
+        ?Operations\GetTaskProjectRequest $request,
+    ): Operations\GetTaskProjectResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', \Unified\Unified_to\Models\Operations\GetTaskProjectRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\GetTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTaskProjectRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetTaskProjectRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetTaskProjectResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskProject = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TaskProject', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TaskProject', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetTaskProjectResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskProject: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Retrieve a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTaskTaskRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTaskTaskResponse
+     * @param  Operations\GetTaskTaskRequest  $request
+     * @return Operations\GetTaskTaskResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTaskTask(
-        ?\Unified\Unified_to\Models\Operations\GetTaskTaskRequest $request,
-    ): \Unified\Unified_to\Models\Operations\GetTaskTaskResponse {
+        ?Operations\GetTaskTaskRequest $request,
+    ): Operations\GetTaskTaskResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', \Unified\Unified_to\Models\Operations\GetTaskTaskRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\GetTaskTaskRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\GetTaskTaskRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetTaskTaskRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\GetTaskTaskResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskTask = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TaskTask', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TaskTask', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetTaskTaskResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskTask: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all projects
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTaskProjectsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTaskProjectsResponse
+     * @param  Operations\ListTaskProjectsRequest  $request
+     * @return Operations\ListTaskProjectsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTaskProjects(
-        ?\Unified\Unified_to\Models\Operations\ListTaskProjectsRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListTaskProjectsResponse {
+        ?Operations\ListTaskProjectsRequest $request,
+    ): Operations\ListTaskProjectsResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', \Unified\Unified_to\Models\Operations\ListTaskProjectsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', Operations\ListTaskProjectsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTaskProjectsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListTaskProjectsRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListTaskProjectsResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskProjects = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TaskProject>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\TaskProject>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListTaskProjectsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskProjects: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * List all tasks
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTaskTasksRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTaskTasksResponse
+     * @param  Operations\ListTaskTasksRequest  $request
+     * @return Operations\ListTaskTasksResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTaskTasks(
-        ?\Unified\Unified_to\Models\Operations\ListTaskTasksRequest $request,
-    ): \Unified\Unified_to\Models\Operations\ListTaskTasksResponse {
+        ?Operations\ListTaskTasksRequest $request,
+    ): Operations\ListTaskTasksResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task', \Unified\Unified_to\Models\Operations\ListTaskTasksRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task', Operations\ListTaskTasksRequest::class, $request);
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Unified\Unified_to\Models\Operations\ListTaskTasksRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListTaskTasksRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\ListTaskTasksResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskTasks = $serializer->deserialize((string) $httpResponse->getBody(), 'array<Unified\Unified_to\Models\Shared\TaskTask>', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\TaskTask>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListTaskTasksResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskTasks: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTaskProjectRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTaskProjectResponse
+     * @param  Operations\PatchTaskProjectRequest  $request
+     * @return Operations\PatchTaskProjectResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTaskProject(
-        ?\Unified\Unified_to\Models\Operations\PatchTaskProjectRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchTaskProjectResponse {
+        ?Operations\PatchTaskProjectRequest $request,
+    ): Operations\PatchTaskProjectResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', \Unified\Unified_to\Models\Operations\PatchTaskProjectRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\PatchTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskProject', 'json');
         if ($body !== null) {
@@ -254,37 +312,46 @@ class Task
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchTaskProjectResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskProject = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TaskProject', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TaskProject', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchTaskProjectResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskProject: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTaskTaskRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTaskTaskResponse
+     * @param  Operations\PatchTaskTaskRequest  $request
+     * @return Operations\PatchTaskTaskResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTaskTask(
-        ?\Unified\Unified_to\Models\Operations\PatchTaskTaskRequest $request,
-    ): \Unified\Unified_to\Models\Operations\PatchTaskTaskResponse {
+        ?Operations\PatchTaskTaskRequest $request,
+    ): Operations\PatchTaskTaskResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', \Unified\Unified_to\Models\Operations\PatchTaskTaskRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\PatchTaskTaskRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskTask', 'json');
         if ($body !== null) {
@@ -292,97 +359,112 @@ class Task
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\PatchTaskTaskResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskTask = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TaskTask', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TaskTask', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchTaskTaskResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskTask: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Remove a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskProjectRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTaskProjectResponse
+     * @param  Operations\RemoveTaskProjectRequest  $request
+     * @return Operations\RemoveTaskProjectResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTaskProject(
-        ?\Unified\Unified_to\Models\Operations\RemoveTaskProjectRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveTaskProjectResponse {
+        ?Operations\RemoveTaskProjectRequest $request,
+    ): Operations\RemoveTaskProjectResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', \Unified\Unified_to\Models\Operations\RemoveTaskProjectRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\RemoveTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveTaskProjectResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveTaskProjectResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Remove a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskTaskRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTaskTaskResponse
+     * @param  Operations\RemoveTaskTaskRequest  $request
+     * @return Operations\RemoveTaskTaskResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTaskTask(
-        ?\Unified\Unified_to\Models\Operations\RemoveTaskTaskRequest $request,
-    ): \Unified\Unified_to\Models\Operations\RemoveTaskTaskResponse {
+        ?Operations\RemoveTaskTaskRequest $request,
+    ): Operations\RemoveTaskTaskResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', \Unified\Unified_to\Models\Operations\RemoveTaskTaskRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\RemoveTaskTaskRequest::class, $request);
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\RemoveTaskTaskResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if (true) { /** @phpstan-ignore-line */
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            return new Operations\RemoveTaskTaskResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
         }
-
-        return $response;
     }
 
     /**
      * Update a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskProjectRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTaskProjectResponse
+     * @param  Operations\UpdateTaskProjectRequest  $request
+     * @return Operations\UpdateTaskProjectResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTaskProject(
-        ?\Unified\Unified_to\Models\Operations\UpdateTaskProjectRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateTaskProjectResponse {
+        ?Operations\UpdateTaskProjectRequest $request,
+    ): Operations\UpdateTaskProjectResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', \Unified\Unified_to\Models\Operations\UpdateTaskProjectRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\UpdateTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskProject', 'json');
         if ($body !== null) {
@@ -390,37 +472,46 @@ class Task
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateTaskProjectResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskProject = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TaskProject', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TaskProject', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateTaskProjectResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskProject: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 
     /**
      * Update a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskTaskRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTaskTaskResponse
+     * @param  Operations\UpdateTaskTaskRequest  $request
+     * @return Operations\UpdateTaskTaskResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTaskTask(
-        ?\Unified\Unified_to\Models\Operations\UpdateTaskTaskRequest $request,
-    ): \Unified\Unified_to\Models\Operations\UpdateTaskTaskResponse {
+        ?Operations\UpdateTaskTaskRequest $request,
+    ): Operations\UpdateTaskTaskResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', \Unified\Unified_to\Models\Operations\UpdateTaskTaskRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\UpdateTaskTaskRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskTask', 'json');
         if ($body !== null) {
@@ -428,23 +519,31 @@ class Task
         }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
-        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-
-        $response = new \Unified\Unified_to\Models\Operations\UpdateTaskTaskResponse();
-        $response->statusCode = $statusCode;
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        if ($httpResponse->getStatusCode() === 200) {
+        if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->taskTask = $serializer->deserialize((string) $httpResponse->getBody(), 'Unified\Unified_to\Models\Shared\TaskTask', 'json');
-            }
-        }
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\TaskTask', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateTaskTaskResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    taskTask: $obj);
 
-        return $response;
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
     }
 }

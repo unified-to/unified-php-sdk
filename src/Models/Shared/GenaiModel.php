@@ -11,28 +11,43 @@ namespace Unified\Unified_to\Models\Shared;
 
 class GenaiModel
 {
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?bool $hasTemperature
+     */
     #[\JMS\Serializer\Annotation\SerializedName('has_temperature')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $hasTemperature = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?float $maxTokens
+     */
     #[\JMS\Serializer\Annotation\SerializedName('max_tokens')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $maxTokens = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -46,19 +61,31 @@ class GenaiModel
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $webUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('web_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $webUrl = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $description
+     * @param  ?bool  $hasTemperature
+     * @param  ?string  $id
+     * @param  ?float  $maxTokens
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $webUrl
+     */
+    public function __construct(?string $description = null, ?bool $hasTemperature = null, ?string $id = null, ?float $maxTokens = null, ?string $name = null, ?array $raw = null, ?string $webUrl = null)
     {
-        $this->description = null;
-        $this->hasTemperature = null;
-        $this->id = null;
-        $this->maxTokens = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->webUrl = null;
+        $this->description = $description;
+        $this->hasTemperature = $hasTemperature;
+        $this->id = $id;
+        $this->maxTokens = $maxTokens;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->webUrl = $webUrl;
     }
 }

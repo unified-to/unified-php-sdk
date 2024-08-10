@@ -11,31 +11,66 @@ namespace Unified\Unified_to\Models\Shared;
 
 class Issue
 {
+    /**
+     *
+     * @var ?string $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?float $importance
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('importance')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $importance = null;
+
+    /**
+     *
+     * @var ?float $resolutionTime
+     */
     #[\JMS\Serializer\Annotation\SerializedName('resolution_time')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $resolutionTime = null;
 
+    /**
+     *
+     * @var ?float $size
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('size')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $size = null;
+
+    /**
+     *
+     * @var IssueStatus $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\IssueStatus>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\IssueStatus')]
     public IssueStatus $status;
 
+    /**
+     *
+     * @var string $ticketRef
+     */
     #[\JMS\Serializer\Annotation\SerializedName('ticket_ref')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $ticketRef;
 
+    /**
+     *
+     * @var string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $title;
 
     /**
@@ -48,31 +83,56 @@ class Issue
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $type = null;
 
+    /**
+     *
+     * @var ?string $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $url
+     */
     #[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $url = null;
 
+    /**
+     *
+     * @var string $workspaceId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $workspaceId;
 
-    public function __construct()
+    /**
+     * @param  ?IssueStatus  $status
+     * @param  ?string  $ticketRef
+     * @param  ?string  $title
+     * @param  ?string  $workspaceId
+     * @param  ?string  $createdAt
+     * @param  ?string  $id
+     * @param  ?float  $importance
+     * @param  ?float  $resolutionTime
+     * @param  ?float  $size
+     * @param  ?array<string>  $type
+     * @param  ?string  $updatedAt
+     * @param  ?string  $url
+     */
+    public function __construct(?IssueStatus $status = null, ?string $ticketRef = null, ?string $title = null, ?string $workspaceId = null, ?string $createdAt = null, ?string $id = null, ?float $importance = null, ?float $resolutionTime = null, ?float $size = null, ?array $type = null, ?string $updatedAt = null, ?string $url = null)
     {
-        $this->createdAt = null;
-        $this->id = null;
-        $this->resolutionTime = null;
-        $this->status = \Unified\Unified_to\Models\Shared\IssueStatus::Completed;
-        $this->ticketRef = '';
-        $this->title = '';
-        $this->type = null;
-        $this->updatedAt = null;
-        $this->url = null;
-        $this->workspaceId = '';
+        $this->status = $status;
+        $this->ticketRef = $ticketRef;
+        $this->title = $title;
+        $this->workspaceId = $workspaceId;
+        $this->createdAt = $createdAt;
+        $this->id = $id;
+        $this->importance = $importance;
+        $this->resolutionTime = $resolutionTime;
+        $this->size = $size;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
+        $this->url = $url;
     }
 }

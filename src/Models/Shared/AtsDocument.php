@@ -11,43 +11,67 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsDocument
 {
+    /**
+     *
+     * @var ?string $applicationId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('application_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $applicationId = null;
 
+    /**
+     *
+     * @var ?string $candidateId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $candidateId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $documentData
+     */
     #[\JMS\Serializer\Annotation\SerializedName('document_data')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $documentData = null;
 
+    /**
+     *
+     * @var ?string $documentUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('document_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $documentUrl = null;
 
+    /**
+     *
+     * @var ?string $filename
+     */
     #[\JMS\Serializer\Annotation\SerializedName('filename')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $filename = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $jobId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('job_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $jobId = null;
 
@@ -61,34 +85,58 @@ class AtsDocument
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?AtsDocumentType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsDocumentType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsDocumentType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsDocumentType $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $applicationId
+     * @param  ?string  $candidateId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $documentData
+     * @param  ?string  $documentUrl
+     * @param  ?string  $filename
+     * @param  ?string  $id
+     * @param  ?string  $jobId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?AtsDocumentType  $type
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?string $documentData = null, ?string $documentUrl = null, ?string $filename = null, ?string $id = null, ?string $jobId = null, ?array $raw = null, ?AtsDocumentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->applicationId = null;
-        $this->candidateId = null;
-        $this->createdAt = null;
-        $this->documentData = null;
-        $this->documentUrl = null;
-        $this->filename = null;
-        $this->id = null;
-        $this->jobId = null;
-        $this->raw = null;
-        $this->type = null;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->applicationId = $applicationId;
+        $this->candidateId = $candidateId;
+        $this->createdAt = $createdAt;
+        $this->documentData = $documentData;
+        $this->documentUrl = $documentUrl;
+        $this->filename = $filename;
+        $this->id = $id;
+        $this->jobId = $jobId;
+        $this->raw = $raw;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

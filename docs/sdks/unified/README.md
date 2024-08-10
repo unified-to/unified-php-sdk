@@ -29,14 +29,13 @@ Create connection
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -44,60 +43,61 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Shared\Connection();
-    $request->auth = new Shared\PropertyConnectionAuth();
-    $request->auth->accessToken = '<value>';
-    $request->auth->apiUrl = '<value>';
-    $request->auth->appId = '<value>';
-    $request->auth->authorizeUrl = '<value>';
-    $request->auth->clientId = '<value>';
-    $request->auth->clientSecret = '<value>';
-    $request->auth->consumerKey = '<value>';
-    $request->auth->consumerSecret = '<value>';
-    $request->auth->devApiKey = '<value>';
-    $request->auth->emails = [
-        '<value>',
-    ];
-    $request->auth->expiresIn = 9168.17;
-    $request->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-11T07:34:10.716Z');
-    $request->auth->key = '<key>';
-    $request->auth->meta = [
-        'Rwanda' => '<value>',
-    ];
-    $request->auth->name = '<value>';
-    $request->auth->otherAuthInfo = [
-        '<value>',
-    ];
-    $request->auth->pem = '<value>';
-    $request->auth->refreshToken = '<value>';
-    $request->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-04T08:49:51.307Z');
-    $request->auth->refreshTokenExpiresIn = 3145.19;
-    $request->auth->state = 'Tennessee';
-    $request->auth->token = '<value>';
-    $request->auth->tokenUrl = '<value>';
-    $request->authAwsArn = '<value>';
-    $request->categories = [
-        Shared\PropertyConnectionCategories::Storage,
-    ];
-    $request->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-05T07:37:37.431Z');
-    $request->cursorsCache = [
-        [
-            'Van' => '<value>',
+    $request = new Shared\Connection(
+        categories: [
+            Shared\PropertyConnectionCategories::Kms,
         ],
-    ];
-    $request->environment = '<value>';
-    $request->externalXref = '<value>';
-    $request->id = '<id>';
-    $request->integrationType = '<value>';
-    $request->isPaused = false;
-    $request->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-12T14:19:55.077Z');
-    $request->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-10-06T09:01:24.591Z');
-    $request->permissions = [
-        Shared\PropertyConnectionPermissions::StorageFileWrite,
-    ];
-    $request->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-22T10:28:46.343Z');
-    $request->workspaceId = '<value>';;
-
+        integrationType: '<value>',
+        permissions: [
+            Shared\PropertyConnectionPermissions::AtsDocumentWrite,
+        ],
+        auth: new Shared\PropertyConnectionAuth(
+            accessToken: '<value>',
+            apiUrl: '<value>',
+            appId: '<value>',
+            authorizeUrl: '<value>',
+            clientId: '<value>',
+            clientSecret: '<value>',
+            consumerKey: '<value>',
+            consumerSecret: '<value>',
+            devApiKey: '<value>',
+            emails: [
+                '<value>',
+            ],
+            expiresIn: 4311.07,
+            expiryDate: Utils\Utils::parseDateTime('2024-01-24T16:22:59.867Z'),
+            key: '<key>',
+            meta: [
+                'syndicate' => '<value>',
+            ],
+            name: '<value>',
+            otherAuthInfo: [
+                '<value>',
+            ],
+            pem: '<value>',
+            refreshToken: '<value>',
+            refreshTokenExpiresDate: Utils\Utils::parseDateTime('2022-12-11T17:06:37.254Z'),
+            refreshTokenExpiresIn: 8302.8,
+            state: 'New Mexico',
+            token: '<value>',
+            tokenUrl: '<value>',
+        ),
+        authAwsArn: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-02-05T07:37:37.431Z'),
+        cursorsCache: [
+            [
+                'Van' => '<value>',
+            ],
+        ],
+        environment: '<value>',
+        externalXref: '<value>',
+        id: '<id>',
+        isPaused: false,
+        lastHealthyAt: Utils\Utils::parseDateTime('2024-09-12T14:19:55.077Z'),
+        lastUnhealthyAt: Utils\Utils::parseDateTime('2022-10-06T09:01:24.591Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-15T07:09:43.182Z'),
+        workspaceId: '<value>',
+    );
     $response = $sdk->unified->createUnifiedConnection($request);
 
     if ($response->connection !== null) {
@@ -110,15 +110,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `$request`                                                                        | [\Unified\Unified_to\Models\Shared\Connection](../../Models/Shared/Connection.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                              | Type                                                   | Required                                               | Description                                            |
+| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
+| `$request`                                             | [Shared\Connection](../../Models/Shared/Connection.md) | :heavy_check_mark:                                     | The request object to use for the request.             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse](../../Models/Operations/CreateUnifiedConnectionResponse.md)**
+**[?Operations\CreateUnifiedConnectionResponse](../../Models/Operations/CreateUnifiedConnectionResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## createUnifiedWebhook
 
@@ -127,15 +131,14 @@ The data payload received by your server is described at https://docs.unified.to
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -143,35 +146,36 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\CreateUnifiedWebhookRequest();
-    $request->webhook = new Shared\Webhook();
-    $request->webhook->checkedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-12-24T03:05:08.611Z');
-    $request->webhook->connectionId = '<value>';
-    $request->webhook->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T14:50:04.176Z');
-    $request->webhook->environment = '<value>';
-    $request->webhook->event = Shared\Event::Created;
-    $request->webhook->fields = '<value>';
-    $request->webhook->filters = [
-        'male' => '<value>',
-    ];
-    $request->webhook->hookUrl = '<value>';
-    $request->webhook->id = '<id>';
-    $request->webhook->integrationType = '<value>';
-    $request->webhook->interval = 6806.55;
-    $request->webhook->isHealthy = false;
-    $request->webhook->meta = [
-        'tune' => '<value>',
-    ];
-    $request->webhook->objectType = Shared\ObjectType::AtsActivity;
-    $request->webhook->pageMaxLimit = 4025.83;
-    $request->webhook->runs = [
-        '<value>',
-    ];
-    $request->webhook->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-05-26T01:52:06.569Z');
-    $request->webhook->webhookType = Shared\WebhookType::Native;
-    $request->webhook->workspaceId = '<value>';
-    $request->includeAll = false;;
-
+    $request = new Operations\CreateUnifiedWebhookRequest(
+        webhook: new Shared\Webhook(
+            connectionId: '<value>',
+            event: Shared\Event::Created,
+            hookUrl: '<value>',
+            objectType: Shared\ObjectType::AccountingTransaction,
+            checkedAt: Utils\Utils::parseDateTime('2023-05-18T07:32:59.218Z'),
+            createdAt: Utils\Utils::parseDateTime('2023-11-05T05:21:48.024Z'),
+            environment: '<value>',
+            fields: '<value>',
+            filters: [
+                'Borders' => '<value>',
+            ],
+            id: '<id>',
+            integrationType: '<value>',
+            interval: 6806.55,
+            isHealthy: false,
+            meta: [
+                'tune' => '<value>',
+            ],
+            pageMaxLimit: 2826.97,
+            runs: [
+                '<value>',
+            ],
+            updatedAt: Utils\Utils::parseDateTime('2023-03-18T05:32:38.856Z'),
+            webhookType: Shared\WebhookType::Native,
+            workspaceId: '<value>',
+        ),
+        includeAll: false,
+    );
     $response = $sdk->unified->createUnifiedWebhook($request);
 
     if ($response->webhook !== null) {
@@ -184,15 +188,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest](../../Models/Operations/CreateUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateUnifiedWebhookRequest](../../Models/Operations/CreateUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse](../../Models/Operations/CreateUnifiedWebhookResponse.md)**
+**[?Operations\CreateUnifiedWebhookResponse](../../Models/Operations/CreateUnifiedWebhookResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getUnifiedApicall
 
@@ -201,15 +209,13 @@ Retrieve specific API Call by its ID
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -217,9 +223,9 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetUnifiedApicallRequest();
-    $request->id = '<id>';;
-
+    $request = new Operations\GetUnifiedApicallRequest(
+        id: '<id>',
+    );
     $response = $sdk->unified->getUnifiedApicall($request);
 
     if ($response->apiCall !== null) {
@@ -232,15 +238,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest](../../Models/Operations/GetUnifiedApicallRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetUnifiedApicallRequest](../../Models/Operations/GetUnifiedApicallRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse](../../Models/Operations/GetUnifiedApicallResponse.md)**
+**[?Operations\GetUnifiedApicallResponse](../../Models/Operations/GetUnifiedApicallResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getUnifiedConnection
 
@@ -249,15 +259,13 @@ Retrieve connection
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -265,9 +273,9 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetUnifiedConnectionRequest();
-    $request->id = '<id>';;
-
+    $request = new Operations\GetUnifiedConnectionRequest(
+        id: '<id>',
+    );
     $response = $sdk->unified->getUnifiedConnection($request);
 
     if ($response->connection !== null) {
@@ -280,15 +288,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest](../../Models/Operations/GetUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetUnifiedConnectionRequest](../../Models/Operations/GetUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse](../../Models/Operations/GetUnifiedConnectionResponse.md)**
+**[?Operations\GetUnifiedConnectionResponse](../../Models/Operations/GetUnifiedConnectionResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getUnifiedIntegrationAuth
 
@@ -297,15 +309,13 @@ Returns an authorization URL for the specified integration.  Once a successful a
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -313,21 +323,21 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetUnifiedIntegrationAuthRequest();
-    $request->env = '<value>';
-    $request->externalXref = '<value>';
-    $request->failureRedirect = '<value>';
-    $request->integrationType = '<value>';
-    $request->lang = '<value>';
-    $request->redirect = false;
-    $request->scopes = [
-        Operations\Scopes::KmsSpaceWrite,
-    ];
-    $request->state = 'New Jersey';
-    $request->subdomain = '<value>';
-    $request->successRedirect = '<value>';
-    $request->workspaceId = '<value>';;
-
+    $request = new Operations\GetUnifiedIntegrationAuthRequest(
+        integrationType: '<value>',
+        workspaceId: '<value>',
+        env: '<value>',
+        externalXref: '<value>',
+        failureRedirect: '<value>',
+        lang: '<value>',
+        redirect: false,
+        scopes: [
+            Operations\Scopes::KmsSpaceWrite,
+        ],
+        state: 'New Jersey',
+        subdomain: '<value>',
+        successRedirect: '<value>',
+    );
     $response = $sdk->unified->getUnifiedIntegrationAuth($request);
 
     if ($response->res !== null) {
@@ -340,15 +350,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest](../../Models/Operations/GetUnifiedIntegrationAuthRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetUnifiedIntegrationAuthRequest](../../Models/Operations/GetUnifiedIntegrationAuthRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse](../../Models/Operations/GetUnifiedIntegrationAuthResponse.md)**
+**[?Operations\GetUnifiedIntegrationAuthResponse](../../Models/Operations/GetUnifiedIntegrationAuthResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## getUnifiedWebhook
 
@@ -357,15 +371,13 @@ Retrieve webhook by its ID
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -373,9 +385,9 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\GetUnifiedWebhookRequest();
-    $request->id = '<id>';;
-
+    $request = new Operations\GetUnifiedWebhookRequest(
+        id: '<id>',
+    );
     $response = $sdk->unified->getUnifiedWebhook($request);
 
     if ($response->webhook !== null) {
@@ -388,15 +400,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest](../../Models/Operations/GetUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetUnifiedWebhookRequest](../../Models/Operations/GetUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse](../../Models/Operations/GetUnifiedWebhookResponse.md)**
+**[?Operations\GetUnifiedWebhookResponse](../../Models/Operations/GetUnifiedWebhookResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listUnifiedApicalls
 
@@ -405,15 +421,14 @@ Returns API Calls
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -421,16 +436,16 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListUnifiedApicallsRequest();
-    $request->connectionId = '<value>';
-    $request->env = '<value>';
-    $request->error = false;
-    $request->externalXref = '<value>';
-    $request->integrationType = '<value>';
-    $request->limit = 8683.78;
-    $request->offset = 494.66;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-08-01T07:02:03.842Z');;
-
+    $request = new Operations\ListUnifiedApicallsRequest(
+        connectionId: '<value>',
+        env: '<value>',
+        error: false,
+        externalXref: '<value>',
+        integrationType: '<value>',
+        limit: 8683.78,
+        offset: 494.66,
+        updatedGte: Utils\Utils::parseDateTime('2023-08-01T07:02:03.842Z'),
+    );
     $response = $sdk->unified->listUnifiedApicalls($request);
 
     if ($response->apiCalls !== null) {
@@ -443,15 +458,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest](../../Models/Operations/ListUnifiedApicallsRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListUnifiedApicallsRequest](../../Models/Operations/ListUnifiedApicallsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse](../../Models/Operations/ListUnifiedApicallsResponse.md)**
+**[?Operations\ListUnifiedApicallsResponse](../../Models/Operations/ListUnifiedApicallsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listUnifiedConnections
 
@@ -460,15 +479,14 @@ List all connections
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -476,16 +494,16 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListUnifiedConnectionsRequest();
-    $request->categories = [
-        Operations\Categories::Uc,
-    ];
-    $request->env = '<value>';
-    $request->externalXref = '<value>';
-    $request->limit = 9638.08;
-    $request->offset = 15.12;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-06-20T13:59:12.388Z');;
-
+    $request = new Operations\ListUnifiedConnectionsRequest(
+        categories: [
+            Operations\Categories::Uc,
+        ],
+        env: '<value>',
+        externalXref: '<value>',
+        limit: 9638.08,
+        offset: 15.12,
+        updatedGte: Utils\Utils::parseDateTime('2022-06-20T13:59:12.388Z'),
+    );
     $response = $sdk->unified->listUnifiedConnections($request);
 
     if ($response->connections !== null) {
@@ -498,15 +516,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest](../../Models/Operations/ListUnifiedConnectionsRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListUnifiedConnectionsRequest](../../Models/Operations/ListUnifiedConnectionsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse](../../Models/Operations/ListUnifiedConnectionsResponse.md)**
+**[?Operations\ListUnifiedConnectionsResponse](../../Models/Operations/ListUnifiedConnectionsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listUnifiedIntegrationWorkspaces
 
@@ -515,15 +537,13 @@ No authentication required as this is to be used by front-end interface
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -531,18 +551,18 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListUnifiedIntegrationWorkspacesRequest();
-    $request->active = false;
-    $request->categories = [
-        Operations\QueryParamCategories::Genai,
-    ];
-    $request->env = '<value>';
-    $request->limit = 9072.99;
-    $request->offset = 5948.93;
-    $request->summary = false;
-    $request->updatedGte = '<value>';
-    $request->workspaceId = '<value>';;
-
+    $request = new Operations\ListUnifiedIntegrationWorkspacesRequest(
+        workspaceId: '<value>',
+        active: false,
+        categories: [
+            Operations\QueryParamCategories::Genai,
+        ],
+        env: '<value>',
+        limit: 9072.99,
+        offset: 5948.93,
+        summary: false,
+        updatedGte: '<value>',
+    );
     $response = $sdk->unified->listUnifiedIntegrationWorkspaces($request);
 
     if ($response->integrations !== null) {
@@ -555,15 +575,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest](../../Models/Operations/ListUnifiedIntegrationWorkspacesRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                               | [Operations\ListUnifiedIntegrationWorkspacesRequest](../../Models/Operations/ListUnifiedIntegrationWorkspacesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse](../../Models/Operations/ListUnifiedIntegrationWorkspacesResponse.md)**
+**[?Operations\ListUnifiedIntegrationWorkspacesResponse](../../Models/Operations/ListUnifiedIntegrationWorkspacesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listUnifiedIntegrations
 
@@ -572,15 +596,13 @@ Returns all integrations
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -588,20 +610,20 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListUnifiedIntegrationsRequest();
-    $request->active = false;
-    $request->categories = [
-        Operations\ListUnifiedIntegrationsQueryParamCategories::Martech,
-    ];
-    $request->env = '<value>';
-    $request->limit = 7382.58;
-    $request->offset = 353.99;
-    $request->order = '<value>';
-    $request->sort = '<value>';
-    $request->summary = false;
-    $request->type = '<value>';
-    $request->updatedGte = '<value>';;
-
+    $request = new Operations\ListUnifiedIntegrationsRequest(
+        active: false,
+        categories: [
+            Operations\ListUnifiedIntegrationsQueryParamCategories::Martech,
+        ],
+        env: '<value>',
+        limit: 7382.58,
+        offset: 353.99,
+        order: '<value>',
+        sort: '<value>',
+        summary: false,
+        type: '<value>',
+        updatedGte: '<value>',
+    );
     $response = $sdk->unified->listUnifiedIntegrations($request);
 
     if ($response->integrations !== null) {
@@ -614,15 +636,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest](../../Models/Operations/ListUnifiedIntegrationsRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListUnifiedIntegrationsRequest](../../Models/Operations/ListUnifiedIntegrationsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse](../../Models/Operations/ListUnifiedIntegrationsResponse.md)**
+**[?Operations\ListUnifiedIntegrationsResponse](../../Models/Operations/ListUnifiedIntegrationsResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listUnifiedIssues
 
@@ -631,15 +657,14 @@ List support issues
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -647,11 +672,11 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListUnifiedIssuesRequest();
-    $request->limit = 7069.08;
-    $request->offset = 7461.37;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-21T01:55:24.746Z');;
-
+    $request = new Operations\ListUnifiedIssuesRequest(
+        limit: 7069.08,
+        offset: 7461.37,
+        updatedGte: Utils\Utils::parseDateTime('2022-01-21T01:55:24.746Z'),
+    );
     $response = $sdk->unified->listUnifiedIssues($request);
 
     if ($response->issues !== null) {
@@ -664,15 +689,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest](../../Models/Operations/ListUnifiedIssuesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListUnifiedIssuesRequest](../../Models/Operations/ListUnifiedIssuesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse](../../Models/Operations/ListUnifiedIssuesResponse.md)**
+**[?Operations\ListUnifiedIssuesResponse](../../Models/Operations/ListUnifiedIssuesResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## listUnifiedWebhooks
 
@@ -681,15 +710,14 @@ Returns all registered webhooks
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -697,16 +725,20 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\ListUnifiedWebhooksRequest();
-    $request->connectionId = new Operations\ConnectionId();
-    $request->createdLte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-08T09:09:29.992Z');
-    $request->env = '<value>';
-    $request->integrationType = new Operations\IntegrationType();
-    $request->limit = 5094.7;
-    $request->object = '<value>';
-    $request->offset = 1001.01;
-    $request->updatedGte = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-16T05:14:02.871Z');;
+    $request = new Operations\ListUnifiedWebhooksRequest(
+        connectionId: new Operations\ConnectionId(
 
+        ),
+        createdLte: Utils\Utils::parseDateTime('2022-05-08T09:09:29.992Z'),
+        env: '<value>',
+        integrationType: new Operations\IntegrationType(
+
+        ),
+        limit: 5094.7,
+        object: '<value>',
+        offset: 1001.01,
+        updatedGte: Utils\Utils::parseDateTime('2023-07-16T05:14:02.871Z'),
+    );
     $response = $sdk->unified->listUnifiedWebhooks($request);
 
     if ($response->webhooks !== null) {
@@ -719,15 +751,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest](../../Models/Operations/ListUnifiedWebhooksRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListUnifiedWebhooksRequest](../../Models/Operations/ListUnifiedWebhooksRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse](../../Models/Operations/ListUnifiedWebhooksResponse.md)**
+**[?Operations\ListUnifiedWebhooksResponse](../../Models/Operations/ListUnifiedWebhooksResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchUnifiedConnection
 
@@ -736,15 +772,14 @@ Update connection
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -752,62 +787,64 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchUnifiedConnectionRequest();
-    $request->connection = new Shared\Connection();
-    $request->connection->auth = new Shared\PropertyConnectionAuth();
-    $request->connection->auth->accessToken = '<value>';
-    $request->connection->auth->apiUrl = '<value>';
-    $request->connection->auth->appId = '<value>';
-    $request->connection->auth->authorizeUrl = '<value>';
-    $request->connection->auth->clientId = '<value>';
-    $request->connection->auth->clientSecret = '<value>';
-    $request->connection->auth->consumerKey = '<value>';
-    $request->connection->auth->consumerSecret = '<value>';
-    $request->connection->auth->devApiKey = '<value>';
-    $request->connection->auth->emails = [
-        '<value>',
-    ];
-    $request->connection->auth->expiresIn = 6565.39;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-02-09T18:49:02.054Z');
-    $request->connection->auth->key = '<key>';
-    $request->connection->auth->meta = [
-        'square' => '<value>',
-    ];
-    $request->connection->auth->name = '<value>';
-    $request->connection->auth->otherAuthInfo = [
-        '<value>',
-    ];
-    $request->connection->auth->pem = '<value>';
-    $request->connection->auth->refreshToken = '<value>';
-    $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-17T17:15:40.563Z');
-    $request->connection->auth->refreshTokenExpiresIn = 1170.66;
-    $request->connection->auth->state = 'Connecticut';
-    $request->connection->auth->token = '<value>';
-    $request->connection->auth->tokenUrl = '<value>';
-    $request->connection->authAwsArn = '<value>';
-    $request->connection->categories = [
-        Shared\PropertyConnectionCategories::Uc,
-    ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-02-14T05:49:12.923Z');
-    $request->connection->cursorsCache = [
-        [
-            'Gasoline' => '<value>',
-        ],
-    ];
-    $request->connection->environment = '<value>';
-    $request->connection->externalXref = '<value>';
-    $request->connection->id = '<id>';
-    $request->connection->integrationType = '<value>';
-    $request->connection->isPaused = false;
-    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-11-24T01:15:30.014Z');
-    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-20T21:38:39.955Z');
-    $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::CrmContactRead,
-    ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-09T02:30:18.551Z');
-    $request->connection->workspaceId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchUnifiedConnectionRequest(
+        id: '<id>',
+        connection: new Shared\Connection(
+            categories: [
+                Shared\PropertyConnectionCategories::Commerce,
+            ],
+            integrationType: '<value>',
+            permissions: [
+                Shared\PropertyConnectionPermissions::HrisGroupRead,
+            ],
+            auth: new Shared\PropertyConnectionAuth(
+                accessToken: '<value>',
+                apiUrl: '<value>',
+                appId: '<value>',
+                authorizeUrl: '<value>',
+                clientId: '<value>',
+                clientSecret: '<value>',
+                consumerKey: '<value>',
+                consumerSecret: '<value>',
+                devApiKey: '<value>',
+                emails: [
+                    '<value>',
+                ],
+                expiresIn: 9973.13,
+                expiryDate: Utils\Utils::parseDateTime('2024-07-15T18:53:52.079Z'),
+                key: '<key>',
+                meta: [
+                    'Electronic' => '<value>',
+                ],
+                name: '<value>',
+                otherAuthInfo: [
+                    '<value>',
+                ],
+                pem: '<value>',
+                refreshToken: '<value>',
+                refreshTokenExpiresDate: Utils\Utils::parseDateTime('2022-05-14T12:46:18.750Z'),
+                refreshTokenExpiresIn: 5059.58,
+                state: 'Maine',
+                token: '<value>',
+                tokenUrl: '<value>',
+            ),
+            authAwsArn: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2024-06-03T13:20:07.463Z'),
+            cursorsCache: [
+                [
+                    'Flerovium' => '<value>',
+                ],
+            ],
+            environment: '<value>',
+            externalXref: '<value>',
+            id: '<id>',
+            isPaused: false,
+            lastHealthyAt: Utils\Utils::parseDateTime('2023-06-20T21:38:39.955Z'),
+            lastUnhealthyAt: Utils\Utils::parseDateTime('2023-06-02T09:40:32.883Z'),
+            updatedAt: Utils\Utils::parseDateTime('2022-08-09T02:30:18.551Z'),
+            workspaceId: '<value>',
+        ),
+    );
     $response = $sdk->unified->patchUnifiedConnection($request);
 
     if ($response->connection !== null) {
@@ -820,15 +857,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest](../../Models/Operations/PatchUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchUnifiedConnectionRequest](../../Models/Operations/PatchUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse](../../Models/Operations/PatchUnifiedConnectionResponse.md)**
+**[?Operations\PatchUnifiedConnectionResponse](../../Models/Operations/PatchUnifiedConnectionResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## patchUnifiedWebhookTrigger
 
@@ -837,15 +878,13 @@ Trigger webhook
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -853,9 +892,9 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\PatchUnifiedWebhookTriggerRequest();
-    $request->id = '<id>';;
-
+    $request = new Operations\PatchUnifiedWebhookTriggerRequest(
+        id: '<id>',
+    );
     $response = $sdk->unified->patchUnifiedWebhookTrigger($request);
 
     if ($response->statusCode === 200) {
@@ -868,15 +907,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest](../../Models/Operations/PatchUnifiedWebhookTriggerRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\PatchUnifiedWebhookTriggerRequest](../../Models/Operations/PatchUnifiedWebhookTriggerRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse](../../Models/Operations/PatchUnifiedWebhookTriggerResponse.md)**
+**[?Operations\PatchUnifiedWebhookTriggerResponse](../../Models/Operations/PatchUnifiedWebhookTriggerResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeUnifiedConnection
 
@@ -885,15 +928,13 @@ Remove connection
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -901,9 +942,9 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveUnifiedConnectionRequest();
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveUnifiedConnectionRequest(
+        id: '<id>',
+    );
     $response = $sdk->unified->removeUnifiedConnection($request);
 
     if ($response->statusCode === 200) {
@@ -916,15 +957,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest](../../Models/Operations/RemoveUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveUnifiedConnectionRequest](../../Models/Operations/RemoveUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse](../../Models/Operations/RemoveUnifiedConnectionResponse.md)**
+**[?Operations\RemoveUnifiedConnectionResponse](../../Models/Operations/RemoveUnifiedConnectionResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## removeUnifiedWebhook
 
@@ -933,15 +978,13 @@ Remove webhook subscription
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -949,9 +992,9 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\RemoveUnifiedWebhookRequest();
-    $request->id = '<id>';;
-
+    $request = new Operations\RemoveUnifiedWebhookRequest(
+        id: '<id>',
+    );
     $response = $sdk->unified->removeUnifiedWebhook($request);
 
     if ($response->statusCode === 200) {
@@ -964,15 +1007,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest](../../Models/Operations/RemoveUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveUnifiedWebhookRequest](../../Models/Operations/RemoveUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse](../../Models/Operations/RemoveUnifiedWebhookResponse.md)**
+**[?Operations\RemoveUnifiedWebhookResponse](../../Models/Operations/RemoveUnifiedWebhookResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateUnifiedConnection
 
@@ -981,15 +1028,14 @@ Update connection
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -997,62 +1043,64 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateUnifiedConnectionRequest();
-    $request->connection = new Shared\Connection();
-    $request->connection->auth = new Shared\PropertyConnectionAuth();
-    $request->connection->auth->accessToken = '<value>';
-    $request->connection->auth->apiUrl = '<value>';
-    $request->connection->auth->appId = '<value>';
-    $request->connection->auth->authorizeUrl = '<value>';
-    $request->connection->auth->clientId = '<value>';
-    $request->connection->auth->clientSecret = '<value>';
-    $request->connection->auth->consumerKey = '<value>';
-    $request->connection->auth->consumerSecret = '<value>';
-    $request->connection->auth->devApiKey = '<value>';
-    $request->connection->auth->emails = [
-        '<value>',
-    ];
-    $request->connection->auth->expiresIn = 7910.65;
-    $request->connection->auth->expiryDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-07-13T13:09:11.114Z');
-    $request->connection->auth->key = '<key>';
-    $request->connection->auth->meta = [
-        'revitalize' => '<value>',
-    ];
-    $request->connection->auth->name = '<value>';
-    $request->connection->auth->otherAuthInfo = [
-        '<value>',
-    ];
-    $request->connection->auth->pem = '<value>';
-    $request->connection->auth->refreshToken = '<value>';
-    $request->connection->auth->refreshTokenExpiresDate = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-05-18T23:31:20.256Z');
-    $request->connection->auth->refreshTokenExpiresIn = 618.81;
-    $request->connection->auth->state = 'Wisconsin';
-    $request->connection->auth->token = '<value>';
-    $request->connection->auth->tokenUrl = '<value>';
-    $request->connection->authAwsArn = '<value>';
-    $request->connection->categories = [
-        Shared\PropertyConnectionCategories::Uc,
-    ];
-    $request->connection->createdAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-08T19:30:51.046Z');
-    $request->connection->cursorsCache = [
-        [
-            'Intuitive' => '<value>',
-        ],
-    ];
-    $request->connection->environment = '<value>';
-    $request->connection->externalXref = '<value>';
-    $request->connection->id = '<id>';
-    $request->connection->integrationType = '<value>';
-    $request->connection->isPaused = false;
-    $request->connection->lastHealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-09-19T21:47:47.558Z');
-    $request->connection->lastUnhealthyAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-12-21T13:28:25.633Z');
-    $request->connection->permissions = [
-        Shared\PropertyConnectionPermissions::CommerceItemWrite,
-    ];
-    $request->connection->updatedAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-06-11T02:04:24.912Z');
-    $request->connection->workspaceId = '<value>';
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateUnifiedConnectionRequest(
+        id: '<id>',
+        connection: new Shared\Connection(
+            categories: [
+                Shared\PropertyConnectionCategories::Genai,
+            ],
+            integrationType: '<value>',
+            permissions: [
+                Shared\PropertyConnectionPermissions::CrmDealWrite,
+            ],
+            auth: new Shared\PropertyConnectionAuth(
+                accessToken: '<value>',
+                apiUrl: '<value>',
+                appId: '<value>',
+                authorizeUrl: '<value>',
+                clientId: '<value>',
+                clientSecret: '<value>',
+                consumerKey: '<value>',
+                consumerSecret: '<value>',
+                devApiKey: '<value>',
+                emails: [
+                    '<value>',
+                ],
+                expiresIn: 9842.07,
+                expiryDate: Utils\Utils::parseDateTime('2024-03-25T02:21:40.431Z'),
+                key: '<key>',
+                meta: [
+                    'deposit' => '<value>',
+                ],
+                name: '<value>',
+                otherAuthInfo: [
+                    '<value>',
+                ],
+                pem: '<value>',
+                refreshToken: '<value>',
+                refreshTokenExpiresDate: Utils\Utils::parseDateTime('2024-11-26T11:11:59.157Z'),
+                refreshTokenExpiresIn: 4787.17,
+                state: 'Arkansas',
+                token: '<value>',
+                tokenUrl: '<value>',
+            ),
+            authAwsArn: '<value>',
+            createdAt: Utils\Utils::parseDateTime('2023-01-09T16:11:04.721Z'),
+            cursorsCache: [
+                [
+                    'Account' => '<value>',
+                ],
+            ],
+            environment: '<value>',
+            externalXref: '<value>',
+            id: '<id>',
+            isPaused: false,
+            lastHealthyAt: Utils\Utils::parseDateTime('2022-09-02T00:03:31.866Z'),
+            lastUnhealthyAt: Utils\Utils::parseDateTime('2023-06-11T02:04:24.912Z'),
+            updatedAt: Utils\Utils::parseDateTime('2022-08-21T11:50:10.882Z'),
+            workspaceId: '<value>',
+        ),
+    );
     $response = $sdk->unified->updateUnifiedConnection($request);
 
     if ($response->connection !== null) {
@@ -1065,15 +1113,19 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest](../../Models/Operations/UpdateUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateUnifiedConnectionRequest](../../Models/Operations/UpdateUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse](../../Models/Operations/UpdateUnifiedConnectionResponse.md)**
+**[?Operations\UpdateUnifiedConnectionResponse](../../Models/Operations/UpdateUnifiedConnectionResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 ## updateUnifiedWebhookTrigger
 
@@ -1082,15 +1134,13 @@ Trigger webhook
 ### Example Usage
 
 ```php
-<?php
-
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use \Unified\Unified_to;
-use \Unified\Unified_to\Models\Shared;
-use \Unified\Unified_to\Models\Operations;
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $security = new Shared\Security();
 $security->jwt = '<YOUR_API_KEY_HERE>';
@@ -1098,9 +1148,9 @@ $security->jwt = '<YOUR_API_KEY_HERE>';
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-        $request = new Operations\UpdateUnifiedWebhookTriggerRequest();
-    $request->id = '<id>';;
-
+    $request = new Operations\UpdateUnifiedWebhookTriggerRequest(
+        id: '<id>',
+    );
     $response = $sdk->unified->updateUnifiedWebhookTrigger($request);
 
     if ($response->statusCode === 200) {
@@ -1113,12 +1163,16 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest](../../Models/Operations/UpdateUnifiedWebhookTriggerRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\UpdateUnifiedWebhookTriggerRequest](../../Models/Operations/UpdateUnifiedWebhookTriggerRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
 
-**[?\Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse](../../Models/Operations/UpdateUnifiedWebhookTriggerResponse.md)**
+**[?Operations\UpdateUnifiedWebhookTriggerResponse](../../Models/Operations/UpdateUnifiedWebhookTriggerResponse.md)**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |

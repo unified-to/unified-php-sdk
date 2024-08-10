@@ -12,53 +12,83 @@ namespace Unified\Unified_to\Models\Shared;
 /** CrmDeal - A deal represents an opportunity with companies and/or contacts */
 class CrmDeal
 {
+    /**
+     *
+     * @var ?float $amount
+     */
     #[\JMS\Serializer\Annotation\SerializedName('amount')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $amount = null;
 
+    /**
+     *
+     * @var ?\DateTime $closedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('closed_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $closedAt = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $currency
+     */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $currency = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $lostReason
+     */
     #[\JMS\Serializer\Annotation\SerializedName('lost_reason')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $lostReason = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?string $pipeline
+     */
     #[\JMS\Serializer\Annotation\SerializedName('pipeline')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $pipeline = null;
 
+    /**
+     *
+     * @var ?string $pipelineId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('pipeline_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $pipelineId = null;
 
+    /**
+     *
+     * @var ?float $probability
+     */
     #[\JMS\Serializer\Annotation\SerializedName('probability')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $probability = null;
 
@@ -72,18 +102,27 @@ class CrmDeal
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $source
+     */
     #[\JMS\Serializer\Annotation\SerializedName('source')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $source = null;
 
+    /**
+     *
+     * @var ?string $stage
+     */
     #[\JMS\Serializer\Annotation\SerializedName('stage')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $stage = null;
 
+    /**
+     *
+     * @var ?string $stageId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('stage_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $stageId = null;
 
@@ -97,40 +136,69 @@ class CrmDeal
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
+    /**
+     *
+     * @var ?string $wonReason
+     */
     #[\JMS\Serializer\Annotation\SerializedName('won_reason')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $wonReason = null;
 
-    public function __construct()
+    /**
+     * @param  ?float  $amount
+     * @param  ?\DateTime  $closedAt
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $id
+     * @param  ?string  $lostReason
+     * @param  ?string  $name
+     * @param  ?string  $pipeline
+     * @param  ?string  $pipelineId
+     * @param  ?float  $probability
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $source
+     * @param  ?string  $stage
+     * @param  ?string  $stageId
+     * @param  ?array<string>  $tags
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     * @param  ?string  $wonReason
+     */
+    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
     {
-        $this->amount = null;
-        $this->closedAt = null;
-        $this->createdAt = null;
-        $this->currency = null;
-        $this->id = null;
-        $this->lostReason = null;
-        $this->name = null;
-        $this->pipeline = null;
-        $this->pipelineId = null;
-        $this->probability = null;
-        $this->raw = null;
-        $this->source = null;
-        $this->stage = null;
-        $this->stageId = null;
-        $this->tags = null;
-        $this->updatedAt = null;
-        $this->userId = null;
-        $this->wonReason = null;
+        $this->amount = $amount;
+        $this->closedAt = $closedAt;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->id = $id;
+        $this->lostReason = $lostReason;
+        $this->name = $name;
+        $this->pipeline = $pipeline;
+        $this->pipelineId = $pipelineId;
+        $this->probability = $probability;
+        $this->raw = $raw;
+        $this->source = $source;
+        $this->stage = $stage;
+        $this->stageId = $stageId;
+        $this->tags = $tags;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
+        $this->wonReason = $wonReason;
     }
 }

@@ -8,13 +8,13 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
+use Unified\Unified_to\Models\Shared;
 class ListCommerceInventoriesResponse
 {
     /**
      * Successful
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceInventory> $commerceInventories
+     * @var ?array<Shared\CommerceInventory> $commerceInventories
      */
     public ?array $commerceInventories = null;
 
@@ -35,15 +35,21 @@ class ListCommerceInventoriesResponse
     /**
      * Raw HTTP response; suitable for custom response parsing
      *
-     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    public \Psr\Http\Message\ResponseInterface $rawResponse;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contentType
+     * @param  ?int  $statusCode
+     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?array<Shared\CommerceInventory>  $commerceInventories
+     */
+    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?array $commerceInventories = null)
     {
-        $this->commerceInventories = null;
-        $this->contentType = '';
-        $this->statusCode = 0;
-        $this->rawResponse = null;
+        $this->contentType = $contentType;
+        $this->statusCode = $statusCode;
+        $this->rawResponse = $rawResponse;
+        $this->commerceInventories = $commerceInventories;
     }
 }

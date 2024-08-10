@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAtsScorecardRequest
 {
+    /**
+     *
+     * @var ?Shared\AtsScorecard $atsScorecard
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\AtsScorecard $atsScorecard = null;
+    public ?Shared\AtsScorecard $atsScorecard = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class UpdateAtsScorecardRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\AtsScorecard  $atsScorecard
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AtsScorecard $atsScorecard = null)
     {
-        $this->atsScorecard = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->atsScorecard = $atsScorecard;
     }
 }

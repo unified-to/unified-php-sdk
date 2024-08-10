@@ -12,18 +12,27 @@ namespace Unified\Unified_to\Models\Shared;
 /** MarketingList - Mailing List */
 class MarketingList
 {
+    /**
+     *
+     * @var ?string $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createdAt = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -37,17 +46,27 @@ class MarketingList
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $createdAt
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?string $createdAt = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->id = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->updatedAt = null;
+        $this->createdAt = $createdAt;
+        $this->id = $id;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->updatedAt = $updatedAt;
     }
 }

@@ -11,23 +11,35 @@ namespace Unified\Unified_to\Models\Shared;
 
 class UcCall
 {
+    /**
+     *
+     * @var ?string $contactId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $contactId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('end_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $endAt = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
@@ -41,41 +53,61 @@ class UcCall
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?\DateTime $startAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('start_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $startAt = null;
 
     /**
      * The telephone number called
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone $telephone
+     * @var ?PropertyUcCallTelephone $telephone
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephone')]
-    #[\JMS\Serializer\Annotation\Type('Unified\Unified_to\Models\Shared\PropertyUcCallTelephone')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyUcCallTelephone $telephone = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $contactId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?\DateTime  $endAt
+     * @param  ?string  $id
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $startAt
+     * @param  ?PropertyUcCallTelephone  $telephone
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?string $contactId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->contactId = null;
-        $this->createdAt = null;
-        $this->endAt = null;
-        $this->id = null;
-        $this->raw = null;
-        $this->startAt = null;
-        $this->telephone = null;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->contactId = $contactId;
+        $this->createdAt = $createdAt;
+        $this->endAt = $endAt;
+        $this->id = $id;
+        $this->raw = $raw;
+        $this->startAt = $startAt;
+        $this->telephone = $telephone;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

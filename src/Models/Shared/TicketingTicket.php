@@ -11,38 +11,59 @@ namespace Unified\Unified_to\Models\Shared;
 
 class TicketingTicket
 {
+    /**
+     *
+     * @var ?string $category
+     */
     #[\JMS\Serializer\Annotation\SerializedName('category')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $category = null;
 
+    /**
+     *
+     * @var ?\DateTime $closedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('closed_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $closedAt = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $customerId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('customer_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $customerId = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $priority
+     */
     #[\JMS\Serializer\Annotation\SerializedName('priority')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $priority = null;
 
@@ -56,23 +77,36 @@ class TicketingTicket
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?string $source
+     */
     #[\JMS\Serializer\Annotation\SerializedName('source')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $source = null;
 
+    /**
+     *
+     * @var ?string $sourceRef
+     */
     #[\JMS\Serializer\Annotation\SerializedName('source_ref')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $sourceRef = null;
 
+    /**
+     *
+     * @var ?TicketingTicketStatus $status
+     */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\TicketingTicketStatus>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingTicketStatus')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?TicketingTicketStatus $status = null;
 
+    /**
+     *
+     * @var ?string $subject
+     */
     #[\JMS\Serializer\Annotation\SerializedName('subject')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $subject = null;
 
@@ -86,38 +120,65 @@ class TicketingTicket
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $url
+     */
     #[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $url = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $category
+     * @param  ?\DateTime  $closedAt
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $customerId
+     * @param  ?string  $description
+     * @param  ?string  $id
+     * @param  ?string  $priority
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $source
+     * @param  ?string  $sourceRef
+     * @param  ?TicketingTicketStatus  $status
+     * @param  ?string  $subject
+     * @param  ?array<string>  $tags
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $url
+     * @param  ?string  $userId
+     */
+    public function __construct(?string $category = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
     {
-        $this->category = null;
-        $this->closedAt = null;
-        $this->createdAt = null;
-        $this->customerId = null;
-        $this->description = null;
-        $this->id = null;
-        $this->priority = null;
-        $this->raw = null;
-        $this->source = null;
-        $this->sourceRef = null;
-        $this->status = null;
-        $this->subject = null;
-        $this->tags = null;
-        $this->updatedAt = null;
-        $this->url = null;
-        $this->userId = null;
+        $this->category = $category;
+        $this->closedAt = $closedAt;
+        $this->createdAt = $createdAt;
+        $this->customerId = $customerId;
+        $this->description = $description;
+        $this->id = $id;
+        $this->priority = $priority;
+        $this->raw = $raw;
+        $this->source = $source;
+        $this->sourceRef = $sourceRef;
+        $this->status = $status;
+        $this->subject = $subject;
+        $this->tags = $tags;
+        $this->updatedAt = $updatedAt;
+        $this->url = $url;
+        $this->userId = $userId;
     }
 }

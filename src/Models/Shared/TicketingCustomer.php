@@ -11,28 +11,37 @@ namespace Unified\Unified_to\Models\Shared;
 
 class TicketingCustomer
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
     /**
      * $emails
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\TicketingEmail> $emails
+     * @var ?array<TicketingEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\TicketingEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingEmail>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
@@ -59,27 +68,40 @@ class TicketingCustomer
     /**
      * $telephones
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\TicketingTelephone> $telephones
+     * @var ?array<TicketingTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\TicketingTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingTelephone>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?\DateTime  $createdAt
+     * @param  ?array<TicketingEmail>  $emails
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?array<string>  $tags
+     * @param  ?array<TicketingTelephone>  $telephones
+     * @param  ?\DateTime  $updatedAt
+     */
+    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
     {
-        $this->createdAt = null;
-        $this->emails = null;
-        $this->id = null;
-        $this->name = null;
-        $this->raw = null;
-        $this->tags = null;
-        $this->telephones = null;
-        $this->updatedAt = null;
+        $this->createdAt = $createdAt;
+        $this->emails = $emails;
+        $this->id = $id;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->tags = $tags;
+        $this->telephones = $telephones;
+        $this->updatedAt = $updatedAt;
     }
 }

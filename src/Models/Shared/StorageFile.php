@@ -11,53 +11,77 @@ namespace Unified\Unified_to\Models\Shared;
 
 class StorageFile
 {
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $downloadUrl
+     */
     #[\JMS\Serializer\Annotation\SerializedName('download_url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $downloadUrl = null;
 
+    /**
+     *
+     * @var ?string $hash
+     */
     #[\JMS\Serializer\Annotation\SerializedName('hash')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $hash = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $mimeType
+     */
     #[\JMS\Serializer\Annotation\SerializedName('mime_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $mimeType = null;
 
+    /**
+     *
+     * @var ?string $name
+     */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
 
+    /**
+     *
+     * @var ?string $parentId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('parent_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $parentId = null;
 
     /**
      * $permissions
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\StoragePermission> $permissions
+     * @var ?array<StoragePermission> $permissions
      */
     #[\JMS\Serializer\Annotation\SerializedName('permissions')]
-    #[\JMS\Serializer\Annotation\Type('array<Unified\Unified_to\Models\Shared\StoragePermission>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\StoragePermission>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $permissions = null;
 
@@ -71,41 +95,70 @@ class StorageFile
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var ?float $size
+     */
     #[\JMS\Serializer\Annotation\SerializedName('size')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $size = null;
 
+    /**
+     *
+     * @var ?StorageFileType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\StorageFileType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\StorageFileType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?StorageFileType $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
+    /**
+     *
+     * @var ?string $userId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
 
-    public function __construct()
+    /**
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?string  $downloadUrl
+     * @param  ?string  $hash
+     * @param  ?string  $id
+     * @param  ?string  $mimeType
+     * @param  ?string  $name
+     * @param  ?string  $parentId
+     * @param  ?array<StoragePermission>  $permissions
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?float  $size
+     * @param  ?StorageFileType  $type
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
+     */
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->createdAt = null;
-        $this->description = null;
-        $this->downloadUrl = null;
-        $this->hash = null;
-        $this->id = null;
-        $this->mimeType = null;
-        $this->name = null;
-        $this->parentId = null;
-        $this->permissions = null;
-        $this->raw = null;
-        $this->size = null;
-        $this->type = null;
-        $this->updatedAt = null;
-        $this->userId = null;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->downloadUrl = $downloadUrl;
+        $this->hash = $hash;
+        $this->id = $id;
+        $this->mimeType = $mimeType;
+        $this->name = $name;
+        $this->parentId = $parentId;
+        $this->permissions = $permissions;
+        $this->raw = $raw;
+        $this->size = $size;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

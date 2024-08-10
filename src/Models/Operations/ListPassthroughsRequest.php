@@ -19,12 +19,20 @@ class ListPassthroughsRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
+    /**
+     *
+     * @var string $path
+     */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=path')]
     public string $path;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $path
+     */
+    public function __construct(?string $connectionId = null, ?string $path = null)
     {
-        $this->connectionId = '';
-        $this->path = '';
+        $this->connectionId = $connectionId;
+        $this->path = $path;
     }
 }

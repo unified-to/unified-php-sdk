@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchPaymentLinkRequest
 {
+    /**
+     *
+     * @var ?Shared\PaymentLink $paymentLink
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\PaymentLink $paymentLink = null;
+    public ?Shared\PaymentLink $paymentLink = null;
 
     /**
      * ID of the connection
@@ -30,10 +35,15 @@ class PatchPaymentLinkRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?string  $id
+     * @param  ?Shared\PaymentLink  $paymentLink
+     */
+    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\PaymentLink $paymentLink = null)
     {
-        $this->paymentLink = null;
-        $this->connectionId = '';
-        $this->id = '';
+        $this->connectionId = $connectionId;
+        $this->id = $id;
+        $this->paymentLink = $paymentLink;
     }
 }

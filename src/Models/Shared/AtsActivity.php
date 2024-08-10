@@ -11,48 +11,75 @@ namespace Unified\Unified_to\Models\Shared;
 
 class AtsActivity
 {
+    /**
+     *
+     * @var ?string $applicationId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('application_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $applicationId = null;
 
+    /**
+     *
+     * @var ?string $candidateId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $candidateId = null;
 
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $createdAt = null;
 
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?string $documentId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('document_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $documentId = null;
 
+    /**
+     *
+     * @var ?string $id
+     */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
 
+    /**
+     *
+     * @var ?string $interviewId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('interview_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $interviewId = null;
 
+    /**
+     *
+     * @var ?bool $isPrivate
+     */
     #[\JMS\Serializer\Annotation\SerializedName('is_private')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $isPrivate = null;
 
+    /**
+     *
+     * @var ?string $jobId
+     */
     #[\JMS\Serializer\Annotation\SerializedName('job_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $jobId = null;
 
@@ -66,17 +93,27 @@ class AtsActivity
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
+    /**
+     *
+     * @var string $title
+     */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     public string $title;
 
+    /**
+     *
+     * @var ?AtsActivityType $type
+     */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<Unified\Unified_to\Models\Shared\AtsActivityType>')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsActivityType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsActivityType $type = null;
 
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $updatedAt = null;
 
@@ -90,21 +127,37 @@ class AtsActivity
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $userIds = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $title
+     * @param  ?string  $applicationId
+     * @param  ?string  $candidateId
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?string  $documentId
+     * @param  ?string  $id
+     * @param  ?string  $interviewId
+     * @param  ?bool  $isPrivate
+     * @param  ?string  $jobId
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?AtsActivityType  $type
+     * @param  ?\DateTime  $updatedAt
+     * @param  ?array<string>  $userIds
+     */
+    public function __construct(?string $title = null, ?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
-        $this->applicationId = null;
-        $this->candidateId = null;
-        $this->createdAt = null;
-        $this->description = null;
-        $this->documentId = null;
-        $this->id = null;
-        $this->interviewId = null;
-        $this->isPrivate = null;
-        $this->jobId = null;
-        $this->raw = null;
-        $this->title = '';
-        $this->type = null;
-        $this->updatedAt = null;
-        $this->userIds = null;
+        $this->title = $title;
+        $this->applicationId = $applicationId;
+        $this->candidateId = $candidateId;
+        $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->documentId = $documentId;
+        $this->id = $id;
+        $this->interviewId = $interviewId;
+        $this->isPrivate = $isPrivate;
+        $this->jobId = $jobId;
+        $this->raw = $raw;
+        $this->type = $type;
+        $this->updatedAt = $updatedAt;
+        $this->userIds = $userIds;
     }
 }

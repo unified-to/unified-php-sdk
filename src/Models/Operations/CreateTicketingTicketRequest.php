@@ -8,11 +8,16 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateTicketingTicketRequest
 {
+    /**
+     *
+     * @var ?Shared\TicketingTicket $ticketingTicket
+     */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\Unified\Unified_to\Models\Shared\TicketingTicket $ticketingTicket = null;
+    public ?Shared\TicketingTicket $ticketingTicket = null;
 
     /**
      * ID of the connection
@@ -22,9 +27,13 @@ class CreateTicketingTicketRequest
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
 
-    public function __construct()
+    /**
+     * @param  ?string  $connectionId
+     * @param  ?Shared\TicketingTicket  $ticketingTicket
+     */
+    public function __construct(?string $connectionId = null, ?Shared\TicketingTicket $ticketingTicket = null)
     {
-        $this->ticketingTicket = null;
-        $this->connectionId = '';
+        $this->connectionId = $connectionId;
+        $this->ticketingTicket = $ticketingTicket;
     }
 }

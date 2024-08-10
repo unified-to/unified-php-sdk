@@ -12,25 +12,39 @@ namespace Unified\Unified_to\Models\Shared;
 /** PropertyCrmEventCall - The call object, when type = call */
 class PropertyCrmEventCall
 {
+    /**
+     *
+     * @var ?string $description
+     */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
 
+    /**
+     *
+     * @var ?float $duration
+     */
     #[\JMS\Serializer\Annotation\SerializedName('duration')]
-    #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $duration = null;
 
+    /**
+     *
+     * @var ?\DateTime $startAt
+     */
     #[\JMS\Serializer\Annotation\SerializedName('start_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $startAt = null;
 
-    public function __construct()
+    /**
+     * @param  ?string  $description
+     * @param  ?float  $duration
+     * @param  ?\DateTime  $startAt
+     */
+    public function __construct(?string $description = null, ?float $duration = null, ?\DateTime $startAt = null)
     {
-        $this->description = null;
-        $this->duration = null;
-        $this->startAt = null;
+        $this->description = $description;
+        $this->duration = $duration;
+        $this->startAt = $startAt;
     }
 }
