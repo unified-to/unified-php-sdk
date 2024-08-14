@@ -43,6 +43,13 @@ class ListKmsSpacesRequest
 
     /**
      *
+     * @var ?string $order
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
+    public ?string $order = null;
+
+    /**
+     *
      * @var ?string $parentId
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
@@ -57,6 +64,13 @@ class ListKmsSpacesRequest
     public ?string $query = null;
 
     /**
+     *
+     * @var ?string $sort
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
+    public ?string $sort = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?\DateTime $updatedGte
@@ -69,18 +83,22 @@ class ListKmsSpacesRequest
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
+     * @param  ?string  $order
      * @param  ?string  $parentId
      * @param  ?string  $query
+     * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $parentId = null, ?string $query = null, ?\DateTime $updatedGte = null)
+    public function __construct(?string $connectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
+        $this->order = $order;
         $this->parentId = $parentId;
         $this->query = $query;
+        $this->sort = $sort;
         $this->updatedGte = $updatedGte;
     }
 }

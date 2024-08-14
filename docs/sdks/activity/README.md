@@ -65,6 +65,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -119,6 +121,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -169,7 +173,9 @@ try {
         jobId: '<value>',
         limit: 2367.19,
         offset: 8254.25,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-11-13T18:19:17.967Z'),
         userId: '<value>',
     );
@@ -182,6 +188,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -255,6 +263,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -305,6 +315,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -377,6 +389,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

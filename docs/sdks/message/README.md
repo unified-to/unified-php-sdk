@@ -75,6 +75,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -129,6 +131,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -175,8 +179,10 @@ try {
         ],
         limit: 4272.96,
         offset: 6110.39,
+        order: '<value>',
         parentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-11-14T22:11:58.965Z'),
     );
     $response = $sdk->message->listMessagingMessages($request);
@@ -188,6 +194,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -271,6 +279,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
@@ -321,6 +331,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -403,6 +415,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

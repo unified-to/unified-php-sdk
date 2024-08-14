@@ -44,6 +44,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -89,7 +91,9 @@ try {
         ],
         limit: 1802.06,
         offset: 8928.71,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-11-20T05:14:17.047Z'),
         userId: '<value>',
     );
@@ -102,6 +106,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

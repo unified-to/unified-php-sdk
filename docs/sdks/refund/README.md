@@ -44,6 +44,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -89,8 +91,10 @@ try {
         ],
         limit: 5820.28,
         offset: 6141.19,
+        order: '<value>',
         paymentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-08-03T22:54:27.299Z'),
     );
     $response = $sdk->refund->listPaymentRefunds($request);
@@ -102,6 +106,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

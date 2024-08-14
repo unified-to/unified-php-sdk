@@ -53,6 +53,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
@@ -112,6 +114,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
@@ -157,8 +161,6 @@ try {
         env: '<value>',
         limit: 7382.58,
         offset: 353.99,
-        order: '<value>',
-        sort: '<value>',
         summary: false,
         type: '<value>',
         updatedGte: '<value>',
@@ -172,6 +174,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

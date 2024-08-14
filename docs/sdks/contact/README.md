@@ -104,6 +104,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -189,6 +191,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -257,6 +261,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -310,6 +316,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -365,6 +373,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -419,6 +429,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -464,7 +476,9 @@ try {
         ],
         limit: 4596.32,
         offset: 8881.9,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         type: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-09-26T14:00:38.736Z'),
     );
@@ -477,6 +491,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -525,7 +541,9 @@ try {
         ],
         limit: 7110.24,
         offset: 2657.43,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-11-15T19:36:59.401Z'),
         userId: '<value>',
     );
@@ -538,6 +556,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -584,7 +604,9 @@ try {
         ],
         limit: 5333.71,
         offset: 7775.9,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-10-26T05:35:01.805Z'),
         userId: '<value>',
     );
@@ -597,6 +619,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -697,6 +721,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -783,6 +809,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -852,6 +880,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -902,6 +932,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -954,6 +986,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -1004,6 +1038,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1104,6 +1140,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1190,6 +1228,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -1258,6 +1298,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

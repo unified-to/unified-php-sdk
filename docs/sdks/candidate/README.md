@@ -87,6 +87,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -141,6 +143,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -187,7 +191,9 @@ try {
         jobId: '<value>',
         limit: 6384.09,
         offset: 7452.94,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-03-18T00:58:25.541Z'),
     );
     $response = $sdk->candidate->listAtsCandidates($request);
@@ -199,6 +205,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -294,6 +302,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -344,6 +354,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -438,6 +450,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

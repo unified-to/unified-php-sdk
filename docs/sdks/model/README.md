@@ -34,7 +34,9 @@ try {
         ],
         limit: 9118.49,
         offset: 7503.47,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-12-26T16:13:56.581Z'),
     );
     $response = $sdk->model->listGenaiModels($request);
@@ -46,6 +48,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

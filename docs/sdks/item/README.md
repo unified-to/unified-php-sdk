@@ -74,6 +74,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -128,6 +130,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -174,7 +178,9 @@ try {
         ],
         limit: 2553.93,
         offset: 4072.28,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-05-10T19:08:09.923Z'),
     );
     $response = $sdk->item->listCommerceItems($request);
@@ -186,6 +192,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -268,6 +276,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -318,6 +328,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -399,6 +411,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

@@ -65,6 +65,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -119,6 +121,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -165,7 +169,9 @@ try {
         ],
         limit: 4815.14,
         offset: 2554.75,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-04-30T00:40:26.357Z'),
     );
     $response = $sdk->group->listHrisGroups($request);
@@ -177,6 +183,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -250,6 +258,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -300,6 +310,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -372,6 +384,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

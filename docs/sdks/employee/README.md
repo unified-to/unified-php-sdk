@@ -104,6 +104,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -158,6 +160,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -204,7 +208,9 @@ try {
         ],
         limit: 5148.12,
         offset: 2185.43,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-04-10T00:54:40.984Z'),
     );
     $response = $sdk->employee->listHrisEmployees($request);
@@ -216,6 +222,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -328,6 +336,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -378,6 +388,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -489,6 +501,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

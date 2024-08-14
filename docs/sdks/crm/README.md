@@ -118,6 +118,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -203,6 +205,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -277,6 +281,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -387,6 +393,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -471,6 +479,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -537,6 +547,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -590,6 +602,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -645,6 +659,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -698,6 +714,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -753,6 +771,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
@@ -806,6 +826,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -861,6 +883,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -908,7 +932,9 @@ try {
         ],
         limit: 9883.97,
         offset: 5913.88,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-05-02T17:52:08.731Z'),
         userId: '<value>',
     );
@@ -921,6 +947,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -969,7 +997,9 @@ try {
         ],
         limit: 7110.24,
         offset: 2657.43,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-11-15T19:36:59.401Z'),
         userId: '<value>',
     );
@@ -982,6 +1012,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1030,7 +1062,9 @@ try {
         ],
         limit: 917.49,
         offset: 8216.92,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-09-04T01:39:26.472Z'),
         userId: '<value>',
     );
@@ -1043,6 +1077,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1092,7 +1128,9 @@ try {
         ],
         limit: 4453.11,
         offset: 4555.2,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         type: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-04-30T03:39:38.103Z'),
         userId: '<value>',
@@ -1106,6 +1144,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1154,7 +1194,9 @@ try {
         ],
         limit: 2895.08,
         offset: 6446.8,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-01-12T07:27:29.016Z'),
         userId: '<value>',
     );
@@ -1167,6 +1209,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1213,7 +1257,9 @@ try {
         ],
         limit: 3318.18,
         offset: 4834.28,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-04-29T18:23:30.472Z'),
     );
     $response = $sdk->crm->listCrmPipelines($request);
@@ -1225,6 +1271,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1321,6 +1369,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -1407,6 +1457,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -1482,6 +1534,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1593,6 +1647,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -1678,6 +1734,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -1745,6 +1803,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -1795,6 +1855,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1847,6 +1909,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -1897,6 +1961,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1949,6 +2015,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -2000,6 +2068,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -2050,6 +2120,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2146,6 +2218,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -2232,6 +2306,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -2307,6 +2383,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2418,6 +2496,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -2503,6 +2583,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -2569,6 +2651,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

@@ -34,7 +34,9 @@ try {
         ],
         limit: 5199.96,
         offset: 7673.65,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-03-25T18:11:33.180Z'),
     );
     $response = $sdk->applicationstatus->listAtsApplicationstatuses($request);
@@ -46,6 +48,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

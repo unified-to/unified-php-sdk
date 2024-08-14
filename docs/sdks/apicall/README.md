@@ -40,6 +40,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -86,6 +88,8 @@ try {
         integrationType: '<value>',
         limit: 8683.78,
         offset: 494.66,
+        order: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-08-01T07:02:03.842Z'),
     );
     $response = $sdk->apicall->listUnifiedApicalls($request);
@@ -97,6 +101,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

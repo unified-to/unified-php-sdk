@@ -62,6 +62,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -116,6 +118,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -161,8 +165,10 @@ try {
         ],
         limit: 8217.75,
         offset: 5158.61,
+        order: '<value>',
         parentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-08-11T05:04:28.347Z'),
     );
     $response = $sdk->project->listTaskProjects($request);
@@ -174,6 +180,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -244,6 +252,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -294,6 +304,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -363,6 +375,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

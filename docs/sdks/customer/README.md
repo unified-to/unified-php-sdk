@@ -63,6 +63,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -117,6 +119,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -162,7 +166,9 @@ try {
         ],
         limit: 3917.11,
         offset: 274.81,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-06-05T19:45:16.674Z'),
     );
     $response = $sdk->customer->listTicketingCustomers($request);
@@ -174,6 +180,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -245,6 +253,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -295,6 +305,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -365,6 +377,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

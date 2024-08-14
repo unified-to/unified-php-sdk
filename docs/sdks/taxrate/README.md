@@ -57,6 +57,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -111,6 +113,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -156,7 +160,9 @@ try {
         ],
         limit: 1599.19,
         offset: 1097.48,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-06-14T14:31:13.247Z'),
     );
     $response = $sdk->taxrate->listAccountingTaxrates($request);
@@ -168,6 +174,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -233,6 +241,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -283,6 +293,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -347,6 +359,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

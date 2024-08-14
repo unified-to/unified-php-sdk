@@ -104,6 +104,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -174,6 +176,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -268,6 +272,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -334,6 +340,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -404,6 +412,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -494,6 +504,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -563,6 +575,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -616,6 +630,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -671,6 +687,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -724,6 +742,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -779,6 +799,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -832,6 +854,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -887,6 +911,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -940,6 +966,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -995,6 +1023,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -1045,7 +1075,9 @@ try {
         jobId: '<value>',
         limit: 2367.19,
         offset: 8254.25,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-11-13T18:19:17.967Z'),
         userId: '<value>',
     );
@@ -1058,6 +1090,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1106,7 +1140,9 @@ try {
         jobId: '<value>',
         limit: 441.56,
         offset: 1448.74,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-12-21T20:30:01.596Z'),
     );
     $response = $sdk->ats->listAtsApplications($request);
@@ -1118,6 +1154,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1164,7 +1202,9 @@ try {
         ],
         limit: 5199.96,
         offset: 7673.65,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-03-25T18:11:33.180Z'),
     );
     $response = $sdk->ats->listAtsApplicationstatuses($request);
@@ -1176,6 +1216,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1223,7 +1265,9 @@ try {
         jobId: '<value>',
         limit: 6384.09,
         offset: 7452.94,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-03-18T00:58:25.541Z'),
     );
     $response = $sdk->ats->listAtsCandidates($request);
@@ -1235,6 +1279,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1281,7 +1327,9 @@ try {
         ],
         limit: 6933.84,
         offset: 7946.52,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-10-01T21:39:38.971Z'),
     );
     $response = $sdk->ats->listAtsCompanies($request);
@@ -1293,6 +1341,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1341,7 +1391,9 @@ try {
         ],
         limit: 9635.37,
         offset: 8402.77,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-08-31T00:55:54.895Z'),
     );
     $response = $sdk->ats->listAtsDocuments($request);
@@ -1353,6 +1405,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1400,7 +1454,9 @@ try {
         ],
         limit: 2562.12,
         offset: 1185.02,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-09-28T15:15:00.508Z'),
     );
     $response = $sdk->ats->listAtsInterviews($request);
@@ -1412,6 +1468,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1458,7 +1516,9 @@ try {
         ],
         limit: 3958.99,
         offset: 3223.84,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-03-04T01:14:05.456Z'),
         userId: '<value>',
     );
@@ -1471,6 +1531,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1521,7 +1583,9 @@ try {
         jobId: '<value>',
         limit: 5126.98,
         offset: 8077.44,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-08-19T14:46:22.333Z'),
     );
     $response = $sdk->ats->listAtsScorecards($request);
@@ -1533,6 +1597,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1606,6 +1672,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -1677,6 +1745,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1772,6 +1842,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -1839,6 +1911,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1910,6 +1984,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2001,6 +2077,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
@@ -2071,6 +2149,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -2121,6 +2201,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2173,6 +2255,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -2223,6 +2307,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2275,6 +2361,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -2325,6 +2413,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2377,6 +2467,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -2427,6 +2519,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2500,6 +2594,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -2571,6 +2667,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2666,6 +2764,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -2733,6 +2833,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2804,6 +2906,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -2895,6 +2999,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -2964,6 +3070,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

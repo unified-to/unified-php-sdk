@@ -44,6 +44,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -89,8 +91,10 @@ try {
         ],
         limit: 8836,
         offset: 9706.94,
+        order: '<value>',
         parentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-12-12T05:55:39.243Z'),
     );
     $response = $sdk->channel->listMessagingChannels($request);
@@ -102,6 +106,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

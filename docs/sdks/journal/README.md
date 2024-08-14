@@ -60,6 +60,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -114,6 +116,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -159,7 +163,9 @@ try {
         ],
         limit: 3732.99,
         offset: 235.51,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-08-02T07:29:24.179Z'),
     );
     $response = $sdk->journal->listAccountingJournals($request);
@@ -171,6 +177,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -239,6 +247,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -289,6 +299,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -356,6 +368,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

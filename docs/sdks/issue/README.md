@@ -30,6 +30,8 @@ try {
     $request = new Operations\ListUnifiedIssuesRequest(
         limit: 7069.08,
         offset: 7461.37,
+        order: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-01-21T01:55:24.746Z'),
     );
     $response = $sdk->issue->listUnifiedIssues($request);
@@ -41,6 +43,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

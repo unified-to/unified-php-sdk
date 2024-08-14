@@ -74,6 +74,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -128,6 +130,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -174,7 +178,9 @@ try {
         ],
         limit: 6788.11,
         offset: 5122.49,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-05-23T19:02:52.454Z'),
     );
     $response = $sdk->invoice->listAccountingInvoices($request);
@@ -186,6 +192,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -268,6 +276,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -318,6 +328,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -399,6 +411,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

@@ -96,6 +96,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                              | Type                                                   | Required                                               | Description                                            |
@@ -146,6 +148,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -192,6 +196,8 @@ try {
         externalXref: '<value>',
         limit: 9638.08,
         offset: 15.12,
+        order: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-06-20T13:59:12.388Z'),
     );
     $response = $sdk->connection->listUnifiedConnections($request);
@@ -203,6 +209,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -310,6 +318,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -359,6 +369,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -465,6 +477,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

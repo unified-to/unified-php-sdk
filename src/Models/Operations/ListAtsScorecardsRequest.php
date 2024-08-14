@@ -70,12 +70,26 @@ class ListAtsScorecardsRequest
     public ?float $offset = null;
 
     /**
+     *
+     * @var ?string $order
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
+    public ?string $order = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
     public ?string $query = null;
+
+    /**
+     *
+     * @var ?string $sort
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
+    public ?string $sort = null;
 
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -94,10 +108,12 @@ class ListAtsScorecardsRequest
      * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset
+     * @param  ?string  $order
      * @param  ?string  $query
+     * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $query = null, ?\DateTime $updatedGte = null)
+    public function __construct(?string $connectionId = null, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->applicationId = $applicationId;
@@ -107,7 +123,9 @@ class ListAtsScorecardsRequest
         $this->jobId = $jobId;
         $this->limit = $limit;
         $this->offset = $offset;
+        $this->order = $order;
         $this->query = $query;
+        $this->sort = $sort;
         $this->updatedGte = $updatedGte;
     }
 }

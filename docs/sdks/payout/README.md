@@ -44,6 +44,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -89,7 +91,9 @@ try {
         ],
         limit: 5474.75,
         offset: 586.95,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-12-05T08:15:58.034Z'),
     );
     $response = $sdk->payout->listPaymentPayouts($request);
@@ -101,6 +105,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

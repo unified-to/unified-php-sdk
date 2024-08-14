@@ -72,6 +72,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -153,6 +155,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -206,6 +210,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -261,6 +267,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -306,7 +314,9 @@ try {
         ],
         limit: 2087.22,
         offset: 1166.59,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-06-09T14:52:37.550Z'),
     );
     $response = $sdk->location->listCommerceLocations($request);
@@ -318,6 +328,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -364,7 +376,9 @@ try {
         ],
         limit: 5896.74,
         offset: 7281.87,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-05-12T05:34:35.160Z'),
     );
     $response = $sdk->location->listHrisLocations($request);
@@ -376,6 +390,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -449,6 +465,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -532,6 +550,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -583,6 +603,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -633,6 +655,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -706,6 +730,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -788,6 +814,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

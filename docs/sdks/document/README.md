@@ -61,6 +61,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -115,6 +117,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -162,7 +166,9 @@ try {
         ],
         limit: 9635.37,
         offset: 8402.77,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-08-31T00:55:54.895Z'),
     );
     $response = $sdk->document->listAtsDocuments($request);
@@ -174,6 +180,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -243,6 +251,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -293,6 +303,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -361,6 +373,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

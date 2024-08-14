@@ -69,6 +69,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
@@ -123,6 +125,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
@@ -169,7 +173,9 @@ try {
         ],
         limit: 7894.5,
         offset: 4597.84,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-12-02T12:20:43.572Z'),
     );
     $response = $sdk->transaction->listAccountingTransactions($request);
@@ -181,6 +187,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -258,6 +266,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
@@ -308,6 +318,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -384,6 +396,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

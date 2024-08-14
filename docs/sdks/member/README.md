@@ -63,6 +63,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -117,6 +119,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -163,7 +167,9 @@ try {
         limit: 1432.99,
         listId: '<value>',
         offset: 4150.29,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-02-09T12:30:23.054Z'),
     );
     $response = $sdk->member->listMartechMembers($request);
@@ -175,6 +181,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -246,6 +254,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -296,6 +306,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -366,6 +378,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

@@ -62,6 +62,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -116,6 +118,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -161,7 +165,9 @@ try {
         ],
         limit: 9476.86,
         offset: 5444.77,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-04-19T21:33:28.191Z'),
     );
     $response = $sdk->account->listAccountingAccounts($request);
@@ -173,6 +179,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -243,6 +251,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -293,6 +303,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -362,6 +374,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

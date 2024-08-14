@@ -54,6 +54,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -108,6 +110,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -153,7 +157,9 @@ try {
         ],
         limit: 9665.22,
         offset: 367.94,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-09-12T12:19:08.506Z'),
     );
     $response = $sdk->list->listMartechLists($request);
@@ -165,6 +171,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -227,6 +235,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -277,6 +287,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -338,6 +350,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

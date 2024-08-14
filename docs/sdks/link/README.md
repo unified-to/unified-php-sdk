@@ -63,6 +63,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -117,6 +119,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -163,8 +167,10 @@ try {
         ],
         limit: 5840.47,
         offset: 2505.87,
+        order: '<value>',
         paymentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-12-19T04:38:46.756Z'),
     );
     $response = $sdk->link->listPaymentLinks($request);
@@ -176,6 +182,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -247,6 +255,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -297,6 +307,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -367,6 +379,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

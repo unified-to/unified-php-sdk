@@ -63,6 +63,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -117,6 +119,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -163,7 +167,9 @@ try {
         ],
         limit: 465.25,
         offset: 4996.09,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-07-24T23:18:21.548Z'),
         userId: '<value>',
     );
@@ -176,6 +182,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -222,7 +230,9 @@ try {
         ],
         limit: 5333.71,
         offset: 7775.9,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-10-26T05:35:01.805Z'),
         userId: '<value>',
     );
@@ -235,6 +245,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -305,6 +317,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -355,6 +369,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -424,6 +440,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

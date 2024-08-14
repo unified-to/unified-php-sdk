@@ -50,20 +50,6 @@ class ListUnifiedIntegrationsRequest
 
     /**
      *
-     * @var ?string $order
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
-    public ?string $order = null;
-
-    /**
-     *
-     * @var ?string $sort
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
-    public ?string $sort = null;
-
-    /**
-     *
      * @var ?bool $summary
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=summary')]
@@ -90,21 +76,17 @@ class ListUnifiedIntegrationsRequest
      * @param  ?string  $env
      * @param  ?float  $limit
      * @param  ?float  $offset
-     * @param  ?string  $order
-     * @param  ?string  $sort
      * @param  ?bool  $summary
      * @param  ?string  $type
      * @param  ?string  $updatedGte
      */
-    public function __construct(?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?bool $summary = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?float $offset = null, ?bool $summary = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->active = $active;
         $this->categories = $categories;
         $this->env = $env;
         $this->limit = $limit;
         $this->offset = $offset;
-        $this->order = $order;
-        $this->sort = $sort;
         $this->summary = $summary;
         $this->type = $type;
         $this->updatedGte = $updatedGte;

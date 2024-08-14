@@ -65,6 +65,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -119,6 +121,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -164,8 +168,10 @@ try {
         ],
         limit: 1047.26,
         offset: 7962.22,
+        order: '<value>',
         parentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-01-28T04:36:03.817Z'),
     );
     $response = $sdk->storage->listStorageFiles($request);
@@ -177,6 +183,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -250,6 +258,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -300,6 +310,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -372,6 +384,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

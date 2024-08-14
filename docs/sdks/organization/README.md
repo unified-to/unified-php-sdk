@@ -44,6 +44,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
@@ -89,7 +91,9 @@ try {
         ],
         limit: 4896.89,
         offset: 9817.05,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-04-02T18:55:09.644Z'),
     );
     $response = $sdk->organization->listAccountingOrganizations($request);
@@ -101,6 +105,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

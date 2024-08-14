@@ -56,12 +56,26 @@ class ListCommerceInventoriesRequest
     public ?float $offset = null;
 
     /**
+     *
+     * @var ?string $order
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
+    public ?string $order = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
     public ?string $query = null;
+
+    /**
+     *
+     * @var ?string $sort
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
+    public ?string $sort = null;
 
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -78,10 +92,12 @@ class ListCommerceInventoriesRequest
      * @param  ?float  $limit
      * @param  ?string  $locationId
      * @param  ?float  $offset
+     * @param  ?string  $order
      * @param  ?string  $query
+     * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?array $fields = null, ?string $itemVariantId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $query = null, ?\DateTime $updatedGte = null)
+    public function __construct(?string $connectionId = null, ?array $fields = null, ?string $itemVariantId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
@@ -89,7 +105,9 @@ class ListCommerceInventoriesRequest
         $this->limit = $limit;
         $this->locationId = $locationId;
         $this->offset = $offset;
+        $this->order = $order;
         $this->query = $query;
+        $this->sort = $sort;
         $this->updatedGte = $updatedGte;
     }
 }

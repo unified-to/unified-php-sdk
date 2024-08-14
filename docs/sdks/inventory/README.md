@@ -57,6 +57,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -111,6 +113,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -158,7 +162,9 @@ try {
         limit: 2481.16,
         locationId: '<value>',
         offset: 9476.38,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-10-15T22:28:16.925Z'),
     );
     $response = $sdk->inventory->listCommerceInventories($request);
@@ -170,6 +176,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -235,6 +243,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -285,6 +295,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -349,6 +361,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

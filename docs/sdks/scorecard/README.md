@@ -63,6 +63,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -117,6 +119,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -166,7 +170,9 @@ try {
         jobId: '<value>',
         limit: 5126.98,
         offset: 8077.44,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-08-19T14:46:22.333Z'),
     );
     $response = $sdk->scorecard->listAtsScorecards($request);
@@ -178,6 +184,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -249,6 +257,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -299,6 +309,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -369,6 +381,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

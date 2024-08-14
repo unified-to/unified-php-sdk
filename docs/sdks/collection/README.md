@@ -68,6 +68,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
@@ -122,6 +124,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
@@ -167,8 +171,10 @@ try {
         ],
         limit: 2972.15,
         offset: 5933.83,
+        order: '<value>',
         parentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         type: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-08-08T20:40:35.103Z'),
     );
@@ -181,6 +187,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -257,6 +265,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -307,6 +317,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -382,6 +394,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

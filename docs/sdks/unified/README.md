@@ -108,6 +108,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                              | Type                                                   | Required                                               | Description                                            |
@@ -186,6 +188,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -236,6 +240,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -285,6 +291,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -348,6 +356,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
@@ -398,6 +408,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -444,6 +456,8 @@ try {
         integrationType: '<value>',
         limit: 8683.78,
         offset: 494.66,
+        order: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-08-01T07:02:03.842Z'),
     );
     $response = $sdk->unified->listUnifiedApicalls($request);
@@ -455,6 +469,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -502,6 +518,8 @@ try {
         externalXref: '<value>',
         limit: 9638.08,
         offset: 15.12,
+        order: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-06-20T13:59:12.388Z'),
     );
     $response = $sdk->unified->listUnifiedConnections($request);
@@ -513,6 +531,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -573,6 +593,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
@@ -618,8 +640,6 @@ try {
         env: '<value>',
         limit: 7382.58,
         offset: 353.99,
-        order: '<value>',
-        sort: '<value>',
         summary: false,
         type: '<value>',
         updatedGte: '<value>',
@@ -633,6 +653,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -675,6 +697,8 @@ try {
     $request = new Operations\ListUnifiedIssuesRequest(
         limit: 7069.08,
         offset: 7461.37,
+        order: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-01-21T01:55:24.746Z'),
     );
     $response = $sdk->unified->listUnifiedIssues($request);
@@ -686,6 +710,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -737,6 +763,8 @@ try {
         limit: 5094.7,
         object: '<value>',
         offset: 1001.01,
+        order: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-07-16T05:14:02.871Z'),
     );
     $response = $sdk->unified->listUnifiedWebhooks($request);
@@ -748,6 +776,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -855,6 +885,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -904,6 +936,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -955,6 +989,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1004,6 +1040,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -1111,6 +1149,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1160,6 +1200,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

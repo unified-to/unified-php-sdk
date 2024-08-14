@@ -97,6 +97,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -168,6 +170,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -221,6 +225,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -276,6 +282,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -330,6 +338,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -375,7 +385,9 @@ try {
         ],
         limit: 6933.84,
         offset: 7946.52,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-10-01T21:39:38.971Z'),
     );
     $response = $sdk->company->listAtsCompanies($request);
@@ -387,6 +399,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -435,7 +449,9 @@ try {
         ],
         limit: 9883.97,
         offset: 5913.88,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-05-02T17:52:08.731Z'),
         userId: '<value>',
     );
@@ -448,6 +464,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -501,6 +519,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -546,7 +566,9 @@ try {
         ],
         limit: 9887.05,
         offset: 4708.81,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2024-12-23T09:20:33.437Z'),
     );
     $response = $sdk->company->listHrisCompanies($request);
@@ -558,6 +580,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -654,6 +678,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -726,6 +752,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -777,6 +805,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -827,6 +857,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -923,6 +955,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -994,6 +1028,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

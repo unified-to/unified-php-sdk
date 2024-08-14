@@ -64,6 +64,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -118,6 +120,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -164,7 +168,9 @@ try {
         ],
         limit: 2562.12,
         offset: 1185.02,
+        order: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2022-09-28T15:15:00.508Z'),
     );
     $response = $sdk->interview->listAtsInterviews($request);
@@ -176,6 +182,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -248,6 +256,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -298,6 +308,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -369,6 +381,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

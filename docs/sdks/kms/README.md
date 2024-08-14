@@ -66,6 +66,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -130,6 +132,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -183,6 +187,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -238,6 +244,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
@@ -283,8 +291,10 @@ try {
         ],
         limit: 549.23,
         offset: 3993.53,
+        order: '<value>',
         parentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         spaceId: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-09-01T15:54:02.024Z'),
     );
@@ -297,6 +307,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -343,8 +355,10 @@ try {
         ],
         limit: 9216.91,
         offset: 2110.39,
+        order: '<value>',
         parentId: '<value>',
         query: '<value>',
+        sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-12-18T23:16:42.907Z'),
     );
     $response = $sdk->kms->listKmsSpaces($request);
@@ -356,6 +370,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -424,6 +440,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -489,6 +507,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -540,6 +560,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -590,6 +612,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 
@@ -658,6 +682,8 @@ try {
 }
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
@@ -722,6 +748,8 @@ try {
     // handle exception
 }
 ```
+
+
 
 ### Parameters
 

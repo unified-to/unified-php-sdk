@@ -65,6 +65,20 @@ class ListUnifiedWebhooksRequest
     public ?float $offset = null;
 
     /**
+     *
+     * @var ?string $order
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
+    public ?string $order = null;
+
+    /**
+     *
+     * @var ?string $sort
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
+    public ?string $sort = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?\DateTime $updatedGte
@@ -80,9 +94,11 @@ class ListUnifiedWebhooksRequest
      * @param  ?float  $limit
      * @param  ?string  $object
      * @param  ?float  $offset
+     * @param  ?string  $order
+     * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?ConnectionId $connectionId = null, ?\DateTime $createdLte = null, ?string $env = null, ?IntegrationType $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?\DateTime $updatedGte = null)
+    public function __construct(?ConnectionId $connectionId = null, ?\DateTime $createdLte = null, ?string $env = null, ?IntegrationType $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->createdLte = $createdLte;
@@ -91,6 +107,8 @@ class ListUnifiedWebhooksRequest
         $this->limit = $limit;
         $this->object = $object;
         $this->offset = $offset;
+        $this->order = $order;
+        $this->sort = $sort;
         $this->updatedGte = $updatedGte;
     }
 }
