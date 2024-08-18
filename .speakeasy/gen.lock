@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: afff9b10658068a6dd8be329a73e9f3e
+  docChecksum: 3b148f39dc467e6e4a130bd90db813be
   docVersion: "1.0"
-  speakeasyVersion: 1.366.0
-  generationVersion: 2.396.0
-  releaseVersion: 0.16.1
-  configChecksum: 24ab0363f6cc2c2a3c2a7eb20562aa57
+  speakeasyVersion: 1.374.2
+  generationVersion: 2.401.2
+  releaseVersion: 0.16.2
+  configChecksum: 3b3725fea7e5dcf6d091926e178edddc
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 features:
   php:
-    core: 3.3.10
+    core: 3.3.11
     globalSecurity: 2.81.7
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.1
@@ -693,6 +693,8 @@ generatedFiles:
   - src/Models/Operations/ListUnifiedWebhooksResponse.php
   - src/Models/Operations/PatchUnifiedConnectionRequest.php
   - src/Models/Operations/PatchUnifiedConnectionResponse.php
+  - src/Models/Operations/PatchUnifiedWebhookRequest.php
+  - src/Models/Operations/PatchUnifiedWebhookResponse.php
   - src/Models/Operations/PatchUnifiedWebhookTriggerRequest.php
   - src/Models/Operations/PatchUnifiedWebhookTriggerResponse.php
   - src/Models/Operations/RemoveUnifiedConnectionRequest.php
@@ -701,6 +703,8 @@ generatedFiles:
   - src/Models/Operations/RemoveUnifiedWebhookResponse.php
   - src/Models/Operations/UpdateUnifiedConnectionRequest.php
   - src/Models/Operations/UpdateUnifiedConnectionResponse.php
+  - src/Models/Operations/UpdateUnifiedWebhookRequest.php
+  - src/Models/Operations/UpdateUnifiedWebhookResponse.php
   - src/Models/Operations/UpdateUnifiedWebhookTriggerRequest.php
   - src/Models/Operations/UpdateUnifiedWebhookTriggerResponse.php
   - src/Models/Operations/GetUnifiedIntegrationLoginRequest.php
@@ -1509,6 +1513,8 @@ generatedFiles:
   - docs/Models/Operations/ListUnifiedWebhooksResponse.md
   - docs/Models/Operations/PatchUnifiedConnectionRequest.md
   - docs/Models/Operations/PatchUnifiedConnectionResponse.md
+  - docs/Models/Operations/PatchUnifiedWebhookRequest.md
+  - docs/Models/Operations/PatchUnifiedWebhookResponse.md
   - docs/Models/Operations/PatchUnifiedWebhookTriggerRequest.md
   - docs/Models/Operations/PatchUnifiedWebhookTriggerResponse.md
   - docs/Models/Operations/RemoveUnifiedConnectionRequest.md
@@ -1517,6 +1523,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveUnifiedWebhookResponse.md
   - docs/Models/Operations/UpdateUnifiedConnectionRequest.md
   - docs/Models/Operations/UpdateUnifiedConnectionResponse.md
+  - docs/Models/Operations/UpdateUnifiedWebhookRequest.md
+  - docs/Models/Operations/UpdateUnifiedWebhookResponse.md
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerRequest.md
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerResponse.md
   - docs/Models/Operations/GetUnifiedIntegrationLoginRequest.md
