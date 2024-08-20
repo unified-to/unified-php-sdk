@@ -75,6 +75,7 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2022-09-27T06:32:21.998Z'),
             userId: '<value>',
+            webUrl: '<value>',
         ),
     );
     $response = $sdk->candidate->createAtsCandidate($request);
@@ -290,6 +291,7 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-01-30T15:05:49.494Z'),
             userId: '<value>',
+            webUrl: '<value>',
         ),
     );
     $response = $sdk->candidate->patchAtsCandidate($request);
@@ -439,6 +441,7 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-02-19T09:22:29.995Z'),
             userId: '<value>',
+            webUrl: '<value>',
         ),
     );
     $response = $sdk->candidate->updateAtsCandidate($request);

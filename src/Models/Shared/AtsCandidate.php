@@ -178,6 +178,14 @@ class AtsCandidate
     public ?string $userId = null;
 
     /**
+     *
+     * @var ?string $webUrl
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('web_url')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $webUrl = null;
+
+    /**
      * @param  ?PropertyAtsCandidateAddress  $address
      * @param  ?string  $companyId
      * @param  ?string  $companyName
@@ -197,8 +205,9 @@ class AtsCandidate
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @param  ?string  $webUrl
      */
-    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $externalIdentifier = null, ?string $id = null, ?string $imageUrl = null, ?array $linkUrls = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $externalIdentifier = null, ?string $id = null, ?string $imageUrl = null, ?array $linkUrls = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -219,5 +228,6 @@ class AtsCandidate
         $this->title = $title;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->webUrl = $webUrl;
     }
 }
