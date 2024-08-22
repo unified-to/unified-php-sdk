@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class AtsEmail
+class PropertyAtsActivityFrom
 {
     /**
      *
@@ -28,19 +28,19 @@ class AtsEmail
 
     /**
      *
-     * @var ?AtsEmailType $type
+     * @var ?PropertyAtsActivityFromType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsEmailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFromType')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AtsEmailType $type = null;
+    public ?PropertyAtsActivityFromType $type = null;
 
     /**
      * @param  ?string  $email
      * @param  ?string  $name
-     * @param  ?AtsEmailType  $type
+     * @param  ?PropertyAtsActivityFromType  $type
      */
-    public function __construct(?string $email = null, ?string $name = null, ?AtsEmailType $type = null)
+    public function __construct(?string $email = null, ?string $name = null, ?PropertyAtsActivityFromType $type = null)
     {
         $this->email = $email;
         $this->name = $name;

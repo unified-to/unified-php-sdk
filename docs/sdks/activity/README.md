@@ -1,5 +1,6 @@
 # Activity
 
+## Overview
 
 ### Available Operations
 
@@ -37,19 +38,33 @@ try {
         atsActivity: new Shared\AtsActivity(
             title: '<value>',
             applicationId: '<value>',
+            bcc: [
+                new Shared\AtsEmail,
+            ],
             candidateId: '<value>',
+            cc: [
+                new Shared\AtsEmail,
+            ],
             createdAt: Utils\Utils::parseDateTime('2022-11-03T02:06:02.932Z'),
             description: 'Future-proofed non-volatile artificial intelligence',
             documentId: '<value>',
+            from: new Shared\PropertyAtsActivityFrom(
+                email: 'Fermin.Marks24@yahoo.com',
+                name: '<value>',
+                type: Shared\PropertyAtsActivityFromType::Work,
+            ),
             id: '<id>',
             interviewId: '<value>',
             isPrivate: false,
             jobId: '<value>',
             raw: [
-                'delectus' => '<value>',
+                'partnerships' => '<value>',
+            ],
+            to: [
+                new Shared\AtsEmail,
             ],
             type: Shared\AtsActivityType::Note,
-            updatedAt: Utils\Utils::parseDateTime('2022-09-23T01:05:37.510Z'),
+            updatedAt: Utils\Utils::parseDateTime('2022-05-31T20:52:48.631Z'),
             userIds: [
                 '<value>',
             ],
@@ -65,23 +80,22 @@ try {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `$request`                                                                                 | [Operations\CreateAtsActivityRequest](../../Models/Operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
-
 ### Response
 
 **[?Operations\CreateAtsActivityResponse](../../Models/Operations/CreateAtsActivityResponse.md)**
+
 ### Errors
 
 | Error Object                                  | Status Code                                   | Content Type                                  |
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
 | Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+
 
 ## getAtsActivity
 
@@ -121,23 +135,22 @@ try {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | `$request`                                                                           | [Operations\GetAtsActivityRequest](../../Models/Operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
-
 ### Response
 
 **[?Operations\GetAtsActivityResponse](../../Models/Operations/GetAtsActivityResponse.md)**
+
 ### Errors
 
 | Error Object                                  | Status Code                                   | Content Type                                  |
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
 | Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+
 
 ## listAtsActivities
 
@@ -189,23 +202,22 @@ try {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `$request`                                                                                 | [Operations\ListAtsActivitiesRequest](../../Models/Operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
-
 ### Response
 
 **[?Operations\ListAtsActivitiesResponse](../../Models/Operations/ListAtsActivitiesResponse.md)**
+
 ### Errors
 
 | Error Object                                  | Status Code                                   | Content Type                                  |
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
 | Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+
 
 ## patchAtsActivity
 
@@ -235,19 +247,33 @@ try {
         atsActivity: new Shared\AtsActivity(
             title: '<value>',
             applicationId: '<value>',
+            bcc: [
+                new Shared\AtsEmail,
+            ],
             candidateId: '<value>',
+            cc: [
+                new Shared\AtsEmail,
+            ],
             createdAt: Utils\Utils::parseDateTime('2024-11-03T16:46:57.187Z'),
             description: 'Compatible reciprocal archive',
             documentId: '<value>',
+            from: new Shared\PropertyAtsActivityFrom(
+                email: 'Bradley15@gmail.com',
+                name: '<value>',
+                type: Shared\PropertyAtsActivityFromType::Work,
+            ),
             id: '<id>',
             interviewId: '<value>',
             isPrivate: false,
             jobId: '<value>',
             raw: [
-                'bypass' => '<value>',
+                'Hybrid' => '<value>',
             ],
-            type: Shared\AtsActivityType::Note,
-            updatedAt: Utils\Utils::parseDateTime('2022-09-01T06:46:19.269Z'),
+            to: [
+                new Shared\AtsEmail,
+            ],
+            type: Shared\AtsActivityType::Email,
+            updatedAt: Utils\Utils::parseDateTime('2022-03-21T20:01:58.311Z'),
             userIds: [
                 '<value>',
             ],
@@ -263,23 +289,22 @@ try {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `$request`                                                                               | [Operations\PatchAtsActivityRequest](../../Models/Operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
-
 ### Response
 
 **[?Operations\PatchAtsActivityResponse](../../Models/Operations/PatchAtsActivityResponse.md)**
+
 ### Errors
 
 | Error Object                                  | Status Code                                   | Content Type                                  |
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
 | Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+
 
 ## removeAtsActivity
 
@@ -316,23 +341,22 @@ try {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `$request`                                                                                 | [Operations\RemoveAtsActivityRequest](../../Models/Operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
-
 ### Response
 
 **[?Operations\RemoveAtsActivityResponse](../../Models/Operations/RemoveAtsActivityResponse.md)**
+
 ### Errors
 
 | Error Object                                  | Status Code                                   | Content Type                                  |
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
 | Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+
 
 ## updateAtsActivity
 
@@ -362,19 +386,33 @@ try {
         atsActivity: new Shared\AtsActivity(
             title: '<value>',
             applicationId: '<value>',
+            bcc: [
+                new Shared\AtsEmail,
+            ],
             candidateId: '<value>',
+            cc: [
+                new Shared\AtsEmail,
+            ],
             createdAt: Utils\Utils::parseDateTime('2024-06-06T07:57:58.715Z'),
             description: 'Total fault-tolerant collaboration',
             documentId: '<value>',
+            from: new Shared\PropertyAtsActivityFrom(
+                email: 'Deshawn.Sauer@gmail.com',
+                name: '<value>',
+                type: Shared\PropertyAtsActivityFromType::Other,
+            ),
             id: '<id>',
             interviewId: '<value>',
             isPrivate: false,
             jobId: '<value>',
             raw: [
-                'Northwest' => '<value>',
+                'Cotton' => '<value>',
             ],
-            type: Shared\AtsActivityType::Task,
-            updatedAt: Utils\Utils::parseDateTime('2023-09-23T02:31:19.090Z'),
+            to: [
+                new Shared\AtsEmail,
+            ],
+            type: Shared\AtsActivityType::Note,
+            updatedAt: Utils\Utils::parseDateTime('2023-06-20T06:09:10.592Z'),
             userIds: [
                 '<value>',
             ],
@@ -390,18 +428,16 @@ try {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `$request`                                                                                 | [Operations\UpdateAtsActivityRequest](../../Models/Operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
-
 ### Response
 
 **[?Operations\UpdateAtsActivityResponse](../../Models/Operations/UpdateAtsActivityResponse.md)**
+
 ### Errors
 
 | Error Object                                  | Status Code                                   | Content Type                                  |

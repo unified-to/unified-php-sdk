@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-enum AtsActivityType: string
+enum PropertyAtsActivityFromType: string
 {
-    case Note = 'NOTE';
-    case Task = 'TASK';
-    case Email = 'EMAIL';
+    case Work = 'WORK';
+    case Home = 'HOME';
+    case Other = 'OTHER';
 }

@@ -20,12 +20,32 @@ class AtsActivity
     public ?string $applicationId = null;
 
     /**
+     * $bcc
+     *
+     * @var ?array<AtsEmail> $bcc
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('bcc')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $bcc = null;
+
+    /**
      *
      * @var ?string $candidateId
      */
     #[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $candidateId = null;
+
+    /**
+     * $cc
+     *
+     * @var ?array<AtsEmail> $cc
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('cc')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $cc = null;
 
     /**
      *
@@ -50,6 +70,15 @@ class AtsActivity
     #[\JMS\Serializer\Annotation\SerializedName('document_id')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $documentId = null;
+
+    /**
+     *
+     * @var ?PropertyAtsActivityFrom $from
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('from')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFrom')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PropertyAtsActivityFrom $from = null;
 
     /**
      *
@@ -101,6 +130,16 @@ class AtsActivity
     public string $title;
 
     /**
+     * $to
+     *
+     * @var ?array<AtsEmail> $to
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('to')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $to = null;
+
+    /**
      *
      * @var ?AtsActivityType $type
      */
@@ -130,32 +169,40 @@ class AtsActivity
     /**
      * @param  ?string  $title
      * @param  ?string  $applicationId
+     * @param  ?array<AtsEmail>  $bcc
      * @param  ?string  $candidateId
+     * @param  ?array<AtsEmail>  $cc
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $documentId
+     * @param  ?PropertyAtsActivityFrom  $from
      * @param  ?string  $id
      * @param  ?string  $interviewId
      * @param  ?bool  $isPrivate
      * @param  ?string  $jobId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?array<AtsEmail>  $to
      * @param  ?AtsActivityType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      */
-    public function __construct(?string $title = null, ?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $title = null, ?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->title = $title;
         $this->applicationId = $applicationId;
+        $this->bcc = $bcc;
         $this->candidateId = $candidateId;
+        $this->cc = $cc;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->documentId = $documentId;
+        $this->from = $from;
         $this->id = $id;
         $this->interviewId = $interviewId;
         $this->isPrivate = $isPrivate;
         $this->jobId = $jobId;
         $this->raw = $raw;
+        $this->to = $to;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->userIds = $userIds;
