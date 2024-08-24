@@ -97,10 +97,11 @@ class Integration
 
     /**
      *
-     * @var bool $inProgress
+     * @var ?bool $inProgress
      */
     #[\JMS\Serializer\Annotation\SerializedName('in_progress')]
-    public bool $inProgress;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $inProgress = null;
 
     /**
      *
@@ -212,7 +213,6 @@ class Integration
 
     /**
      * @param  ?array<PropertyIntegrationCategories>  $categories
-     * @param  ?bool  $inProgress
      * @param  ?string  $name
      * @param  ?string  $type
      * @param  ?float  $activeHealthyConnections
@@ -224,6 +224,7 @@ class Integration
      * @param  ?string  $description
      * @param  ?string  $faIcon
      * @param  ?bool  $featured
+     * @param  ?bool  $inProgress
      * @param  ?bool  $isActive
      * @param  ?string  $logoUrl
      * @param  ?float  $popularity
@@ -236,10 +237,9 @@ class Integration
      * @param  ?string  $updatedAt
      * @param  ?string  $webUrl
      */
-    public function __construct(?array $categories = null, ?bool $inProgress = null, ?string $name = null, ?string $type = null, ?float $activeHealthyConnections = null, ?array $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $isActive = null, ?string $logoUrl = null, ?float $popularity = null, ?string $rateLimitDescription = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $categories = null, ?string $name = null, ?string $type = null, ?float $activeHealthyConnections = null, ?array $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?string $logoUrl = null, ?float $popularity = null, ?string $rateLimitDescription = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->categories = $categories;
-        $this->inProgress = $inProgress;
         $this->name = $name;
         $this->type = $type;
         $this->activeHealthyConnections = $activeHealthyConnections;
@@ -251,6 +251,7 @@ class Integration
         $this->description = $description;
         $this->faIcon = $faIcon;
         $this->featured = $featured;
+        $this->inProgress = $inProgress;
         $this->isActive = $isActive;
         $this->logoUrl = $logoUrl;
         $this->popularity = $popularity;
