@@ -54,6 +54,14 @@ class AccountingAccount
 
     /**
      *
+     * @var ?string $group
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('group')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $group = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
@@ -96,12 +104,36 @@ class AccountingAccount
 
     /**
      *
+     * @var ?string $section
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('section')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $section = null;
+
+    /**
+     *
      * @var ?Status $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Status')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Status $status = null;
+
+    /**
+     *
+     * @var ?string $subgroup
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('subgroup')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $subgroup = null;
+
+    /**
+     *
+     * @var ?string $subsection
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('subsection')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $subsection = null;
 
     /**
      *
@@ -126,28 +158,36 @@ class AccountingAccount
      * @param  ?string  $currency
      * @param  ?string  $customerDefinedCode
      * @param  ?string  $description
+     * @param  ?string  $group
      * @param  ?string  $id
      * @param  ?bool  $isPayable
      * @param  ?string  $name
      * @param  ?string  $parentAccountId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $section
      * @param  ?Status  $status
+     * @param  ?string  $subgroup
+     * @param  ?string  $subsection
      * @param  ?Type  $type
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentAccountId = null, ?array $raw = null, ?Status $status = null, ?Type $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentAccountId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {
         $this->balance = $balance;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->customerDefinedCode = $customerDefinedCode;
         $this->description = $description;
+        $this->group = $group;
         $this->id = $id;
         $this->isPayable = $isPayable;
         $this->name = $name;
         $this->parentAccountId = $parentAccountId;
         $this->raw = $raw;
+        $this->section = $section;
         $this->status = $status;
+        $this->subgroup = $subgroup;
+        $this->subsection = $subsection;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
     }

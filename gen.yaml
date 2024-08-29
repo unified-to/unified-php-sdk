@@ -13,7 +13,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 0.16.6
+  version: 0.16.7
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:

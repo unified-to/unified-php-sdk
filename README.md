@@ -43,6 +43,7 @@ try {
             currency: 'Saint Helena Pound',
             customerDefinedCode: '<value>',
             description: 'Cross-group zero defect task-force',
+            group: '<value>',
             id: '<id>',
             isPayable: false,
             name: '<value>',
@@ -50,7 +51,10 @@ try {
             raw: [
                 'Ruble' => '<value>',
             ],
+            section: '<value>',
             status: Shared\Status::Active,
+            subgroup: '<value>',
+            subsection: '<value>',
             type: Shared\Type::FixedAsset,
             updatedAt: Utils\Utils::parseDateTime('2024-10-01T23:54:12.882Z'),
         ),
