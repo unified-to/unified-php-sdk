@@ -41,7 +41,7 @@ class PropertyCrmEventTask
      * @var ?Priority $priority
      */
     #[\JMS\Serializer\Annotation\SerializedName('priority')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Priority')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Priority|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Priority $priority = null;
 
@@ -50,7 +50,7 @@ class PropertyCrmEventTask
      * @var ?PropertyCrmEventTaskStatus $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventTaskStatus $status = null;
 

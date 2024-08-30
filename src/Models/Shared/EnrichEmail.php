@@ -31,7 +31,7 @@ class EnrichEmail
      * @var ?EnrichEmailType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichEmailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichEmailType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?EnrichEmailType $type = null;
 

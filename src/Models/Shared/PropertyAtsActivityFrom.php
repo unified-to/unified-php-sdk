@@ -31,7 +31,7 @@ class PropertyAtsActivityFrom
      * @var ?PropertyAtsActivityFromType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFromType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFromType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyAtsActivityFromType $type = null;
 

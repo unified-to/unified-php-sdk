@@ -16,7 +16,7 @@ class IntegrationSupport
      * @var ?FromWebhook $fromWebhook
      */
     #[\JMS\Serializer\Annotation\SerializedName('from_webhook')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\FromWebhook')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\FromWebhook|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?FromWebhook $fromWebhook = null;
 
@@ -26,7 +26,7 @@ class IntegrationSupport
      * @var ?array<string, mixed> $inboundFields
      */
     #[\JMS\Serializer\Annotation\SerializedName('inbound_fields')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $inboundFields = null;
 
@@ -35,7 +35,7 @@ class IntegrationSupport
      * @var ?ListAccountId $listAccountId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_account_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListAccountId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListAccountId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListAccountId $listAccountId = null;
 
@@ -44,7 +44,7 @@ class IntegrationSupport
      * @var ?ListApplicationId $listApplicationId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_application_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListApplicationId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListApplicationId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListApplicationId $listApplicationId = null;
 
@@ -53,7 +53,7 @@ class IntegrationSupport
      * @var ?ListCandidateId $listCandidateId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_candidate_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCandidateId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCandidateId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListCandidateId $listCandidateId = null;
 
@@ -62,7 +62,7 @@ class IntegrationSupport
      * @var ?ListChannelId $listChannelId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_channel_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListChannelId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListChannelId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListChannelId $listChannelId = null;
 
@@ -71,7 +71,7 @@ class IntegrationSupport
      * @var ?ListCollectionId $listCollectionId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_collection_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCollectionId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCollectionId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListCollectionId $listCollectionId = null;
 
@@ -80,7 +80,7 @@ class IntegrationSupport
      * @var ?ListCompanyId $listCompanyId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_company_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCompanyId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCompanyId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListCompanyId $listCompanyId = null;
 
@@ -89,7 +89,7 @@ class IntegrationSupport
      * @var ?ListContactId $listContactId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_contact_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListContactId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListContactId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListContactId $listContactId = null;
 
@@ -98,7 +98,7 @@ class IntegrationSupport
      * @var ?ListCustomerId $listCustomerId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_customer_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCustomerId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCustomerId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListCustomerId $listCustomerId = null;
 
@@ -107,7 +107,7 @@ class IntegrationSupport
      * @var ?ListDealId $listDealId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_deal_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListDealId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListDealId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListDealId $listDealId = null;
 
@@ -116,7 +116,7 @@ class IntegrationSupport
      * @var ?ListInterviewId $listInterviewId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_interview_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInterviewId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInterviewId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListInterviewId $listInterviewId = null;
 
@@ -125,7 +125,7 @@ class IntegrationSupport
      * @var ?ListInvoiceId $listInvoiceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_invoice_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInvoiceId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInvoiceId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListInvoiceId $listInvoiceId = null;
 
@@ -134,7 +134,7 @@ class IntegrationSupport
      * @var ?ListItemId $listItemId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_item_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListItemId $listItemId = null;
 
@@ -143,7 +143,7 @@ class IntegrationSupport
      * @var ?ListItemVariantId $listItemVariantId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_item_variant_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemVariantId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemVariantId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListItemVariantId $listItemVariantId = null;
 
@@ -152,7 +152,7 @@ class IntegrationSupport
      * @var ?ListJobId $listJobId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_job_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListJobId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListJobId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListJobId $listJobId = null;
 
@@ -161,7 +161,7 @@ class IntegrationSupport
      * @var ?ListLimit $listLimit
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_limit')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLimit')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLimit|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListLimit $listLimit = null;
 
@@ -170,7 +170,7 @@ class IntegrationSupport
      * @var ?ListLinkId $listLinkId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_link_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLinkId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLinkId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListLinkId $listLinkId = null;
 
@@ -179,7 +179,7 @@ class IntegrationSupport
      * @var ?ListListId $listListId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_list_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListListId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListListId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListListId $listListId = null;
 
@@ -188,7 +188,7 @@ class IntegrationSupport
      * @var ?ListLocationId $listLocationId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_location_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLocationId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLocationId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListLocationId $listLocationId = null;
 
@@ -197,7 +197,7 @@ class IntegrationSupport
      * @var ?ListOffset $listOffset
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_offset')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOffset')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOffset|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListOffset $listOffset = null;
 
@@ -206,7 +206,7 @@ class IntegrationSupport
      * @var ?ListOrder $listOrder
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_order')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOrder')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOrder|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListOrder $listOrder = null;
 
@@ -215,7 +215,7 @@ class IntegrationSupport
      * @var ?ListParentId $listParentId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_parent_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListParentId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListParentId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListParentId $listParentId = null;
 
@@ -224,7 +224,7 @@ class IntegrationSupport
      * @var ?ListProjectId $listProjectId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_project_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListProjectId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListProjectId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListProjectId $listProjectId = null;
 
@@ -233,7 +233,7 @@ class IntegrationSupport
      * @var ?ListQuery $listQuery
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_query')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListQuery')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListQuery|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListQuery $listQuery = null;
 
@@ -242,7 +242,7 @@ class IntegrationSupport
      * @var ?ListSortByCreatedAt $listSortByCreatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_created_at')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByCreatedAt')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByCreatedAt|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListSortByCreatedAt $listSortByCreatedAt = null;
 
@@ -251,7 +251,7 @@ class IntegrationSupport
      * @var ?ListSortByName $listSortByName
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_name')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByName')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByName|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListSortByName $listSortByName = null;
 
@@ -260,7 +260,7 @@ class IntegrationSupport
      * @var ?ListSortByUpdatedAt $listSortByUpdatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_updated_at')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByUpdatedAt')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByUpdatedAt|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListSortByUpdatedAt $listSortByUpdatedAt = null;
 
@@ -269,7 +269,7 @@ class IntegrationSupport
      * @var ?ListSpaceId $listSpaceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_space_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSpaceId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSpaceId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListSpaceId $listSpaceId = null;
 
@@ -278,7 +278,7 @@ class IntegrationSupport
      * @var ?ListTicketId $listTicketId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_ticket_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListTicketId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListTicketId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListTicketId $listTicketId = null;
 
@@ -287,7 +287,7 @@ class IntegrationSupport
      * @var ?ListType $listType
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListType $listType = null;
 
@@ -296,7 +296,7 @@ class IntegrationSupport
      * @var ?ListUpdatedGte $listUpdatedGte
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_updated_gte')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUpdatedGte')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUpdatedGte|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListUpdatedGte $listUpdatedGte = null;
 
@@ -305,7 +305,7 @@ class IntegrationSupport
      * @var ?ListUserId $listUserId
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_user_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUserId')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUserId|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ListUserId $listUserId = null;
 
@@ -315,7 +315,7 @@ class IntegrationSupport
      * @var ?array<string, bool> $methods
      */
     #[\JMS\Serializer\Annotation\SerializedName('methods')]
-    #[\JMS\Serializer\Annotation\Type('array<string, bool>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, bool>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $methods = null;
 
@@ -325,7 +325,7 @@ class IntegrationSupport
      * @var ?array<string, mixed> $outboundFields
      */
     #[\JMS\Serializer\Annotation\SerializedName('outbound_fields')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $outboundFields = null;
 
@@ -335,7 +335,7 @@ class IntegrationSupport
      * @var ?array<string> $rawObjects
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw_objects')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $rawObjects = null;
 
@@ -344,7 +344,7 @@ class IntegrationSupport
      * @var ?SearchDomain $searchDomain
      */
     #[\JMS\Serializer\Annotation\SerializedName('search_domain')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchDomain')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchDomain|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?SearchDomain $searchDomain = null;
 
@@ -353,7 +353,7 @@ class IntegrationSupport
      * @var ?SearchEmail $searchEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('search_email')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchEmail')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchEmail|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?SearchEmail $searchEmail = null;
 
@@ -362,7 +362,7 @@ class IntegrationSupport
      * @var ?SearchLinkedinurl $searchLinkedinurl
      */
     #[\JMS\Serializer\Annotation\SerializedName('search_linkedinurl')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchLinkedinurl')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchLinkedinurl|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?SearchLinkedinurl $searchLinkedinurl = null;
 
@@ -371,7 +371,7 @@ class IntegrationSupport
      * @var ?SearchName $searchName
      */
     #[\JMS\Serializer\Annotation\SerializedName('search_name')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchName')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchName|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?SearchName $searchName = null;
 
@@ -380,7 +380,7 @@ class IntegrationSupport
      * @var ?SearchTwitter $searchTwitter
      */
     #[\JMS\Serializer\Annotation\SerializedName('search_twitter')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchTwitter')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchTwitter|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?SearchTwitter $searchTwitter = null;
 
@@ -389,7 +389,7 @@ class IntegrationSupport
      * @var ?PropertyIntegrationSupportWebhookEvents $webhookEvents
      */
     #[\JMS\Serializer\Annotation\SerializedName('webhook_events')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null;
 

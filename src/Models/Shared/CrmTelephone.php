@@ -23,7 +23,7 @@ class CrmTelephone
      * @var ?CrmTelephoneType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmTelephoneType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmTelephoneType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CrmTelephoneType $type = null;
 

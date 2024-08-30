@@ -17,7 +17,7 @@ class MessagingMessage
      * @var ?array<MessagingAttachment> $attachments
      */
     #[\JMS\Serializer\Annotation\SerializedName('attachments')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingAttachment>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingAttachment>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $attachments = null;
 
@@ -26,7 +26,7 @@ class MessagingMessage
      * @var ?PropertyMessagingMessageAuthorMember $authorMember
      */
     #[\JMS\Serializer\Annotation\SerializedName('author_member')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyMessagingMessageAuthorMember $authorMember = null;
 
@@ -52,7 +52,7 @@ class MessagingMessage
      * @var ?array<MessagingMember> $destinationMembers
      */
     #[\JMS\Serializer\Annotation\SerializedName('destination_members')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $destinationMembers = null;
 
@@ -62,7 +62,7 @@ class MessagingMessage
      * @var ?array<MessagingMember> $hiddenMembers
      */
     #[\JMS\Serializer\Annotation\SerializedName('hidden_members')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $hiddenMembers = null;
 
@@ -80,7 +80,7 @@ class MessagingMessage
      * @var ?array<MessagingMember> $mentionedMembers
      */
     #[\JMS\Serializer\Annotation\SerializedName('mentioned_members')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $mentionedMembers = null;
 
@@ -114,7 +114,7 @@ class MessagingMessage
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 

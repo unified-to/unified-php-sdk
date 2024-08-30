@@ -49,7 +49,7 @@ class UcCall
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -67,7 +67,7 @@ class UcCall
      * @var ?PropertyUcCallTelephone $telephone
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephone')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyUcCallTelephone $telephone = null;
 

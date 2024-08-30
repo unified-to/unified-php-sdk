@@ -25,7 +25,7 @@ class TicketingCustomer
      * @var ?array<TicketingEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
@@ -51,7 +51,7 @@ class TicketingCustomer
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -61,7 +61,7 @@ class TicketingCustomer
      * @var ?array<string> $tags
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
@@ -71,7 +71,7 @@ class TicketingCustomer
      * @var ?array<TicketingTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingTelephone>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 

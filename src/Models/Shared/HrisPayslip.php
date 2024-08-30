@@ -33,7 +33,7 @@ class HrisPayslip
      * @var ?array<HrisPayslipDetail> $details
      */
     #[\JMS\Serializer\Annotation\SerializedName('details')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisPayslipDetail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisPayslipDetail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $details = null;
 
@@ -82,7 +82,7 @@ class HrisPayslip
      * @var ?PaymentType $paymentType
      */
     #[\JMS\Serializer\Annotation\SerializedName('payment_type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PaymentType $paymentType = null;
 

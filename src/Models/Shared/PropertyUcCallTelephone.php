@@ -24,7 +24,7 @@ class PropertyUcCallTelephone
      * @var ?PropertyUcCallTelephoneType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephoneType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephoneType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyUcCallTelephoneType $type = null;
 

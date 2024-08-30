@@ -23,7 +23,7 @@ class TicketingTelephone
      * @var ?TicketingTelephoneType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingTelephoneType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingTelephoneType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?TicketingTelephoneType $type = null;
 

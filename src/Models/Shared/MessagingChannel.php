@@ -65,7 +65,7 @@ class MessagingChannel
      * @var ?array<MessagingMember> $members
      */
     #[\JMS\Serializer\Annotation\SerializedName('members')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $members = null;
 
@@ -90,7 +90,7 @@ class MessagingChannel
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 

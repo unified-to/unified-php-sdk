@@ -26,7 +26,7 @@ class MarketingMember
      * @var ?array<MarketingEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
@@ -44,7 +44,7 @@ class MarketingMember
      * @var ?array<string> $listIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('list_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $listIds = null;
 
@@ -62,7 +62,7 @@ class MarketingMember
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -72,7 +72,7 @@ class MarketingMember
      * @var ?array<string> $tags
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 

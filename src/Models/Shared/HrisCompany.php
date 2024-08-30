@@ -16,7 +16,7 @@ class HrisCompany
      * @var ?PropertyHrisCompanyAddress $address
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisCompanyAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisCompanyAddress|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyHrisCompanyAddress $address = null;
 
@@ -58,7 +58,7 @@ class HrisCompany
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 

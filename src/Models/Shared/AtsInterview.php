@@ -81,7 +81,7 @@ class AtsInterview
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -98,7 +98,7 @@ class AtsInterview
      * @var ?AtsInterviewStatus $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsInterviewStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsInterviewStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsInterviewStatus $status = null;
 
@@ -116,7 +116,7 @@ class AtsInterview
      * @var ?array<string> $userIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $userIds = null;
 

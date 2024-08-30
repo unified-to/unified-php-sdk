@@ -89,7 +89,7 @@ class AccountingInvoice
      * @var ?array<AccountingLineitem> $lineitems
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineitems = null;
 
@@ -122,7 +122,7 @@ class AccountingInvoice
      * @var ?PaymentCollectionMethod $paymentCollectionMethod
      */
     #[\JMS\Serializer\Annotation\SerializedName('payment_collection_method')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentCollectionMethod')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentCollectionMethod|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PaymentCollectionMethod $paymentCollectionMethod = null;
 
@@ -132,7 +132,7 @@ class AccountingInvoice
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -165,7 +165,7 @@ class AccountingInvoice
      * @var ?AccountingInvoiceStatus $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AccountingInvoiceStatus $status = null;
 

@@ -31,7 +31,7 @@ class AtsEmail
      * @var ?AtsEmailType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsEmailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsEmailType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsEmailType $type = null;
 

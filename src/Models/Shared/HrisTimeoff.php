@@ -65,7 +65,7 @@ class HrisTimeoff
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -81,7 +81,7 @@ class HrisTimeoff
      * @var ?HrisTimeoffStatus $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisTimeoffStatus $status = null;
 
@@ -90,7 +90,7 @@ class HrisTimeoff
      * @var ?HrisTimeoffType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisTimeoffType $type = null;
 

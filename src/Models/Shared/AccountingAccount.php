@@ -98,7 +98,7 @@ class AccountingAccount
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -115,7 +115,7 @@ class AccountingAccount
      * @var ?Status $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Status')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Status|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Status $status = null;
 
@@ -140,7 +140,7 @@ class AccountingAccount
      * @var ?Type $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Type')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Type|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Type $type = null;
 

@@ -23,7 +23,7 @@ class GenaiContent
      * @var ?Role $role
      */
     #[\JMS\Serializer\Annotation\SerializedName('role')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Role')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Role|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Role $role = null;
 

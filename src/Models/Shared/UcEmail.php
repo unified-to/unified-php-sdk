@@ -23,7 +23,7 @@ class UcEmail
      * @var ?UcEmailType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcEmailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcEmailType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?UcEmailType $type = null;
 

@@ -23,7 +23,7 @@ class MarketingEmail
      * @var ?MarketingEmailType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingEmailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingEmailType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?MarketingEmailType $type = null;
 

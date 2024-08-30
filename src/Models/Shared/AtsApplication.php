@@ -17,7 +17,7 @@ class AtsApplication
      * @var ?array<AtsApplicationAnswer> $answers
      */
     #[\JMS\Serializer\Annotation\SerializedName('answers')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsApplicationAnswer>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsApplicationAnswer>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $answers = null;
 
@@ -83,7 +83,7 @@ class AtsApplication
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -116,7 +116,7 @@ class AtsApplication
      * @var ?AtsApplicationStatus $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsApplicationStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsApplicationStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsApplicationStatus $status = null;
 

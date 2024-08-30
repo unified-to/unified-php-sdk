@@ -73,7 +73,7 @@ class PaymentLink
      * @var ?array<PaymentLinkLineitem> $lineitems
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineitems = null;
 
@@ -91,7 +91,7 @@ class PaymentLink
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 

@@ -56,7 +56,7 @@ class PaymentRefund
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -73,7 +73,7 @@ class PaymentRefund
      * @var ?PaymentRefundStatus $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentRefundStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentRefundStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PaymentRefundStatus $status = null;
 

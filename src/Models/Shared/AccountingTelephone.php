@@ -24,7 +24,7 @@ class AccountingTelephone
      * @var ?AccountingTelephoneType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingTelephoneType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingTelephoneType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AccountingTelephoneType $type = null;
 

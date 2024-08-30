@@ -24,7 +24,7 @@ class AtsCompensation
      * @var ?Frequency $frequency
      */
     #[\JMS\Serializer\Annotation\SerializedName('frequency')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Frequency')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Frequency|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Frequency $frequency = null;
 
@@ -49,7 +49,7 @@ class AtsCompensation
      * @var ?AtsCompensationType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCompensationType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCompensationType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsCompensationType $type = null;
 

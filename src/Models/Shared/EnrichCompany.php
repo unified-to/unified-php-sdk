@@ -18,7 +18,7 @@ class EnrichCompany
      * @var ?PropertyEnrichCompanyAddress $address
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyAddress|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyEnrichCompanyAddress $address = null;
 
@@ -148,7 +148,7 @@ class EnrichCompany
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -182,7 +182,7 @@ class EnrichCompany
      * @var ?array<EnrichTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 

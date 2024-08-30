@@ -16,7 +16,7 @@ class AtsCandidate
      * @var ?PropertyAtsCandidateAddress $address
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyAtsCandidateAddress $address = null;
 
@@ -58,7 +58,7 @@ class AtsCandidate
      * @var ?array<AtsEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
@@ -92,7 +92,7 @@ class AtsCandidate
      * @var ?array<string> $linkUrls
      */
     #[\JMS\Serializer\Annotation\SerializedName('link_urls')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $linkUrls = null;
 
@@ -109,7 +109,7 @@ class AtsCandidate
      * @var ?Origin $origin
      */
     #[\JMS\Serializer\Annotation\SerializedName('origin')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Origin')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Origin|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Origin $origin = null;
 
@@ -119,7 +119,7 @@ class AtsCandidate
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -129,7 +129,7 @@ class AtsCandidate
      * @var ?array<string> $sources
      */
     #[\JMS\Serializer\Annotation\SerializedName('sources')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $sources = null;
 
@@ -139,7 +139,7 @@ class AtsCandidate
      * @var ?array<string> $tags
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
@@ -149,7 +149,7 @@ class AtsCandidate
      * @var ?array<AtsTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsTelephone>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 

@@ -89,7 +89,7 @@ class CommerceItemVariant
      * @var ?array<CommerceItemMedia> $media
      */
     #[\JMS\Serializer\Annotation\SerializedName('media')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $media = null;
 
@@ -107,7 +107,7 @@ class CommerceItemVariant
      * @var ?array<CommerceItemOption> $options
      */
     #[\JMS\Serializer\Annotation\SerializedName('options')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemOption>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemOption>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $options = null;
 
@@ -117,7 +117,7 @@ class CommerceItemVariant
      * @var ?array<CommerceItemPrice> $prices
      */
     #[\JMS\Serializer\Annotation\SerializedName('prices')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemPrice>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemPrice>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $prices = null;
 
@@ -150,7 +150,7 @@ class CommerceItemVariant
      * @var ?SizeUnit $sizeUnit
      */
     #[\JMS\Serializer\Annotation\SerializedName('size_unit')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SizeUnit')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SizeUnit|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?SizeUnit $sizeUnit = null;
 
@@ -168,7 +168,7 @@ class CommerceItemVariant
      * @var ?array<string> $tags
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
@@ -193,7 +193,7 @@ class CommerceItemVariant
      * @var ?WeightUnit $weightUnit
      */
     #[\JMS\Serializer\Annotation\SerializedName('weight_unit')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WeightUnit')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WeightUnit|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?WeightUnit $weightUnit = null;
 

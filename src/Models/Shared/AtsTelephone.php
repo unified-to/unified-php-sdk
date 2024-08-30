@@ -23,7 +23,7 @@ class AtsTelephone
      * @var ?AtsTelephoneType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsTelephoneType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsTelephoneType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsTelephoneType $type = null;
 

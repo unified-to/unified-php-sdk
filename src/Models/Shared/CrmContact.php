@@ -17,7 +17,7 @@ class CrmContact
      * @var ?PropertyCrmContactAddress $address
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmContactAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmContactAddress|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmContactAddress $address = null;
 
@@ -35,7 +35,7 @@ class CrmContact
      * @var ?array<string> $companyIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $companyIds = null;
 
@@ -53,7 +53,7 @@ class CrmContact
      * @var ?array<string> $dealIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('deal_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $dealIds = null;
 
@@ -63,7 +63,7 @@ class CrmContact
      * @var ?array<CrmEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
@@ -89,7 +89,7 @@ class CrmContact
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -99,7 +99,7 @@ class CrmContact
      * @var ?array<CrmTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmTelephone>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 

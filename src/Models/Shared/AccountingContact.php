@@ -16,7 +16,7 @@ class AccountingContact
      * @var ?PropertyAccountingContactBillingAddress $billingAddress
      */
     #[\JMS\Serializer\Annotation\SerializedName('billing_address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyAccountingContactBillingAddress $billingAddress = null;
 
@@ -50,7 +50,7 @@ class AccountingContact
      * @var ?array<AccountingEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
@@ -108,7 +108,7 @@ class AccountingContact
      * @var ?array<AccountingContactPaymentMethod> $paymentMethods
      */
     #[\JMS\Serializer\Annotation\SerializedName('payment_methods')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $paymentMethods = null;
 
@@ -126,7 +126,7 @@ class AccountingContact
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -135,7 +135,7 @@ class AccountingContact
      * @var ?PropertyAccountingContactShippingAddress $shippingAddress
      */
     #[\JMS\Serializer\Annotation\SerializedName('shipping_address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactShippingAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactShippingAddress|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyAccountingContactShippingAddress $shippingAddress = null;
 
@@ -144,7 +144,7 @@ class AccountingContact
      * @var ?TaxExemption $taxExemption
      */
     #[\JMS\Serializer\Annotation\SerializedName('tax_exemption')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaxExemption')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaxExemption|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?TaxExemption $taxExemption = null;
 
@@ -162,7 +162,7 @@ class AccountingContact
      * @var ?array<AccountingTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTelephone>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 

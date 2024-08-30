@@ -25,7 +25,7 @@ class AtsActivity
      * @var ?array<AtsEmail> $bcc
      */
     #[\JMS\Serializer\Annotation\SerializedName('bcc')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $bcc = null;
 
@@ -43,7 +43,7 @@ class AtsActivity
      * @var ?array<AtsEmail> $cc
      */
     #[\JMS\Serializer\Annotation\SerializedName('cc')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $cc = null;
 
@@ -76,7 +76,7 @@ class AtsActivity
      * @var ?PropertyAtsActivityFrom $from
      */
     #[\JMS\Serializer\Annotation\SerializedName('from')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFrom')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFrom|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyAtsActivityFrom $from = null;
 
@@ -118,7 +118,7 @@ class AtsActivity
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -135,7 +135,7 @@ class AtsActivity
      * @var ?array<AtsEmail> $to
      */
     #[\JMS\Serializer\Annotation\SerializedName('to')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $to = null;
 
@@ -144,7 +144,7 @@ class AtsActivity
      * @var ?AtsActivityType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsActivityType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsActivityType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsActivityType $type = null;
 
@@ -162,7 +162,7 @@ class AtsActivity
      * @var ?array<string> $userIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $userIds = null;
 

@@ -25,7 +25,7 @@ class GenaiPrompt
      * @var ?array<GenaiContent> $messages
      */
     #[\JMS\Serializer\Annotation\SerializedName('messages')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiContent>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiContent>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $messages = null;
 
@@ -43,7 +43,7 @@ class GenaiPrompt
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -53,7 +53,7 @@ class GenaiPrompt
      * @var ?array<string> $responses
      */
     #[\JMS\Serializer\Annotation\SerializedName('responses')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $responses = null;
 

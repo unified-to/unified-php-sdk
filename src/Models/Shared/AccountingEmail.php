@@ -24,7 +24,7 @@ class AccountingEmail
      * @var ?AccountingEmailType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingEmailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingEmailType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AccountingEmailType $type = null;
 

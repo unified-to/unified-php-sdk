@@ -49,7 +49,7 @@ class AccountingJournal
      * @var ?array<AccountingJournalLineitem> $lineitems
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineitems = null;
 
@@ -59,7 +59,7 @@ class AccountingJournal
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 

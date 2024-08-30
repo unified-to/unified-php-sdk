@@ -16,7 +16,7 @@ class HrisEmployee
      * @var ?PropertyHrisEmployeeAddress $address
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyHrisEmployeeAddress $address = null;
 
@@ -42,7 +42,7 @@ class HrisEmployee
      * @var ?array<HrisCompensation> $compensation
      */
     #[\JMS\Serializer\Annotation\SerializedName('compensation')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisCompensation>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisCompensation>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $compensation = null;
 
@@ -92,7 +92,7 @@ class HrisEmployee
      * @var ?array<HrisEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
@@ -110,7 +110,7 @@ class HrisEmployee
      * @var ?array<PropertyHrisEmployeeEmployeeRoles> $employeeRoles
      */
     #[\JMS\Serializer\Annotation\SerializedName('employee_roles')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $employeeRoles = null;
 
@@ -119,7 +119,7 @@ class HrisEmployee
      * @var ?EmploymentStatus $employmentStatus
      */
     #[\JMS\Serializer\Annotation\SerializedName('employment_status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?EmploymentStatus $employmentStatus = null;
 
@@ -128,7 +128,7 @@ class HrisEmployee
      * @var ?HrisEmployeeEmploymentType $employmentType
      */
     #[\JMS\Serializer\Annotation\SerializedName('employment_type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisEmployeeEmploymentType $employmentType = null;
 
@@ -137,7 +137,7 @@ class HrisEmployee
      * @var ?HrisEmployeeGender $gender
      */
     #[\JMS\Serializer\Annotation\SerializedName('gender')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeGender')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeGender|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisEmployeeGender $gender = null;
 
@@ -147,7 +147,7 @@ class HrisEmployee
      * @var ?array<HrisGroup> $groups
      */
     #[\JMS\Serializer\Annotation\SerializedName('groups')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisGroup>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisGroup>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $groups = null;
 
@@ -197,7 +197,7 @@ class HrisEmployee
      * @var ?array<HrisLocation> $locations
      */
     #[\JMS\Serializer\Annotation\SerializedName('locations')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisLocation>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisLocation>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $locations = null;
 
@@ -214,7 +214,7 @@ class HrisEmployee
      * @var ?MaritalStatus $maritalStatus
      */
     #[\JMS\Serializer\Annotation\SerializedName('marital_status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MaritalStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MaritalStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?MaritalStatus $maritalStatus = null;
 
@@ -240,7 +240,7 @@ class HrisEmployee
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -266,7 +266,7 @@ class HrisEmployee
      * @var ?array<HrisTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisTelephone>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 

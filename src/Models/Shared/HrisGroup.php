@@ -57,7 +57,7 @@ class HrisGroup
      * @var ?array<string> $managerIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('manager_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $managerIds = null;
 
@@ -83,7 +83,7 @@ class HrisGroup
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -92,7 +92,7 @@ class HrisGroup
      * @var ?HrisGroupType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisGroupType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisGroupType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisGroupType $type = null;
 
@@ -110,7 +110,7 @@ class HrisGroup
      * @var ?array<string> $userIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $userIds = null;
 

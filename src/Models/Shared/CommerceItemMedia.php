@@ -48,7 +48,7 @@ class CommerceItemMedia
      * @var ?CommerceItemMediaType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMediaType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMediaType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CommerceItemMediaType $type = null;
 

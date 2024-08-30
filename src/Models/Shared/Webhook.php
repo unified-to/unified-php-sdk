@@ -65,7 +65,7 @@ class Webhook
      * @var ?array<string, string> $filters
      */
     #[\JMS\Serializer\Annotation\SerializedName('filters')]
-    #[\JMS\Serializer\Annotation\Type('array<string, string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $filters = null;
 
@@ -114,7 +114,7 @@ class Webhook
      * @var ?array<string, mixed> $meta
      */
     #[\JMS\Serializer\Annotation\SerializedName('meta')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $meta = null;
 
@@ -140,7 +140,7 @@ class Webhook
      * @var ?array<string> $runs
      */
     #[\JMS\Serializer\Annotation\SerializedName('runs')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $runs = null;
 
@@ -157,7 +157,7 @@ class Webhook
      * @var ?WebhookType $webhookType
      */
     #[\JMS\Serializer\Annotation\SerializedName('webhook_type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WebhookType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WebhookType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?WebhookType $webhookType = null;
 

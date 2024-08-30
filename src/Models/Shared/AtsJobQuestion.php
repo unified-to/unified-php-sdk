@@ -33,7 +33,7 @@ class AtsJobQuestion
      * @var ?array<string> $options
      */
     #[\JMS\Serializer\Annotation\SerializedName('options')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $options = null;
 

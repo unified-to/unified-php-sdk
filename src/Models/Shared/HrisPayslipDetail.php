@@ -55,7 +55,7 @@ class HrisPayslipDetail
      * @var ?HrisPayslipDetailType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisPayslipDetailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisPayslipDetailType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisPayslipDetailType $type = null;
 

@@ -18,7 +18,7 @@ class Connection
      * @var ?PropertyConnectionAuth $auth
      */
     #[\JMS\Serializer\Annotation\SerializedName('auth')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyConnectionAuth')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyConnectionAuth|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyConnectionAuth $auth = null;
 
@@ -53,7 +53,7 @@ class Connection
      * @var ?array<array<string, mixed>> $cursorsCache
      */
     #[\JMS\Serializer\Annotation\SerializedName('cursors_cache')]
-    #[\JMS\Serializer\Annotation\Type('array<array<string, mixed>>')]
+    #[\JMS\Serializer\Annotation\Type('array<array<string, mixed>>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $cursorsCache = null;
 

@@ -18,7 +18,7 @@ class CrmEvent
      * @var ?PropertyCrmEventCall $call
      */
     #[\JMS\Serializer\Annotation\SerializedName('call')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventCall')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventCall|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventCall $call = null;
 
@@ -28,7 +28,7 @@ class CrmEvent
      * @var ?array<string> $companyIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $companyIds = null;
 
@@ -38,7 +38,7 @@ class CrmEvent
      * @var ?array<string> $contactIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('contact_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $contactIds = null;
 
@@ -56,7 +56,7 @@ class CrmEvent
      * @var ?array<string> $dealIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('deal_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $dealIds = null;
 
@@ -66,7 +66,7 @@ class CrmEvent
      * @var ?PropertyCrmEventEmail $email
      */
     #[\JMS\Serializer\Annotation\SerializedName('email')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventEmail')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventEmail|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventEmail $email = null;
 
@@ -84,7 +84,7 @@ class CrmEvent
      * @var ?array<string> $leadIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('lead_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $leadIds = null;
 
@@ -94,7 +94,7 @@ class CrmEvent
      * @var ?PropertyCrmEventMeeting $meeting
      */
     #[\JMS\Serializer\Annotation\SerializedName('meeting')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventMeeting $meeting = null;
 
@@ -104,7 +104,7 @@ class CrmEvent
      * @var ?PropertyCrmEventNote $note
      */
     #[\JMS\Serializer\Annotation\SerializedName('note')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventNote')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventNote|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventNote $note = null;
 
@@ -114,7 +114,7 @@ class CrmEvent
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -124,7 +124,7 @@ class CrmEvent
      * @var ?PropertyCrmEventTask $task
      */
     #[\JMS\Serializer\Annotation\SerializedName('task')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTask')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTask|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyCrmEventTask $task = null;
 
@@ -133,7 +133,7 @@ class CrmEvent
      * @var ?CrmEventType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEventType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEventType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CrmEventType $type = null;
 

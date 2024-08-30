@@ -81,7 +81,7 @@ class StorageFile
      * @var ?array<StoragePermission> $permissions
      */
     #[\JMS\Serializer\Annotation\SerializedName('permissions')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\StoragePermission>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\StoragePermission>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $permissions = null;
 
@@ -91,7 +91,7 @@ class StorageFile
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -108,7 +108,7 @@ class StorageFile
      * @var ?StorageFileType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\StorageFileType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\StorageFileType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?StorageFileType $type = null;
 

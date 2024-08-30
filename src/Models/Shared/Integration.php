@@ -26,7 +26,7 @@ class Integration
      * @var ?array<string, mixed> $api
      */
     #[\JMS\Serializer\Annotation\SerializedName('api')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $api = null;
 
@@ -148,7 +148,7 @@ class Integration
      * @var ?array<string, IntegrationSupport> $support
      */
     #[\JMS\Serializer\Annotation\SerializedName('support')]
-    #[\JMS\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $support = null;
 
@@ -174,7 +174,7 @@ class Integration
      * @var ?array<string> $tokenInstructions
      */
     #[\JMS\Serializer\Annotation\SerializedName('token_instructions')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tokenInstructions = null;
 
@@ -184,7 +184,7 @@ class Integration
      * @var ?array<string> $tokenNames
      */
     #[\JMS\Serializer\Annotation\SerializedName('token_names')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tokenNames = null;
 

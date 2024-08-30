@@ -90,7 +90,7 @@ class PropertyConnectionAuth
      * @var ?array<string> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
@@ -124,7 +124,7 @@ class PropertyConnectionAuth
      * @var ?array<string, mixed> $meta
      */
     #[\JMS\Serializer\Annotation\SerializedName('meta')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $meta = null;
 
@@ -142,7 +142,7 @@ class PropertyConnectionAuth
      * @var ?array<string> $otherAuthInfo
      */
     #[\JMS\Serializer\Annotation\SerializedName('other_auth_info')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $otherAuthInfo = null;
 

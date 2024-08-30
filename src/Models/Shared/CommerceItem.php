@@ -17,7 +17,7 @@ class CommerceItem
      * @var ?array<string> $collectionIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('collection_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $collectionIds = null;
 
@@ -67,7 +67,7 @@ class CommerceItem
      * @var ?array<CommerceItemMedia> $media
      */
     #[\JMS\Serializer\Annotation\SerializedName('media')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $media = null;
 
@@ -101,7 +101,7 @@ class CommerceItem
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -119,7 +119,7 @@ class CommerceItem
      * @var ?array<string> $tags
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 
@@ -145,7 +145,7 @@ class CommerceItem
      * @var ?array<CommerceItemVariant> $variants
      */
     #[\JMS\Serializer\Annotation\SerializedName('variants')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemVariant>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemVariant>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $variants = null;
 

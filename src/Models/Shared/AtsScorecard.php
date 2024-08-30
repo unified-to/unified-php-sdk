@@ -81,7 +81,7 @@ class AtsScorecard
      * @var ?array<AtsScorecardQuestion> $questions
      */
     #[\JMS\Serializer\Annotation\SerializedName('questions')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $questions = null;
 
@@ -91,7 +91,7 @@ class AtsScorecard
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -100,7 +100,7 @@ class AtsScorecard
      * @var ?Recommendation $recommendation
      */
     #[\JMS\Serializer\Annotation\SerializedName('recommendation')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Recommendation')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Recommendation|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Recommendation $recommendation = null;
 

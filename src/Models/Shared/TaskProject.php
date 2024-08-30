@@ -33,7 +33,7 @@ class TaskProject
      * @var ?array<string> $groupIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('group_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $groupIds = null;
 
@@ -67,7 +67,7 @@ class TaskProject
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -85,7 +85,7 @@ class TaskProject
      * @var ?array<string> $userIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $userIds = null;
 

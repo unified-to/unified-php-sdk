@@ -24,7 +24,7 @@ class CrmEmail
      * @var ?CrmEmailType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEmailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEmailType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CrmEmailType $type = null;
 

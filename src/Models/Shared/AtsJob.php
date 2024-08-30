@@ -17,7 +17,7 @@ class AtsJob
      * @var ?array<AtsAddress> $addresses
      */
     #[\JMS\Serializer\Annotation\SerializedName('addresses')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsAddress>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsAddress>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $addresses = null;
 
@@ -43,7 +43,7 @@ class AtsJob
      * @var ?array<AtsCompensation> $compensation
      */
     #[\JMS\Serializer\Annotation\SerializedName('compensation')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCompensation>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCompensation>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $compensation = null;
 
@@ -61,7 +61,7 @@ class AtsJob
      * @var ?array<string> $departments
      */
     #[\JMS\Serializer\Annotation\SerializedName('departments')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $departments = null;
 
@@ -78,7 +78,7 @@ class AtsJob
      * @var ?EmploymentType $employmentType
      */
     #[\JMS\Serializer\Annotation\SerializedName('employment_type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?EmploymentType $employmentType = null;
 
@@ -88,7 +88,7 @@ class AtsJob
      * @var ?array<string> $hiringManagerIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('hiring_manager_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $hiringManagerIds = null;
 
@@ -130,7 +130,7 @@ class AtsJob
      * @var ?array<string> $publicJobUrls
      */
     #[\JMS\Serializer\Annotation\SerializedName('public_job_urls')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $publicJobUrls = null;
 
@@ -140,7 +140,7 @@ class AtsJob
      * @var ?array<AtsJobQuestion> $questions
      */
     #[\JMS\Serializer\Annotation\SerializedName('questions')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsJobQuestion>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsJobQuestion>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $questions = null;
 
@@ -150,7 +150,7 @@ class AtsJob
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -160,7 +160,7 @@ class AtsJob
      * @var ?array<string> $recruiterIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('recruiter_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $recruiterIds = null;
 
@@ -177,7 +177,7 @@ class AtsJob
      * @var ?AtsJobStatus $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AtsJobStatus $status = null;
 

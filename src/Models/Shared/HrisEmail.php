@@ -23,7 +23,7 @@ class HrisEmail
      * @var ?HrisEmailType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmailType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmailType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisEmailType $type = null;
 

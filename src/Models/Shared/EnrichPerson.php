@@ -18,7 +18,7 @@ class EnrichPerson
      * @var ?PropertyEnrichPersonAddress $address
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PropertyEnrichPersonAddress $address = null;
 
@@ -68,7 +68,7 @@ class EnrichPerson
      * @var ?array<EnrichEmail> $emails
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichEmail>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichEmail>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $emails = null;
 
@@ -85,7 +85,7 @@ class EnrichPerson
      * @var ?Gender $gender
      */
     #[\JMS\Serializer\Annotation\SerializedName('gender')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Gender')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Gender|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?Gender $gender = null;
 
@@ -143,7 +143,7 @@ class EnrichPerson
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -153,7 +153,7 @@ class EnrichPerson
      * @var ?array<EnrichTelephone> $telephones
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $telephones = null;
 
@@ -211,7 +211,7 @@ class EnrichPerson
      * @var ?array<EnrichPersonWorkHistory> $workHistories
      */
     #[\JMS\Serializer\Annotation\SerializedName('work_histories')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $workHistories = null;
 

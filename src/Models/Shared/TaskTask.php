@@ -17,7 +17,7 @@ class TaskTask
      * @var ?array<string> $assignedUserIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('assigned_user_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $assignedUserIds = null;
 
@@ -59,7 +59,7 @@ class TaskTask
      * @var ?array<string> $followerUserIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('follower_user_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $followerUserIds = null;
 
@@ -69,7 +69,7 @@ class TaskTask
      * @var ?array<string> $groupIds
      */
     #[\JMS\Serializer\Annotation\SerializedName('group_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $groupIds = null;
 
@@ -127,7 +127,7 @@ class TaskTask
      * @var ?array<string, mixed> $raw
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $raw = null;
 
@@ -136,7 +136,7 @@ class TaskTask
      * @var ?TaskTaskStatus $status
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaskTaskStatus')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaskTaskStatus|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?TaskTaskStatus $status = null;
 
@@ -146,7 +146,7 @@ class TaskTask
      * @var ?array<string> $tags
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
 

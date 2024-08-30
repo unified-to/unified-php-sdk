@@ -32,7 +32,7 @@ class HrisCompensation
      * @var ?HrisCompensationFrequency $frequency
      */
     #[\JMS\Serializer\Annotation\SerializedName('frequency')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompensationFrequency')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompensationFrequency|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisCompensationFrequency $frequency = null;
 
@@ -41,7 +41,7 @@ class HrisCompensation
      * @var ?HrisCompensationType $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompensationType')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompensationType|null')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?HrisCompensationType $type = null;
 
