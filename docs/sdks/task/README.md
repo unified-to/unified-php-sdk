@@ -375,6 +375,7 @@ try {
         query: '<value>',
         sort: '<value>',
         updatedGte: Utils\Utils::parseDateTime('2023-01-31T09:49:07.594Z'),
+        userId: '<value>',
     );
     $response = $sdk->task->listTaskTasks($request);
 

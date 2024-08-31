@@ -86,6 +86,13 @@ class ListTaskTasksRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     *
+     * @var ?string $userId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+
+    /**
      * @param  ?string  $connectionId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -96,8 +103,9 @@ class ListTaskTasksRequest
      * @param  ?string  $query
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $userId
      */
-    public function __construct(?string $connectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $projectId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(?string $connectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $projectId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
@@ -109,5 +117,6 @@ class ListTaskTasksRequest
         $this->query = $query;
         $this->sort = $sort;
         $this->updatedGte = $updatedGte;
+        $this->userId = $userId;
     }
 }

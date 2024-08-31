@@ -120,10 +120,11 @@ class ApiCall
 
     /**
      *
-     * @var string $workspaceId
+     * @var ?string $workspaceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    public string $workspaceId;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $workspaceId = null;
 
     /**
      * @param  ?string  $integrationType
@@ -132,7 +133,6 @@ class ApiCall
      * @param  ?string  $path
      * @param  ?string  $status
      * @param  ?ApiCallType  $type
-     * @param  ?string  $workspaceId
      * @param  ?string  $connectionId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $environment
@@ -141,8 +141,9 @@ class ApiCall
      * @param  ?string  $id
      * @param  ?string  $ipAddress
      * @param  ?float  $size
+     * @param  ?string  $workspaceId
      */
-    public function __construct(?string $integrationType = null, ?string $method = null, ?string $name = null, ?string $path = null, ?string $status = null, ?ApiCallType $type = null, ?string $workspaceId = null, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?float $size = null)
+    public function __construct(?string $integrationType = null, ?string $method = null, ?string $name = null, ?string $path = null, ?string $status = null, ?ApiCallType $type = null, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?float $size = null, ?string $workspaceId = null)
     {
         $this->integrationType = $integrationType;
         $this->method = $method;
@@ -150,7 +151,6 @@ class ApiCall
         $this->path = $path;
         $this->status = $status;
         $this->type = $type;
-        $this->workspaceId = $workspaceId;
         $this->connectionId = $connectionId;
         $this->createdAt = $createdAt;
         $this->environment = $environment;
@@ -159,5 +159,6 @@ class ApiCall
         $this->id = $id;
         $this->ipAddress = $ipAddress;
         $this->size = $size;
+        $this->workspaceId = $workspaceId;
     }
 }
