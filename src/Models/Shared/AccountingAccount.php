@@ -17,7 +17,7 @@ class AccountingAccount
      * @var ?float $balance
      */
     #[\JMS\Serializer\Annotation\SerializedName('balance')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $balance = null;
 
     /**
@@ -25,7 +25,7 @@ class AccountingAccount
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -33,7 +33,7 @@ class AccountingAccount
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -41,7 +41,7 @@ class AccountingAccount
      * @var ?string $customerDefinedCode
      */
     #[\JMS\Serializer\Annotation\SerializedName('customer_defined_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $customerDefinedCode = null;
 
     /**
@@ -49,7 +49,7 @@ class AccountingAccount
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -57,7 +57,7 @@ class AccountingAccount
      * @var ?string $group
      */
     #[\JMS\Serializer\Annotation\SerializedName('group')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $group = null;
 
     /**
@@ -65,7 +65,7 @@ class AccountingAccount
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -73,7 +73,7 @@ class AccountingAccount
      * @var ?bool $isPayable
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_payable')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isPayable = null;
 
     /**
@@ -81,7 +81,7 @@ class AccountingAccount
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -89,7 +89,7 @@ class AccountingAccount
      * @var ?string $parentAccountId
      */
     #[\JMS\Serializer\Annotation\SerializedName('parent_account_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $parentAccountId = null;
 
     /**
@@ -99,7 +99,7 @@ class AccountingAccount
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -107,7 +107,7 @@ class AccountingAccount
      * @var ?string $section
      */
     #[\JMS\Serializer\Annotation\SerializedName('section')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $section = null;
 
     /**
@@ -116,7 +116,7 @@ class AccountingAccount
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Status|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?Status $status = null;
 
     /**
@@ -124,7 +124,7 @@ class AccountingAccount
      * @var ?string $subgroup
      */
     #[\JMS\Serializer\Annotation\SerializedName('subgroup')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $subgroup = null;
 
     /**
@@ -132,7 +132,7 @@ class AccountingAccount
      * @var ?string $subsection
      */
     #[\JMS\Serializer\Annotation\SerializedName('subsection')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $subsection = null;
 
     /**
@@ -141,7 +141,7 @@ class AccountingAccount
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Type|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?Type $type = null;
 
     /**
@@ -149,7 +149,7 @@ class AccountingAccount
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

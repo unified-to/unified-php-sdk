@@ -79,7 +79,7 @@ class ListHrisTimeoffsRequest
     public ?string $userId = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -89,7 +89,7 @@ class ListHrisTimeoffsRequest
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
      */
-    public function __construct(?string $connectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;

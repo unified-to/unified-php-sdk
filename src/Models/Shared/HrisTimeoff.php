@@ -16,7 +16,7 @@ class HrisTimeoff
      * @var ?\DateTime $approvedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('approved_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $approvedAt = null;
 
     /**
@@ -24,7 +24,7 @@ class HrisTimeoff
      * @var ?string $approverUserId
      */
     #[\JMS\Serializer\Annotation\SerializedName('approver_user_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $approverUserId = null;
 
     /**
@@ -32,7 +32,7 @@ class HrisTimeoff
      * @var ?string $comments
      */
     #[\JMS\Serializer\Annotation\SerializedName('comments')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $comments = null;
 
     /**
@@ -40,7 +40,7 @@ class HrisTimeoff
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -48,7 +48,7 @@ class HrisTimeoff
      * @var ?\DateTime $endAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('end_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $endAt = null;
 
     /**
@@ -56,7 +56,7 @@ class HrisTimeoff
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -66,7 +66,7 @@ class HrisTimeoff
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -82,7 +82,7 @@ class HrisTimeoff
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?HrisTimeoffStatus $status = null;
 
     /**
@@ -91,7 +91,7 @@ class HrisTimeoff
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?HrisTimeoffType $type = null;
 
     /**
@@ -99,7 +99,7 @@ class HrisTimeoff
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -110,8 +110,8 @@ class HrisTimeoff
     public string $userId;
 
     /**
-     * @param  ?\DateTime  $startAt
-     * @param  ?string  $userId
+     * @param  \DateTime  $startAt
+     * @param  string  $userId
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
      * @param  ?string  $comments
@@ -123,7 +123,7 @@ class HrisTimeoff
      * @param  ?HrisTimeoffType  $type
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(?\DateTime $startAt = null, ?string $userId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $raw = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(\DateTime $startAt, string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $raw = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->startAt = $startAt;
         $this->userId = $userId;

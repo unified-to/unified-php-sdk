@@ -94,6 +94,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-09-05T13:56:20.676Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->createAccountingContact($request);
 
@@ -180,6 +183,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-11-24T18:29:57.646Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->createCrmContact($request);
 
@@ -249,6 +255,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-02-27T10:35:00.674Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->createUcContact($request);
 
@@ -702,6 +711,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-11-16T14:39:43.192Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->patchAccountingContact($request);
 
@@ -789,6 +801,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-05-05T14:32:12.826Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->patchCrmContact($request);
 
@@ -859,6 +874,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-10-21T22:08:30.034Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->patchUcContact($request);
 
@@ -1115,6 +1133,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-08-30T07:55:45.909Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->updateAccountingContact($request);
 
@@ -1202,6 +1223,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-03-31T22:36:38.040Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->updateCrmContact($request);
 
@@ -1272,6 +1296,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2022-10-11T10:56:34.889Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->contact->updateUcContact($request);
 

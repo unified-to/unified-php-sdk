@@ -45,6 +45,9 @@ try {
             hiredAt: Utils\Utils::parseDateTime('2023-01-19T06:26:51.678Z'),
             id: '<id>',
             jobId: '<value>',
+            offers: [
+                new Shared\AtsOffer,
+            ],
             originalStatus: '<value>',
             raw: [
                 'Mandatory' => '<value>',
@@ -55,6 +58,9 @@ try {
             status: Shared\AtsApplicationStatus::ThirdInterview,
             updatedAt: Utils\Utils::parseDateTime('2024-01-12T22:56:51.478Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->application->createAtsApplication($request);
 
@@ -236,6 +242,9 @@ try {
             hiredAt: Utils\Utils::parseDateTime('2023-12-05T05:20:09.174Z'),
             id: '<id>',
             jobId: '<value>',
+            offers: [
+                new Shared\AtsOffer,
+            ],
             originalStatus: '<value>',
             raw: [
                 'grey' => '<value>',
@@ -246,6 +255,9 @@ try {
             status: Shared\AtsApplicationStatus::Accepted,
             updatedAt: Utils\Utils::parseDateTime('2022-11-18T16:36:51.738Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->application->patchAtsApplication($request);
 
@@ -361,6 +373,9 @@ try {
             hiredAt: Utils\Utils::parseDateTime('2022-02-09T08:57:01.906Z'),
             id: '<id>',
             jobId: '<value>',
+            offers: [
+                new Shared\AtsOffer,
+            ],
             originalStatus: '<value>',
             raw: [
                 'Minivan' => '<value>',
@@ -371,6 +386,9 @@ try {
             status: Shared\AtsApplicationStatus::Declined,
             updatedAt: Utils\Utils::parseDateTime('2024-08-09T12:26:06.546Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->application->updateAtsApplication($request);
 

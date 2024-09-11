@@ -28,6 +28,14 @@ class UpdateAccountingTaxrateRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Taxrate
      *
      * @var string $id
@@ -36,14 +44,16 @@ class UpdateAccountingTaxrateRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\AccountingTaxrate  $accountingTaxrate
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AccountingTaxrate $accountingTaxrate = null)
+    public function __construct(string $connectionId, string $id, ?Shared\AccountingTaxrate $accountingTaxrate = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->accountingTaxrate = $accountingTaxrate;
+        $this->fields = $fields;
     }
 }

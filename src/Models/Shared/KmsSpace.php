@@ -16,7 +16,7 @@ class KmsSpace
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -24,7 +24,7 @@ class KmsSpace
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -39,7 +39,7 @@ class KmsSpace
      * @var ?bool $isActive
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
 
     /**
@@ -54,7 +54,7 @@ class KmsSpace
      * @var ?string $parentSpaceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('parent_space_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $parentSpaceId = null;
 
     /**
@@ -64,7 +64,7 @@ class KmsSpace
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -72,7 +72,7 @@ class KmsSpace
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -80,12 +80,12 @@ class KmsSpace
      * @var ?string $userId
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $userId = null;
 
     /**
-     * @param  ?string  $id
-     * @param  ?string  $name
+     * @param  string  $id
+     * @param  string  $name
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?bool  $isActive
@@ -94,7 +94,7 @@ class KmsSpace
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(?string $id = null, ?string $name = null, ?\DateTime $createdAt = null, ?string $description = null, ?bool $isActive = null, ?string $parentSpaceId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $id, string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $isActive = null, ?string $parentSpaceId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->id = $id;
         $this->name = $name;

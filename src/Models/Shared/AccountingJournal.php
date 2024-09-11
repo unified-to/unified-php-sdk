@@ -16,7 +16,7 @@ class AccountingJournal
      * @var ?string $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $createdAt = null;
 
     /**
@@ -24,7 +24,7 @@ class AccountingJournal
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -32,7 +32,7 @@ class AccountingJournal
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -40,7 +40,7 @@ class AccountingJournal
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -50,7 +50,7 @@ class AccountingJournal
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $lineitems = null;
 
     /**
@@ -60,7 +60,7 @@ class AccountingJournal
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -68,7 +68,7 @@ class AccountingJournal
      * @var ?string $reference
      */
     #[\JMS\Serializer\Annotation\SerializedName('reference')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $reference = null;
 
     /**
@@ -76,7 +76,7 @@ class AccountingJournal
      * @var ?float $taxAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $taxAmount = null;
 
     /**
@@ -84,7 +84,7 @@ class AccountingJournal
      * @var ?string $taxrateId
      */
     #[\JMS\Serializer\Annotation\SerializedName('taxrate_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $taxrateId = null;
 
     /**
@@ -92,7 +92,7 @@ class AccountingJournal
      * @var ?string $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $updatedAt = null;
 
     /**

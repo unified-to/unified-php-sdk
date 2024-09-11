@@ -27,10 +27,10 @@ class ListPassthroughsRequest
     public string $path;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $path
+     * @param  string  $connectionId
+     * @param  string  $path
      */
-    public function __construct(?string $connectionId = null, ?string $path = null)
+    public function __construct(string $connectionId, string $path)
     {
         $this->connectionId = $connectionId;
         $this->path = $path;

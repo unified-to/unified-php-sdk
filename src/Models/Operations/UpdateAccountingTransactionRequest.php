@@ -28,6 +28,14 @@ class UpdateAccountingTransactionRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Transaction
      *
      * @var string $id
@@ -36,14 +44,16 @@ class UpdateAccountingTransactionRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\AccountingTransaction  $accountingTransaction
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AccountingTransaction $accountingTransaction = null)
+    public function __construct(string $connectionId, string $id, ?Shared\AccountingTransaction $accountingTransaction = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->accountingTransaction = $accountingTransaction;
+        $this->fields = $fields;
     }
 }

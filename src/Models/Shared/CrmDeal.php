@@ -17,7 +17,7 @@ class CrmDeal
      * @var ?float $amount
      */
     #[\JMS\Serializer\Annotation\SerializedName('amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $amount = null;
 
     /**
@@ -25,7 +25,7 @@ class CrmDeal
      * @var ?\DateTime $closedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('closed_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $closedAt = null;
 
     /**
@@ -33,7 +33,7 @@ class CrmDeal
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -41,7 +41,7 @@ class CrmDeal
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -49,7 +49,7 @@ class CrmDeal
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -57,7 +57,7 @@ class CrmDeal
      * @var ?string $lostReason
      */
     #[\JMS\Serializer\Annotation\SerializedName('lost_reason')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $lostReason = null;
 
     /**
@@ -65,7 +65,7 @@ class CrmDeal
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -73,7 +73,7 @@ class CrmDeal
      * @var ?string $pipeline
      */
     #[\JMS\Serializer\Annotation\SerializedName('pipeline')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $pipeline = null;
 
     /**
@@ -81,7 +81,7 @@ class CrmDeal
      * @var ?string $pipelineId
      */
     #[\JMS\Serializer\Annotation\SerializedName('pipeline_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $pipelineId = null;
 
     /**
@@ -89,7 +89,7 @@ class CrmDeal
      * @var ?float $probability
      */
     #[\JMS\Serializer\Annotation\SerializedName('probability')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $probability = null;
 
     /**
@@ -99,7 +99,7 @@ class CrmDeal
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -107,7 +107,7 @@ class CrmDeal
      * @var ?string $source
      */
     #[\JMS\Serializer\Annotation\SerializedName('source')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $source = null;
 
     /**
@@ -115,7 +115,7 @@ class CrmDeal
      * @var ?string $stage
      */
     #[\JMS\Serializer\Annotation\SerializedName('stage')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $stage = null;
 
     /**
@@ -123,7 +123,7 @@ class CrmDeal
      * @var ?string $stageId
      */
     #[\JMS\Serializer\Annotation\SerializedName('stage_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $stageId = null;
 
     /**
@@ -133,7 +133,7 @@ class CrmDeal
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $tags = null;
 
     /**
@@ -141,7 +141,7 @@ class CrmDeal
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -149,7 +149,7 @@ class CrmDeal
      * @var ?string $userId
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $userId = null;
 
     /**
@@ -157,7 +157,7 @@ class CrmDeal
      * @var ?string $wonReason
      */
     #[\JMS\Serializer\Annotation\SerializedName('won_reason')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $wonReason = null;
 
     /**

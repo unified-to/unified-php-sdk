@@ -64,6 +64,9 @@ try {
             ],
             vendorName: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->item->createCommerceItem($request);
 
@@ -263,6 +266,9 @@ try {
             ],
             vendorName: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->item->patchCommerceItem($request);
 
@@ -397,6 +403,9 @@ try {
             ],
             vendorName: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->item->updateCommerceItem($request);
 

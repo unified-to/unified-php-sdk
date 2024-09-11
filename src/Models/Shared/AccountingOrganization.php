@@ -17,7 +17,7 @@ class AccountingOrganization
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingOrganizationAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAccountingOrganizationAddress $address = null;
 
     /**
@@ -25,7 +25,7 @@ class AccountingOrganization
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -33,7 +33,7 @@ class AccountingOrganization
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -41,7 +41,7 @@ class AccountingOrganization
      * @var ?float $fiscalYearEndMonth
      */
     #[\JMS\Serializer\Annotation\SerializedName('fiscal_year_end_month')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $fiscalYearEndMonth = null;
 
     /**
@@ -49,7 +49,7 @@ class AccountingOrganization
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -57,7 +57,7 @@ class AccountingOrganization
      * @var ?string $legalName
      */
     #[\JMS\Serializer\Annotation\SerializedName('legal_name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $legalName = null;
 
     /**
@@ -72,7 +72,7 @@ class AccountingOrganization
      * @var ?string $organizationCode
      */
     #[\JMS\Serializer\Annotation\SerializedName('organization_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $organizationCode = null;
 
     /**
@@ -82,7 +82,7 @@ class AccountingOrganization
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -90,7 +90,7 @@ class AccountingOrganization
      * @var ?string $taxNumber
      */
     #[\JMS\Serializer\Annotation\SerializedName('tax_number')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $taxNumber = null;
 
     /**
@@ -98,7 +98,7 @@ class AccountingOrganization
      * @var ?string $timezone
      */
     #[\JMS\Serializer\Annotation\SerializedName('timezone')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $timezone = null;
 
     /**
@@ -106,7 +106,7 @@ class AccountingOrganization
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -114,11 +114,11 @@ class AccountingOrganization
      * @var ?string $website
      */
     #[\JMS\Serializer\Annotation\SerializedName('website')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $website = null;
 
     /**
-     * @param  ?string  $name
+     * @param  string  $name
      * @param  ?PropertyAccountingOrganizationAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -132,7 +132,7 @@ class AccountingOrganization
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $website
      */
-    public function __construct(?string $name = null, ?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?string $legalName = null, ?string $organizationCode = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $website = null)
+    public function __construct(string $name, ?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?string $legalName = null, ?string $organizationCode = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $website = null)
     {
         $this->name = $name;
         $this->address = $address;

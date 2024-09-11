@@ -16,7 +16,7 @@ class ApiCall
      * @var ?string $connectionId
      */
     #[\JMS\Serializer\Annotation\SerializedName('connection_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $connectionId = null;
 
     /**
@@ -24,7 +24,7 @@ class ApiCall
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -32,7 +32,7 @@ class ApiCall
      * @var ?string $environment
      */
     #[\JMS\Serializer\Annotation\SerializedName('environment')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $environment = null;
 
     /**
@@ -40,7 +40,7 @@ class ApiCall
      * @var ?string $error
      */
     #[\JMS\Serializer\Annotation\SerializedName('error')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $error = null;
 
     /**
@@ -48,7 +48,7 @@ class ApiCall
      * @var ?string $externalXref
      */
     #[\JMS\Serializer\Annotation\SerializedName('external_xref')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $externalXref = null;
 
     /**
@@ -56,7 +56,7 @@ class ApiCall
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -71,7 +71,7 @@ class ApiCall
      * @var ?string $ipAddress
      */
     #[\JMS\Serializer\Annotation\SerializedName('ip_address')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $ipAddress = null;
 
     /**
@@ -100,7 +100,7 @@ class ApiCall
      * @var ?float $size
      */
     #[\JMS\Serializer\Annotation\SerializedName('size')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $size = null;
 
     /**
@@ -123,16 +123,16 @@ class ApiCall
      * @var ?string $workspaceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $workspaceId = null;
 
     /**
-     * @param  ?string  $integrationType
-     * @param  ?string  $method
-     * @param  ?string  $name
-     * @param  ?string  $path
-     * @param  ?string  $status
-     * @param  ?ApiCallType  $type
+     * @param  string  $integrationType
+     * @param  string  $method
+     * @param  string  $name
+     * @param  string  $path
+     * @param  string  $status
+     * @param  ApiCallType  $type
      * @param  ?string  $connectionId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $environment
@@ -143,7 +143,7 @@ class ApiCall
      * @param  ?float  $size
      * @param  ?string  $workspaceId
      */
-    public function __construct(?string $integrationType = null, ?string $method = null, ?string $name = null, ?string $path = null, ?string $status = null, ?ApiCallType $type = null, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?float $size = null, ?string $workspaceId = null)
+    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?float $size = null, ?string $workspaceId = null)
     {
         $this->integrationType = $integrationType;
         $this->method = $method;

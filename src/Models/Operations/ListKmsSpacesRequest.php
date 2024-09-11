@@ -79,7 +79,7 @@ class ListKmsSpacesRequest
     public ?\DateTime $updatedGte = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -89,7 +89,7 @@ class ListKmsSpacesRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;

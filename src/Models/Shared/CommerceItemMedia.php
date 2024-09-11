@@ -16,7 +16,7 @@ class CommerceItemMedia
      * @var ?string $alt
      */
     #[\JMS\Serializer\Annotation\SerializedName('alt')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $alt = null;
 
     /**
@@ -24,7 +24,7 @@ class CommerceItemMedia
      * @var ?float $height
      */
     #[\JMS\Serializer\Annotation\SerializedName('height')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $height = null;
 
     /**
@@ -32,7 +32,7 @@ class CommerceItemMedia
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -40,7 +40,7 @@ class CommerceItemMedia
      * @var ?float $position
      */
     #[\JMS\Serializer\Annotation\SerializedName('position')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $position = null;
 
     /**
@@ -49,7 +49,7 @@ class CommerceItemMedia
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMediaType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?CommerceItemMediaType $type = null;
 
     /**
@@ -64,11 +64,11 @@ class CommerceItemMedia
      * @var ?float $width
      */
     #[\JMS\Serializer\Annotation\SerializedName('width')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $width = null;
 
     /**
-     * @param  ?string  $url
+     * @param  string  $url
      * @param  ?string  $alt
      * @param  ?float  $height
      * @param  ?string  $id
@@ -76,7 +76,7 @@ class CommerceItemMedia
      * @param  ?CommerceItemMediaType  $type
      * @param  ?float  $width
      */
-    public function __construct(?string $url = null, ?string $alt = null, ?float $height = null, ?string $id = null, ?float $position = null, ?CommerceItemMediaType $type = null, ?float $width = null)
+    public function __construct(string $url, ?string $alt = null, ?float $height = null, ?string $id = null, ?float $position = null, ?CommerceItemMediaType $type = null, ?float $width = null)
     {
         $this->url = $url;
         $this->alt = $alt;

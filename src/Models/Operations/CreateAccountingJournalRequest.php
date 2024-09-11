@@ -28,12 +28,22 @@ class CreateAccountingJournalRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\AccountingJournal  $accountingJournal
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\AccountingJournal $accountingJournal = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\AccountingJournal  $accountingJournal
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\AccountingJournal $accountingJournal = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->accountingJournal = $accountingJournal;
+        $this->fields = $fields;
     }
 }

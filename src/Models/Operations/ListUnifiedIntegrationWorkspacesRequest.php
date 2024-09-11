@@ -71,7 +71,7 @@ class ListUnifiedIntegrationWorkspacesRequest
     public string $workspaceId;
 
     /**
-     * @param  ?string  $workspaceId
+     * @param  string  $workspaceId
      * @param  ?bool  $active
      * @param  ?array<QueryParamCategories>  $categories
      * @param  ?string  $env
@@ -80,7 +80,7 @@ class ListUnifiedIntegrationWorkspacesRequest
      * @param  ?bool  $summary
      * @param  ?string  $updatedGte
      */
-    public function __construct(?string $workspaceId = null, ?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?float $offset = null, ?bool $summary = null, ?string $updatedGte = null)
+    public function __construct(string $workspaceId, ?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?float $offset = null, ?bool $summary = null, ?string $updatedGte = null)
     {
         $this->workspaceId = $workspaceId;
         $this->active = $active;

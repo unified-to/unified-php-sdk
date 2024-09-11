@@ -16,7 +16,7 @@ class AccountingContactPaymentMethod
      * @var ?bool $default
      */
     #[\JMS\Serializer\Annotation\SerializedName('default')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $default = null;
 
     /**
@@ -24,7 +24,7 @@ class AccountingContactPaymentMethod
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -32,7 +32,7 @@ class AccountingContactPaymentMethod
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -44,12 +44,12 @@ class AccountingContactPaymentMethod
     public AccountingContactPaymentMethodType $type;
 
     /**
-     * @param  ?AccountingContactPaymentMethodType  $type
+     * @param  AccountingContactPaymentMethodType  $type
      * @param  ?bool  $default
      * @param  ?string  $id
      * @param  ?string  $name
      */
-    public function __construct(?AccountingContactPaymentMethodType $type = null, ?bool $default = null, ?string $id = null, ?string $name = null)
+    public function __construct(AccountingContactPaymentMethodType $type, ?bool $default = null, ?string $id = null, ?string $name = null)
     {
         $this->type = $type;
         $this->default = $default;

@@ -79,7 +79,7 @@ class ListHrisGroupsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $companyId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -89,7 +89,7 @@ class ListHrisGroupsRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?string $companyId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;

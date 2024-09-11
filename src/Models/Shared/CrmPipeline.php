@@ -16,7 +16,7 @@ class CrmPipeline
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -24,7 +24,7 @@ class CrmPipeline
      * @var ?float $dealProbability
      */
     #[\JMS\Serializer\Annotation\SerializedName('deal_probability')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $dealProbability = null;
 
     /**
@@ -32,7 +32,7 @@ class CrmPipeline
      * @var ?float $displayOrder
      */
     #[\JMS\Serializer\Annotation\SerializedName('display_order')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $displayOrder = null;
 
     /**
@@ -40,7 +40,7 @@ class CrmPipeline
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -48,7 +48,7 @@ class CrmPipeline
      * @var ?bool $isActive
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
 
     /**
@@ -56,7 +56,7 @@ class CrmPipeline
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -66,7 +66,7 @@ class CrmPipeline
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -76,7 +76,7 @@ class CrmPipeline
      */
     #[\JMS\Serializer\Annotation\SerializedName('stages')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmStage>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $stages = null;
 
     /**
@@ -84,7 +84,7 @@ class CrmPipeline
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

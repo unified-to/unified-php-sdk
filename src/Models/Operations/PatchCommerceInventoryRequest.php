@@ -28,6 +28,14 @@ class PatchCommerceInventoryRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Inventory
      *
      * @var string $id
@@ -36,14 +44,16 @@ class PatchCommerceInventoryRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\CommerceInventory  $commerceInventory
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\CommerceInventory $commerceInventory = null)
+    public function __construct(string $connectionId, string $id, ?Shared\CommerceInventory $commerceInventory = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->commerceInventory = $commerceInventory;
+        $this->fields = $fields;
     }
 }

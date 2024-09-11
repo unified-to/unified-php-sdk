@@ -16,7 +16,7 @@ class CommerceItemPrice
      * @var ?float $compareAtPrice
      */
     #[\JMS\Serializer\Annotation\SerializedName('compare_at_price')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $compareAtPrice = null;
 
     /**
@@ -24,7 +24,7 @@ class CommerceItemPrice
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -35,11 +35,11 @@ class CommerceItemPrice
     public float $price;
 
     /**
-     * @param  ?float  $price
+     * @param  float  $price
      * @param  ?float  $compareAtPrice
      * @param  ?string  $currency
      */
-    public function __construct(?float $price = null, ?float $compareAtPrice = null, ?string $currency = null)
+    public function __construct(float $price, ?float $compareAtPrice = null, ?string $currency = null)
     {
         $this->price = $price;
         $this->compareAtPrice = $compareAtPrice;

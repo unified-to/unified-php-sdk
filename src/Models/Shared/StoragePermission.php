@@ -16,7 +16,7 @@ class StoragePermission
      * @var ?string $groupId
      */
     #[\JMS\Serializer\Annotation\SerializedName('group_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $groupId = null;
 
     /**
@@ -33,15 +33,15 @@ class StoragePermission
      * @var ?string $userId
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $userId = null;
 
     /**
-     * @param  ?array<PropertyStoragePermissionRoles>  $roles
+     * @param  array<PropertyStoragePermissionRoles>  $roles
      * @param  ?string  $groupId
      * @param  ?string  $userId
      */
-    public function __construct(?array $roles = null, ?string $groupId = null, ?string $userId = null)
+    public function __construct(array $roles, ?string $groupId = null, ?string $userId = null)
     {
         $this->roles = $roles;
         $this->groupId = $groupId;

@@ -28,6 +28,14 @@ class UpdateAtsInterviewRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Interview
      *
      * @var string $id
@@ -36,14 +44,16 @@ class UpdateAtsInterviewRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\AtsInterview  $atsInterview
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AtsInterview $atsInterview = null)
+    public function __construct(string $connectionId, string $id, ?Shared\AtsInterview $atsInterview = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->atsInterview = $atsInterview;
+        $this->fields = $fields;
     }
 }

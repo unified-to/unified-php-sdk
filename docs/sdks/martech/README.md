@@ -50,6 +50,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-05-06T07:01:10.618Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->martech->createMartechList($request);
 
@@ -120,6 +123,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-08-29T11:20:30.541Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->martech->createMartechMember($request);
 
@@ -415,6 +421,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-07-26T04:11:57.641Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->martech->patchMartechList($request);
 
@@ -486,6 +495,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-12-03T01:03:21.772Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->martech->patchMartechMember($request);
 
@@ -652,6 +664,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-05-18T20:36:47.001Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->martech->updateMartechList($request);
 
@@ -723,6 +738,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-04-23T04:05:41.384Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->martech->updateMartechMember($request);
 

@@ -28,12 +28,22 @@ class CreateTaskTaskRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\TaskTask  $taskTask
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\TaskTask $taskTask = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\TaskTask  $taskTask
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\TaskTask $taskTask = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->taskTask = $taskTask;
+        $this->fields = $fields;
     }
 }

@@ -44,6 +44,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-05-06T07:01:10.618Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->list->createMartechList($request);
 
@@ -222,6 +225,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-07-26T04:11:57.641Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->list->patchMartechList($request);
 
@@ -336,6 +342,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-05-18T20:36:47.001Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->list->updateMartechList($request);
 

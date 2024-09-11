@@ -77,6 +77,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-12-14T07:52:45.369Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->createHrisCompany($request);
 
@@ -188,6 +191,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2022-06-06T17:06:15.004Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->createHrisEmployee($request);
 
@@ -260,6 +266,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->createHrisGroup($request);
 
@@ -342,6 +351,9 @@ try {
             timezone: 'America/Argentina/Buenos_Aires',
             updatedAt: Utils\Utils::parseDateTime('2023-07-17T19:29:27.962Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->createHrisLocation($request);
 
@@ -1115,6 +1127,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-08-30T10:26:34.618Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->patchHrisCompany($request);
 
@@ -1227,6 +1242,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2024-03-19T18:41:09.098Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->patchHrisEmployee($request);
 
@@ -1300,6 +1318,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->patchHrisGroup($request);
 
@@ -1383,6 +1404,9 @@ try {
             timezone: 'Asia/Tehran',
             updatedAt: Utils\Utils::parseDateTime('2024-08-09T18:51:28.735Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->patchHrisLocation($request);
 
@@ -1664,6 +1688,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-09-01T17:36:17.033Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->updateHrisCompany($request);
 
@@ -1776,6 +1803,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-05-31T18:44:44.765Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->updateHrisEmployee($request);
 
@@ -1849,6 +1879,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->updateHrisGroup($request);
 
@@ -1932,6 +1965,9 @@ try {
             timezone: 'Asia/Kamchatka',
             updatedAt: Utils\Utils::parseDateTime('2024-02-23T01:10:31.769Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->hris->updateHrisLocation($request);
 

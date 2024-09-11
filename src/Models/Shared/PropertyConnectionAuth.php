@@ -17,7 +17,7 @@ class PropertyConnectionAuth
      * @var ?string $accessToken
      */
     #[\JMS\Serializer\Annotation\SerializedName('access_token')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $accessToken = null;
 
     /**
@@ -25,7 +25,7 @@ class PropertyConnectionAuth
      * @var ?string $apiUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('api_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $apiUrl = null;
 
     /**
@@ -33,7 +33,7 @@ class PropertyConnectionAuth
      * @var ?string $appId
      */
     #[\JMS\Serializer\Annotation\SerializedName('app_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $appId = null;
 
     /**
@@ -41,7 +41,7 @@ class PropertyConnectionAuth
      * @var ?string $authorizeUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('authorize_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $authorizeUrl = null;
 
     /**
@@ -49,7 +49,7 @@ class PropertyConnectionAuth
      * @var ?string $clientId
      */
     #[\JMS\Serializer\Annotation\SerializedName('client_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $clientId = null;
 
     /**
@@ -57,7 +57,7 @@ class PropertyConnectionAuth
      * @var ?string $clientSecret
      */
     #[\JMS\Serializer\Annotation\SerializedName('client_secret')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $clientSecret = null;
 
     /**
@@ -65,7 +65,7 @@ class PropertyConnectionAuth
      * @var ?string $consumerKey
      */
     #[\JMS\Serializer\Annotation\SerializedName('consumer_key')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $consumerKey = null;
 
     /**
@@ -73,7 +73,7 @@ class PropertyConnectionAuth
      * @var ?string $consumerSecret
      */
     #[\JMS\Serializer\Annotation\SerializedName('consumer_secret')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $consumerSecret = null;
 
     /**
@@ -81,7 +81,7 @@ class PropertyConnectionAuth
      * @var ?string $devApiKey
      */
     #[\JMS\Serializer\Annotation\SerializedName('dev_api_key')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $devApiKey = null;
 
     /**
@@ -91,7 +91,7 @@ class PropertyConnectionAuth
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
 
     /**
@@ -99,7 +99,7 @@ class PropertyConnectionAuth
      * @var ?float $expiresIn
      */
     #[\JMS\Serializer\Annotation\SerializedName('expires_in')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $expiresIn = null;
 
     /**
@@ -107,7 +107,7 @@ class PropertyConnectionAuth
      * @var ?\DateTime $expiryDate
      */
     #[\JMS\Serializer\Annotation\SerializedName('expiry_date')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $expiryDate = null;
 
     /**
@@ -115,7 +115,7 @@ class PropertyConnectionAuth
      * @var ?string $key
      */
     #[\JMS\Serializer\Annotation\SerializedName('key')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $key = null;
 
     /**
@@ -125,7 +125,7 @@ class PropertyConnectionAuth
      */
     #[\JMS\Serializer\Annotation\SerializedName('meta')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $meta = null;
 
     /**
@@ -133,7 +133,7 @@ class PropertyConnectionAuth
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -143,7 +143,7 @@ class PropertyConnectionAuth
      */
     #[\JMS\Serializer\Annotation\SerializedName('other_auth_info')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $otherAuthInfo = null;
 
     /**
@@ -151,7 +151,7 @@ class PropertyConnectionAuth
      * @var ?string $pem
      */
     #[\JMS\Serializer\Annotation\SerializedName('pem')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $pem = null;
 
     /**
@@ -159,7 +159,7 @@ class PropertyConnectionAuth
      * @var ?string $refreshToken
      */
     #[\JMS\Serializer\Annotation\SerializedName('refresh_token')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $refreshToken = null;
 
     /**
@@ -167,7 +167,7 @@ class PropertyConnectionAuth
      * @var ?\DateTime $refreshTokenExpiresDate
      */
     #[\JMS\Serializer\Annotation\SerializedName('refresh_token_expires_date')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $refreshTokenExpiresDate = null;
 
     /**
@@ -175,7 +175,7 @@ class PropertyConnectionAuth
      * @var ?float $refreshTokenExpiresIn
      */
     #[\JMS\Serializer\Annotation\SerializedName('refresh_token_expires_in')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $refreshTokenExpiresIn = null;
 
     /**
@@ -183,7 +183,7 @@ class PropertyConnectionAuth
      * @var ?string $state
      */
     #[\JMS\Serializer\Annotation\SerializedName('state')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $state = null;
 
     /**
@@ -191,7 +191,7 @@ class PropertyConnectionAuth
      * @var ?string $token
      */
     #[\JMS\Serializer\Annotation\SerializedName('token')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $token = null;
 
     /**
@@ -199,7 +199,7 @@ class PropertyConnectionAuth
      * @var ?string $tokenUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('token_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $tokenUrl = null;
 
     /**

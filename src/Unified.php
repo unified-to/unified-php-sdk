@@ -15,7 +15,6 @@ use Unified\Unified_to\Models\Shared;
 class Unified
 {
     private SDKConfiguration $sdkConfiguration;
-
     /**
      * @param  SDKConfiguration  $sdkConfig
      */
@@ -881,4 +880,5 @@ class Unified
             );
         }
     }
+
 }

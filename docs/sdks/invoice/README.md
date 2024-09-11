@@ -64,6 +64,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-05-31T14:28:49.824Z'),
             url: 'http://irresponsible-elite.biz',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->invoice->createAccountingInvoice($request);
 
@@ -263,6 +266,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-06-16T16:44:58.399Z'),
             url: 'http://tame-jellybeans.biz',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->invoice->patchAccountingInvoice($request);
 
@@ -397,6 +403,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-08-21T11:15:42.077Z'),
             url: 'https://long-term-expedition.org',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->invoice->updateAccountingInvoice($request);
 

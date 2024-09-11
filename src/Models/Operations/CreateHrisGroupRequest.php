@@ -28,12 +28,22 @@ class CreateHrisGroupRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\HrisGroup  $hrisGroup
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\HrisGroup $hrisGroup = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\HrisGroup  $hrisGroup
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\HrisGroup $hrisGroup = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->hrisGroup = $hrisGroup;
+        $this->fields = $fields;
     }
 }

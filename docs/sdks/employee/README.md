@@ -94,6 +94,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2022-06-06T17:06:15.004Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->employee->createHrisEmployee($request);
 
@@ -323,6 +326,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2024-03-19T18:41:09.098Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->employee->patchHrisEmployee($request);
 
@@ -487,6 +493,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-05-31T18:44:44.765Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->employee->updateHrisEmployee($request);
 

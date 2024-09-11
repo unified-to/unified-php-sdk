@@ -16,7 +16,7 @@ class AccountingJournalLineitem
      * @var ?string $accountId
      */
     #[\JMS\Serializer\Annotation\SerializedName('account_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $accountId = null;
 
     /**
@@ -24,7 +24,7 @@ class AccountingJournalLineitem
      * @var ?string $contactId
      */
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $contactId = null;
 
     /**
@@ -32,7 +32,7 @@ class AccountingJournalLineitem
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -40,7 +40,7 @@ class AccountingJournalLineitem
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -48,7 +48,7 @@ class AccountingJournalLineitem
      * @var ?string $invoiceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('invoice_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $invoiceId = null;
 
     /**
@@ -56,7 +56,7 @@ class AccountingJournalLineitem
      * @var ?string $paymentId
      */
     #[\JMS\Serializer\Annotation\SerializedName('payment_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $paymentId = null;
 
     /**
@@ -64,7 +64,7 @@ class AccountingJournalLineitem
      * @var ?float $taxAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $taxAmount = null;
 
     /**
@@ -72,7 +72,7 @@ class AccountingJournalLineitem
      * @var ?float $totalAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $totalAmount = null;
 
     /**

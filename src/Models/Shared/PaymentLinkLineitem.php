@@ -16,7 +16,7 @@ class PaymentLinkLineitem
      * @var ?string $accountId
      */
     #[\JMS\Serializer\Annotation\SerializedName('account_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $accountId = null;
 
     /**
@@ -24,7 +24,7 @@ class PaymentLinkLineitem
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -32,7 +32,7 @@ class PaymentLinkLineitem
      * @var ?float $discountAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('discount_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $discountAmount = null;
 
     /**
@@ -40,7 +40,7 @@ class PaymentLinkLineitem
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -48,7 +48,7 @@ class PaymentLinkLineitem
      * @var ?string $itemDescription
      */
     #[\JMS\Serializer\Annotation\SerializedName('item_description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $itemDescription = null;
 
     /**
@@ -56,7 +56,7 @@ class PaymentLinkLineitem
      * @var ?string $itemId
      */
     #[\JMS\Serializer\Annotation\SerializedName('item_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $itemId = null;
 
     /**
@@ -64,7 +64,7 @@ class PaymentLinkLineitem
      * @var ?string $itemName
      */
     #[\JMS\Serializer\Annotation\SerializedName('item_name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $itemName = null;
 
     /**
@@ -72,7 +72,7 @@ class PaymentLinkLineitem
      * @var ?string $itemSku
      */
     #[\JMS\Serializer\Annotation\SerializedName('item_sku')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $itemSku = null;
 
     /**
@@ -80,7 +80,7 @@ class PaymentLinkLineitem
      * @var ?string $notes
      */
     #[\JMS\Serializer\Annotation\SerializedName('notes')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $notes = null;
 
     /**
@@ -88,7 +88,7 @@ class PaymentLinkLineitem
      * @var ?float $refundAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('refund_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $refundAmount = null;
 
     /**
@@ -96,7 +96,7 @@ class PaymentLinkLineitem
      * @var ?\DateTime $refundedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('refunded_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $refundedAt = null;
 
     /**
@@ -104,7 +104,7 @@ class PaymentLinkLineitem
      * @var ?float $taxAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $taxAmount = null;
 
     /**
@@ -112,7 +112,7 @@ class PaymentLinkLineitem
      * @var ?string $taxrateId
      */
     #[\JMS\Serializer\Annotation\SerializedName('taxrate_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $taxrateId = null;
 
     /**
@@ -120,7 +120,7 @@ class PaymentLinkLineitem
      * @var ?float $totalAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $totalAmount = null;
 
     /**
@@ -128,7 +128,7 @@ class PaymentLinkLineitem
      * @var ?float $unitAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('unit_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $unitAmount = null;
 
     /**
@@ -136,7 +136,7 @@ class PaymentLinkLineitem
      * @var ?float $unitQuantity
      */
     #[\JMS\Serializer\Annotation\SerializedName('unit_quantity')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $unitQuantity = null;
 
     /**
@@ -144,7 +144,7 @@ class PaymentLinkLineitem
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

@@ -66,15 +66,15 @@ class GetUnifiedIntegrationLoginRequest
     public string $workspaceId;
 
     /**
-     * @param  ?string  $integrationType
-     * @param  ?string  $workspaceId
+     * @param  string  $integrationType
+     * @param  string  $workspaceId
      * @param  ?string  $env
      * @param  ?string  $failureRedirect
      * @param  ?bool  $redirect
      * @param  ?string  $state
      * @param  ?string  $successRedirect
      */
-    public function __construct(?string $integrationType = null, ?string $workspaceId = null, ?string $env = null, ?string $failureRedirect = null, ?bool $redirect = null, ?string $state = null, ?string $successRedirect = null)
+    public function __construct(string $integrationType, string $workspaceId, ?string $env = null, ?string $failureRedirect = null, ?bool $redirect = null, ?string $state = null, ?string $successRedirect = null)
     {
         $this->integrationType = $integrationType;
         $this->workspaceId = $workspaceId;

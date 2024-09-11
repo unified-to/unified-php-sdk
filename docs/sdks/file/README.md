@@ -55,6 +55,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-03-07T14:24:08.441Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->file->createStorageFile($request);
 
@@ -245,6 +248,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:19:05.454Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->file->patchStorageFile($request);
 
@@ -370,6 +376,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-06-25T21:16:43.994Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->file->updateStorageFile($request);
 

@@ -29,10 +29,10 @@ class UpdateUnifiedWebhookRequest
     public string $id;
 
     /**
-     * @param  ?string  $id
+     * @param  string  $id
      * @param  ?Shared\Webhook  $webhook
      */
-    public function __construct(?string $id = null, ?Shared\Webhook $webhook = null)
+    public function __construct(string $id, ?Shared\Webhook $webhook = null)
     {
         $this->id = $id;
         $this->webhook = $webhook;

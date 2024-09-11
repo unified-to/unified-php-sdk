@@ -73,6 +73,9 @@ try {
             status: Shared\AtsJobStatus::Open,
             updatedAt: Utils\Utils::parseDateTime('2024-11-18T02:03:06.250Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->job->createAtsJob($request);
 
@@ -281,6 +284,9 @@ try {
             status: Shared\AtsJobStatus::Closed,
             updatedAt: Utils\Utils::parseDateTime('2023-08-08T17:34:59.133Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->job->patchAtsJob($request);
 
@@ -424,6 +430,9 @@ try {
             status: Shared\AtsJobStatus::Draft,
             updatedAt: Utils\Utils::parseDateTime('2024-01-04T04:44:52.139Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->job->updateAtsJob($request);
 

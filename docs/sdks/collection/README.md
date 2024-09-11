@@ -58,6 +58,9 @@ try {
             type: Shared\CommerceCollectionType::Category,
             updatedAt: Utils\Utils::parseDateTime('2022-06-05T09:05:38.009Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->collection->createCommerceCollection($request);
 
@@ -252,6 +255,9 @@ try {
             type: Shared\CommerceCollectionType::SavedSearch,
             updatedAt: Utils\Utils::parseDateTime('2024-08-04T22:23:37.874Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->collection->patchCommerceCollection($request);
 
@@ -380,6 +386,9 @@ try {
             type: Shared\CommerceCollectionType::Collection,
             updatedAt: Utils\Utils::parseDateTime('2024-01-17T22:11:40.268Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->collection->updateCommerceCollection($request);
 

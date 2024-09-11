@@ -28,12 +28,22 @@ class CreateCommerceItemRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\CommerceItem  $commerceItem
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\CommerceItem $commerceItem = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\CommerceItem  $commerceItem
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\CommerceItem $commerceItem = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->commerceItem = $commerceItem;
+        $this->fields = $fields;
     }
 }

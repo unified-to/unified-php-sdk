@@ -79,7 +79,7 @@ class ListCommerceItemsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $collectionId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -89,7 +89,7 @@ class ListCommerceItemsRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?string $collectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $collectionId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->collectionId = $collectionId;

@@ -24,14 +24,14 @@ class UcEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcEmailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?UcEmailType $type = null;
 
     /**
-     * @param  ?string  $email
+     * @param  string  $email
      * @param  ?UcEmailType  $type
      */
-    public function __construct(?string $email = null, ?UcEmailType $type = null)
+    public function __construct(string $email, ?UcEmailType $type = null)
     {
         $this->email = $email;
         $this->type = $type;

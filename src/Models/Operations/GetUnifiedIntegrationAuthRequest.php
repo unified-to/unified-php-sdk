@@ -97,8 +97,8 @@ class GetUnifiedIntegrationAuthRequest
     public string $workspaceId;
 
     /**
-     * @param  ?string  $integrationType
-     * @param  ?string  $workspaceId
+     * @param  string  $integrationType
+     * @param  string  $workspaceId
      * @param  ?string  $env
      * @param  ?string  $externalXref
      * @param  ?string  $failureRedirect
@@ -109,7 +109,7 @@ class GetUnifiedIntegrationAuthRequest
      * @param  ?string  $subdomain
      * @param  ?string  $successRedirect
      */
-    public function __construct(?string $integrationType = null, ?string $workspaceId = null, ?string $env = null, ?string $externalXref = null, ?string $failureRedirect = null, ?string $lang = null, ?bool $redirect = null, ?array $scopes = null, ?string $state = null, ?string $subdomain = null, ?string $successRedirect = null)
+    public function __construct(string $integrationType, string $workspaceId, ?string $env = null, ?string $externalXref = null, ?string $failureRedirect = null, ?string $lang = null, ?bool $redirect = null, ?array $scopes = null, ?string $state = null, ?string $subdomain = null, ?string $successRedirect = null)
     {
         $this->integrationType = $integrationType;
         $this->workspaceId = $workspaceId;

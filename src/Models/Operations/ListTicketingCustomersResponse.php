@@ -40,12 +40,12 @@ class ListTicketingCustomersResponse
     public ?array $ticketingCustomers = null;
 
     /**
-     * @param  ?string  $contentType
-     * @param  ?int  $statusCode
-     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  string  $contentType
+     * @param  int  $statusCode
+     * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?array<Shared\TicketingCustomer>  $ticketingCustomers
      */
-    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?array $ticketingCustomers = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $ticketingCustomers = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;

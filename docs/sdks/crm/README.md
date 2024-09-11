@@ -108,6 +108,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->createCrmCompany($request);
 
@@ -194,6 +197,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-11-24T18:29:57.646Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->createCrmContact($request);
 
@@ -270,6 +276,9 @@ try {
             userId: '<value>',
             wonReason: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->createCrmDeal($request);
 
@@ -380,6 +389,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-12-08T21:07:05.273Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->createCrmEvent($request);
 
@@ -465,6 +477,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-04-02T07:48:01.587Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->createCrmLead($request);
 
@@ -532,6 +547,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-07-13T04:30:34.696Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->createCrmPipeline($request);
 
@@ -1341,6 +1359,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->patchCrmCompany($request);
 
@@ -1428,6 +1449,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-05-05T14:32:12.826Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->patchCrmContact($request);
 
@@ -1505,6 +1529,9 @@ try {
             userId: '<value>',
             wonReason: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->patchCrmDeal($request);
 
@@ -1616,6 +1643,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-06-28T07:08:29.227Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->patchCrmEvent($request);
 
@@ -1702,6 +1732,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-05-03T12:44:18.120Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->patchCrmLead($request);
 
@@ -1770,6 +1803,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-04-03T20:45:57.138Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->patchCrmPipeline($request);
 
@@ -2178,6 +2214,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->updateCrmCompany($request);
 
@@ -2265,6 +2304,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-03-31T22:36:38.040Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->updateCrmContact($request);
 
@@ -2342,6 +2384,9 @@ try {
             userId: '<value>',
             wonReason: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->updateCrmDeal($request);
 
@@ -2453,6 +2498,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-02-09T21:25:40.068Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->updateCrmEvent($request);
 
@@ -2539,6 +2587,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-12-06T14:50:33.716Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->updateCrmLead($request);
 
@@ -2607,6 +2658,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-05-08T17:12:56.773Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->crm->updateCrmPipeline($request);
 

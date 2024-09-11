@@ -17,7 +17,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyHrisEmployeeAddress $address = null;
 
     /**
@@ -25,7 +25,7 @@ class HrisEmployee
      * @var ?string $bio
      */
     #[\JMS\Serializer\Annotation\SerializedName('bio')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $bio = null;
 
     /**
@@ -33,7 +33,7 @@ class HrisEmployee
      * @var ?string $companyId
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $companyId = null;
 
     /**
@@ -43,7 +43,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('compensation')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisCompensation>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $compensation = null;
 
     /**
@@ -51,7 +51,7 @@ class HrisEmployee
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -59,7 +59,7 @@ class HrisEmployee
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -67,7 +67,7 @@ class HrisEmployee
      * @var ?\DateTime $dateOfBirth
      */
     #[\JMS\Serializer\Annotation\SerializedName('date_of_birth')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $dateOfBirth = null;
 
     /**
@@ -75,7 +75,7 @@ class HrisEmployee
      * @var ?string $department
      */
     #[\JMS\Serializer\Annotation\SerializedName('department')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $department = null;
 
     /**
@@ -83,7 +83,7 @@ class HrisEmployee
      * @var ?string $division
      */
     #[\JMS\Serializer\Annotation\SerializedName('division')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $division = null;
 
     /**
@@ -93,7 +93,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisEmail>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
 
     /**
@@ -101,7 +101,7 @@ class HrisEmployee
      * @var ?string $employeeNumber
      */
     #[\JMS\Serializer\Annotation\SerializedName('employee_number')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $employeeNumber = null;
 
     /**
@@ -111,7 +111,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('employee_roles')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $employeeRoles = null;
 
     /**
@@ -120,7 +120,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('employment_status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?EmploymentStatus $employmentStatus = null;
 
     /**
@@ -129,7 +129,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('employment_type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?HrisEmployeeEmploymentType $employmentType = null;
 
     /**
@@ -138,7 +138,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('gender')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeGender|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?HrisEmployeeGender $gender = null;
 
     /**
@@ -148,7 +148,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('groups')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisGroup>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $groups = null;
 
     /**
@@ -156,7 +156,7 @@ class HrisEmployee
      * @var ?\DateTime $hiredAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('hired_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $hiredAt = null;
 
     /**
@@ -164,7 +164,7 @@ class HrisEmployee
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -172,7 +172,7 @@ class HrisEmployee
      * @var ?string $imageUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('image_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $imageUrl = null;
 
     /**
@@ -180,7 +180,7 @@ class HrisEmployee
      * @var ?string $languageLocale
      */
     #[\JMS\Serializer\Annotation\SerializedName('language_locale')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $languageLocale = null;
 
     /**
@@ -188,7 +188,7 @@ class HrisEmployee
      * @var ?string $location
      */
     #[\JMS\Serializer\Annotation\SerializedName('location')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $location = null;
 
     /**
@@ -198,7 +198,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('locations')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisLocation>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $locations = null;
 
     /**
@@ -206,7 +206,7 @@ class HrisEmployee
      * @var ?string $managerId
      */
     #[\JMS\Serializer\Annotation\SerializedName('manager_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $managerId = null;
 
     /**
@@ -215,7 +215,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('marital_status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MaritalStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?MaritalStatus $maritalStatus = null;
 
     /**
@@ -223,7 +223,7 @@ class HrisEmployee
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -231,7 +231,7 @@ class HrisEmployee
      * @var ?string $pronouns
      */
     #[\JMS\Serializer\Annotation\SerializedName('pronouns')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $pronouns = null;
 
     /**
@@ -241,7 +241,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -249,7 +249,7 @@ class HrisEmployee
      * @var ?string $salutation
      */
     #[\JMS\Serializer\Annotation\SerializedName('salutation')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $salutation = null;
 
     /**
@@ -257,7 +257,7 @@ class HrisEmployee
      * @var ?string $ssnSin
      */
     #[\JMS\Serializer\Annotation\SerializedName('ssn_sin')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $ssnSin = null;
 
     /**
@@ -267,7 +267,7 @@ class HrisEmployee
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisTelephone>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $telephones = null;
 
     /**
@@ -275,7 +275,7 @@ class HrisEmployee
      * @var ?\DateTime $terminatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('terminated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $terminatedAt = null;
 
     /**
@@ -283,7 +283,7 @@ class HrisEmployee
      * @var ?string $timezone
      */
     #[\JMS\Serializer\Annotation\SerializedName('timezone')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $timezone = null;
 
     /**
@@ -291,7 +291,7 @@ class HrisEmployee
      * @var ?string $title
      */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $title = null;
 
     /**
@@ -299,7 +299,7 @@ class HrisEmployee
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

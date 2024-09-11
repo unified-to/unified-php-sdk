@@ -36,11 +36,11 @@ class ListEnrichCompaniesRequest
     public ?string $name = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $domain
      * @param  ?string  $name
      */
-    public function __construct(?string $connectionId = null, ?string $domain = null, ?string $name = null)
+    public function __construct(string $connectionId, ?string $domain = null, ?string $name = null)
     {
         $this->connectionId = $connectionId;
         $this->domain = $domain;

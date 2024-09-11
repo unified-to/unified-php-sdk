@@ -19,7 +19,7 @@ class PropertyCrmEventEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('attachment_file_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $attachmentFileIds = null;
 
     /**
@@ -27,7 +27,7 @@ class PropertyCrmEventEmail
      * @var ?string $body
      */
     #[\JMS\Serializer\Annotation\SerializedName('body')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $body = null;
 
     /**
@@ -37,7 +37,7 @@ class PropertyCrmEventEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('cc')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $cc = null;
 
     /**
@@ -45,7 +45,7 @@ class PropertyCrmEventEmail
      * @var ?string $from
      */
     #[\JMS\Serializer\Annotation\SerializedName('from')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $from = null;
 
     /**
@@ -53,7 +53,7 @@ class PropertyCrmEventEmail
      * @var ?string $subject
      */
     #[\JMS\Serializer\Annotation\SerializedName('subject')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $subject = null;
 
     /**
@@ -63,7 +63,7 @@ class PropertyCrmEventEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('to')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $to = null;
 
     /**

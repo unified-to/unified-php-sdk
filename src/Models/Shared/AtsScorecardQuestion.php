@@ -16,7 +16,7 @@ class AtsScorecardQuestion
      * @var ?string $answer
      */
     #[\JMS\Serializer\Annotation\SerializedName('answer')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $answer = null;
 
     /**
@@ -24,7 +24,7 @@ class AtsScorecardQuestion
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -35,11 +35,11 @@ class AtsScorecardQuestion
     public string $text;
 
     /**
-     * @param  ?string  $text
+     * @param  string  $text
      * @param  ?string  $answer
      * @param  ?string  $description
      */
-    public function __construct(?string $text = null, ?string $answer = null, ?string $description = null)
+    public function __construct(string $text, ?string $answer = null, ?string $description = null)
     {
         $this->text = $text;
         $this->answer = $answer;

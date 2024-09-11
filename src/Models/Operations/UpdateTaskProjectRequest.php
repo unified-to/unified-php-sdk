@@ -28,6 +28,14 @@ class UpdateTaskProjectRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Project
      *
      * @var string $id
@@ -36,14 +44,16 @@ class UpdateTaskProjectRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\TaskProject  $taskProject
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\TaskProject $taskProject = null)
+    public function __construct(string $connectionId, string $id, ?Shared\TaskProject $taskProject = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->taskProject = $taskProject;
+        $this->fields = $fields;
     }
 }

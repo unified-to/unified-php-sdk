@@ -86,7 +86,7 @@ class ListAtsApplicationsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $candidateId
      * @param  ?array<string>  $fields
      * @param  ?string  $jobId
@@ -97,7 +97,7 @@ class ListAtsApplicationsRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?string $candidateId = null, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $candidateId = null, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->candidateId = $candidateId;

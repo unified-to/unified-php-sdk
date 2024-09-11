@@ -16,7 +16,7 @@ class EnrichPersonWorkHistory
      * @var ?string $companyDomain
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_domain')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $companyDomain = null;
 
     /**
@@ -24,7 +24,7 @@ class EnrichPersonWorkHistory
      * @var ?string $companyId
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $companyId = null;
 
     /**
@@ -32,7 +32,7 @@ class EnrichPersonWorkHistory
      * @var ?string $companyName
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $companyName = null;
 
     /**
@@ -40,7 +40,7 @@ class EnrichPersonWorkHistory
      * @var ?\DateTime $endAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('end_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $endAt = null;
 
     /**
@@ -48,7 +48,7 @@ class EnrichPersonWorkHistory
      * @var ?string $location
      */
     #[\JMS\Serializer\Annotation\SerializedName('location')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $location = null;
 
     /**
@@ -56,7 +56,7 @@ class EnrichPersonWorkHistory
      * @var ?\DateTime $startAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('start_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $startAt = null;
 
     /**
@@ -67,7 +67,7 @@ class EnrichPersonWorkHistory
     public string $title;
 
     /**
-     * @param  ?string  $title
+     * @param  string  $title
      * @param  ?string  $companyDomain
      * @param  ?string  $companyId
      * @param  ?string  $companyName
@@ -75,7 +75,7 @@ class EnrichPersonWorkHistory
      * @param  ?string  $location
      * @param  ?\DateTime  $startAt
      */
-    public function __construct(?string $title = null, ?string $companyDomain = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $endAt = null, ?string $location = null, ?\DateTime $startAt = null)
+    public function __construct(string $title, ?string $companyDomain = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $endAt = null, ?string $location = null, ?\DateTime $startAt = null)
     {
         $this->title = $title;
         $this->companyDomain = $companyDomain;

@@ -68,6 +68,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-04-02T07:48:01.587Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->lead->createCrmLead($request);
 
@@ -273,6 +276,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-05-03T12:44:18.120Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->lead->patchCrmLead($request);
 
@@ -411,6 +417,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-12-06T14:50:33.716Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->lead->updateCrmLead($request);
 

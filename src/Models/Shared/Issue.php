@@ -16,7 +16,7 @@ class Issue
      * @var ?string $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $createdAt = null;
 
     /**
@@ -24,7 +24,7 @@ class Issue
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -32,7 +32,7 @@ class Issue
      * @var ?float $importance
      */
     #[\JMS\Serializer\Annotation\SerializedName('importance')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $importance = null;
 
     /**
@@ -40,7 +40,7 @@ class Issue
      * @var ?float $resolutionTime
      */
     #[\JMS\Serializer\Annotation\SerializedName('resolution_time')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $resolutionTime = null;
 
     /**
@@ -48,7 +48,7 @@ class Issue
      * @var ?float $size
      */
     #[\JMS\Serializer\Annotation\SerializedName('size')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $size = null;
 
     /**
@@ -80,7 +80,7 @@ class Issue
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $type = null;
 
     /**
@@ -88,7 +88,7 @@ class Issue
      * @var ?string $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $updatedAt = null;
 
     /**
@@ -96,7 +96,7 @@ class Issue
      * @var ?string $url
      */
     #[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $url = null;
 
     /**
@@ -107,10 +107,10 @@ class Issue
     public string $workspaceId;
 
     /**
-     * @param  ?IssueStatus  $status
-     * @param  ?string  $ticketRef
-     * @param  ?string  $title
-     * @param  ?string  $workspaceId
+     * @param  IssueStatus  $status
+     * @param  string  $ticketRef
+     * @param  string  $title
+     * @param  string  $workspaceId
      * @param  ?string  $createdAt
      * @param  ?string  $id
      * @param  ?float  $importance
@@ -120,7 +120,7 @@ class Issue
      * @param  ?string  $updatedAt
      * @param  ?string  $url
      */
-    public function __construct(?IssueStatus $status = null, ?string $ticketRef = null, ?string $title = null, ?string $workspaceId = null, ?string $createdAt = null, ?string $id = null, ?float $importance = null, ?float $resolutionTime = null, ?float $size = null, ?array $type = null, ?string $updatedAt = null, ?string $url = null)
+    public function __construct(IssueStatus $status, string $ticketRef, string $title, string $workspaceId, ?string $createdAt = null, ?string $id = null, ?float $importance = null, ?float $resolutionTime = null, ?float $size = null, ?array $type = null, ?string $updatedAt = null, ?string $url = null)
     {
         $this->status = $status;
         $this->ticketRef = $ticketRef;

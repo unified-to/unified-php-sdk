@@ -63,6 +63,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-07-14T18:03:00.242Z'),
             url: 'http://baggy-shark.biz',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->payment->createPaymentLink($request);
 
@@ -131,6 +134,9 @@ try {
             totalAmount: 8883.6,
             updatedAt: Utils\Utils::parseDateTime('2023-03-25T05:19:24.134Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->payment->createPaymentPayment($request);
 
@@ -671,6 +677,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-07-20T09:13:52.888Z'),
             url: 'http://accurate-costume.org',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->payment->patchPaymentLink($request);
 
@@ -740,6 +749,9 @@ try {
             totalAmount: 2981.35,
             updatedAt: Utils\Utils::parseDateTime('2023-09-06T16:43:18.631Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->payment->patchPaymentPayment($request);
 
@@ -915,6 +927,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-08-22T16:01:32.942Z'),
             url: 'https://complex-glove.com',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->payment->updatePaymentLink($request);
 
@@ -984,6 +999,9 @@ try {
             totalAmount: 2793.98,
             updatedAt: Utils\Utils::parseDateTime('2024-12-23T01:02:53.585Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->payment->updatePaymentPayment($request);
 

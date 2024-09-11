@@ -28,6 +28,14 @@ class UpdateCrmPipelineRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Pipeline
      *
      * @var string $id
@@ -36,14 +44,16 @@ class UpdateCrmPipelineRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\CrmPipeline  $crmPipeline
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\CrmPipeline $crmPipeline = null)
+    public function __construct(string $connectionId, string $id, ?Shared\CrmPipeline $crmPipeline = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->crmPipeline = $crmPipeline;
+        $this->fields = $fields;
     }
 }

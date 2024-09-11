@@ -65,6 +65,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-05-12T01:01:03.120Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->createTicketingCustomer($request);
 
@@ -129,6 +132,9 @@ try {
             updatedAt: '<value>',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->createTicketingNote($request);
 
@@ -203,6 +209,9 @@ try {
             url: 'https://pristine-luck.com',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->createTicketingTicket($request);
 
@@ -626,6 +635,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-01-06T09:16:54.349Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->patchTicketingCustomer($request);
 
@@ -691,6 +703,9 @@ try {
             updatedAt: '<value>',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->patchTicketingNote($request);
 
@@ -766,6 +781,9 @@ try {
             url: 'http://staid-ectodermal.name',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->patchTicketingTicket($request);
 
@@ -993,6 +1011,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-09-29T08:49:38.630Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->updateTicketingCustomer($request);
 
@@ -1058,6 +1079,9 @@ try {
             updatedAt: '<value>',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->updateTicketingNote($request);
 
@@ -1133,6 +1157,9 @@ try {
             url: 'http://gullible-replication.com',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticketing->updateTicketingTicket($request);
 

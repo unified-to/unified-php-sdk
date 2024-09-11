@@ -67,6 +67,9 @@ try {
             updatedAt: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->messaging->createMessagingMessage($request);
 
@@ -385,6 +388,9 @@ try {
             updatedAt: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->messaging->patchMessagingMessage($request);
 
@@ -520,6 +526,9 @@ try {
             updatedAt: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->messaging->updateMessagingMessage($request);
 

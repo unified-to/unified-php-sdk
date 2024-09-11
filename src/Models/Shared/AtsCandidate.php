@@ -17,7 +17,7 @@ class AtsCandidate
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAtsCandidateAddress $address = null;
 
     /**
@@ -25,7 +25,7 @@ class AtsCandidate
      * @var ?string $companyId
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $companyId = null;
 
     /**
@@ -33,7 +33,7 @@ class AtsCandidate
      * @var ?string $companyName
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $companyName = null;
 
     /**
@@ -41,7 +41,7 @@ class AtsCandidate
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -49,7 +49,7 @@ class AtsCandidate
      * @var ?\DateTime $dateOfBirth
      */
     #[\JMS\Serializer\Annotation\SerializedName('date_of_birth')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $dateOfBirth = null;
 
     /**
@@ -59,7 +59,7 @@ class AtsCandidate
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
 
     /**
@@ -67,7 +67,7 @@ class AtsCandidate
      * @var ?string $externalIdentifier
      */
     #[\JMS\Serializer\Annotation\SerializedName('external_identifier')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $externalIdentifier = null;
 
     /**
@@ -75,7 +75,7 @@ class AtsCandidate
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -83,7 +83,7 @@ class AtsCandidate
      * @var ?string $imageUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('image_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $imageUrl = null;
 
     /**
@@ -93,7 +93,7 @@ class AtsCandidate
      */
     #[\JMS\Serializer\Annotation\SerializedName('link_urls')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $linkUrls = null;
 
     /**
@@ -101,7 +101,7 @@ class AtsCandidate
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -110,7 +110,7 @@ class AtsCandidate
      */
     #[\JMS\Serializer\Annotation\SerializedName('origin')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Origin|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?Origin $origin = null;
 
     /**
@@ -120,7 +120,7 @@ class AtsCandidate
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -130,7 +130,7 @@ class AtsCandidate
      */
     #[\JMS\Serializer\Annotation\SerializedName('sources')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $sources = null;
 
     /**
@@ -140,7 +140,7 @@ class AtsCandidate
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $tags = null;
 
     /**
@@ -150,7 +150,7 @@ class AtsCandidate
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsTelephone>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $telephones = null;
 
     /**
@@ -158,7 +158,7 @@ class AtsCandidate
      * @var ?string $title
      */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $title = null;
 
     /**
@@ -166,7 +166,7 @@ class AtsCandidate
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -174,7 +174,7 @@ class AtsCandidate
      * @var ?string $userId
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $userId = null;
 
     /**
@@ -182,7 +182,7 @@ class AtsCandidate
      * @var ?string $webUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('web_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $webUrl = null;
 
     /**

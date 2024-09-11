@@ -17,7 +17,7 @@ class AtsCompany
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsCompanyAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAtsCompanyAddress $address = null;
 
     /**
@@ -25,7 +25,7 @@ class AtsCompany
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -33,7 +33,7 @@ class AtsCompany
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -48,7 +48,7 @@ class AtsCompany
      * @var ?string $parentId
      */
     #[\JMS\Serializer\Annotation\SerializedName('parent_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $parentId = null;
 
     /**
@@ -56,7 +56,7 @@ class AtsCompany
      * @var ?string $phone
      */
     #[\JMS\Serializer\Annotation\SerializedName('phone')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $phone = null;
 
     /**
@@ -66,7 +66,7 @@ class AtsCompany
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -76,7 +76,7 @@ class AtsCompany
      */
     #[\JMS\Serializer\Annotation\SerializedName('recruiter_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $recruiterIds = null;
 
     /**
@@ -84,7 +84,7 @@ class AtsCompany
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -92,11 +92,11 @@ class AtsCompany
      * @var ?string $websiteUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('website_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $websiteUrl = null;
 
     /**
-     * @param  ?string  $name
+     * @param  string  $name
      * @param  ?PropertyAtsCompanyAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
@@ -107,7 +107,7 @@ class AtsCompany
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $websiteUrl
      */
-    public function __construct(?string $name = null, ?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
+    public function __construct(string $name, ?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
     {
         $this->name = $name;
         $this->address = $address;

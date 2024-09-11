@@ -59,6 +59,9 @@ try {
             type: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-03-28T17:20:22.599Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->transaction->createAccountingTransaction($request);
 
@@ -253,6 +256,9 @@ try {
             type: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2024-08-13T08:04:48.029Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->transaction->patchAccountingTransaction($request);
 
@@ -382,6 +388,9 @@ try {
             type: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2024-07-31T22:23:34.525Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->transaction->updateAccountingTransaction($request);
 

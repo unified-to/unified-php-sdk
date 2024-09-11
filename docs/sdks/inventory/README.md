@@ -47,6 +47,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-10-19T06:57:05.921Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->inventory->createCommerceInventory($request);
 
@@ -230,6 +233,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-12-27T05:22:53.251Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->inventory->patchCommerceInventory($request);
 
@@ -347,6 +353,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-05-08T14:12:09.565Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->inventory->updateCommerceInventory($request);
 

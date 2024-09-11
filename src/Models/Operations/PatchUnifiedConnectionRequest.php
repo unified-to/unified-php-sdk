@@ -29,10 +29,10 @@ class PatchUnifiedConnectionRequest
     public string $id;
 
     /**
-     * @param  ?string  $id
+     * @param  string  $id
      * @param  ?Shared\Connection  $connection
      */
-    public function __construct(?string $id = null, ?Shared\Connection $connection = null)
+    public function __construct(string $id, ?Shared\Connection $connection = null)
     {
         $this->id = $id;
         $this->connection = $connection;

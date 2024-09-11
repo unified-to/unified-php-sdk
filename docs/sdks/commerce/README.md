@@ -76,6 +76,9 @@ try {
             type: Shared\CommerceCollectionType::Category,
             updatedAt: Utils\Utils::parseDateTime('2022-06-05T09:05:38.009Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->createCommerceCollection($request);
 
@@ -140,6 +143,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-10-19T06:57:05.921Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->createCommerceInventory($request);
 
@@ -221,6 +227,9 @@ try {
             ],
             vendorName: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->createCommerceItem($request);
 
@@ -294,6 +303,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-07-11T11:05:08.665Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->createCommerceLocation($request);
 
@@ -839,6 +851,9 @@ try {
             type: Shared\CommerceCollectionType::SavedSearch,
             updatedAt: Utils\Utils::parseDateTime('2024-08-04T22:23:37.874Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->patchCommerceCollection($request);
 
@@ -904,6 +919,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-12-27T05:22:53.251Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->patchCommerceInventory($request);
 
@@ -986,6 +1004,9 @@ try {
             ],
             vendorName: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->patchCommerceItem($request);
 
@@ -1060,6 +1081,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-04-02T05:15:52.185Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->patchCommerceLocation($request);
 
@@ -1344,6 +1368,9 @@ try {
             type: Shared\CommerceCollectionType::Collection,
             updatedAt: Utils\Utils::parseDateTime('2024-01-17T22:11:40.268Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->updateCommerceCollection($request);
 
@@ -1409,6 +1436,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-05-08T14:12:09.565Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->updateCommerceInventory($request);
 
@@ -1491,6 +1521,9 @@ try {
             ],
             vendorName: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->updateCommerceItem($request);
 
@@ -1565,6 +1598,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-04-22T20:47:46.586Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->commerce->updateCommerceLocation($request);
 

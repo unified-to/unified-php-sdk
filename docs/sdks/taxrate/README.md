@@ -47,6 +47,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-08-06T04:09:12.755Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->taxrate->createAccountingTaxrate($request);
 
@@ -228,6 +231,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-10-17T14:16:26.961Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->taxrate->patchAccountingTaxrate($request);
 
@@ -345,6 +351,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-11-25T16:43:20.981Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->taxrate->updateAccountingTaxrate($request);
 

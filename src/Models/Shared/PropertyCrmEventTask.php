@@ -17,7 +17,7 @@ class PropertyCrmEventTask
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -25,7 +25,7 @@ class PropertyCrmEventTask
      * @var ?\DateTime $dueAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('due_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $dueAt = null;
 
     /**
@@ -33,7 +33,7 @@ class PropertyCrmEventTask
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -42,7 +42,7 @@ class PropertyCrmEventTask
      */
     #[\JMS\Serializer\Annotation\SerializedName('priority')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Priority|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?Priority $priority = null;
 
     /**
@@ -51,7 +51,7 @@ class PropertyCrmEventTask
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyCrmEventTaskStatus $status = null;
 
     /**

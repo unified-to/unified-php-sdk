@@ -18,7 +18,7 @@ class PropertyIntegrationSupportWebhookEvents
      */
     #[\JMS\Serializer\Annotation\SerializedName('created')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $created = null;
 
     /**
@@ -28,7 +28,7 @@ class PropertyIntegrationSupportWebhookEvents
      */
     #[\JMS\Serializer\Annotation\SerializedName('deleted')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $deleted = null;
 
     /**
@@ -38,7 +38,7 @@ class PropertyIntegrationSupportWebhookEvents
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $updated = null;
 
     /**

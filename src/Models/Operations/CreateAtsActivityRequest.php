@@ -28,12 +28,22 @@ class CreateAtsActivityRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\AtsActivity  $atsActivity
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\AtsActivity $atsActivity = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\AtsActivity  $atsActivity
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\AtsActivity $atsActivity = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->atsActivity = $atsActivity;
+        $this->fields = $fields;
     }
 }

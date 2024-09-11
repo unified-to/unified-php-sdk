@@ -29,6 +29,14 @@ class UpdateCommerceCollectionRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Collection
      *
      * @var string $id
@@ -37,14 +45,16 @@ class UpdateCommerceCollectionRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\CommerceCollection  $commerceCollection
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\CommerceCollection $commerceCollection = null)
+    public function __construct(string $connectionId, string $id, ?Shared\CommerceCollection $commerceCollection = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->commerceCollection = $commerceCollection;
+        $this->fields = $fields;
     }
 }

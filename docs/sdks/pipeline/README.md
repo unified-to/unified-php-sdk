@@ -50,6 +50,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-07-13T04:30:34.696Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->pipeline->createCrmPipeline($request);
 
@@ -234,6 +237,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-04-03T20:45:57.138Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->pipeline->patchCrmPipeline($request);
 
@@ -354,6 +360,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-05-08T17:12:56.773Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->pipeline->updateCrmPipeline($request);
 

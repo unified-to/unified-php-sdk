@@ -88,6 +88,9 @@ try {
             type: Shared\Type::FixedAsset,
             updatedAt: Utils\Utils::parseDateTime('2024-10-01T23:54:12.882Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->createAccountingAccount($request);
 
@@ -187,6 +190,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-09-05T13:56:20.676Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->createAccountingContact($request);
 
@@ -268,6 +274,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-05-31T14:28:49.824Z'),
             url: 'http://irresponsible-elite.biz',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->createAccountingInvoice($request);
 
@@ -335,6 +344,9 @@ try {
             taxrateId: '<value>',
             updatedAt: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->createAccountingJournal($request);
 
@@ -399,6 +411,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-08-06T04:09:12.755Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->createAccountingTaxrate($request);
 
@@ -475,6 +490,9 @@ try {
             type: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-03-28T17:20:22.599Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->createAccountingTransaction($request);
 
@@ -1364,6 +1382,9 @@ try {
             type: Shared\Type::Expense,
             updatedAt: Utils\Utils::parseDateTime('2024-04-01T20:09:00.405Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->patchAccountingAccount($request);
 
@@ -1464,6 +1485,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-11-16T14:39:43.192Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->patchAccountingContact($request);
 
@@ -1546,6 +1570,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-06-16T16:44:58.399Z'),
             url: 'http://tame-jellybeans.biz',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->patchAccountingInvoice($request);
 
@@ -1614,6 +1641,9 @@ try {
             taxrateId: '<value>',
             updatedAt: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->patchAccountingJournal($request);
 
@@ -1679,6 +1709,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-10-17T14:16:26.961Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->patchAccountingTaxrate($request);
 
@@ -1756,6 +1789,9 @@ try {
             type: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2024-08-13T08:04:48.029Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->patchAccountingTransaction($request);
 
@@ -2142,6 +2178,9 @@ try {
             type: Shared\Type::Liability,
             updatedAt: Utils\Utils::parseDateTime('2022-05-16T10:15:08.356Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->updateAccountingAccount($request);
 
@@ -2242,6 +2281,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-08-30T07:55:45.909Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->updateAccountingContact($request);
 
@@ -2324,6 +2366,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-08-21T11:15:42.077Z'),
             url: 'https://long-term-expedition.org',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->updateAccountingInvoice($request);
 
@@ -2392,6 +2437,9 @@ try {
             taxrateId: '<value>',
             updatedAt: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->updateAccountingJournal($request);
 
@@ -2457,6 +2505,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-11-25T16:43:20.981Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->updateAccountingTaxrate($request);
 
@@ -2534,6 +2585,9 @@ try {
             type: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2024-07-31T22:23:34.525Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->updateAccountingTransaction($request);
 

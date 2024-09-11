@@ -16,7 +16,7 @@ class AccountingTransaction
      * @var ?string $accountId
      */
     #[\JMS\Serializer\Annotation\SerializedName('account_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $accountId = null;
 
     /**
@@ -24,7 +24,7 @@ class AccountingTransaction
      * @var ?string $contactId
      */
     #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $contactId = null;
 
     /**
@@ -32,7 +32,7 @@ class AccountingTransaction
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -40,7 +40,7 @@ class AccountingTransaction
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -48,7 +48,7 @@ class AccountingTransaction
      * @var ?string $customerMessage
      */
     #[\JMS\Serializer\Annotation\SerializedName('customer_message')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $customerMessage = null;
 
     /**
@@ -56,7 +56,7 @@ class AccountingTransaction
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -66,7 +66,7 @@ class AccountingTransaction
      */
     #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $lineitems = null;
 
     /**
@@ -74,7 +74,7 @@ class AccountingTransaction
      * @var ?string $memo
      */
     #[\JMS\Serializer\Annotation\SerializedName('memo')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $memo = null;
 
     /**
@@ -82,7 +82,7 @@ class AccountingTransaction
      * @var ?string $paymentMethod
      */
     #[\JMS\Serializer\Annotation\SerializedName('payment_method')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $paymentMethod = null;
 
     /**
@@ -90,7 +90,7 @@ class AccountingTransaction
      * @var ?string $paymentTerms
      */
     #[\JMS\Serializer\Annotation\SerializedName('payment_terms')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $paymentTerms = null;
 
     /**
@@ -100,7 +100,7 @@ class AccountingTransaction
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -108,7 +108,7 @@ class AccountingTransaction
      * @var ?string $reference
      */
     #[\JMS\Serializer\Annotation\SerializedName('reference')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $reference = null;
 
     /**
@@ -116,7 +116,7 @@ class AccountingTransaction
      * @var ?string $splitAccountId
      */
     #[\JMS\Serializer\Annotation\SerializedName('split_account_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $splitAccountId = null;
 
     /**
@@ -124,7 +124,7 @@ class AccountingTransaction
      * @var ?float $subTotalAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('sub_total_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $subTotalAmount = null;
 
     /**
@@ -132,7 +132,7 @@ class AccountingTransaction
      * @var ?float $taxAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $taxAmount = null;
 
     /**
@@ -140,7 +140,7 @@ class AccountingTransaction
      * @var ?float $totalAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $totalAmount = null;
 
     /**
@@ -148,7 +148,7 @@ class AccountingTransaction
      * @var ?string $type
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $type = null;
 
     /**
@@ -156,7 +156,7 @@ class AccountingTransaction
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

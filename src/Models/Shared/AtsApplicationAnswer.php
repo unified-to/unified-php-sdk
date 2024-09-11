@@ -28,10 +28,10 @@ class AtsApplicationAnswer
     public string $questionId;
 
     /**
-     * @param  ?array<string>  $answers
-     * @param  ?string  $questionId
+     * @param  array<string>  $answers
+     * @param  string  $questionId
      */
-    public function __construct(?array $answers = null, ?string $questionId = null)
+    public function __construct(array $answers, string $questionId)
     {
         $this->answers = $answers;
         $this->questionId = $questionId;

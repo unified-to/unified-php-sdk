@@ -53,6 +53,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-05-12T01:01:03.120Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->customer->createTicketingCustomer($request);
 
@@ -240,6 +243,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-01-06T09:16:54.349Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->customer->patchTicketingCustomer($request);
 
@@ -363,6 +369,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-09-29T08:49:38.630Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->customer->updateTicketingCustomer($request);
 

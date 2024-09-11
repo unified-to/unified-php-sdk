@@ -18,7 +18,7 @@ class MessagingMessage
      */
     #[\JMS\Serializer\Annotation\SerializedName('attachments')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingAttachment>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $attachments = null;
 
     /**
@@ -27,7 +27,7 @@ class MessagingMessage
      */
     #[\JMS\Serializer\Annotation\SerializedName('author_member')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyMessagingMessageAuthorMember $authorMember = null;
 
     /**
@@ -35,7 +35,7 @@ class MessagingMessage
      * @var ?string $channelId
      */
     #[\JMS\Serializer\Annotation\SerializedName('channel_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $channelId = null;
 
     /**
@@ -43,7 +43,7 @@ class MessagingMessage
      * @var ?string $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $createdAt = null;
 
     /**
@@ -53,7 +53,7 @@ class MessagingMessage
      */
     #[\JMS\Serializer\Annotation\SerializedName('destination_members')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $destinationMembers = null;
 
     /**
@@ -63,7 +63,7 @@ class MessagingMessage
      */
     #[\JMS\Serializer\Annotation\SerializedName('hidden_members')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $hiddenMembers = null;
 
     /**
@@ -71,7 +71,7 @@ class MessagingMessage
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -81,7 +81,7 @@ class MessagingMessage
      */
     #[\JMS\Serializer\Annotation\SerializedName('mentioned_members')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $mentionedMembers = null;
 
     /**
@@ -89,7 +89,7 @@ class MessagingMessage
      * @var ?string $message
      */
     #[\JMS\Serializer\Annotation\SerializedName('message')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $message = null;
 
     /**
@@ -97,7 +97,7 @@ class MessagingMessage
      * @var ?string $messageHtml
      */
     #[\JMS\Serializer\Annotation\SerializedName('message_html')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $messageHtml = null;
 
     /**
@@ -105,7 +105,7 @@ class MessagingMessage
      * @var ?string $parentMessageId
      */
     #[\JMS\Serializer\Annotation\SerializedName('parent_message_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $parentMessageId = null;
 
     /**
@@ -115,7 +115,7 @@ class MessagingMessage
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -123,7 +123,7 @@ class MessagingMessage
      * @var ?string $subject
      */
     #[\JMS\Serializer\Annotation\SerializedName('subject')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $subject = null;
 
     /**
@@ -131,7 +131,7 @@ class MessagingMessage
      * @var ?string $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $updatedAt = null;
 
     /**
@@ -139,7 +139,7 @@ class MessagingMessage
      * @var ?string $webUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('web_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $webUrl = null;
 
     /**

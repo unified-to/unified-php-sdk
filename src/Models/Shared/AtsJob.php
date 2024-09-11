@@ -18,7 +18,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('addresses')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsAddress>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $addresses = null;
 
     /**
@@ -26,7 +26,7 @@ class AtsJob
      * @var ?\DateTime $closedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('closed_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $closedAt = null;
 
     /**
@@ -34,7 +34,7 @@ class AtsJob
      * @var ?string $companyId
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $companyId = null;
 
     /**
@@ -44,7 +44,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('compensation')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCompensation>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $compensation = null;
 
     /**
@@ -52,7 +52,7 @@ class AtsJob
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -62,7 +62,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('departments')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $departments = null;
 
     /**
@@ -70,7 +70,7 @@ class AtsJob
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -79,7 +79,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('employment_type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?EmploymentType $employmentType = null;
 
     /**
@@ -89,7 +89,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('hiring_manager_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $hiringManagerIds = null;
 
     /**
@@ -97,7 +97,7 @@ class AtsJob
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -105,7 +105,7 @@ class AtsJob
      * @var ?string $languageLocale
      */
     #[\JMS\Serializer\Annotation\SerializedName('language_locale')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $languageLocale = null;
 
     /**
@@ -113,7 +113,7 @@ class AtsJob
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -121,7 +121,7 @@ class AtsJob
      * @var ?float $numberOfOpenings
      */
     #[\JMS\Serializer\Annotation\SerializedName('number_of_openings')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $numberOfOpenings = null;
 
     /**
@@ -131,7 +131,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('public_job_urls')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $publicJobUrls = null;
 
     /**
@@ -141,7 +141,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('questions')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsJobQuestion>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $questions = null;
 
     /**
@@ -151,7 +151,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -161,7 +161,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('recruiter_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $recruiterIds = null;
 
     /**
@@ -169,7 +169,7 @@ class AtsJob
      * @var ?bool $remote
      */
     #[\JMS\Serializer\Annotation\SerializedName('remote')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $remote = null;
 
     /**
@@ -178,7 +178,7 @@ class AtsJob
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?AtsJobStatus $status = null;
 
     /**
@@ -186,7 +186,7 @@ class AtsJob
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

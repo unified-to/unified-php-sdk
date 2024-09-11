@@ -58,6 +58,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->task->createTaskProject($request);
 
@@ -140,6 +143,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-06-27T19:58:19.279Z'),
             url: 'https://exhausted-tweet.biz',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->task->createTaskTask($request);
 
@@ -446,6 +452,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->task->patchTaskProject($request);
 
@@ -529,6 +538,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-12-04T15:52:35.151Z'),
             url: 'http://baggy-depot.biz',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->task->patchTaskTask($request);
 
@@ -703,6 +715,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->task->updateTaskProject($request);
 
@@ -786,6 +801,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-08-14T20:29:52.594Z'),
             url: 'https://vacant-jar.name',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->task->updateTaskTask($request);
 

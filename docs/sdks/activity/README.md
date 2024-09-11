@@ -69,6 +69,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->activity->createAtsActivity($request);
 
@@ -278,6 +281,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->activity->patchAtsActivity($request);
 
@@ -417,6 +423,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->activity->updateAtsActivity($request);
 

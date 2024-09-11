@@ -78,6 +78,9 @@ try {
             userId: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->candidate->createAtsCandidate($request);
 
@@ -291,6 +294,9 @@ try {
             userId: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->candidate->patchAtsCandidate($request);
 
@@ -439,6 +445,9 @@ try {
             userId: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->candidate->updateAtsCandidate($request);
 

@@ -35,11 +35,11 @@ class CreatePassthroughRequest
     public string $path;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $path
+     * @param  string  $connectionId
+     * @param  string  $path
      * @param  ?array<string, mixed>  $requestBody
      */
-    public function __construct(?string $connectionId = null, ?string $path = null, ?array $requestBody = null)
+    public function __construct(string $connectionId, string $path, ?array $requestBody = null)
     {
         $this->connectionId = $connectionId;
         $this->path = $path;

@@ -16,7 +16,7 @@ class GenaiPrompt
      * @var ?float $maxTokens
      */
     #[\JMS\Serializer\Annotation\SerializedName('max_tokens')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $maxTokens = null;
 
     /**
@@ -26,7 +26,7 @@ class GenaiPrompt
      */
     #[\JMS\Serializer\Annotation\SerializedName('messages')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiContent>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $messages = null;
 
     /**
@@ -34,7 +34,7 @@ class GenaiPrompt
      * @var ?string $modelId
      */
     #[\JMS\Serializer\Annotation\SerializedName('model_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $modelId = null;
 
     /**
@@ -44,7 +44,7 @@ class GenaiPrompt
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -54,7 +54,7 @@ class GenaiPrompt
      */
     #[\JMS\Serializer\Annotation\SerializedName('responses')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $responses = null;
 
     /**
@@ -62,7 +62,7 @@ class GenaiPrompt
      * @var ?float $temperature
      */
     #[\JMS\Serializer\Annotation\SerializedName('temperature')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $temperature = null;
 
     /**

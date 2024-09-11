@@ -24,14 +24,14 @@ class EnrichTelephone
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichTelephoneType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?EnrichTelephoneType $type = null;
 
     /**
-     * @param  ?string  $telephone
+     * @param  string  $telephone
      * @param  ?EnrichTelephoneType  $type
      */
-    public function __construct(?string $telephone = null, ?EnrichTelephoneType $type = null)
+    public function __construct(string $telephone, ?EnrichTelephoneType $type = null)
     {
         $this->telephone = $telephone;
         $this->type = $type;

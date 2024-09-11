@@ -52,6 +52,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->project->createTaskProject($request);
 
@@ -239,6 +242,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->project->patchTaskProject($request);
 
@@ -361,6 +367,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->project->updateTaskProject($request);
 

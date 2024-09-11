@@ -62,6 +62,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-07-11T11:05:08.665Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->location->createCommerceLocation($request);
 
@@ -144,6 +147,9 @@ try {
             timezone: 'America/Argentina/Buenos_Aires',
             updatedAt: Utils\Utils::parseDateTime('2023-07-17T19:29:27.962Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->location->createHrisLocation($request);
 
@@ -450,6 +456,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-04-02T05:15:52.185Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->location->patchCommerceLocation($request);
 
@@ -533,6 +542,9 @@ try {
             timezone: 'Asia/Tehran',
             updatedAt: Utils\Utils::parseDateTime('2024-08-09T18:51:28.735Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->location->patchHrisLocation($request);
 
@@ -711,6 +723,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2022-04-22T20:47:46.586Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->location->updateCommerceLocation($request);
 
@@ -794,6 +809,9 @@ try {
             timezone: 'Asia/Kamchatka',
             updatedAt: Utils\Utils::parseDateTime('2024-02-23T01:10:31.769Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->location->updateHrisLocation($request);
 

@@ -28,6 +28,14 @@ class UpdateTicketingTicketRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Ticket
      *
      * @var string $id
@@ -36,14 +44,16 @@ class UpdateTicketingTicketRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\TicketingTicket  $ticketingTicket
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\TicketingTicket $ticketingTicket = null)
+    public function __construct(string $connectionId, string $id, ?Shared\TicketingTicket $ticketingTicket = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->ticketingTicket = $ticketingTicket;
+        $this->fields = $fields;
     }
 }

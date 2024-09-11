@@ -28,12 +28,22 @@ class CreateAtsScorecardRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\AtsScorecard  $atsScorecard
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\AtsScorecard $atsScorecard = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\AtsScorecard  $atsScorecard
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\AtsScorecard $atsScorecard = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->atsScorecard = $atsScorecard;
+        $this->fields = $fields;
     }
 }

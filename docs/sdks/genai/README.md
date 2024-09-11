@@ -44,6 +44,9 @@ try {
             ],
             temperature: 767.38,
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->genai->createGenaiPrompt($request);
 

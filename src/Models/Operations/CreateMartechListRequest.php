@@ -29,12 +29,22 @@ class CreateMartechListRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\MarketingList  $marketingList
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\MarketingList $marketingList = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\MarketingList  $marketingList
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\MarketingList $marketingList = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->marketingList = $marketingList;
+        $this->fields = $fields;
     }
 }

@@ -50,6 +50,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-01-16T07:34:21.155Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->page->createKmsPage($request);
 
@@ -236,6 +239,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-09-01T10:50:15.719Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->page->patchKmsPage($request);
 
@@ -356,6 +362,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-09-28T03:17:21.699Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->page->updateKmsPage($request);
 

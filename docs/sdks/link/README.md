@@ -53,6 +53,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-07-14T18:03:00.242Z'),
             url: 'http://baggy-shark.biz',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->link->createPaymentLink($request);
 
@@ -242,6 +245,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-07-20T09:13:52.888Z'),
             url: 'http://accurate-costume.org',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->link->patchPaymentLink($request);
 
@@ -365,6 +371,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-08-22T16:01:32.942Z'),
             url: 'https://complex-glove.com',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->link->updatePaymentLink($request);
 

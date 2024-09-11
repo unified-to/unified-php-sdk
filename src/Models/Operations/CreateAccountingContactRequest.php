@@ -28,12 +28,22 @@ class CreateAccountingContactRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\AccountingContact  $accountingContact
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\AccountingContact $accountingContact = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\AccountingContact  $accountingContact
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\AccountingContact $accountingContact = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->accountingContact = $accountingContact;
+        $this->fields = $fields;
     }
 }

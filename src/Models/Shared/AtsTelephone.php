@@ -24,14 +24,14 @@ class AtsTelephone
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsTelephoneType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?AtsTelephoneType $type = null;
 
     /**
-     * @param  ?string  $telephone
+     * @param  string  $telephone
      * @param  ?AtsTelephoneType  $type
      */
-    public function __construct(?string $telephone = null, ?AtsTelephoneType $type = null)
+    public function __construct(string $telephone, ?AtsTelephoneType $type = null)
     {
         $this->telephone = $telephone;
         $this->type = $type;

@@ -55,6 +55,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->group->createHrisGroup($request);
 
@@ -245,6 +248,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->group->patchHrisGroup($request);
 
@@ -370,6 +376,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->group->updateHrisGroup($request);
 

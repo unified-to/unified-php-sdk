@@ -23,7 +23,7 @@ class HrisPayslipDetail
      * @var ?float $companyAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $companyAmount = null;
 
     /**
@@ -31,7 +31,7 @@ class HrisPayslipDetail
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -39,7 +39,7 @@ class HrisPayslipDetail
      * @var ?float $employeeAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('employee_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $employeeAmount = null;
 
     /**
@@ -47,7 +47,7 @@ class HrisPayslipDetail
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -56,18 +56,18 @@ class HrisPayslipDetail
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisPayslipDetailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?HrisPayslipDetailType $type = null;
 
     /**
-     * @param  ?float  $amount
+     * @param  float  $amount
      * @param  ?float  $companyAmount
      * @param  ?string  $description
      * @param  ?float  $employeeAmount
      * @param  ?string  $name
      * @param  ?HrisPayslipDetailType  $type
      */
-    public function __construct(?float $amount = null, ?float $companyAmount = null, ?string $description = null, ?float $employeeAmount = null, ?string $name = null, ?HrisPayslipDetailType $type = null)
+    public function __construct(float $amount, ?float $companyAmount = null, ?string $description = null, ?float $employeeAmount = null, ?string $name = null, ?HrisPayslipDetailType $type = null)
     {
         $this->amount = $amount;
         $this->companyAmount = $companyAmount;

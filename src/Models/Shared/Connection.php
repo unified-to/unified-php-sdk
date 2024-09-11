@@ -19,7 +19,7 @@ class Connection
      */
     #[\JMS\Serializer\Annotation\SerializedName('auth')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyConnectionAuth|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyConnectionAuth $auth = null;
 
     /**
@@ -27,7 +27,7 @@ class Connection
      * @var ?string $authAwsArn
      */
     #[\JMS\Serializer\Annotation\SerializedName('auth_aws_arn')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $authAwsArn = null;
 
     /**
@@ -44,7 +44,7 @@ class Connection
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -54,7 +54,7 @@ class Connection
      */
     #[\JMS\Serializer\Annotation\SerializedName('cursors_cache')]
     #[\JMS\Serializer\Annotation\Type('array<array<string, mixed>>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $cursorsCache = null;
 
     /**
@@ -62,7 +62,7 @@ class Connection
      * @var ?string $environment
      */
     #[\JMS\Serializer\Annotation\SerializedName('environment')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $environment = null;
 
     /**
@@ -70,7 +70,7 @@ class Connection
      * @var ?string $externalXref
      */
     #[\JMS\Serializer\Annotation\SerializedName('external_xref')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $externalXref = null;
 
     /**
@@ -78,7 +78,7 @@ class Connection
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -93,7 +93,7 @@ class Connection
      * @var ?bool $isPaused
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_paused')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isPaused = null;
 
     /**
@@ -101,7 +101,7 @@ class Connection
      * @var ?\DateTime $lastHealthyAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('last_healthy_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $lastHealthyAt = null;
 
     /**
@@ -109,7 +109,7 @@ class Connection
      * @var ?\DateTime $lastUnhealthyAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('last_unhealthy_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $lastUnhealthyAt = null;
 
     /**
@@ -126,7 +126,7 @@ class Connection
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -134,13 +134,13 @@ class Connection
      * @var ?string $workspaceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $workspaceId = null;
 
     /**
-     * @param  ?array<PropertyConnectionCategories>  $categories
-     * @param  ?string  $integrationType
-     * @param  ?array<PropertyConnectionPermissions>  $permissions
+     * @param  array<PropertyConnectionCategories>  $categories
+     * @param  string  $integrationType
+     * @param  array<PropertyConnectionPermissions>  $permissions
      * @param  ?PropertyConnectionAuth  $auth
      * @param  ?string  $authAwsArn
      * @param  ?\DateTime  $createdAt
@@ -154,7 +154,7 @@ class Connection
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $workspaceId
      */
-    public function __construct(?array $categories = null, ?string $integrationType = null, ?array $permissions = null, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?array $cursorsCache = null, ?string $environment = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null)
+    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?array $cursorsCache = null, ?string $environment = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null)
     {
         $this->categories = $categories;
         $this->integrationType = $integrationType;

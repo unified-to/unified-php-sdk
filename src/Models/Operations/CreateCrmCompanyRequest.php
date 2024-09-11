@@ -29,12 +29,22 @@ class CreateCrmCompanyRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\CrmCompany  $crmCompany
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\CrmCompany $crmCompany = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\CrmCompany  $crmCompany
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\CrmCompany $crmCompany = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->crmCompany = $crmCompany;
+        $this->fields = $fields;
     }
 }

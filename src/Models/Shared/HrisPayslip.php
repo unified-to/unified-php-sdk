@@ -16,7 +16,7 @@ class HrisPayslip
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -24,7 +24,7 @@ class HrisPayslip
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -34,7 +34,7 @@ class HrisPayslip
      */
     #[\JMS\Serializer\Annotation\SerializedName('details')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisPayslipDetail>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $details = null;
 
     /**
@@ -42,7 +42,7 @@ class HrisPayslip
      * @var ?\DateTime $endAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('end_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $endAt = null;
 
     /**
@@ -50,7 +50,7 @@ class HrisPayslip
      * @var ?float $grossAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('gross_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $grossAmount = null;
 
     /**
@@ -58,7 +58,7 @@ class HrisPayslip
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -66,7 +66,7 @@ class HrisPayslip
      * @var ?float $netAmount
      */
     #[\JMS\Serializer\Annotation\SerializedName('net_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $netAmount = null;
 
     /**
@@ -74,7 +74,7 @@ class HrisPayslip
      * @var ?\DateTime $paidAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('paid_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $paidAt = null;
 
     /**
@@ -83,7 +83,7 @@ class HrisPayslip
      */
     #[\JMS\Serializer\Annotation\SerializedName('payment_type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PaymentType $paymentType = null;
 
     /**
@@ -100,7 +100,7 @@ class HrisPayslip
      * @var ?\DateTime $startAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('start_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $startAt = null;
 
     /**
@@ -108,7 +108,7 @@ class HrisPayslip
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -119,8 +119,8 @@ class HrisPayslip
     public string $userId;
 
     /**
-     * @param  ?array<string, mixed>  $raw
-     * @param  ?string  $userId
+     * @param  array<string, mixed>  $raw
+     * @param  string  $userId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?array<HrisPayslipDetail>  $details
@@ -133,7 +133,7 @@ class HrisPayslip
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(?array $raw = null, ?string $userId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
+    public function __construct(array $raw, string $userId, ?\DateTime $createdAt = null, ?string $currency = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->raw = $raw;
         $this->userId = $userId;

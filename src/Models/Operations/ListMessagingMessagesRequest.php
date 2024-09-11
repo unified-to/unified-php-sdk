@@ -86,7 +86,7 @@ class ListMessagingMessagesRequest
     public ?\DateTime $updatedGte = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $channelId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -97,7 +97,7 @@ class ListMessagingMessagesRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?string $channelId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $channelId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->channelId = $channelId;

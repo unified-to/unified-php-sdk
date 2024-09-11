@@ -28,10 +28,10 @@ class RemoveCommerceInventoryRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      */
-    public function __construct(?string $connectionId = null, ?string $id = null)
+    public function __construct(string $connectionId, string $id)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;

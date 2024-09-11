@@ -29,6 +29,14 @@ class PatchCrmEventRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Event
      *
      * @var string $id
@@ -37,14 +45,16 @@ class PatchCrmEventRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\CrmEvent  $crmEvent
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\CrmEvent $crmEvent = null)
+    public function __construct(string $connectionId, string $id, ?Shared\CrmEvent $crmEvent = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->crmEvent = $crmEvent;
+        $this->fields = $fields;
     }
 }

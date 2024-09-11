@@ -28,12 +28,22 @@ class CreatePaymentPaymentRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\PaymentPayment  $paymentPayment
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\PaymentPayment $paymentPayment = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\PaymentPayment  $paymentPayment
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\PaymentPayment $paymentPayment = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->paymentPayment = $paymentPayment;
+        $this->fields = $fields;
     }
 }

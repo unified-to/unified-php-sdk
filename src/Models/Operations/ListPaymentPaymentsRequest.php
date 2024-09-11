@@ -86,7 +86,7 @@ class ListPaymentPaymentsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $contactId
      * @param  ?array<string>  $fields
      * @param  ?string  $invoiceId
@@ -97,7 +97,7 @@ class ListPaymentPaymentsRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?string $contactId = null, ?array $fields = null, ?string $invoiceId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?string $invoiceId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->contactId = $contactId;

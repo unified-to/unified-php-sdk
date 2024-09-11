@@ -17,7 +17,7 @@ class AccountingContact
      */
     #[\JMS\Serializer\Annotation\SerializedName('billing_address')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAccountingContactBillingAddress $billingAddress = null;
 
     /**
@@ -25,7 +25,7 @@ class AccountingContact
      * @var ?string $companyName
      */
     #[\JMS\Serializer\Annotation\SerializedName('company_name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $companyName = null;
 
     /**
@@ -33,7 +33,7 @@ class AccountingContact
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -41,7 +41,7 @@ class AccountingContact
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -51,7 +51,7 @@ class AccountingContact
      */
     #[\JMS\Serializer\Annotation\SerializedName('emails')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingEmail>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
 
     /**
@@ -59,7 +59,7 @@ class AccountingContact
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -67,7 +67,7 @@ class AccountingContact
      * @var ?string $identification
      */
     #[\JMS\Serializer\Annotation\SerializedName('identification')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $identification = null;
 
     /**
@@ -75,7 +75,7 @@ class AccountingContact
      * @var ?bool $isActive
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
 
     /**
@@ -83,7 +83,7 @@ class AccountingContact
      * @var ?bool $isCustomer
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_customer')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isCustomer = null;
 
     /**
@@ -91,7 +91,7 @@ class AccountingContact
      * @var ?bool $isSupplier
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_supplier')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isSupplier = null;
 
     /**
@@ -99,7 +99,7 @@ class AccountingContact
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -109,7 +109,7 @@ class AccountingContact
      */
     #[\JMS\Serializer\Annotation\SerializedName('payment_methods')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $paymentMethods = null;
 
     /**
@@ -117,7 +117,7 @@ class AccountingContact
      * @var ?string $portalUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('portal_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $portalUrl = null;
 
     /**
@@ -127,7 +127,7 @@ class AccountingContact
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -136,7 +136,7 @@ class AccountingContact
      */
     #[\JMS\Serializer\Annotation\SerializedName('shipping_address')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactShippingAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAccountingContactShippingAddress $shippingAddress = null;
 
     /**
@@ -145,7 +145,7 @@ class AccountingContact
      */
     #[\JMS\Serializer\Annotation\SerializedName('tax_exemption')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaxExemption|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?TaxExemption $taxExemption = null;
 
     /**
@@ -153,7 +153,7 @@ class AccountingContact
      * @var ?string $taxNumber
      */
     #[\JMS\Serializer\Annotation\SerializedName('tax_number')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $taxNumber = null;
 
     /**
@@ -163,7 +163,7 @@ class AccountingContact
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTelephone>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $telephones = null;
 
     /**
@@ -171,7 +171,7 @@ class AccountingContact
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

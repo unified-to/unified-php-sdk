@@ -28,12 +28,22 @@ class CreateCommerceInventoryRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\CommerceInventory  $commerceInventory
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\CommerceInventory $commerceInventory = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\CommerceInventory  $commerceInventory
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\CommerceInventory $commerceInventory = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->commerceInventory = $commerceInventory;
+        $this->fields = $fields;
     }
 }

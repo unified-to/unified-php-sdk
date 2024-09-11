@@ -29,6 +29,14 @@ class PatchUcContactRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Contact
      *
      * @var string $id
@@ -37,14 +45,16 @@ class PatchUcContactRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\UcContact  $ucContact
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\UcContact $ucContact = null)
+    public function __construct(string $connectionId, string $id, ?Shared\UcContact $ucContact = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->ucContact = $ucContact;
+        $this->fields = $fields;
     }
 }

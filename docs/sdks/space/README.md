@@ -48,6 +48,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-10-22T08:25:37.527Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->space->createKmsSpace($request);
 
@@ -231,6 +234,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-06-18T14:48:57.689Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->space->patchKmsSpace($request);
 
@@ -349,6 +355,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-05-12T03:57:22.712Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->space->updateKmsSpace($request);
 

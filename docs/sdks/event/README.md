@@ -93,6 +93,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-12-08T21:07:05.273Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->event->createCrmEvent($request);
 
@@ -325,6 +328,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-06-28T07:08:29.227Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->event->patchCrmEvent($request);
 
@@ -488,6 +494,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-02-09T21:25:40.068Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->event->updateCrmEvent($request);
 

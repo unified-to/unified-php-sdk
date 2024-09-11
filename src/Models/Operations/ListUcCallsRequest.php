@@ -86,7 +86,7 @@ class ListUcCallsRequest
     public ?string $userId = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $contactId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -97,7 +97,7 @@ class ListUcCallsRequest
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
      */
-    public function __construct(?string $connectionId = null, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->contactId = $contactId;

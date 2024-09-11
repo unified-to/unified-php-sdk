@@ -56,6 +56,9 @@ try {
             type: Shared\Type::FixedAsset,
             updatedAt: Utils\Utils::parseDateTime('2024-10-01T23:54:12.882Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->account->createAccountingAccount($request);
 
@@ -246,6 +249,9 @@ try {
             type: Shared\Type::Expense,
             updatedAt: Utils\Utils::parseDateTime('2024-04-01T20:09:00.405Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->account->patchAccountingAccount($request);
 
@@ -372,6 +378,9 @@ try {
             type: Shared\Type::Liability,
             updatedAt: Utils\Utils::parseDateTime('2022-05-16T10:15:08.356Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->account->updateAccountingAccount($request);
 

@@ -47,6 +47,9 @@ try {
             updatedAt: '<value>',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->note->createTicketingNote($request);
 
@@ -230,6 +233,9 @@ try {
             updatedAt: '<value>',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->note->patchTicketingNote($request);
 
@@ -347,6 +353,9 @@ try {
             updatedAt: '<value>',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->note->updateTicketingNote($request);
 

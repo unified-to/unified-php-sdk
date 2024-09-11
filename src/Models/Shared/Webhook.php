@@ -17,7 +17,7 @@ class Webhook
      * @var ?\DateTime $checkedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('checked_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $checkedAt = null;
 
     /**
@@ -32,7 +32,7 @@ class Webhook
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -40,7 +40,7 @@ class Webhook
      * @var ?string $environment
      */
     #[\JMS\Serializer\Annotation\SerializedName('environment')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $environment = null;
 
     /**
@@ -56,7 +56,7 @@ class Webhook
      * @var ?string $fields
      */
     #[\JMS\Serializer\Annotation\SerializedName('fields')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $fields = null;
 
     /**
@@ -66,7 +66,7 @@ class Webhook
      */
     #[\JMS\Serializer\Annotation\SerializedName('filters')]
     #[\JMS\Serializer\Annotation\Type('array<string, string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $filters = null;
 
     /**
@@ -81,7 +81,7 @@ class Webhook
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -89,7 +89,7 @@ class Webhook
      * @var ?string $integrationType
      */
     #[\JMS\Serializer\Annotation\SerializedName('integration_type')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $integrationType = null;
 
     /**
@@ -97,7 +97,7 @@ class Webhook
      * @var ?float $interval
      */
     #[\JMS\Serializer\Annotation\SerializedName('interval')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $interval = null;
 
     /**
@@ -105,7 +105,7 @@ class Webhook
      * @var ?bool $isHealthy
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_healthy')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isHealthy = null;
 
     /**
@@ -115,7 +115,7 @@ class Webhook
      */
     #[\JMS\Serializer\Annotation\SerializedName('meta')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $meta = null;
 
     /**
@@ -131,7 +131,7 @@ class Webhook
      * @var ?float $pageMaxLimit
      */
     #[\JMS\Serializer\Annotation\SerializedName('page_max_limit')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $pageMaxLimit = null;
 
     /**
@@ -141,7 +141,7 @@ class Webhook
      */
     #[\JMS\Serializer\Annotation\SerializedName('runs')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $runs = null;
 
     /**
@@ -149,7 +149,7 @@ class Webhook
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -158,7 +158,7 @@ class Webhook
      */
     #[\JMS\Serializer\Annotation\SerializedName('webhook_type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WebhookType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?WebhookType $webhookType = null;
 
     /**
@@ -166,14 +166,14 @@ class Webhook
      * @var ?string $workspaceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $workspaceId = null;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Event  $event
-     * @param  ?string  $hookUrl
-     * @param  ?ObjectType  $objectType
+     * @param  string  $connectionId
+     * @param  Event  $event
+     * @param  string  $hookUrl
+     * @param  ObjectType  $objectType
      * @param  ?\DateTime  $checkedAt
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $environment
@@ -190,7 +190,7 @@ class Webhook
      * @param  ?WebhookType  $webhookType
      * @param  ?string  $workspaceId
      */
-    public function __construct(?string $connectionId = null, ?Event $event = null, ?string $hookUrl = null, ?ObjectType $objectType = null, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $fields = null, ?array $filters = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?array $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null)
+    public function __construct(string $connectionId, Event $event, string $hookUrl, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $fields = null, ?array $filters = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?array $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null)
     {
         $this->connectionId = $connectionId;
         $this->event = $event;

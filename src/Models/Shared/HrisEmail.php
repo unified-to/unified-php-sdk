@@ -24,14 +24,14 @@ class HrisEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?HrisEmailType $type = null;
 
     /**
-     * @param  ?string  $email
+     * @param  string  $email
      * @param  ?HrisEmailType  $type
      */
-    public function __construct(?string $email = null, ?HrisEmailType $type = null)
+    public function __construct(string $email, ?HrisEmailType $type = null)
     {
         $this->email = $email;
         $this->type = $type;

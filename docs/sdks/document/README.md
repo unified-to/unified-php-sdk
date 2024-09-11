@@ -51,6 +51,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-11-21T14:39:08.865Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->document->createAtsDocument($request);
 
@@ -238,6 +241,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-06-19T12:06:56.902Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->document->patchAtsDocument($request);
 
@@ -359,6 +365,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-09-09T02:38:30.011Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->document->updateAtsDocument($request);
 

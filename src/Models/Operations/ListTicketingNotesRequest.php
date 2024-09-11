@@ -86,7 +86,7 @@ class ListTicketingNotesRequest
     public ?\DateTime $updatedGte = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $customerId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -97,7 +97,7 @@ class ListTicketingNotesRequest
      * @param  ?string  $ticketId
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?string $connectionId = null, ?string $customerId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $ticketId = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $customerId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $ticketId = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->customerId = $customerId;

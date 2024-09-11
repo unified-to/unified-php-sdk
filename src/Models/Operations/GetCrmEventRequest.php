@@ -36,11 +36,11 @@ class GetCrmEventRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?array $fields = null)
+    public function __construct(string $connectionId, string $id, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;

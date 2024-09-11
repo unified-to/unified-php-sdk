@@ -28,12 +28,22 @@ class CreateAccountingInvoiceRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\AccountingInvoice  $accountingInvoice
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\AccountingInvoice $accountingInvoice = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\AccountingInvoice  $accountingInvoice
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\AccountingInvoice $accountingInvoice = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->accountingInvoice = $accountingInvoice;
+        $this->fields = $fields;
     }
 }

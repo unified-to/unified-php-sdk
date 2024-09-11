@@ -30,7 +30,7 @@ class CommerceItemOption
      * @var ?float $position
      */
     #[\JMS\Serializer\Annotation\SerializedName('position')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $position = null;
 
     /**
@@ -43,12 +43,12 @@ class CommerceItemOption
     public array $values;
 
     /**
-     * @param  ?string  $id
-     * @param  ?string  $name
-     * @param  ?array<string>  $values
+     * @param  string  $id
+     * @param  string  $name
+     * @param  array<string>  $values
      * @param  ?float  $position
      */
-    public function __construct(?string $id = null, ?string $name = null, ?array $values = null, ?float $position = null)
+    public function __construct(string $id, string $name, array $values, ?float $position = null)
     {
         $this->id = $id;
         $this->name = $name;

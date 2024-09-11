@@ -23,7 +23,7 @@ class AtsEmail
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -32,15 +32,15 @@ class AtsEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsEmailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?AtsEmailType $type = null;
 
     /**
-     * @param  ?string  $email
+     * @param  string  $email
      * @param  ?string  $name
      * @param  ?AtsEmailType  $type
      */
-    public function __construct(?string $email = null, ?string $name = null, ?AtsEmailType $type = null)
+    public function __construct(string $email, ?string $name = null, ?AtsEmailType $type = null)
     {
         $this->email = $email;
         $this->name = $name;

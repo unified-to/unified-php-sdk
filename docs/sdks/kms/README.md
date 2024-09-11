@@ -56,6 +56,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-01-16T07:34:21.155Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->kms->createKmsPage($request);
 
@@ -121,6 +124,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-10-22T08:25:37.527Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->kms->createKmsSpace($request);
 
@@ -424,6 +430,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-09-01T10:50:15.719Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->kms->patchKmsPage($request);
 
@@ -490,6 +499,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-06-18T14:48:57.689Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->kms->patchKmsSpace($request);
 
@@ -662,6 +674,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-09-28T03:17:21.699Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->kms->updateKmsPage($request);
 
@@ -728,6 +743,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2022-05-12T03:57:22.712Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->kms->updateKmsSpace($request);
 

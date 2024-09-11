@@ -28,6 +28,14 @@ class PatchKmsPageRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Page
      *
      * @var string $id
@@ -36,14 +44,16 @@ class PatchKmsPageRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\KmsPage  $kmsPage
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\KmsPage $kmsPage = null)
+    public function __construct(string $connectionId, string $id, ?Shared\KmsPage $kmsPage = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->kmsPage = $kmsPage;
+        $this->fields = $fields;
     }
 }

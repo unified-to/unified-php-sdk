@@ -16,7 +16,7 @@ class AtsScorecard
      * @var ?string $applicationId
      */
     #[\JMS\Serializer\Annotation\SerializedName('application_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $applicationId = null;
 
     /**
@@ -24,7 +24,7 @@ class AtsScorecard
      * @var ?string $candidateId
      */
     #[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $candidateId = null;
 
     /**
@@ -32,7 +32,7 @@ class AtsScorecard
      * @var ?string $comment
      */
     #[\JMS\Serializer\Annotation\SerializedName('comment')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $comment = null;
 
     /**
@@ -40,7 +40,7 @@ class AtsScorecard
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -48,7 +48,7 @@ class AtsScorecard
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -56,7 +56,7 @@ class AtsScorecard
      * @var ?string $interviewId
      */
     #[\JMS\Serializer\Annotation\SerializedName('interview_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $interviewId = null;
 
     /**
@@ -64,7 +64,7 @@ class AtsScorecard
      * @var ?string $interviewerId
      */
     #[\JMS\Serializer\Annotation\SerializedName('interviewer_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $interviewerId = null;
 
     /**
@@ -72,7 +72,7 @@ class AtsScorecard
      * @var ?string $jobId
      */
     #[\JMS\Serializer\Annotation\SerializedName('job_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $jobId = null;
 
     /**
@@ -82,7 +82,7 @@ class AtsScorecard
      */
     #[\JMS\Serializer\Annotation\SerializedName('questions')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $questions = null;
 
     /**
@@ -92,7 +92,7 @@ class AtsScorecard
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -101,7 +101,7 @@ class AtsScorecard
      */
     #[\JMS\Serializer\Annotation\SerializedName('recommendation')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Recommendation|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?Recommendation $recommendation = null;
 
     /**
@@ -109,7 +109,7 @@ class AtsScorecard
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

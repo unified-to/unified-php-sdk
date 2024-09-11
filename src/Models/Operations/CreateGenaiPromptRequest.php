@@ -28,12 +28,22 @@ class CreateGenaiPromptRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\GenaiPrompt  $genaiPrompt
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\GenaiPrompt $genaiPrompt = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\GenaiPrompt  $genaiPrompt
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\GenaiPrompt $genaiPrompt = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->genaiPrompt = $genaiPrompt;
+        $this->fields = $fields;
     }
 }

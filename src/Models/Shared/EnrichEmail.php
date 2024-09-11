@@ -23,7 +23,7 @@ class EnrichEmail
      * @var ?bool $isVerified
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_verified')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isVerified = null;
 
     /**
@@ -32,15 +32,15 @@ class EnrichEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichEmailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?EnrichEmailType $type = null;
 
     /**
-     * @param  ?string  $email
+     * @param  string  $email
      * @param  ?bool  $isVerified
      * @param  ?EnrichEmailType  $type
      */
-    public function __construct(?string $email = null, ?bool $isVerified = null, ?EnrichEmailType $type = null)
+    public function __construct(string $email, ?bool $isVerified = null, ?EnrichEmailType $type = null)
     {
         $this->email = $email;
         $this->isVerified = $isVerified;

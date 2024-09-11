@@ -40,12 +40,12 @@ class PatchTicketingTicketResponse
     public ?Shared\TicketingTicket $ticketingTicket = null;
 
     /**
-     * @param  ?string  $contentType
-     * @param  ?int  $statusCode
-     * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  string  $contentType
+     * @param  int  $statusCode
+     * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?Shared\TicketingTicket  $ticketingTicket
      */
-    public function __construct(?string $contentType = null, ?int $statusCode = null, ?\Psr\Http\Message\ResponseInterface $rawResponse = null, ?Shared\TicketingTicket $ticketingTicket = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\TicketingTicket $ticketingTicket = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;

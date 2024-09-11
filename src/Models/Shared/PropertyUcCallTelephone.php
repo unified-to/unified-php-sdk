@@ -25,14 +25,14 @@ class PropertyUcCallTelephone
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephoneType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUcCallTelephoneType $type = null;
 
     /**
-     * @param  ?string  $telephone
+     * @param  string  $telephone
      * @param  ?PropertyUcCallTelephoneType  $type
      */
-    public function __construct(?string $telephone = null, ?PropertyUcCallTelephoneType $type = null)
+    public function __construct(string $telephone, ?PropertyUcCallTelephoneType $type = null)
     {
         $this->telephone = $telephone;
         $this->type = $type;

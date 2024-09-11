@@ -53,6 +53,9 @@ try {
             recommendation: Shared\Recommendation::Yes,
             updatedAt: Utils\Utils::parseDateTime('2024-12-16T16:10:16.235Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->scorecard->createAtsScorecard($request);
 
@@ -244,6 +247,9 @@ try {
             recommendation: Shared\Recommendation::Yes,
             updatedAt: Utils\Utils::parseDateTime('2022-08-07T14:14:42.219Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->scorecard->patchAtsScorecard($request);
 
@@ -367,6 +373,9 @@ try {
             recommendation: Shared\Recommendation::Yes,
             updatedAt: Utils\Utils::parseDateTime('2024-03-16T12:20:06.330Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->scorecard->updateAtsScorecard($request);
 

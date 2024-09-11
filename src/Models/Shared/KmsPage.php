@@ -16,7 +16,7 @@ class KmsPage
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -38,7 +38,7 @@ class KmsPage
      * @var ?bool $isActive
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
 
     /**
@@ -46,7 +46,7 @@ class KmsPage
      * @var ?string $parentPageId
      */
     #[\JMS\Serializer\Annotation\SerializedName('parent_page_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $parentPageId = null;
 
     /**
@@ -56,7 +56,7 @@ class KmsPage
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -86,7 +86,7 @@ class KmsPage
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -94,15 +94,15 @@ class KmsPage
      * @var ?string $userId
      */
     #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $userId = null;
 
     /**
-     * @param  ?string  $downloadUrl
-     * @param  ?string  $id
-     * @param  ?string  $spaceId
-     * @param  ?string  $title
-     * @param  ?KmsPageType  $type
+     * @param  string  $downloadUrl
+     * @param  string  $id
+     * @param  string  $spaceId
+     * @param  string  $title
+     * @param  KmsPageType  $type
      * @param  ?\DateTime  $createdAt
      * @param  ?bool  $isActive
      * @param  ?string  $parentPageId
@@ -110,7 +110,7 @@ class KmsPage
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(?string $downloadUrl = null, ?string $id = null, ?string $spaceId = null, ?string $title = null, ?KmsPageType $type = null, ?\DateTime $createdAt = null, ?bool $isActive = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $downloadUrl, string $id, string $spaceId, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?bool $isActive = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->downloadUrl = $downloadUrl;
         $this->id = $id;

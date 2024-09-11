@@ -29,12 +29,22 @@ class CreateMartechMemberRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\MarketingMember  $marketingMember
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\MarketingMember $marketingMember = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\MarketingMember  $marketingMember
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\MarketingMember $marketingMember = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->marketingMember = $marketingMember;
+        $this->fields = $fields;
     }
 }

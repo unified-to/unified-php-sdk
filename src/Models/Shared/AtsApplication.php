@@ -18,7 +18,7 @@ class AtsApplication
      */
     #[\JMS\Serializer\Annotation\SerializedName('answers')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsApplicationAnswer>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $answers = null;
 
     /**
@@ -26,7 +26,7 @@ class AtsApplication
      * @var ?\DateTime $appliedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('applied_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $appliedAt = null;
 
     /**
@@ -34,7 +34,7 @@ class AtsApplication
      * @var ?string $candidateId
      */
     #[\JMS\Serializer\Annotation\SerializedName('candidate_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $candidateId = null;
 
     /**
@@ -42,7 +42,7 @@ class AtsApplication
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -50,7 +50,7 @@ class AtsApplication
      * @var ?\DateTime $hiredAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('hired_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $hiredAt = null;
 
     /**
@@ -58,7 +58,7 @@ class AtsApplication
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -66,15 +66,25 @@ class AtsApplication
      * @var ?string $jobId
      */
     #[\JMS\Serializer\Annotation\SerializedName('job_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $jobId = null;
+
+    /**
+     * $offers
+     *
+     * @var ?array<AtsOffer> $offers
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('offers')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsOffer>|null')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?array $offers = null;
 
     /**
      *
      * @var ?string $originalStatus
      */
     #[\JMS\Serializer\Annotation\SerializedName('original_status')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $originalStatus = null;
 
     /**
@@ -84,7 +94,7 @@ class AtsApplication
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -92,7 +102,7 @@ class AtsApplication
      * @var ?\DateTime $rejectedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('rejected_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $rejectedAt = null;
 
     /**
@@ -100,7 +110,7 @@ class AtsApplication
      * @var ?string $rejectedReason
      */
     #[\JMS\Serializer\Annotation\SerializedName('rejected_reason')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $rejectedReason = null;
 
     /**
@@ -108,7 +118,7 @@ class AtsApplication
      * @var ?string $source
      */
     #[\JMS\Serializer\Annotation\SerializedName('source')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $source = null;
 
     /**
@@ -117,7 +127,7 @@ class AtsApplication
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsApplicationStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?AtsApplicationStatus $status = null;
 
     /**
@@ -125,7 +135,7 @@ class AtsApplication
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -136,6 +146,7 @@ class AtsApplication
      * @param  ?\DateTime  $hiredAt
      * @param  ?string  $id
      * @param  ?string  $jobId
+     * @param  ?array<AtsOffer>  $offers
      * @param  ?string  $originalStatus
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $rejectedAt
@@ -144,7 +155,7 @@ class AtsApplication
      * @param  ?AtsApplicationStatus  $status
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?string $originalStatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $offers = null, ?string $originalStatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->answers = $answers;
         $this->appliedAt = $appliedAt;
@@ -153,6 +164,7 @@ class AtsApplication
         $this->hiredAt = $hiredAt;
         $this->id = $id;
         $this->jobId = $jobId;
+        $this->offers = $offers;
         $this->originalStatus = $originalStatus;
         $this->raw = $raw;
         $this->rejectedAt = $rejectedAt;

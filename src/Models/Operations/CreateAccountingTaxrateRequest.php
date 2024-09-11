@@ -28,12 +28,22 @@ class CreateAccountingTaxrateRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\AccountingTaxrate  $accountingTaxrate
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\AccountingTaxrate $accountingTaxrate = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\AccountingTaxrate  $accountingTaxrate
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\AccountingTaxrate $accountingTaxrate = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->accountingTaxrate = $accountingTaxrate;
+        $this->fields = $fields;
     }
 }

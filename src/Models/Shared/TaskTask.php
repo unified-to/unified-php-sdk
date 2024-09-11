@@ -18,7 +18,7 @@ class TaskTask
      */
     #[\JMS\Serializer\Annotation\SerializedName('assigned_user_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $assignedUserIds = null;
 
     /**
@@ -26,7 +26,7 @@ class TaskTask
      * @var ?\DateTime $completedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('completed_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $completedAt = null;
 
     /**
@@ -34,7 +34,7 @@ class TaskTask
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -42,7 +42,7 @@ class TaskTask
      * @var ?string $creatorUserId
      */
     #[\JMS\Serializer\Annotation\SerializedName('creator_user_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $creatorUserId = null;
 
     /**
@@ -50,7 +50,7 @@ class TaskTask
      * @var ?\DateTime $dueAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('due_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $dueAt = null;
 
     /**
@@ -60,7 +60,7 @@ class TaskTask
      */
     #[\JMS\Serializer\Annotation\SerializedName('follower_user_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $followerUserIds = null;
 
     /**
@@ -70,7 +70,7 @@ class TaskTask
      */
     #[\JMS\Serializer\Annotation\SerializedName('group_ids')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $groupIds = null;
 
     /**
@@ -78,7 +78,7 @@ class TaskTask
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -86,7 +86,7 @@ class TaskTask
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -94,7 +94,7 @@ class TaskTask
      * @var ?string $notes
      */
     #[\JMS\Serializer\Annotation\SerializedName('notes')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $notes = null;
 
     /**
@@ -102,7 +102,7 @@ class TaskTask
      * @var ?string $parentId
      */
     #[\JMS\Serializer\Annotation\SerializedName('parent_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $parentId = null;
 
     /**
@@ -110,7 +110,7 @@ class TaskTask
      * @var ?string $priority
      */
     #[\JMS\Serializer\Annotation\SerializedName('priority')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $priority = null;
 
     /**
@@ -118,7 +118,7 @@ class TaskTask
      * @var ?string $projectId
      */
     #[\JMS\Serializer\Annotation\SerializedName('project_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $projectId = null;
 
     /**
@@ -128,7 +128,7 @@ class TaskTask
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -137,7 +137,7 @@ class TaskTask
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaskTaskStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?TaskTaskStatus $status = null;
 
     /**
@@ -147,7 +147,7 @@ class TaskTask
      */
     #[\JMS\Serializer\Annotation\SerializedName('tags')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $tags = null;
 
     /**
@@ -155,7 +155,7 @@ class TaskTask
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -163,7 +163,7 @@ class TaskTask
      * @var ?string $url
      */
     #[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $url = null;
 
     /**

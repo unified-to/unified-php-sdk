@@ -16,7 +16,7 @@ class PaymentPayout
      * @var ?string $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $createdAt = null;
 
     /**
@@ -24,7 +24,7 @@ class PaymentPayout
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -32,7 +32,7 @@ class PaymentPayout
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -40,7 +40,7 @@ class PaymentPayout
      * @var ?string $notes
      */
     #[\JMS\Serializer\Annotation\SerializedName('notes')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $notes = null;
 
     /**
@@ -50,7 +50,7 @@ class PaymentPayout
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -59,7 +59,7 @@ class PaymentPayout
      */
     #[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentPayoutStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PaymentPayoutStatus $status = null;
 
     /**
@@ -74,11 +74,11 @@ class PaymentPayout
      * @var ?string $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $updatedAt = null;
 
     /**
-     * @param  ?float  $totalAmount
+     * @param  float  $totalAmount
      * @param  ?string  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
@@ -87,7 +87,7 @@ class PaymentPayout
      * @param  ?PaymentPayoutStatus  $status
      * @param  ?string  $updatedAt
      */
-    public function __construct(?float $totalAmount = null, ?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?string $updatedAt = null)
+    public function __construct(float $totalAmount, ?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?string $updatedAt = null)
     {
         $this->totalAmount = $totalAmount;
         $this->createdAt = $createdAt;

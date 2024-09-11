@@ -28,6 +28,14 @@ class PatchAtsJobRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Job
      *
      * @var string $id
@@ -36,14 +44,16 @@ class PatchAtsJobRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\AtsJob  $atsJob
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\AtsJob $atsJob = null)
+    public function __construct(string $connectionId, string $id, ?Shared\AtsJob $atsJob = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->atsJob = $atsJob;
+        $this->fields = $fields;
     }
 }

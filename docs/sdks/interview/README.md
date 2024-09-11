@@ -54,6 +54,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->interview->createAtsInterview($request);
 
@@ -243,6 +246,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->interview->patchAtsInterview($request);
 
@@ -367,6 +373,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->interview->updateAtsInterview($request);
 

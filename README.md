@@ -59,6 +59,9 @@ try {
             type: Shared\Type::FixedAsset,
             updatedAt: Utils\Utils::parseDateTime('2024-10-01T23:54:12.882Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->accounting->createAccountingAccount($request);
 

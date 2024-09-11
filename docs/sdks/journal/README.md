@@ -50,6 +50,9 @@ try {
             taxrateId: '<value>',
             updatedAt: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->journal->createAccountingJournal($request);
 
@@ -234,6 +237,9 @@ try {
             taxrateId: '<value>',
             updatedAt: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->journal->patchAccountingJournal($request);
 
@@ -354,6 +360,9 @@ try {
             taxrateId: '<value>',
             updatedAt: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->journal->updateAccountingJournal($request);
 

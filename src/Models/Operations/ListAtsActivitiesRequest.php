@@ -114,7 +114,7 @@ class ListAtsActivitiesRequest
     public ?string $userId = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $applicationId
      * @param  ?string  $candidateId
      * @param  ?string  $documentId
@@ -129,7 +129,7 @@ class ListAtsActivitiesRequest
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
      */
-    public function __construct(?string $connectionId = null, ?string $applicationId = null, ?string $candidateId = null, ?string $documentId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?string $documentId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->applicationId = $applicationId;

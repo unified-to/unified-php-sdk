@@ -28,6 +28,14 @@ class PatchPaymentLinkRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the Link
      *
      * @var string $id
@@ -36,14 +44,16 @@ class PatchPaymentLinkRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\PaymentLink  $paymentLink
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\PaymentLink $paymentLink = null)
+    public function __construct(string $connectionId, string $id, ?Shared\PaymentLink $paymentLink = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->paymentLink = $paymentLink;
+        $this->fields = $fields;
     }
 }

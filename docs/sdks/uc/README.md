@@ -53,6 +53,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-02-27T10:35:00.674Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->uc->createUcContact($request);
 
@@ -303,6 +306,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2023-10-21T22:08:30.034Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->uc->patchUcContact($request);
 
@@ -425,6 +431,9 @@ try {
             title: '<value>',
             updatedAt: Utils\Utils::parseDateTime('2022-10-11T10:56:34.889Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->uc->updateUcContact($request);
 

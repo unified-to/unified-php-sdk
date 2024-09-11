@@ -24,14 +24,14 @@ class GenaiContent
      */
     #[\JMS\Serializer\Annotation\SerializedName('role')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Role|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?Role $role = null;
 
     /**
-     * @param  ?string  $content
+     * @param  string  $content
      * @param  ?Role  $role
      */
-    public function __construct(?string $content = null, ?Role $role = null)
+    public function __construct(string $content, ?Role $role = null)
     {
         $this->content = $content;
         $this->role = $role;

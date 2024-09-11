@@ -29,12 +29,22 @@ class CreateUcContactRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\UcContact  $ucContact
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\UcContact $ucContact = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\UcContact  $ucContact
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\UcContact $ucContact = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->ucContact = $ucContact;
+        $this->fields = $fields;
     }
 }

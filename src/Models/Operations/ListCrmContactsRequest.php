@@ -93,7 +93,7 @@ class ListCrmContactsRequest
     public ?string $userId = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $companyId
      * @param  ?string  $dealId
      * @param  ?array<string>  $fields
@@ -105,7 +105,7 @@ class ListCrmContactsRequest
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
      */
-    public function __construct(?string $connectionId = null, ?string $companyId = null, ?string $dealId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?string $dealId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;

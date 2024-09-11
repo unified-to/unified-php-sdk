@@ -28,12 +28,22 @@ class CreateAtsDocumentRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\AtsDocument  $atsDocument
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\AtsDocument $atsDocument = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\AtsDocument  $atsDocument
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\AtsDocument $atsDocument = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->atsDocument = $atsDocument;
+        $this->fields = $fields;
     }
 }

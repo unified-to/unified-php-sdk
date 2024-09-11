@@ -23,7 +23,7 @@ class PropertyAtsActivityFrom
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -32,15 +32,15 @@ class PropertyAtsActivityFrom
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFromType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAtsActivityFromType $type = null;
 
     /**
-     * @param  ?string  $email
+     * @param  string  $email
      * @param  ?string  $name
      * @param  ?PropertyAtsActivityFromType  $type
      */
-    public function __construct(?string $email = null, ?string $name = null, ?PropertyAtsActivityFromType $type = null)
+    public function __construct(string $email, ?string $name = null, ?PropertyAtsActivityFromType $type = null)
     {
         $this->email = $email;
         $this->name = $name;

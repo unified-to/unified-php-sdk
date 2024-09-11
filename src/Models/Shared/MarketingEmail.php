@@ -24,14 +24,14 @@ class MarketingEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingEmailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?MarketingEmailType $type = null;
 
     /**
-     * @param  ?string  $email
+     * @param  string  $email
      * @param  ?MarketingEmailType  $type
      */
-    public function __construct(?string $email = null, ?MarketingEmailType $type = null)
+    public function __construct(string $email, ?MarketingEmailType $type = null)
     {
         $this->email = $email;
         $this->type = $type;

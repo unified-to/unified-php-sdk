@@ -23,7 +23,7 @@ class CommerceInventory
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -31,7 +31,7 @@ class CommerceInventory
      * @var ?string $itemId
      */
     #[\JMS\Serializer\Annotation\SerializedName('item_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $itemId = null;
 
     /**
@@ -39,7 +39,7 @@ class CommerceInventory
      * @var ?string $itemOptionId
      */
     #[\JMS\Serializer\Annotation\SerializedName('item_option_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $itemOptionId = null;
 
     /**
@@ -47,7 +47,7 @@ class CommerceInventory
      * @var ?string $itemVariantId
      */
     #[\JMS\Serializer\Annotation\SerializedName('item_variant_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $itemVariantId = null;
 
     /**
@@ -55,7 +55,7 @@ class CommerceInventory
      * @var ?string $locationId
      */
     #[\JMS\Serializer\Annotation\SerializedName('location_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $locationId = null;
 
     /**
@@ -65,7 +65,7 @@ class CommerceInventory
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -73,11 +73,11 @@ class CommerceInventory
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?float  $available
+     * @param  float  $available
      * @param  ?string  $id
      * @param  ?string  $itemId
      * @param  ?string  $itemOptionId
@@ -86,7 +86,7 @@ class CommerceInventory
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(?float $available = null, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(float $available, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->available = $available;
         $this->id = $id;

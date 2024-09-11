@@ -108,6 +108,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->createAtsActivity($request);
 
@@ -170,6 +173,9 @@ try {
             hiredAt: Utils\Utils::parseDateTime('2023-01-19T06:26:51.678Z'),
             id: '<id>',
             jobId: '<value>',
+            offers: [
+                new Shared\AtsOffer,
+            ],
             originalStatus: '<value>',
             raw: [
                 'Mandatory' => '<value>',
@@ -180,6 +186,9 @@ try {
             status: Shared\AtsApplicationStatus::ThirdInterview,
             updatedAt: Utils\Utils::parseDateTime('2024-01-12T22:56:51.478Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->createAtsApplication($request);
 
@@ -275,6 +284,9 @@ try {
             userId: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->createAtsCandidate($request);
 
@@ -343,6 +355,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2024-11-21T14:39:08.865Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->createAtsDocument($request);
 
@@ -414,6 +429,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->createAtsInterview($request);
 
@@ -504,6 +522,9 @@ try {
             status: Shared\AtsJobStatus::Open,
             updatedAt: Utils\Utils::parseDateTime('2024-11-18T02:03:06.250Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->createAtsJob($request);
 
@@ -574,6 +595,9 @@ try {
             recommendation: Shared\Recommendation::Yes,
             updatedAt: Utils\Utils::parseDateTime('2024-12-16T16:10:16.235Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->createAtsScorecard($request);
 
@@ -1667,6 +1691,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->patchAtsActivity($request);
 
@@ -1730,6 +1757,9 @@ try {
             hiredAt: Utils\Utils::parseDateTime('2023-12-05T05:20:09.174Z'),
             id: '<id>',
             jobId: '<value>',
+            offers: [
+                new Shared\AtsOffer,
+            ],
             originalStatus: '<value>',
             raw: [
                 'grey' => '<value>',
@@ -1740,6 +1770,9 @@ try {
             status: Shared\AtsApplicationStatus::Accepted,
             updatedAt: Utils\Utils::parseDateTime('2022-11-18T16:36:51.738Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->patchAtsApplication($request);
 
@@ -1836,6 +1869,9 @@ try {
             userId: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->patchAtsCandidate($request);
 
@@ -1905,6 +1941,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-06-19T12:06:56.902Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->patchAtsDocument($request);
 
@@ -1977,6 +2016,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->patchAtsInterview($request);
 
@@ -2068,6 +2110,9 @@ try {
             status: Shared\AtsJobStatus::Closed,
             updatedAt: Utils\Utils::parseDateTime('2023-08-08T17:34:59.133Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->patchAtsJob($request);
 
@@ -2139,6 +2184,9 @@ try {
             recommendation: Shared\Recommendation::Yes,
             updatedAt: Utils\Utils::parseDateTime('2022-08-07T14:14:42.219Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->patchAtsScorecard($request);
 
@@ -2590,6 +2638,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->updateAtsActivity($request);
 
@@ -2653,6 +2704,9 @@ try {
             hiredAt: Utils\Utils::parseDateTime('2022-02-09T08:57:01.906Z'),
             id: '<id>',
             jobId: '<value>',
+            offers: [
+                new Shared\AtsOffer,
+            ],
             originalStatus: '<value>',
             raw: [
                 'Minivan' => '<value>',
@@ -2663,6 +2717,9 @@ try {
             status: Shared\AtsApplicationStatus::Declined,
             updatedAt: Utils\Utils::parseDateTime('2024-08-09T12:26:06.546Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->updateAtsApplication($request);
 
@@ -2759,6 +2816,9 @@ try {
             userId: '<value>',
             webUrl: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->updateAtsCandidate($request);
 
@@ -2828,6 +2888,9 @@ try {
             updatedAt: Utils\Utils::parseDateTime('2023-09-09T02:38:30.011Z'),
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->updateAtsDocument($request);
 
@@ -2900,6 +2963,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->updateAtsInterview($request);
 
@@ -2991,6 +3057,9 @@ try {
             status: Shared\AtsJobStatus::Draft,
             updatedAt: Utils\Utils::parseDateTime('2024-01-04T04:44:52.139Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->updateAtsJob($request);
 
@@ -3062,6 +3131,9 @@ try {
             recommendation: Shared\Recommendation::Yes,
             updatedAt: Utils\Utils::parseDateTime('2024-03-16T12:20:06.330Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ats->updateAtsScorecard($request);
 

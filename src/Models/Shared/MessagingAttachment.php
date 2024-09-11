@@ -16,7 +16,7 @@ class MessagingAttachment
      * @var ?string $contentType
      */
     #[\JMS\Serializer\Annotation\SerializedName('content_type')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $contentType = null;
 
     /**
@@ -24,7 +24,7 @@ class MessagingAttachment
      * @var ?string $downloadUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('download_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $downloadUrl = null;
 
     /**
@@ -32,7 +32,7 @@ class MessagingAttachment
      * @var ?string $filename
      */
     #[\JMS\Serializer\Annotation\SerializedName('filename')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $filename = null;
 
     /**
@@ -40,7 +40,7 @@ class MessagingAttachment
      * @var ?string $messageId
      */
     #[\JMS\Serializer\Annotation\SerializedName('message_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $messageId = null;
 
     /**
@@ -48,7 +48,7 @@ class MessagingAttachment
      * @var ?float $size
      */
     #[\JMS\Serializer\Annotation\SerializedName('size')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $size = null;
 
     /**

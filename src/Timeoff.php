@@ -14,7 +14,6 @@ use Unified\Unified_to\Models\Operations;
 class Timeoff
 {
     private SDKConfiguration $sdkConfiguration;
-
     /**
      * @param  SDKConfiguration  $sdkConfig
      */
@@ -110,4 +109,5 @@ class Timeoff
             throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
+
 }

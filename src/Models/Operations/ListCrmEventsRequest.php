@@ -107,7 +107,7 @@ class ListCrmEventsRequest
     public ?string $userId = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $companyId
      * @param  ?string  $contactId
      * @param  ?string  $dealId
@@ -121,7 +121,7 @@ class ListCrmEventsRequest
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
      */
-    public function __construct(?string $connectionId = null, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;

@@ -87,6 +87,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->company->createCrmCompany($request);
 
@@ -159,6 +162,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2024-12-14T07:52:45.369Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->company->createHrisCompany($request);
 
@@ -659,6 +665,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->company->patchCrmCompany($request);
 
@@ -732,6 +741,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-08-30T10:26:34.618Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->company->patchHrisCompany($request);
 
@@ -932,6 +944,9 @@ try {
                 '<value>',
             ],
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->company->updateCrmCompany($request);
 
@@ -1005,6 +1020,9 @@ try {
             ],
             updatedAt: Utils\Utils::parseDateTime('2023-09-01T17:36:17.033Z'),
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->company->updateHrisCompany($request);
 

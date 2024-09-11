@@ -28,12 +28,22 @@ class CreateAtsApplicationRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\AtsApplication  $atsApplication
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\AtsApplication $atsApplication = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\AtsApplication  $atsApplication
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\AtsApplication $atsApplication = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->atsApplication = $atsApplication;
+        $this->fields = $fields;
     }
 }

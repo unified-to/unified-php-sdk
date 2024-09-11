@@ -16,7 +16,7 @@ class AtsCompensation
      * @var ?string $currency
      */
     #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -25,7 +25,7 @@ class AtsCompensation
      */
     #[\JMS\Serializer\Annotation\SerializedName('frequency')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Frequency|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?Frequency $frequency = null;
 
     /**
@@ -33,7 +33,7 @@ class AtsCompensation
      * @var ?float $max
      */
     #[\JMS\Serializer\Annotation\SerializedName('max')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $max = null;
 
     /**
@@ -41,7 +41,7 @@ class AtsCompensation
      * @var ?float $min
      */
     #[\JMS\Serializer\Annotation\SerializedName('min')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $min = null;
 
     /**
@@ -50,7 +50,7 @@ class AtsCompensation
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCompensationType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?AtsCompensationType $type = null;
 
     /**

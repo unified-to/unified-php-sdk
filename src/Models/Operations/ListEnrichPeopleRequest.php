@@ -60,14 +60,14 @@ class ListEnrichPeopleRequest
     public ?string $twitter = null;
 
     /**
-     * @param  ?string  $connectionId
+     * @param  string  $connectionId
      * @param  ?string  $companyName
      * @param  ?string  $email
      * @param  ?string  $linkedinUrl
      * @param  ?string  $name
      * @param  ?string  $twitter
      */
-    public function __construct(?string $connectionId = null, ?string $companyName = null, ?string $email = null, ?string $linkedinUrl = null, ?string $name = null, ?string $twitter = null)
+    public function __construct(string $connectionId, ?string $companyName = null, ?string $email = null, ?string $linkedinUrl = null, ?string $name = null, ?string $twitter = null)
     {
         $this->connectionId = $connectionId;
         $this->companyName = $companyName;

@@ -17,7 +17,7 @@ class Integration
      * @var ?float $activeHealthyConnections
      */
     #[\JMS\Serializer\Annotation\SerializedName('active_healthy_connections')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $activeHealthyConnections = null;
 
     /**
@@ -27,7 +27,7 @@ class Integration
      */
     #[\JMS\Serializer\Annotation\SerializedName('api')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $api = null;
 
     /**
@@ -35,7 +35,7 @@ class Integration
      * @var ?string $apiDocsUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('api_docs_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $apiDocsUrl = null;
 
     /**
@@ -43,7 +43,7 @@ class Integration
      * @var ?bool $beta
      */
     #[\JMS\Serializer\Annotation\SerializedName('beta')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $beta = null;
 
     /**
@@ -60,7 +60,7 @@ class Integration
      * @var ?string $color
      */
     #[\JMS\Serializer\Annotation\SerializedName('color')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $color = null;
 
     /**
@@ -68,7 +68,7 @@ class Integration
      * @var ?string $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $createdAt = null;
 
     /**
@@ -76,7 +76,7 @@ class Integration
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -84,7 +84,7 @@ class Integration
      * @var ?string $faIcon
      */
     #[\JMS\Serializer\Annotation\SerializedName('fa_icon')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $faIcon = null;
 
     /**
@@ -92,7 +92,7 @@ class Integration
      * @var ?bool $featured
      */
     #[\JMS\Serializer\Annotation\SerializedName('featured')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $featured = null;
 
     /**
@@ -100,7 +100,7 @@ class Integration
      * @var ?bool $inProgress
      */
     #[\JMS\Serializer\Annotation\SerializedName('in_progress')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $inProgress = null;
 
     /**
@@ -108,7 +108,7 @@ class Integration
      * @var ?bool $isActive
      */
     #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
 
     /**
@@ -116,7 +116,7 @@ class Integration
      * @var ?string $logoUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('logo_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $logoUrl = null;
 
     /**
@@ -131,7 +131,7 @@ class Integration
      * @var ?float $popularity
      */
     #[\JMS\Serializer\Annotation\SerializedName('popularity')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $popularity = null;
 
     /**
@@ -139,7 +139,7 @@ class Integration
      * @var ?string $rateLimitDescription
      */
     #[\JMS\Serializer\Annotation\SerializedName('rate_limit_description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $rateLimitDescription = null;
 
     /**
@@ -149,7 +149,7 @@ class Integration
      */
     #[\JMS\Serializer\Annotation\SerializedName('support')]
     #[\JMS\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $support = null;
 
     /**
@@ -157,7 +157,7 @@ class Integration
      * @var ?\DateTime $testedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('tested_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $testedAt = null;
 
     /**
@@ -165,7 +165,7 @@ class Integration
      * @var ?string $textColor
      */
     #[\JMS\Serializer\Annotation\SerializedName('text_color')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $textColor = null;
 
     /**
@@ -175,7 +175,7 @@ class Integration
      */
     #[\JMS\Serializer\Annotation\SerializedName('token_instructions')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $tokenInstructions = null;
 
     /**
@@ -185,7 +185,7 @@ class Integration
      */
     #[\JMS\Serializer\Annotation\SerializedName('token_names')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $tokenNames = null;
 
     /**
@@ -200,7 +200,7 @@ class Integration
      * @var ?string $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $updatedAt = null;
 
     /**
@@ -208,13 +208,13 @@ class Integration
      * @var ?string $webUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('web_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $webUrl = null;
 
     /**
-     * @param  ?array<PropertyIntegrationCategories>  $categories
-     * @param  ?string  $name
-     * @param  ?string  $type
+     * @param  array<PropertyIntegrationCategories>  $categories
+     * @param  string  $name
+     * @param  string  $type
      * @param  ?float  $activeHealthyConnections
      * @param  ?array<string, mixed>  $api
      * @param  ?string  $apiDocsUrl
@@ -237,7 +237,7 @@ class Integration
      * @param  ?string  $updatedAt
      * @param  ?string  $webUrl
      */
-    public function __construct(?array $categories = null, ?string $name = null, ?string $type = null, ?float $activeHealthyConnections = null, ?array $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?string $logoUrl = null, ?float $popularity = null, ?string $rateLimitDescription = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(array $categories, string $name, string $type, ?float $activeHealthyConnections = null, ?array $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?string $logoUrl = null, ?float $popularity = null, ?string $rateLimitDescription = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->categories = $categories;
         $this->name = $name;

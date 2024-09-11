@@ -16,7 +16,7 @@ class AtsJobQuestion
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -24,7 +24,7 @@ class AtsJobQuestion
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -34,7 +34,7 @@ class AtsJobQuestion
      */
     #[\JMS\Serializer\Annotation\SerializedName('options')]
     #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $options = null;
 
     /**
@@ -42,7 +42,7 @@ class AtsJobQuestion
      * @var ?string $prompt
      */
     #[\JMS\Serializer\Annotation\SerializedName('prompt')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $prompt = null;
 
     /**
@@ -57,7 +57,7 @@ class AtsJobQuestion
      * @var ?bool $required
      */
     #[\JMS\Serializer\Annotation\SerializedName('required')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?bool $required = null;
 
     /**
@@ -69,15 +69,15 @@ class AtsJobQuestion
     public AtsJobQuestionType $type;
 
     /**
-     * @param  ?string  $question
-     * @param  ?AtsJobQuestionType  $type
+     * @param  string  $question
+     * @param  AtsJobQuestionType  $type
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?array<string>  $options
      * @param  ?string  $prompt
      * @param  ?bool  $required
      */
-    public function __construct(?string $question = null, ?AtsJobQuestionType $type = null, ?string $description = null, ?string $id = null, ?array $options = null, ?string $prompt = null, ?bool $required = null)
+    public function __construct(string $question, AtsJobQuestionType $type, ?string $description = null, ?string $id = null, ?array $options = null, ?string $prompt = null, ?bool $required = null)
     {
         $this->question = $question;
         $this->type = $type;

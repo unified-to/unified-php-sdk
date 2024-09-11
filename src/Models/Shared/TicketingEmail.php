@@ -24,14 +24,14 @@ class TicketingEmail
      */
     #[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingEmailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?TicketingEmailType $type = null;
 
     /**
-     * @param  ?string  $email
+     * @param  string  $email
      * @param  ?TicketingEmailType  $type
      */
-    public function __construct(?string $email = null, ?TicketingEmailType $type = null)
+    public function __construct(string $email, ?TicketingEmailType $type = null)
     {
         $this->email = $email;
         $this->type = $type;

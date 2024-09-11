@@ -28,12 +28,22 @@ class CreatePaymentLinkRequest
     public string $connectionId;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?Shared\PaymentLink  $paymentLink
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
      */
-    public function __construct(?string $connectionId = null, ?Shared\PaymentLink $paymentLink = null)
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
+     * @param  string  $connectionId
+     * @param  ?Shared\PaymentLink  $paymentLink
+     * @param  ?array<string>  $fields
+     */
+    public function __construct(string $connectionId, ?Shared\PaymentLink $paymentLink = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->paymentLink = $paymentLink;
+        $this->fields = $fields;
     }
 }

@@ -57,6 +57,9 @@ try {
             url: 'https://pristine-luck.com',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticket->createTicketingTicket($request);
 
@@ -250,6 +253,9 @@ try {
             url: 'http://staid-ectodermal.name',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticket->patchTicketingTicket($request);
 
@@ -377,6 +383,9 @@ try {
             url: 'http://gullible-replication.com',
             userId: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->ticket->updateTicketingTicket($request);
 

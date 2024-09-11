@@ -59,6 +59,9 @@ try {
             userId: '<value>',
             wonReason: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->deal->createCrmDeal($request);
 
@@ -255,6 +258,9 @@ try {
             userId: '<value>',
             wonReason: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->deal->patchCrmDeal($request);
 
@@ -384,6 +390,9 @@ try {
             userId: '<value>',
             wonReason: '<value>',
         ),
+        fields: [
+            '<value>',
+        ],
     );
     $response = $sdk->deal->updateCrmDeal($request);
 

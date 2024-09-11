@@ -29,6 +29,14 @@ class UpdateMartechListRequest
     public string $connectionId;
 
     /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * ID of the List
      *
      * @var string $id
@@ -37,14 +45,16 @@ class UpdateMartechListRequest
     public string $id;
 
     /**
-     * @param  ?string  $connectionId
-     * @param  ?string  $id
+     * @param  string  $connectionId
+     * @param  string  $id
      * @param  ?Shared\MarketingList  $marketingList
+     * @param  ?array<string>  $fields
      */
-    public function __construct(?string $connectionId = null, ?string $id = null, ?Shared\MarketingList $marketingList = null)
+    public function __construct(string $connectionId, string $id, ?Shared\MarketingList $marketingList = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->marketingList = $marketingList;
+        $this->fields = $fields;
     }
 }

@@ -14,7 +14,6 @@ use Unified\Unified_to\Models\Operations;
 class Webhook
 {
     private SDKConfiguration $sdkConfiguration;
-
     /**
      * @param  SDKConfiguration  $sdkConfig
      */
@@ -352,4 +351,5 @@ class Webhook
             );
         }
     }
+
 }

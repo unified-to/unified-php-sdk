@@ -19,7 +19,7 @@ class EnrichCompany
      */
     #[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?PropertyEnrichCompanyAddress $address = null;
 
     /**
@@ -27,7 +27,7 @@ class EnrichCompany
      * @var ?float $alexaRank
      */
     #[\JMS\Serializer\Annotation\SerializedName('alexa_rank')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $alexaRank = null;
 
     /**
@@ -35,7 +35,7 @@ class EnrichCompany
      * @var ?\DateTime $createdAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -43,7 +43,7 @@ class EnrichCompany
      * @var ?string $crunchbaseUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('crunchbase_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $crunchbaseUrl = null;
 
     /**
@@ -51,7 +51,7 @@ class EnrichCompany
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
@@ -59,7 +59,7 @@ class EnrichCompany
      * @var ?string $domain
      */
     #[\JMS\Serializer\Annotation\SerializedName('domain')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $domain = null;
 
     /**
@@ -67,7 +67,7 @@ class EnrichCompany
      * @var ?string $employees
      */
     #[\JMS\Serializer\Annotation\SerializedName('employees')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $employees = null;
 
     /**
@@ -75,7 +75,7 @@ class EnrichCompany
      * @var ?string $exchange
      */
     #[\JMS\Serializer\Annotation\SerializedName('exchange')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $exchange = null;
 
     /**
@@ -83,7 +83,7 @@ class EnrichCompany
      * @var ?string $facebookUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('facebook_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $facebookUrl = null;
 
     /**
@@ -91,7 +91,7 @@ class EnrichCompany
      * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -99,7 +99,7 @@ class EnrichCompany
      * @var ?string $industry
      */
     #[\JMS\Serializer\Annotation\SerializedName('industry')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $industry = null;
 
     /**
@@ -107,7 +107,7 @@ class EnrichCompany
      * @var ?string $instagramUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('instagram_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $instagramUrl = null;
 
     /**
@@ -115,7 +115,7 @@ class EnrichCompany
      * @var ?string $linkedinUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('linkedin_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $linkedinUrl = null;
 
     /**
@@ -123,7 +123,7 @@ class EnrichCompany
      * @var ?string $logoUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('logo_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $logoUrl = null;
 
     /**
@@ -131,7 +131,7 @@ class EnrichCompany
      * @var ?float $naicsCode
      */
     #[\JMS\Serializer\Annotation\SerializedName('naics_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $naicsCode = null;
 
     /**
@@ -139,7 +139,7 @@ class EnrichCompany
      * @var ?string $name
      */
     #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -149,7 +149,7 @@ class EnrichCompany
      */
     #[\JMS\Serializer\Annotation\SerializedName('raw')]
     #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -157,7 +157,7 @@ class EnrichCompany
      * @var ?string $revenue
      */
     #[\JMS\Serializer\Annotation\SerializedName('revenue')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $revenue = null;
 
     /**
@@ -165,7 +165,7 @@ class EnrichCompany
      * @var ?float $sicCode
      */
     #[\JMS\Serializer\Annotation\SerializedName('sic_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $sicCode = null;
 
     /**
@@ -173,7 +173,7 @@ class EnrichCompany
      * @var ?string $stock
      */
     #[\JMS\Serializer\Annotation\SerializedName('stock')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $stock = null;
 
     /**
@@ -183,7 +183,7 @@ class EnrichCompany
      */
     #[\JMS\Serializer\Annotation\SerializedName('telephones')]
     #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $telephones = null;
 
     /**
@@ -191,7 +191,7 @@ class EnrichCompany
      * @var ?string $twitterHandle
      */
     #[\JMS\Serializer\Annotation\SerializedName('twitter_handle')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $twitterHandle = null;
 
     /**
@@ -199,7 +199,7 @@ class EnrichCompany
      * @var ?string $twitterUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('twitter_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $twitterUrl = null;
 
     /**
@@ -207,7 +207,7 @@ class EnrichCompany
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
@@ -215,7 +215,7 @@ class EnrichCompany
      * @var ?float $yearFounded
      */
     #[\JMS\Serializer\Annotation\SerializedName('year_founded')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?float $yearFounded = null;
 
     /**
@@ -223,7 +223,7 @@ class EnrichCompany
      * @var ?string $yelpUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('yelp_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $yelpUrl = null;
 
     /**
@@ -231,7 +231,7 @@ class EnrichCompany
      * @var ?string $youtubeUrl
      */
     #[\JMS\Serializer\Annotation\SerializedName('youtube_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?string $youtubeUrl = null;
 
     /**

@@ -14,7 +14,6 @@ use Unified\Unified_to\Models\Operations;
 class Applicationstatus
 {
     private SDKConfiguration $sdkConfiguration;
-
     /**
      * @param  SDKConfiguration  $sdkConfig
      */
@@ -66,4 +65,5 @@ class Applicationstatus
             throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
+
 }
