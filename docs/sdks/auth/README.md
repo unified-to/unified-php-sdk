@@ -22,8 +22,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -31,17 +32,6 @@ try {
     $request = new Operations\GetUnifiedIntegrationAuthRequest(
         integrationType: '<value>',
         workspaceId: '<value>',
-        env: '<value>',
-        externalXref: '<value>',
-        failureRedirect: '<value>',
-        lang: '<value>',
-        redirect: false,
-        scopes: [
-            Operations\Scopes::KmsSpaceWrite,
-        ],
-        state: 'New Jersey',
-        subdomain: '<value>',
-        successRedirect: '<value>',
     );
     $response = $sdk->auth->getUnifiedIntegrationAuth($request);
 
@@ -85,8 +75,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -94,11 +85,6 @@ try {
     $request = new Operations\GetUnifiedIntegrationLoginRequest(
         integrationType: '<value>',
         workspaceId: '<value>',
-        env: '<value>',
-        failureRedirect: '<value>',
-        redirect: false,
-        state: 'Virginia',
-        successRedirect: '<value>',
     );
     $response = $sdk->auth->getUnifiedIntegrationLogin($request);
 

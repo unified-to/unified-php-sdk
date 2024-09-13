@@ -25,57 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsJobRequest(
         connectionId: '<value>',
-        atsJob: new Shared\AtsJob(
-            addresses: [
-                new Shared\AtsAddress,
-            ],
-            closedAt: Utils\Utils::parseDateTime('2022-01-14T18:31:06.376Z'),
-            companyId: '<value>',
-            compensation: [
-                new Shared\AtsCompensation,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2023-04-05T09:16:07.639Z'),
-            departments: [
-                '<value>',
-            ],
-            description: 'Secured fault-tolerant internet solution',
-            employmentType: Shared\EmploymentType::FullTime,
-            hiringManagerIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            languageLocale: '<value>',
-            name: '<value>',
-            numberOfOpenings: 6151.12,
-            publicJobUrls: [
-                '<value>',
-            ],
-            questions: [
-                new Shared\AtsJobQuestion,
-            ],
-            raw: [
-                'wherever' => '<value>',
-            ],
-            recruiterIds: [
-                '<value>',
-            ],
-            remote: false,
-            status: Shared\AtsJobStatus::Open,
-            updatedAt: Utils\Utils::parseDateTime('2024-11-18T02:03:06.250Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->job->createAtsJob($request);
 
@@ -119,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -128,9 +88,6 @@ try {
     $request = new Operations\GetAtsJobRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->job->getAtsJob($request);
 
@@ -173,26 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsJobsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 3958.99,
-        offset: 3223.84,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-03-04T01:14:05.456Z'),
-        userId: '<value>',
     );
     $response = $sdk->job->listAtsJobs($request);
 
@@ -235,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -246,47 +193,6 @@ try {
     $request = new Operations\PatchAtsJobRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsJob: new Shared\AtsJob(
-            addresses: [
-                new Shared\AtsAddress,
-            ],
-            closedAt: Utils\Utils::parseDateTime('2022-08-09T17:44:16.617Z'),
-            companyId: '<value>',
-            compensation: [
-                new Shared\AtsCompensation,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2022-07-09T17:48:14.891Z'),
-            departments: [
-                '<value>',
-            ],
-            description: 'Seamless analyzing definition',
-            employmentType: Shared\EmploymentType::Intern,
-            hiringManagerIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            languageLocale: '<value>',
-            name: '<value>',
-            numberOfOpenings: 6182.06,
-            publicJobUrls: [
-                '<value>',
-            ],
-            questions: [
-                new Shared\AtsJobQuestion,
-            ],
-            raw: [
-                'North' => '<value>',
-            ],
-            recruiterIds: [
-                '<value>',
-            ],
-            remote: false,
-            status: Shared\AtsJobStatus::Closed,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-08T17:34:59.133Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->job->patchAtsJob($request);
 
@@ -330,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -381,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -392,47 +299,6 @@ try {
     $request = new Operations\UpdateAtsJobRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsJob: new Shared\AtsJob(
-            addresses: [
-                new Shared\AtsAddress,
-            ],
-            closedAt: Utils\Utils::parseDateTime('2023-10-21T07:41:08.131Z'),
-            companyId: '<value>',
-            compensation: [
-                new Shared\AtsCompensation,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2022-09-28T21:47:53.309Z'),
-            departments: [
-                '<value>',
-            ],
-            description: 'Implemented even-keeled parallelism',
-            employmentType: Shared\EmploymentType::FullTime,
-            hiringManagerIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            languageLocale: '<value>',
-            name: '<value>',
-            numberOfOpenings: 9080.02,
-            publicJobUrls: [
-                '<value>',
-            ],
-            questions: [
-                new Shared\AtsJobQuestion,
-            ],
-            raw: [
-                'Direct' => '<value>',
-            ],
-            recruiterIds: [
-                '<value>',
-            ],
-            remote: false,
-            status: Shared\AtsJobStatus::Draft,
-            updatedAt: Utils\Utils::parseDateTime('2024-01-04T04:44:52.139Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->job->updateAtsJob($request);
 

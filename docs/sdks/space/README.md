@@ -25,32 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateKmsSpaceRequest(
         connectionId: '<value>',
-        kmsSpace: new Shared\KmsSpace(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-12-05T14:15:26.081Z'),
-            description: 'Synchronised mission-critical hub',
-            isActive: false,
-            parentSpaceId: '<value>',
-            raw: [
-                'Bedfordshire' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-10-22T08:25:37.527Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->space->createKmsSpace($request);
 
@@ -94,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -103,9 +88,6 @@ try {
     $request = new Operations\GetKmsSpaceRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->space->getKmsSpace($request);
 
@@ -148,26 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListKmsSpacesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9216.91,
-        offset: 2110.39,
-        order: '<value>',
-        parentId: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-12-18T23:16:42.907Z'),
     );
     $response = $sdk->space->listKmsSpaces($request);
 
@@ -210,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -221,22 +193,6 @@ try {
     $request = new Operations\PatchKmsSpaceRequest(
         connectionId: '<value>',
         id: '<id>',
-        kmsSpace: new Shared\KmsSpace(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-11-04T17:16:51.659Z'),
-            description: 'Compatible homogeneous info-mediaries',
-            isActive: false,
-            parentSpaceId: '<value>',
-            raw: [
-                'Hybrid' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-06-18T14:48:57.689Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->space->patchKmsSpace($request);
 
@@ -280,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -331,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -342,22 +299,6 @@ try {
     $request = new Operations\UpdateKmsSpaceRequest(
         connectionId: '<value>',
         id: '<id>',
-        kmsSpace: new Shared\KmsSpace(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-05-28T11:59:07.928Z'),
-            description: 'Cross-platform human-resource hierarchy',
-            isActive: false,
-            parentSpaceId: '<value>',
-            raw: [
-                'brr' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-05-12T03:57:22.712Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->space->updateKmsSpace($request);
 

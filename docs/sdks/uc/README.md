@@ -26,36 +26,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateUcContactRequest(
         connectionId: '<value>',
-        ucContact: new Shared\UcContact(
-            company: 'Gottlieb - Becker',
-            createdAt: Utils\Utils::parseDateTime('2024-07-20T15:00:17.424Z'),
-            emails: [
-                new Shared\UcEmail,
-            ],
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'enhance' => '<value>',
-            ],
-            telephones: [
-                new Shared\UcTelephone,
-            ],
-            title: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2023-02-27T10:35:00.674Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->uc->createUcContact($request);
 
@@ -99,8 +79,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -108,9 +89,6 @@ try {
     $request = new Operations\GetUcContactRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->uc->getUcContact($request);
 
@@ -153,27 +131,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListUcCallsRequest(
         connectionId: '<value>',
-        contactId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 465.25,
-        offset: 4996.09,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-07-24T23:18:21.548Z'),
-        userId: '<value>',
     );
     $response = $sdk->uc->listUcCalls($request);
 
@@ -216,26 +183,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListUcContactsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 5333.71,
-        offset: 7775.9,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-10-26T05:35:01.805Z'),
-        userId: '<value>',
     );
     $response = $sdk->uc->listUcContacts($request);
 
@@ -278,10 +235,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -289,26 +246,6 @@ try {
     $request = new Operations\PatchUcContactRequest(
         connectionId: '<value>',
         id: '<id>',
-        ucContact: new Shared\UcContact(
-            company: 'Runolfsdottir, Boehm and Toy',
-            createdAt: Utils\Utils::parseDateTime('2024-05-28T10:05:49.902Z'),
-            emails: [
-                new Shared\UcEmail,
-            ],
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'after' => '<value>',
-            ],
-            telephones: [
-                new Shared\UcTelephone,
-            ],
-            title: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2023-10-21T22:08:30.034Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->uc->patchUcContact($request);
 
@@ -352,8 +289,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -403,10 +341,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -414,26 +352,6 @@ try {
     $request = new Operations\UpdateUcContactRequest(
         connectionId: '<value>',
         id: '<id>',
-        ucContact: new Shared\UcContact(
-            company: 'Marquardt Group',
-            createdAt: Utils\Utils::parseDateTime('2024-02-21T18:47:57.314Z'),
-            emails: [
-                new Shared\UcEmail,
-            ],
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'Convertible' => '<value>',
-            ],
-            telephones: [
-                new Shared\UcTelephone,
-            ],
-            title: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2022-10-11T10:56:34.889Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->uc->updateUcContact($request);
 

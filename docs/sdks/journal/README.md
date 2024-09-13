@@ -26,33 +26,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingJournalRequest(
         connectionId: '<value>',
-        accountingJournal: new Shared\AccountingJournal(
-            createdAt: '<value>',
-            currency: 'North Korean Won',
-            description: 'Polarised heuristic time-frame',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingJournalLineitem,
-            ],
-            raw: [
-                'Profound' => '<value>',
-            ],
-            reference: '<value>',
-            taxAmount: 2389.02,
-            taxrateId: '<value>',
-            updatedAt: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->journal->createAccountingJournal($request);
 
@@ -96,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -105,9 +88,6 @@ try {
     $request = new Operations\GetAccountingJournalRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->journal->getAccountingJournal($request);
 
@@ -150,25 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingJournalsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 3732.99,
-        offset: 235.51,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-08-02T07:29:24.179Z'),
     );
     $response = $sdk->journal->listAccountingJournals($request);
 
@@ -212,8 +183,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -221,25 +193,6 @@ try {
     $request = new Operations\PatchAccountingJournalRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingJournal: new Shared\AccountingJournal(
-            createdAt: '<value>',
-            currency: 'Malaysian Ringgit',
-            description: 'Digitized directional function',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingJournalLineitem,
-            ],
-            raw: [
-                'South' => '<value>',
-            ],
-            reference: '<value>',
-            taxAmount: 3075.33,
-            taxrateId: '<value>',
-            updatedAt: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->journal->patchAccountingJournal($request);
 
@@ -283,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -335,8 +289,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -344,25 +299,6 @@ try {
     $request = new Operations\UpdateAccountingJournalRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingJournal: new Shared\AccountingJournal(
-            createdAt: '<value>',
-            currency: 'Riel',
-            description: 'Fundamental contextually-based challenge',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingJournalLineitem,
-            ],
-            raw: [
-                'Forward' => '<value>',
-            ],
-            reference: '<value>',
-            taxAmount: 5223.16,
-            taxrateId: '<value>',
-            updatedAt: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->journal->updateAccountingJournal($request);
 

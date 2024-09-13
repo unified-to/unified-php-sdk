@@ -9,15 +9,15 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class UpdatePassthroughRequest
+class PatchPassthroughRawRequest
 {
     /**
      * integration-specific payload
      *
-     * @var ?array<string, mixed> $requestBody
+     * @var ?string $requestBody
      */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?array $requestBody = null;
+    #[SpeakeasyMetadata('request:mediaType=text/plain')]
+    public ?string $requestBody = null;
 
     /**
      * ID of the connection
@@ -37,9 +37,9 @@ class UpdatePassthroughRequest
     /**
      * @param  string  $connectionId
      * @param  string  $path
-     * @param  ?array<string, mixed>  $requestBody
+     * @param  ?string  $requestBody
      */
-    public function __construct(string $connectionId, string $path, ?array $requestBody = null)
+    public function __construct(string $connectionId, string $path, ?string $requestBody = null)
     {
         $this->connectionId = $connectionId;
         $this->path = $path;

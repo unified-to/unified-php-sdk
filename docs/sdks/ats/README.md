@@ -64,53 +64,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsActivityRequest(
         connectionId: '<value>',
-        atsActivity: new Shared\AtsActivity(
-            title: '<value>',
-            applicationId: '<value>',
-            bcc: [
-                new Shared\AtsEmail,
-            ],
-            candidateId: '<value>',
-            cc: [
-                new Shared\AtsEmail,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2022-11-03T02:06:02.932Z'),
-            description: 'Future-proofed non-volatile artificial intelligence',
-            documentId: '<value>',
-            from: new Shared\PropertyAtsActivityFrom(
-                email: 'Fermin.Marks24@yahoo.com',
-                name: '<value>',
-                type: Shared\PropertyAtsActivityFromType::Work,
-            ),
-            id: '<id>',
-            interviewId: '<value>',
-            isPrivate: false,
-            jobId: '<value>',
-            raw: [
-                'partnerships' => '<value>',
-            ],
-            to: [
-                new Shared\AtsEmail,
-            ],
-            type: Shared\AtsActivityType::Note,
-            updatedAt: Utils\Utils::parseDateTime('2022-05-31T20:52:48.631Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->createAtsActivity($request);
 
@@ -153,42 +116,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsApplicationRequest(
         connectionId: '<value>',
-        atsApplication: new Shared\AtsApplication(
-            answers: [
-                new Shared\AtsApplicationAnswer,
-            ],
-            appliedAt: Utils\Utils::parseDateTime('2024-03-09T05:03:52.917Z'),
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-09-22T12:50:56.305Z'),
-            hiredAt: Utils\Utils::parseDateTime('2023-01-19T06:26:51.678Z'),
-            id: '<id>',
-            jobId: '<value>',
-            offers: [
-                new Shared\AtsOffer,
-            ],
-            originalStatus: '<value>',
-            raw: [
-                'Mandatory' => '<value>',
-            ],
-            rejectedAt: Utils\Utils::parseDateTime('2024-09-21T21:31:42.360Z'),
-            rejectedReason: '<value>',
-            source: '<value>',
-            status: Shared\AtsApplicationStatus::ThirdInterview,
-            updatedAt: Utils\Utils::parseDateTime('2024-01-12T22:56:51.478Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->createAtsApplication($request);
 
@@ -231,62 +168,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsCandidateRequest(
         connectionId: '<value>',
-        atsCandidate: new Shared\AtsCandidate(
-            address: new Shared\PropertyAtsCandidateAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'South Hill',
-                country: 'Denmark',
-                countryCode: 'KM',
-                postalCode: '72991-5163',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            companyId: '<value>',
-            companyName: 'Pollich - Lubowitz',
-            createdAt: Utils\Utils::parseDateTime('2022-03-06T00:47:39.352Z'),
-            dateOfBirth: Utils\Utils::parseDateTime('2023-11-19T09:25:00.753Z'),
-            emails: [
-                new Shared\AtsEmail,
-            ],
-            externalIdentifier: '<value>',
-            id: '<id>',
-            imageUrl: '<value>',
-            linkUrls: [
-                '<value>',
-            ],
-            name: '<value>',
-            origin: Shared\Origin::Sourced,
-            raw: [
-                'Legacy' => '<value>',
-            ],
-            sources: [
-                '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\AtsTelephone,
-            ],
-            title: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2022-09-27T06:32:21.998Z'),
-            userId: '<value>',
-            webUrl: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->createAtsCandidate($request);
 
@@ -329,35 +220,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsDocumentRequest(
         connectionId: '<value>',
-        atsDocument: new Shared\AtsDocument(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-04-25T01:00:46.478Z'),
-            documentData: '<value>',
-            documentUrl: '<value>',
-            filename: 'your_file_here',
-            id: '<id>',
-            jobId: '<value>',
-            raw: [
-                'female' => '<value>',
-            ],
-            type: Shared\AtsDocumentType::CoverLetter,
-            updatedAt: Utils\Utils::parseDateTime('2024-11-21T14:39:08.865Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->createAtsDocument($request);
 
@@ -400,38 +272,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsInterviewRequest(
         connectionId: '<value>',
-        atsInterview: new Shared\AtsInterview(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-01-11T04:08:22.567Z'),
-            endAt: Utils\Utils::parseDateTime('2024-12-21T08:47:56.138Z'),
-            externalEventXref: '<value>',
-            id: '<id>',
-            jobId: '<value>',
-            location: '<value>',
-            raw: [
-                'Metrics' => '<value>',
-            ],
-            startAt: Utils\Utils::parseDateTime('2022-02-07T15:15:23.855Z'),
-            status: Shared\AtsInterviewStatus::AwaitingFeedback,
-            updatedAt: Utils\Utils::parseDateTime('2024-10-20T08:44:17.279Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->createAtsInterview($request);
 
@@ -474,57 +324,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsJobRequest(
         connectionId: '<value>',
-        atsJob: new Shared\AtsJob(
-            addresses: [
-                new Shared\AtsAddress,
-            ],
-            closedAt: Utils\Utils::parseDateTime('2022-01-14T18:31:06.376Z'),
-            companyId: '<value>',
-            compensation: [
-                new Shared\AtsCompensation,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2023-04-05T09:16:07.639Z'),
-            departments: [
-                '<value>',
-            ],
-            description: 'Secured fault-tolerant internet solution',
-            employmentType: Shared\EmploymentType::FullTime,
-            hiringManagerIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            languageLocale: '<value>',
-            name: '<value>',
-            numberOfOpenings: 6151.12,
-            publicJobUrls: [
-                '<value>',
-            ],
-            questions: [
-                new Shared\AtsJobQuestion,
-            ],
-            raw: [
-                'wherever' => '<value>',
-            ],
-            recruiterIds: [
-                '<value>',
-            ],
-            remote: false,
-            status: Shared\AtsJobStatus::Open,
-            updatedAt: Utils\Utils::parseDateTime('2024-11-18T02:03:06.250Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->createAtsJob($request);
 
@@ -567,37 +376,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsScorecardRequest(
         connectionId: '<value>',
-        atsScorecard: new Shared\AtsScorecard(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            comment: 'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J',
-            createdAt: Utils\Utils::parseDateTime('2022-04-24T10:18:34.661Z'),
-            id: '<id>',
-            interviewId: '<value>',
-            interviewerId: '<value>',
-            jobId: '<value>',
-            questions: [
-                new Shared\AtsScorecardQuestion,
-            ],
-            raw: [
-                'Inverse' => '<value>',
-            ],
-            recommendation: Shared\Recommendation::Yes,
-            updatedAt: Utils\Utils::parseDateTime('2024-12-16T16:10:16.235Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->createAtsScorecard($request);
 
@@ -641,8 +429,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -650,9 +439,6 @@ try {
     $request = new Operations\GetAtsActivityRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->getAtsActivity($request);
 
@@ -696,8 +482,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -705,9 +492,6 @@ try {
     $request = new Operations\GetAtsApplicationRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->getAtsApplication($request);
 
@@ -751,8 +535,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -760,9 +545,6 @@ try {
     $request = new Operations\GetAtsCandidateRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->getAtsCandidate($request);
 
@@ -806,8 +588,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -815,9 +598,6 @@ try {
     $request = new Operations\GetAtsCompanyRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->getAtsCompany($request);
 
@@ -861,8 +641,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -870,9 +651,6 @@ try {
     $request = new Operations\GetAtsDocumentRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->getAtsDocument($request);
 
@@ -916,8 +694,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -925,9 +704,6 @@ try {
     $request = new Operations\GetAtsInterviewRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->getAtsInterview($request);
 
@@ -971,8 +747,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -980,9 +757,6 @@ try {
     $request = new Operations\GetAtsJobRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->getAtsJob($request);
 
@@ -1026,8 +800,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1035,9 +810,6 @@ try {
     $request = new Operations\GetAtsScorecardRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->getAtsScorecard($request);
 
@@ -1080,31 +852,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsActivitiesRequest(
         connectionId: '<value>',
-        applicationId: '<value>',
-        candidateId: '<value>',
-        documentId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        interviewId: '<value>',
-        jobId: '<value>',
-        limit: 2367.19,
-        offset: 8254.25,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-11-13T18:19:17.967Z'),
-        userId: '<value>',
     );
     $response = $sdk->ats->listAtsActivities($request);
 
@@ -1147,27 +904,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsApplicationsRequest(
         connectionId: '<value>',
-        candidateId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        jobId: '<value>',
-        limit: 441.56,
-        offset: 1448.74,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-12-21T20:30:01.596Z'),
     );
     $response = $sdk->ats->listAtsApplications($request);
 
@@ -1210,25 +956,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsApplicationstatusesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 5199.96,
-        offset: 7673.65,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-03-25T18:11:33.180Z'),
     );
     $response = $sdk->ats->listAtsApplicationstatuses($request);
 
@@ -1271,26 +1008,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsCandidatesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        jobId: '<value>',
-        limit: 6384.09,
-        offset: 7452.94,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-03-18T00:58:25.541Z'),
     );
     $response = $sdk->ats->listAtsCandidates($request);
 
@@ -1333,25 +1060,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsCompaniesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 6933.84,
-        offset: 7946.52,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-10-01T21:39:38.971Z'),
     );
     $response = $sdk->ats->listAtsCompanies($request);
 
@@ -1394,27 +1112,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsDocumentsRequest(
         connectionId: '<value>',
-        applicationId: '<value>',
-        candidateId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9635.37,
-        offset: 8402.77,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-08-31T00:55:54.895Z'),
     );
     $response = $sdk->ats->listAtsDocuments($request);
 
@@ -1457,26 +1164,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsInterviewsRequest(
         connectionId: '<value>',
-        applicationId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 2562.12,
-        offset: 1185.02,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-09-28T15:15:00.508Z'),
     );
     $response = $sdk->ats->listAtsInterviews($request);
 
@@ -1519,26 +1216,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsJobsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 3958.99,
-        offset: 3223.84,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-03-04T01:14:05.456Z'),
-        userId: '<value>',
     );
     $response = $sdk->ats->listAtsJobs($request);
 
@@ -1581,29 +1268,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsScorecardsRequest(
         connectionId: '<value>',
-        applicationId: '<value>',
-        candidateId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        interviewId: '<value>',
-        jobId: '<value>',
-        limit: 5126.98,
-        offset: 8077.44,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-08-19T14:46:22.333Z'),
     );
     $response = $sdk->ats->listAtsScorecards($request);
 
@@ -1646,10 +1320,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1657,43 +1331,6 @@ try {
     $request = new Operations\PatchAtsActivityRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsActivity: new Shared\AtsActivity(
-            title: '<value>',
-            applicationId: '<value>',
-            bcc: [
-                new Shared\AtsEmail,
-            ],
-            candidateId: '<value>',
-            cc: [
-                new Shared\AtsEmail,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2024-11-03T16:46:57.187Z'),
-            description: 'Compatible reciprocal archive',
-            documentId: '<value>',
-            from: new Shared\PropertyAtsActivityFrom(
-                email: 'Bradley15@gmail.com',
-                name: '<value>',
-                type: Shared\PropertyAtsActivityFromType::Work,
-            ),
-            id: '<id>',
-            interviewId: '<value>',
-            isPrivate: false,
-            jobId: '<value>',
-            raw: [
-                'Hybrid' => '<value>',
-            ],
-            to: [
-                new Shared\AtsEmail,
-            ],
-            type: Shared\AtsActivityType::Email,
-            updatedAt: Utils\Utils::parseDateTime('2022-03-21T20:01:58.311Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->patchAtsActivity($request);
 
@@ -1736,10 +1373,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1747,32 +1384,6 @@ try {
     $request = new Operations\PatchAtsApplicationRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsApplication: new Shared\AtsApplication(
-            answers: [
-                new Shared\AtsApplicationAnswer,
-            ],
-            appliedAt: Utils\Utils::parseDateTime('2023-12-15T20:36:09.499Z'),
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-01-06T05:56:57.062Z'),
-            hiredAt: Utils\Utils::parseDateTime('2023-12-05T05:20:09.174Z'),
-            id: '<id>',
-            jobId: '<value>',
-            offers: [
-                new Shared\AtsOffer,
-            ],
-            originalStatus: '<value>',
-            raw: [
-                'grey' => '<value>',
-            ],
-            rejectedAt: Utils\Utils::parseDateTime('2024-01-24T17:35:54.628Z'),
-            rejectedReason: '<value>',
-            source: '<value>',
-            status: Shared\AtsApplicationStatus::Accepted,
-            updatedAt: Utils\Utils::parseDateTime('2022-11-18T16:36:51.738Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->patchAtsApplication($request);
 
@@ -1815,10 +1426,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1826,52 +1437,6 @@ try {
     $request = new Operations\PatchAtsCandidateRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsCandidate: new Shared\AtsCandidate(
-            address: new Shared\PropertyAtsCandidateAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Fort Bridget',
-                country: 'Sri Lanka',
-                countryCode: 'GI',
-                postalCode: '46054',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            companyId: '<value>',
-            companyName: 'Donnelly - Bartell',
-            createdAt: Utils\Utils::parseDateTime('2024-01-07T04:20:35.612Z'),
-            dateOfBirth: Utils\Utils::parseDateTime('2023-10-20T03:10:26.424Z'),
-            emails: [
-                new Shared\AtsEmail,
-            ],
-            externalIdentifier: '<value>',
-            id: '<id>',
-            imageUrl: '<value>',
-            linkUrls: [
-                '<value>',
-            ],
-            name: '<value>',
-            origin: Shared\Origin::Applied,
-            raw: [
-                'Van' => '<value>',
-            ],
-            sources: [
-                '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\AtsTelephone,
-            ],
-            title: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2023-01-30T15:05:49.494Z'),
-            userId: '<value>',
-            webUrl: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->patchAtsCandidate($request);
 
@@ -1914,10 +1479,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1925,25 +1490,6 @@ try {
     $request = new Operations\PatchAtsDocumentRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsDocument: new Shared\AtsDocument(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-04-01T11:33:08.084Z'),
-            documentData: '<value>',
-            documentUrl: '<value>',
-            filename: 'your_file_here',
-            id: '<id>',
-            jobId: '<value>',
-            raw: [
-                'Other' => '<value>',
-            ],
-            type: Shared\AtsDocumentType::CoverLetter,
-            updatedAt: Utils\Utils::parseDateTime('2023-06-19T12:06:56.902Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->patchAtsDocument($request);
 
@@ -1986,10 +1532,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1997,28 +1543,6 @@ try {
     $request = new Operations\PatchAtsInterviewRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsInterview: new Shared\AtsInterview(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-09-11T19:09:34.526Z'),
-            endAt: Utils\Utils::parseDateTime('2022-05-28T22:25:51.616Z'),
-            externalEventXref: '<value>',
-            id: '<id>',
-            jobId: '<value>',
-            location: '<value>',
-            raw: [
-                'Handmade' => '<value>',
-            ],
-            startAt: Utils\Utils::parseDateTime('2024-03-18T02:52:45.725Z'),
-            status: Shared\AtsInterviewStatus::Scheduled,
-            updatedAt: Utils\Utils::parseDateTime('2024-11-05T22:15:01.656Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->patchAtsInterview($request);
 
@@ -2061,10 +1585,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2072,47 +1596,6 @@ try {
     $request = new Operations\PatchAtsJobRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsJob: new Shared\AtsJob(
-            addresses: [
-                new Shared\AtsAddress,
-            ],
-            closedAt: Utils\Utils::parseDateTime('2022-08-09T17:44:16.617Z'),
-            companyId: '<value>',
-            compensation: [
-                new Shared\AtsCompensation,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2022-07-09T17:48:14.891Z'),
-            departments: [
-                '<value>',
-            ],
-            description: 'Seamless analyzing definition',
-            employmentType: Shared\EmploymentType::Intern,
-            hiringManagerIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            languageLocale: '<value>',
-            name: '<value>',
-            numberOfOpenings: 6182.06,
-            publicJobUrls: [
-                '<value>',
-            ],
-            questions: [
-                new Shared\AtsJobQuestion,
-            ],
-            raw: [
-                'North' => '<value>',
-            ],
-            recruiterIds: [
-                '<value>',
-            ],
-            remote: false,
-            status: Shared\AtsJobStatus::Closed,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-08T17:34:59.133Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->patchAtsJob($request);
 
@@ -2155,10 +1638,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2166,27 +1649,6 @@ try {
     $request = new Operations\PatchAtsScorecardRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsScorecard: new Shared\AtsScorecard(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            comment: 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support',
-            createdAt: Utils\Utils::parseDateTime('2024-10-06T13:32:29.533Z'),
-            id: '<id>',
-            interviewId: '<value>',
-            interviewerId: '<value>',
-            jobId: '<value>',
-            questions: [
-                new Shared\AtsScorecardQuestion,
-            ],
-            raw: [
-                'World' => '<value>',
-            ],
-            recommendation: Shared\Recommendation::Yes,
-            updatedAt: Utils\Utils::parseDateTime('2022-08-07T14:14:42.219Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->patchAtsScorecard($request);
 
@@ -2230,8 +1692,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2282,8 +1745,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2334,8 +1798,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2386,8 +1851,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2438,8 +1904,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2490,8 +1957,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2542,8 +2010,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2593,10 +2062,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2604,43 +2073,6 @@ try {
     $request = new Operations\UpdateAtsActivityRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsActivity: new Shared\AtsActivity(
-            title: '<value>',
-            applicationId: '<value>',
-            bcc: [
-                new Shared\AtsEmail,
-            ],
-            candidateId: '<value>',
-            cc: [
-                new Shared\AtsEmail,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2024-06-06T07:57:58.715Z'),
-            description: 'Total fault-tolerant collaboration',
-            documentId: '<value>',
-            from: new Shared\PropertyAtsActivityFrom(
-                email: 'Deshawn.Sauer@gmail.com',
-                name: '<value>',
-                type: Shared\PropertyAtsActivityFromType::Other,
-            ),
-            id: '<id>',
-            interviewId: '<value>',
-            isPrivate: false,
-            jobId: '<value>',
-            raw: [
-                'Cotton' => '<value>',
-            ],
-            to: [
-                new Shared\AtsEmail,
-            ],
-            type: Shared\AtsActivityType::Note,
-            updatedAt: Utils\Utils::parseDateTime('2023-06-20T06:09:10.592Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->updateAtsActivity($request);
 
@@ -2683,10 +2115,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2694,32 +2126,6 @@ try {
     $request = new Operations\UpdateAtsApplicationRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsApplication: new Shared\AtsApplication(
-            answers: [
-                new Shared\AtsApplicationAnswer,
-            ],
-            appliedAt: Utils\Utils::parseDateTime('2022-08-22T12:21:27.415Z'),
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-06-04T12:46:09.878Z'),
-            hiredAt: Utils\Utils::parseDateTime('2022-02-09T08:57:01.906Z'),
-            id: '<id>',
-            jobId: '<value>',
-            offers: [
-                new Shared\AtsOffer,
-            ],
-            originalStatus: '<value>',
-            raw: [
-                'Minivan' => '<value>',
-            ],
-            rejectedAt: Utils\Utils::parseDateTime('2023-03-17T03:12:00.865Z'),
-            rejectedReason: '<value>',
-            source: '<value>',
-            status: Shared\AtsApplicationStatus::Declined,
-            updatedAt: Utils\Utils::parseDateTime('2024-08-09T12:26:06.546Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->updateAtsApplication($request);
 
@@ -2762,10 +2168,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2773,52 +2179,6 @@ try {
     $request = new Operations\UpdateAtsCandidateRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsCandidate: new Shared\AtsCandidate(
-            address: new Shared\PropertyAtsCandidateAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Hintzborough',
-                country: 'Afghanistan',
-                countryCode: 'TF',
-                postalCode: '39423',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            companyId: '<value>',
-            companyName: 'O\'Reilly Inc',
-            createdAt: Utils\Utils::parseDateTime('2023-08-31T03:55:05.691Z'),
-            dateOfBirth: Utils\Utils::parseDateTime('2023-12-18T17:01:22.026Z'),
-            emails: [
-                new Shared\AtsEmail,
-            ],
-            externalIdentifier: '<value>',
-            id: '<id>',
-            imageUrl: '<value>',
-            linkUrls: [
-                '<value>',
-            ],
-            name: '<value>',
-            origin: Shared\Origin::Agency,
-            raw: [
-                'Potassium' => '<value>',
-            ],
-            sources: [
-                '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\AtsTelephone,
-            ],
-            title: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2023-02-19T09:22:29.995Z'),
-            userId: '<value>',
-            webUrl: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->updateAtsCandidate($request);
 
@@ -2861,10 +2221,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2872,25 +2232,6 @@ try {
     $request = new Operations\UpdateAtsDocumentRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsDocument: new Shared\AtsDocument(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-07-05T17:05:49.106Z'),
-            documentData: '<value>',
-            documentUrl: '<value>',
-            filename: 'your_file_here',
-            id: '<id>',
-            jobId: '<value>',
-            raw: [
-                'DRAM' => '<value>',
-            ],
-            type: Shared\AtsDocumentType::Other,
-            updatedAt: Utils\Utils::parseDateTime('2023-09-09T02:38:30.011Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->updateAtsDocument($request);
 
@@ -2933,10 +2274,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2944,28 +2285,6 @@ try {
     $request = new Operations\UpdateAtsInterviewRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsInterview: new Shared\AtsInterview(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-05-06T05:22:44.534Z'),
-            endAt: Utils\Utils::parseDateTime('2023-03-29T20:29:22.648Z'),
-            externalEventXref: '<value>',
-            id: '<id>',
-            jobId: '<value>',
-            location: '<value>',
-            raw: [
-                'maroon' => '<value>',
-            ],
-            startAt: Utils\Utils::parseDateTime('2022-05-01T17:04:47.962Z'),
-            status: Shared\AtsInterviewStatus::Complete,
-            updatedAt: Utils\Utils::parseDateTime('2023-09-27T22:37:40.818Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->updateAtsInterview($request);
 
@@ -3008,10 +2327,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -3019,47 +2338,6 @@ try {
     $request = new Operations\UpdateAtsJobRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsJob: new Shared\AtsJob(
-            addresses: [
-                new Shared\AtsAddress,
-            ],
-            closedAt: Utils\Utils::parseDateTime('2023-10-21T07:41:08.131Z'),
-            companyId: '<value>',
-            compensation: [
-                new Shared\AtsCompensation,
-            ],
-            createdAt: Utils\Utils::parseDateTime('2022-09-28T21:47:53.309Z'),
-            departments: [
-                '<value>',
-            ],
-            description: 'Implemented even-keeled parallelism',
-            employmentType: Shared\EmploymentType::FullTime,
-            hiringManagerIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            languageLocale: '<value>',
-            name: '<value>',
-            numberOfOpenings: 9080.02,
-            publicJobUrls: [
-                '<value>',
-            ],
-            questions: [
-                new Shared\AtsJobQuestion,
-            ],
-            raw: [
-                'Direct' => '<value>',
-            ],
-            recruiterIds: [
-                '<value>',
-            ],
-            remote: false,
-            status: Shared\AtsJobStatus::Draft,
-            updatedAt: Utils\Utils::parseDateTime('2024-01-04T04:44:52.139Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->updateAtsJob($request);
 
@@ -3102,10 +2380,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -3113,27 +2391,6 @@ try {
     $request = new Operations\UpdateAtsScorecardRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsScorecard: new Shared\AtsScorecard(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            comment: 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
-            createdAt: Utils\Utils::parseDateTime('2022-07-10T16:18:43.908Z'),
-            id: '<id>',
-            interviewId: '<value>',
-            interviewerId: '<value>',
-            jobId: '<value>',
-            questions: [
-                new Shared\AtsScorecardQuestion,
-            ],
-            raw: [
-                'Digitized' => '<value>',
-            ],
-            recommendation: Shared\Recommendation::Yes,
-            updatedAt: Utils\Utils::parseDateTime('2024-03-16T12:20:06.330Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ats->updateAtsScorecard($request);
 

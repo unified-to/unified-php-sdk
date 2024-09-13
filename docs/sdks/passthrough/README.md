@@ -4,13 +4,16 @@
 
 ### Available Operations
 
-* [createPassthrough](#createpassthrough) - Passthrough POST
+* [createPassthroughJson](#createpassthroughjson) - Passthrough POST
+* [createPassthroughRaw](#createpassthroughraw) - Passthrough POST
 * [listPassthroughs](#listpassthroughs) - Passthrough GET
-* [patchPassthrough](#patchpassthrough) - Passthrough PUT
+* [patchPassthroughJson](#patchpassthroughjson) - Passthrough PUT
+* [patchPassthroughRaw](#patchpassthroughraw) - Passthrough PUT
 * [removePassthrough](#removepassthrough) - Passthrough DELETE
-* [updatePassthrough](#updatepassthrough) - Passthrough PUT
+* [updatePassthroughJson](#updatepassthroughjson) - Passthrough PUT
+* [updatePassthroughRaw](#updatepassthroughraw) - Passthrough PUT
 
-## createPassthrough
+## createPassthroughJson
 
 Passthrough POST
 
@@ -25,22 +28,20 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreatePassthroughRequest(
+    $request = new Operations\CreatePassthroughJsonRequest(
         connectionId: '<value>',
-        path: '/etc/periodic',
-        requestBody: [
-            'UTF8' => '<value>',
-        ],
+        path: '/opt/lib',
     );
-    $response = $sdk->passthrough->createPassthrough($request);
+    $response = $sdk->passthrough->createPassthroughJson($request);
 
-    if ($response->result !== null) {
+    if ($response->body !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -50,13 +51,66 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreatePassthroughRequest](../../Models/Operations/CreatePassthroughRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreatePassthroughJsonRequest](../../Models/Operations/CreatePassthroughJsonRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreatePassthroughResponse](../../Models/Operations/CreatePassthroughResponse.md)**
+**[?Operations\CreatePassthroughJsonResponse](../../Models/Operations/CreatePassthroughJsonResponse.md)**
+
+### Errors
+
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+
+
+## createPassthroughRaw
+
+Passthrough POST
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+    $request = new Operations\CreatePassthroughRawRequest(
+        connectionId: '<value>',
+        path: '/etc/namedb',
+    );
+    $response = $sdk->passthrough->createPassthroughRaw($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreatePassthroughRawRequest](../../Models/Operations/CreatePassthroughRawRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\CreatePassthroughRawResponse](../../Models/Operations/CreatePassthroughRawResponse.md)**
 
 ### Errors
 
@@ -80,8 +134,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -92,7 +147,7 @@ try {
     );
     $response = $sdk->passthrough->listPassthroughs($request);
 
-    if ($response->result !== null) {
+    if ($response->body !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -117,7 +172,7 @@ try {
 | Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 
-## patchPassthrough
+## patchPassthroughJson
 
 Passthrough PUT
 
@@ -132,22 +187,20 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PatchPassthroughRequest(
+    $request = new Operations\PatchPassthroughJsonRequest(
         connectionId: '<value>',
-        path: '/mnt',
-        requestBody: [
-            'VGA' => '<value>',
-        ],
+        path: '/home/user',
     );
-    $response = $sdk->passthrough->patchPassthrough($request);
+    $response = $sdk->passthrough->patchPassthroughJson($request);
 
-    if ($response->result !== null) {
+    if ($response->body !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -157,13 +210,66 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchPassthroughRequest](../../Models/Operations/PatchPassthroughRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchPassthroughJsonRequest](../../Models/Operations/PatchPassthroughJsonRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchPassthroughResponse](../../Models/Operations/PatchPassthroughResponse.md)**
+**[?Operations\PatchPassthroughJsonResponse](../../Models/Operations/PatchPassthroughJsonResponse.md)**
+
+### Errors
+
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+
+
+## patchPassthroughRaw
+
+Passthrough PUT
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+    $request = new Operations\PatchPassthroughRawRequest(
+        connectionId: '<value>',
+        path: '/etc/mail',
+    );
+    $response = $sdk->passthrough->patchPassthroughRaw($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchPassthroughRawRequest](../../Models/Operations/PatchPassthroughRawRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\PatchPassthroughRawResponse](../../Models/Operations/PatchPassthroughRawResponse.md)**
 
 ### Errors
 
@@ -187,8 +293,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -199,7 +306,7 @@ try {
     );
     $response = $sdk->passthrough->removePassthrough($request);
 
-    if ($response->result !== null) {
+    if ($response->body !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -224,7 +331,7 @@ try {
 | Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
 
 
-## updatePassthrough
+## updatePassthroughJson
 
 Passthrough PUT
 
@@ -239,22 +346,20 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdatePassthroughRequest(
+    $request = new Operations\UpdatePassthroughJsonRequest(
         connectionId: '<value>',
-        path: '/dev',
-        requestBody: [
-            'Manager' => '<value>',
-        ],
+        path: '/etc/namedb',
     );
-    $response = $sdk->passthrough->updatePassthrough($request);
+    $response = $sdk->passthrough->updatePassthroughJson($request);
 
-    if ($response->result !== null) {
+    if ($response->body !== null) {
         // handle response
     }
 } catch (Throwable $e) {
@@ -264,13 +369,66 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdatePassthroughRequest](../../Models/Operations/UpdatePassthroughRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdatePassthroughJsonRequest](../../Models/Operations/UpdatePassthroughJsonRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdatePassthroughResponse](../../Models/Operations/UpdatePassthroughResponse.md)**
+**[?Operations\UpdatePassthroughJsonResponse](../../Models/Operations/UpdatePassthroughJsonResponse.md)**
+
+### Errors
+
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+
+
+## updatePassthroughRaw
+
+Passthrough PUT
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+try {
+    $request = new Operations\UpdatePassthroughRawRequest(
+        connectionId: '<value>',
+        path: '/System',
+    );
+    $response = $sdk->passthrough->updatePassthroughRaw($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdatePassthroughRawRequest](../../Models/Operations/UpdatePassthroughRawRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\UpdatePassthroughRawResponse](../../Models/Operations/UpdatePassthroughRawResponse.md)**
 
 ### Errors
 

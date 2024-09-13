@@ -25,21 +25,21 @@ class Passthrough
     /**
      * Passthrough POST
      *
-     * @param  Operations\CreatePassthroughRequest  $request
-     * @return Operations\CreatePassthroughResponse
+     * @param  Operations\CreatePassthroughJsonRequest  $request
+     * @return Operations\CreatePassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createPassthrough(
-        ?Operations\CreatePassthroughRequest $request,
-    ): Operations\CreatePassthroughResponse {
+    public function createPassthroughJson(
+        ?Operations\CreatePassthroughJsonRequest $request,
+    ): Operations\CreatePassthroughJsonResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthroughRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthroughJsonRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
@@ -48,17 +48,108 @@ class Passthrough
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-        if ($statusCode >= 200 && $statusCode < 300) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreatePassthroughResponse(
+        if (in_array($statusCode, [204, 205, 304])) {
+            return new Operations\CreatePassthroughJsonResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif ($statusCode >= 200 && $statusCode < 300) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughJsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    result: $obj);
+                    body: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXTextPlainRes: $obj);
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * Passthrough POST
+     *
+     * @param  Operations\CreatePassthroughRawRequest  $request
+     * @return Operations\CreatePassthroughRawResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function createPassthroughRaw(
+        ?Operations\CreatePassthroughRawRequest $request,
+    ): Operations\CreatePassthroughRawResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthroughRawRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'raw');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
+
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (in_array($statusCode, [204, 205, 304])) {
+            return new Operations\CreatePassthroughRawResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif ($statusCode >= 200 && $statusCode < 300) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    body: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXApplicationJsonAny: $obj);
+
+                return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -82,7 +173,7 @@ class Passthrough
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\ListPassthroughsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
@@ -91,17 +182,39 @@ class Passthrough
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-        if ($statusCode >= 200 && $statusCode < 300) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+        if (in_array($statusCode, [204, 205, 304])) {
+            return new Operations\ListPassthroughsResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif ($statusCode >= 200 && $statusCode < 300) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\ListPassthroughsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    body: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListPassthroughsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    result: $obj);
+                    twoXXApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\ListPassthroughsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -115,21 +228,21 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  Operations\PatchPassthroughRequest  $request
-     * @return Operations\PatchPassthroughResponse
+     * @param  Operations\PatchPassthroughJsonRequest  $request
+     * @return Operations\PatchPassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchPassthrough(
-        ?Operations\PatchPassthroughRequest $request,
-    ): Operations\PatchPassthroughResponse {
+    public function patchPassthroughJson(
+        ?Operations\PatchPassthroughJsonRequest $request,
+    ): Operations\PatchPassthroughJsonResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthroughRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthroughJsonRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
@@ -138,17 +251,108 @@ class Passthrough
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-        if ($statusCode >= 200 && $statusCode < 300) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchPassthroughResponse(
+        if (in_array($statusCode, [204, 205, 304])) {
+            return new Operations\PatchPassthroughJsonResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif ($statusCode >= 200 && $statusCode < 300) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughJsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    result: $obj);
+                    body: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchPassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXTextPlainRes: $obj);
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * Passthrough PUT
+     *
+     * @param  Operations\PatchPassthroughRawRequest  $request
+     * @return Operations\PatchPassthroughRawResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function patchPassthroughRaw(
+        ?Operations\PatchPassthroughRawRequest $request,
+    ): Operations\PatchPassthroughRawResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthroughRawRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'raw');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
+
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (in_array($statusCode, [204, 205, 304])) {
+            return new Operations\PatchPassthroughRawResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif ($statusCode >= 200 && $statusCode < 300) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    body: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchPassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXApplicationJsonAny: $obj);
+
+                return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -172,7 +376,7 @@ class Passthrough
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\RemovePassthroughRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
@@ -181,17 +385,39 @@ class Passthrough
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-        if ($statusCode >= 200 && $statusCode < 300) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+        if (in_array($statusCode, [204, 205, 304])) {
+            return new Operations\RemovePassthroughResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif ($statusCode >= 200 && $statusCode < 300) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\RemovePassthroughResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    body: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\RemovePassthroughResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    result: $obj);
+                    twoXXApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\RemovePassthroughResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -205,21 +431,21 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  Operations\UpdatePassthroughRequest  $request
-     * @return Operations\UpdatePassthroughResponse
+     * @param  Operations\UpdatePassthroughJsonRequest  $request
+     * @return Operations\UpdatePassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updatePassthrough(
-        ?Operations\UpdatePassthroughRequest $request,
-    ): Operations\UpdatePassthroughResponse {
+    public function updatePassthroughJson(
+        ?Operations\UpdatePassthroughJsonRequest $request,
+    ): Operations\UpdatePassthroughJsonResponse {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthroughRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthroughJsonRequest::class, $request);
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
@@ -228,17 +454,108 @@ class Passthrough
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-        if ($statusCode >= 200 && $statusCode < 300) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<string, mixed>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdatePassthroughResponse(
+        if (in_array($statusCode, [204, 205, 304])) {
+            return new Operations\UpdatePassthroughJsonResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif ($statusCode >= 200 && $statusCode < 300) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughJsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    result: $obj);
+                    body: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXTextPlainRes: $obj);
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * Passthrough PUT
+     *
+     * @param  Operations\UpdatePassthroughRawRequest  $request
+     * @return Operations\UpdatePassthroughRawResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function updatePassthroughRaw(
+        ?Operations\UpdatePassthroughRawRequest $request,
+    ): Operations\UpdatePassthroughRawResponse {
+        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthroughRawRequest::class, $request);
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'raw');
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
+        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
+
+
+        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (in_array($statusCode, [204, 205, 304])) {
+            return new Operations\UpdatePassthroughRawResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif ($statusCode >= 200 && $statusCode < 300) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    body: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXApplicationJsonAny: $obj);
+
+                return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    twoXXTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }

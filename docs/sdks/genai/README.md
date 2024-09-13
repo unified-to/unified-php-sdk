@@ -22,31 +22,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateGenaiPromptRequest(
         connectionId: '<value>',
-        genaiPrompt: new Shared\GenaiPrompt(
-            maxTokens: 5880.19,
-            messages: [
-                new Shared\GenaiContent,
-            ],
-            modelId: '<value>',
-            raw: [
-                'er' => '<value>',
-            ],
-            responses: [
-                '<value>',
-            ],
-            temperature: 767.38,
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->genai->createGenaiPrompt($request);
 
@@ -89,25 +73,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListGenaiModelsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9118.49,
-        offset: 7503.47,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-12-26T16:13:56.581Z'),
     );
     $response = $sdk->genai->listGenaiModels($request);
 

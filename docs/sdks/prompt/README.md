@@ -21,31 +21,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateGenaiPromptRequest(
         connectionId: '<value>',
-        genaiPrompt: new Shared\GenaiPrompt(
-            maxTokens: 5880.19,
-            messages: [
-                new Shared\GenaiContent,
-            ],
-            modelId: '<value>',
-            raw: [
-                'er' => '<value>',
-            ],
-            responses: [
-                '<value>',
-            ],
-            temperature: 767.38,
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->prompt->createGenaiPrompt($request);
 

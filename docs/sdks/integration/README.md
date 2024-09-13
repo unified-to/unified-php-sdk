@@ -23,8 +23,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -32,17 +33,6 @@ try {
     $request = new Operations\GetUnifiedIntegrationAuthRequest(
         integrationType: '<value>',
         workspaceId: '<value>',
-        env: '<value>',
-        externalXref: '<value>',
-        failureRedirect: '<value>',
-        lang: '<value>',
-        redirect: false,
-        scopes: [
-            Operations\Scopes::KmsSpaceWrite,
-        ],
-        state: 'New Jersey',
-        subdomain: '<value>',
-        successRedirect: '<value>',
     );
     $response = $sdk->integration->getUnifiedIntegrationAuth($request);
 
@@ -86,23 +76,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListUnifiedIntegrationWorkspacesRequest(
         workspaceId: '<value>',
-        active: false,
-        categories: [
-            Operations\QueryParamCategories::Genai,
-        ],
-        env: '<value>',
-        limit: 9072.99,
-        offset: 5948.93,
-        summary: false,
-        updatedGte: '<value>',
     );
     $response = $sdk->integration->listUnifiedIntegrationWorkspaces($request);
 
@@ -146,24 +128,14 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedIntegrationsRequest(
-        active: false,
-        categories: [
-            Operations\ListUnifiedIntegrationsQueryParamCategories::Martech,
-        ],
-        env: '<value>',
-        limit: 7382.58,
-        offset: 353.99,
-        summary: false,
-        type: '<value>',
-        updatedGte: '<value>',
-    );
+    $request = new Operations\ListUnifiedIntegrationsRequest();
     $response = $sdk->integration->listUnifiedIntegrations($request);
 
     if ($response->integrations !== null) {

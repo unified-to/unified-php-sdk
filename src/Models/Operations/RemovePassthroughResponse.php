@@ -12,6 +12,26 @@ namespace Unified\Unified_to\Models\Operations;
 class RemovePassthroughResponse
 {
     /**
+     * Successful
+     *
+     * @var mixed $twoXXApplicationJsonAny
+     */
+    public mixed $twoXXApplicationJsonAny = null;
+
+    /**
+     * Successful
+     *
+     * @var ?string $twoXXTextPlainRes
+     */
+    public ?string $twoXXTextPlainRes = null;
+
+    /**
+     *
+     * @var ?string $body
+     */
+    public ?string $body = null;
+
+    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -19,11 +39,11 @@ class RemovePassthroughResponse
     public string $contentType;
 
     /**
-     * Successful
+     * $headers
      *
-     * @var ?array<string, mixed> $result
+     * @var array<string, array<string>> $headers
      */
-    public ?array $result = null;
+    public array $headers;
 
     /**
      * HTTP response status code for this operation
@@ -41,15 +61,21 @@ class RemovePassthroughResponse
 
     /**
      * @param  string  $contentType
+     * @param  array<string, array<string>>  $headers
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<string, mixed>  $result
+     * @param  mixed  $twoXXApplicationJsonAny
+     * @param  ?string  $twoXXTextPlainRes
+     * @param  ?string  $body
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $result = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, mixed $twoXXApplicationJsonAny = null, ?string $twoXXTextPlainRes = null, ?string $body = null, ?array $headers = [])
     {
         $this->contentType = $contentType;
+        $this->headers = $headers;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->result = $result;
+        $this->twoXXApplicationJsonAny = $twoXXApplicationJsonAny;
+        $this->twoXXTextPlainRes = $twoXXTextPlainRes;
+        $this->body = $body;
     }
 }

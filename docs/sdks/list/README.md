@@ -25,28 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateMartechListRequest(
         connectionId: '<value>',
-        marketingList: new Shared\MarketingList(
-            createdAt: '<value>',
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'Latin' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-05-06T07:01:10.618Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->list->createMartechList($request);
 
@@ -90,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -99,9 +88,6 @@ try {
     $request = new Operations\GetMartechListRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->list->getMartechList($request);
 
@@ -144,25 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListMartechListsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9665.22,
-        offset: 367.94,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-09-12T12:19:08.506Z'),
     );
     $response = $sdk->list->listMartechLists($request);
 
@@ -205,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -216,18 +193,6 @@ try {
     $request = new Operations\PatchMartechListRequest(
         connectionId: '<value>',
         id: '<id>',
-        marketingList: new Shared\MarketingList(
-            createdAt: '<value>',
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'Classical' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-07-26T04:11:57.641Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->list->patchMartechList($request);
 
@@ -271,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -322,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -333,18 +299,6 @@ try {
     $request = new Operations\UpdateMartechListRequest(
         connectionId: '<value>',
         id: '<id>',
-        marketingList: new Shared\MarketingList(
-            createdAt: '<value>',
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'innocently' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-05-18T20:36:47.001Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->list->updateMartechList($request);
 

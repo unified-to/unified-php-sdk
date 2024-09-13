@@ -25,37 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreatePaymentLinkRequest(
         connectionId: '<value>',
-        paymentLink: new Shared\PaymentLink(
-            amount: 8711.36,
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-05-14T04:54:56.527Z'),
-            currency: 'Aruban Guilder',
-            id: '<id>',
-            isActive: false,
-            isChargeableNow: false,
-            lineitems: [
-                new Shared\PaymentLinkLineitem,
-            ],
-            paymentId: '<value>',
-            raw: [
-                'stump' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-07-14T18:03:00.242Z'),
-            url: 'http://baggy-shark.biz',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->link->createPaymentLink($request);
 
@@ -99,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -108,9 +88,6 @@ try {
     $request = new Operations\GetPaymentLinkRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->link->getPaymentLink($request);
 
@@ -153,27 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListPaymentLinksRequest(
         connectionId: '<value>',
-        contactId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 5840.47,
-        offset: 2505.87,
-        order: '<value>',
-        paymentId: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-12-19T04:38:46.756Z'),
     );
     $response = $sdk->link->listPaymentLinks($request);
 
@@ -216,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -227,27 +193,6 @@ try {
     $request = new Operations\PatchPaymentLinkRequest(
         connectionId: '<value>',
         id: '<id>',
-        paymentLink: new Shared\PaymentLink(
-            amount: 2219.73,
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-05-20T18:32:48.667Z'),
-            currency: 'UIC-Franc',
-            id: '<id>',
-            isActive: false,
-            isChargeableNow: false,
-            lineitems: [
-                new Shared\PaymentLinkLineitem,
-            ],
-            paymentId: '<value>',
-            raw: [
-                'Tellurium' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-07-20T09:13:52.888Z'),
-            url: 'http://accurate-costume.org',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->link->patchPaymentLink($request);
 
@@ -291,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -342,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -353,27 +299,6 @@ try {
     $request = new Operations\UpdatePaymentLinkRequest(
         connectionId: '<value>',
         id: '<id>',
-        paymentLink: new Shared\PaymentLink(
-            amount: 6147.65,
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-05-02T07:49:35.280Z'),
-            currency: 'Gibraltar Pound',
-            id: '<id>',
-            isActive: false,
-            isChargeableNow: false,
-            lineitems: [
-                new Shared\PaymentLinkLineitem,
-            ],
-            paymentId: '<value>',
-            raw: [
-                'male' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-08-22T16:01:32.942Z'),
-            url: 'https://complex-glove.com',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->link->updatePaymentLink($request);
 

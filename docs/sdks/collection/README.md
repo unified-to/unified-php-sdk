@@ -25,42 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateCommerceCollectionRequest(
         connectionId: '<value>',
-        commerceCollection: new Shared\CommerceCollection(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-06-14T12:03:57.982Z'),
-            description: 'Team-oriented intermediate interface',
-            isActive: false,
-            isFeatured: false,
-            isVisible: false,
-            media: [
-                new Shared\CommerceItemMedia,
-            ],
-            parentId: '<value>',
-            publicDescription: '<value>',
-            publicName: '<value>',
-            raw: [
-                'whoever' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            type: Shared\CommerceCollectionType::Category,
-            updatedAt: Utils\Utils::parseDateTime('2022-06-05T09:05:38.009Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->collection->createCommerceCollection($request);
 
@@ -104,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -113,9 +88,6 @@ try {
     $request = new Operations\GetCommerceCollectionRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->collection->getCommerceCollection($request);
 
@@ -158,27 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListCommerceCollectionsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 2972.15,
-        offset: 5933.83,
-        order: '<value>',
-        parentId: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        type: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-08-08T20:40:35.103Z'),
     );
     $response = $sdk->collection->listCommerceCollections($request);
 
@@ -221,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -232,32 +193,6 @@ try {
     $request = new Operations\PatchCommerceCollectionRequest(
         connectionId: '<value>',
         id: '<id>',
-        commerceCollection: new Shared\CommerceCollection(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-12-27T01:30:16.292Z'),
-            description: 'Polarised solution-oriented analyzer',
-            isActive: false,
-            isFeatured: false,
-            isVisible: false,
-            media: [
-                new Shared\CommerceItemMedia,
-            ],
-            parentId: '<value>',
-            publicDescription: '<value>',
-            publicName: '<value>',
-            raw: [
-                'Cheese' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            type: Shared\CommerceCollectionType::SavedSearch,
-            updatedAt: Utils\Utils::parseDateTime('2024-08-04T22:23:37.874Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->collection->patchCommerceCollection($request);
 
@@ -301,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -352,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -363,32 +299,6 @@ try {
     $request = new Operations\UpdateCommerceCollectionRequest(
         connectionId: '<value>',
         id: '<id>',
-        commerceCollection: new Shared\CommerceCollection(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-07-30T10:24:18.569Z'),
-            description: 'Sharable dynamic solution',
-            isActive: false,
-            isFeatured: false,
-            isVisible: false,
-            media: [
-                new Shared\CommerceItemMedia,
-            ],
-            parentId: '<value>',
-            publicDescription: '<value>',
-            publicName: '<value>',
-            raw: [
-                'Modern' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            type: Shared\CommerceCollectionType::Collection,
-            updatedAt: Utils\Utils::parseDateTime('2024-01-17T22:11:40.268Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->collection->updateCommerceCollection($request);
 

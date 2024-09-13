@@ -25,36 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateTaskProjectRequest(
         connectionId: '<value>',
-        taskProject: new Shared\TaskProject(
-            createdAt: Utils\Utils::parseDateTime('2022-10-11T14:12:01.452Z'),
-            description: 'Proactive zero defect encryption',
-            groupIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            name: '<value>',
-            parentId: '<value>',
-            raw: [
-                'invoice' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-05-17T14:43:30.543Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->project->createTaskProject($request);
 
@@ -98,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -107,9 +88,6 @@ try {
     $request = new Operations\GetTaskProjectRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->project->getTaskProject($request);
 
@@ -152,26 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListTaskProjectsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 8217.75,
-        offset: 5158.61,
-        order: '<value>',
-        parentId: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-08-11T05:04:28.347Z'),
     );
     $response = $sdk->project->listTaskProjects($request);
 
@@ -214,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -225,26 +193,6 @@ try {
     $request = new Operations\PatchTaskProjectRequest(
         connectionId: '<value>',
         id: '<id>',
-        taskProject: new Shared\TaskProject(
-            createdAt: Utils\Utils::parseDateTime('2022-07-29T23:19:02.666Z'),
-            description: 'Horizontal responsive time-frame',
-            groupIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            name: '<value>',
-            parentId: '<value>',
-            raw: [
-                'District' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-04-18T00:11:57.311Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->project->patchTaskProject($request);
 
@@ -288,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -339,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -350,26 +299,6 @@ try {
     $request = new Operations\UpdateTaskProjectRequest(
         connectionId: '<value>',
         id: '<id>',
-        taskProject: new Shared\TaskProject(
-            createdAt: Utils\Utils::parseDateTime('2023-12-15T14:58:26.353Z'),
-            description: 'Seamless impactful circuit',
-            groupIds: [
-                '<value>',
-            ],
-            id: '<id>',
-            name: '<value>',
-            parentId: '<value>',
-            raw: [
-                'Southeast' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-07-05T16:15:29.866Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->project->updateTaskProject($request);
 

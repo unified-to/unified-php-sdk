@@ -25,31 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateCommerceInventoryRequest(
         connectionId: '<value>',
-        commerceInventory: new Shared\CommerceInventory(
-            available: 5165.08,
-            id: '<id>',
-            itemId: '<value>',
-            itemOptionId: '<value>',
-            itemVariantId: '<value>',
-            locationId: '<value>',
-            raw: [
-                'Officer' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-10-19T06:57:05.921Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->inventory->createCommerceInventory($request);
 
@@ -93,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -102,9 +88,6 @@ try {
     $request = new Operations\GetCommerceInventoryRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->inventory->getCommerceInventory($request);
 
@@ -147,27 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListCommerceInventoriesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        itemVariantId: '<value>',
-        limit: 2481.16,
-        locationId: '<value>',
-        offset: 9476.38,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-10-15T22:28:16.925Z'),
     );
     $response = $sdk->inventory->listCommerceInventories($request);
 
@@ -210,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -221,21 +193,6 @@ try {
     $request = new Operations\PatchCommerceInventoryRequest(
         connectionId: '<value>',
         id: '<id>',
-        commerceInventory: new Shared\CommerceInventory(
-            available: 615.23,
-            id: '<id>',
-            itemId: '<value>',
-            itemOptionId: '<value>',
-            itemVariantId: '<value>',
-            locationId: '<value>',
-            raw: [
-                'Modern' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-12-27T05:22:53.251Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->inventory->patchCommerceInventory($request);
 
@@ -279,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -330,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -341,21 +299,6 @@ try {
     $request = new Operations\UpdateCommerceInventoryRequest(
         connectionId: '<value>',
         id: '<id>',
-        commerceInventory: new Shared\CommerceInventory(
-            available: 9360.02,
-            id: '<id>',
-            itemId: '<value>',
-            itemOptionId: '<value>',
-            itemVariantId: '<value>',
-            locationId: '<value>',
-            raw: [
-                'wavy' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-05-08T14:12:09.565Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->inventory->updateCommerceInventory($request);
 

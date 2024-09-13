@@ -34,62 +34,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateCrmCompanyRequest(
         connectionId: '<value>',
-        crmCompany: new Shared\CrmCompany(
-            address: new Shared\PropertyCrmCompanyAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Joanieworth',
-                country: 'Brazil',
-                countryCode: 'CW',
-                postalCode: '39571',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            createdAt: Utils\Utils::parseDateTime('2024-02-03T10:04:12.712Z'),
-            dealIds: [
-                '<value>',
-            ],
-            description: 'Pre-emptive responsive task-force',
-            emails: [
-                new Shared\CrmEmail,
-            ],
-            employees: 4175.89,
-            id: '<id>',
-            industry: '<value>',
-            isActive: false,
-            linkUrls: [
-                '<value>',
-            ],
-            name: '<value>',
-            raw: [
-                'payment' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\CrmTelephone,
-            ],
-            timezone: 'Africa/Johannesburg',
-            updatedAt: Utils\Utils::parseDateTime('2023-07-19T06:50:49.294Z'),
-            userId: '<value>',
-            websites: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->createCrmCompany($request);
 
@@ -132,39 +86,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateHrisCompanyRequest(
         connectionId: '<value>',
-        hrisCompany: new Shared\HrisCompany(
-            address: new Shared\PropertyHrisCompanyAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Leuschketon',
-                country: 'Greenland',
-                countryCode: 'UG',
-                postalCode: '28999',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            createdAt: Utils\Utils::parseDateTime('2024-11-26T14:41:42.849Z'),
-            id: '<id>',
-            legalName: '<value>',
-            name: '<value>',
-            raw: [
-                'Account' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-12-14T07:52:45.369Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->createHrisCompany($request);
 
@@ -208,8 +139,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -217,9 +149,6 @@ try {
     $request = new Operations\GetAtsCompanyRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->getAtsCompany($request);
 
@@ -263,8 +192,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -272,9 +202,6 @@ try {
     $request = new Operations\GetCrmCompanyRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->getCrmCompany($request);
 
@@ -318,8 +245,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -327,9 +255,6 @@ try {
     $request = new Operations\GetHrisCompanyRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->getHrisCompany($request);
 
@@ -372,25 +297,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsCompaniesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 6933.84,
-        offset: 7946.52,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-10-01T21:39:38.971Z'),
     );
     $response = $sdk->company->listAtsCompanies($request);
 
@@ -433,28 +349,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListCrmCompaniesRequest(
         connectionId: '<value>',
-        contactId: '<value>',
-        dealId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9883.97,
-        offset: 5913.88,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-05-02T17:52:08.731Z'),
-        userId: '<value>',
     );
     $response = $sdk->company->listCrmCompanies($request);
 
@@ -498,16 +402,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListEnrichCompaniesRequest(
         connectionId: '<value>',
-        domain: 'dismal-cornmeal.org',
-        name: '<value>',
     );
     $response = $sdk->company->listEnrichCompanies($request);
 
@@ -550,25 +453,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListHrisCompaniesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9887.05,
-        offset: 4708.81,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-12-23T09:20:33.437Z'),
     );
     $response = $sdk->company->listHrisCompanies($request);
 
@@ -611,10 +505,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -622,52 +516,6 @@ try {
     $request = new Operations\PatchCrmCompanyRequest(
         connectionId: '<value>',
         id: '<id>',
-        crmCompany: new Shared\CrmCompany(
-            address: new Shared\PropertyCrmCompanyAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Rempelchester',
-                country: 'Christmas Island',
-                countryCode: 'LA',
-                postalCode: '53644',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            createdAt: Utils\Utils::parseDateTime('2022-01-19T16:53:30.758Z'),
-            dealIds: [
-                '<value>',
-            ],
-            description: 'Diverse mission-critical project',
-            emails: [
-                new Shared\CrmEmail,
-            ],
-            employees: 4128.78,
-            id: '<id>',
-            industry: '<value>',
-            isActive: false,
-            linkUrls: [
-                '<value>',
-            ],
-            name: '<value>',
-            raw: [
-                'Cloned' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\CrmTelephone,
-            ],
-            timezone: 'America/Regina',
-            updatedAt: Utils\Utils::parseDateTime('2024-04-28T13:26:17.184Z'),
-            userId: '<value>',
-            websites: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->patchCrmCompany($request);
 
@@ -710,10 +558,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -721,29 +569,6 @@ try {
     $request = new Operations\PatchHrisCompanyRequest(
         connectionId: '<value>',
         id: '<id>',
-        hrisCompany: new Shared\HrisCompany(
-            address: new Shared\PropertyHrisCompanyAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'West Tressashire',
-                country: 'Norfolk Island',
-                countryCode: 'MW',
-                postalCode: '36009-7244',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            createdAt: Utils\Utils::parseDateTime('2023-12-23T19:08:18.404Z'),
-            id: '<id>',
-            legalName: '<value>',
-            name: '<value>',
-            raw: [
-                'Chief' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-08-30T10:26:34.618Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->patchHrisCompany($request);
 
@@ -787,8 +612,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -839,8 +665,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -890,10 +717,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -901,52 +728,6 @@ try {
     $request = new Operations\UpdateCrmCompanyRequest(
         connectionId: '<value>',
         id: '<id>',
-        crmCompany: new Shared\CrmCompany(
-            address: new Shared\PropertyCrmCompanyAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Margeshire',
-                country: 'Bahrain',
-                countryCode: 'WS',
-                postalCode: '27563',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            createdAt: Utils\Utils::parseDateTime('2023-06-19T10:10:37.376Z'),
-            dealIds: [
-                '<value>',
-            ],
-            description: 'Future-proofed zero defect instruction set',
-            emails: [
-                new Shared\CrmEmail,
-            ],
-            employees: 1100.41,
-            id: '<id>',
-            industry: '<value>',
-            isActive: false,
-            linkUrls: [
-                '<value>',
-            ],
-            name: '<value>',
-            raw: [
-                'quantify' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\CrmTelephone,
-            ],
-            timezone: 'Europe/Ljubljana',
-            updatedAt: Utils\Utils::parseDateTime('2022-09-16T08:11:17.577Z'),
-            userId: '<value>',
-            websites: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->updateCrmCompany($request);
 
@@ -989,10 +770,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1000,29 +781,6 @@ try {
     $request = new Operations\UpdateHrisCompanyRequest(
         connectionId: '<value>',
         id: '<id>',
-        hrisCompany: new Shared\HrisCompany(
-            address: new Shared\PropertyHrisCompanyAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Rancho Santa Margarita',
-                country: 'Somalia',
-                countryCode: 'CL',
-                postalCode: '49321',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            createdAt: Utils\Utils::parseDateTime('2023-11-24T00:12:57.019Z'),
-            id: '<id>',
-            legalName: '<value>',
-            name: '<value>',
-            raw: [
-                'Coordinator' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-09-01T17:36:17.033Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->company->updateHrisCompany($request);
 

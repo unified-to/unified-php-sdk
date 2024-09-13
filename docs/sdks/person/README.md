@@ -21,19 +21,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListEnrichPeopleRequest(
         connectionId: '<value>',
-        companyName: 'Stanton LLC',
-        email: 'Kamille53@gmail.com',
-        linkedinUrl: '<value>',
-        name: '<value>',
-        twitter: '<value>',
     );
     $response = $sdk->person->listEnrichPeople($request);
 

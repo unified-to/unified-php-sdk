@@ -25,38 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsInterviewRequest(
         connectionId: '<value>',
-        atsInterview: new Shared\AtsInterview(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-01-11T04:08:22.567Z'),
-            endAt: Utils\Utils::parseDateTime('2024-12-21T08:47:56.138Z'),
-            externalEventXref: '<value>',
-            id: '<id>',
-            jobId: '<value>',
-            location: '<value>',
-            raw: [
-                'Metrics' => '<value>',
-            ],
-            startAt: Utils\Utils::parseDateTime('2022-02-07T15:15:23.855Z'),
-            status: Shared\AtsInterviewStatus::AwaitingFeedback,
-            updatedAt: Utils\Utils::parseDateTime('2024-10-20T08:44:17.279Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->interview->createAtsInterview($request);
 
@@ -100,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -109,9 +88,6 @@ try {
     $request = new Operations\GetAtsInterviewRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->interview->getAtsInterview($request);
 
@@ -154,26 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsInterviewsRequest(
         connectionId: '<value>',
-        applicationId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 2562.12,
-        offset: 1185.02,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-09-28T15:15:00.508Z'),
     );
     $response = $sdk->interview->listAtsInterviews($request);
 
@@ -216,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -227,28 +193,6 @@ try {
     $request = new Operations\PatchAtsInterviewRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsInterview: new Shared\AtsInterview(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-09-11T19:09:34.526Z'),
-            endAt: Utils\Utils::parseDateTime('2022-05-28T22:25:51.616Z'),
-            externalEventXref: '<value>',
-            id: '<id>',
-            jobId: '<value>',
-            location: '<value>',
-            raw: [
-                'Handmade' => '<value>',
-            ],
-            startAt: Utils\Utils::parseDateTime('2024-03-18T02:52:45.725Z'),
-            status: Shared\AtsInterviewStatus::Scheduled,
-            updatedAt: Utils\Utils::parseDateTime('2024-11-05T22:15:01.656Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->interview->patchAtsInterview($request);
 
@@ -292,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -343,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -354,28 +299,6 @@ try {
     $request = new Operations\UpdateAtsInterviewRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsInterview: new Shared\AtsInterview(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-05-06T05:22:44.534Z'),
-            endAt: Utils\Utils::parseDateTime('2023-03-29T20:29:22.648Z'),
-            externalEventXref: '<value>',
-            id: '<id>',
-            jobId: '<value>',
-            location: '<value>',
-            raw: [
-                'maroon' => '<value>',
-            ],
-            startAt: Utils\Utils::parseDateTime('2022-05-01T17:04:47.962Z'),
-            status: Shared\AtsInterviewStatus::Complete,
-            updatedAt: Utils\Utils::parseDateTime('2023-09-27T22:37:40.818Z'),
-            userIds: [
-                '<value>',
-            ],
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->interview->updateAtsInterview($request);
 

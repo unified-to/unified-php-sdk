@@ -31,34 +31,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateKmsPageRequest(
         connectionId: '<value>',
-        kmsPage: new Shared\KmsPage(
-            downloadUrl: '<value>',
-            id: '<id>',
-            spaceId: '<value>',
-            title: '<value>',
-            type: Shared\KmsPageType::Html,
-            createdAt: Utils\Utils::parseDateTime('2024-03-19T03:04:03.192Z'),
-            isActive: false,
-            parentPageId: '<value>',
-            raw: [
-                'Avon' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-01-16T07:34:21.155Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->kms->createKmsPage($request);
 
@@ -101,32 +83,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateKmsSpaceRequest(
         connectionId: '<value>',
-        kmsSpace: new Shared\KmsSpace(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-12-05T14:15:26.081Z'),
-            description: 'Synchronised mission-critical hub',
-            isActive: false,
-            parentSpaceId: '<value>',
-            raw: [
-                'Bedfordshire' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-10-22T08:25:37.527Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->kms->createKmsSpace($request);
 
@@ -170,8 +136,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -179,9 +146,6 @@ try {
     $request = new Operations\GetKmsPageRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->kms->getKmsPage($request);
 
@@ -225,8 +189,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -234,9 +199,6 @@ try {
     $request = new Operations\GetKmsSpaceRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->kms->getKmsSpace($request);
 
@@ -279,27 +241,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListKmsPagesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 549.23,
-        offset: 3993.53,
-        order: '<value>',
-        parentId: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        spaceId: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-09-01T15:54:02.024Z'),
     );
     $response = $sdk->kms->listKmsPages($request);
 
@@ -342,26 +293,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListKmsSpacesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9216.91,
-        offset: 2110.39,
-        order: '<value>',
-        parentId: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-12-18T23:16:42.907Z'),
     );
     $response = $sdk->kms->listKmsSpaces($request);
 
@@ -404,10 +345,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -415,24 +356,6 @@ try {
     $request = new Operations\PatchKmsPageRequest(
         connectionId: '<value>',
         id: '<id>',
-        kmsPage: new Shared\KmsPage(
-            downloadUrl: '<value>',
-            id: '<id>',
-            spaceId: '<value>',
-            title: '<value>',
-            type: Shared\KmsPageType::Text,
-            createdAt: Utils\Utils::parseDateTime('2023-03-14T10:32:18.100Z'),
-            isActive: false,
-            parentPageId: '<value>',
-            raw: [
-                'Tasty' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-09-01T10:50:15.719Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->kms->patchKmsPage($request);
 
@@ -475,10 +398,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -486,22 +409,6 @@ try {
     $request = new Operations\PatchKmsSpaceRequest(
         connectionId: '<value>',
         id: '<id>',
-        kmsSpace: new Shared\KmsSpace(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-11-04T17:16:51.659Z'),
-            description: 'Compatible homogeneous info-mediaries',
-            isActive: false,
-            parentSpaceId: '<value>',
-            raw: [
-                'Hybrid' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-06-18T14:48:57.689Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->kms->patchKmsSpace($request);
 
@@ -545,8 +452,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -597,8 +505,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -648,10 +557,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -659,24 +568,6 @@ try {
     $request = new Operations\UpdateKmsPageRequest(
         connectionId: '<value>',
         id: '<id>',
-        kmsPage: new Shared\KmsPage(
-            downloadUrl: '<value>',
-            id: '<id>',
-            spaceId: '<value>',
-            title: '<value>',
-            type: Shared\KmsPageType::Text,
-            createdAt: Utils\Utils::parseDateTime('2024-12-15T20:24:07.681Z'),
-            isActive: false,
-            parentPageId: '<value>',
-            raw: [
-                'female' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-09-28T03:17:21.699Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->kms->updateKmsPage($request);
 
@@ -719,10 +610,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -730,22 +621,6 @@ try {
     $request = new Operations\UpdateKmsSpaceRequest(
         connectionId: '<value>',
         id: '<id>',
-        kmsSpace: new Shared\KmsSpace(
-            id: '<id>',
-            name: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-05-28T11:59:07.928Z'),
-            description: 'Cross-platform human-resource hierarchy',
-            isActive: false,
-            parentSpaceId: '<value>',
-            raw: [
-                'brr' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-05-12T03:57:22.712Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->kms->updateKmsSpace($request);
 

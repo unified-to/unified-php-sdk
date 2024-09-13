@@ -25,39 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateStorageFileRequest(
         connectionId: '<value>',
-        storageFile: new Shared\StorageFile(
-            createdAt: Utils\Utils::parseDateTime('2024-11-26T17:10:46.324Z'),
-            description: 'Digitized systematic Graphic Interface',
-            downloadUrl: '<value>',
-            hash: '<value>',
-            id: '<id>',
-            mimeType: '<value>',
-            name: '<value>',
-            parentId: '<value>',
-            permissions: [
-                new Shared\StoragePermission,
-            ],
-            raw: [
-                'astride' => '<value>',
-            ],
-            size: 3999.85,
-            type: Shared\StorageFileType::Folder,
-            updatedAt: Utils\Utils::parseDateTime('2024-03-07T14:24:08.441Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->file->createStorageFile($request);
 
@@ -101,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -110,9 +88,6 @@ try {
     $request = new Operations\GetStorageFileRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->file->getStorageFile($request);
 
@@ -155,26 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListStorageFilesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 1047.26,
-        offset: 7962.22,
-        order: '<value>',
-        parentId: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-01-28T04:36:03.817Z'),
     );
     $response = $sdk->file->listStorageFiles($request);
 
@@ -217,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -228,29 +193,6 @@ try {
     $request = new Operations\PatchStorageFileRequest(
         connectionId: '<value>',
         id: '<id>',
-        storageFile: new Shared\StorageFile(
-            createdAt: Utils\Utils::parseDateTime('2022-03-01T13:48:26.867Z'),
-            description: 'Customer-focused mission-critical monitoring',
-            downloadUrl: '<value>',
-            hash: '<value>',
-            id: '<id>',
-            mimeType: '<value>',
-            name: '<value>',
-            parentId: '<value>',
-            permissions: [
-                new Shared\StoragePermission,
-            ],
-            raw: [
-                'green' => '<value>',
-            ],
-            size: 2253.31,
-            type: Shared\StorageFileType::File,
-            updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:19:05.454Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->file->patchStorageFile($request);
 
@@ -294,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -345,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -356,29 +299,6 @@ try {
     $request = new Operations\UpdateStorageFileRequest(
         connectionId: '<value>',
         id: '<id>',
-        storageFile: new Shared\StorageFile(
-            createdAt: Utils\Utils::parseDateTime('2024-06-06T15:38:39.174Z'),
-            description: 'Polarised intangible architecture',
-            downloadUrl: '<value>',
-            hash: '<value>',
-            id: '<id>',
-            mimeType: '<value>',
-            name: '<value>',
-            parentId: '<value>',
-            permissions: [
-                new Shared\StoragePermission,
-            ],
-            raw: [
-                'male' => '<value>',
-            ],
-            size: 4091,
-            type: Shared\StorageFileType::Folder,
-            updatedAt: Utils\Utils::parseDateTime('2022-06-25T21:16:43.994Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->file->updateStorageFile($request);
 

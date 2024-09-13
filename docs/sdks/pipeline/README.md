@@ -25,34 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateCrmPipelineRequest(
         connectionId: '<value>',
-        crmPipeline: new Shared\CrmPipeline(
-            createdAt: Utils\Utils::parseDateTime('2024-06-24T10:05:30.432Z'),
-            dealProbability: 6254.97,
-            displayOrder: 3052.57,
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            raw: [
-                'Vista' => '<value>',
-            ],
-            stages: [
-                new Shared\CrmStage,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-07-13T04:30:34.696Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->pipeline->createCrmPipeline($request);
 
@@ -96,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -105,9 +88,6 @@ try {
     $request = new Operations\GetCrmPipelineRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->pipeline->getCrmPipeline($request);
 
@@ -150,25 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListCrmPipelinesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 3318.18,
-        offset: 4834.28,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-04-29T18:23:30.472Z'),
     );
     $response = $sdk->pipeline->listCrmPipelines($request);
 
@@ -211,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -222,24 +193,6 @@ try {
     $request = new Operations\PatchCrmPipelineRequest(
         connectionId: '<value>',
         id: '<id>',
-        crmPipeline: new Shared\CrmPipeline(
-            createdAt: Utils\Utils::parseDateTime('2024-08-26T14:31:39.156Z'),
-            dealProbability: 8620.92,
-            displayOrder: 4178.43,
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            raw: [
-                'Costa' => '<value>',
-            ],
-            stages: [
-                new Shared\CrmStage,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-04-03T20:45:57.138Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->pipeline->patchCrmPipeline($request);
 
@@ -283,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -334,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -345,24 +299,6 @@ try {
     $request = new Operations\UpdateCrmPipelineRequest(
         connectionId: '<value>',
         id: '<id>',
-        crmPipeline: new Shared\CrmPipeline(
-            createdAt: Utils\Utils::parseDateTime('2022-12-27T16:21:58.595Z'),
-            dealProbability: 8923.83,
-            displayOrder: 5142.22,
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            raw: [
-                'Androgyne' => '<value>',
-            ],
-            stages: [
-                new Shared\CrmStage,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-05-08T17:12:56.773Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->pipeline->updateCrmPipeline($request);
 

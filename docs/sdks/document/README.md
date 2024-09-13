@@ -25,35 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAtsDocumentRequest(
         connectionId: '<value>',
-        atsDocument: new Shared\AtsDocument(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-04-25T01:00:46.478Z'),
-            documentData: '<value>',
-            documentUrl: '<value>',
-            filename: 'your_file_here',
-            id: '<id>',
-            jobId: '<value>',
-            raw: [
-                'female' => '<value>',
-            ],
-            type: Shared\AtsDocumentType::CoverLetter,
-            updatedAt: Utils\Utils::parseDateTime('2024-11-21T14:39:08.865Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->document->createAtsDocument($request);
 
@@ -97,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -106,9 +88,6 @@ try {
     $request = new Operations\GetAtsDocumentRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->document->getAtsDocument($request);
 
@@ -151,27 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsDocumentsRequest(
         connectionId: '<value>',
-        applicationId: '<value>',
-        candidateId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9635.37,
-        offset: 8402.77,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-08-31T00:55:54.895Z'),
     );
     $response = $sdk->document->listAtsDocuments($request);
 
@@ -214,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -225,25 +193,6 @@ try {
     $request = new Operations\PatchAtsDocumentRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsDocument: new Shared\AtsDocument(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-04-01T11:33:08.084Z'),
-            documentData: '<value>',
-            documentUrl: '<value>',
-            filename: 'your_file_here',
-            id: '<id>',
-            jobId: '<value>',
-            raw: [
-                'Other' => '<value>',
-            ],
-            type: Shared\AtsDocumentType::CoverLetter,
-            updatedAt: Utils\Utils::parseDateTime('2023-06-19T12:06:56.902Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->document->patchAtsDocument($request);
 
@@ -287,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -338,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -349,25 +299,6 @@ try {
     $request = new Operations\UpdateAtsDocumentRequest(
         connectionId: '<value>',
         id: '<id>',
-        atsDocument: new Shared\AtsDocument(
-            applicationId: '<value>',
-            candidateId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-07-05T17:05:49.106Z'),
-            documentData: '<value>',
-            documentUrl: '<value>',
-            filename: 'your_file_here',
-            id: '<id>',
-            jobId: '<value>',
-            raw: [
-                'DRAM' => '<value>',
-            ],
-            type: Shared\AtsDocumentType::Other,
-            updatedAt: Utils\Utils::parseDateTime('2023-09-09T02:38:30.011Z'),
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->document->updateAtsDocument($request);
 

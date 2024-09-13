@@ -27,44 +27,15 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateUnifiedWebhookRequest(
-        webhook: new Shared\Webhook(
-            connectionId: '<value>',
-            event: Shared\Event::Created,
-            hookUrl: '<value>',
-            objectType: Shared\ObjectType::AccountingTransaction,
-            checkedAt: Utils\Utils::parseDateTime('2023-05-18T07:32:59.218Z'),
-            createdAt: Utils\Utils::parseDateTime('2023-11-05T05:21:48.024Z'),
-            environment: '<value>',
-            fields: '<value>',
-            filters: [
-                'Borders' => '<value>',
-            ],
-            id: '<id>',
-            integrationType: '<value>',
-            interval: 6806.55,
-            isHealthy: false,
-            meta: [
-                'tune' => '<value>',
-            ],
-            pageMaxLimit: 2826.97,
-            runs: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-03-18T05:32:38.856Z'),
-            webhookType: Shared\WebhookType::Native,
-            workspaceId: '<value>',
-        ),
-        includeAll: false,
-    );
+    $request = new Operations\CreateUnifiedWebhookRequest();
     $response = $sdk->webhook->createUnifiedWebhook($request);
 
     if ($response->webhook !== null) {
@@ -107,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -157,30 +129,15 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedWebhooksRequest(
-        connectionId: new Operations\ConnectionId(
-
-        ),
-        createdLte: Utils\Utils::parseDateTime('2022-05-08T09:09:29.992Z'),
-        env: '<value>',
-        integrationType: new Operations\IntegrationType(
-
-        ),
-        limit: 5094.7,
-        object: '<value>',
-        offset: 1001.01,
-        order: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-07-16T05:14:02.871Z'),
-    );
+    $request = new Operations\ListUnifiedWebhooksRequest();
     $response = $sdk->webhook->listUnifiedWebhooks($request);
 
     if ($response->webhooks !== null) {
@@ -222,43 +179,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\PatchUnifiedWebhookRequest(
         id: '<id>',
-        webhook: new Shared\Webhook(
-            connectionId: '<value>',
-            event: Shared\Event::Deleted,
-            hookUrl: '<value>',
-            objectType: Shared\ObjectType::Passthrough,
-            checkedAt: Utils\Utils::parseDateTime('2023-03-20T17:55:08.389Z'),
-            createdAt: Utils\Utils::parseDateTime('2023-12-22T19:20:01.502Z'),
-            environment: '<value>',
-            fields: '<value>',
-            filters: [
-                'Northeast' => '<value>',
-            ],
-            id: '<id>',
-            integrationType: '<value>',
-            interval: 4044.12,
-            isHealthy: false,
-            meta: [
-                'efficient' => '<value>',
-            ],
-            pageMaxLimit: 9351.49,
-            runs: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-08-09T10:35:33.608Z'),
-            webhookType: Shared\WebhookType::Virtual,
-            workspaceId: '<value>',
-        ),
     );
     $response = $sdk->webhook->patchUnifiedWebhook($request);
 
@@ -302,8 +232,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -353,8 +284,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -403,43 +335,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\UpdateUnifiedWebhookRequest(
         id: '<id>',
-        webhook: new Shared\Webhook(
-            connectionId: '<value>',
-            event: Shared\Event::Created,
-            hookUrl: '<value>',
-            objectType: Shared\ObjectType::HrisGroup,
-            checkedAt: Utils\Utils::parseDateTime('2022-06-04T08:14:22.650Z'),
-            createdAt: Utils\Utils::parseDateTime('2023-08-21T08:47:52.084Z'),
-            environment: '<value>',
-            fields: '<value>',
-            filters: [
-                'enable' => '<value>',
-            ],
-            id: '<id>',
-            integrationType: '<value>',
-            interval: 6971.7,
-            isHealthy: false,
-            meta: [
-                'content' => '<value>',
-            ],
-            pageMaxLimit: 2903.83,
-            runs: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-08-05T16:48:02.830Z'),
-            webhookType: Shared\WebhookType::Native,
-            workspaceId: '<value>',
-        ),
     );
     $response = $sdk->webhook->updateUnifiedWebhook($request);
 
@@ -483,8 +388,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 

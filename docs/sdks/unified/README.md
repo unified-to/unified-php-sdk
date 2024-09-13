@@ -38,10 +38,10 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -54,52 +54,6 @@ try {
         permissions: [
             Shared\PropertyConnectionPermissions::AtsDocumentWrite,
         ],
-        auth: new Shared\PropertyConnectionAuth(
-            accessToken: '<value>',
-            apiUrl: '<value>',
-            appId: '<value>',
-            authorizeUrl: '<value>',
-            clientId: '<value>',
-            clientSecret: '<value>',
-            consumerKey: '<value>',
-            consumerSecret: '<value>',
-            devApiKey: '<value>',
-            emails: [
-                '<value>',
-            ],
-            expiresIn: 4311.07,
-            expiryDate: Utils\Utils::parseDateTime('2024-01-24T16:22:59.867Z'),
-            key: '<key>',
-            meta: [
-                'syndicate' => '<value>',
-            ],
-            name: '<value>',
-            otherAuthInfo: [
-                '<value>',
-            ],
-            pem: '<value>',
-            refreshToken: '<value>',
-            refreshTokenExpiresDate: Utils\Utils::parseDateTime('2022-12-11T17:06:37.254Z'),
-            refreshTokenExpiresIn: 8302.8,
-            state: 'New Mexico',
-            token: '<value>',
-            tokenUrl: '<value>',
-        ),
-        authAwsArn: '<value>',
-        createdAt: Utils\Utils::parseDateTime('2023-02-05T07:37:37.431Z'),
-        cursorsCache: [
-            [
-                'Van' => '<value>',
-            ],
-        ],
-        environment: '<value>',
-        externalXref: '<value>',
-        id: '<id>',
-        isPaused: false,
-        lastHealthyAt: Utils\Utils::parseDateTime('2024-09-12T14:19:55.077Z'),
-        lastUnhealthyAt: Utils\Utils::parseDateTime('2022-10-06T09:01:24.591Z'),
-        updatedAt: Utils\Utils::parseDateTime('2024-06-15T07:09:43.182Z'),
-        workspaceId: '<value>',
     );
     $response = $sdk->unified->createUnifiedConnection($request);
 
@@ -142,44 +96,15 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateUnifiedWebhookRequest(
-        webhook: new Shared\Webhook(
-            connectionId: '<value>',
-            event: Shared\Event::Created,
-            hookUrl: '<value>',
-            objectType: Shared\ObjectType::AccountingTransaction,
-            checkedAt: Utils\Utils::parseDateTime('2023-05-18T07:32:59.218Z'),
-            createdAt: Utils\Utils::parseDateTime('2023-11-05T05:21:48.024Z'),
-            environment: '<value>',
-            fields: '<value>',
-            filters: [
-                'Borders' => '<value>',
-            ],
-            id: '<id>',
-            integrationType: '<value>',
-            interval: 6806.55,
-            isHealthy: false,
-            meta: [
-                'tune' => '<value>',
-            ],
-            pageMaxLimit: 2826.97,
-            runs: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-03-18T05:32:38.856Z'),
-            webhookType: Shared\WebhookType::Native,
-            workspaceId: '<value>',
-        ),
-        includeAll: false,
-    );
+    $request = new Operations\CreateUnifiedWebhookRequest();
     $response = $sdk->unified->createUnifiedWebhook($request);
 
     if ($response->webhook !== null) {
@@ -222,8 +147,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -273,8 +199,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -324,8 +251,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -333,17 +261,6 @@ try {
     $request = new Operations\GetUnifiedIntegrationAuthRequest(
         integrationType: '<value>',
         workspaceId: '<value>',
-        env: '<value>',
-        externalXref: '<value>',
-        failureRedirect: '<value>',
-        lang: '<value>',
-        redirect: false,
-        scopes: [
-            Operations\Scopes::KmsSpaceWrite,
-        ],
-        state: 'New Jersey',
-        subdomain: '<value>',
-        successRedirect: '<value>',
     );
     $response = $sdk->unified->getUnifiedIntegrationAuth($request);
 
@@ -387,8 +304,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -437,26 +355,15 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedApicallsRequest(
-        connectionId: '<value>',
-        env: '<value>',
-        error: false,
-        externalXref: '<value>',
-        integrationType: '<value>',
-        limit: 8683.78,
-        offset: 494.66,
-        order: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-08-01T07:02:03.842Z'),
-    );
+    $request = new Operations\ListUnifiedApicallsRequest();
     $response = $sdk->unified->listUnifiedApicalls($request);
 
     if ($response->apiCalls !== null) {
@@ -498,26 +405,15 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedConnectionsRequest(
-        categories: [
-            Operations\Categories::Uc,
-        ],
-        env: '<value>',
-        externalXref: '<value>',
-        limit: 9638.08,
-        offset: 15.12,
-        order: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-06-20T13:59:12.388Z'),
-    );
+    $request = new Operations\ListUnifiedConnectionsRequest();
     $response = $sdk->unified->listUnifiedConnections($request);
 
     if ($response->connections !== null) {
@@ -560,23 +456,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListUnifiedIntegrationWorkspacesRequest(
         workspaceId: '<value>',
-        active: false,
-        categories: [
-            Operations\QueryParamCategories::Genai,
-        ],
-        env: '<value>',
-        limit: 9072.99,
-        offset: 5948.93,
-        summary: false,
-        updatedGte: '<value>',
     );
     $response = $sdk->unified->listUnifiedIntegrationWorkspaces($request);
 
@@ -620,24 +508,14 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedIntegrationsRequest(
-        active: false,
-        categories: [
-            Operations\ListUnifiedIntegrationsQueryParamCategories::Martech,
-        ],
-        env: '<value>',
-        limit: 7382.58,
-        offset: 353.99,
-        summary: false,
-        type: '<value>',
-        updatedGte: '<value>',
-    );
+    $request = new Operations\ListUnifiedIntegrationsRequest();
     $response = $sdk->unified->listUnifiedIntegrations($request);
 
     if ($response->integrations !== null) {
@@ -679,21 +557,15 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedIssuesRequest(
-        limit: 7069.08,
-        offset: 7461.37,
-        order: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-01-21T01:55:24.746Z'),
-    );
+    $request = new Operations\ListUnifiedIssuesRequest();
     $response = $sdk->unified->listUnifiedIssues($request);
 
     if ($response->issues !== null) {
@@ -735,30 +607,15 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedWebhooksRequest(
-        connectionId: new Operations\ConnectionId(
-
-        ),
-        createdLte: Utils\Utils::parseDateTime('2022-05-08T09:09:29.992Z'),
-        env: '<value>',
-        integrationType: new Operations\IntegrationType(
-
-        ),
-        limit: 5094.7,
-        object: '<value>',
-        offset: 1001.01,
-        order: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-07-16T05:14:02.871Z'),
-    );
+    $request = new Operations\ListUnifiedWebhooksRequest();
     $response = $sdk->unified->listUnifiedWebhooks($request);
 
     if ($response->webhooks !== null) {
@@ -800,71 +657,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\PatchUnifiedConnectionRequest(
         id: '<id>',
-        connection: new Shared\Connection(
-            categories: [
-                Shared\PropertyConnectionCategories::Commerce,
-            ],
-            integrationType: '<value>',
-            permissions: [
-                Shared\PropertyConnectionPermissions::HrisGroupRead,
-            ],
-            auth: new Shared\PropertyConnectionAuth(
-                accessToken: '<value>',
-                apiUrl: '<value>',
-                appId: '<value>',
-                authorizeUrl: '<value>',
-                clientId: '<value>',
-                clientSecret: '<value>',
-                consumerKey: '<value>',
-                consumerSecret: '<value>',
-                devApiKey: '<value>',
-                emails: [
-                    '<value>',
-                ],
-                expiresIn: 9973.13,
-                expiryDate: Utils\Utils::parseDateTime('2024-07-15T18:53:52.079Z'),
-                key: '<key>',
-                meta: [
-                    'Electronic' => '<value>',
-                ],
-                name: '<value>',
-                otherAuthInfo: [
-                    '<value>',
-                ],
-                pem: '<value>',
-                refreshToken: '<value>',
-                refreshTokenExpiresDate: Utils\Utils::parseDateTime('2022-05-14T12:46:18.750Z'),
-                refreshTokenExpiresIn: 5059.58,
-                state: 'Maine',
-                token: '<value>',
-                tokenUrl: '<value>',
-            ),
-            authAwsArn: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2024-06-03T13:20:07.463Z'),
-            cursorsCache: [
-                [
-                    'Flerovium' => '<value>',
-                ],
-            ],
-            environment: '<value>',
-            externalXref: '<value>',
-            id: '<id>',
-            isPaused: false,
-            lastHealthyAt: Utils\Utils::parseDateTime('2023-06-20T21:38:39.955Z'),
-            lastUnhealthyAt: Utils\Utils::parseDateTime('2023-06-02T09:40:32.883Z'),
-            updatedAt: Utils\Utils::parseDateTime('2022-08-09T02:30:18.551Z'),
-            workspaceId: '<value>',
-        ),
     );
     $response = $sdk->unified->patchUnifiedConnection($request);
 
@@ -907,43 +709,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\PatchUnifiedWebhookRequest(
         id: '<id>',
-        webhook: new Shared\Webhook(
-            connectionId: '<value>',
-            event: Shared\Event::Deleted,
-            hookUrl: '<value>',
-            objectType: Shared\ObjectType::Passthrough,
-            checkedAt: Utils\Utils::parseDateTime('2023-03-20T17:55:08.389Z'),
-            createdAt: Utils\Utils::parseDateTime('2023-12-22T19:20:01.502Z'),
-            environment: '<value>',
-            fields: '<value>',
-            filters: [
-                'Northeast' => '<value>',
-            ],
-            id: '<id>',
-            integrationType: '<value>',
-            interval: 4044.12,
-            isHealthy: false,
-            meta: [
-                'efficient' => '<value>',
-            ],
-            pageMaxLimit: 9351.49,
-            runs: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-08-09T10:35:33.608Z'),
-            webhookType: Shared\WebhookType::Virtual,
-            workspaceId: '<value>',
-        ),
     );
     $response = $sdk->unified->patchUnifiedWebhook($request);
 
@@ -987,8 +762,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1038,8 +814,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1089,8 +866,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1139,71 +917,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\UpdateUnifiedConnectionRequest(
         id: '<id>',
-        connection: new Shared\Connection(
-            categories: [
-                Shared\PropertyConnectionCategories::Genai,
-            ],
-            integrationType: '<value>',
-            permissions: [
-                Shared\PropertyConnectionPermissions::CrmDealWrite,
-            ],
-            auth: new Shared\PropertyConnectionAuth(
-                accessToken: '<value>',
-                apiUrl: '<value>',
-                appId: '<value>',
-                authorizeUrl: '<value>',
-                clientId: '<value>',
-                clientSecret: '<value>',
-                consumerKey: '<value>',
-                consumerSecret: '<value>',
-                devApiKey: '<value>',
-                emails: [
-                    '<value>',
-                ],
-                expiresIn: 9842.07,
-                expiryDate: Utils\Utils::parseDateTime('2024-03-25T02:21:40.431Z'),
-                key: '<key>',
-                meta: [
-                    'deposit' => '<value>',
-                ],
-                name: '<value>',
-                otherAuthInfo: [
-                    '<value>',
-                ],
-                pem: '<value>',
-                refreshToken: '<value>',
-                refreshTokenExpiresDate: Utils\Utils::parseDateTime('2024-11-26T11:11:59.157Z'),
-                refreshTokenExpiresIn: 4787.17,
-                state: 'Arkansas',
-                token: '<value>',
-                tokenUrl: '<value>',
-            ),
-            authAwsArn: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-01-09T16:11:04.721Z'),
-            cursorsCache: [
-                [
-                    'Account' => '<value>',
-                ],
-            ],
-            environment: '<value>',
-            externalXref: '<value>',
-            id: '<id>',
-            isPaused: false,
-            lastHealthyAt: Utils\Utils::parseDateTime('2022-09-02T00:03:31.866Z'),
-            lastUnhealthyAt: Utils\Utils::parseDateTime('2023-06-11T02:04:24.912Z'),
-            updatedAt: Utils\Utils::parseDateTime('2022-08-21T11:50:10.882Z'),
-            workspaceId: '<value>',
-        ),
     );
     $response = $sdk->unified->updateUnifiedConnection($request);
 
@@ -1246,43 +969,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\UpdateUnifiedWebhookRequest(
         id: '<id>',
-        webhook: new Shared\Webhook(
-            connectionId: '<value>',
-            event: Shared\Event::Created,
-            hookUrl: '<value>',
-            objectType: Shared\ObjectType::HrisGroup,
-            checkedAt: Utils\Utils::parseDateTime('2022-06-04T08:14:22.650Z'),
-            createdAt: Utils\Utils::parseDateTime('2023-08-21T08:47:52.084Z'),
-            environment: '<value>',
-            fields: '<value>',
-            filters: [
-                'enable' => '<value>',
-            ],
-            id: '<id>',
-            integrationType: '<value>',
-            interval: 6971.7,
-            isHealthy: false,
-            meta: [
-                'content' => '<value>',
-            ],
-            pageMaxLimit: 2903.83,
-            runs: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-08-05T16:48:02.830Z'),
-            webhookType: Shared\WebhookType::Native,
-            workspaceId: '<value>',
-        ),
     );
     $response = $sdk->unified->updateUnifiedWebhook($request);
 
@@ -1326,8 +1022,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 

@@ -25,31 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingTaxrateRequest(
         connectionId: '<value>',
-        accountingTaxrate: new Shared\AccountingTaxrate(
-            createdAt: Utils\Utils::parseDateTime('2022-07-08T09:55:20.238Z'),
-            description: 'Enterprise-wide content-based productivity',
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            rate: 6789.7,
-            raw: [
-                'Human' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-08-06T04:09:12.755Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->taxrate->createAccountingTaxrate($request);
 
@@ -93,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -102,9 +88,6 @@ try {
     $request = new Operations\GetAccountingTaxrateRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->taxrate->getAccountingTaxrate($request);
 
@@ -147,25 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingTaxratesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 1599.19,
-        offset: 1097.48,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-06-14T14:31:13.247Z'),
     );
     $response = $sdk->taxrate->listAccountingTaxrates($request);
 
@@ -208,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -219,21 +193,6 @@ try {
     $request = new Operations\PatchAccountingTaxrateRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingTaxrate: new Shared\AccountingTaxrate(
-            createdAt: Utils\Utils::parseDateTime('2023-10-19T15:57:03.731Z'),
-            description: 'Quality-focused user-facing complexity',
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            rate: 220.78,
-            raw: [
-                'Facilitator' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-10-17T14:16:26.961Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->taxrate->patchAccountingTaxrate($request);
 
@@ -277,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -328,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -339,21 +299,6 @@ try {
     $request = new Operations\UpdateAccountingTaxrateRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingTaxrate: new Shared\AccountingTaxrate(
-            createdAt: Utils\Utils::parseDateTime('2023-01-06T18:04:39.999Z'),
-            description: 'Switchable intangible initiative',
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            rate: 2580.61,
-            raw: [
-                'Buckinghamshire' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-11-25T16:43:20.981Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->taxrate->updateAccountingTaxrate($request);
 

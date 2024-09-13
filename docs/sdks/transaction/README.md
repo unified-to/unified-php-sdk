@@ -25,43 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingTransactionRequest(
         connectionId: '<value>',
-        accountingTransaction: new Shared\AccountingTransaction(
-            accountId: '<value>',
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-06-29T16:05:10.534Z'),
-            currency: 'Nuevo Sol',
-            customerMessage: '<value>',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingTransactionLineItem,
-            ],
-            memo: '<value>',
-            paymentMethod: '<value>',
-            paymentTerms: '<value>',
-            raw: [
-                'Direct' => '<value>',
-            ],
-            reference: '<value>',
-            splitAccountId: '<value>',
-            subTotalAmount: 2477.45,
-            taxAmount: 7389.88,
-            totalAmount: 8276.07,
-            type: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2023-03-28T17:20:22.599Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->transaction->createAccountingTransaction($request);
 
@@ -105,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -114,9 +88,6 @@ try {
     $request = new Operations\GetAccountingTransactionRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->transaction->getAccountingTransaction($request);
 
@@ -159,26 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingTransactionsRequest(
         connectionId: '<value>',
-        contactId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 7894.5,
-        offset: 4597.84,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-12-02T12:20:43.572Z'),
     );
     $response = $sdk->transaction->listAccountingTransactions($request);
 
@@ -221,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -232,33 +193,6 @@ try {
     $request = new Operations\PatchAccountingTransactionRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingTransaction: new Shared\AccountingTransaction(
-            accountId: '<value>',
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-09-10T10:50:45.480Z'),
-            currency: 'Tenge',
-            customerMessage: '<value>',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingTransactionLineItem,
-            ],
-            memo: '<value>',
-            paymentMethod: '<value>',
-            paymentTerms: '<value>',
-            raw: [
-                'instead' => '<value>',
-            ],
-            reference: '<value>',
-            splitAccountId: '<value>',
-            subTotalAmount: 535.65,
-            taxAmount: 3153.09,
-            totalAmount: 259.82,
-            type: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2024-08-13T08:04:48.029Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->transaction->patchAccountingTransaction($request);
 
@@ -302,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -353,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -364,33 +299,6 @@ try {
     $request = new Operations\UpdateAccountingTransactionRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingTransaction: new Shared\AccountingTransaction(
-            accountId: '<value>',
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-12-14T05:18:27.688Z'),
-            currency: 'Mexican Peso',
-            customerMessage: '<value>',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingTransactionLineItem,
-            ],
-            memo: '<value>',
-            paymentMethod: '<value>',
-            paymentTerms: '<value>',
-            raw: [
-                'protest' => '<value>',
-            ],
-            reference: '<value>',
-            splitAccountId: '<value>',
-            subTotalAmount: 2397.73,
-            taxAmount: 1897.48,
-            totalAmount: 421.84,
-            type: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2024-07-31T22:23:34.525Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->transaction->updateAccountingTransaction($request);
 

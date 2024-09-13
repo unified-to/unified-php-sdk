@@ -25,31 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateTicketingNoteRequest(
         connectionId: '<value>',
-        ticketingNote: new Shared\TicketingNote(
-            createdAt: Utils\Utils::parseDateTime('2024-04-20T13:29:50.877Z'),
-            customerId: '<value>',
-            description: 'Distributed 4th generation portal',
-            id: '<id>',
-            raw: [
-                'Sausages' => '<value>',
-            ],
-            ticketId: '<value>',
-            updatedAt: '<value>',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->note->createTicketingNote($request);
 
@@ -93,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -102,9 +88,6 @@ try {
     $request = new Operations\GetTicketingNoteRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->note->getTicketingNote($request);
 
@@ -147,27 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListTicketingNotesRequest(
         connectionId: '<value>',
-        customerId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 6345.23,
-        offset: 8100.5,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        ticketId: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-09-20T16:07:42.054Z'),
     );
     $response = $sdk->note->listTicketingNotes($request);
 
@@ -210,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -221,21 +193,6 @@ try {
     $request = new Operations\PatchTicketingNoteRequest(
         connectionId: '<value>',
         id: '<id>',
-        ticketingNote: new Shared\TicketingNote(
-            createdAt: Utils\Utils::parseDateTime('2024-09-04T20:58:12.449Z'),
-            customerId: '<value>',
-            description: 'Right-sized national productivity',
-            id: '<id>',
-            raw: [
-                'Southwest' => '<value>',
-            ],
-            ticketId: '<value>',
-            updatedAt: '<value>',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->note->patchTicketingNote($request);
 
@@ -279,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -330,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -341,21 +299,6 @@ try {
     $request = new Operations\UpdateTicketingNoteRequest(
         connectionId: '<value>',
         id: '<id>',
-        ticketingNote: new Shared\TicketingNote(
-            createdAt: Utils\Utils::parseDateTime('2024-05-15T01:15:48.418Z'),
-            customerId: '<value>',
-            description: 'Versatile value-added utilisation',
-            id: '<id>',
-            raw: [
-                'York' => '<value>',
-            ],
-            ticketId: '<value>',
-            updatedAt: '<value>',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->note->updateTicketingNote($request);
 

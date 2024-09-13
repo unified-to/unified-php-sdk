@@ -57,40 +57,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingAccountRequest(
         connectionId: '<value>',
-        accountingAccount: new Shared\AccountingAccount(
-            balance: 6602.56,
-            createdAt: Utils\Utils::parseDateTime('2023-09-02T22:12:31.771Z'),
-            currency: 'Saint Helena Pound',
-            customerDefinedCode: '<value>',
-            description: 'Cross-group zero defect task-force',
-            group: '<value>',
-            id: '<id>',
-            isPayable: false,
-            name: '<value>',
-            parentAccountId: '<value>',
-            raw: [
-                'Ruble' => '<value>',
-            ],
-            section: '<value>',
-            status: Shared\Status::Active,
-            subgroup: '<value>',
-            subsection: '<value>',
-            type: Shared\Type::FixedAsset,
-            updatedAt: Utils\Utils::parseDateTime('2024-10-01T23:54:12.882Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->createAccountingAccount($request);
 
@@ -133,66 +109,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingContactRequest(
         connectionId: '<value>',
-        accountingContact: new Shared\AccountingContact(
-            billingAddress: new Shared\PropertyAccountingContactBillingAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Lake Benny',
-                country: 'Azerbaijan',
-                countryCode: 'GT',
-                postalCode: '48359-3238',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            companyName: 'Spinka, Ziemann and West',
-            createdAt: Utils\Utils::parseDateTime('2022-06-29T13:45:40.964Z'),
-            currency: 'US Dollar',
-            emails: [
-                new Shared\AccountingEmail,
-            ],
-            id: '<id>',
-            identification: '<value>',
-            isActive: false,
-            isCustomer: false,
-            isSupplier: false,
-            name: '<value>',
-            paymentMethods: [
-                new Shared\AccountingContactPaymentMethod,
-            ],
-            portalUrl: '<value>',
-            raw: [
-                'throughout' => '<value>',
-            ],
-            shippingAddress: new Shared\PropertyAccountingContactShippingAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'North Jazmynefurt',
-                country: 'France',
-                countryCode: 'BE',
-                postalCode: '36835-6542',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            taxExemption: Shared\TaxExemption::FederalGov,
-            taxNumber: '<value>',
-            telephones: [
-                new Shared\AccountingTelephone,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-09-05T13:56:20.676Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->createAccountingContact($request);
 
@@ -235,48 +161,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingInvoiceRequest(
         connectionId: '<value>',
-        accountingInvoice: new Shared\AccountingInvoice(
-            balanceAmount: 6736.06,
-            cancelledAt: Utils\Utils::parseDateTime('2022-06-27T09:14:42.959Z'),
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-07-05T18:32:52.109Z'),
-            currency: 'Uzbekistan Sum',
-            discountAmount: 259.66,
-            dueAt: Utils\Utils::parseDateTime('2023-04-30T15:54:59.455Z'),
-            id: '<id>',
-            invoiceNumber: '<value>',
-            lineitems: [
-                new Shared\AccountingLineitem,
-            ],
-            notes: '<value>',
-            paidAmount: 7142.37,
-            paidAt: Utils\Utils::parseDateTime('2023-09-16T02:12:20.862Z'),
-            paymentCollectionMethod: Shared\PaymentCollectionMethod::ChargeAutomatically,
-            raw: [
-                'hacking' => '<value>',
-            ],
-            refundAmount: 5503.49,
-            refundReason: '<value>',
-            refundedAt: Utils\Utils::parseDateTime('2024-06-02T02:10:22.972Z'),
-            status: Shared\AccountingInvoiceStatus::PartiallyPaid,
-            taxAmount: 6873.46,
-            totalAmount: 6276.92,
-            updatedAt: Utils\Utils::parseDateTime('2023-05-31T14:28:49.824Z'),
-            url: 'http://irresponsible-elite.biz',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->createAccountingInvoice($request);
 
@@ -320,33 +214,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingJournalRequest(
         connectionId: '<value>',
-        accountingJournal: new Shared\AccountingJournal(
-            createdAt: '<value>',
-            currency: 'North Korean Won',
-            description: 'Polarised heuristic time-frame',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingJournalLineitem,
-            ],
-            raw: [
-                'Profound' => '<value>',
-            ],
-            reference: '<value>',
-            taxAmount: 2389.02,
-            taxrateId: '<value>',
-            updatedAt: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->createAccountingJournal($request);
 
@@ -389,31 +265,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingTaxrateRequest(
         connectionId: '<value>',
-        accountingTaxrate: new Shared\AccountingTaxrate(
-            createdAt: Utils\Utils::parseDateTime('2022-07-08T09:55:20.238Z'),
-            description: 'Enterprise-wide content-based productivity',
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            rate: 6789.7,
-            raw: [
-                'Human' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-08-06T04:09:12.755Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->createAccountingTaxrate($request);
 
@@ -456,43 +317,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingTransactionRequest(
         connectionId: '<value>',
-        accountingTransaction: new Shared\AccountingTransaction(
-            accountId: '<value>',
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-06-29T16:05:10.534Z'),
-            currency: 'Nuevo Sol',
-            customerMessage: '<value>',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingTransactionLineItem,
-            ],
-            memo: '<value>',
-            paymentMethod: '<value>',
-            paymentTerms: '<value>',
-            raw: [
-                'Direct' => '<value>',
-            ],
-            reference: '<value>',
-            splitAccountId: '<value>',
-            subTotalAmount: 2477.45,
-            taxAmount: 7389.88,
-            totalAmount: 8276.07,
-            type: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2023-03-28T17:20:22.599Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->createAccountingTransaction($request);
 
@@ -536,8 +370,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -545,9 +380,6 @@ try {
     $request = new Operations\GetAccountingAccountRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->getAccountingAccount($request);
 
@@ -591,8 +423,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -600,9 +433,6 @@ try {
     $request = new Operations\GetAccountingContactRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->getAccountingContact($request);
 
@@ -646,8 +476,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -655,9 +486,6 @@ try {
     $request = new Operations\GetAccountingInvoiceRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->getAccountingInvoice($request);
 
@@ -701,8 +529,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -710,9 +539,6 @@ try {
     $request = new Operations\GetAccountingJournalRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->getAccountingJournal($request);
 
@@ -756,8 +582,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -765,9 +592,6 @@ try {
     $request = new Operations\GetAccountingOrganizationRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->getAccountingOrganization($request);
 
@@ -811,8 +635,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -820,9 +645,6 @@ try {
     $request = new Operations\GetAccountingTaxrateRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->getAccountingTaxrate($request);
 
@@ -866,8 +688,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -875,9 +698,6 @@ try {
     $request = new Operations\GetAccountingTransactionRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->getAccountingTransaction($request);
 
@@ -920,25 +740,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingAccountsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9476.86,
-        offset: 5444.77,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-04-19T21:33:28.191Z'),
     );
     $response = $sdk->accounting->listAccountingAccounts($request);
 
@@ -981,26 +792,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingContactsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 4596.32,
-        offset: 8881.9,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        type: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-09-26T14:00:38.736Z'),
     );
     $response = $sdk->accounting->listAccountingContacts($request);
 
@@ -1043,26 +844,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingInvoicesRequest(
         connectionId: '<value>',
-        contactId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 6788.11,
-        offset: 5122.49,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-05-23T19:02:52.454Z'),
     );
     $response = $sdk->accounting->listAccountingInvoices($request);
 
@@ -1105,25 +896,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingJournalsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 3732.99,
-        offset: 235.51,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-08-02T07:29:24.179Z'),
     );
     $response = $sdk->accounting->listAccountingJournals($request);
 
@@ -1166,25 +948,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingOrganizationsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 4896.89,
-        offset: 9817.05,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-04-02T18:55:09.644Z'),
     );
     $response = $sdk->accounting->listAccountingOrganizations($request);
 
@@ -1227,25 +1000,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingTaxratesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 1599.19,
-        offset: 1097.48,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-06-14T14:31:13.247Z'),
     );
     $response = $sdk->accounting->listAccountingTaxrates($request);
 
@@ -1288,26 +1052,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingTransactionsRequest(
         connectionId: '<value>',
-        contactId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 7894.5,
-        offset: 4597.84,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-12-02T12:20:43.572Z'),
     );
     $response = $sdk->accounting->listAccountingTransactions($request);
 
@@ -1350,10 +1104,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1361,30 +1115,6 @@ try {
     $request = new Operations\PatchAccountingAccountRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingAccount: new Shared\AccountingAccount(
-            balance: 1931.26,
-            createdAt: Utils\Utils::parseDateTime('2023-01-09T13:35:06.969Z'),
-            currency: 'Won',
-            customerDefinedCode: '<value>',
-            description: 'Quality-focused multimedia implementation',
-            group: '<value>',
-            id: '<id>',
-            isPayable: false,
-            name: '<value>',
-            parentAccountId: '<value>',
-            raw: [
-                'male' => '<value>',
-            ],
-            section: '<value>',
-            status: Shared\Status::Archived,
-            subgroup: '<value>',
-            subsection: '<value>',
-            type: Shared\Type::Expense,
-            updatedAt: Utils\Utils::parseDateTime('2024-04-01T20:09:00.405Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->patchAccountingAccount($request);
 
@@ -1427,10 +1157,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1438,56 +1168,6 @@ try {
     $request = new Operations\PatchAccountingContactRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingContact: new Shared\AccountingContact(
-            billingAddress: new Shared\PropertyAccountingContactBillingAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Sylvestermouth',
-                country: 'Norfolk Island',
-                countryCode: 'BN',
-                postalCode: '34531-3519',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            companyName: 'Reichel, Luettgen and Bins',
-            createdAt: Utils\Utils::parseDateTime('2023-11-21T23:25:22.442Z'),
-            currency: 'Kip',
-            emails: [
-                new Shared\AccountingEmail,
-            ],
-            id: '<id>',
-            identification: '<value>',
-            isActive: false,
-            isCustomer: false,
-            isSupplier: false,
-            name: '<value>',
-            paymentMethods: [
-                new Shared\AccountingContactPaymentMethod,
-            ],
-            portalUrl: '<value>',
-            raw: [
-                'orchid' => '<value>',
-            ],
-            shippingAddress: new Shared\PropertyAccountingContactShippingAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Friesenbury',
-                country: 'Nepal',
-                countryCode: 'PT',
-                postalCode: '12514-2095',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            taxExemption: Shared\TaxExemption::FederalGov,
-            taxNumber: '<value>',
-            telephones: [
-                new Shared\AccountingTelephone,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-11-16T14:39:43.192Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->patchAccountingContact($request);
 
@@ -1530,10 +1210,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1541,38 +1221,6 @@ try {
     $request = new Operations\PatchAccountingInvoiceRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingInvoice: new Shared\AccountingInvoice(
-            balanceAmount: 7374.1,
-            cancelledAt: Utils\Utils::parseDateTime('2024-12-18T11:25:21.140Z'),
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-06-14T05:39:15.854Z'),
-            currency: 'Gold',
-            discountAmount: 9127.96,
-            dueAt: Utils\Utils::parseDateTime('2024-07-05T05:55:55.560Z'),
-            id: '<id>',
-            invoiceNumber: '<value>',
-            lineitems: [
-                new Shared\AccountingLineitem,
-            ],
-            notes: '<value>',
-            paidAmount: 7810.81,
-            paidAt: Utils\Utils::parseDateTime('2023-03-02T21:47:54.080Z'),
-            paymentCollectionMethod: Shared\PaymentCollectionMethod::SendInvoice,
-            raw: [
-                'Credit' => '<value>',
-            ],
-            refundAmount: 3028.19,
-            refundReason: '<value>',
-            refundedAt: Utils\Utils::parseDateTime('2022-05-05T22:52:23.132Z'),
-            status: Shared\AccountingInvoiceStatus::Paid,
-            taxAmount: 6957.18,
-            totalAmount: 2520.91,
-            updatedAt: Utils\Utils::parseDateTime('2022-06-16T16:44:58.399Z'),
-            url: 'http://tame-jellybeans.biz',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->patchAccountingInvoice($request);
 
@@ -1616,8 +1264,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1625,25 +1274,6 @@ try {
     $request = new Operations\PatchAccountingJournalRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingJournal: new Shared\AccountingJournal(
-            createdAt: '<value>',
-            currency: 'Malaysian Ringgit',
-            description: 'Digitized directional function',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingJournalLineitem,
-            ],
-            raw: [
-                'South' => '<value>',
-            ],
-            reference: '<value>',
-            taxAmount: 3075.33,
-            taxrateId: '<value>',
-            updatedAt: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->patchAccountingJournal($request);
 
@@ -1686,10 +1316,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1697,21 +1327,6 @@ try {
     $request = new Operations\PatchAccountingTaxrateRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingTaxrate: new Shared\AccountingTaxrate(
-            createdAt: Utils\Utils::parseDateTime('2023-10-19T15:57:03.731Z'),
-            description: 'Quality-focused user-facing complexity',
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            rate: 220.78,
-            raw: [
-                'Facilitator' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-10-17T14:16:26.961Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->patchAccountingTaxrate($request);
 
@@ -1754,10 +1369,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1765,33 +1380,6 @@ try {
     $request = new Operations\PatchAccountingTransactionRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingTransaction: new Shared\AccountingTransaction(
-            accountId: '<value>',
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-09-10T10:50:45.480Z'),
-            currency: 'Tenge',
-            customerMessage: '<value>',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingTransactionLineItem,
-            ],
-            memo: '<value>',
-            paymentMethod: '<value>',
-            paymentTerms: '<value>',
-            raw: [
-                'instead' => '<value>',
-            ],
-            reference: '<value>',
-            splitAccountId: '<value>',
-            subTotalAmount: 535.65,
-            taxAmount: 3153.09,
-            totalAmount: 259.82,
-            type: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2024-08-13T08:04:48.029Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->patchAccountingTransaction($request);
 
@@ -1835,8 +1423,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1887,8 +1476,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1939,8 +1529,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1991,8 +1582,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2043,8 +1635,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2095,8 +1688,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2146,10 +1740,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2157,30 +1751,6 @@ try {
     $request = new Operations\UpdateAccountingAccountRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingAccount: new Shared\AccountingAccount(
-            balance: 5954.09,
-            createdAt: Utils\Utils::parseDateTime('2022-05-21T23:41:25.152Z'),
-            currency: 'Tanzanian Shilling',
-            customerDefinedCode: '<value>',
-            description: 'Stand-alone grid-enabled model',
-            group: '<value>',
-            id: '<id>',
-            isPayable: false,
-            name: '<value>',
-            parentAccountId: '<value>',
-            raw: [
-                'Costa' => '<value>',
-            ],
-            section: '<value>',
-            status: Shared\Status::Archived,
-            subgroup: '<value>',
-            subsection: '<value>',
-            type: Shared\Type::Liability,
-            updatedAt: Utils\Utils::parseDateTime('2022-05-16T10:15:08.356Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->updateAccountingAccount($request);
 
@@ -2223,10 +1793,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2234,56 +1804,6 @@ try {
     $request = new Operations\UpdateAccountingContactRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingContact: new Shared\AccountingContact(
-            billingAddress: new Shared\PropertyAccountingContactBillingAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Mayaguez',
-                country: 'Ghana',
-                countryCode: 'JE',
-                postalCode: '16521-4269',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            companyName: 'Turner - Cruickshank',
-            createdAt: Utils\Utils::parseDateTime('2023-09-17T02:48:58.014Z'),
-            currency: 'Kyat',
-            emails: [
-                new Shared\AccountingEmail,
-            ],
-            id: '<id>',
-            identification: '<value>',
-            isActive: false,
-            isCustomer: false,
-            isSupplier: false,
-            name: '<value>',
-            paymentMethods: [
-                new Shared\AccountingContactPaymentMethod,
-            ],
-            portalUrl: '<value>',
-            raw: [
-                'Intersex' => '<value>',
-            ],
-            shippingAddress: new Shared\PropertyAccountingContactShippingAddress(
-                address1: '<value>',
-                address2: '<value>',
-                city: 'Berkeley',
-                country: 'Norway',
-                countryCode: 'GP',
-                postalCode: '99093-9229',
-                region: '<value>',
-                regionCode: '<value>',
-            ),
-            taxExemption: Shared\TaxExemption::MedicalOrg,
-            taxNumber: '<value>',
-            telephones: [
-                new Shared\AccountingTelephone,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-08-30T07:55:45.909Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->updateAccountingContact($request);
 
@@ -2326,10 +1846,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2337,38 +1857,6 @@ try {
     $request = new Operations\UpdateAccountingInvoiceRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingInvoice: new Shared\AccountingInvoice(
-            balanceAmount: 6974.28,
-            cancelledAt: Utils\Utils::parseDateTime('2023-06-03T06:46:26.704Z'),
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2022-07-10T23:29:44.275Z'),
-            currency: 'Forint',
-            discountAmount: 2579.09,
-            dueAt: Utils\Utils::parseDateTime('2023-12-25T16:24:30.030Z'),
-            id: '<id>',
-            invoiceNumber: '<value>',
-            lineitems: [
-                new Shared\AccountingLineitem,
-            ],
-            notes: '<value>',
-            paidAmount: 3682.14,
-            paidAt: Utils\Utils::parseDateTime('2024-09-27T09:53:44.172Z'),
-            paymentCollectionMethod: Shared\PaymentCollectionMethod::SendInvoice,
-            raw: [
-                'Nick' => '<value>',
-            ],
-            refundAmount: 2939.97,
-            refundReason: '<value>',
-            refundedAt: Utils\Utils::parseDateTime('2022-08-13T18:41:11.569Z'),
-            status: Shared\AccountingInvoiceStatus::Refunded,
-            taxAmount: 126.09,
-            totalAmount: 8760.89,
-            updatedAt: Utils\Utils::parseDateTime('2024-08-21T11:15:42.077Z'),
-            url: 'https://long-term-expedition.org',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->updateAccountingInvoice($request);
 
@@ -2412,8 +1900,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2421,25 +1910,6 @@ try {
     $request = new Operations\UpdateAccountingJournalRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingJournal: new Shared\AccountingJournal(
-            createdAt: '<value>',
-            currency: 'Riel',
-            description: 'Fundamental contextually-based challenge',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingJournalLineitem,
-            ],
-            raw: [
-                'Forward' => '<value>',
-            ],
-            reference: '<value>',
-            taxAmount: 5223.16,
-            taxrateId: '<value>',
-            updatedAt: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->updateAccountingJournal($request);
 
@@ -2482,10 +1952,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2493,21 +1963,6 @@ try {
     $request = new Operations\UpdateAccountingTaxrateRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingTaxrate: new Shared\AccountingTaxrate(
-            createdAt: Utils\Utils::parseDateTime('2023-01-06T18:04:39.999Z'),
-            description: 'Switchable intangible initiative',
-            id: '<id>',
-            isActive: false,
-            name: '<value>',
-            rate: 2580.61,
-            raw: [
-                'Buckinghamshire' => '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-11-25T16:43:20.981Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->updateAccountingTaxrate($request);
 
@@ -2550,10 +2005,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -2561,33 +2016,6 @@ try {
     $request = new Operations\UpdateAccountingTransactionRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingTransaction: new Shared\AccountingTransaction(
-            accountId: '<value>',
-            contactId: '<value>',
-            createdAt: Utils\Utils::parseDateTime('2023-12-14T05:18:27.688Z'),
-            currency: 'Mexican Peso',
-            customerMessage: '<value>',
-            id: '<id>',
-            lineitems: [
-                new Shared\AccountingTransactionLineItem,
-            ],
-            memo: '<value>',
-            paymentMethod: '<value>',
-            paymentTerms: '<value>',
-            raw: [
-                'protest' => '<value>',
-            ],
-            reference: '<value>',
-            splitAccountId: '<value>',
-            subTotalAmount: 2397.73,
-            taxAmount: 1897.48,
-            totalAmount: 421.84,
-            type: '<value>',
-            updatedAt: Utils\Utils::parseDateTime('2024-07-31T22:23:34.525Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->accounting->updateAccountingTransaction($request);
 

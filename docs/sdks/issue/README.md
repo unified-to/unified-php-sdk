@@ -20,21 +20,15 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUnifiedIssuesRequest(
-        limit: 7069.08,
-        offset: 7461.37,
-        order: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-01-21T01:55:24.746Z'),
-    );
+    $request = new Operations\ListUnifiedIssuesRequest();
     $response = $sdk->issue->listUnifiedIssues($request);
 
     if ($response->issues !== null) {

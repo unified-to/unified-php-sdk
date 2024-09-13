@@ -20,25 +20,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAtsApplicationstatusesRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 5199.96,
-        offset: 7673.65,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-03-25T18:11:33.180Z'),
     );
     $response = $sdk->applicationstatus->listAtsApplicationstatuses($request);
 

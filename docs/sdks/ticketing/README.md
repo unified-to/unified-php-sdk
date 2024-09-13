@@ -37,37 +37,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateTicketingCustomerRequest(
         connectionId: '<value>',
-        ticketingCustomer: new Shared\TicketingCustomer(
-            createdAt: Utils\Utils::parseDateTime('2023-06-19T18:45:57.085Z'),
-            emails: [
-                new Shared\TicketingEmail,
-            ],
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'Investment' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\TicketingTelephone,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-05-12T01:01:03.120Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->createTicketingCustomer($request);
 
@@ -110,31 +89,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateTicketingNoteRequest(
         connectionId: '<value>',
-        ticketingNote: new Shared\TicketingNote(
-            createdAt: Utils\Utils::parseDateTime('2024-04-20T13:29:50.877Z'),
-            customerId: '<value>',
-            description: 'Distributed 4th generation portal',
-            id: '<id>',
-            raw: [
-                'Sausages' => '<value>',
-            ],
-            ticketId: '<value>',
-            updatedAt: '<value>',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->createTicketingNote($request);
 
@@ -177,41 +141,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateTicketingTicketRequest(
         connectionId: '<value>',
-        ticketingTicket: new Shared\TicketingTicket(
-            category: '<value>',
-            closedAt: Utils\Utils::parseDateTime('2022-06-28T15:15:03.216Z'),
-            createdAt: Utils\Utils::parseDateTime('2023-08-20T11:30:17.210Z'),
-            customerId: '<value>',
-            description: 'Automated composite productivity',
-            id: '<id>',
-            priority: '<value>',
-            raw: [
-                'indigo' => '<value>',
-            ],
-            source: '<value>',
-            sourceRef: '<value>',
-            status: Shared\TicketingTicketStatus::Closed,
-            subject: '<value>',
-            tags: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-07-31T16:32:54.987Z'),
-            url: 'https://pristine-luck.com',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->createTicketingTicket($request);
 
@@ -255,8 +194,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -264,9 +204,6 @@ try {
     $request = new Operations\GetTicketingCustomerRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->getTicketingCustomer($request);
 
@@ -310,8 +247,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -319,9 +257,6 @@ try {
     $request = new Operations\GetTicketingNoteRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->getTicketingNote($request);
 
@@ -365,8 +300,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -374,9 +310,6 @@ try {
     $request = new Operations\GetTicketingTicketRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->getTicketingTicket($request);
 
@@ -419,25 +352,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListTicketingCustomersRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 3917.11,
-        offset: 274.81,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-06-05T19:45:16.674Z'),
     );
     $response = $sdk->ticketing->listTicketingCustomers($request);
 
@@ -480,27 +404,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListTicketingNotesRequest(
         connectionId: '<value>',
-        customerId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 6345.23,
-        offset: 8100.5,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        ticketId: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-09-20T16:07:42.054Z'),
     );
     $response = $sdk->ticketing->listTicketingNotes($request);
 
@@ -543,27 +456,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListTicketingTicketsRequest(
         connectionId: '<value>',
-        customerId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 6139.39,
-        offset: 1839.22,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2023-02-28T23:31:15.090Z'),
-        userId: '<value>',
     );
     $response = $sdk->ticketing->listTicketingTickets($request);
 
@@ -606,10 +508,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -617,27 +519,6 @@ try {
     $request = new Operations\PatchTicketingCustomerRequest(
         connectionId: '<value>',
         id: '<id>',
-        ticketingCustomer: new Shared\TicketingCustomer(
-            createdAt: Utils\Utils::parseDateTime('2024-06-30T15:17:02.043Z'),
-            emails: [
-                new Shared\TicketingEmail,
-            ],
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'Hybrid' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\TicketingTelephone,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2022-01-06T09:16:54.349Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->patchTicketingCustomer($request);
 
@@ -680,10 +561,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -691,21 +572,6 @@ try {
     $request = new Operations\PatchTicketingNoteRequest(
         connectionId: '<value>',
         id: '<id>',
-        ticketingNote: new Shared\TicketingNote(
-            createdAt: Utils\Utils::parseDateTime('2024-09-04T20:58:12.449Z'),
-            customerId: '<value>',
-            description: 'Right-sized national productivity',
-            id: '<id>',
-            raw: [
-                'Southwest' => '<value>',
-            ],
-            ticketId: '<value>',
-            updatedAt: '<value>',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->patchTicketingNote($request);
 
@@ -748,10 +614,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -759,31 +625,6 @@ try {
     $request = new Operations\PatchTicketingTicketRequest(
         connectionId: '<value>',
         id: '<id>',
-        ticketingTicket: new Shared\TicketingTicket(
-            category: '<value>',
-            closedAt: Utils\Utils::parseDateTime('2022-09-14T17:48:05.161Z'),
-            createdAt: Utils\Utils::parseDateTime('2023-09-30T13:19:53.416Z'),
-            customerId: '<value>',
-            description: 'Operative composite strategy',
-            id: '<id>',
-            priority: '<value>',
-            raw: [
-                'Concrete' => '<value>',
-            ],
-            source: '<value>',
-            sourceRef: '<value>',
-            status: Shared\TicketingTicketStatus::Active,
-            subject: '<value>',
-            tags: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-12-08T14:40:04.177Z'),
-            url: 'http://staid-ectodermal.name',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->patchTicketingTicket($request);
 
@@ -827,8 +668,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -879,8 +721,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -931,8 +774,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -982,10 +826,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -993,27 +837,6 @@ try {
     $request = new Operations\UpdateTicketingCustomerRequest(
         connectionId: '<value>',
         id: '<id>',
-        ticketingCustomer: new Shared\TicketingCustomer(
-            createdAt: Utils\Utils::parseDateTime('2024-10-13T11:44:40.953Z'),
-            emails: [
-                new Shared\TicketingEmail,
-            ],
-            id: '<id>',
-            name: '<value>',
-            raw: [
-                'Zinc' => '<value>',
-            ],
-            tags: [
-                '<value>',
-            ],
-            telephones: [
-                new Shared\TicketingTelephone,
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2023-09-29T08:49:38.630Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->updateTicketingCustomer($request);
 
@@ -1056,10 +879,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1067,21 +890,6 @@ try {
     $request = new Operations\UpdateTicketingNoteRequest(
         connectionId: '<value>',
         id: '<id>',
-        ticketingNote: new Shared\TicketingNote(
-            createdAt: Utils\Utils::parseDateTime('2024-05-15T01:15:48.418Z'),
-            customerId: '<value>',
-            description: 'Versatile value-added utilisation',
-            id: '<id>',
-            raw: [
-                'York' => '<value>',
-            ],
-            ticketId: '<value>',
-            updatedAt: '<value>',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->updateTicketingNote($request);
 
@@ -1124,10 +932,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -1135,31 +943,6 @@ try {
     $request = new Operations\UpdateTicketingTicketRequest(
         connectionId: '<value>',
         id: '<id>',
-        ticketingTicket: new Shared\TicketingTicket(
-            category: '<value>',
-            closedAt: Utils\Utils::parseDateTime('2022-05-31T01:36:42.106Z'),
-            createdAt: Utils\Utils::parseDateTime('2024-04-29T13:04:08.966Z'),
-            customerId: '<value>',
-            description: 'Configurable user-facing middleware',
-            id: '<id>',
-            priority: '<value>',
-            raw: [
-                'East' => '<value>',
-            ],
-            source: '<value>',
-            sourceRef: '<value>',
-            status: Shared\TicketingTicketStatus::Active,
-            subject: '<value>',
-            tags: [
-                '<value>',
-            ],
-            updatedAt: Utils\Utils::parseDateTime('2024-08-17T20:35:00.553Z'),
-            url: 'http://gullible-replication.com',
-            userId: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->ticketing->updateTicketingTicket($request);
 

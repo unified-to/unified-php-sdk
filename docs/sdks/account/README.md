@@ -25,40 +25,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateAccountingAccountRequest(
         connectionId: '<value>',
-        accountingAccount: new Shared\AccountingAccount(
-            balance: 6602.56,
-            createdAt: Utils\Utils::parseDateTime('2023-09-02T22:12:31.771Z'),
-            currency: 'Saint Helena Pound',
-            customerDefinedCode: '<value>',
-            description: 'Cross-group zero defect task-force',
-            group: '<value>',
-            id: '<id>',
-            isPayable: false,
-            name: '<value>',
-            parentAccountId: '<value>',
-            raw: [
-                'Ruble' => '<value>',
-            ],
-            section: '<value>',
-            status: Shared\Status::Active,
-            subgroup: '<value>',
-            subsection: '<value>',
-            type: Shared\Type::FixedAsset,
-            updatedAt: Utils\Utils::parseDateTime('2024-10-01T23:54:12.882Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->account->createAccountingAccount($request);
 
@@ -102,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -111,9 +88,6 @@ try {
     $request = new Operations\GetAccountingAccountRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->account->getAccountingAccount($request);
 
@@ -156,25 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListAccountingAccountsRequest(
         connectionId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 9476.86,
-        offset: 5444.77,
-        order: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2024-04-19T21:33:28.191Z'),
     );
     $response = $sdk->account->listAccountingAccounts($request);
 
@@ -217,10 +182,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -228,30 +193,6 @@ try {
     $request = new Operations\PatchAccountingAccountRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingAccount: new Shared\AccountingAccount(
-            balance: 1931.26,
-            createdAt: Utils\Utils::parseDateTime('2023-01-09T13:35:06.969Z'),
-            currency: 'Won',
-            customerDefinedCode: '<value>',
-            description: 'Quality-focused multimedia implementation',
-            group: '<value>',
-            id: '<id>',
-            isPayable: false,
-            name: '<value>',
-            parentAccountId: '<value>',
-            raw: [
-                'male' => '<value>',
-            ],
-            section: '<value>',
-            status: Shared\Status::Archived,
-            subgroup: '<value>',
-            subsection: '<value>',
-            type: Shared\Type::Expense,
-            updatedAt: Utils\Utils::parseDateTime('2024-04-01T20:09:00.405Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->account->patchAccountingAccount($request);
 
@@ -295,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -346,10 +288,10 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -357,30 +299,6 @@ try {
     $request = new Operations\UpdateAccountingAccountRequest(
         connectionId: '<value>',
         id: '<id>',
-        accountingAccount: new Shared\AccountingAccount(
-            balance: 5954.09,
-            createdAt: Utils\Utils::parseDateTime('2022-05-21T23:41:25.152Z'),
-            currency: 'Tanzanian Shilling',
-            customerDefinedCode: '<value>',
-            description: 'Stand-alone grid-enabled model',
-            group: '<value>',
-            id: '<id>',
-            isPayable: false,
-            name: '<value>',
-            parentAccountId: '<value>',
-            raw: [
-                'Costa' => '<value>',
-            ],
-            section: '<value>',
-            status: Shared\Status::Archived,
-            subgroup: '<value>',
-            subsection: '<value>',
-            type: Shared\Type::Liability,
-            updatedAt: Utils\Utils::parseDateTime('2022-05-16T10:15:08.356Z'),
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->account->updateAccountingAccount($request);
 

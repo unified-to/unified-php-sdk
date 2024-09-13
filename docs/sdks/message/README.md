@@ -26,48 +26,15 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\CreateMessagingMessageRequest(
         connectionId: '<value>',
-        messagingMessage: new Shared\MessagingMessage(
-            attachments: [
-                new Shared\MessagingAttachment,
-            ],
-            authorMember: new Shared\PropertyMessagingMessageAuthorMember(
-                email: 'Eugene54@gmail.com',
-                name: '<value>',
-                userId: '<value>',
-            ),
-            channelId: '<value>',
-            createdAt: '<value>',
-            destinationMembers: [
-                new Shared\MessagingMember,
-            ],
-            hiddenMembers: [
-                new Shared\MessagingMember,
-            ],
-            id: '<id>',
-            mentionedMembers: [
-                new Shared\MessagingMember,
-            ],
-            message: '<value>',
-            messageHtml: '<value>',
-            parentMessageId: '<value>',
-            raw: [
-                'holistic' => '<value>',
-            ],
-            subject: '<value>',
-            updatedAt: '<value>',
-            webUrl: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->message->createMessagingMessage($request);
 
@@ -111,8 +78,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -120,9 +88,6 @@ try {
     $request = new Operations\GetMessagingMessageRequest(
         connectionId: '<value>',
         id: '<id>',
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->message->getMessagingMessage($request);
 
@@ -165,27 +130,16 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 try {
     $request = new Operations\ListMessagingMessagesRequest(
         connectionId: '<value>',
-        channelId: '<value>',
-        fields: [
-            '<value>',
-        ],
-        limit: 4272.96,
-        offset: 6110.39,
-        order: '<value>',
-        parentId: '<value>',
-        query: '<value>',
-        sort: '<value>',
-        updatedGte: Utils\Utils::parseDateTime('2022-11-14T22:11:58.965Z'),
     );
     $response = $sdk->message->listMessagingMessages($request);
 
@@ -229,8 +183,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -238,40 +193,6 @@ try {
     $request = new Operations\PatchMessagingMessageRequest(
         connectionId: '<value>',
         id: '<id>',
-        messagingMessage: new Shared\MessagingMessage(
-            attachments: [
-                new Shared\MessagingAttachment,
-            ],
-            authorMember: new Shared\PropertyMessagingMessageAuthorMember(
-                email: 'Desmond.Pagac78@gmail.com',
-                name: '<value>',
-                userId: '<value>',
-            ),
-            channelId: '<value>',
-            createdAt: '<value>',
-            destinationMembers: [
-                new Shared\MessagingMember,
-            ],
-            hiddenMembers: [
-                new Shared\MessagingMember,
-            ],
-            id: '<id>',
-            mentionedMembers: [
-                new Shared\MessagingMember,
-            ],
-            message: '<value>',
-            messageHtml: '<value>',
-            parentMessageId: '<value>',
-            raw: [
-                'Implementation' => '<value>',
-            ],
-            subject: '<value>',
-            updatedAt: '<value>',
-            webUrl: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->message->patchMessagingMessage($request);
 
@@ -315,8 +236,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -367,8 +289,9 @@ use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security();
-$security->jwt = '<YOUR_API_KEY_HERE>';
+$security = new Shared\Security(
+    jwt: "<YOUR_API_KEY_HERE>",
+);
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
@@ -376,40 +299,6 @@ try {
     $request = new Operations\UpdateMessagingMessageRequest(
         connectionId: '<value>',
         id: '<id>',
-        messagingMessage: new Shared\MessagingMessage(
-            attachments: [
-                new Shared\MessagingAttachment,
-            ],
-            authorMember: new Shared\PropertyMessagingMessageAuthorMember(
-                email: 'Johnpaul.Jenkins99@yahoo.com',
-                name: '<value>',
-                userId: '<value>',
-            ),
-            channelId: '<value>',
-            createdAt: '<value>',
-            destinationMembers: [
-                new Shared\MessagingMember,
-            ],
-            hiddenMembers: [
-                new Shared\MessagingMember,
-            ],
-            id: '<id>',
-            mentionedMembers: [
-                new Shared\MessagingMember,
-            ],
-            message: '<value>',
-            messageHtml: '<value>',
-            parentMessageId: '<value>',
-            raw: [
-                'Bicycle' => '<value>',
-            ],
-            subject: '<value>',
-            updatedAt: '<value>',
-            webUrl: '<value>',
-        ),
-        fields: [
-            '<value>',
-        ],
     );
     $response = $sdk->message->updateMessagingMessage($request);
 
