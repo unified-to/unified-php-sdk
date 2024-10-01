@@ -1,4 +1,5 @@
 # Item
+(*item*)
 
 ## Overview
 
@@ -24,25 +25,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateCommerceItemRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->item->createCommerceItem($request);
+$request = new Operations\CreateCommerceItemRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->commerceItem !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->item->createCommerceItem(
+    request: $request
+);
+
+if ($response->commerceItem !== null) {
+    // handle response
 }
 ```
 
@@ -58,10 +55,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getCommerceItem
 
@@ -76,26 +72,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetCommerceItemRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->item->getCommerceItem($request);
+$request = new Operations\GetCommerceItemRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->commerceItem !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->item->getCommerceItem(
+    request: $request
+);
+
+if ($response->commerceItem !== null) {
+    // handle response
 }
 ```
 
@@ -111,10 +103,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listCommerceItems
 
@@ -129,25 +120,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListCommerceItemsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->item->listCommerceItems($request);
+$request = new Operations\ListCommerceItemsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->commerceItems !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->item->listCommerceItems(
+    request: $request
+);
+
+if ($response->commerceItems !== null) {
+    // handle response
 }
 ```
 
@@ -163,10 +150,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchCommerceItem
 
@@ -181,26 +167,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchCommerceItemRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->item->patchCommerceItem($request);
+$request = new Operations\PatchCommerceItemRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->commerceItem !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->item->patchCommerceItem(
+    request: $request
+);
+
+if ($response->commerceItem !== null) {
+    // handle response
 }
 ```
 
@@ -216,10 +198,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeCommerceItem
 
@@ -234,26 +215,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveCommerceItemRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->item->removeCommerceItem($request);
+$request = new Operations\RemoveCommerceItemRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->item->removeCommerceItem(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -269,10 +246,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateCommerceItem
 
@@ -287,26 +263,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateCommerceItemRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->item->updateCommerceItem($request);
+$request = new Operations\UpdateCommerceItemRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->commerceItem !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->item->updateCommerceItem(
+    request: $request
+);
+
+if ($response->commerceItem !== null) {
+    // handle response
 }
 ```
 
@@ -322,6 +294,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

@@ -1,4 +1,5 @@
 # Group
+(*group*)
 
 ## Overview
 
@@ -24,25 +25,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateHrisGroupRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->group->createHrisGroup($request);
+$request = new Operations\CreateHrisGroupRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->hrisGroup !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->group->createHrisGroup(
+    request: $request
+);
+
+if ($response->hrisGroup !== null) {
+    // handle response
 }
 ```
 
@@ -58,10 +55,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getHrisGroup
 
@@ -76,26 +72,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetHrisGroupRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->group->getHrisGroup($request);
+$request = new Operations\GetHrisGroupRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->hrisGroup !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->group->getHrisGroup(
+    request: $request
+);
+
+if ($response->hrisGroup !== null) {
+    // handle response
 }
 ```
 
@@ -111,10 +103,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listHrisGroups
 
@@ -129,25 +120,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListHrisGroupsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->group->listHrisGroups($request);
+$request = new Operations\ListHrisGroupsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->hrisGroups !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->group->listHrisGroups(
+    request: $request
+);
+
+if ($response->hrisGroups !== null) {
+    // handle response
 }
 ```
 
@@ -163,10 +150,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchHrisGroup
 
@@ -181,26 +167,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchHrisGroupRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->group->patchHrisGroup($request);
+$request = new Operations\PatchHrisGroupRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->hrisGroup !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->group->patchHrisGroup(
+    request: $request
+);
+
+if ($response->hrisGroup !== null) {
+    // handle response
 }
 ```
 
@@ -216,10 +198,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeHrisGroup
 
@@ -234,26 +215,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveHrisGroupRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->group->removeHrisGroup($request);
+$request = new Operations\RemoveHrisGroupRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->group->removeHrisGroup(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -269,10 +246,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateHrisGroup
 
@@ -287,26 +263,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateHrisGroupRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->group->updateHrisGroup($request);
+$request = new Operations\UpdateHrisGroupRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->hrisGroup !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->group->updateHrisGroup(
+    request: $request
+);
+
+if ($response->hrisGroup !== null) {
+    // handle response
 }
 ```
 
@@ -322,6 +294,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

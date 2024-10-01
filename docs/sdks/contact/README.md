@@ -1,4 +1,5 @@
 # Contact
+(*contact*)
 
 ## Overview
 
@@ -36,25 +37,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateAccountingContactRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->contact->createAccountingContact($request);
+$request = new Operations\CreateAccountingContactRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->accountingContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->createAccountingContact(
+    request: $request
+);
+
+if ($response->accountingContact !== null) {
+    // handle response
 }
 ```
 
@@ -70,10 +67,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createCrmContact
 
@@ -88,25 +84,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateCrmContactRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->contact->createCrmContact($request);
+$request = new Operations\CreateCrmContactRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->crmContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->createCrmContact(
+    request: $request
+);
+
+if ($response->crmContact !== null) {
+    // handle response
 }
 ```
 
@@ -122,10 +114,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createUcContact
 
@@ -140,25 +131,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateUcContactRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->contact->createUcContact($request);
+$request = new Operations\CreateUcContactRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->ucContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->createUcContact(
+    request: $request
+);
+
+if ($response->ucContact !== null) {
+    // handle response
 }
 ```
 
@@ -174,10 +161,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getAccountingContact
 
@@ -192,26 +178,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetAccountingContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->getAccountingContact($request);
+$request = new Operations\GetAccountingContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->accountingContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->getAccountingContact(
+    request: $request
+);
+
+if ($response->accountingContact !== null) {
+    // handle response
 }
 ```
 
@@ -227,10 +209,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getCrmContact
 
@@ -245,26 +226,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetCrmContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->getCrmContact($request);
+$request = new Operations\GetCrmContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->crmContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->getCrmContact(
+    request: $request
+);
+
+if ($response->crmContact !== null) {
+    // handle response
 }
 ```
 
@@ -280,10 +257,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getUcContact
 
@@ -298,26 +274,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetUcContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->getUcContact($request);
+$request = new Operations\GetUcContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ucContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->getUcContact(
+    request: $request
+);
+
+if ($response->ucContact !== null) {
+    // handle response
 }
 ```
 
@@ -333,10 +305,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listAccountingContacts
 
@@ -351,25 +322,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListAccountingContactsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->contact->listAccountingContacts($request);
+$request = new Operations\ListAccountingContactsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->accountingContacts !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->listAccountingContacts(
+    request: $request
+);
+
+if ($response->accountingContacts !== null) {
+    // handle response
 }
 ```
 
@@ -385,10 +352,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listCrmContacts
 
@@ -403,25 +369,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListCrmContactsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->contact->listCrmContacts($request);
+$request = new Operations\ListCrmContactsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->crmContacts !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->listCrmContacts(
+    request: $request
+);
+
+if ($response->crmContacts !== null) {
+    // handle response
 }
 ```
 
@@ -437,10 +399,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listUcContacts
 
@@ -455,25 +416,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListUcContactsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->contact->listUcContacts($request);
+$request = new Operations\ListUcContactsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->ucContacts !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->listUcContacts(
+    request: $request
+);
+
+if ($response->ucContacts !== null) {
+    // handle response
 }
 ```
 
@@ -489,10 +446,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchAccountingContact
 
@@ -507,26 +463,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchAccountingContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->patchAccountingContact($request);
+$request = new Operations\PatchAccountingContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->accountingContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->patchAccountingContact(
+    request: $request
+);
+
+if ($response->accountingContact !== null) {
+    // handle response
 }
 ```
 
@@ -542,10 +494,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchCrmContact
 
@@ -560,26 +511,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchCrmContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->patchCrmContact($request);
+$request = new Operations\PatchCrmContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->crmContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->patchCrmContact(
+    request: $request
+);
+
+if ($response->crmContact !== null) {
+    // handle response
 }
 ```
 
@@ -595,10 +542,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchUcContact
 
@@ -613,26 +559,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchUcContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->patchUcContact($request);
+$request = new Operations\PatchUcContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ucContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->patchUcContact(
+    request: $request
+);
+
+if ($response->ucContact !== null) {
+    // handle response
 }
 ```
 
@@ -648,10 +590,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeAccountingContact
 
@@ -666,26 +607,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveAccountingContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->removeAccountingContact($request);
+$request = new Operations\RemoveAccountingContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->removeAccountingContact(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -701,10 +638,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeCrmContact
 
@@ -719,26 +655,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveCrmContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->removeCrmContact($request);
+$request = new Operations\RemoveCrmContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->removeCrmContact(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -754,10 +686,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeUcContact
 
@@ -772,26 +703,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveUcContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->removeUcContact($request);
+$request = new Operations\RemoveUcContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->removeUcContact(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -807,10 +734,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateAccountingContact
 
@@ -825,26 +751,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateAccountingContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->updateAccountingContact($request);
+$request = new Operations\UpdateAccountingContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->accountingContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->updateAccountingContact(
+    request: $request
+);
+
+if ($response->accountingContact !== null) {
+    // handle response
 }
 ```
 
@@ -860,10 +782,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateCrmContact
 
@@ -878,26 +799,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateCrmContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->updateCrmContact($request);
+$request = new Operations\UpdateCrmContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->crmContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->updateCrmContact(
+    request: $request
+);
+
+if ($response->crmContact !== null) {
+    // handle response
 }
 ```
 
@@ -913,10 +830,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateUcContact
 
@@ -931,26 +847,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateUcContactRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->contact->updateUcContact($request);
+$request = new Operations\UpdateUcContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ucContact !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->contact->updateUcContact(
+    request: $request
+);
+
+if ($response->ucContact !== null) {
+    // handle response
 }
 ```
 
@@ -966,6 +878,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

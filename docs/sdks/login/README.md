@@ -1,4 +1,5 @@
 # Login
+(*login*)
 
 ## Overview
 
@@ -19,26 +20,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetUnifiedIntegrationLoginRequest(
-        integrationType: '<value>',
-        workspaceId: '<value>',
-    );
-    $response = $sdk->login->getUnifiedIntegrationLogin($request);
+$request = new Operations\GetUnifiedIntegrationLoginRequest(
+    integrationType: '<value>',
+    workspaceId: '<id>',
+);
 
-    if ($response->res !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->login->getUnifiedIntegrationLogin(
+    request: $request
+);
+
+if ($response->res !== null) {
+    // handle response
 }
 ```
 
@@ -54,6 +51,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

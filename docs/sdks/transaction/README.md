@@ -1,4 +1,5 @@
 # Transaction
+(*transaction*)
 
 ## Overview
 
@@ -24,25 +25,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateAccountingTransactionRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->transaction->createAccountingTransaction($request);
+$request = new Operations\CreateAccountingTransactionRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->accountingTransaction !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->transaction->createAccountingTransaction(
+    request: $request
+);
+
+if ($response->accountingTransaction !== null) {
+    // handle response
 }
 ```
 
@@ -58,10 +55,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getAccountingTransaction
 
@@ -76,26 +72,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetAccountingTransactionRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->transaction->getAccountingTransaction($request);
+$request = new Operations\GetAccountingTransactionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->accountingTransaction !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->transaction->getAccountingTransaction(
+    request: $request
+);
+
+if ($response->accountingTransaction !== null) {
+    // handle response
 }
 ```
 
@@ -111,10 +103,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listAccountingTransactions
 
@@ -129,25 +120,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListAccountingTransactionsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->transaction->listAccountingTransactions($request);
+$request = new Operations\ListAccountingTransactionsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->accountingTransactions !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->transaction->listAccountingTransactions(
+    request: $request
+);
+
+if ($response->accountingTransactions !== null) {
+    // handle response
 }
 ```
 
@@ -163,10 +150,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchAccountingTransaction
 
@@ -181,26 +167,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchAccountingTransactionRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->transaction->patchAccountingTransaction($request);
+$request = new Operations\PatchAccountingTransactionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->accountingTransaction !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->transaction->patchAccountingTransaction(
+    request: $request
+);
+
+if ($response->accountingTransaction !== null) {
+    // handle response
 }
 ```
 
@@ -216,10 +198,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeAccountingTransaction
 
@@ -234,26 +215,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveAccountingTransactionRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->transaction->removeAccountingTransaction($request);
+$request = new Operations\RemoveAccountingTransactionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->transaction->removeAccountingTransaction(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -269,10 +246,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateAccountingTransaction
 
@@ -287,26 +263,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateAccountingTransactionRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->transaction->updateAccountingTransaction($request);
+$request = new Operations\UpdateAccountingTransactionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->accountingTransaction !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->transaction->updateAccountingTransaction(
+    request: $request
+);
+
+if ($response->accountingTransaction !== null) {
+    // handle response
 }
 ```
 
@@ -322,6 +294,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

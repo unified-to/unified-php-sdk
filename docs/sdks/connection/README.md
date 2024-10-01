@@ -1,4 +1,5 @@
 # Connection
+(*connection*)
 
 ## Overview
 
@@ -25,29 +26,26 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Shared\Connection(
-        categories: [
-            Shared\PropertyConnectionCategories::Kms,
-        ],
-        integrationType: '<value>',
-        permissions: [
-            Shared\PropertyConnectionPermissions::AtsDocumentWrite,
-        ],
-    );
-    $response = $sdk->connection->createUnifiedConnection($request);
+$request = new Shared\Connection(
+    categories: [
+        Shared\PropertyConnectionCategories::Kms,
+    ],
+    integrationType: '<value>',
+    permissions: [
+        Shared\PropertyConnectionPermissions::AtsScorecardRead,
+    ],
+);
 
-    if ($response->connection !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->connection->createUnifiedConnection(
+    request: $request
+);
+
+if ($response->connection !== null) {
+    // handle response
 }
 ```
 
@@ -63,10 +61,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getUnifiedConnection
 
@@ -81,25 +78,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetUnifiedConnectionRequest(
-        id: '<id>',
-    );
-    $response = $sdk->connection->getUnifiedConnection($request);
+$request = new Operations\GetUnifiedConnectionRequest(
+    id: '<id>',
+);
 
-    if ($response->connection !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->connection->getUnifiedConnection(
+    request: $request
+);
+
+if ($response->connection !== null) {
+    // handle response
 }
 ```
 
@@ -115,10 +108,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listUnifiedConnections
 
@@ -133,23 +125,19 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListUnifiedConnectionsRequest();
-    $response = $sdk->connection->listUnifiedConnections($request);
+$request = new Operations\ListUnifiedConnectionsRequest();
 
-    if ($response->connections !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->connection->listUnifiedConnections(
+    request: $request
+);
+
+if ($response->connections !== null) {
+    // handle response
 }
 ```
 
@@ -165,10 +153,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchUnifiedConnection
 
@@ -183,25 +170,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchUnifiedConnectionRequest(
-        id: '<id>',
-    );
-    $response = $sdk->connection->patchUnifiedConnection($request);
+$request = new Operations\PatchUnifiedConnectionRequest(
+    id: '<id>',
+);
 
-    if ($response->connection !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->connection->patchUnifiedConnection(
+    request: $request
+);
+
+if ($response->connection !== null) {
+    // handle response
 }
 ```
 
@@ -217,10 +200,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeUnifiedConnection
 
@@ -235,25 +217,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveUnifiedConnectionRequest(
-        id: '<id>',
-    );
-    $response = $sdk->connection->removeUnifiedConnection($request);
+$request = new Operations\RemoveUnifiedConnectionRequest(
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->connection->removeUnifiedConnection(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -269,10 +247,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateUnifiedConnection
 
@@ -287,25 +264,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateUnifiedConnectionRequest(
-        id: '<id>',
-    );
-    $response = $sdk->connection->updateUnifiedConnection($request);
+$request = new Operations\UpdateUnifiedConnectionRequest(
+    id: '<id>',
+);
 
-    if ($response->connection !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->connection->updateUnifiedConnection(
+    request: $request
+);
+
+if ($response->connection !== null) {
+    // handle response
 }
 ```
 
@@ -321,6 +294,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

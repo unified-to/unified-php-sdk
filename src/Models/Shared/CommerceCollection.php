@@ -70,6 +70,16 @@ class CommerceCollection
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<CommerceMetadata> $metadata
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('metadata')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var string $name
      */
@@ -146,6 +156,7 @@ class CommerceCollection
      * @param  ?bool  $isFeatured
      * @param  ?bool  $isVisible
      * @param  ?array<CommerceItemMedia>  $media
+     * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?string  $parentId
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
@@ -154,7 +165,7 @@ class CommerceCollection
      * @param  ?CommerceCollectionType  $type
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(string $id, string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $media = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $id, string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $media = null, ?array $metadata = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->id = $id;
         $this->name = $name;
@@ -164,6 +175,7 @@ class CommerceCollection
         $this->isFeatured = $isFeatured;
         $this->isVisible = $isVisible;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->parentId = $parentId;
         $this->publicDescription = $publicDescription;
         $this->publicName = $publicName;

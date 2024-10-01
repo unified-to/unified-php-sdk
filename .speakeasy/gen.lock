@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0d6e24164cc3d7a1033d4f9883eb8f98
+  docChecksum: 3c4e8a5e234e6444307aef536fd547bd
   docVersion: "1.0"
-  speakeasyVersion: 1.396.6
-  generationVersion: 2.415.6
-  releaseVersion: 0.17.4
-  configChecksum: 307706436cfdb393b40fa05f1b72a1a7
+  speakeasyVersion: 1.405.6
+  generationVersion: 2.428.1
+  releaseVersion: 0.17.5
+  configChecksum: 3e430765a954e0642709f139425f7dd5
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 features:
   php:
-    core: 3.4.3
+    core: 3.4.9
     globalSecurity: 2.81.7
     globalSecurityFlattening: 0.1.1
     globalServerURLs: 2.82.1
@@ -674,6 +674,7 @@ generatedFiles:
   - docs/Models/Shared/CommerceItemPrice.md
   - docs/Models/Shared/CommerceItemVariant.md
   - docs/Models/Shared/CommerceLocation.md
+  - docs/Models/Shared/CommerceMetadata.md
   - docs/Models/Shared/Connection.md
   - docs/Models/Shared/CrmCompany.md
   - docs/Models/Shared/CrmContact.md
@@ -1626,6 +1627,7 @@ generatedFiles:
   - src/Models/Shared/CommerceItemPrice.php
   - src/Models/Shared/CommerceItemVariant.php
   - src/Models/Shared/CommerceLocation.php
+  - src/Models/Shared/CommerceMetadata.php
   - src/Models/Shared/Connection.php
   - src/Models/Shared/CrmCompany.php
   - src/Models/Shared/CrmContact.php

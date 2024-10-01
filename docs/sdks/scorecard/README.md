@@ -1,4 +1,5 @@
 # Scorecard
+(*scorecard*)
 
 ## Overview
 
@@ -24,25 +25,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateAtsScorecardRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->scorecard->createAtsScorecard($request);
+$request = new Operations\CreateAtsScorecardRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->atsScorecard !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->scorecard->createAtsScorecard(
+    request: $request
+);
+
+if ($response->atsScorecard !== null) {
+    // handle response
 }
 ```
 
@@ -58,10 +55,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getAtsScorecard
 
@@ -76,26 +72,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetAtsScorecardRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->scorecard->getAtsScorecard($request);
+$request = new Operations\GetAtsScorecardRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->atsScorecard !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->scorecard->getAtsScorecard(
+    request: $request
+);
+
+if ($response->atsScorecard !== null) {
+    // handle response
 }
 ```
 
@@ -111,10 +103,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listAtsScorecards
 
@@ -129,25 +120,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListAtsScorecardsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->scorecard->listAtsScorecards($request);
+$request = new Operations\ListAtsScorecardsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->atsScorecards !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->scorecard->listAtsScorecards(
+    request: $request
+);
+
+if ($response->atsScorecards !== null) {
+    // handle response
 }
 ```
 
@@ -163,10 +150,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchAtsScorecard
 
@@ -181,26 +167,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchAtsScorecardRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->scorecard->patchAtsScorecard($request);
+$request = new Operations\PatchAtsScorecardRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->atsScorecard !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->scorecard->patchAtsScorecard(
+    request: $request
+);
+
+if ($response->atsScorecard !== null) {
+    // handle response
 }
 ```
 
@@ -216,10 +198,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeAtsScorecard
 
@@ -234,26 +215,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveAtsScorecardRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->scorecard->removeAtsScorecard($request);
+$request = new Operations\RemoveAtsScorecardRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->scorecard->removeAtsScorecard(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -269,10 +246,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateAtsScorecard
 
@@ -287,26 +263,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateAtsScorecardRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->scorecard->updateAtsScorecard($request);
+$request = new Operations\UpdateAtsScorecardRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->atsScorecard !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->scorecard->updateAtsScorecard(
+    request: $request
+);
+
+if ($response->atsScorecard !== null) {
+    // handle response
 }
 ```
 
@@ -322,6 +294,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

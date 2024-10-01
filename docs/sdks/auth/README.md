@@ -1,4 +1,5 @@
 # Auth
+(*auth*)
 
 ## Overview
 
@@ -20,26 +21,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetUnifiedIntegrationAuthRequest(
-        integrationType: '<value>',
-        workspaceId: '<value>',
-    );
-    $response = $sdk->auth->getUnifiedIntegrationAuth($request);
+$request = new Operations\GetUnifiedIntegrationAuthRequest(
+    integrationType: '<value>',
+    workspaceId: '<id>',
+);
 
-    if ($response->res !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->auth->getUnifiedIntegrationAuth(
+    request: $request
+);
+
+if ($response->res !== null) {
+    // handle response
 }
 ```
 
@@ -55,10 +52,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getUnifiedIntegrationLogin
 
@@ -73,26 +69,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetUnifiedIntegrationLoginRequest(
-        integrationType: '<value>',
-        workspaceId: '<value>',
-    );
-    $response = $sdk->auth->getUnifiedIntegrationLogin($request);
+$request = new Operations\GetUnifiedIntegrationLoginRequest(
+    integrationType: '<value>',
+    workspaceId: '<id>',
+);
 
-    if ($response->res !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->auth->getUnifiedIntegrationLogin(
+    request: $request
+);
+
+if ($response->res !== null) {
+    // handle response
 }
 ```
 
@@ -108,6 +100,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

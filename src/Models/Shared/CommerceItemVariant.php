@@ -94,6 +94,16 @@ class CommerceItemVariant
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<CommerceMetadata> $metadata
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('metadata')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -216,6 +226,7 @@ class CommerceItemVariant
      * @param  ?bool  $isVisible
      * @param  ?float  $length
      * @param  ?array<CommerceItemMedia>  $media
+     * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<CommerceItemOption>  $options
      * @param  ?array<CommerceItemPrice>  $prices
@@ -230,7 +241,7 @@ class CommerceItemVariant
      * @param  ?WeightUnit  $weightUnit
      * @param  ?float  $width
      */
-    public function __construct(?\DateTime $availableAt = null, ?string $description = null, ?float $height = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?float $length = null, ?array $media = null, ?string $name = null, ?array $options = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?bool $requiresShipping = null, ?SizeUnit $sizeUnit = null, ?string $sku = null, ?array $tags = null, ?float $totalStock = null, ?float $weight = null, ?WeightUnit $weightUnit = null, ?float $width = null)
+    public function __construct(?\DateTime $availableAt = null, ?string $description = null, ?float $height = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?float $length = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $options = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?bool $requiresShipping = null, ?SizeUnit $sizeUnit = null, ?string $sku = null, ?array $tags = null, ?float $totalStock = null, ?float $weight = null, ?WeightUnit $weightUnit = null, ?float $width = null)
     {
         $this->availableAt = $availableAt;
         $this->description = $description;
@@ -242,6 +253,7 @@ class CommerceItemVariant
         $this->isVisible = $isVisible;
         $this->length = $length;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->options = $options;
         $this->prices = $prices;

@@ -1,4 +1,5 @@
 # Model
+(*model*)
 
 ## Overview
 
@@ -19,25 +20,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListGenaiModelsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->model->listGenaiModels($request);
+$request = new Operations\ListGenaiModelsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->genaiModels !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->model->listGenaiModels(
+    request: $request
+);
+
+if ($response->genaiModels !== null) {
+    // handle response
 }
 ```
 
@@ -53,6 +50,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

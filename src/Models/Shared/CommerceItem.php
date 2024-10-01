@@ -72,6 +72,16 @@ class CommerceItem
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<CommerceMetadata> $metadata
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('metadata')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -165,6 +175,7 @@ class CommerceItem
      * @param  ?bool  $isActive
      * @param  ?bool  $isTaxable
      * @param  ?array<CommerceItemMedia>  $media
+     * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
@@ -176,7 +187,7 @@ class CommerceItem
      * @param  ?array<CommerceItemVariant>  $variants
      * @param  ?string  $vendorName
      */
-    public function __construct(?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
+    public function __construct(?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
     {
         $this->collectionIds = $collectionIds;
         $this->createdAt = $createdAt;
@@ -185,6 +196,7 @@ class CommerceItem
         $this->isActive = $isActive;
         $this->isTaxable = $isTaxable;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->publicDescription = $publicDescription;
         $this->publicName = $publicName;

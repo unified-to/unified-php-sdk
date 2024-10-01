@@ -124,10 +124,11 @@ class AtsActivity
 
     /**
      *
-     * @var string $title
+     * @var ?string $title
      */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
-    public string $title;
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $title = null;
 
     /**
      * $to
@@ -167,7 +168,6 @@ class AtsActivity
     public ?array $userIds = null;
 
     /**
-     * @param  string  $title
      * @param  ?string  $applicationId
      * @param  ?array<AtsEmail>  $bcc
      * @param  ?string  $candidateId
@@ -181,14 +181,14 @@ class AtsActivity
      * @param  ?bool  $isPrivate
      * @param  ?string  $jobId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $title
      * @param  ?array<AtsEmail>  $to
      * @param  ?AtsActivityType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      */
-    public function __construct(string $title, ?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
-        $this->title = $title;
         $this->applicationId = $applicationId;
         $this->bcc = $bcc;
         $this->candidateId = $candidateId;
@@ -202,6 +202,7 @@ class AtsActivity
         $this->isPrivate = $isPrivate;
         $this->jobId = $jobId;
         $this->raw = $raw;
+        $this->title = $title;
         $this->to = $to;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

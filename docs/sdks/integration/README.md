@@ -1,4 +1,5 @@
 # Integration
+(*integration*)
 
 ## Overview
 
@@ -21,26 +22,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetUnifiedIntegrationAuthRequest(
-        integrationType: '<value>',
-        workspaceId: '<value>',
-    );
-    $response = $sdk->integration->getUnifiedIntegrationAuth($request);
+$request = new Operations\GetUnifiedIntegrationAuthRequest(
+    integrationType: '<value>',
+    workspaceId: '<id>',
+);
 
-    if ($response->res !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->integration->getUnifiedIntegrationAuth(
+    request: $request
+);
+
+if ($response->res !== null) {
+    // handle response
 }
 ```
 
@@ -56,10 +53,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listUnifiedIntegrationWorkspaces
 
@@ -74,25 +70,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListUnifiedIntegrationWorkspacesRequest(
-        workspaceId: '<value>',
-    );
-    $response = $sdk->integration->listUnifiedIntegrationWorkspaces($request);
+$request = new Operations\ListUnifiedIntegrationWorkspacesRequest(
+    workspaceId: '<id>',
+);
 
-    if ($response->integrations !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->integration->listUnifiedIntegrationWorkspaces(
+    request: $request
+);
+
+if ($response->integrations !== null) {
+    // handle response
 }
 ```
 
@@ -108,10 +100,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listUnifiedIntegrations
 
@@ -126,23 +117,19 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListUnifiedIntegrationsRequest();
-    $response = $sdk->integration->listUnifiedIntegrations($request);
+$request = new Operations\ListUnifiedIntegrationsRequest();
 
-    if ($response->integrations !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->integration->listUnifiedIntegrations(
+    request: $request
+);
+
+if ($response->integrations !== null) {
+    // handle response
 }
 ```
 
@@ -158,6 +145,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

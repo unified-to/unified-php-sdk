@@ -1,4 +1,5 @@
 # Payment
+(*payment*)
 
 ## Overview
 
@@ -34,25 +35,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreatePaymentLinkRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->payment->createPaymentLink($request);
+$request = new Operations\CreatePaymentLinkRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->paymentLink !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->createPaymentLink(
+    request: $request
+);
+
+if ($response->paymentLink !== null) {
+    // handle response
 }
 ```
 
@@ -68,10 +65,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createPaymentPayment
 
@@ -86,25 +82,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreatePaymentPaymentRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->payment->createPaymentPayment($request);
+$request = new Operations\CreatePaymentPaymentRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->paymentPayment !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->createPaymentPayment(
+    request: $request
+);
+
+if ($response->paymentPayment !== null) {
+    // handle response
 }
 ```
 
@@ -120,10 +112,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getPaymentLink
 
@@ -138,26 +129,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetPaymentLinkRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->getPaymentLink($request);
+$request = new Operations\GetPaymentLinkRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentLink !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->getPaymentLink(
+    request: $request
+);
+
+if ($response->paymentLink !== null) {
+    // handle response
 }
 ```
 
@@ -173,10 +160,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getPaymentPayment
 
@@ -191,26 +177,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetPaymentPaymentRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->getPaymentPayment($request);
+$request = new Operations\GetPaymentPaymentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentPayment !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->getPaymentPayment(
+    request: $request
+);
+
+if ($response->paymentPayment !== null) {
+    // handle response
 }
 ```
 
@@ -226,10 +208,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getPaymentPayout
 
@@ -244,26 +225,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetPaymentPayoutRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->getPaymentPayout($request);
+$request = new Operations\GetPaymentPayoutRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentPayout !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->getPaymentPayout(
+    request: $request
+);
+
+if ($response->paymentPayout !== null) {
+    // handle response
 }
 ```
 
@@ -279,10 +256,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getPaymentRefund
 
@@ -297,26 +273,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetPaymentRefundRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->getPaymentRefund($request);
+$request = new Operations\GetPaymentRefundRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentRefund !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->getPaymentRefund(
+    request: $request
+);
+
+if ($response->paymentRefund !== null) {
+    // handle response
 }
 ```
 
@@ -332,10 +304,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listPaymentLinks
 
@@ -350,25 +321,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListPaymentLinksRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->payment->listPaymentLinks($request);
+$request = new Operations\ListPaymentLinksRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->paymentLinks !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->listPaymentLinks(
+    request: $request
+);
+
+if ($response->paymentLinks !== null) {
+    // handle response
 }
 ```
 
@@ -384,10 +351,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listPaymentPayments
 
@@ -402,25 +368,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListPaymentPaymentsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->payment->listPaymentPayments($request);
+$request = new Operations\ListPaymentPaymentsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->paymentPayments !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->listPaymentPayments(
+    request: $request
+);
+
+if ($response->paymentPayments !== null) {
+    // handle response
 }
 ```
 
@@ -436,10 +398,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listPaymentPayouts
 
@@ -454,25 +415,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListPaymentPayoutsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->payment->listPaymentPayouts($request);
+$request = new Operations\ListPaymentPayoutsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->paymentPayouts !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->listPaymentPayouts(
+    request: $request
+);
+
+if ($response->paymentPayouts !== null) {
+    // handle response
 }
 ```
 
@@ -488,10 +445,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listPaymentRefunds
 
@@ -506,25 +462,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListPaymentRefundsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->payment->listPaymentRefunds($request);
+$request = new Operations\ListPaymentRefundsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->paymentRefunds !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->listPaymentRefunds(
+    request: $request
+);
+
+if ($response->paymentRefunds !== null) {
+    // handle response
 }
 ```
 
@@ -540,10 +492,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchPaymentLink
 
@@ -558,26 +509,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchPaymentLinkRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->patchPaymentLink($request);
+$request = new Operations\PatchPaymentLinkRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentLink !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->patchPaymentLink(
+    request: $request
+);
+
+if ($response->paymentLink !== null) {
+    // handle response
 }
 ```
 
@@ -593,10 +540,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchPaymentPayment
 
@@ -611,26 +557,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchPaymentPaymentRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->patchPaymentPayment($request);
+$request = new Operations\PatchPaymentPaymentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentPayment !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->patchPaymentPayment(
+    request: $request
+);
+
+if ($response->paymentPayment !== null) {
+    // handle response
 }
 ```
 
@@ -646,10 +588,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removePaymentLink
 
@@ -664,26 +605,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemovePaymentLinkRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->removePaymentLink($request);
+$request = new Operations\RemovePaymentLinkRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->removePaymentLink(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -699,10 +636,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removePaymentPayment
 
@@ -717,26 +653,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemovePaymentPaymentRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->removePaymentPayment($request);
+$request = new Operations\RemovePaymentPaymentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->removePaymentPayment(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -752,10 +684,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updatePaymentLink
 
@@ -770,26 +701,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdatePaymentLinkRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->updatePaymentLink($request);
+$request = new Operations\UpdatePaymentLinkRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentLink !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->updatePaymentLink(
+    request: $request
+);
+
+if ($response->paymentLink !== null) {
+    // handle response
 }
 ```
 
@@ -805,10 +732,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updatePaymentPayment
 
@@ -823,26 +749,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdatePaymentPaymentRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->payment->updatePaymentPayment($request);
+$request = new Operations\UpdatePaymentPaymentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentPayment !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->payment->updatePaymentPayment(
+    request: $request
+);
+
+if ($response->paymentPayment !== null) {
+    // handle response
 }
 ```
 
@@ -858,6 +780,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

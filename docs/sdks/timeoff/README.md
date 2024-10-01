@@ -1,4 +1,5 @@
 # Timeoff
+(*timeoff*)
 
 ## Overview
 
@@ -20,26 +21,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetHrisTimeoffRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->timeoff->getHrisTimeoff($request);
+$request = new Operations\GetHrisTimeoffRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->hrisTimeoff !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->timeoff->getHrisTimeoff(
+    request: $request
+);
+
+if ($response->hrisTimeoff !== null) {
+    // handle response
 }
 ```
 
@@ -55,10 +52,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listHrisTimeoffs
 
@@ -73,25 +69,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListHrisTimeoffsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->timeoff->listHrisTimeoffs($request);
+$request = new Operations\ListHrisTimeoffsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->hrisTimeoffs !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->timeoff->listHrisTimeoffs(
+    request: $request
+);
+
+if ($response->hrisTimeoffs !== null) {
+    // handle response
 }
 ```
 
@@ -107,6 +99,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

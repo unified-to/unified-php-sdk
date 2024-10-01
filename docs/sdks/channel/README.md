@@ -1,4 +1,5 @@
 # Channel
+(*channel*)
 
 ## Overview
 
@@ -20,26 +21,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetMessagingChannelRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->channel->getMessagingChannel($request);
+$request = new Operations\GetMessagingChannelRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->messagingChannel !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->channel->getMessagingChannel(
+    request: $request
+);
+
+if ($response->messagingChannel !== null) {
+    // handle response
 }
 ```
 
@@ -55,10 +52,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listMessagingChannels
 
@@ -73,25 +69,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListMessagingChannelsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->channel->listMessagingChannels($request);
+$request = new Operations\ListMessagingChannelsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->messagingChannels !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->channel->listMessagingChannels(
+    request: $request
+);
+
+if ($response->messagingChannels !== null) {
+    // handle response
 }
 ```
 
@@ -107,6 +99,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

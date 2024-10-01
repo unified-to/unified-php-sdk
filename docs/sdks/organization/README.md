@@ -1,4 +1,5 @@
 # Organization
+(*organization*)
 
 ## Overview
 
@@ -20,26 +21,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetAccountingOrganizationRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->organization->getAccountingOrganization($request);
+$request = new Operations\GetAccountingOrganizationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->accountingOrganization !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->organization->getAccountingOrganization(
+    request: $request
+);
+
+if ($response->accountingOrganization !== null) {
+    // handle response
 }
 ```
 
@@ -55,10 +52,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listAccountingOrganizations
 
@@ -73,25 +69,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListAccountingOrganizationsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->organization->listAccountingOrganizations($request);
+$request = new Operations\ListAccountingOrganizationsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->accountingOrganizations !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->organization->listAccountingOrganizations(
+    request: $request
+);
+
+if ($response->accountingOrganizations !== null) {
+    // handle response
 }
 ```
 
@@ -107,6 +99,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

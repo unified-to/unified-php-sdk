@@ -1,4 +1,5 @@
 # Ticketing
+(*ticketing*)
 
 ## Overview
 
@@ -36,25 +37,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateTicketingCustomerRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->ticketing->createTicketingCustomer($request);
+$request = new Operations\CreateTicketingCustomerRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->ticketingCustomer !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->createTicketingCustomer(
+    request: $request
+);
+
+if ($response->ticketingCustomer !== null) {
+    // handle response
 }
 ```
 
@@ -70,10 +67,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createTicketingNote
 
@@ -88,25 +84,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateTicketingNoteRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->ticketing->createTicketingNote($request);
+$request = new Operations\CreateTicketingNoteRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->ticketingNote !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->createTicketingNote(
+    request: $request
+);
+
+if ($response->ticketingNote !== null) {
+    // handle response
 }
 ```
 
@@ -122,10 +114,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createTicketingTicket
 
@@ -140,25 +131,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreateTicketingTicketRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->ticketing->createTicketingTicket($request);
+$request = new Operations\CreateTicketingTicketRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->ticketingTicket !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->createTicketingTicket(
+    request: $request
+);
+
+if ($response->ticketingTicket !== null) {
+    // handle response
 }
 ```
 
@@ -174,10 +161,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getTicketingCustomer
 
@@ -192,26 +178,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetTicketingCustomerRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->getTicketingCustomer($request);
+$request = new Operations\GetTicketingCustomerRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingCustomer !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->getTicketingCustomer(
+    request: $request
+);
+
+if ($response->ticketingCustomer !== null) {
+    // handle response
 }
 ```
 
@@ -227,10 +209,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getTicketingNote
 
@@ -245,26 +226,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetTicketingNoteRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->getTicketingNote($request);
+$request = new Operations\GetTicketingNoteRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingNote !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->getTicketingNote(
+    request: $request
+);
+
+if ($response->ticketingNote !== null) {
+    // handle response
 }
 ```
 
@@ -280,10 +257,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getTicketingTicket
 
@@ -298,26 +274,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetTicketingTicketRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->getTicketingTicket($request);
+$request = new Operations\GetTicketingTicketRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingTicket !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->getTicketingTicket(
+    request: $request
+);
+
+if ($response->ticketingTicket !== null) {
+    // handle response
 }
 ```
 
@@ -333,10 +305,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listTicketingCustomers
 
@@ -351,25 +322,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListTicketingCustomersRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->ticketing->listTicketingCustomers($request);
+$request = new Operations\ListTicketingCustomersRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->ticketingCustomers !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->listTicketingCustomers(
+    request: $request
+);
+
+if ($response->ticketingCustomers !== null) {
+    // handle response
 }
 ```
 
@@ -385,10 +352,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listTicketingNotes
 
@@ -403,25 +369,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListTicketingNotesRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->ticketing->listTicketingNotes($request);
+$request = new Operations\ListTicketingNotesRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->ticketingNotes !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->listTicketingNotes(
+    request: $request
+);
+
+if ($response->ticketingNotes !== null) {
+    // handle response
 }
 ```
 
@@ -437,10 +399,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listTicketingTickets
 
@@ -455,25 +416,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListTicketingTicketsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->ticketing->listTicketingTickets($request);
+$request = new Operations\ListTicketingTicketsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->ticketingTickets !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->listTicketingTickets(
+    request: $request
+);
+
+if ($response->ticketingTickets !== null) {
+    // handle response
 }
 ```
 
@@ -489,10 +446,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchTicketingCustomer
 
@@ -507,26 +463,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchTicketingCustomerRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->patchTicketingCustomer($request);
+$request = new Operations\PatchTicketingCustomerRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingCustomer !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->patchTicketingCustomer(
+    request: $request
+);
+
+if ($response->ticketingCustomer !== null) {
+    // handle response
 }
 ```
 
@@ -542,10 +494,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchTicketingNote
 
@@ -560,26 +511,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchTicketingNoteRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->patchTicketingNote($request);
+$request = new Operations\PatchTicketingNoteRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingNote !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->patchTicketingNote(
+    request: $request
+);
+
+if ($response->ticketingNote !== null) {
+    // handle response
 }
 ```
 
@@ -595,10 +542,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchTicketingTicket
 
@@ -613,26 +559,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchTicketingTicketRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->patchTicketingTicket($request);
+$request = new Operations\PatchTicketingTicketRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingTicket !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->patchTicketingTicket(
+    request: $request
+);
+
+if ($response->ticketingTicket !== null) {
+    // handle response
 }
 ```
 
@@ -648,10 +590,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeTicketingCustomer
 
@@ -666,26 +607,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveTicketingCustomerRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->removeTicketingCustomer($request);
+$request = new Operations\RemoveTicketingCustomerRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->removeTicketingCustomer(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -701,10 +638,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeTicketingNote
 
@@ -719,26 +655,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveTicketingNoteRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->removeTicketingNote($request);
+$request = new Operations\RemoveTicketingNoteRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->removeTicketingNote(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -754,10 +686,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeTicketingTicket
 
@@ -772,26 +703,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemoveTicketingTicketRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->removeTicketingTicket($request);
+$request = new Operations\RemoveTicketingTicketRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->statusCode === 200) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->removeTicketingTicket(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
 }
 ```
 
@@ -807,10 +734,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateTicketingCustomer
 
@@ -825,26 +751,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateTicketingCustomerRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->updateTicketingCustomer($request);
+$request = new Operations\UpdateTicketingCustomerRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingCustomer !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->updateTicketingCustomer(
+    request: $request
+);
+
+if ($response->ticketingCustomer !== null) {
+    // handle response
 }
 ```
 
@@ -860,10 +782,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateTicketingNote
 
@@ -878,26 +799,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateTicketingNoteRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->updateTicketingNote($request);
+$request = new Operations\UpdateTicketingNoteRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingNote !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->updateTicketingNote(
+    request: $request
+);
+
+if ($response->ticketingNote !== null) {
+    // handle response
 }
 ```
 
@@ -913,10 +830,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updateTicketingTicket
 
@@ -931,26 +847,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdateTicketingTicketRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->ticketing->updateTicketingTicket($request);
+$request = new Operations\UpdateTicketingTicketRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->ticketingTicket !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->ticketing->updateTicketingTicket(
+    request: $request
+);
+
+if ($response->ticketingTicket !== null) {
+    // handle response
 }
 ```
 
@@ -966,6 +878,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

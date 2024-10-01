@@ -76,6 +76,14 @@ class ApiCall
 
     /**
      *
+     * @var ?bool $isBillable
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('is_billable')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isBillable = null;
+
+    /**
+     *
      * @var string $method
      */
     #[\JMS\Serializer\Annotation\SerializedName('method')]
@@ -120,6 +128,14 @@ class ApiCall
 
     /**
      *
+     * @var ?string $webhookId
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('webhook_id')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $webhookId = null;
+
+    /**
+     *
      * @var ?string $workspaceId
      */
     #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
@@ -140,10 +156,12 @@ class ApiCall
      * @param  ?string  $externalXref
      * @param  ?string  $id
      * @param  ?string  $ipAddress
+     * @param  ?bool  $isBillable
      * @param  ?float  $size
+     * @param  ?string  $webhookId
      * @param  ?string  $workspaceId
      */
-    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?float $size = null, ?string $workspaceId = null)
+    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $environment = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?bool $isBillable = null, ?float $size = null, ?string $webhookId = null, ?string $workspaceId = null)
     {
         $this->integrationType = $integrationType;
         $this->method = $method;
@@ -158,7 +176,9 @@ class ApiCall
         $this->externalXref = $externalXref;
         $this->id = $id;
         $this->ipAddress = $ipAddress;
+        $this->isBillable = $isBillable;
         $this->size = $size;
+        $this->webhookId = $webhookId;
         $this->workspaceId = $workspaceId;
     }
 }

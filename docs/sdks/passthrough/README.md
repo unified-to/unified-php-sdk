@@ -1,4 +1,5 @@
 # Passthrough
+(*passthrough*)
 
 ## Overview
 
@@ -26,26 +27,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreatePassthroughJsonRequest(
-        connectionId: '<value>',
-        path: '/opt/lib',
-    );
-    $response = $sdk->passthrough->createPassthroughJson($request);
+$request = new Operations\CreatePassthroughJsonRequest(
+    connectionId: '<id>',
+    path: '/opt/lib',
+);
 
-    if ($response->body !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->passthrough->createPassthroughJson(
+    request: $request
+);
+
+if ($response->body !== null) {
+    // handle response
 }
 ```
 
@@ -61,10 +58,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createPassthroughRaw
 
@@ -79,26 +75,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\CreatePassthroughRawRequest(
-        connectionId: '<value>',
-        path: '/etc/namedb',
-    );
-    $response = $sdk->passthrough->createPassthroughRaw($request);
+$request = new Operations\CreatePassthroughRawRequest(
+    connectionId: '<id>',
+    path: '/etc/namedb',
+);
 
-    if ($response->body !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->passthrough->createPassthroughRaw(
+    request: $request
+);
+
+if ($response->body !== null) {
+    // handle response
 }
 ```
 
@@ -114,10 +106,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listPassthroughs
 
@@ -132,26 +123,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListPassthroughsRequest(
-        connectionId: '<value>',
-        path: '/selinux',
-    );
-    $response = $sdk->passthrough->listPassthroughs($request);
+$request = new Operations\ListPassthroughsRequest(
+    connectionId: '<id>',
+    path: '/selinux',
+);
 
-    if ($response->body !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->passthrough->listPassthroughs(
+    request: $request
+);
+
+if ($response->body !== null) {
+    // handle response
 }
 ```
 
@@ -167,10 +154,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchPassthroughJson
 
@@ -185,26 +171,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchPassthroughJsonRequest(
-        connectionId: '<value>',
-        path: '/home/user',
-    );
-    $response = $sdk->passthrough->patchPassthroughJson($request);
+$request = new Operations\PatchPassthroughJsonRequest(
+    connectionId: '<id>',
+    path: '/home/user',
+);
 
-    if ($response->body !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->passthrough->patchPassthroughJson(
+    request: $request
+);
+
+if ($response->body !== null) {
+    // handle response
 }
 ```
 
@@ -220,10 +202,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## patchPassthroughRaw
 
@@ -238,26 +219,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\PatchPassthroughRawRequest(
-        connectionId: '<value>',
-        path: '/etc/mail',
-    );
-    $response = $sdk->passthrough->patchPassthroughRaw($request);
+$request = new Operations\PatchPassthroughRawRequest(
+    connectionId: '<id>',
+    path: '/etc/mail',
+);
 
-    if ($response->body !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->passthrough->patchPassthroughRaw(
+    request: $request
+);
+
+if ($response->body !== null) {
+    // handle response
 }
 ```
 
@@ -273,10 +250,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removePassthrough
 
@@ -291,26 +267,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\RemovePassthroughRequest(
-        connectionId: '<value>',
-        path: '/Applications',
-    );
-    $response = $sdk->passthrough->removePassthrough($request);
+$request = new Operations\RemovePassthroughRequest(
+    connectionId: '<id>',
+    path: '/Applications',
+);
 
-    if ($response->body !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->passthrough->removePassthrough(
+    request: $request
+);
+
+if ($response->body !== null) {
+    // handle response
 }
 ```
 
@@ -326,10 +298,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updatePassthroughJson
 
@@ -344,26 +315,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdatePassthroughJsonRequest(
-        connectionId: '<value>',
-        path: '/etc/namedb',
-    );
-    $response = $sdk->passthrough->updatePassthroughJson($request);
+$request = new Operations\UpdatePassthroughJsonRequest(
+    connectionId: '<id>',
+    path: '/etc/namedb',
+);
 
-    if ($response->body !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->passthrough->updatePassthroughJson(
+    request: $request
+);
+
+if ($response->body !== null) {
+    // handle response
 }
 ```
 
@@ -379,10 +346,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## updatePassthroughRaw
 
@@ -397,26 +363,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\UpdatePassthroughRawRequest(
-        connectionId: '<value>',
-        path: '/System',
-    );
-    $response = $sdk->passthrough->updatePassthroughRaw($request);
+$request = new Operations\UpdatePassthroughRawRequest(
+    connectionId: '<id>',
+    path: '/System',
+);
 
-    if ($response->body !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->passthrough->updatePassthroughRaw(
+    request: $request
+);
+
+if ($response->body !== null) {
+    // handle response
 }
 ```
 
@@ -432,6 +394,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

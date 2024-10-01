@@ -36,6 +36,16 @@ class CommerceItemMedia
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<CommerceMetadata> $metadata
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('metadata')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?float $position
      */
@@ -72,16 +82,18 @@ class CommerceItemMedia
      * @param  ?string  $alt
      * @param  ?float  $height
      * @param  ?string  $id
+     * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?float  $position
      * @param  ?CommerceItemMediaType  $type
      * @param  ?float  $width
      */
-    public function __construct(string $url, ?string $alt = null, ?float $height = null, ?string $id = null, ?float $position = null, ?CommerceItemMediaType $type = null, ?float $width = null)
+    public function __construct(string $url, ?string $alt = null, ?float $height = null, ?string $id = null, ?array $metadata = null, ?float $position = null, ?CommerceItemMediaType $type = null, ?float $width = null)
     {
         $this->url = $url;
         $this->alt = $alt;
         $this->height = $height;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->position = $position;
         $this->type = $type;
         $this->width = $width;

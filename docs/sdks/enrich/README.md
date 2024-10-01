@@ -1,4 +1,5 @@
 # Enrich
+(*enrich*)
 
 ## Overview
 
@@ -20,25 +21,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListEnrichCompaniesRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->enrich->listEnrichCompanies($request);
+$request = new Operations\ListEnrichCompaniesRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->enrichCompany !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->enrich->listEnrichCompanies(
+    request: $request
+);
+
+if ($response->enrichCompany !== null) {
+    // handle response
 }
 ```
 
@@ -54,10 +51,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listEnrichPeople
 
@@ -72,25 +68,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListEnrichPeopleRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->enrich->listEnrichPeople($request);
+$request = new Operations\ListEnrichPeopleRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->enrichPerson !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->enrich->listEnrichPeople(
+    request: $request
+);
+
+if ($response->enrichPerson !== null) {
+    // handle response
 }
 ```
 
@@ -106,6 +98,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |

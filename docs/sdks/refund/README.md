@@ -1,4 +1,5 @@
 # Refund
+(*refund*)
 
 ## Overview
 
@@ -20,26 +21,22 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\GetPaymentRefundRequest(
-        connectionId: '<value>',
-        id: '<id>',
-    );
-    $response = $sdk->refund->getPaymentRefund($request);
+$request = new Operations\GetPaymentRefundRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
 
-    if ($response->paymentRefund !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->refund->getPaymentRefund(
+    request: $request
+);
+
+if ($response->paymentRefund !== null) {
+    // handle response
 }
 ```
 
@@ -55,10 +52,9 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
-
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listPaymentRefunds
 
@@ -73,25 +69,21 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
 
-$security = new Shared\Security(
-    jwt: "<YOUR_API_KEY_HERE>",
-);
+$security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-try {
-    $request = new Operations\ListPaymentRefundsRequest(
-        connectionId: '<value>',
-    );
-    $response = $sdk->refund->listPaymentRefunds($request);
+$request = new Operations\ListPaymentRefundsRequest(
+    connectionId: '<id>',
+);
 
-    if ($response->paymentRefunds !== null) {
-        // handle response
-    }
-} catch (Throwable $e) {
-    // handle exception
+$response = $sdk->refund->listPaymentRefunds(
+    request: $request
+);
+
+if ($response->paymentRefunds !== null) {
+    // handle response
 }
 ```
 
@@ -107,6 +99,6 @@ try {
 
 ### Errors
 
-| Error Object                                  | Status Code                                   | Content Type                                  |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Unified\Unified_to\Models\Errors.SDKException | 4xx-5xx                                       | */*                                           |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
