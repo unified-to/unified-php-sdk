@@ -13,7 +13,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 0.17.5
+  version: 0.18.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
@@ -25,7 +25,11 @@ php:
       shared: Models/Shared
       webhooks: Models/Webhooks
   inputModelSuffix: input
+  laravelServiceProvider:
+    enabled: false
+    svcName: openapi
   maxMethodParams: 0
+  methodArguments: infer-optional-args
   namespace: Unified\Unified_to
   outputModelSuffix: output
   packageName: unified/unified-to

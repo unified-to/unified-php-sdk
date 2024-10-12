@@ -29,9 +29,8 @@ class ListT
      * @return Operations\CreateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createMartechList(
-        ?Operations\CreateMartechListRequest $request,
-    ): Operations\CreateMartechListResponse {
+    public function createMartechList(Operations\CreateMartechListRequest $request): Operations\CreateMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list', Operations\CreateMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class ListT
      * @return Operations\GetMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMartechList(
-        ?Operations\GetMartechListRequest $request,
-    ): Operations\GetMartechListResponse {
+    public function getMartechList(Operations\GetMartechListRequest $request): Operations\GetMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\GetMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class ListT
      * @return Operations\ListMartechListsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMartechLists(
-        ?Operations\ListMartechListsRequest $request,
-    ): Operations\ListMartechListsResponse {
+    public function listMartechLists(Operations\ListMartechListsRequest $request): Operations\ListMartechListsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list', Operations\ListMartechListsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class ListT
      * @return Operations\PatchMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMartechList(
-        ?Operations\PatchMartechListRequest $request,
-    ): Operations\PatchMartechListResponse {
+    public function patchMartechList(Operations\PatchMartechListRequest $request): Operations\PatchMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\PatchMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class ListT
      * @return Operations\RemoveMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeMartechList(
-        ?Operations\RemoveMartechListRequest $request,
-    ): Operations\RemoveMartechListResponse {
+    public function removeMartechList(Operations\RemoveMartechListRequest $request): Operations\RemoveMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\RemoveMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class ListT
      * @return Operations\UpdateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMartechList(
-        ?Operations\UpdateMartechListRequest $request,
-    ): Operations\UpdateMartechListResponse {
+    public function updateMartechList(Operations\UpdateMartechListRequest $request): Operations\UpdateMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\UpdateMartechListRequest::class, $request);
         $options = ['http_errors' => false];

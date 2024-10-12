@@ -28,13 +28,12 @@ class Unified
      *
      * Used only to import existing customer credentials; use "Create connection indirectly" instead
      *
-     * @param  Shared\Connection  $request
+     * @param  ?Shared\Connection  $request
      * @return Operations\CreateUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUnifiedConnection(
-        ?Shared\Connection $request,
-    ): Operations\CreateUnifiedConnectionResponse {
+    public function createUnifiedConnection(?Shared\Connection $request = null): Operations\CreateUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
         $options = ['http_errors' => false];
@@ -77,13 +76,12 @@ class Unified
      *
      * The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
      *
-     * @param  Operations\CreateUnifiedWebhookRequest  $request
+     * @param  ?Operations\CreateUnifiedWebhookRequest  $request
      * @return Operations\CreateUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUnifiedWebhook(
-        ?Operations\CreateUnifiedWebhookRequest $request,
-    ): Operations\CreateUnifiedWebhookResponse {
+    public function createUnifiedWebhook(?Operations\CreateUnifiedWebhookRequest $request = null): Operations\CreateUnifiedWebhookResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
         $options = ['http_errors' => false];
@@ -129,9 +127,8 @@ class Unified
      * @return Operations\GetUnifiedApicallResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedApicall(
-        ?Operations\GetUnifiedApicallRequest $request,
-    ): Operations\GetUnifiedApicallResponse {
+    public function getUnifiedApicall(Operations\GetUnifiedApicallRequest $request): Operations\GetUnifiedApicallResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall/{id}', Operations\GetUnifiedApicallRequest::class, $request);
         $options = ['http_errors' => false];
@@ -172,9 +169,8 @@ class Unified
      * @return Operations\GetUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedConnection(
-        ?Operations\GetUnifiedConnectionRequest $request,
-    ): Operations\GetUnifiedConnectionResponse {
+    public function getUnifiedConnection(Operations\GetUnifiedConnectionRequest $request): Operations\GetUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\GetUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -217,9 +213,8 @@ class Unified
      * @return Operations\GetUnifiedIntegrationAuthResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedIntegrationAuth(
-        ?Operations\GetUnifiedIntegrationAuthRequest $request,
-    ): Operations\GetUnifiedIntegrationAuthResponse {
+    public function getUnifiedIntegrationAuth(Operations\GetUnifiedIntegrationAuthRequest $request): Operations\GetUnifiedIntegrationAuthResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationAuthRequest::class, $request);
         $options = ['http_errors' => false];
@@ -259,9 +254,8 @@ class Unified
      * @return Operations\GetUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedWebhook(
-        ?Operations\GetUnifiedWebhookRequest $request,
-    ): Operations\GetUnifiedWebhookResponse {
+    public function getUnifiedWebhook(Operations\GetUnifiedWebhookRequest $request): Operations\GetUnifiedWebhookResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', Operations\GetUnifiedWebhookRequest::class, $request);
         $options = ['http_errors' => false];
@@ -298,13 +292,12 @@ class Unified
     /**
      * Returns API Calls
      *
-     * @param  Operations\ListUnifiedApicallsRequest  $request
+     * @param  ?Operations\ListUnifiedApicallsRequest  $request
      * @return Operations\ListUnifiedApicallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedApicalls(
-        ?Operations\ListUnifiedApicallsRequest $request,
-    ): Operations\ListUnifiedApicallsResponse {
+    public function listUnifiedApicalls(?Operations\ListUnifiedApicallsRequest $request = null): Operations\ListUnifiedApicallsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall');
         $options = ['http_errors' => false];
@@ -342,13 +335,12 @@ class Unified
     /**
      * List all connections
      *
-     * @param  Operations\ListUnifiedConnectionsRequest  $request
+     * @param  ?Operations\ListUnifiedConnectionsRequest  $request
      * @return Operations\ListUnifiedConnectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedConnections(
-        ?Operations\ListUnifiedConnectionsRequest $request,
-    ): Operations\ListUnifiedConnectionsResponse {
+    public function listUnifiedConnections(?Operations\ListUnifiedConnectionsRequest $request = null): Operations\ListUnifiedConnectionsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
         $options = ['http_errors' => false];
@@ -392,9 +384,8 @@ class Unified
      * @return Operations\ListUnifiedIntegrationWorkspacesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedIntegrationWorkspaces(
-        ?Operations\ListUnifiedIntegrationWorkspacesRequest $request,
-    ): Operations\ListUnifiedIntegrationWorkspacesResponse {
+    public function listUnifiedIntegrationWorkspaces(Operations\ListUnifiedIntegrationWorkspacesRequest $request): Operations\ListUnifiedIntegrationWorkspacesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/workspace/{workspace_id}', Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -432,13 +423,12 @@ class Unified
     /**
      * Returns all integrations
      *
-     * @param  Operations\ListUnifiedIntegrationsRequest  $request
+     * @param  ?Operations\ListUnifiedIntegrationsRequest  $request
      * @return Operations\ListUnifiedIntegrationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedIntegrations(
-        ?Operations\ListUnifiedIntegrationsRequest $request,
-    ): Operations\ListUnifiedIntegrationsResponse {
+    public function listUnifiedIntegrations(?Operations\ListUnifiedIntegrationsRequest $request = null): Operations\ListUnifiedIntegrationsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration');
         $options = ['http_errors' => false];
@@ -476,13 +466,12 @@ class Unified
     /**
      * List support issues
      *
-     * @param  Operations\ListUnifiedIssuesRequest  $request
+     * @param  ?Operations\ListUnifiedIssuesRequest  $request
      * @return Operations\ListUnifiedIssuesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedIssues(
-        ?Operations\ListUnifiedIssuesRequest $request,
-    ): Operations\ListUnifiedIssuesResponse {
+    public function listUnifiedIssues(?Operations\ListUnifiedIssuesRequest $request = null): Operations\ListUnifiedIssuesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/issue');
         $options = ['http_errors' => false];
@@ -520,13 +509,12 @@ class Unified
     /**
      * Returns all registered webhooks
      *
-     * @param  Operations\ListUnifiedWebhooksRequest  $request
+     * @param  ?Operations\ListUnifiedWebhooksRequest  $request
      * @return Operations\ListUnifiedWebhooksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedWebhooks(
-        ?Operations\ListUnifiedWebhooksRequest $request,
-    ): Operations\ListUnifiedWebhooksResponse {
+    public function listUnifiedWebhooks(?Operations\ListUnifiedWebhooksRequest $request = null): Operations\ListUnifiedWebhooksResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook');
         $options = ['http_errors' => false];
@@ -568,9 +556,8 @@ class Unified
      * @return Operations\PatchUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUnifiedConnection(
-        ?Operations\PatchUnifiedConnectionRequest $request,
-    ): Operations\PatchUnifiedConnectionResponse {
+    public function patchUnifiedConnection(Operations\PatchUnifiedConnectionRequest $request): Operations\PatchUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\PatchUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -615,9 +602,8 @@ class Unified
      * @return Operations\PatchUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUnifiedWebhook(
-        ?Operations\PatchUnifiedWebhookRequest $request,
-    ): Operations\PatchUnifiedWebhookResponse {
+    public function patchUnifiedWebhook(Operations\PatchUnifiedWebhookRequest $request): Operations\PatchUnifiedWebhookResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', Operations\PatchUnifiedWebhookRequest::class, $request);
         $options = ['http_errors' => false];
@@ -662,9 +648,8 @@ class Unified
      * @return Operations\PatchUnifiedWebhookTriggerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUnifiedWebhookTrigger(
-        ?Operations\PatchUnifiedWebhookTriggerRequest $request,
-    ): Operations\PatchUnifiedWebhookTriggerResponse {
+    public function patchUnifiedWebhookTrigger(Operations\PatchUnifiedWebhookTriggerRequest $request): Operations\PatchUnifiedWebhookTriggerResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', Operations\PatchUnifiedWebhookTriggerRequest::class, $request);
         $options = ['http_errors' => false];
@@ -695,9 +680,8 @@ class Unified
      * @return Operations\RemoveUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUnifiedConnection(
-        ?Operations\RemoveUnifiedConnectionRequest $request,
-    ): Operations\RemoveUnifiedConnectionResponse {
+    public function removeUnifiedConnection(Operations\RemoveUnifiedConnectionRequest $request): Operations\RemoveUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\RemoveUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -728,9 +712,8 @@ class Unified
      * @return Operations\RemoveUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUnifiedWebhook(
-        ?Operations\RemoveUnifiedWebhookRequest $request,
-    ): Operations\RemoveUnifiedWebhookResponse {
+    public function removeUnifiedWebhook(Operations\RemoveUnifiedWebhookRequest $request): Operations\RemoveUnifiedWebhookResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', Operations\RemoveUnifiedWebhookRequest::class, $request);
         $options = ['http_errors' => false];
@@ -761,9 +744,8 @@ class Unified
      * @return Operations\UpdateUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUnifiedConnection(
-        ?Operations\UpdateUnifiedConnectionRequest $request,
-    ): Operations\UpdateUnifiedConnectionResponse {
+    public function updateUnifiedConnection(Operations\UpdateUnifiedConnectionRequest $request): Operations\UpdateUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\UpdateUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -808,9 +790,8 @@ class Unified
      * @return Operations\UpdateUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUnifiedWebhook(
-        ?Operations\UpdateUnifiedWebhookRequest $request,
-    ): Operations\UpdateUnifiedWebhookResponse {
+    public function updateUnifiedWebhook(Operations\UpdateUnifiedWebhookRequest $request): Operations\UpdateUnifiedWebhookResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}', Operations\UpdateUnifiedWebhookRequest::class, $request);
         $options = ['http_errors' => false];
@@ -855,9 +836,8 @@ class Unified
      * @return Operations\UpdateUnifiedWebhookTriggerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUnifiedWebhookTrigger(
-        ?Operations\UpdateUnifiedWebhookTriggerRequest $request,
-    ): Operations\UpdateUnifiedWebhookTriggerResponse {
+    public function updateUnifiedWebhookTrigger(Operations\UpdateUnifiedWebhookTriggerRequest $request): Operations\UpdateUnifiedWebhookTriggerResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/webhook/{id}/trigger', Operations\UpdateUnifiedWebhookTriggerRequest::class, $request);
         $options = ['http_errors' => false];

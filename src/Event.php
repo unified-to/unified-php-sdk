@@ -29,9 +29,8 @@ class Event
      * @return Operations\CreateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmEvent(
-        ?Operations\CreateCrmEventRequest $request,
-    ): Operations\CreateCrmEventResponse {
+    public function createCrmEvent(Operations\CreateCrmEventRequest $request): Operations\CreateCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\CreateCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Event
      * @return Operations\GetCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmEvent(
-        ?Operations\GetCrmEventRequest $request,
-    ): Operations\GetCrmEventResponse {
+    public function getCrmEvent(Operations\GetCrmEventRequest $request): Operations\GetCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\GetCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Event
      * @return Operations\ListCrmEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmEvents(
-        ?Operations\ListCrmEventsRequest $request,
-    ): Operations\ListCrmEventsResponse {
+    public function listCrmEvents(Operations\ListCrmEventsRequest $request): Operations\ListCrmEventsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\ListCrmEventsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Event
      * @return Operations\PatchCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmEvent(
-        ?Operations\PatchCrmEventRequest $request,
-    ): Operations\PatchCrmEventResponse {
+    public function patchCrmEvent(Operations\PatchCrmEventRequest $request): Operations\PatchCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\PatchCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Event
      * @return Operations\RemoveCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmEvent(
-        ?Operations\RemoveCrmEventRequest $request,
-    ): Operations\RemoveCrmEventResponse {
+    public function removeCrmEvent(Operations\RemoveCrmEventRequest $request): Operations\RemoveCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\RemoveCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Event
      * @return Operations\UpdateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmEvent(
-        ?Operations\UpdateCrmEventRequest $request,
-    ): Operations\UpdateCrmEventResponse {
+    public function updateCrmEvent(Operations\UpdateCrmEventRequest $request): Operations\UpdateCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\UpdateCrmEventRequest::class, $request);
         $options = ['http_errors' => false];

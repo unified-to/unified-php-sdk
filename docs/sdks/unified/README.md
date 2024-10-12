@@ -46,11 +46,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 $request = new Shared\Connection(
     categories: [
-        Shared\PropertyConnectionCategories::Kms,
+        Shared\PropertyConnectionCategories::Task,
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::AtsScorecardRead,
+        Shared\PropertyConnectionPermissions::AtsScorecardWrite,
     ],
 );
 

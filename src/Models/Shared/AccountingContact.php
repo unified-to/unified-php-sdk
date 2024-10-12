@@ -195,7 +195,7 @@ class AccountingContact
      * @param  ?array<AccountingTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?string $currency = null, ?array $emails = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $name = null, ?array $paymentMethods = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $name = null, ?array $paymentMethods = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
         $this->billingAddress = $billingAddress;
         $this->companyName = $companyName;

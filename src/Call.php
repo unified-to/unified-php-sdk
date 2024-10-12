@@ -29,9 +29,8 @@ class Call
      * @return Operations\ListUcCallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcCalls(
-        ?Operations\ListUcCallsRequest $request,
-    ): Operations\ListUcCallsResponse {
+    public function listUcCalls(Operations\ListUcCallsRequest $request): Operations\ListUcCallsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', Operations\ListUcCallsRequest::class, $request);
         $options = ['http_errors' => false];

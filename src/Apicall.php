@@ -29,9 +29,8 @@ class Apicall
      * @return Operations\GetUnifiedApicallResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedApicall(
-        ?Operations\GetUnifiedApicallRequest $request,
-    ): Operations\GetUnifiedApicallResponse {
+    public function getUnifiedApicall(Operations\GetUnifiedApicallRequest $request): Operations\GetUnifiedApicallResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall/{id}', Operations\GetUnifiedApicallRequest::class, $request);
         $options = ['http_errors' => false];
@@ -68,13 +67,12 @@ class Apicall
     /**
      * Returns API Calls
      *
-     * @param  Operations\ListUnifiedApicallsRequest  $request
+     * @param  ?Operations\ListUnifiedApicallsRequest  $request
      * @return Operations\ListUnifiedApicallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedApicalls(
-        ?Operations\ListUnifiedApicallsRequest $request,
-    ): Operations\ListUnifiedApicallsResponse {
+    public function listUnifiedApicalls(?Operations\ListUnifiedApicallsRequest $request = null): Operations\ListUnifiedApicallsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/apicall');
         $options = ['http_errors' => false];

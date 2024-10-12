@@ -6,11 +6,16 @@
 ### Available Operations
 
 * [createHrisGroup](#createhrisgroup) - Create a group
+* [createScimGroups](#createscimgroups) - Create group
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [listHrisGroups](#listhrisgroups) - List all groups
+* [listScimGroups](#listscimgroups) - List groups
 * [patchHrisGroup](#patchhrisgroup) - Update a group
+* [patchScimGroups](#patchscimgroups) - Update group
 * [removeHrisGroup](#removehrisgroup) - Remove a group
+* [removeScimGroups](#removescimgroups) - Delete group
 * [updateHrisGroup](#updatehrisgroup) - Update a group
+* [updateScimGroups](#updatescimgroups) - Update group
 
 ## createHrisGroup
 
@@ -52,6 +57,53 @@ if ($response->hrisGroup !== null) {
 ### Response
 
 **[?Operations\CreateHrisGroupResponse](../../Models/Operations/CreateHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createScimGroups
+
+Create group
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\CreateScimGroupsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->group->createScimGroups(
+    request: $request
+);
+
+if ($response->group !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\CreateScimGroupsRequest](../../Models/Operations/CreateScimGroupsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\CreateScimGroupsResponse](../../Models/Operations/CreateScimGroupsResponse.md)**
 
 ### Errors
 
@@ -154,6 +206,53 @@ if ($response->hrisGroups !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listScimGroups
+
+List groups
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\ListScimGroupsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->group->listScimGroups(
+    request: $request
+);
+
+if ($response->groups !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListScimGroupsRequest](../../Models/Operations/ListScimGroupsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\ListScimGroupsResponse](../../Models/Operations/ListScimGroupsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchHrisGroup
 
 Update a group
@@ -195,6 +294,54 @@ if ($response->hrisGroup !== null) {
 ### Response
 
 **[?Operations\PatchHrisGroupResponse](../../Models/Operations/PatchHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchScimGroups
+
+Update group
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\PatchScimGroupsRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->patchScimGroups(
+    request: $request
+);
+
+if ($response->group !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\PatchScimGroupsRequest](../../Models/Operations/PatchScimGroupsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\PatchScimGroupsResponse](../../Models/Operations/PatchScimGroupsResponse.md)**
 
 ### Errors
 
@@ -250,6 +397,54 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeScimGroups
+
+Delete group
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\RemoveScimGroupsRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->removeScimGroups(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\RemoveScimGroupsRequest](../../Models/Operations/RemoveScimGroupsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\RemoveScimGroupsResponse](../../Models/Operations/RemoveScimGroupsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## updateHrisGroup
 
 Update a group
@@ -291,6 +486,54 @@ if ($response->hrisGroup !== null) {
 ### Response
 
 **[?Operations\UpdateHrisGroupResponse](../../Models/Operations/UpdateHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateScimGroups
+
+Update group
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\UpdateScimGroupsRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->updateScimGroups(
+    request: $request
+);
+
+if ($response->group !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\UpdateScimGroupsRequest](../../Models/Operations/UpdateScimGroupsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\UpdateScimGroupsResponse](../../Models/Operations/UpdateScimGroupsResponse.md)**
 
 ### Errors
 

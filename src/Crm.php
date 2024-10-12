@@ -29,9 +29,8 @@ class Crm
      * @return Operations\CreateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmCompany(
-        ?Operations\CreateCrmCompanyRequest $request,
-    ): Operations\CreateCrmCompanyResponse {
+    public function createCrmCompany(Operations\CreateCrmCompanyRequest $request): Operations\CreateCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\CreateCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Crm
      * @return Operations\CreateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmContact(
-        ?Operations\CreateCrmContactRequest $request,
-    ): Operations\CreateCrmContactResponse {
+    public function createCrmContact(Operations\CreateCrmContactRequest $request): Operations\CreateCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact', Operations\CreateCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Crm
      * @return Operations\CreateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmDeal(
-        ?Operations\CreateCrmDealRequest $request,
-    ): Operations\CreateCrmDealResponse {
+    public function createCrmDeal(Operations\CreateCrmDealRequest $request): Operations\CreateCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\CreateCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -173,9 +170,8 @@ class Crm
      * @return Operations\CreateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmEvent(
-        ?Operations\CreateCrmEventRequest $request,
-    ): Operations\CreateCrmEventResponse {
+    public function createCrmEvent(Operations\CreateCrmEventRequest $request): Operations\CreateCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\CreateCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -221,9 +217,8 @@ class Crm
      * @return Operations\CreateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmLead(
-        ?Operations\CreateCrmLeadRequest $request,
-    ): Operations\CreateCrmLeadResponse {
+    public function createCrmLead(Operations\CreateCrmLeadRequest $request): Operations\CreateCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\CreateCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -269,9 +264,8 @@ class Crm
      * @return Operations\CreateCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmPipeline(
-        ?Operations\CreateCrmPipelineRequest $request,
-    ): Operations\CreateCrmPipelineResponse {
+    public function createCrmPipeline(Operations\CreateCrmPipelineRequest $request): Operations\CreateCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', Operations\CreateCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
@@ -317,9 +311,8 @@ class Crm
      * @return Operations\GetCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmCompany(
-        ?Operations\GetCrmCompanyRequest $request,
-    ): Operations\GetCrmCompanyResponse {
+    public function getCrmCompany(Operations\GetCrmCompanyRequest $request): Operations\GetCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\GetCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -361,9 +354,8 @@ class Crm
      * @return Operations\GetCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmContact(
-        ?Operations\GetCrmContactRequest $request,
-    ): Operations\GetCrmContactResponse {
+    public function getCrmContact(Operations\GetCrmContactRequest $request): Operations\GetCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\GetCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -405,9 +397,8 @@ class Crm
      * @return Operations\GetCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmDeal(
-        ?Operations\GetCrmDealRequest $request,
-    ): Operations\GetCrmDealResponse {
+    public function getCrmDeal(Operations\GetCrmDealRequest $request): Operations\GetCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\GetCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -449,9 +440,8 @@ class Crm
      * @return Operations\GetCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmEvent(
-        ?Operations\GetCrmEventRequest $request,
-    ): Operations\GetCrmEventResponse {
+    public function getCrmEvent(Operations\GetCrmEventRequest $request): Operations\GetCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\GetCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -493,9 +483,8 @@ class Crm
      * @return Operations\GetCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmLead(
-        ?Operations\GetCrmLeadRequest $request,
-    ): Operations\GetCrmLeadResponse {
+    public function getCrmLead(Operations\GetCrmLeadRequest $request): Operations\GetCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\GetCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -537,9 +526,8 @@ class Crm
      * @return Operations\GetCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmPipeline(
-        ?Operations\GetCrmPipelineRequest $request,
-    ): Operations\GetCrmPipelineResponse {
+    public function getCrmPipeline(Operations\GetCrmPipelineRequest $request): Operations\GetCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\GetCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
@@ -581,9 +569,8 @@ class Crm
      * @return Operations\ListCrmCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmCompanies(
-        ?Operations\ListCrmCompaniesRequest $request,
-    ): Operations\ListCrmCompaniesResponse {
+    public function listCrmCompanies(Operations\ListCrmCompaniesRequest $request): Operations\ListCrmCompaniesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\ListCrmCompaniesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -625,9 +612,8 @@ class Crm
      * @return Operations\ListCrmContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmContacts(
-        ?Operations\ListCrmContactsRequest $request,
-    ): Operations\ListCrmContactsResponse {
+    public function listCrmContacts(Operations\ListCrmContactsRequest $request): Operations\ListCrmContactsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact', Operations\ListCrmContactsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -669,9 +655,8 @@ class Crm
      * @return Operations\ListCrmDealsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmDeals(
-        ?Operations\ListCrmDealsRequest $request,
-    ): Operations\ListCrmDealsResponse {
+    public function listCrmDeals(Operations\ListCrmDealsRequest $request): Operations\ListCrmDealsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\ListCrmDealsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -713,9 +698,8 @@ class Crm
      * @return Operations\ListCrmEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmEvents(
-        ?Operations\ListCrmEventsRequest $request,
-    ): Operations\ListCrmEventsResponse {
+    public function listCrmEvents(Operations\ListCrmEventsRequest $request): Operations\ListCrmEventsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\ListCrmEventsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -757,9 +741,8 @@ class Crm
      * @return Operations\ListCrmLeadsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmLeads(
-        ?Operations\ListCrmLeadsRequest $request,
-    ): Operations\ListCrmLeadsResponse {
+    public function listCrmLeads(Operations\ListCrmLeadsRequest $request): Operations\ListCrmLeadsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\ListCrmLeadsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -801,9 +784,8 @@ class Crm
      * @return Operations\ListCrmPipelinesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmPipelines(
-        ?Operations\ListCrmPipelinesRequest $request,
-    ): Operations\ListCrmPipelinesResponse {
+    public function listCrmPipelines(Operations\ListCrmPipelinesRequest $request): Operations\ListCrmPipelinesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', Operations\ListCrmPipelinesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -845,9 +827,8 @@ class Crm
      * @return Operations\PatchCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmCompany(
-        ?Operations\PatchCrmCompanyRequest $request,
-    ): Operations\PatchCrmCompanyResponse {
+    public function patchCrmCompany(Operations\PatchCrmCompanyRequest $request): Operations\PatchCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\PatchCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -893,9 +874,8 @@ class Crm
      * @return Operations\PatchCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmContact(
-        ?Operations\PatchCrmContactRequest $request,
-    ): Operations\PatchCrmContactResponse {
+    public function patchCrmContact(Operations\PatchCrmContactRequest $request): Operations\PatchCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\PatchCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -941,9 +921,8 @@ class Crm
      * @return Operations\PatchCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmDeal(
-        ?Operations\PatchCrmDealRequest $request,
-    ): Operations\PatchCrmDealResponse {
+    public function patchCrmDeal(Operations\PatchCrmDealRequest $request): Operations\PatchCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\PatchCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -989,9 +968,8 @@ class Crm
      * @return Operations\PatchCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmEvent(
-        ?Operations\PatchCrmEventRequest $request,
-    ): Operations\PatchCrmEventResponse {
+    public function patchCrmEvent(Operations\PatchCrmEventRequest $request): Operations\PatchCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\PatchCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1037,9 +1015,8 @@ class Crm
      * @return Operations\PatchCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmLead(
-        ?Operations\PatchCrmLeadRequest $request,
-    ): Operations\PatchCrmLeadResponse {
+    public function patchCrmLead(Operations\PatchCrmLeadRequest $request): Operations\PatchCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\PatchCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1085,9 +1062,8 @@ class Crm
      * @return Operations\PatchCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmPipeline(
-        ?Operations\PatchCrmPipelineRequest $request,
-    ): Operations\PatchCrmPipelineResponse {
+    public function patchCrmPipeline(Operations\PatchCrmPipelineRequest $request): Operations\PatchCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\PatchCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1133,9 +1109,8 @@ class Crm
      * @return Operations\RemoveCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmCompany(
-        ?Operations\RemoveCrmCompanyRequest $request,
-    ): Operations\RemoveCrmCompanyResponse {
+    public function removeCrmCompany(Operations\RemoveCrmCompanyRequest $request): Operations\RemoveCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\RemoveCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1166,9 +1141,8 @@ class Crm
      * @return Operations\RemoveCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmContact(
-        ?Operations\RemoveCrmContactRequest $request,
-    ): Operations\RemoveCrmContactResponse {
+    public function removeCrmContact(Operations\RemoveCrmContactRequest $request): Operations\RemoveCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\RemoveCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1199,9 +1173,8 @@ class Crm
      * @return Operations\RemoveCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmDeal(
-        ?Operations\RemoveCrmDealRequest $request,
-    ): Operations\RemoveCrmDealResponse {
+    public function removeCrmDeal(Operations\RemoveCrmDealRequest $request): Operations\RemoveCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\RemoveCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1232,9 +1205,8 @@ class Crm
      * @return Operations\RemoveCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmEvent(
-        ?Operations\RemoveCrmEventRequest $request,
-    ): Operations\RemoveCrmEventResponse {
+    public function removeCrmEvent(Operations\RemoveCrmEventRequest $request): Operations\RemoveCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\RemoveCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1265,9 +1237,8 @@ class Crm
      * @return Operations\RemoveCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmLead(
-        ?Operations\RemoveCrmLeadRequest $request,
-    ): Operations\RemoveCrmLeadResponse {
+    public function removeCrmLead(Operations\RemoveCrmLeadRequest $request): Operations\RemoveCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\RemoveCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1298,9 +1269,8 @@ class Crm
      * @return Operations\RemoveCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmPipeline(
-        ?Operations\RemoveCrmPipelineRequest $request,
-    ): Operations\RemoveCrmPipelineResponse {
+    public function removeCrmPipeline(Operations\RemoveCrmPipelineRequest $request): Operations\RemoveCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\RemoveCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1331,9 +1301,8 @@ class Crm
      * @return Operations\UpdateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmCompany(
-        ?Operations\UpdateCrmCompanyRequest $request,
-    ): Operations\UpdateCrmCompanyResponse {
+    public function updateCrmCompany(Operations\UpdateCrmCompanyRequest $request): Operations\UpdateCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\UpdateCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1379,9 +1348,8 @@ class Crm
      * @return Operations\UpdateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmContact(
-        ?Operations\UpdateCrmContactRequest $request,
-    ): Operations\UpdateCrmContactResponse {
+    public function updateCrmContact(Operations\UpdateCrmContactRequest $request): Operations\UpdateCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\UpdateCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1427,9 +1395,8 @@ class Crm
      * @return Operations\UpdateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmDeal(
-        ?Operations\UpdateCrmDealRequest $request,
-    ): Operations\UpdateCrmDealResponse {
+    public function updateCrmDeal(Operations\UpdateCrmDealRequest $request): Operations\UpdateCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\UpdateCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1475,9 +1442,8 @@ class Crm
      * @return Operations\UpdateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmEvent(
-        ?Operations\UpdateCrmEventRequest $request,
-    ): Operations\UpdateCrmEventResponse {
+    public function updateCrmEvent(Operations\UpdateCrmEventRequest $request): Operations\UpdateCrmEventResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\UpdateCrmEventRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1523,9 +1489,8 @@ class Crm
      * @return Operations\UpdateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmLead(
-        ?Operations\UpdateCrmLeadRequest $request,
-    ): Operations\UpdateCrmLeadResponse {
+    public function updateCrmLead(Operations\UpdateCrmLeadRequest $request): Operations\UpdateCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\UpdateCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1571,9 +1536,8 @@ class Crm
      * @return Operations\UpdateCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmPipeline(
-        ?Operations\UpdateCrmPipelineRequest $request,
-    ): Operations\UpdateCrmPipelineResponse {
+    public function updateCrmPipeline(Operations\UpdateCrmPipelineRequest $request): Operations\UpdateCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\UpdateCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];

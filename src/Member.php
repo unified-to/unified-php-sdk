@@ -29,9 +29,8 @@ class Member
      * @return Operations\CreateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createMartechMember(
-        ?Operations\CreateMartechMemberRequest $request,
-    ): Operations\CreateMartechMemberResponse {
+    public function createMartechMember(Operations\CreateMartechMemberRequest $request): Operations\CreateMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member', Operations\CreateMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Member
      * @return Operations\GetMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMartechMember(
-        ?Operations\GetMartechMemberRequest $request,
-    ): Operations\GetMartechMemberResponse {
+    public function getMartechMember(Operations\GetMartechMemberRequest $request): Operations\GetMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', Operations\GetMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Member
      * @return Operations\ListMartechMembersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMartechMembers(
-        ?Operations\ListMartechMembersRequest $request,
-    ): Operations\ListMartechMembersResponse {
+    public function listMartechMembers(Operations\ListMartechMembersRequest $request): Operations\ListMartechMembersResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member', Operations\ListMartechMembersRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Member
      * @return Operations\PatchMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMartechMember(
-        ?Operations\PatchMartechMemberRequest $request,
-    ): Operations\PatchMartechMemberResponse {
+    public function patchMartechMember(Operations\PatchMartechMemberRequest $request): Operations\PatchMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', Operations\PatchMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Member
      * @return Operations\RemoveMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeMartechMember(
-        ?Operations\RemoveMartechMemberRequest $request,
-    ): Operations\RemoveMartechMemberResponse {
+    public function removeMartechMember(Operations\RemoveMartechMemberRequest $request): Operations\RemoveMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', Operations\RemoveMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Member
      * @return Operations\UpdateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMartechMember(
-        ?Operations\UpdateMartechMemberRequest $request,
-    ): Operations\UpdateMartechMemberResponse {
+    public function updateMartechMember(Operations\UpdateMartechMemberRequest $request): Operations\UpdateMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', Operations\UpdateMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];

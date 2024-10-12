@@ -29,9 +29,8 @@ class Application
      * @return Operations\CreateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsApplication(
-        ?Operations\CreateAtsApplicationRequest $request,
-    ): Operations\CreateAtsApplicationResponse {
+    public function createAtsApplication(Operations\CreateAtsApplicationRequest $request): Operations\CreateAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', Operations\CreateAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Application
      * @return Operations\GetAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsApplication(
-        ?Operations\GetAtsApplicationRequest $request,
-    ): Operations\GetAtsApplicationResponse {
+    public function getAtsApplication(Operations\GetAtsApplicationRequest $request): Operations\GetAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\GetAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Application
      * @return Operations\ListAtsApplicationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsApplications(
-        ?Operations\ListAtsApplicationsRequest $request,
-    ): Operations\ListAtsApplicationsResponse {
+    public function listAtsApplications(Operations\ListAtsApplicationsRequest $request): Operations\ListAtsApplicationsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', Operations\ListAtsApplicationsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Application
      * @return Operations\PatchAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsApplication(
-        ?Operations\PatchAtsApplicationRequest $request,
-    ): Operations\PatchAtsApplicationResponse {
+    public function patchAtsApplication(Operations\PatchAtsApplicationRequest $request): Operations\PatchAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\PatchAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Application
      * @return Operations\RemoveAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsApplication(
-        ?Operations\RemoveAtsApplicationRequest $request,
-    ): Operations\RemoveAtsApplicationResponse {
+    public function removeAtsApplication(Operations\RemoveAtsApplicationRequest $request): Operations\RemoveAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\RemoveAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Application
      * @return Operations\UpdateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsApplication(
-        ?Operations\UpdateAtsApplicationRequest $request,
-    ): Operations\UpdateAtsApplicationResponse {
+    public function updateAtsApplication(Operations\UpdateAtsApplicationRequest $request): Operations\UpdateAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\UpdateAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];

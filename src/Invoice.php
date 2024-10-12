@@ -29,9 +29,8 @@ class Invoice
      * @return Operations\CreateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingInvoice(
-        ?Operations\CreateAccountingInvoiceRequest $request,
-    ): Operations\CreateAccountingInvoiceResponse {
+    public function createAccountingInvoice(Operations\CreateAccountingInvoiceRequest $request): Operations\CreateAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice', Operations\CreateAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Invoice
      * @return Operations\GetAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingInvoice(
-        ?Operations\GetAccountingInvoiceRequest $request,
-    ): Operations\GetAccountingInvoiceResponse {
+    public function getAccountingInvoice(Operations\GetAccountingInvoiceRequest $request): Operations\GetAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\GetAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Invoice
      * @return Operations\ListAccountingInvoicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingInvoices(
-        ?Operations\ListAccountingInvoicesRequest $request,
-    ): Operations\ListAccountingInvoicesResponse {
+    public function listAccountingInvoices(Operations\ListAccountingInvoicesRequest $request): Operations\ListAccountingInvoicesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice', Operations\ListAccountingInvoicesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Invoice
      * @return Operations\PatchAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingInvoice(
-        ?Operations\PatchAccountingInvoiceRequest $request,
-    ): Operations\PatchAccountingInvoiceResponse {
+    public function patchAccountingInvoice(Operations\PatchAccountingInvoiceRequest $request): Operations\PatchAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\PatchAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Invoice
      * @return Operations\RemoveAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingInvoice(
-        ?Operations\RemoveAccountingInvoiceRequest $request,
-    ): Operations\RemoveAccountingInvoiceResponse {
+    public function removeAccountingInvoice(Operations\RemoveAccountingInvoiceRequest $request): Operations\RemoveAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\RemoveAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Invoice
      * @return Operations\UpdateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingInvoice(
-        ?Operations\UpdateAccountingInvoiceRequest $request,
-    ): Operations\UpdateAccountingInvoiceResponse {
+    public function updateAccountingInvoice(Operations\UpdateAccountingInvoiceRequest $request): Operations\UpdateAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\UpdateAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];

@@ -29,9 +29,8 @@ class Employee
      * @return Operations\CreateHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisEmployee(
-        ?Operations\CreateHrisEmployeeRequest $request,
-    ): Operations\CreateHrisEmployeeResponse {
+    public function createHrisEmployee(Operations\CreateHrisEmployeeRequest $request): Operations\CreateHrisEmployeeResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', Operations\CreateHrisEmployeeRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Employee
      * @return Operations\GetHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisEmployee(
-        ?Operations\GetHrisEmployeeRequest $request,
-    ): Operations\GetHrisEmployeeResponse {
+    public function getHrisEmployee(Operations\GetHrisEmployeeRequest $request): Operations\GetHrisEmployeeResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', Operations\GetHrisEmployeeRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Employee
      * @return Operations\ListHrisEmployeesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisEmployees(
-        ?Operations\ListHrisEmployeesRequest $request,
-    ): Operations\ListHrisEmployeesResponse {
+    public function listHrisEmployees(Operations\ListHrisEmployeesRequest $request): Operations\ListHrisEmployeesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee', Operations\ListHrisEmployeesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Employee
      * @return Operations\PatchHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisEmployee(
-        ?Operations\PatchHrisEmployeeRequest $request,
-    ): Operations\PatchHrisEmployeeResponse {
+    public function patchHrisEmployee(Operations\PatchHrisEmployeeRequest $request): Operations\PatchHrisEmployeeResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', Operations\PatchHrisEmployeeRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Employee
      * @return Operations\RemoveHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisEmployee(
-        ?Operations\RemoveHrisEmployeeRequest $request,
-    ): Operations\RemoveHrisEmployeeResponse {
+    public function removeHrisEmployee(Operations\RemoveHrisEmployeeRequest $request): Operations\RemoveHrisEmployeeResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', Operations\RemoveHrisEmployeeRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Employee
      * @return Operations\UpdateHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisEmployee(
-        ?Operations\UpdateHrisEmployeeRequest $request,
-    ): Operations\UpdateHrisEmployeeResponse {
+    public function updateHrisEmployee(Operations\UpdateHrisEmployeeRequest $request): Operations\UpdateHrisEmployeeResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/employee/{id}', Operations\UpdateHrisEmployeeRequest::class, $request);
         $options = ['http_errors' => false];
