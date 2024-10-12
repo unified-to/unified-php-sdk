@@ -29,9 +29,8 @@ class Enrich
      * @return Operations\ListEnrichCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listEnrichCompanies(
-        ?Operations\ListEnrichCompaniesRequest $request,
-    ): Operations\ListEnrichCompaniesResponse {
+    public function listEnrichCompanies(Operations\ListEnrichCompaniesRequest $request): Operations\ListEnrichCompaniesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/company', Operations\ListEnrichCompaniesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -73,9 +72,8 @@ class Enrich
      * @return Operations\ListEnrichPeopleResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listEnrichPeople(
-        ?Operations\ListEnrichPeopleRequest $request,
-    ): Operations\ListEnrichPeopleResponse {
+    public function listEnrichPeople(Operations\ListEnrichPeopleRequest $request): Operations\ListEnrichPeopleResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/person', Operations\ListEnrichPeopleRequest::class, $request);
         $options = ['http_errors' => false];

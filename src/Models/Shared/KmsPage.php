@@ -28,10 +28,11 @@ class KmsPage
 
     /**
      *
-     * @var string $id
+     * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    public string $id;
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
 
     /**
      *
@@ -99,25 +100,25 @@ class KmsPage
 
     /**
      * @param  string  $downloadUrl
-     * @param  string  $id
      * @param  string  $spaceId
      * @param  string  $title
      * @param  KmsPageType  $type
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $parentPageId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(string $downloadUrl, string $id, string $spaceId, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?bool $isActive = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $downloadUrl, string $spaceId, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isActive = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->downloadUrl = $downloadUrl;
-        $this->id = $id;
         $this->spaceId = $spaceId;
         $this->title = $title;
         $this->type = $type;
         $this->createdAt = $createdAt;
+        $this->id = $id;
         $this->isActive = $isActive;
         $this->parentPageId = $parentPageId;
         $this->raw = $raw;

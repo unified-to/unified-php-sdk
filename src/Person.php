@@ -29,9 +29,8 @@ class Person
      * @return Operations\ListEnrichPeopleResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listEnrichPeople(
-        ?Operations\ListEnrichPeopleRequest $request,
-    ): Operations\ListEnrichPeopleResponse {
+    public function listEnrichPeople(Operations\ListEnrichPeopleRequest $request): Operations\ListEnrichPeopleResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/person', Operations\ListEnrichPeopleRequest::class, $request);
         $options = ['http_errors' => false];

@@ -29,9 +29,8 @@ class Job
      * @return Operations\CreateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsJob(
-        ?Operations\CreateAtsJobRequest $request,
-    ): Operations\CreateAtsJobResponse {
+    public function createAtsJob(Operations\CreateAtsJobRequest $request): Operations\CreateAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', Operations\CreateAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Job
      * @return Operations\GetAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsJob(
-        ?Operations\GetAtsJobRequest $request,
-    ): Operations\GetAtsJobResponse {
+    public function getAtsJob(Operations\GetAtsJobRequest $request): Operations\GetAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\GetAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Job
      * @return Operations\ListAtsJobsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsJobs(
-        ?Operations\ListAtsJobsRequest $request,
-    ): Operations\ListAtsJobsResponse {
+    public function listAtsJobs(Operations\ListAtsJobsRequest $request): Operations\ListAtsJobsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', Operations\ListAtsJobsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Job
      * @return Operations\PatchAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsJob(
-        ?Operations\PatchAtsJobRequest $request,
-    ): Operations\PatchAtsJobResponse {
+    public function patchAtsJob(Operations\PatchAtsJobRequest $request): Operations\PatchAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\PatchAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Job
      * @return Operations\RemoveAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsJob(
-        ?Operations\RemoveAtsJobRequest $request,
-    ): Operations\RemoveAtsJobResponse {
+    public function removeAtsJob(Operations\RemoveAtsJobRequest $request): Operations\RemoveAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\RemoveAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Job
      * @return Operations\UpdateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsJob(
-        ?Operations\UpdateAtsJobRequest $request,
-    ): Operations\UpdateAtsJobResponse {
+    public function updateAtsJob(Operations\UpdateAtsJobRequest $request): Operations\UpdateAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\UpdateAtsJobRequest::class, $request);
         $options = ['http_errors' => false];

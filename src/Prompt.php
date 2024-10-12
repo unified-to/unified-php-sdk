@@ -29,9 +29,8 @@ class Prompt
      * @return Operations\CreateGenaiPromptResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createGenaiPrompt(
-        ?Operations\CreateGenaiPromptRequest $request,
-    ): Operations\CreateGenaiPromptResponse {
+    public function createGenaiPrompt(Operations\CreateGenaiPromptRequest $request): Operations\CreateGenaiPromptResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/prompt', Operations\CreateGenaiPromptRequest::class, $request);
         $options = ['http_errors' => false];

@@ -29,9 +29,8 @@ class Deal
      * @return Operations\CreateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmDeal(
-        ?Operations\CreateCrmDealRequest $request,
-    ): Operations\CreateCrmDealResponse {
+    public function createCrmDeal(Operations\CreateCrmDealRequest $request): Operations\CreateCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\CreateCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Deal
      * @return Operations\GetCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmDeal(
-        ?Operations\GetCrmDealRequest $request,
-    ): Operations\GetCrmDealResponse {
+    public function getCrmDeal(Operations\GetCrmDealRequest $request): Operations\GetCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\GetCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Deal
      * @return Operations\ListCrmDealsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmDeals(
-        ?Operations\ListCrmDealsRequest $request,
-    ): Operations\ListCrmDealsResponse {
+    public function listCrmDeals(Operations\ListCrmDealsRequest $request): Operations\ListCrmDealsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\ListCrmDealsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Deal
      * @return Operations\PatchCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmDeal(
-        ?Operations\PatchCrmDealRequest $request,
-    ): Operations\PatchCrmDealResponse {
+    public function patchCrmDeal(Operations\PatchCrmDealRequest $request): Operations\PatchCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\PatchCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Deal
      * @return Operations\RemoveCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmDeal(
-        ?Operations\RemoveCrmDealRequest $request,
-    ): Operations\RemoveCrmDealResponse {
+    public function removeCrmDeal(Operations\RemoveCrmDealRequest $request): Operations\RemoveCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\RemoveCrmDealRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Deal
      * @return Operations\UpdateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmDeal(
-        ?Operations\UpdateCrmDealRequest $request,
-    ): Operations\UpdateCrmDealResponse {
+    public function updateCrmDeal(Operations\UpdateCrmDealRequest $request): Operations\UpdateCrmDealResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\UpdateCrmDealRequest::class, $request);
         $options = ['http_errors' => false];

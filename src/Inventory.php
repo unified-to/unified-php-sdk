@@ -29,9 +29,8 @@ class Inventory
      * @return Operations\CreateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceInventory(
-        ?Operations\CreateCommerceInventoryRequest $request,
-    ): Operations\CreateCommerceInventoryResponse {
+    public function createCommerceInventory(Operations\CreateCommerceInventoryRequest $request): Operations\CreateCommerceInventoryResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory', Operations\CreateCommerceInventoryRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Inventory
      * @return Operations\GetCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceInventory(
-        ?Operations\GetCommerceInventoryRequest $request,
-    ): Operations\GetCommerceInventoryResponse {
+    public function getCommerceInventory(Operations\GetCommerceInventoryRequest $request): Operations\GetCommerceInventoryResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\GetCommerceInventoryRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Inventory
      * @return Operations\ListCommerceInventoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceInventories(
-        ?Operations\ListCommerceInventoriesRequest $request,
-    ): Operations\ListCommerceInventoriesResponse {
+    public function listCommerceInventories(Operations\ListCommerceInventoriesRequest $request): Operations\ListCommerceInventoriesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory', Operations\ListCommerceInventoriesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Inventory
      * @return Operations\PatchCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceInventory(
-        ?Operations\PatchCommerceInventoryRequest $request,
-    ): Operations\PatchCommerceInventoryResponse {
+    public function patchCommerceInventory(Operations\PatchCommerceInventoryRequest $request): Operations\PatchCommerceInventoryResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\PatchCommerceInventoryRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Inventory
      * @return Operations\RemoveCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceInventory(
-        ?Operations\RemoveCommerceInventoryRequest $request,
-    ): Operations\RemoveCommerceInventoryResponse {
+    public function removeCommerceInventory(Operations\RemoveCommerceInventoryRequest $request): Operations\RemoveCommerceInventoryResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\RemoveCommerceInventoryRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Inventory
      * @return Operations\UpdateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceInventory(
-        ?Operations\UpdateCommerceInventoryRequest $request,
-    ): Operations\UpdateCommerceInventoryResponse {
+    public function updateCommerceInventory(Operations\UpdateCommerceInventoryRequest $request): Operations\UpdateCommerceInventoryResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\UpdateCommerceInventoryRequest::class, $request);
         $options = ['http_errors' => false];

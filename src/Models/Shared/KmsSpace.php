@@ -29,10 +29,11 @@ class KmsSpace
 
     /**
      *
-     * @var string $id
+     * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    public string $id;
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
 
     /**
      *
@@ -84,22 +85,22 @@ class KmsSpace
     public ?string $userId = null;
 
     /**
-     * @param  string  $id
      * @param  string  $name
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
+     * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $parentSpaceId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(string $id, string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $isActive = null, ?string $parentSpaceId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $parentSpaceId = 'sp')
     {
-        $this->id = $id;
         $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
+        $this->id = $id;
         $this->isActive = $isActive;
         $this->parentSpaceId = $parentSpaceId;
         $this->raw = $raw;

@@ -29,9 +29,8 @@ class Model
      * @return Operations\ListGenaiModelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listGenaiModels(
-        ?Operations\ListGenaiModelsRequest $request,
-    ): Operations\ListGenaiModelsResponse {
+    public function listGenaiModels(Operations\ListGenaiModelsRequest $request): Operations\ListGenaiModelsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/model', Operations\ListGenaiModelsRequest::class, $request);
         $options = ['http_errors' => false];

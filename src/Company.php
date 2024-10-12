@@ -29,9 +29,8 @@ class Company
      * @return Operations\CreateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmCompany(
-        ?Operations\CreateCrmCompanyRequest $request,
-    ): Operations\CreateCrmCompanyResponse {
+    public function createCrmCompany(Operations\CreateCrmCompanyRequest $request): Operations\CreateCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\CreateCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Company
      * @return Operations\CreateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisCompany(
-        ?Operations\CreateHrisCompanyRequest $request,
-    ): Operations\CreateHrisCompanyResponse {
+    public function createHrisCompany(Operations\CreateHrisCompanyRequest $request): Operations\CreateHrisCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company', Operations\CreateHrisCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Company
      * @return Operations\GetAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsCompany(
-        ?Operations\GetAtsCompanyRequest $request,
-    ): Operations\GetAtsCompanyResponse {
+    public function getAtsCompany(Operations\GetAtsCompanyRequest $request): Operations\GetAtsCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\GetAtsCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -169,9 +166,8 @@ class Company
      * @return Operations\GetCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmCompany(
-        ?Operations\GetCrmCompanyRequest $request,
-    ): Operations\GetCrmCompanyResponse {
+    public function getCrmCompany(Operations\GetCrmCompanyRequest $request): Operations\GetCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\GetCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Company
      * @return Operations\GetHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisCompany(
-        ?Operations\GetHrisCompanyRequest $request,
-    ): Operations\GetHrisCompanyResponse {
+    public function getHrisCompany(Operations\GetHrisCompanyRequest $request): Operations\GetHrisCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\GetHrisCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -257,9 +252,8 @@ class Company
      * @return Operations\ListAtsCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsCompanies(
-        ?Operations\ListAtsCompaniesRequest $request,
-    ): Operations\ListAtsCompaniesResponse {
+    public function listAtsCompanies(Operations\ListAtsCompaniesRequest $request): Operations\ListAtsCompaniesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company', Operations\ListAtsCompaniesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -301,9 +295,8 @@ class Company
      * @return Operations\ListCrmCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmCompanies(
-        ?Operations\ListCrmCompaniesRequest $request,
-    ): Operations\ListCrmCompaniesResponse {
+    public function listCrmCompanies(Operations\ListCrmCompaniesRequest $request): Operations\ListCrmCompaniesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\ListCrmCompaniesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -345,9 +338,8 @@ class Company
      * @return Operations\ListEnrichCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listEnrichCompanies(
-        ?Operations\ListEnrichCompaniesRequest $request,
-    ): Operations\ListEnrichCompaniesResponse {
+    public function listEnrichCompanies(Operations\ListEnrichCompaniesRequest $request): Operations\ListEnrichCompaniesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/company', Operations\ListEnrichCompaniesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -389,9 +381,8 @@ class Company
      * @return Operations\ListHrisCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisCompanies(
-        ?Operations\ListHrisCompaniesRequest $request,
-    ): Operations\ListHrisCompaniesResponse {
+    public function listHrisCompanies(Operations\ListHrisCompaniesRequest $request): Operations\ListHrisCompaniesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company', Operations\ListHrisCompaniesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -433,9 +424,8 @@ class Company
      * @return Operations\PatchCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmCompany(
-        ?Operations\PatchCrmCompanyRequest $request,
-    ): Operations\PatchCrmCompanyResponse {
+    public function patchCrmCompany(Operations\PatchCrmCompanyRequest $request): Operations\PatchCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\PatchCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -481,9 +471,8 @@ class Company
      * @return Operations\PatchHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisCompany(
-        ?Operations\PatchHrisCompanyRequest $request,
-    ): Operations\PatchHrisCompanyResponse {
+    public function patchHrisCompany(Operations\PatchHrisCompanyRequest $request): Operations\PatchHrisCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\PatchHrisCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -529,9 +518,8 @@ class Company
      * @return Operations\RemoveCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmCompany(
-        ?Operations\RemoveCrmCompanyRequest $request,
-    ): Operations\RemoveCrmCompanyResponse {
+    public function removeCrmCompany(Operations\RemoveCrmCompanyRequest $request): Operations\RemoveCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\RemoveCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -562,9 +550,8 @@ class Company
      * @return Operations\RemoveHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisCompany(
-        ?Operations\RemoveHrisCompanyRequest $request,
-    ): Operations\RemoveHrisCompanyResponse {
+    public function removeHrisCompany(Operations\RemoveHrisCompanyRequest $request): Operations\RemoveHrisCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\RemoveHrisCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -595,9 +582,8 @@ class Company
      * @return Operations\UpdateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmCompany(
-        ?Operations\UpdateCrmCompanyRequest $request,
-    ): Operations\UpdateCrmCompanyResponse {
+    public function updateCrmCompany(Operations\UpdateCrmCompanyRequest $request): Operations\UpdateCrmCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\UpdateCrmCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -643,9 +629,8 @@ class Company
      * @return Operations\UpdateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisCompany(
-        ?Operations\UpdateHrisCompanyRequest $request,
-    ): Operations\UpdateHrisCompanyResponse {
+    public function updateHrisCompany(Operations\UpdateHrisCompanyRequest $request): Operations\UpdateHrisCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\UpdateHrisCompanyRequest::class, $request);
         $options = ['http_errors' => false];

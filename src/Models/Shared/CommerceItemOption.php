@@ -13,10 +13,11 @@ class CommerceItemOption
 {
     /**
      *
-     * @var string $id
+     * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    public string $id;
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
 
     /**
      *
@@ -43,16 +44,16 @@ class CommerceItemOption
     public array $values;
 
     /**
-     * @param  string  $id
      * @param  string  $name
      * @param  array<string>  $values
+     * @param  ?string  $id
      * @param  ?float  $position
      */
-    public function __construct(string $id, string $name, array $values, ?float $position = null)
+    public function __construct(string $name, array $values, ?string $id = null, ?float $position = null)
     {
-        $this->id = $id;
         $this->name = $name;
         $this->values = $values;
+        $this->id = $id;
         $this->position = $position;
     }
 }

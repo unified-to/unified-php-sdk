@@ -29,9 +29,8 @@ class Martech
      * @return Operations\CreateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createMartechList(
-        ?Operations\CreateMartechListRequest $request,
-    ): Operations\CreateMartechListResponse {
+    public function createMartechList(Operations\CreateMartechListRequest $request): Operations\CreateMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list', Operations\CreateMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Martech
      * @return Operations\CreateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createMartechMember(
-        ?Operations\CreateMartechMemberRequest $request,
-    ): Operations\CreateMartechMemberResponse {
+    public function createMartechMember(Operations\CreateMartechMemberRequest $request): Operations\CreateMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member', Operations\CreateMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Martech
      * @return Operations\GetMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMartechList(
-        ?Operations\GetMartechListRequest $request,
-    ): Operations\GetMartechListResponse {
+    public function getMartechList(Operations\GetMartechListRequest $request): Operations\GetMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\GetMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -169,9 +166,8 @@ class Martech
      * @return Operations\GetMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMartechMember(
-        ?Operations\GetMartechMemberRequest $request,
-    ): Operations\GetMartechMemberResponse {
+    public function getMartechMember(Operations\GetMartechMemberRequest $request): Operations\GetMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', Operations\GetMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Martech
      * @return Operations\ListMartechListsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMartechLists(
-        ?Operations\ListMartechListsRequest $request,
-    ): Operations\ListMartechListsResponse {
+    public function listMartechLists(Operations\ListMartechListsRequest $request): Operations\ListMartechListsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list', Operations\ListMartechListsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -257,9 +252,8 @@ class Martech
      * @return Operations\ListMartechMembersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMartechMembers(
-        ?Operations\ListMartechMembersRequest $request,
-    ): Operations\ListMartechMembersResponse {
+    public function listMartechMembers(Operations\ListMartechMembersRequest $request): Operations\ListMartechMembersResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member', Operations\ListMartechMembersRequest::class, $request);
         $options = ['http_errors' => false];
@@ -301,9 +295,8 @@ class Martech
      * @return Operations\PatchMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMartechList(
-        ?Operations\PatchMartechListRequest $request,
-    ): Operations\PatchMartechListResponse {
+    public function patchMartechList(Operations\PatchMartechListRequest $request): Operations\PatchMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\PatchMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -349,9 +342,8 @@ class Martech
      * @return Operations\PatchMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMartechMember(
-        ?Operations\PatchMartechMemberRequest $request,
-    ): Operations\PatchMartechMemberResponse {
+    public function patchMartechMember(Operations\PatchMartechMemberRequest $request): Operations\PatchMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', Operations\PatchMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];
@@ -397,9 +389,8 @@ class Martech
      * @return Operations\RemoveMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeMartechList(
-        ?Operations\RemoveMartechListRequest $request,
-    ): Operations\RemoveMartechListResponse {
+    public function removeMartechList(Operations\RemoveMartechListRequest $request): Operations\RemoveMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\RemoveMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -430,9 +421,8 @@ class Martech
      * @return Operations\RemoveMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeMartechMember(
-        ?Operations\RemoveMartechMemberRequest $request,
-    ): Operations\RemoveMartechMemberResponse {
+    public function removeMartechMember(Operations\RemoveMartechMemberRequest $request): Operations\RemoveMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', Operations\RemoveMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];
@@ -463,9 +453,8 @@ class Martech
      * @return Operations\UpdateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMartechList(
-        ?Operations\UpdateMartechListRequest $request,
-    ): Operations\UpdateMartechListResponse {
+    public function updateMartechList(Operations\UpdateMartechListRequest $request): Operations\UpdateMartechListResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\UpdateMartechListRequest::class, $request);
         $options = ['http_errors' => false];
@@ -511,9 +500,8 @@ class Martech
      * @return Operations\UpdateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMartechMember(
-        ?Operations\UpdateMartechMemberRequest $request,
-    ): Operations\UpdateMartechMemberResponse {
+    public function updateMartechMember(Operations\UpdateMartechMemberRequest $request): Operations\UpdateMartechMemberResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/member/{id}', Operations\UpdateMartechMemberRequest::class, $request);
         $options = ['http_errors' => false];

@@ -29,9 +29,8 @@ class Channel
      * @return Operations\GetMessagingChannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMessagingChannel(
-        ?Operations\GetMessagingChannelRequest $request,
-    ): Operations\GetMessagingChannelResponse {
+    public function getMessagingChannel(Operations\GetMessagingChannelRequest $request): Operations\GetMessagingChannelResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/channel/{id}', Operations\GetMessagingChannelRequest::class, $request);
         $options = ['http_errors' => false];
@@ -73,9 +72,8 @@ class Channel
      * @return Operations\ListMessagingChannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMessagingChannels(
-        ?Operations\ListMessagingChannelsRequest $request,
-    ): Operations\ListMessagingChannelsResponse {
+    public function listMessagingChannels(Operations\ListMessagingChannelsRequest $request): Operations\ListMessagingChannelsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/channel', Operations\ListMessagingChannelsRequest::class, $request);
         $options = ['http_errors' => false];

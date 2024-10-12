@@ -29,9 +29,8 @@ class Accounting
      * @return Operations\CreateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingAccount(
-        ?Operations\CreateAccountingAccountRequest $request,
-    ): Operations\CreateAccountingAccountResponse {
+    public function createAccountingAccount(Operations\CreateAccountingAccountRequest $request): Operations\CreateAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account', Operations\CreateAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Accounting
      * @return Operations\CreateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingContact(
-        ?Operations\CreateAccountingContactRequest $request,
-    ): Operations\CreateAccountingContactResponse {
+    public function createAccountingContact(Operations\CreateAccountingContactRequest $request): Operations\CreateAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact', Operations\CreateAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Accounting
      * @return Operations\CreateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingInvoice(
-        ?Operations\CreateAccountingInvoiceRequest $request,
-    ): Operations\CreateAccountingInvoiceResponse {
+    public function createAccountingInvoice(Operations\CreateAccountingInvoiceRequest $request): Operations\CreateAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice', Operations\CreateAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -173,9 +170,8 @@ class Accounting
      * @return Operations\CreateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingJournal(
-        ?Operations\CreateAccountingJournalRequest $request,
-    ): Operations\CreateAccountingJournalResponse {
+    public function createAccountingJournal(Operations\CreateAccountingJournalRequest $request): Operations\CreateAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal', Operations\CreateAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -221,9 +217,8 @@ class Accounting
      * @return Operations\CreateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingTaxrate(
-        ?Operations\CreateAccountingTaxrateRequest $request,
-    ): Operations\CreateAccountingTaxrateResponse {
+    public function createAccountingTaxrate(Operations\CreateAccountingTaxrateRequest $request): Operations\CreateAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', Operations\CreateAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -269,9 +264,8 @@ class Accounting
      * @return Operations\CreateAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingTransaction(
-        ?Operations\CreateAccountingTransactionRequest $request,
-    ): Operations\CreateAccountingTransactionResponse {
+    public function createAccountingTransaction(Operations\CreateAccountingTransactionRequest $request): Operations\CreateAccountingTransactionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction', Operations\CreateAccountingTransactionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -317,9 +311,8 @@ class Accounting
      * @return Operations\GetAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingAccount(
-        ?Operations\GetAccountingAccountRequest $request,
-    ): Operations\GetAccountingAccountResponse {
+    public function getAccountingAccount(Operations\GetAccountingAccountRequest $request): Operations\GetAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\GetAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -361,9 +354,8 @@ class Accounting
      * @return Operations\GetAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingContact(
-        ?Operations\GetAccountingContactRequest $request,
-    ): Operations\GetAccountingContactResponse {
+    public function getAccountingContact(Operations\GetAccountingContactRequest $request): Operations\GetAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', Operations\GetAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -405,9 +397,8 @@ class Accounting
      * @return Operations\GetAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingInvoice(
-        ?Operations\GetAccountingInvoiceRequest $request,
-    ): Operations\GetAccountingInvoiceResponse {
+    public function getAccountingInvoice(Operations\GetAccountingInvoiceRequest $request): Operations\GetAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\GetAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -449,9 +440,8 @@ class Accounting
      * @return Operations\GetAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingJournal(
-        ?Operations\GetAccountingJournalRequest $request,
-    ): Operations\GetAccountingJournalResponse {
+    public function getAccountingJournal(Operations\GetAccountingJournalRequest $request): Operations\GetAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', Operations\GetAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -493,9 +483,8 @@ class Accounting
      * @return Operations\GetAccountingOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingOrganization(
-        ?Operations\GetAccountingOrganizationRequest $request,
-    ): Operations\GetAccountingOrganizationResponse {
+    public function getAccountingOrganization(Operations\GetAccountingOrganizationRequest $request): Operations\GetAccountingOrganizationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/organization/{id}', Operations\GetAccountingOrganizationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -537,9 +526,8 @@ class Accounting
      * @return Operations\GetAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingTaxrate(
-        ?Operations\GetAccountingTaxrateRequest $request,
-    ): Operations\GetAccountingTaxrateResponse {
+    public function getAccountingTaxrate(Operations\GetAccountingTaxrateRequest $request): Operations\GetAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\GetAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -581,9 +569,8 @@ class Accounting
      * @return Operations\GetAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingTransaction(
-        ?Operations\GetAccountingTransactionRequest $request,
-    ): Operations\GetAccountingTransactionResponse {
+    public function getAccountingTransaction(Operations\GetAccountingTransactionRequest $request): Operations\GetAccountingTransactionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\GetAccountingTransactionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -625,9 +612,8 @@ class Accounting
      * @return Operations\ListAccountingAccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingAccounts(
-        ?Operations\ListAccountingAccountsRequest $request,
-    ): Operations\ListAccountingAccountsResponse {
+    public function listAccountingAccounts(Operations\ListAccountingAccountsRequest $request): Operations\ListAccountingAccountsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account', Operations\ListAccountingAccountsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -669,9 +655,8 @@ class Accounting
      * @return Operations\ListAccountingContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingContacts(
-        ?Operations\ListAccountingContactsRequest $request,
-    ): Operations\ListAccountingContactsResponse {
+    public function listAccountingContacts(Operations\ListAccountingContactsRequest $request): Operations\ListAccountingContactsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact', Operations\ListAccountingContactsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -713,9 +698,8 @@ class Accounting
      * @return Operations\ListAccountingInvoicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingInvoices(
-        ?Operations\ListAccountingInvoicesRequest $request,
-    ): Operations\ListAccountingInvoicesResponse {
+    public function listAccountingInvoices(Operations\ListAccountingInvoicesRequest $request): Operations\ListAccountingInvoicesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice', Operations\ListAccountingInvoicesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -757,9 +741,8 @@ class Accounting
      * @return Operations\ListAccountingJournalsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingJournals(
-        ?Operations\ListAccountingJournalsRequest $request,
-    ): Operations\ListAccountingJournalsResponse {
+    public function listAccountingJournals(Operations\ListAccountingJournalsRequest $request): Operations\ListAccountingJournalsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal', Operations\ListAccountingJournalsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -801,9 +784,8 @@ class Accounting
      * @return Operations\ListAccountingOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingOrganizations(
-        ?Operations\ListAccountingOrganizationsRequest $request,
-    ): Operations\ListAccountingOrganizationsResponse {
+    public function listAccountingOrganizations(Operations\ListAccountingOrganizationsRequest $request): Operations\ListAccountingOrganizationsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/organization', Operations\ListAccountingOrganizationsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -845,9 +827,8 @@ class Accounting
      * @return Operations\ListAccountingTaxratesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingTaxrates(
-        ?Operations\ListAccountingTaxratesRequest $request,
-    ): Operations\ListAccountingTaxratesResponse {
+    public function listAccountingTaxrates(Operations\ListAccountingTaxratesRequest $request): Operations\ListAccountingTaxratesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', Operations\ListAccountingTaxratesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -889,9 +870,8 @@ class Accounting
      * @return Operations\ListAccountingTransactionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingTransactions(
-        ?Operations\ListAccountingTransactionsRequest $request,
-    ): Operations\ListAccountingTransactionsResponse {
+    public function listAccountingTransactions(Operations\ListAccountingTransactionsRequest $request): Operations\ListAccountingTransactionsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction', Operations\ListAccountingTransactionsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -933,9 +913,8 @@ class Accounting
      * @return Operations\PatchAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingAccount(
-        ?Operations\PatchAccountingAccountRequest $request,
-    ): Operations\PatchAccountingAccountResponse {
+    public function patchAccountingAccount(Operations\PatchAccountingAccountRequest $request): Operations\PatchAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\PatchAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -981,9 +960,8 @@ class Accounting
      * @return Operations\PatchAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingContact(
-        ?Operations\PatchAccountingContactRequest $request,
-    ): Operations\PatchAccountingContactResponse {
+    public function patchAccountingContact(Operations\PatchAccountingContactRequest $request): Operations\PatchAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', Operations\PatchAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1029,9 +1007,8 @@ class Accounting
      * @return Operations\PatchAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingInvoice(
-        ?Operations\PatchAccountingInvoiceRequest $request,
-    ): Operations\PatchAccountingInvoiceResponse {
+    public function patchAccountingInvoice(Operations\PatchAccountingInvoiceRequest $request): Operations\PatchAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\PatchAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1077,9 +1054,8 @@ class Accounting
      * @return Operations\PatchAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingJournal(
-        ?Operations\PatchAccountingJournalRequest $request,
-    ): Operations\PatchAccountingJournalResponse {
+    public function patchAccountingJournal(Operations\PatchAccountingJournalRequest $request): Operations\PatchAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', Operations\PatchAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1125,9 +1101,8 @@ class Accounting
      * @return Operations\PatchAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingTaxrate(
-        ?Operations\PatchAccountingTaxrateRequest $request,
-    ): Operations\PatchAccountingTaxrateResponse {
+    public function patchAccountingTaxrate(Operations\PatchAccountingTaxrateRequest $request): Operations\PatchAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\PatchAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1173,9 +1148,8 @@ class Accounting
      * @return Operations\PatchAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingTransaction(
-        ?Operations\PatchAccountingTransactionRequest $request,
-    ): Operations\PatchAccountingTransactionResponse {
+    public function patchAccountingTransaction(Operations\PatchAccountingTransactionRequest $request): Operations\PatchAccountingTransactionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\PatchAccountingTransactionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1221,9 +1195,8 @@ class Accounting
      * @return Operations\RemoveAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingAccount(
-        ?Operations\RemoveAccountingAccountRequest $request,
-    ): Operations\RemoveAccountingAccountResponse {
+    public function removeAccountingAccount(Operations\RemoveAccountingAccountRequest $request): Operations\RemoveAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\RemoveAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1254,9 +1227,8 @@ class Accounting
      * @return Operations\RemoveAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingContact(
-        ?Operations\RemoveAccountingContactRequest $request,
-    ): Operations\RemoveAccountingContactResponse {
+    public function removeAccountingContact(Operations\RemoveAccountingContactRequest $request): Operations\RemoveAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', Operations\RemoveAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1287,9 +1259,8 @@ class Accounting
      * @return Operations\RemoveAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingInvoice(
-        ?Operations\RemoveAccountingInvoiceRequest $request,
-    ): Operations\RemoveAccountingInvoiceResponse {
+    public function removeAccountingInvoice(Operations\RemoveAccountingInvoiceRequest $request): Operations\RemoveAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\RemoveAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1320,9 +1291,8 @@ class Accounting
      * @return Operations\RemoveAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingJournal(
-        ?Operations\RemoveAccountingJournalRequest $request,
-    ): Operations\RemoveAccountingJournalResponse {
+    public function removeAccountingJournal(Operations\RemoveAccountingJournalRequest $request): Operations\RemoveAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', Operations\RemoveAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1353,9 +1323,8 @@ class Accounting
      * @return Operations\RemoveAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingTaxrate(
-        ?Operations\RemoveAccountingTaxrateRequest $request,
-    ): Operations\RemoveAccountingTaxrateResponse {
+    public function removeAccountingTaxrate(Operations\RemoveAccountingTaxrateRequest $request): Operations\RemoveAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\RemoveAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1386,9 +1355,8 @@ class Accounting
      * @return Operations\RemoveAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingTransaction(
-        ?Operations\RemoveAccountingTransactionRequest $request,
-    ): Operations\RemoveAccountingTransactionResponse {
+    public function removeAccountingTransaction(Operations\RemoveAccountingTransactionRequest $request): Operations\RemoveAccountingTransactionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\RemoveAccountingTransactionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1419,9 +1387,8 @@ class Accounting
      * @return Operations\UpdateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingAccount(
-        ?Operations\UpdateAccountingAccountRequest $request,
-    ): Operations\UpdateAccountingAccountResponse {
+    public function updateAccountingAccount(Operations\UpdateAccountingAccountRequest $request): Operations\UpdateAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\UpdateAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1467,9 +1434,8 @@ class Accounting
      * @return Operations\UpdateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingContact(
-        ?Operations\UpdateAccountingContactRequest $request,
-    ): Operations\UpdateAccountingContactResponse {
+    public function updateAccountingContact(Operations\UpdateAccountingContactRequest $request): Operations\UpdateAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', Operations\UpdateAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1515,9 +1481,8 @@ class Accounting
      * @return Operations\UpdateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingInvoice(
-        ?Operations\UpdateAccountingInvoiceRequest $request,
-    ): Operations\UpdateAccountingInvoiceResponse {
+    public function updateAccountingInvoice(Operations\UpdateAccountingInvoiceRequest $request): Operations\UpdateAccountingInvoiceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\UpdateAccountingInvoiceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1563,9 +1528,8 @@ class Accounting
      * @return Operations\UpdateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingJournal(
-        ?Operations\UpdateAccountingJournalRequest $request,
-    ): Operations\UpdateAccountingJournalResponse {
+    public function updateAccountingJournal(Operations\UpdateAccountingJournalRequest $request): Operations\UpdateAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', Operations\UpdateAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1611,9 +1575,8 @@ class Accounting
      * @return Operations\UpdateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingTaxrate(
-        ?Operations\UpdateAccountingTaxrateRequest $request,
-    ): Operations\UpdateAccountingTaxrateResponse {
+    public function updateAccountingTaxrate(Operations\UpdateAccountingTaxrateRequest $request): Operations\UpdateAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\UpdateAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1659,9 +1622,8 @@ class Accounting
      * @return Operations\UpdateAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingTransaction(
-        ?Operations\UpdateAccountingTransactionRequest $request,
-    ): Operations\UpdateAccountingTransactionResponse {
+    public function updateAccountingTransaction(Operations\UpdateAccountingTransactionRequest $request): Operations\UpdateAccountingTransactionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\UpdateAccountingTransactionRequest::class, $request);
         $options = ['http_errors' => false];

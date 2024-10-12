@@ -25,13 +25,12 @@ class Issue
     /**
      * List support issues
      *
-     * @param  Operations\ListUnifiedIssuesRequest  $request
+     * @param  ?Operations\ListUnifiedIssuesRequest  $request
      * @return Operations\ListUnifiedIssuesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedIssues(
-        ?Operations\ListUnifiedIssuesRequest $request,
-    ): Operations\ListUnifiedIssuesResponse {
+    public function listUnifiedIssues(?Operations\ListUnifiedIssuesRequest $request = null): Operations\ListUnifiedIssuesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/issue');
         $options = ['http_errors' => false];
