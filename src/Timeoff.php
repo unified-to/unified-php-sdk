@@ -29,9 +29,8 @@ class Timeoff
      * @return Operations\GetHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisTimeoff(
-        ?Operations\GetHrisTimeoffRequest $request,
-    ): Operations\GetHrisTimeoffResponse {
+    public function getHrisTimeoff(Operations\GetHrisTimeoffRequest $request): Operations\GetHrisTimeoffResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\GetHrisTimeoffRequest::class, $request);
         $options = ['http_errors' => false];
@@ -73,9 +72,8 @@ class Timeoff
      * @return Operations\ListHrisTimeoffsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisTimeoffs(
-        ?Operations\ListHrisTimeoffsRequest $request,
-    ): Operations\ListHrisTimeoffsResponse {
+    public function listHrisTimeoffs(Operations\ListHrisTimeoffsRequest $request): Operations\ListHrisTimeoffsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff', Operations\ListHrisTimeoffsRequest::class, $request);
         $options = ['http_errors' => false];

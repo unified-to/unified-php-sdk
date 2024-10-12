@@ -29,9 +29,8 @@ class Uc
      * @return Operations\CreateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUcContact(
-        ?Operations\CreateUcContactRequest $request,
-    ): Operations\CreateUcContactResponse {
+    public function createUcContact(Operations\CreateUcContactRequest $request): Operations\CreateUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', Operations\CreateUcContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Uc
      * @return Operations\GetUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcContact(
-        ?Operations\GetUcContactRequest $request,
-    ): Operations\GetUcContactResponse {
+    public function getUcContact(Operations\GetUcContactRequest $request): Operations\GetUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\GetUcContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Uc
      * @return Operations\ListUcCallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcCalls(
-        ?Operations\ListUcCallsRequest $request,
-    ): Operations\ListUcCallsResponse {
+    public function listUcCalls(Operations\ListUcCallsRequest $request): Operations\ListUcCallsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', Operations\ListUcCallsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Uc
      * @return Operations\ListUcContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcContacts(
-        ?Operations\ListUcContactsRequest $request,
-    ): Operations\ListUcContactsResponse {
+    public function listUcContacts(Operations\ListUcContactsRequest $request): Operations\ListUcContactsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', Operations\ListUcContactsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -209,9 +205,8 @@ class Uc
      * @return Operations\PatchUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUcContact(
-        ?Operations\PatchUcContactRequest $request,
-    ): Operations\PatchUcContactResponse {
+    public function patchUcContact(Operations\PatchUcContactRequest $request): Operations\PatchUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\PatchUcContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -257,9 +252,8 @@ class Uc
      * @return Operations\RemoveUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUcContact(
-        ?Operations\RemoveUcContactRequest $request,
-    ): Operations\RemoveUcContactResponse {
+    public function removeUcContact(Operations\RemoveUcContactRequest $request): Operations\RemoveUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\RemoveUcContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -290,9 +284,8 @@ class Uc
      * @return Operations\UpdateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUcContact(
-        ?Operations\UpdateUcContactRequest $request,
-    ): Operations\UpdateUcContactResponse {
+    public function updateUcContact(Operations\UpdateUcContactRequest $request): Operations\UpdateUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\UpdateUcContactRequest::class, $request);
         $options = ['http_errors' => false];

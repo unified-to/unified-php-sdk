@@ -29,9 +29,8 @@ class Payment
      * @return Operations\CreatePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createPaymentLink(
-        ?Operations\CreatePaymentLinkRequest $request,
-    ): Operations\CreatePaymentLinkResponse {
+    public function createPaymentLink(Operations\CreatePaymentLinkRequest $request): Operations\CreatePaymentLinkResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link', Operations\CreatePaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Payment
      * @return Operations\CreatePaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createPaymentPayment(
-        ?Operations\CreatePaymentPaymentRequest $request,
-    ): Operations\CreatePaymentPaymentResponse {
+    public function createPaymentPayment(Operations\CreatePaymentPaymentRequest $request): Operations\CreatePaymentPaymentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payment', Operations\CreatePaymentPaymentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Payment
      * @return Operations\GetPaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getPaymentLink(
-        ?Operations\GetPaymentLinkRequest $request,
-    ): Operations\GetPaymentLinkResponse {
+    public function getPaymentLink(Operations\GetPaymentLinkRequest $request): Operations\GetPaymentLinkResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', Operations\GetPaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
@@ -169,9 +166,8 @@ class Payment
      * @return Operations\GetPaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getPaymentPayment(
-        ?Operations\GetPaymentPaymentRequest $request,
-    ): Operations\GetPaymentPaymentResponse {
+    public function getPaymentPayment(Operations\GetPaymentPaymentRequest $request): Operations\GetPaymentPaymentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payment/{id}', Operations\GetPaymentPaymentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Payment
      * @return Operations\GetPaymentPayoutResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getPaymentPayout(
-        ?Operations\GetPaymentPayoutRequest $request,
-    ): Operations\GetPaymentPayoutResponse {
+    public function getPaymentPayout(Operations\GetPaymentPayoutRequest $request): Operations\GetPaymentPayoutResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout/{id}', Operations\GetPaymentPayoutRequest::class, $request);
         $options = ['http_errors' => false];
@@ -257,9 +252,8 @@ class Payment
      * @return Operations\GetPaymentRefundResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getPaymentRefund(
-        ?Operations\GetPaymentRefundRequest $request,
-    ): Operations\GetPaymentRefundResponse {
+    public function getPaymentRefund(Operations\GetPaymentRefundRequest $request): Operations\GetPaymentRefundResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund/{id}', Operations\GetPaymentRefundRequest::class, $request);
         $options = ['http_errors' => false];
@@ -301,9 +295,8 @@ class Payment
      * @return Operations\ListPaymentLinksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPaymentLinks(
-        ?Operations\ListPaymentLinksRequest $request,
-    ): Operations\ListPaymentLinksResponse {
+    public function listPaymentLinks(Operations\ListPaymentLinksRequest $request): Operations\ListPaymentLinksResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link', Operations\ListPaymentLinksRequest::class, $request);
         $options = ['http_errors' => false];
@@ -345,9 +338,8 @@ class Payment
      * @return Operations\ListPaymentPaymentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPaymentPayments(
-        ?Operations\ListPaymentPaymentsRequest $request,
-    ): Operations\ListPaymentPaymentsResponse {
+    public function listPaymentPayments(Operations\ListPaymentPaymentsRequest $request): Operations\ListPaymentPaymentsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payment', Operations\ListPaymentPaymentsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -389,9 +381,8 @@ class Payment
      * @return Operations\ListPaymentPayoutsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPaymentPayouts(
-        ?Operations\ListPaymentPayoutsRequest $request,
-    ): Operations\ListPaymentPayoutsResponse {
+    public function listPaymentPayouts(Operations\ListPaymentPayoutsRequest $request): Operations\ListPaymentPayoutsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout', Operations\ListPaymentPayoutsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -433,9 +424,8 @@ class Payment
      * @return Operations\ListPaymentRefundsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPaymentRefunds(
-        ?Operations\ListPaymentRefundsRequest $request,
-    ): Operations\ListPaymentRefundsResponse {
+    public function listPaymentRefunds(Operations\ListPaymentRefundsRequest $request): Operations\ListPaymentRefundsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund', Operations\ListPaymentRefundsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -477,9 +467,8 @@ class Payment
      * @return Operations\PatchPaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchPaymentLink(
-        ?Operations\PatchPaymentLinkRequest $request,
-    ): Operations\PatchPaymentLinkResponse {
+    public function patchPaymentLink(Operations\PatchPaymentLinkRequest $request): Operations\PatchPaymentLinkResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', Operations\PatchPaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
@@ -525,9 +514,8 @@ class Payment
      * @return Operations\PatchPaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchPaymentPayment(
-        ?Operations\PatchPaymentPaymentRequest $request,
-    ): Operations\PatchPaymentPaymentResponse {
+    public function patchPaymentPayment(Operations\PatchPaymentPaymentRequest $request): Operations\PatchPaymentPaymentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payment/{id}', Operations\PatchPaymentPaymentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -573,9 +561,8 @@ class Payment
      * @return Operations\RemovePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removePaymentLink(
-        ?Operations\RemovePaymentLinkRequest $request,
-    ): Operations\RemovePaymentLinkResponse {
+    public function removePaymentLink(Operations\RemovePaymentLinkRequest $request): Operations\RemovePaymentLinkResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', Operations\RemovePaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
@@ -606,9 +593,8 @@ class Payment
      * @return Operations\RemovePaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removePaymentPayment(
-        ?Operations\RemovePaymentPaymentRequest $request,
-    ): Operations\RemovePaymentPaymentResponse {
+    public function removePaymentPayment(Operations\RemovePaymentPaymentRequest $request): Operations\RemovePaymentPaymentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payment/{id}', Operations\RemovePaymentPaymentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -639,9 +625,8 @@ class Payment
      * @return Operations\UpdatePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updatePaymentLink(
-        ?Operations\UpdatePaymentLinkRequest $request,
-    ): Operations\UpdatePaymentLinkResponse {
+    public function updatePaymentLink(Operations\UpdatePaymentLinkRequest $request): Operations\UpdatePaymentLinkResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/link/{id}', Operations\UpdatePaymentLinkRequest::class, $request);
         $options = ['http_errors' => false];
@@ -687,9 +672,8 @@ class Payment
      * @return Operations\UpdatePaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updatePaymentPayment(
-        ?Operations\UpdatePaymentPaymentRequest $request,
-    ): Operations\UpdatePaymentPaymentResponse {
+    public function updatePaymentPayment(Operations\UpdatePaymentPaymentRequest $request): Operations\UpdatePaymentPaymentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payment/{id}', Operations\UpdatePaymentPaymentRequest::class, $request);
         $options = ['http_errors' => false];

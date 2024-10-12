@@ -29,9 +29,8 @@ class Account
      * @return Operations\CreateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingAccount(
-        ?Operations\CreateAccountingAccountRequest $request,
-    ): Operations\CreateAccountingAccountResponse {
+    public function createAccountingAccount(Operations\CreateAccountingAccountRequest $request): Operations\CreateAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account', Operations\CreateAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Account
      * @return Operations\GetAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingAccount(
-        ?Operations\GetAccountingAccountRequest $request,
-    ): Operations\GetAccountingAccountResponse {
+    public function getAccountingAccount(Operations\GetAccountingAccountRequest $request): Operations\GetAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\GetAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Account
      * @return Operations\ListAccountingAccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingAccounts(
-        ?Operations\ListAccountingAccountsRequest $request,
-    ): Operations\ListAccountingAccountsResponse {
+    public function listAccountingAccounts(Operations\ListAccountingAccountsRequest $request): Operations\ListAccountingAccountsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account', Operations\ListAccountingAccountsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Account
      * @return Operations\PatchAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingAccount(
-        ?Operations\PatchAccountingAccountRequest $request,
-    ): Operations\PatchAccountingAccountResponse {
+    public function patchAccountingAccount(Operations\PatchAccountingAccountRequest $request): Operations\PatchAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\PatchAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Account
      * @return Operations\RemoveAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingAccount(
-        ?Operations\RemoveAccountingAccountRequest $request,
-    ): Operations\RemoveAccountingAccountResponse {
+    public function removeAccountingAccount(Operations\RemoveAccountingAccountRequest $request): Operations\RemoveAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\RemoveAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Account
      * @return Operations\UpdateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingAccount(
-        ?Operations\UpdateAccountingAccountRequest $request,
-    ): Operations\UpdateAccountingAccountResponse {
+    public function updateAccountingAccount(Operations\UpdateAccountingAccountRequest $request): Operations\UpdateAccountingAccountResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\UpdateAccountingAccountRequest::class, $request);
         $options = ['http_errors' => false];

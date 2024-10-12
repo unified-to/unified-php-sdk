@@ -28,6 +28,16 @@ class AccountingTransaction
     public ?string $contactId = null;
 
     /**
+     * $contacts
+     *
+     * @var ?array<AccountingTransactionContact> $contacts
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('contacts')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTransactionContact>|null')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?array $contacts = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -162,6 +172,7 @@ class AccountingTransaction
     /**
      * @param  ?string  $accountId
      * @param  ?string  $contactId
+     * @param  ?array<AccountingTransactionContact>  $contacts
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $customerMessage
@@ -179,10 +190,11 @@ class AccountingTransaction
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(?string $accountId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->contactId = $contactId;
+        $this->contacts = $contacts;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->customerMessage = $customerMessage;

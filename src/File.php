@@ -29,9 +29,8 @@ class File
      * @return Operations\CreateStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createStorageFile(
-        ?Operations\CreateStorageFileRequest $request,
-    ): Operations\CreateStorageFileResponse {
+    public function createStorageFile(Operations\CreateStorageFileRequest $request): Operations\CreateStorageFileResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file', Operations\CreateStorageFileRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class File
      * @return Operations\GetStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getStorageFile(
-        ?Operations\GetStorageFileRequest $request,
-    ): Operations\GetStorageFileResponse {
+    public function getStorageFile(Operations\GetStorageFileRequest $request): Operations\GetStorageFileResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\GetStorageFileRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class File
      * @return Operations\ListStorageFilesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listStorageFiles(
-        ?Operations\ListStorageFilesRequest $request,
-    ): Operations\ListStorageFilesResponse {
+    public function listStorageFiles(Operations\ListStorageFilesRequest $request): Operations\ListStorageFilesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file', Operations\ListStorageFilesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class File
      * @return Operations\PatchStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchStorageFile(
-        ?Operations\PatchStorageFileRequest $request,
-    ): Operations\PatchStorageFileResponse {
+    public function patchStorageFile(Operations\PatchStorageFileRequest $request): Operations\PatchStorageFileResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\PatchStorageFileRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class File
      * @return Operations\RemoveStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeStorageFile(
-        ?Operations\RemoveStorageFileRequest $request,
-    ): Operations\RemoveStorageFileResponse {
+    public function removeStorageFile(Operations\RemoveStorageFileRequest $request): Operations\RemoveStorageFileResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\RemoveStorageFileRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class File
      * @return Operations\UpdateStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateStorageFile(
-        ?Operations\UpdateStorageFileRequest $request,
-    ): Operations\UpdateStorageFileResponse {
+    public function updateStorageFile(Operations\UpdateStorageFileRequest $request): Operations\UpdateStorageFileResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\UpdateStorageFileRequest::class, $request);
         $options = ['http_errors' => false];

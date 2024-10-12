@@ -28,13 +28,12 @@ class Connection
      *
      * Used only to import existing customer credentials; use "Create connection indirectly" instead
      *
-     * @param  Shared\Connection  $request
+     * @param  ?Shared\Connection  $request
      * @return Operations\CreateUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUnifiedConnection(
-        ?Shared\Connection $request,
-    ): Operations\CreateUnifiedConnectionResponse {
+    public function createUnifiedConnection(?Shared\Connection $request = null): Operations\CreateUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
         $options = ['http_errors' => false];
@@ -79,9 +78,8 @@ class Connection
      * @return Operations\GetUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedConnection(
-        ?Operations\GetUnifiedConnectionRequest $request,
-    ): Operations\GetUnifiedConnectionResponse {
+    public function getUnifiedConnection(Operations\GetUnifiedConnectionRequest $request): Operations\GetUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\GetUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -118,13 +116,12 @@ class Connection
     /**
      * List all connections
      *
-     * @param  Operations\ListUnifiedConnectionsRequest  $request
+     * @param  ?Operations\ListUnifiedConnectionsRequest  $request
      * @return Operations\ListUnifiedConnectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedConnections(
-        ?Operations\ListUnifiedConnectionsRequest $request,
-    ): Operations\ListUnifiedConnectionsResponse {
+    public function listUnifiedConnections(?Operations\ListUnifiedConnectionsRequest $request = null): Operations\ListUnifiedConnectionsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection');
         $options = ['http_errors' => false];
@@ -166,9 +163,8 @@ class Connection
      * @return Operations\PatchUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUnifiedConnection(
-        ?Operations\PatchUnifiedConnectionRequest $request,
-    ): Operations\PatchUnifiedConnectionResponse {
+    public function patchUnifiedConnection(Operations\PatchUnifiedConnectionRequest $request): Operations\PatchUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\PatchUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Connection
      * @return Operations\RemoveUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUnifiedConnection(
-        ?Operations\RemoveUnifiedConnectionRequest $request,
-    ): Operations\RemoveUnifiedConnectionResponse {
+    public function removeUnifiedConnection(Operations\RemoveUnifiedConnectionRequest $request): Operations\RemoveUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\RemoveUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Connection
      * @return Operations\UpdateUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUnifiedConnection(
-        ?Operations\UpdateUnifiedConnectionRequest $request,
-    ): Operations\UpdateUnifiedConnectionResponse {
+    public function updateUnifiedConnection(Operations\UpdateUnifiedConnectionRequest $request): Operations\UpdateUnifiedConnectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/connection/{id}', Operations\UpdateUnifiedConnectionRequest::class, $request);
         $options = ['http_errors' => false];

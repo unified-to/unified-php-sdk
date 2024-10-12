@@ -29,9 +29,8 @@ class Taxrate
      * @return Operations\CreateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingTaxrate(
-        ?Operations\CreateAccountingTaxrateRequest $request,
-    ): Operations\CreateAccountingTaxrateResponse {
+    public function createAccountingTaxrate(Operations\CreateAccountingTaxrateRequest $request): Operations\CreateAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', Operations\CreateAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Taxrate
      * @return Operations\GetAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingTaxrate(
-        ?Operations\GetAccountingTaxrateRequest $request,
-    ): Operations\GetAccountingTaxrateResponse {
+    public function getAccountingTaxrate(Operations\GetAccountingTaxrateRequest $request): Operations\GetAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\GetAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Taxrate
      * @return Operations\ListAccountingTaxratesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingTaxrates(
-        ?Operations\ListAccountingTaxratesRequest $request,
-    ): Operations\ListAccountingTaxratesResponse {
+    public function listAccountingTaxrates(Operations\ListAccountingTaxratesRequest $request): Operations\ListAccountingTaxratesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', Operations\ListAccountingTaxratesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Taxrate
      * @return Operations\PatchAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingTaxrate(
-        ?Operations\PatchAccountingTaxrateRequest $request,
-    ): Operations\PatchAccountingTaxrateResponse {
+    public function patchAccountingTaxrate(Operations\PatchAccountingTaxrateRequest $request): Operations\PatchAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\PatchAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Taxrate
      * @return Operations\RemoveAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingTaxrate(
-        ?Operations\RemoveAccountingTaxrateRequest $request,
-    ): Operations\RemoveAccountingTaxrateResponse {
+    public function removeAccountingTaxrate(Operations\RemoveAccountingTaxrateRequest $request): Operations\RemoveAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\RemoveAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Taxrate
      * @return Operations\UpdateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingTaxrate(
-        ?Operations\UpdateAccountingTaxrateRequest $request,
-    ): Operations\UpdateAccountingTaxrateResponse {
+    public function updateAccountingTaxrate(Operations\UpdateAccountingTaxrateRequest $request): Operations\UpdateAccountingTaxrateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\UpdateAccountingTaxrateRequest::class, $request);
         $options = ['http_errors' => false];

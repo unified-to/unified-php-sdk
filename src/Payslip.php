@@ -29,9 +29,8 @@ class Payslip
      * @return Operations\GetHrisPayslipResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisPayslip(
-        ?Operations\GetHrisPayslipRequest $request,
-    ): Operations\GetHrisPayslipResponse {
+    public function getHrisPayslip(Operations\GetHrisPayslipRequest $request): Operations\GetHrisPayslipResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip/{id}', Operations\GetHrisPayslipRequest::class, $request);
         $options = ['http_errors' => false];
@@ -73,9 +72,8 @@ class Payslip
      * @return Operations\ListHrisPayslipsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisPayslips(
-        ?Operations\ListHrisPayslipsRequest $request,
-    ): Operations\ListHrisPayslipsResponse {
+    public function listHrisPayslips(Operations\ListHrisPayslipsRequest $request): Operations\ListHrisPayslipsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip', Operations\ListHrisPayslipsRequest::class, $request);
         $options = ['http_errors' => false];

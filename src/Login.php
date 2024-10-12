@@ -30,9 +30,8 @@ class Login
      * @return Operations\GetUnifiedIntegrationLoginResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedIntegrationLogin(
-        ?Operations\GetUnifiedIntegrationLoginRequest $request,
-    ): Operations\GetUnifiedIntegrationLoginResponse {
+    public function getUnifiedIntegrationLogin(Operations\GetUnifiedIntegrationLoginRequest $request): Operations\GetUnifiedIntegrationLoginResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/login/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationLoginRequest::class, $request);
         $options = ['http_errors' => false];

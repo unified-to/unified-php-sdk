@@ -29,9 +29,8 @@ class Candidate
      * @return Operations\CreateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsCandidate(
-        ?Operations\CreateAtsCandidateRequest $request,
-    ): Operations\CreateAtsCandidateResponse {
+    public function createAtsCandidate(Operations\CreateAtsCandidateRequest $request): Operations\CreateAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate', Operations\CreateAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Candidate
      * @return Operations\GetAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsCandidate(
-        ?Operations\GetAtsCandidateRequest $request,
-    ): Operations\GetAtsCandidateResponse {
+    public function getAtsCandidate(Operations\GetAtsCandidateRequest $request): Operations\GetAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', Operations\GetAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Candidate
      * @return Operations\ListAtsCandidatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsCandidates(
-        ?Operations\ListAtsCandidatesRequest $request,
-    ): Operations\ListAtsCandidatesResponse {
+    public function listAtsCandidates(Operations\ListAtsCandidatesRequest $request): Operations\ListAtsCandidatesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate', Operations\ListAtsCandidatesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Candidate
      * @return Operations\PatchAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsCandidate(
-        ?Operations\PatchAtsCandidateRequest $request,
-    ): Operations\PatchAtsCandidateResponse {
+    public function patchAtsCandidate(Operations\PatchAtsCandidateRequest $request): Operations\PatchAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', Operations\PatchAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Candidate
      * @return Operations\RemoveAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsCandidate(
-        ?Operations\RemoveAtsCandidateRequest $request,
-    ): Operations\RemoveAtsCandidateResponse {
+    public function removeAtsCandidate(Operations\RemoveAtsCandidateRequest $request): Operations\RemoveAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', Operations\RemoveAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Candidate
      * @return Operations\UpdateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsCandidate(
-        ?Operations\UpdateAtsCandidateRequest $request,
-    ): Operations\UpdateAtsCandidateResponse {
+    public function updateAtsCandidate(Operations\UpdateAtsCandidateRequest $request): Operations\UpdateAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', Operations\UpdateAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
