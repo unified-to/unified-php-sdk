@@ -66,4 +66,6 @@ enum ObjectType: string
     case KmsPage = 'kms_page';
     case TaskProject = 'task_project';
     case TaskTask = 'task_task';
+    case ScimUsers = 'scim_users';
+    case ScimGroups = 'scim_groups';
 }

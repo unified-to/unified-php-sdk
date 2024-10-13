@@ -29,9 +29,8 @@ class Pipeline
      * @return Operations\CreateCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmPipeline(
-        ?Operations\CreateCrmPipelineRequest $request,
-    ): Operations\CreateCrmPipelineResponse {
+    public function createCrmPipeline(Operations\CreateCrmPipelineRequest $request): Operations\CreateCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', Operations\CreateCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Pipeline
      * @return Operations\GetCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmPipeline(
-        ?Operations\GetCrmPipelineRequest $request,
-    ): Operations\GetCrmPipelineResponse {
+    public function getCrmPipeline(Operations\GetCrmPipelineRequest $request): Operations\GetCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\GetCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Pipeline
      * @return Operations\ListCrmPipelinesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmPipelines(
-        ?Operations\ListCrmPipelinesRequest $request,
-    ): Operations\ListCrmPipelinesResponse {
+    public function listCrmPipelines(Operations\ListCrmPipelinesRequest $request): Operations\ListCrmPipelinesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', Operations\ListCrmPipelinesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Pipeline
      * @return Operations\PatchCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmPipeline(
-        ?Operations\PatchCrmPipelineRequest $request,
-    ): Operations\PatchCrmPipelineResponse {
+    public function patchCrmPipeline(Operations\PatchCrmPipelineRequest $request): Operations\PatchCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\PatchCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Pipeline
      * @return Operations\RemoveCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmPipeline(
-        ?Operations\RemoveCrmPipelineRequest $request,
-    ): Operations\RemoveCrmPipelineResponse {
+    public function removeCrmPipeline(Operations\RemoveCrmPipelineRequest $request): Operations\RemoveCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\RemoveCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Pipeline
      * @return Operations\UpdateCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmPipeline(
-        ?Operations\UpdateCrmPipelineRequest $request,
-    ): Operations\UpdateCrmPipelineResponse {
+    public function updateCrmPipeline(Operations\UpdateCrmPipelineRequest $request): Operations\UpdateCrmPipelineResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\UpdateCrmPipelineRequest::class, $request);
         $options = ['http_errors' => false];

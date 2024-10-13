@@ -29,9 +29,8 @@ class Ats
      * @return Operations\CreateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsActivity(
-        ?Operations\CreateAtsActivityRequest $request,
-    ): Operations\CreateAtsActivityResponse {
+    public function createAtsActivity(Operations\CreateAtsActivityRequest $request): Operations\CreateAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity', Operations\CreateAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Ats
      * @return Operations\CreateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsApplication(
-        ?Operations\CreateAtsApplicationRequest $request,
-    ): Operations\CreateAtsApplicationResponse {
+    public function createAtsApplication(Operations\CreateAtsApplicationRequest $request): Operations\CreateAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', Operations\CreateAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Ats
      * @return Operations\CreateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsCandidate(
-        ?Operations\CreateAtsCandidateRequest $request,
-    ): Operations\CreateAtsCandidateResponse {
+    public function createAtsCandidate(Operations\CreateAtsCandidateRequest $request): Operations\CreateAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate', Operations\CreateAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -173,9 +170,8 @@ class Ats
      * @return Operations\CreateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsDocument(
-        ?Operations\CreateAtsDocumentRequest $request,
-    ): Operations\CreateAtsDocumentResponse {
+    public function createAtsDocument(Operations\CreateAtsDocumentRequest $request): Operations\CreateAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', Operations\CreateAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -221,9 +217,8 @@ class Ats
      * @return Operations\CreateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsInterview(
-        ?Operations\CreateAtsInterviewRequest $request,
-    ): Operations\CreateAtsInterviewResponse {
+    public function createAtsInterview(Operations\CreateAtsInterviewRequest $request): Operations\CreateAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', Operations\CreateAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -269,9 +264,8 @@ class Ats
      * @return Operations\CreateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsJob(
-        ?Operations\CreateAtsJobRequest $request,
-    ): Operations\CreateAtsJobResponse {
+    public function createAtsJob(Operations\CreateAtsJobRequest $request): Operations\CreateAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', Operations\CreateAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -317,9 +311,8 @@ class Ats
      * @return Operations\CreateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsScorecard(
-        ?Operations\CreateAtsScorecardRequest $request,
-    ): Operations\CreateAtsScorecardResponse {
+    public function createAtsScorecard(Operations\CreateAtsScorecardRequest $request): Operations\CreateAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', Operations\CreateAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];
@@ -365,9 +358,8 @@ class Ats
      * @return Operations\GetAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsActivity(
-        ?Operations\GetAtsActivityRequest $request,
-    ): Operations\GetAtsActivityResponse {
+    public function getAtsActivity(Operations\GetAtsActivityRequest $request): Operations\GetAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', Operations\GetAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -409,9 +401,8 @@ class Ats
      * @return Operations\GetAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsApplication(
-        ?Operations\GetAtsApplicationRequest $request,
-    ): Operations\GetAtsApplicationResponse {
+    public function getAtsApplication(Operations\GetAtsApplicationRequest $request): Operations\GetAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\GetAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -453,9 +444,8 @@ class Ats
      * @return Operations\GetAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsCandidate(
-        ?Operations\GetAtsCandidateRequest $request,
-    ): Operations\GetAtsCandidateResponse {
+    public function getAtsCandidate(Operations\GetAtsCandidateRequest $request): Operations\GetAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', Operations\GetAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -497,9 +487,8 @@ class Ats
      * @return Operations\GetAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsCompany(
-        ?Operations\GetAtsCompanyRequest $request,
-    ): Operations\GetAtsCompanyResponse {
+    public function getAtsCompany(Operations\GetAtsCompanyRequest $request): Operations\GetAtsCompanyResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\GetAtsCompanyRequest::class, $request);
         $options = ['http_errors' => false];
@@ -541,9 +530,8 @@ class Ats
      * @return Operations\GetAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsDocument(
-        ?Operations\GetAtsDocumentRequest $request,
-    ): Operations\GetAtsDocumentResponse {
+    public function getAtsDocument(Operations\GetAtsDocumentRequest $request): Operations\GetAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\GetAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -585,9 +573,8 @@ class Ats
      * @return Operations\GetAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsInterview(
-        ?Operations\GetAtsInterviewRequest $request,
-    ): Operations\GetAtsInterviewResponse {
+    public function getAtsInterview(Operations\GetAtsInterviewRequest $request): Operations\GetAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\GetAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -629,9 +616,8 @@ class Ats
      * @return Operations\GetAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsJob(
-        ?Operations\GetAtsJobRequest $request,
-    ): Operations\GetAtsJobResponse {
+    public function getAtsJob(Operations\GetAtsJobRequest $request): Operations\GetAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\GetAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -673,9 +659,8 @@ class Ats
      * @return Operations\GetAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsScorecard(
-        ?Operations\GetAtsScorecardRequest $request,
-    ): Operations\GetAtsScorecardResponse {
+    public function getAtsScorecard(Operations\GetAtsScorecardRequest $request): Operations\GetAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\GetAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];
@@ -717,9 +702,8 @@ class Ats
      * @return Operations\ListAtsActivitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsActivities(
-        ?Operations\ListAtsActivitiesRequest $request,
-    ): Operations\ListAtsActivitiesResponse {
+    public function listAtsActivities(Operations\ListAtsActivitiesRequest $request): Operations\ListAtsActivitiesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity', Operations\ListAtsActivitiesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -761,9 +745,8 @@ class Ats
      * @return Operations\ListAtsApplicationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsApplications(
-        ?Operations\ListAtsApplicationsRequest $request,
-    ): Operations\ListAtsApplicationsResponse {
+    public function listAtsApplications(Operations\ListAtsApplicationsRequest $request): Operations\ListAtsApplicationsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', Operations\ListAtsApplicationsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -805,9 +788,8 @@ class Ats
      * @return Operations\ListAtsApplicationstatusesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsApplicationstatuses(
-        ?Operations\ListAtsApplicationstatusesRequest $request,
-    ): Operations\ListAtsApplicationstatusesResponse {
+    public function listAtsApplicationstatuses(Operations\ListAtsApplicationstatusesRequest $request): Operations\ListAtsApplicationstatusesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/applicationstatus', Operations\ListAtsApplicationstatusesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -849,9 +831,8 @@ class Ats
      * @return Operations\ListAtsCandidatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsCandidates(
-        ?Operations\ListAtsCandidatesRequest $request,
-    ): Operations\ListAtsCandidatesResponse {
+    public function listAtsCandidates(Operations\ListAtsCandidatesRequest $request): Operations\ListAtsCandidatesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate', Operations\ListAtsCandidatesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -893,9 +874,8 @@ class Ats
      * @return Operations\ListAtsCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsCompanies(
-        ?Operations\ListAtsCompaniesRequest $request,
-    ): Operations\ListAtsCompaniesResponse {
+    public function listAtsCompanies(Operations\ListAtsCompaniesRequest $request): Operations\ListAtsCompaniesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company', Operations\ListAtsCompaniesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -937,9 +917,8 @@ class Ats
      * @return Operations\ListAtsDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsDocuments(
-        ?Operations\ListAtsDocumentsRequest $request,
-    ): Operations\ListAtsDocumentsResponse {
+    public function listAtsDocuments(Operations\ListAtsDocumentsRequest $request): Operations\ListAtsDocumentsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', Operations\ListAtsDocumentsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -981,9 +960,8 @@ class Ats
      * @return Operations\ListAtsInterviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsInterviews(
-        ?Operations\ListAtsInterviewsRequest $request,
-    ): Operations\ListAtsInterviewsResponse {
+    public function listAtsInterviews(Operations\ListAtsInterviewsRequest $request): Operations\ListAtsInterviewsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', Operations\ListAtsInterviewsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1025,9 +1003,8 @@ class Ats
      * @return Operations\ListAtsJobsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsJobs(
-        ?Operations\ListAtsJobsRequest $request,
-    ): Operations\ListAtsJobsResponse {
+    public function listAtsJobs(Operations\ListAtsJobsRequest $request): Operations\ListAtsJobsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job', Operations\ListAtsJobsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1069,9 +1046,8 @@ class Ats
      * @return Operations\ListAtsScorecardsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsScorecards(
-        ?Operations\ListAtsScorecardsRequest $request,
-    ): Operations\ListAtsScorecardsResponse {
+    public function listAtsScorecards(Operations\ListAtsScorecardsRequest $request): Operations\ListAtsScorecardsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', Operations\ListAtsScorecardsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1113,9 +1089,8 @@ class Ats
      * @return Operations\PatchAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsActivity(
-        ?Operations\PatchAtsActivityRequest $request,
-    ): Operations\PatchAtsActivityResponse {
+    public function patchAtsActivity(Operations\PatchAtsActivityRequest $request): Operations\PatchAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', Operations\PatchAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1161,9 +1136,8 @@ class Ats
      * @return Operations\PatchAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsApplication(
-        ?Operations\PatchAtsApplicationRequest $request,
-    ): Operations\PatchAtsApplicationResponse {
+    public function patchAtsApplication(Operations\PatchAtsApplicationRequest $request): Operations\PatchAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\PatchAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1209,9 +1183,8 @@ class Ats
      * @return Operations\PatchAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsCandidate(
-        ?Operations\PatchAtsCandidateRequest $request,
-    ): Operations\PatchAtsCandidateResponse {
+    public function patchAtsCandidate(Operations\PatchAtsCandidateRequest $request): Operations\PatchAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', Operations\PatchAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1257,9 +1230,8 @@ class Ats
      * @return Operations\PatchAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsDocument(
-        ?Operations\PatchAtsDocumentRequest $request,
-    ): Operations\PatchAtsDocumentResponse {
+    public function patchAtsDocument(Operations\PatchAtsDocumentRequest $request): Operations\PatchAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\PatchAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1305,9 +1277,8 @@ class Ats
      * @return Operations\PatchAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsInterview(
-        ?Operations\PatchAtsInterviewRequest $request,
-    ): Operations\PatchAtsInterviewResponse {
+    public function patchAtsInterview(Operations\PatchAtsInterviewRequest $request): Operations\PatchAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\PatchAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1353,9 +1324,8 @@ class Ats
      * @return Operations\PatchAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsJob(
-        ?Operations\PatchAtsJobRequest $request,
-    ): Operations\PatchAtsJobResponse {
+    public function patchAtsJob(Operations\PatchAtsJobRequest $request): Operations\PatchAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\PatchAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1401,9 +1371,8 @@ class Ats
      * @return Operations\PatchAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsScorecard(
-        ?Operations\PatchAtsScorecardRequest $request,
-    ): Operations\PatchAtsScorecardResponse {
+    public function patchAtsScorecard(Operations\PatchAtsScorecardRequest $request): Operations\PatchAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\PatchAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1449,9 +1418,8 @@ class Ats
      * @return Operations\RemoveAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsActivity(
-        ?Operations\RemoveAtsActivityRequest $request,
-    ): Operations\RemoveAtsActivityResponse {
+    public function removeAtsActivity(Operations\RemoveAtsActivityRequest $request): Operations\RemoveAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', Operations\RemoveAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1482,9 +1450,8 @@ class Ats
      * @return Operations\RemoveAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsApplication(
-        ?Operations\RemoveAtsApplicationRequest $request,
-    ): Operations\RemoveAtsApplicationResponse {
+    public function removeAtsApplication(Operations\RemoveAtsApplicationRequest $request): Operations\RemoveAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\RemoveAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1515,9 +1482,8 @@ class Ats
      * @return Operations\RemoveAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsCandidate(
-        ?Operations\RemoveAtsCandidateRequest $request,
-    ): Operations\RemoveAtsCandidateResponse {
+    public function removeAtsCandidate(Operations\RemoveAtsCandidateRequest $request): Operations\RemoveAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', Operations\RemoveAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1548,9 +1514,8 @@ class Ats
      * @return Operations\RemoveAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsDocument(
-        ?Operations\RemoveAtsDocumentRequest $request,
-    ): Operations\RemoveAtsDocumentResponse {
+    public function removeAtsDocument(Operations\RemoveAtsDocumentRequest $request): Operations\RemoveAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\RemoveAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1581,9 +1546,8 @@ class Ats
      * @return Operations\RemoveAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsInterview(
-        ?Operations\RemoveAtsInterviewRequest $request,
-    ): Operations\RemoveAtsInterviewResponse {
+    public function removeAtsInterview(Operations\RemoveAtsInterviewRequest $request): Operations\RemoveAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\RemoveAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1614,9 +1578,8 @@ class Ats
      * @return Operations\RemoveAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsJob(
-        ?Operations\RemoveAtsJobRequest $request,
-    ): Operations\RemoveAtsJobResponse {
+    public function removeAtsJob(Operations\RemoveAtsJobRequest $request): Operations\RemoveAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\RemoveAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1647,9 +1610,8 @@ class Ats
      * @return Operations\RemoveAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsScorecard(
-        ?Operations\RemoveAtsScorecardRequest $request,
-    ): Operations\RemoveAtsScorecardResponse {
+    public function removeAtsScorecard(Operations\RemoveAtsScorecardRequest $request): Operations\RemoveAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\RemoveAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1680,9 +1642,8 @@ class Ats
      * @return Operations\UpdateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsActivity(
-        ?Operations\UpdateAtsActivityRequest $request,
-    ): Operations\UpdateAtsActivityResponse {
+    public function updateAtsActivity(Operations\UpdateAtsActivityRequest $request): Operations\UpdateAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', Operations\UpdateAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1728,9 +1689,8 @@ class Ats
      * @return Operations\UpdateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsApplication(
-        ?Operations\UpdateAtsApplicationRequest $request,
-    ): Operations\UpdateAtsApplicationResponse {
+    public function updateAtsApplication(Operations\UpdateAtsApplicationRequest $request): Operations\UpdateAtsApplicationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\UpdateAtsApplicationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1776,9 +1736,8 @@ class Ats
      * @return Operations\UpdateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsCandidate(
-        ?Operations\UpdateAtsCandidateRequest $request,
-    ): Operations\UpdateAtsCandidateResponse {
+    public function updateAtsCandidate(Operations\UpdateAtsCandidateRequest $request): Operations\UpdateAtsCandidateResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/candidate/{id}', Operations\UpdateAtsCandidateRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1824,9 +1783,8 @@ class Ats
      * @return Operations\UpdateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsDocument(
-        ?Operations\UpdateAtsDocumentRequest $request,
-    ): Operations\UpdateAtsDocumentResponse {
+    public function updateAtsDocument(Operations\UpdateAtsDocumentRequest $request): Operations\UpdateAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\UpdateAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1872,9 +1830,8 @@ class Ats
      * @return Operations\UpdateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsInterview(
-        ?Operations\UpdateAtsInterviewRequest $request,
-    ): Operations\UpdateAtsInterviewResponse {
+    public function updateAtsInterview(Operations\UpdateAtsInterviewRequest $request): Operations\UpdateAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\UpdateAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1920,9 +1877,8 @@ class Ats
      * @return Operations\UpdateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsJob(
-        ?Operations\UpdateAtsJobRequest $request,
-    ): Operations\UpdateAtsJobResponse {
+    public function updateAtsJob(Operations\UpdateAtsJobRequest $request): Operations\UpdateAtsJobResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/job/{id}', Operations\UpdateAtsJobRequest::class, $request);
         $options = ['http_errors' => false];
@@ -1968,9 +1924,8 @@ class Ats
      * @return Operations\UpdateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsScorecard(
-        ?Operations\UpdateAtsScorecardRequest $request,
-    ): Operations\UpdateAtsScorecardResponse {
+    public function updateAtsScorecard(Operations\UpdateAtsScorecardRequest $request): Operations\UpdateAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\UpdateAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];

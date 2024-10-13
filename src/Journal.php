@@ -29,9 +29,8 @@ class Journal
      * @return Operations\CreateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingJournal(
-        ?Operations\CreateAccountingJournalRequest $request,
-    ): Operations\CreateAccountingJournalResponse {
+    public function createAccountingJournal(Operations\CreateAccountingJournalRequest $request): Operations\CreateAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal', Operations\CreateAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Journal
      * @return Operations\GetAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingJournal(
-        ?Operations\GetAccountingJournalRequest $request,
-    ): Operations\GetAccountingJournalResponse {
+    public function getAccountingJournal(Operations\GetAccountingJournalRequest $request): Operations\GetAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', Operations\GetAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Journal
      * @return Operations\ListAccountingJournalsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingJournals(
-        ?Operations\ListAccountingJournalsRequest $request,
-    ): Operations\ListAccountingJournalsResponse {
+    public function listAccountingJournals(Operations\ListAccountingJournalsRequest $request): Operations\ListAccountingJournalsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal', Operations\ListAccountingJournalsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Journal
      * @return Operations\PatchAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingJournal(
-        ?Operations\PatchAccountingJournalRequest $request,
-    ): Operations\PatchAccountingJournalResponse {
+    public function patchAccountingJournal(Operations\PatchAccountingJournalRequest $request): Operations\PatchAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', Operations\PatchAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Journal
      * @return Operations\RemoveAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingJournal(
-        ?Operations\RemoveAccountingJournalRequest $request,
-    ): Operations\RemoveAccountingJournalResponse {
+    public function removeAccountingJournal(Operations\RemoveAccountingJournalRequest $request): Operations\RemoveAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', Operations\RemoveAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Journal
      * @return Operations\UpdateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingJournal(
-        ?Operations\UpdateAccountingJournalRequest $request,
-    ): Operations\UpdateAccountingJournalResponse {
+    public function updateAccountingJournal(Operations\UpdateAccountingJournalRequest $request): Operations\UpdateAccountingJournalResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/journal/{id}', Operations\UpdateAccountingJournalRequest::class, $request);
         $options = ['http_errors' => false];

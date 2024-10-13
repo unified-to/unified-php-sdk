@@ -124,6 +124,10 @@ class UnifiedTo
 
     public Refund $refund;
 
+    public Scim $scim;
+
+    public User $user;
+
     public Storage $storage;
 
     public File $file;
@@ -228,6 +232,8 @@ class UnifiedTo
         $this->link = new Link($this->sdkConfiguration);
         $this->payout = new Payout($this->sdkConfiguration);
         $this->refund = new Refund($this->sdkConfiguration);
+        $this->scim = new Scim($this->sdkConfiguration);
+        $this->user = new User($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);

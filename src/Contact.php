@@ -29,9 +29,8 @@ class Contact
      * @return Operations\CreateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingContact(
-        ?Operations\CreateAccountingContactRequest $request,
-    ): Operations\CreateAccountingContactResponse {
+    public function createAccountingContact(Operations\CreateAccountingContactRequest $request): Operations\CreateAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact', Operations\CreateAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Contact
      * @return Operations\CreateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmContact(
-        ?Operations\CreateCrmContactRequest $request,
-    ): Operations\CreateCrmContactResponse {
+    public function createCrmContact(Operations\CreateCrmContactRequest $request): Operations\CreateCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact', Operations\CreateCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Contact
      * @return Operations\CreateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUcContact(
-        ?Operations\CreateUcContactRequest $request,
-    ): Operations\CreateUcContactResponse {
+    public function createUcContact(Operations\CreateUcContactRequest $request): Operations\CreateUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', Operations\CreateUcContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -173,9 +170,8 @@ class Contact
      * @return Operations\GetAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingContact(
-        ?Operations\GetAccountingContactRequest $request,
-    ): Operations\GetAccountingContactResponse {
+    public function getAccountingContact(Operations\GetAccountingContactRequest $request): Operations\GetAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', Operations\GetAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -217,9 +213,8 @@ class Contact
      * @return Operations\GetCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmContact(
-        ?Operations\GetCrmContactRequest $request,
-    ): Operations\GetCrmContactResponse {
+    public function getCrmContact(Operations\GetCrmContactRequest $request): Operations\GetCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\GetCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -261,9 +256,8 @@ class Contact
      * @return Operations\GetUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcContact(
-        ?Operations\GetUcContactRequest $request,
-    ): Operations\GetUcContactResponse {
+    public function getUcContact(Operations\GetUcContactRequest $request): Operations\GetUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\GetUcContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -305,9 +299,8 @@ class Contact
      * @return Operations\ListAccountingContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingContacts(
-        ?Operations\ListAccountingContactsRequest $request,
-    ): Operations\ListAccountingContactsResponse {
+    public function listAccountingContacts(Operations\ListAccountingContactsRequest $request): Operations\ListAccountingContactsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact', Operations\ListAccountingContactsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -349,9 +342,8 @@ class Contact
      * @return Operations\ListCrmContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmContacts(
-        ?Operations\ListCrmContactsRequest $request,
-    ): Operations\ListCrmContactsResponse {
+    public function listCrmContacts(Operations\ListCrmContactsRequest $request): Operations\ListCrmContactsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact', Operations\ListCrmContactsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -393,9 +385,8 @@ class Contact
      * @return Operations\ListUcContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcContacts(
-        ?Operations\ListUcContactsRequest $request,
-    ): Operations\ListUcContactsResponse {
+    public function listUcContacts(Operations\ListUcContactsRequest $request): Operations\ListUcContactsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', Operations\ListUcContactsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -437,9 +428,8 @@ class Contact
      * @return Operations\PatchAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingContact(
-        ?Operations\PatchAccountingContactRequest $request,
-    ): Operations\PatchAccountingContactResponse {
+    public function patchAccountingContact(Operations\PatchAccountingContactRequest $request): Operations\PatchAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', Operations\PatchAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -485,9 +475,8 @@ class Contact
      * @return Operations\PatchCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmContact(
-        ?Operations\PatchCrmContactRequest $request,
-    ): Operations\PatchCrmContactResponse {
+    public function patchCrmContact(Operations\PatchCrmContactRequest $request): Operations\PatchCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\PatchCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -533,9 +522,8 @@ class Contact
      * @return Operations\PatchUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUcContact(
-        ?Operations\PatchUcContactRequest $request,
-    ): Operations\PatchUcContactResponse {
+    public function patchUcContact(Operations\PatchUcContactRequest $request): Operations\PatchUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\PatchUcContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -581,9 +569,8 @@ class Contact
      * @return Operations\RemoveAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingContact(
-        ?Operations\RemoveAccountingContactRequest $request,
-    ): Operations\RemoveAccountingContactResponse {
+    public function removeAccountingContact(Operations\RemoveAccountingContactRequest $request): Operations\RemoveAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', Operations\RemoveAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -614,9 +601,8 @@ class Contact
      * @return Operations\RemoveCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmContact(
-        ?Operations\RemoveCrmContactRequest $request,
-    ): Operations\RemoveCrmContactResponse {
+    public function removeCrmContact(Operations\RemoveCrmContactRequest $request): Operations\RemoveCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\RemoveCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -647,9 +633,8 @@ class Contact
      * @return Operations\RemoveUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUcContact(
-        ?Operations\RemoveUcContactRequest $request,
-    ): Operations\RemoveUcContactResponse {
+    public function removeUcContact(Operations\RemoveUcContactRequest $request): Operations\RemoveUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\RemoveUcContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -680,9 +665,8 @@ class Contact
      * @return Operations\UpdateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingContact(
-        ?Operations\UpdateAccountingContactRequest $request,
-    ): Operations\UpdateAccountingContactResponse {
+    public function updateAccountingContact(Operations\UpdateAccountingContactRequest $request): Operations\UpdateAccountingContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/contact/{id}', Operations\UpdateAccountingContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -728,9 +712,8 @@ class Contact
      * @return Operations\UpdateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmContact(
-        ?Operations\UpdateCrmContactRequest $request,
-    ): Operations\UpdateCrmContactResponse {
+    public function updateCrmContact(Operations\UpdateCrmContactRequest $request): Operations\UpdateCrmContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\UpdateCrmContactRequest::class, $request);
         $options = ['http_errors' => false];
@@ -776,9 +759,8 @@ class Contact
      * @return Operations\UpdateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUcContact(
-        ?Operations\UpdateUcContactRequest $request,
-    ): Operations\UpdateUcContactResponse {
+    public function updateUcContact(Operations\UpdateUcContactRequest $request): Operations\UpdateUcContactResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\UpdateUcContactRequest::class, $request);
         $options = ['http_errors' => false];

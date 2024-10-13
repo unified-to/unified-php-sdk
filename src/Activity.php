@@ -29,9 +29,8 @@ class Activity
      * @return Operations\CreateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsActivity(
-        ?Operations\CreateAtsActivityRequest $request,
-    ): Operations\CreateAtsActivityResponse {
+    public function createAtsActivity(Operations\CreateAtsActivityRequest $request): Operations\CreateAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity', Operations\CreateAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Activity
      * @return Operations\GetAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsActivity(
-        ?Operations\GetAtsActivityRequest $request,
-    ): Operations\GetAtsActivityResponse {
+    public function getAtsActivity(Operations\GetAtsActivityRequest $request): Operations\GetAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', Operations\GetAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Activity
      * @return Operations\ListAtsActivitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsActivities(
-        ?Operations\ListAtsActivitiesRequest $request,
-    ): Operations\ListAtsActivitiesResponse {
+    public function listAtsActivities(Operations\ListAtsActivitiesRequest $request): Operations\ListAtsActivitiesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity', Operations\ListAtsActivitiesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Activity
      * @return Operations\PatchAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsActivity(
-        ?Operations\PatchAtsActivityRequest $request,
-    ): Operations\PatchAtsActivityResponse {
+    public function patchAtsActivity(Operations\PatchAtsActivityRequest $request): Operations\PatchAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', Operations\PatchAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Activity
      * @return Operations\RemoveAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsActivity(
-        ?Operations\RemoveAtsActivityRequest $request,
-    ): Operations\RemoveAtsActivityResponse {
+    public function removeAtsActivity(Operations\RemoveAtsActivityRequest $request): Operations\RemoveAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', Operations\RemoveAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Activity
      * @return Operations\UpdateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsActivity(
-        ?Operations\UpdateAtsActivityRequest $request,
-    ): Operations\UpdateAtsActivityResponse {
+    public function updateAtsActivity(Operations\UpdateAtsActivityRequest $request): Operations\UpdateAtsActivityResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/activity/{id}', Operations\UpdateAtsActivityRequest::class, $request);
         $options = ['http_errors' => false];

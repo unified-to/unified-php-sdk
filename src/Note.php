@@ -29,9 +29,8 @@ class Note
      * @return Operations\CreateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTicketingNote(
-        ?Operations\CreateTicketingNoteRequest $request,
-    ): Operations\CreateTicketingNoteResponse {
+    public function createTicketingNote(Operations\CreateTicketingNoteRequest $request): Operations\CreateTicketingNoteResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', Operations\CreateTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Note
      * @return Operations\GetTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTicketingNote(
-        ?Operations\GetTicketingNoteRequest $request,
-    ): Operations\GetTicketingNoteResponse {
+    public function getTicketingNote(Operations\GetTicketingNoteRequest $request): Operations\GetTicketingNoteResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\GetTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Note
      * @return Operations\ListTicketingNotesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTicketingNotes(
-        ?Operations\ListTicketingNotesRequest $request,
-    ): Operations\ListTicketingNotesResponse {
+    public function listTicketingNotes(Operations\ListTicketingNotesRequest $request): Operations\ListTicketingNotesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', Operations\ListTicketingNotesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Note
      * @return Operations\PatchTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTicketingNote(
-        ?Operations\PatchTicketingNoteRequest $request,
-    ): Operations\PatchTicketingNoteResponse {
+    public function patchTicketingNote(Operations\PatchTicketingNoteRequest $request): Operations\PatchTicketingNoteResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\PatchTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Note
      * @return Operations\RemoveTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTicketingNote(
-        ?Operations\RemoveTicketingNoteRequest $request,
-    ): Operations\RemoveTicketingNoteResponse {
+    public function removeTicketingNote(Operations\RemoveTicketingNoteRequest $request): Operations\RemoveTicketingNoteResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\RemoveTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Note
      * @return Operations\UpdateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTicketingNote(
-        ?Operations\UpdateTicketingNoteRequest $request,
-    ): Operations\UpdateTicketingNoteResponse {
+    public function updateTicketingNote(Operations\UpdateTicketingNoteRequest $request): Operations\UpdateTicketingNoteResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\UpdateTicketingNoteRequest::class, $request);
         $options = ['http_errors' => false];
