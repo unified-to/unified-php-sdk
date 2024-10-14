@@ -390,11 +390,16 @@ if ($response->accountingAccount !== null) {
 ### [group](docs/sdks/group/README.md)
 
 * [createHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
+* [createScimGroups](docs/sdks/group/README.md#createscimgroups) - Create group
 * [getHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
 * [listHrisGroups](docs/sdks/group/README.md#listhrisgroups) - List all groups
+* [listScimGroups](docs/sdks/group/README.md#listscimgroups) - List groups
 * [patchHrisGroup](docs/sdks/group/README.md#patchhrisgroup) - Update a group
+* [patchScimGroups](docs/sdks/group/README.md#patchscimgroups) - Update group
 * [removeHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
+* [removeScimGroups](docs/sdks/group/README.md#removescimgroups) - Delete group
 * [updateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
+* [updateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
 
 ### [hris](docs/sdks/hris/README.md)
 
@@ -694,6 +699,20 @@ if ($response->accountingAccount !== null) {
 * [getPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
 * [listPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
 
+### [scim](docs/sdks/scim/README.md)
+
+* [createScimGroups](docs/sdks/scim/README.md#createscimgroups) - Create group
+* [createScimUsers](docs/sdks/scim/README.md#createscimusers) - Create user
+* [getScimUsers](docs/sdks/scim/README.md#getscimusers) - Get user
+* [listScimGroups](docs/sdks/scim/README.md#listscimgroups) - List groups
+* [listScimUsers](docs/sdks/scim/README.md#listscimusers) - List users
+* [patchScimGroups](docs/sdks/scim/README.md#patchscimgroups) - Update group
+* [patchScimUsers](docs/sdks/scim/README.md#patchscimusers) - Update user
+* [removeScimGroups](docs/sdks/scim/README.md#removescimgroups) - Delete group
+* [removeScimUsers](docs/sdks/scim/README.md#removescimusers) - Delete user
+* [updateScimGroups](docs/sdks/scim/README.md#updatescimgroups) - Update group
+* [updateScimUsers](docs/sdks/scim/README.md#updatescimusers) - Update user
+
 ### [scorecard](docs/sdks/scorecard/README.md)
 
 * [createAtsScorecard](docs/sdks/scorecard/README.md#createatsscorecard) - Create a scorecard
@@ -822,6 +841,15 @@ if ($response->accountingAccount !== null) {
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
+
+### [user](docs/sdks/user/README.md)
+
+* [createScimUsers](docs/sdks/user/README.md#createscimusers) - Create user
+* [getScimUsers](docs/sdks/user/README.md#getscimusers) - Get user
+* [listScimUsers](docs/sdks/user/README.md#listscimusers) - List users
+* [patchScimUsers](docs/sdks/user/README.md#patchscimusers) - Update user
+* [removeScimUsers](docs/sdks/user/README.md#removescimusers) - Delete user
+* [updateScimUsers](docs/sdks/user/README.md#updatescimusers) - Update user
 
 ### [webhook](docs/sdks/webhook/README.md)
 

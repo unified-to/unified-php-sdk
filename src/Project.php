@@ -29,9 +29,8 @@ class Project
      * @return Operations\CreateTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTaskProject(
-        ?Operations\CreateTaskProjectRequest $request,
-    ): Operations\CreateTaskProjectResponse {
+    public function createTaskProject(Operations\CreateTaskProjectRequest $request): Operations\CreateTaskProjectResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', Operations\CreateTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Project
      * @return Operations\GetTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTaskProject(
-        ?Operations\GetTaskProjectRequest $request,
-    ): Operations\GetTaskProjectResponse {
+    public function getTaskProject(Operations\GetTaskProjectRequest $request): Operations\GetTaskProjectResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\GetTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Project
      * @return Operations\ListTaskProjectsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTaskProjects(
-        ?Operations\ListTaskProjectsRequest $request,
-    ): Operations\ListTaskProjectsResponse {
+    public function listTaskProjects(Operations\ListTaskProjectsRequest $request): Operations\ListTaskProjectsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', Operations\ListTaskProjectsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Project
      * @return Operations\PatchTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTaskProject(
-        ?Operations\PatchTaskProjectRequest $request,
-    ): Operations\PatchTaskProjectResponse {
+    public function patchTaskProject(Operations\PatchTaskProjectRequest $request): Operations\PatchTaskProjectResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\PatchTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Project
      * @return Operations\RemoveTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTaskProject(
-        ?Operations\RemoveTaskProjectRequest $request,
-    ): Operations\RemoveTaskProjectResponse {
+    public function removeTaskProject(Operations\RemoveTaskProjectRequest $request): Operations\RemoveTaskProjectResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\RemoveTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Project
      * @return Operations\UpdateTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTaskProject(
-        ?Operations\UpdateTaskProjectRequest $request,
-    ): Operations\UpdateTaskProjectResponse {
+    public function updateTaskProject(Operations\UpdateTaskProjectRequest $request): Operations\UpdateTaskProjectResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\UpdateTaskProjectRequest::class, $request);
         $options = ['http_errors' => false];

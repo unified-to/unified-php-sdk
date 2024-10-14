@@ -1,22 +1,24 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3c4e8a5e234e6444307aef536fd547bd
+  docChecksum: 2f8b1ad907e9f06fa5885ee0f6d0b4ad
   docVersion: "1.0"
-  speakeasyVersion: 1.405.6
-  generationVersion: 2.428.1
-  releaseVersion: 0.17.5
-  configChecksum: 3e430765a954e0642709f139425f7dd5
+  speakeasyVersion: 1.418.2
+  generationVersion: 2.438.3
+  releaseVersion: 0.18.0
+  configChecksum: 538966d73709b89a592eeed3399b2d67
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 features:
   php:
-    core: 3.4.9
+    constsAndDefaults: 0.2.0
+    core: 3.5.0
     globalSecurity: 2.81.7
     globalSecurityFlattening: 0.1.1
     globalServerURLs: 2.82.1
+    methodArguments: 0.1.0
     responseFormat: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -99,6 +101,10 @@ generatedFiles:
   - docs/Models/Operations/CreatePaymentLinkResponse.md
   - docs/Models/Operations/CreatePaymentPaymentRequest.md
   - docs/Models/Operations/CreatePaymentPaymentResponse.md
+  - docs/Models/Operations/CreateScimGroupsRequest.md
+  - docs/Models/Operations/CreateScimGroupsResponse.md
+  - docs/Models/Operations/CreateScimUsersRequest.md
+  - docs/Models/Operations/CreateScimUsersResponse.md
   - docs/Models/Operations/CreateStorageFileRequest.md
   - docs/Models/Operations/CreateStorageFileResponse.md
   - docs/Models/Operations/CreateTaskProjectRequest.md
@@ -198,6 +204,8 @@ generatedFiles:
   - docs/Models/Operations/GetPaymentPayoutResponse.md
   - docs/Models/Operations/GetPaymentRefundRequest.md
   - docs/Models/Operations/GetPaymentRefundResponse.md
+  - docs/Models/Operations/GetScimUsersRequest.md
+  - docs/Models/Operations/GetScimUsersResponse.md
   - docs/Models/Operations/GetStorageFileRequest.md
   - docs/Models/Operations/GetStorageFileResponse.md
   - docs/Models/Operations/GetTaskProjectRequest.md
@@ -315,6 +323,10 @@ generatedFiles:
   - docs/Models/Operations/ListPaymentPayoutsResponse.md
   - docs/Models/Operations/ListPaymentRefundsRequest.md
   - docs/Models/Operations/ListPaymentRefundsResponse.md
+  - docs/Models/Operations/ListScimGroupsRequest.md
+  - docs/Models/Operations/ListScimGroupsResponse.md
+  - docs/Models/Operations/ListScimUsersRequest.md
+  - docs/Models/Operations/ListScimUsersResponse.md
   - docs/Models/Operations/ListStorageFilesRequest.md
   - docs/Models/Operations/ListStorageFilesResponse.md
   - docs/Models/Operations/ListTaskProjectsRequest.md
@@ -416,6 +428,10 @@ generatedFiles:
   - docs/Models/Operations/PatchPaymentLinkResponse.md
   - docs/Models/Operations/PatchPaymentPaymentRequest.md
   - docs/Models/Operations/PatchPaymentPaymentResponse.md
+  - docs/Models/Operations/PatchScimGroupsRequest.md
+  - docs/Models/Operations/PatchScimGroupsResponse.md
+  - docs/Models/Operations/PatchScimUsersRequest.md
+  - docs/Models/Operations/PatchScimUsersResponse.md
   - docs/Models/Operations/PatchStorageFileRequest.md
   - docs/Models/Operations/PatchStorageFileResponse.md
   - docs/Models/Operations/PatchTaskProjectRequest.md
@@ -507,6 +523,10 @@ generatedFiles:
   - docs/Models/Operations/RemovePaymentLinkResponse.md
   - docs/Models/Operations/RemovePaymentPaymentRequest.md
   - docs/Models/Operations/RemovePaymentPaymentResponse.md
+  - docs/Models/Operations/RemoveScimGroupsRequest.md
+  - docs/Models/Operations/RemoveScimGroupsResponse.md
+  - docs/Models/Operations/RemoveScimUsersRequest.md
+  - docs/Models/Operations/RemoveScimUsersResponse.md
   - docs/Models/Operations/RemoveStorageFileRequest.md
   - docs/Models/Operations/RemoveStorageFileResponse.md
   - docs/Models/Operations/RemoveTaskProjectRequest.md
@@ -598,6 +618,10 @@ generatedFiles:
   - docs/Models/Operations/UpdatePaymentLinkResponse.md
   - docs/Models/Operations/UpdatePaymentPaymentRequest.md
   - docs/Models/Operations/UpdatePaymentPaymentResponse.md
+  - docs/Models/Operations/UpdateScimGroupsRequest.md
+  - docs/Models/Operations/UpdateScimGroupsResponse.md
+  - docs/Models/Operations/UpdateScimUsersRequest.md
+  - docs/Models/Operations/UpdateScimUsersResponse.md
   - docs/Models/Operations/UpdateStorageFileRequest.md
   - docs/Models/Operations/UpdateStorageFileResponse.md
   - docs/Models/Operations/UpdateTaskProjectRequest.md
@@ -634,6 +658,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingTelephone.md
   - docs/Models/Shared/AccountingTelephoneType.md
   - docs/Models/Shared/AccountingTransaction.md
+  - docs/Models/Shared/AccountingTransactionContact.md
   - docs/Models/Shared/AccountingTransactionLineItem.md
   - docs/Models/Shared/ApiCall.md
   - docs/Models/Shared/ApiCallType.md
@@ -697,6 +722,7 @@ generatedFiles:
   - docs/Models/Shared/EnrichPersonWorkHistory.md
   - docs/Models/Shared/EnrichTelephone.md
   - docs/Models/Shared/EnrichTelephoneType.md
+  - docs/Models/Shared/Ethnicity.md
   - docs/Models/Shared/Event.md
   - docs/Models/Shared/Frequency.md
   - docs/Models/Shared/FromWebhook.md
@@ -704,6 +730,7 @@ generatedFiles:
   - docs/Models/Shared/GenaiModel.md
   - docs/Models/Shared/GenaiPrompt.md
   - docs/Models/Shared/Gender.md
+  - docs/Models/Shared/Group.md
   - docs/Models/Shared/HrisCompany.md
   - docs/Models/Shared/HrisCompensation.md
   - docs/Models/Shared/HrisCompensationFrequency.md
@@ -731,6 +758,7 @@ generatedFiles:
   - docs/Models/Shared/KmsPage.md
   - docs/Models/Shared/KmsPageType.md
   - docs/Models/Shared/KmsSpace.md
+  - docs/Models/Shared/Level.md
   - docs/Models/Shared/ListAccountId.md
   - docs/Models/Shared/ListApplicationId.md
   - docs/Models/Shared/ListCandidateId.md
@@ -773,6 +801,7 @@ generatedFiles:
   - docs/Models/Shared/MessagingMember.md
   - docs/Models/Shared/MessagingMessage.md
   - docs/Models/Shared/ObjectType.md
+  - docs/Models/Shared/Operation.md
   - docs/Models/Shared/Origin.md
   - docs/Models/Shared/PaymentCollectionMethod.md
   - docs/Models/Shared/PaymentLink.md
@@ -806,6 +835,8 @@ generatedFiles:
   - docs/Models/Shared/PropertyCrmLeadAddress.md
   - docs/Models/Shared/PropertyEnrichCompanyAddress.md
   - docs/Models/Shared/PropertyEnrichPersonAddress.md
+  - docs/Models/Shared/PropertyGroupMeta.md
+  - docs/Models/Shared/PropertyGroupSchemas.md
   - docs/Models/Shared/PropertyHrisCompanyAddress.md
   - docs/Models/Shared/PropertyHrisEmployeeAddress.md
   - docs/Models/Shared/PropertyHrisEmployeeEmployeeRoles.md
@@ -816,10 +847,23 @@ generatedFiles:
   - docs/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.md
   - docs/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.md
   - docs/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.md
+  - docs/Models/Shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.md
+  - docs/Models/Shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType.md
   - docs/Models/Shared/PropertyStoragePermissionRoles.md
   - docs/Models/Shared/PropertyUcCallTelephone.md
   - docs/Models/Shared/PropertyUcCallTelephoneType.md
+  - docs/Models/Shared/PropertyUserMeta.md
+  - docs/Models/Shared/PropertyUserMetaResourceType.md
+  - docs/Models/Shared/PropertyUserName.md
+  - docs/Models/Shared/PropertyUserSchemas.md
+  - docs/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User.md
+  - docs/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender.md
+  - docs/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.md
+  - docs/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender.md
+  - docs/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User.md
+  - docs/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender.md
   - docs/Models/Shared/Recommendation.md
+  - docs/Models/Shared/ResourceType.md
   - docs/Models/Shared/Role.md
   - docs/Models/Shared/SearchDomain.md
   - docs/Models/Shared/SearchEmail.md
@@ -827,6 +871,7 @@ generatedFiles:
   - docs/Models/Shared/SearchName.md
   - docs/Models/Shared/SearchTwitter.md
   - docs/Models/Shared/Security.md
+  - docs/Models/Shared/SexualOrientation.md
   - docs/Models/Shared/SizeUnit.md
   - docs/Models/Shared/Status.md
   - docs/Models/Shared/StorageFile.md
@@ -851,6 +896,9 @@ generatedFiles:
   - docs/Models/Shared/UcEmailType.md
   - docs/Models/Shared/UcTelephone.md
   - docs/Models/Shared/UcTelephoneType.md
+  - docs/Models/Shared/Undefined.md
+  - docs/Models/Shared/UndefinedType.md
+  - docs/Models/Shared/User.md
   - docs/Models/Shared/Webhook.md
   - docs/Models/Shared/WebhookType.md
   - docs/Models/Shared/WeightUnit.md
@@ -912,6 +960,7 @@ generatedFiles:
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/refund/README.md
+  - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
@@ -924,6 +973,7 @@ generatedFiles:
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
+  - docs/sdks/user/README.md
   - docs/sdks/webhook/README.md
   - phpstan.neon
   - phpunit.xml
@@ -1052,6 +1102,10 @@ generatedFiles:
   - src/Models/Operations/CreatePaymentLinkResponse.php
   - src/Models/Operations/CreatePaymentPaymentRequest.php
   - src/Models/Operations/CreatePaymentPaymentResponse.php
+  - src/Models/Operations/CreateScimGroupsRequest.php
+  - src/Models/Operations/CreateScimGroupsResponse.php
+  - src/Models/Operations/CreateScimUsersRequest.php
+  - src/Models/Operations/CreateScimUsersResponse.php
   - src/Models/Operations/CreateStorageFileRequest.php
   - src/Models/Operations/CreateStorageFileResponse.php
   - src/Models/Operations/CreateTaskProjectRequest.php
@@ -1151,6 +1205,8 @@ generatedFiles:
   - src/Models/Operations/GetPaymentPayoutResponse.php
   - src/Models/Operations/GetPaymentRefundRequest.php
   - src/Models/Operations/GetPaymentRefundResponse.php
+  - src/Models/Operations/GetScimUsersRequest.php
+  - src/Models/Operations/GetScimUsersResponse.php
   - src/Models/Operations/GetStorageFileRequest.php
   - src/Models/Operations/GetStorageFileResponse.php
   - src/Models/Operations/GetTaskProjectRequest.php
@@ -1268,6 +1324,10 @@ generatedFiles:
   - src/Models/Operations/ListPaymentPayoutsResponse.php
   - src/Models/Operations/ListPaymentRefundsRequest.php
   - src/Models/Operations/ListPaymentRefundsResponse.php
+  - src/Models/Operations/ListScimGroupsRequest.php
+  - src/Models/Operations/ListScimGroupsResponse.php
+  - src/Models/Operations/ListScimUsersRequest.php
+  - src/Models/Operations/ListScimUsersResponse.php
   - src/Models/Operations/ListStorageFilesRequest.php
   - src/Models/Operations/ListStorageFilesResponse.php
   - src/Models/Operations/ListTaskProjectsRequest.php
@@ -1369,6 +1429,10 @@ generatedFiles:
   - src/Models/Operations/PatchPaymentLinkResponse.php
   - src/Models/Operations/PatchPaymentPaymentRequest.php
   - src/Models/Operations/PatchPaymentPaymentResponse.php
+  - src/Models/Operations/PatchScimGroupsRequest.php
+  - src/Models/Operations/PatchScimGroupsResponse.php
+  - src/Models/Operations/PatchScimUsersRequest.php
+  - src/Models/Operations/PatchScimUsersResponse.php
   - src/Models/Operations/PatchStorageFileRequest.php
   - src/Models/Operations/PatchStorageFileResponse.php
   - src/Models/Operations/PatchTaskProjectRequest.php
@@ -1460,6 +1524,10 @@ generatedFiles:
   - src/Models/Operations/RemovePaymentLinkResponse.php
   - src/Models/Operations/RemovePaymentPaymentRequest.php
   - src/Models/Operations/RemovePaymentPaymentResponse.php
+  - src/Models/Operations/RemoveScimGroupsRequest.php
+  - src/Models/Operations/RemoveScimGroupsResponse.php
+  - src/Models/Operations/RemoveScimUsersRequest.php
+  - src/Models/Operations/RemoveScimUsersResponse.php
   - src/Models/Operations/RemoveStorageFileRequest.php
   - src/Models/Operations/RemoveStorageFileResponse.php
   - src/Models/Operations/RemoveTaskProjectRequest.php
@@ -1551,6 +1619,10 @@ generatedFiles:
   - src/Models/Operations/UpdatePaymentLinkResponse.php
   - src/Models/Operations/UpdatePaymentPaymentRequest.php
   - src/Models/Operations/UpdatePaymentPaymentResponse.php
+  - src/Models/Operations/UpdateScimGroupsRequest.php
+  - src/Models/Operations/UpdateScimGroupsResponse.php
+  - src/Models/Operations/UpdateScimUsersRequest.php
+  - src/Models/Operations/UpdateScimUsersResponse.php
   - src/Models/Operations/UpdateStorageFileRequest.php
   - src/Models/Operations/UpdateStorageFileResponse.php
   - src/Models/Operations/UpdateTaskProjectRequest.php
@@ -1587,6 +1659,7 @@ generatedFiles:
   - src/Models/Shared/AccountingTelephone.php
   - src/Models/Shared/AccountingTelephoneType.php
   - src/Models/Shared/AccountingTransaction.php
+  - src/Models/Shared/AccountingTransactionContact.php
   - src/Models/Shared/AccountingTransactionLineItem.php
   - src/Models/Shared/ApiCall.php
   - src/Models/Shared/ApiCallType.php
@@ -1650,6 +1723,7 @@ generatedFiles:
   - src/Models/Shared/EnrichPersonWorkHistory.php
   - src/Models/Shared/EnrichTelephone.php
   - src/Models/Shared/EnrichTelephoneType.php
+  - src/Models/Shared/Ethnicity.php
   - src/Models/Shared/Event.php
   - src/Models/Shared/Frequency.php
   - src/Models/Shared/FromWebhook.php
@@ -1657,6 +1731,7 @@ generatedFiles:
   - src/Models/Shared/GenaiModel.php
   - src/Models/Shared/GenaiPrompt.php
   - src/Models/Shared/Gender.php
+  - src/Models/Shared/Group.php
   - src/Models/Shared/HrisCompany.php
   - src/Models/Shared/HrisCompensation.php
   - src/Models/Shared/HrisCompensationFrequency.php
@@ -1684,6 +1759,7 @@ generatedFiles:
   - src/Models/Shared/KmsPage.php
   - src/Models/Shared/KmsPageType.php
   - src/Models/Shared/KmsSpace.php
+  - src/Models/Shared/Level.php
   - src/Models/Shared/ListAccountId.php
   - src/Models/Shared/ListApplicationId.php
   - src/Models/Shared/ListCandidateId.php
@@ -1726,6 +1802,7 @@ generatedFiles:
   - src/Models/Shared/MessagingMember.php
   - src/Models/Shared/MessagingMessage.php
   - src/Models/Shared/ObjectType.php
+  - src/Models/Shared/Operation.php
   - src/Models/Shared/Origin.php
   - src/Models/Shared/PaymentCollectionMethod.php
   - src/Models/Shared/PaymentLink.php
@@ -1759,6 +1836,8 @@ generatedFiles:
   - src/Models/Shared/PropertyCrmLeadAddress.php
   - src/Models/Shared/PropertyEnrichCompanyAddress.php
   - src/Models/Shared/PropertyEnrichPersonAddress.php
+  - src/Models/Shared/PropertyGroupMeta.php
+  - src/Models/Shared/PropertyGroupSchemas.php
   - src/Models/Shared/PropertyHrisCompanyAddress.php
   - src/Models/Shared/PropertyHrisEmployeeAddress.php
   - src/Models/Shared/PropertyHrisEmployeeEmployeeRoles.php
@@ -1769,10 +1848,23 @@ generatedFiles:
   - src/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.php
   - src/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.php
   - src/Models/Shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.php
+  - src/Models/Shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.php
+  - src/Models/Shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType.php
   - src/Models/Shared/PropertyStoragePermissionRoles.php
   - src/Models/Shared/PropertyUcCallTelephone.php
   - src/Models/Shared/PropertyUcCallTelephoneType.php
+  - src/Models/Shared/PropertyUserMeta.php
+  - src/Models/Shared/PropertyUserMetaResourceType.php
+  - src/Models/Shared/PropertyUserName.php
+  - src/Models/Shared/PropertyUserSchemas.php
+  - src/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User.php
+  - src/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender.php
+  - src/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.php
+  - src/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender.php
+  - src/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User.php
+  - src/Models/Shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender.php
   - src/Models/Shared/Recommendation.php
+  - src/Models/Shared/ResourceType.php
   - src/Models/Shared/Role.php
   - src/Models/Shared/SearchDomain.php
   - src/Models/Shared/SearchEmail.php
@@ -1780,6 +1872,7 @@ generatedFiles:
   - src/Models/Shared/SearchName.php
   - src/Models/Shared/SearchTwitter.php
   - src/Models/Shared/Security.php
+  - src/Models/Shared/SexualOrientation.php
   - src/Models/Shared/SizeUnit.php
   - src/Models/Shared/Status.php
   - src/Models/Shared/StorageFile.php
@@ -1804,6 +1897,9 @@ generatedFiles:
   - src/Models/Shared/UcEmailType.php
   - src/Models/Shared/UcTelephone.php
   - src/Models/Shared/UcTelephoneType.php
+  - src/Models/Shared/Undefined.php
+  - src/Models/Shared/UndefinedType.php
+  - src/Models/Shared/User.php
   - src/Models/Shared/Webhook.php
   - src/Models/Shared/WebhookType.php
   - src/Models/Shared/WeightUnit.php
@@ -1820,6 +1916,7 @@ generatedFiles:
   - src/Prompt.php
   - src/Refund.php
   - src/SDKConfiguration.php
+  - src/Scim.php
   - src/Scorecard.php
   - src/Space.php
   - src/Storage.php
@@ -1833,6 +1930,9 @@ generatedFiles:
   - src/Unified.php
   - src/UnifiedTo.php
   - src/UnifiedToBuilder.php
+  - src/User.php
+  - src/Utils/BigDecimalHandler.php
+  - src/Utils/BigIntHandler.php
   - src/Utils/DateHandler.php
   - src/Utils/DateTimeHandler.php
   - src/Utils/DefaultRequest.php
@@ -4080,3 +4180,68 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createScimGroups:
+    speakeasy-default-create-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+  listScimGroups:
+    speakeasy-default-list-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchScimGroups:
+    speakeasy-default-patch-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeScimGroups:
+    speakeasy-default-remove-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateScimGroups:
+    speakeasy-default-update-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  createScimUsers:
+    speakeasy-default-create-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getScimUsers:
+    speakeasy-default-get-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  listScimUsers:
+    speakeasy-default-list-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchScimUsers:
+    speakeasy-default-patch-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeScimUsers:
+    speakeasy-default-remove-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateScimUsers:
+    speakeasy-default-update-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"

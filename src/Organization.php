@@ -29,9 +29,8 @@ class Organization
      * @return Operations\GetAccountingOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingOrganization(
-        ?Operations\GetAccountingOrganizationRequest $request,
-    ): Operations\GetAccountingOrganizationResponse {
+    public function getAccountingOrganization(Operations\GetAccountingOrganizationRequest $request): Operations\GetAccountingOrganizationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/organization/{id}', Operations\GetAccountingOrganizationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -73,9 +72,8 @@ class Organization
      * @return Operations\ListAccountingOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingOrganizations(
-        ?Operations\ListAccountingOrganizationsRequest $request,
-    ): Operations\ListAccountingOrganizationsResponse {
+    public function listAccountingOrganizations(Operations\ListAccountingOrganizationsRequest $request): Operations\ListAccountingOrganizationsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/organization', Operations\ListAccountingOrganizationsRequest::class, $request);
         $options = ['http_errors' => false];

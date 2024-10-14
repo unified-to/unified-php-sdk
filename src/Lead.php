@@ -29,9 +29,8 @@ class Lead
      * @return Operations\CreateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmLead(
-        ?Operations\CreateCrmLeadRequest $request,
-    ): Operations\CreateCrmLeadResponse {
+    public function createCrmLead(Operations\CreateCrmLeadRequest $request): Operations\CreateCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\CreateCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Lead
      * @return Operations\GetCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmLead(
-        ?Operations\GetCrmLeadRequest $request,
-    ): Operations\GetCrmLeadResponse {
+    public function getCrmLead(Operations\GetCrmLeadRequest $request): Operations\GetCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\GetCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Lead
      * @return Operations\ListCrmLeadsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmLeads(
-        ?Operations\ListCrmLeadsRequest $request,
-    ): Operations\ListCrmLeadsResponse {
+    public function listCrmLeads(Operations\ListCrmLeadsRequest $request): Operations\ListCrmLeadsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\ListCrmLeadsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Lead
      * @return Operations\PatchCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmLead(
-        ?Operations\PatchCrmLeadRequest $request,
-    ): Operations\PatchCrmLeadResponse {
+    public function patchCrmLead(Operations\PatchCrmLeadRequest $request): Operations\PatchCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\PatchCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Lead
      * @return Operations\RemoveCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmLead(
-        ?Operations\RemoveCrmLeadRequest $request,
-    ): Operations\RemoveCrmLeadResponse {
+    public function removeCrmLead(Operations\RemoveCrmLeadRequest $request): Operations\RemoveCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\RemoveCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Lead
      * @return Operations\UpdateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmLead(
-        ?Operations\UpdateCrmLeadRequest $request,
-    ): Operations\UpdateCrmLeadResponse {
+    public function updateCrmLead(Operations\UpdateCrmLeadRequest $request): Operations\UpdateCrmLeadResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\UpdateCrmLeadRequest::class, $request);
         $options = ['http_errors' => false];

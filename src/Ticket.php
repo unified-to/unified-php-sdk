@@ -29,9 +29,8 @@ class Ticket
      * @return Operations\CreateTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTicketingTicket(
-        ?Operations\CreateTicketingTicketRequest $request,
-    ): Operations\CreateTicketingTicketResponse {
+    public function createTicketingTicket(Operations\CreateTicketingTicketRequest $request): Operations\CreateTicketingTicketResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', Operations\CreateTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Ticket
      * @return Operations\GetTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTicketingTicket(
-        ?Operations\GetTicketingTicketRequest $request,
-    ): Operations\GetTicketingTicketResponse {
+    public function getTicketingTicket(Operations\GetTicketingTicketRequest $request): Operations\GetTicketingTicketResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\GetTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Ticket
      * @return Operations\ListTicketingTicketsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTicketingTickets(
-        ?Operations\ListTicketingTicketsRequest $request,
-    ): Operations\ListTicketingTicketsResponse {
+    public function listTicketingTickets(Operations\ListTicketingTicketsRequest $request): Operations\ListTicketingTicketsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', Operations\ListTicketingTicketsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Ticket
      * @return Operations\PatchTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTicketingTicket(
-        ?Operations\PatchTicketingTicketRequest $request,
-    ): Operations\PatchTicketingTicketResponse {
+    public function patchTicketingTicket(Operations\PatchTicketingTicketRequest $request): Operations\PatchTicketingTicketResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\PatchTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Ticket
      * @return Operations\RemoveTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTicketingTicket(
-        ?Operations\RemoveTicketingTicketRequest $request,
-    ): Operations\RemoveTicketingTicketResponse {
+    public function removeTicketingTicket(Operations\RemoveTicketingTicketRequest $request): Operations\RemoveTicketingTicketResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\RemoveTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Ticket
      * @return Operations\UpdateTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTicketingTicket(
-        ?Operations\UpdateTicketingTicketRequest $request,
-    ): Operations\UpdateTicketingTicketResponse {
+    public function updateTicketingTicket(Operations\UpdateTicketingTicketRequest $request): Operations\UpdateTicketingTicketResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\UpdateTicketingTicketRequest::class, $request);
         $options = ['http_errors' => false];

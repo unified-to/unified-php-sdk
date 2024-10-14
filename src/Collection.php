@@ -29,9 +29,8 @@ class Collection
      * @return Operations\CreateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceCollection(
-        ?Operations\CreateCommerceCollectionRequest $request,
-    ): Operations\CreateCommerceCollectionResponse {
+    public function createCommerceCollection(Operations\CreateCommerceCollectionRequest $request): Operations\CreateCommerceCollectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\CreateCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Collection
      * @return Operations\GetCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceCollection(
-        ?Operations\GetCommerceCollectionRequest $request,
-    ): Operations\GetCommerceCollectionResponse {
+    public function getCommerceCollection(Operations\GetCommerceCollectionRequest $request): Operations\GetCommerceCollectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\GetCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Collection
      * @return Operations\ListCommerceCollectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceCollections(
-        ?Operations\ListCommerceCollectionsRequest $request,
-    ): Operations\ListCommerceCollectionsResponse {
+    public function listCommerceCollections(Operations\ListCommerceCollectionsRequest $request): Operations\ListCommerceCollectionsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\ListCommerceCollectionsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Collection
      * @return Operations\PatchCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceCollection(
-        ?Operations\PatchCommerceCollectionRequest $request,
-    ): Operations\PatchCommerceCollectionResponse {
+    public function patchCommerceCollection(Operations\PatchCommerceCollectionRequest $request): Operations\PatchCommerceCollectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\PatchCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Collection
      * @return Operations\RemoveCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceCollection(
-        ?Operations\RemoveCommerceCollectionRequest $request,
-    ): Operations\RemoveCommerceCollectionResponse {
+    public function removeCommerceCollection(Operations\RemoveCommerceCollectionRequest $request): Operations\RemoveCommerceCollectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\RemoveCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Collection
      * @return Operations\UpdateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceCollection(
-        ?Operations\UpdateCommerceCollectionRequest $request,
-    ): Operations\UpdateCommerceCollectionResponse {
+    public function updateCommerceCollection(Operations\UpdateCommerceCollectionRequest $request): Operations\UpdateCommerceCollectionResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\UpdateCommerceCollectionRequest::class, $request);
         $options = ['http_errors' => false];

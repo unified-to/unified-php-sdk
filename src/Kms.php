@@ -29,9 +29,8 @@ class Kms
      * @return Operations\CreateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createKmsPage(
-        ?Operations\CreateKmsPageRequest $request,
-    ): Operations\CreateKmsPageResponse {
+    public function createKmsPage(Operations\CreateKmsPageRequest $request): Operations\CreateKmsPageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page', Operations\CreateKmsPageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Kms
      * @return Operations\CreateKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createKmsSpace(
-        ?Operations\CreateKmsSpaceRequest $request,
-    ): Operations\CreateKmsSpaceResponse {
+    public function createKmsSpace(Operations\CreateKmsSpaceRequest $request): Operations\CreateKmsSpaceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/space', Operations\CreateKmsSpaceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Kms
      * @return Operations\GetKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getKmsPage(
-        ?Operations\GetKmsPageRequest $request,
-    ): Operations\GetKmsPageResponse {
+    public function getKmsPage(Operations\GetKmsPageRequest $request): Operations\GetKmsPageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\GetKmsPageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -169,9 +166,8 @@ class Kms
      * @return Operations\GetKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getKmsSpace(
-        ?Operations\GetKmsSpaceRequest $request,
-    ): Operations\GetKmsSpaceResponse {
+    public function getKmsSpace(Operations\GetKmsSpaceRequest $request): Operations\GetKmsSpaceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/space/{id}', Operations\GetKmsSpaceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Kms
      * @return Operations\ListKmsPagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listKmsPages(
-        ?Operations\ListKmsPagesRequest $request,
-    ): Operations\ListKmsPagesResponse {
+    public function listKmsPages(Operations\ListKmsPagesRequest $request): Operations\ListKmsPagesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page', Operations\ListKmsPagesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -257,9 +252,8 @@ class Kms
      * @return Operations\ListKmsSpacesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listKmsSpaces(
-        ?Operations\ListKmsSpacesRequest $request,
-    ): Operations\ListKmsSpacesResponse {
+    public function listKmsSpaces(Operations\ListKmsSpacesRequest $request): Operations\ListKmsSpacesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/space', Operations\ListKmsSpacesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -301,9 +295,8 @@ class Kms
      * @return Operations\PatchKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchKmsPage(
-        ?Operations\PatchKmsPageRequest $request,
-    ): Operations\PatchKmsPageResponse {
+    public function patchKmsPage(Operations\PatchKmsPageRequest $request): Operations\PatchKmsPageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\PatchKmsPageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -349,9 +342,8 @@ class Kms
      * @return Operations\PatchKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchKmsSpace(
-        ?Operations\PatchKmsSpaceRequest $request,
-    ): Operations\PatchKmsSpaceResponse {
+    public function patchKmsSpace(Operations\PatchKmsSpaceRequest $request): Operations\PatchKmsSpaceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/space/{id}', Operations\PatchKmsSpaceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -397,9 +389,8 @@ class Kms
      * @return Operations\RemoveKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeKmsPage(
-        ?Operations\RemoveKmsPageRequest $request,
-    ): Operations\RemoveKmsPageResponse {
+    public function removeKmsPage(Operations\RemoveKmsPageRequest $request): Operations\RemoveKmsPageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\RemoveKmsPageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -430,9 +421,8 @@ class Kms
      * @return Operations\RemoveKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeKmsSpace(
-        ?Operations\RemoveKmsSpaceRequest $request,
-    ): Operations\RemoveKmsSpaceResponse {
+    public function removeKmsSpace(Operations\RemoveKmsSpaceRequest $request): Operations\RemoveKmsSpaceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/space/{id}', Operations\RemoveKmsSpaceRequest::class, $request);
         $options = ['http_errors' => false];
@@ -463,9 +453,8 @@ class Kms
      * @return Operations\UpdateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateKmsPage(
-        ?Operations\UpdateKmsPageRequest $request,
-    ): Operations\UpdateKmsPageResponse {
+    public function updateKmsPage(Operations\UpdateKmsPageRequest $request): Operations\UpdateKmsPageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\UpdateKmsPageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -511,9 +500,8 @@ class Kms
      * @return Operations\UpdateKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateKmsSpace(
-        ?Operations\UpdateKmsSpaceRequest $request,
-    ): Operations\UpdateKmsSpaceResponse {
+    public function updateKmsSpace(Operations\UpdateKmsSpaceRequest $request): Operations\UpdateKmsSpaceResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/space/{id}', Operations\UpdateKmsSpaceRequest::class, $request);
         $options = ['http_errors' => false];

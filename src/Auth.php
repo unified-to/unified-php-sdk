@@ -30,9 +30,8 @@ class Auth
      * @return Operations\GetUnifiedIntegrationAuthResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedIntegrationAuth(
-        ?Operations\GetUnifiedIntegrationAuthRequest $request,
-    ): Operations\GetUnifiedIntegrationAuthResponse {
+    public function getUnifiedIntegrationAuth(Operations\GetUnifiedIntegrationAuthRequest $request): Operations\GetUnifiedIntegrationAuthResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationAuthRequest::class, $request);
         $options = ['http_errors' => false];
@@ -74,9 +73,8 @@ class Auth
      * @return Operations\GetUnifiedIntegrationLoginResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedIntegrationLogin(
-        ?Operations\GetUnifiedIntegrationLoginRequest $request,
-    ): Operations\GetUnifiedIntegrationLoginResponse {
+    public function getUnifiedIntegrationLogin(Operations\GetUnifiedIntegrationLoginRequest $request): Operations\GetUnifiedIntegrationLoginResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/login/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationLoginRequest::class, $request);
         $options = ['http_errors' => false];

@@ -29,9 +29,8 @@ class Document
      * @return Operations\CreateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsDocument(
-        ?Operations\CreateAtsDocumentRequest $request,
-    ): Operations\CreateAtsDocumentResponse {
+    public function createAtsDocument(Operations\CreateAtsDocumentRequest $request): Operations\CreateAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', Operations\CreateAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Document
      * @return Operations\GetAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsDocument(
-        ?Operations\GetAtsDocumentRequest $request,
-    ): Operations\GetAtsDocumentResponse {
+    public function getAtsDocument(Operations\GetAtsDocumentRequest $request): Operations\GetAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\GetAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Document
      * @return Operations\ListAtsDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsDocuments(
-        ?Operations\ListAtsDocumentsRequest $request,
-    ): Operations\ListAtsDocumentsResponse {
+    public function listAtsDocuments(Operations\ListAtsDocumentsRequest $request): Operations\ListAtsDocumentsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document', Operations\ListAtsDocumentsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Document
      * @return Operations\PatchAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsDocument(
-        ?Operations\PatchAtsDocumentRequest $request,
-    ): Operations\PatchAtsDocumentResponse {
+    public function patchAtsDocument(Operations\PatchAtsDocumentRequest $request): Operations\PatchAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\PatchAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Document
      * @return Operations\RemoveAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsDocument(
-        ?Operations\RemoveAtsDocumentRequest $request,
-    ): Operations\RemoveAtsDocumentResponse {
+    public function removeAtsDocument(Operations\RemoveAtsDocumentRequest $request): Operations\RemoveAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\RemoveAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Document
      * @return Operations\UpdateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsDocument(
-        ?Operations\UpdateAtsDocumentRequest $request,
-    ): Operations\UpdateAtsDocumentResponse {
+    public function updateAtsDocument(Operations\UpdateAtsDocumentRequest $request): Operations\UpdateAtsDocumentResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/document/{id}', Operations\UpdateAtsDocumentRequest::class, $request);
         $options = ['http_errors' => false];
