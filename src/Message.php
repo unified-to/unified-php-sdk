@@ -29,9 +29,8 @@ class Message
      * @return Operations\CreateMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createMessagingMessage(
-        ?Operations\CreateMessagingMessageRequest $request,
-    ): Operations\CreateMessagingMessageResponse {
+    public function createMessagingMessage(Operations\CreateMessagingMessageRequest $request): Operations\CreateMessagingMessageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message', Operations\CreateMessagingMessageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Message
      * @return Operations\GetMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMessagingMessage(
-        ?Operations\GetMessagingMessageRequest $request,
-    ): Operations\GetMessagingMessageResponse {
+    public function getMessagingMessage(Operations\GetMessagingMessageRequest $request): Operations\GetMessagingMessageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\GetMessagingMessageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Message
      * @return Operations\ListMessagingMessagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMessagingMessages(
-        ?Operations\ListMessagingMessagesRequest $request,
-    ): Operations\ListMessagingMessagesResponse {
+    public function listMessagingMessages(Operations\ListMessagingMessagesRequest $request): Operations\ListMessagingMessagesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message', Operations\ListMessagingMessagesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Message
      * @return Operations\PatchMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMessagingMessage(
-        ?Operations\PatchMessagingMessageRequest $request,
-    ): Operations\PatchMessagingMessageResponse {
+    public function patchMessagingMessage(Operations\PatchMessagingMessageRequest $request): Operations\PatchMessagingMessageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\PatchMessagingMessageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Message
      * @return Operations\RemoveMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeMessagingMessage(
-        ?Operations\RemoveMessagingMessageRequest $request,
-    ): Operations\RemoveMessagingMessageResponse {
+    public function removeMessagingMessage(Operations\RemoveMessagingMessageRequest $request): Operations\RemoveMessagingMessageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\RemoveMessagingMessageRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Message
      * @return Operations\UpdateMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMessagingMessage(
-        ?Operations\UpdateMessagingMessageRequest $request,
-    ): Operations\UpdateMessagingMessageResponse {
+    public function updateMessagingMessage(Operations\UpdateMessagingMessageRequest $request): Operations\UpdateMessagingMessageResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\UpdateMessagingMessageRequest::class, $request);
         $options = ['http_errors' => false];

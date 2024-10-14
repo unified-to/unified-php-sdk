@@ -31,9 +31,8 @@ class Integration
      * @return Operations\GetUnifiedIntegrationAuthResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedIntegrationAuth(
-        ?Operations\GetUnifiedIntegrationAuthRequest $request,
-    ): Operations\GetUnifiedIntegrationAuthResponse {
+    public function getUnifiedIntegrationAuth(Operations\GetUnifiedIntegrationAuthRequest $request): Operations\GetUnifiedIntegrationAuthResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/auth/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationAuthRequest::class, $request);
         $options = ['http_errors' => false];
@@ -75,9 +74,8 @@ class Integration
      * @return Operations\ListUnifiedIntegrationWorkspacesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedIntegrationWorkspaces(
-        ?Operations\ListUnifiedIntegrationWorkspacesRequest $request,
-    ): Operations\ListUnifiedIntegrationWorkspacesResponse {
+    public function listUnifiedIntegrationWorkspaces(Operations\ListUnifiedIntegrationWorkspacesRequest $request): Operations\ListUnifiedIntegrationWorkspacesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/workspace/{workspace_id}', Operations\ListUnifiedIntegrationWorkspacesRequest::class, $request);
         $options = ['http_errors' => false];
@@ -115,13 +113,12 @@ class Integration
     /**
      * Returns all integrations
      *
-     * @param  Operations\ListUnifiedIntegrationsRequest  $request
+     * @param  ?Operations\ListUnifiedIntegrationsRequest  $request
      * @return Operations\ListUnifiedIntegrationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedIntegrations(
-        ?Operations\ListUnifiedIntegrationsRequest $request,
-    ): Operations\ListUnifiedIntegrationsResponse {
+    public function listUnifiedIntegrations(?Operations\ListUnifiedIntegrationsRequest $request = null): Operations\ListUnifiedIntegrationsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration');
         $options = ['http_errors' => false];

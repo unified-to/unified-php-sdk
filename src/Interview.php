@@ -29,9 +29,8 @@ class Interview
      * @return Operations\CreateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsInterview(
-        ?Operations\CreateAtsInterviewRequest $request,
-    ): Operations\CreateAtsInterviewResponse {
+    public function createAtsInterview(Operations\CreateAtsInterviewRequest $request): Operations\CreateAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', Operations\CreateAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Interview
      * @return Operations\GetAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsInterview(
-        ?Operations\GetAtsInterviewRequest $request,
-    ): Operations\GetAtsInterviewResponse {
+    public function getAtsInterview(Operations\GetAtsInterviewRequest $request): Operations\GetAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\GetAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Interview
      * @return Operations\ListAtsInterviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsInterviews(
-        ?Operations\ListAtsInterviewsRequest $request,
-    ): Operations\ListAtsInterviewsResponse {
+    public function listAtsInterviews(Operations\ListAtsInterviewsRequest $request): Operations\ListAtsInterviewsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview', Operations\ListAtsInterviewsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Interview
      * @return Operations\PatchAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsInterview(
-        ?Operations\PatchAtsInterviewRequest $request,
-    ): Operations\PatchAtsInterviewResponse {
+    public function patchAtsInterview(Operations\PatchAtsInterviewRequest $request): Operations\PatchAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\PatchAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Interview
      * @return Operations\RemoveAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsInterview(
-        ?Operations\RemoveAtsInterviewRequest $request,
-    ): Operations\RemoveAtsInterviewResponse {
+    public function removeAtsInterview(Operations\RemoveAtsInterviewRequest $request): Operations\RemoveAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\RemoveAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Interview
      * @return Operations\UpdateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsInterview(
-        ?Operations\UpdateAtsInterviewRequest $request,
-    ): Operations\UpdateAtsInterviewResponse {
+    public function updateAtsInterview(Operations\UpdateAtsInterviewRequest $request): Operations\UpdateAtsInterviewResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/interview/{id}', Operations\UpdateAtsInterviewRequest::class, $request);
         $options = ['http_errors' => false];

@@ -28,4 +28,5 @@ enum PropertyIntegrationCategories: string
     case Messaging = 'messaging';
     case Kms = 'kms';
     case Task = 'task';
+    case Scim = 'scim';
 }

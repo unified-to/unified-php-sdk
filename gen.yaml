@@ -25,7 +25,11 @@ php:
       shared: Models/Shared
       webhooks: Models/Webhooks
   inputModelSuffix: input
+  laravelServiceProvider:
+    enabled: false
+    svcName: openapi
   maxMethodParams: 0
+  methodArguments: infer-optional-args
   namespace: Unified\Unified_to
   outputModelSuffix: output
   packageName: unified/unified-to

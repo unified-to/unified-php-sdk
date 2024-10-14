@@ -1,0 +1,33 @@
+speakeasyVersion: 1.418.3
+sources:
+    my-source:
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:53528dda66a4ee401bdb96c83e17855385ea45e5f60e47add4ae8280a121aa9c
+        sourceBlobDigest: sha256:c52b28dbda0dff55b529156c697df86dafb3cf3c6ba3fd7aaa241b2d915edab3
+        tags:
+            - latest
+            - main
+targets:
+    unified-php:
+        source: my-source
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:53528dda66a4ee401bdb96c83e17855385ea45e5f60e47add4ae8280a121aa9c
+        sourceBlobDigest: sha256:c52b28dbda0dff55b529156c697df86dafb3cf3c6ba3fd7aaa241b2d915edab3
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        my-source:
+            inputs:
+                - location: https://api.unified.to/openapi.json
+                  authSecret: $openapi_doc_auth_token
+            registry:
+                location: registry.speakeasyapi.dev/unified/unified/my-source
+    targets:
+        unified-php:
+            target: php
+            source: my-source
+            publish:
+                packagist:
+                    username: $PACKAGIST_USERNAME
+                    token: $PACKAGIST_TOKEN

@@ -29,9 +29,8 @@ class Passthrough
      * @return Operations\CreatePassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createPassthroughJson(
-        ?Operations\CreatePassthroughJsonRequest $request,
-    ): Operations\CreatePassthroughJsonResponse {
+    public function createPassthroughJson(Operations\CreatePassthroughJsonRequest $request): Operations\CreatePassthroughJsonResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthroughJsonRequest::class, $request);
         $options = ['http_errors' => false];
@@ -98,9 +97,8 @@ class Passthrough
      * @return Operations\CreatePassthroughRawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createPassthroughRaw(
-        ?Operations\CreatePassthroughRawRequest $request,
-    ): Operations\CreatePassthroughRawResponse {
+    public function createPassthroughRaw(Operations\CreatePassthroughRawRequest $request): Operations\CreatePassthroughRawResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthroughRawRequest::class, $request);
         $options = ['http_errors' => false];
@@ -167,9 +165,8 @@ class Passthrough
      * @return Operations\ListPassthroughsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPassthroughs(
-        ?Operations\ListPassthroughsRequest $request,
-    ): Operations\ListPassthroughsResponse {
+    public function listPassthroughs(Operations\ListPassthroughsRequest $request): Operations\ListPassthroughsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\ListPassthroughsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -232,9 +229,8 @@ class Passthrough
      * @return Operations\PatchPassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchPassthroughJson(
-        ?Operations\PatchPassthroughJsonRequest $request,
-    ): Operations\PatchPassthroughJsonResponse {
+    public function patchPassthroughJson(Operations\PatchPassthroughJsonRequest $request): Operations\PatchPassthroughJsonResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthroughJsonRequest::class, $request);
         $options = ['http_errors' => false];
@@ -301,9 +297,8 @@ class Passthrough
      * @return Operations\PatchPassthroughRawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchPassthroughRaw(
-        ?Operations\PatchPassthroughRawRequest $request,
-    ): Operations\PatchPassthroughRawResponse {
+    public function patchPassthroughRaw(Operations\PatchPassthroughRawRequest $request): Operations\PatchPassthroughRawResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthroughRawRequest::class, $request);
         $options = ['http_errors' => false];
@@ -370,9 +365,8 @@ class Passthrough
      * @return Operations\RemovePassthroughResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removePassthrough(
-        ?Operations\RemovePassthroughRequest $request,
-    ): Operations\RemovePassthroughResponse {
+    public function removePassthrough(Operations\RemovePassthroughRequest $request): Operations\RemovePassthroughResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\RemovePassthroughRequest::class, $request);
         $options = ['http_errors' => false];
@@ -435,9 +429,8 @@ class Passthrough
      * @return Operations\UpdatePassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updatePassthroughJson(
-        ?Operations\UpdatePassthroughJsonRequest $request,
-    ): Operations\UpdatePassthroughJsonResponse {
+    public function updatePassthroughJson(Operations\UpdatePassthroughJsonRequest $request): Operations\UpdatePassthroughJsonResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthroughJsonRequest::class, $request);
         $options = ['http_errors' => false];
@@ -504,9 +497,8 @@ class Passthrough
      * @return Operations\UpdatePassthroughRawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updatePassthroughRaw(
-        ?Operations\UpdatePassthroughRawRequest $request,
-    ): Operations\UpdatePassthroughRawResponse {
+    public function updatePassthroughRaw(Operations\UpdatePassthroughRawRequest $request): Operations\UpdatePassthroughRawResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthroughRawRequest::class, $request);
         $options = ['http_errors' => false];

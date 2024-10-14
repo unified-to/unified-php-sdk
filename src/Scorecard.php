@@ -29,9 +29,8 @@ class Scorecard
      * @return Operations\CreateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsScorecard(
-        ?Operations\CreateAtsScorecardRequest $request,
-    ): Operations\CreateAtsScorecardResponse {
+    public function createAtsScorecard(Operations\CreateAtsScorecardRequest $request): Operations\CreateAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', Operations\CreateAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Scorecard
      * @return Operations\GetAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsScorecard(
-        ?Operations\GetAtsScorecardRequest $request,
-    ): Operations\GetAtsScorecardResponse {
+    public function getAtsScorecard(Operations\GetAtsScorecardRequest $request): Operations\GetAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\GetAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];
@@ -121,9 +119,8 @@ class Scorecard
      * @return Operations\ListAtsScorecardsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsScorecards(
-        ?Operations\ListAtsScorecardsRequest $request,
-    ): Operations\ListAtsScorecardsResponse {
+    public function listAtsScorecards(Operations\ListAtsScorecardsRequest $request): Operations\ListAtsScorecardsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', Operations\ListAtsScorecardsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -165,9 +162,8 @@ class Scorecard
      * @return Operations\PatchAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsScorecard(
-        ?Operations\PatchAtsScorecardRequest $request,
-    ): Operations\PatchAtsScorecardResponse {
+    public function patchAtsScorecard(Operations\PatchAtsScorecardRequest $request): Operations\PatchAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\PatchAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Scorecard
      * @return Operations\RemoveAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsScorecard(
-        ?Operations\RemoveAtsScorecardRequest $request,
-    ): Operations\RemoveAtsScorecardResponse {
+    public function removeAtsScorecard(Operations\RemoveAtsScorecardRequest $request): Operations\RemoveAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\RemoveAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];
@@ -246,9 +241,8 @@ class Scorecard
      * @return Operations\UpdateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsScorecard(
-        ?Operations\UpdateAtsScorecardRequest $request,
-    ): Operations\UpdateAtsScorecardResponse {
+    public function updateAtsScorecard(Operations\UpdateAtsScorecardRequest $request): Operations\UpdateAtsScorecardResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\UpdateAtsScorecardRequest::class, $request);
         $options = ['http_errors' => false];

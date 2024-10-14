@@ -29,9 +29,8 @@ class Location
      * @return Operations\CreateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceLocation(
-        ?Operations\CreateCommerceLocationRequest $request,
-    ): Operations\CreateCommerceLocationResponse {
+    public function createCommerceLocation(Operations\CreateCommerceLocationRequest $request): Operations\CreateCommerceLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\CreateCommerceLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -77,9 +76,8 @@ class Location
      * @return Operations\CreateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisLocation(
-        ?Operations\CreateHrisLocationRequest $request,
-    ): Operations\CreateHrisLocationResponse {
+    public function createHrisLocation(Operations\CreateHrisLocationRequest $request): Operations\CreateHrisLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location', Operations\CreateHrisLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -125,9 +123,8 @@ class Location
      * @return Operations\GetCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceLocation(
-        ?Operations\GetCommerceLocationRequest $request,
-    ): Operations\GetCommerceLocationResponse {
+    public function getCommerceLocation(Operations\GetCommerceLocationRequest $request): Operations\GetCommerceLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\GetCommerceLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -169,9 +166,8 @@ class Location
      * @return Operations\GetHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisLocation(
-        ?Operations\GetHrisLocationRequest $request,
-    ): Operations\GetHrisLocationResponse {
+    public function getHrisLocation(Operations\GetHrisLocationRequest $request): Operations\GetHrisLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\GetHrisLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -213,9 +209,8 @@ class Location
      * @return Operations\ListCommerceLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceLocations(
-        ?Operations\ListCommerceLocationsRequest $request,
-    ): Operations\ListCommerceLocationsResponse {
+    public function listCommerceLocations(Operations\ListCommerceLocationsRequest $request): Operations\ListCommerceLocationsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\ListCommerceLocationsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -257,9 +252,8 @@ class Location
      * @return Operations\ListHrisLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisLocations(
-        ?Operations\ListHrisLocationsRequest $request,
-    ): Operations\ListHrisLocationsResponse {
+    public function listHrisLocations(Operations\ListHrisLocationsRequest $request): Operations\ListHrisLocationsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location', Operations\ListHrisLocationsRequest::class, $request);
         $options = ['http_errors' => false];
@@ -301,9 +295,8 @@ class Location
      * @return Operations\PatchCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceLocation(
-        ?Operations\PatchCommerceLocationRequest $request,
-    ): Operations\PatchCommerceLocationResponse {
+    public function patchCommerceLocation(Operations\PatchCommerceLocationRequest $request): Operations\PatchCommerceLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\PatchCommerceLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -349,9 +342,8 @@ class Location
      * @return Operations\PatchHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisLocation(
-        ?Operations\PatchHrisLocationRequest $request,
-    ): Operations\PatchHrisLocationResponse {
+    public function patchHrisLocation(Operations\PatchHrisLocationRequest $request): Operations\PatchHrisLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\PatchHrisLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -397,9 +389,8 @@ class Location
      * @return Operations\RemoveCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceLocation(
-        ?Operations\RemoveCommerceLocationRequest $request,
-    ): Operations\RemoveCommerceLocationResponse {
+    public function removeCommerceLocation(Operations\RemoveCommerceLocationRequest $request): Operations\RemoveCommerceLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\RemoveCommerceLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -430,9 +421,8 @@ class Location
      * @return Operations\RemoveHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisLocation(
-        ?Operations\RemoveHrisLocationRequest $request,
-    ): Operations\RemoveHrisLocationResponse {
+    public function removeHrisLocation(Operations\RemoveHrisLocationRequest $request): Operations\RemoveHrisLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\RemoveHrisLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -463,9 +453,8 @@ class Location
      * @return Operations\UpdateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceLocation(
-        ?Operations\UpdateCommerceLocationRequest $request,
-    ): Operations\UpdateCommerceLocationResponse {
+    public function updateCommerceLocation(Operations\UpdateCommerceLocationRequest $request): Operations\UpdateCommerceLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\UpdateCommerceLocationRequest::class, $request);
         $options = ['http_errors' => false];
@@ -511,9 +500,8 @@ class Location
      * @return Operations\UpdateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisLocation(
-        ?Operations\UpdateHrisLocationRequest $request,
-    ): Operations\UpdateHrisLocationResponse {
+    public function updateHrisLocation(Operations\UpdateHrisLocationRequest $request): Operations\UpdateHrisLocationResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\UpdateHrisLocationRequest::class, $request);
         $options = ['http_errors' => false];

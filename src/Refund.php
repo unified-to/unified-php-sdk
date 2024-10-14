@@ -29,9 +29,8 @@ class Refund
      * @return Operations\GetPaymentRefundResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getPaymentRefund(
-        ?Operations\GetPaymentRefundRequest $request,
-    ): Operations\GetPaymentRefundResponse {
+    public function getPaymentRefund(Operations\GetPaymentRefundRequest $request): Operations\GetPaymentRefundResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund/{id}', Operations\GetPaymentRefundRequest::class, $request);
         $options = ['http_errors' => false];
@@ -73,9 +72,8 @@ class Refund
      * @return Operations\ListPaymentRefundsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPaymentRefunds(
-        ?Operations\ListPaymentRefundsRequest $request,
-    ): Operations\ListPaymentRefundsResponse {
+    public function listPaymentRefunds(Operations\ListPaymentRefundsRequest $request): Operations\ListPaymentRefundsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund', Operations\ListPaymentRefundsRequest::class, $request);
         $options = ['http_errors' => false];

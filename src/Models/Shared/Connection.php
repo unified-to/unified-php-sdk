@@ -50,10 +50,10 @@ class Connection
     /**
      * $cursorsCache
      *
-     * @var ?array<array<string, mixed>> $cursorsCache
+     * @var ?array<Undefined> $cursorsCache
      */
     #[\JMS\Serializer\Annotation\SerializedName('cursors_cache')]
-    #[\JMS\Serializer\Annotation\Type('array<array<string, mixed>>|null')]
+    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
     #[\JMS\Serializer\Annotation\SkipWhenNull]
     public ?array $cursorsCache = null;
 
@@ -144,7 +144,7 @@ class Connection
      * @param  ?PropertyConnectionAuth  $auth
      * @param  ?string  $authAwsArn
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<array<string, mixed>>  $cursorsCache
+     * @param  ?array<Undefined>  $cursorsCache
      * @param  ?string  $environment
      * @param  ?string  $externalXref
      * @param  ?string  $id
@@ -154,7 +154,7 @@ class Connection
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $workspaceId
      */
-    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?array $cursorsCache = null, ?string $environment = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null)
+    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?array $cursorsCache = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->categories = $categories;
         $this->integrationType = $integrationType;

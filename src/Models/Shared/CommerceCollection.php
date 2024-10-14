@@ -30,10 +30,11 @@ class CommerceCollection
 
     /**
      *
-     * @var string $id
+     * @var ?string $id
      */
     #[\JMS\Serializer\Annotation\SerializedName('id')]
-    public string $id;
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
 
     /**
      *
@@ -148,10 +149,10 @@ class CommerceCollection
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  string  $id
      * @param  string  $name
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
+     * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?bool  $isFeatured
      * @param  ?bool  $isVisible
@@ -165,12 +166,12 @@ class CommerceCollection
      * @param  ?CommerceCollectionType  $type
      * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(string $id, string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $media = null, ?array $metadata = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $media = null, ?array $metadata = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
     {
-        $this->id = $id;
         $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
+        $this->id = $id;
         $this->isActive = $isActive;
         $this->isFeatured = $isFeatured;
         $this->isVisible = $isVisible;

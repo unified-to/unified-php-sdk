@@ -29,9 +29,8 @@ class Applicationstatus
      * @return Operations\ListAtsApplicationstatusesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsApplicationstatuses(
-        ?Operations\ListAtsApplicationstatusesRequest $request,
-    ): Operations\ListAtsApplicationstatusesResponse {
+    public function listAtsApplicationstatuses(Operations\ListAtsApplicationstatusesRequest $request): Operations\ListAtsApplicationstatusesResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/applicationstatus', Operations\ListAtsApplicationstatusesRequest::class, $request);
         $options = ['http_errors' => false];

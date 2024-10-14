@@ -29,9 +29,8 @@ class Payout
      * @return Operations\GetPaymentPayoutResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getPaymentPayout(
-        ?Operations\GetPaymentPayoutRequest $request,
-    ): Operations\GetPaymentPayoutResponse {
+    public function getPaymentPayout(Operations\GetPaymentPayoutRequest $request): Operations\GetPaymentPayoutResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout/{id}', Operations\GetPaymentPayoutRequest::class, $request);
         $options = ['http_errors' => false];
@@ -73,9 +72,8 @@ class Payout
      * @return Operations\ListPaymentPayoutsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPaymentPayouts(
-        ?Operations\ListPaymentPayoutsRequest $request,
-    ): Operations\ListPaymentPayoutsResponse {
+    public function listPaymentPayouts(Operations\ListPaymentPayoutsRequest $request): Operations\ListPaymentPayoutsResponse
+    {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout', Operations\ListPaymentPayoutsRequest::class, $request);
         $options = ['http_errors' => false];

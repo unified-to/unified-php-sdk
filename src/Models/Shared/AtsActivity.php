@@ -124,6 +124,14 @@ class AtsActivity
 
     /**
      *
+     * @var ?string $subType
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('sub_type')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $subType = null;
+
+    /**
+     *
      * @var ?string $title
      */
     #[\JMS\Serializer\Annotation\SerializedName('title')]
@@ -181,13 +189,14 @@ class AtsActivity
      * @param  ?bool  $isPrivate
      * @param  ?string  $jobId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $subType
      * @param  ?string  $title
      * @param  ?array<AtsEmail>  $to
      * @param  ?AtsActivityType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      */
-    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->applicationId = $applicationId;
         $this->bcc = $bcc;
@@ -202,6 +211,7 @@ class AtsActivity
         $this->isPrivate = $isPrivate;
         $this->jobId = $jobId;
         $this->raw = $raw;
+        $this->subType = $subType;
         $this->title = $title;
         $this->to = $to;
         $this->type = $type;
