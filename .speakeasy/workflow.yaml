@@ -1,0 +1,14 @@
+workflowVersion: 1.0.0
+sources:
+    my-source:
+        inputs:
+            - location: https://api.unified.to/openapi.json
+              authSecret: $openapi_doc_auth_token
+targets:
+    unified-php:
+        target: php
+        source: my-source
+        publish:
+            packagist:
+                username: $PACKAGIST_USERNAME
+                token: $PACKAGIST_TOKEN
