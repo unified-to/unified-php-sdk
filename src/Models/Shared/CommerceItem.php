@@ -12,6 +12,14 @@ namespace Unified\Unified_to\Models\Shared;
 class CommerceItem
 {
     /**
+     *
+     * @var ?string $accountId
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('account_id')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $accountId = null;
+
+    /**
      * $collectionIds
      *
      * @var ?array<string> $collectionIds
@@ -168,6 +176,7 @@ class CommerceItem
     public ?string $vendorName = null;
 
     /**
+     * @param  ?string  $accountId
      * @param  ?array<string>  $collectionIds
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
@@ -187,8 +196,9 @@ class CommerceItem
      * @param  ?array<CommerceItemVariant>  $variants
      * @param  ?string  $vendorName
      */
-    public function __construct(?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
+    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
     {
+        $this->accountId = $accountId;
         $this->collectionIds = $collectionIds;
         $this->createdAt = $createdAt;
         $this->description = $description;

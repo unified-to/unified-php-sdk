@@ -21,6 +21,14 @@ class StorageFile
 
     /**
      *
+     * @var ?string $data
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('data')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?string $data = null;
+
+    /**
+     *
      * @var ?string $description
      */
     #[\JMS\Serializer\Annotation\SerializedName('description')]
@@ -130,6 +138,7 @@ class StorageFile
 
     /**
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $data
      * @param  ?string  $description
      * @param  ?string  $downloadUrl
      * @param  ?string  $hash
@@ -144,9 +153,10 @@ class StorageFile
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->createdAt = $createdAt;
+        $this->data = $data;
         $this->description = $description;
         $this->downloadUrl = $downloadUrl;
         $this->hash = $hash;
