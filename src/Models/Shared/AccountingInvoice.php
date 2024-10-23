@@ -77,6 +77,14 @@ class AccountingInvoice
 
     /**
      *
+     * @var ?\DateTime $invoiceAt
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('invoice_at')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $invoiceAt = null;
+
+    /**
+     *
      * @var ?string $invoiceNumber
      */
     #[\JMS\Serializer\Annotation\SerializedName('invoice_number')]
@@ -187,6 +195,15 @@ class AccountingInvoice
 
     /**
      *
+     * @var ?AccountingInvoiceType $type
+     */
+    #[\JMS\Serializer\Annotation\SerializedName('type')]
+    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceType|null')]
+    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingInvoiceType $type = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
@@ -210,6 +227,7 @@ class AccountingInvoice
      * @param  ?float  $discountAmount
      * @param  ?\DateTime  $dueAt
      * @param  ?string  $id
+     * @param  ?\DateTime  $invoiceAt
      * @param  ?string  $invoiceNumber
      * @param  ?array<AccountingLineitem>  $lineitems
      * @param  ?string  $notes
@@ -223,10 +241,11 @@ class AccountingInvoice
      * @param  ?AccountingInvoiceStatus  $status
      * @param  ?float  $taxAmount
      * @param  ?float  $totalAmount
+     * @param  ?AccountingInvoiceType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
      */
-    public function __construct(?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $invoiceNumber = null, ?array $lineitems = null, ?string $notes = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?AccountingInvoiceStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?\DateTime $invoiceAt = null, ?string $invoiceNumber = null, ?array $lineitems = null, ?string $notes = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?AccountingInvoiceStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?AccountingInvoiceType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->balanceAmount = $balanceAmount;
         $this->cancelledAt = $cancelledAt;
@@ -236,6 +255,7 @@ class AccountingInvoice
         $this->discountAmount = $discountAmount;
         $this->dueAt = $dueAt;
         $this->id = $id;
+        $this->invoiceAt = $invoiceAt;
         $this->invoiceNumber = $invoiceNumber;
         $this->lineitems = $lineitems;
         $this->notes = $notes;
@@ -249,6 +269,7 @@ class AccountingInvoice
         $this->status = $status;
         $this->taxAmount = $taxAmount;
         $this->totalAmount = $totalAmount;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->url = $url;
     }

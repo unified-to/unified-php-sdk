@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 93cdcc39dcda25b2b2e4aa38187b5d21
+  docChecksum: ec37ac8840007140d82aa965e5a1b881
   docVersion: "1.0"
-  speakeasyVersion: 1.418.4
-  generationVersion: 2.438.3
-  releaseVersion: 1.0.1
-  configChecksum: 23b60076c42c7b6b613fe7c5fbb7b9ac
+  speakeasyVersion: 1.420.0
+  generationVersion: 2.438.15
+  releaseVersion: 1.0.2
+  configChecksum: 21a966f2325de04b645907a447915d77
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -35,6 +35,8 @@ generatedFiles:
   - docs/Models/Operations/CreateAccountingInvoiceResponse.md
   - docs/Models/Operations/CreateAccountingJournalRequest.md
   - docs/Models/Operations/CreateAccountingJournalResponse.md
+  - docs/Models/Operations/CreateAccountingOrderRequest.md
+  - docs/Models/Operations/CreateAccountingOrderResponse.md
   - docs/Models/Operations/CreateAccountingTaxrateRequest.md
   - docs/Models/Operations/CreateAccountingTaxrateResponse.md
   - docs/Models/Operations/CreateAccountingTransactionRequest.md
@@ -130,6 +132,8 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingInvoiceResponse.md
   - docs/Models/Operations/GetAccountingJournalRequest.md
   - docs/Models/Operations/GetAccountingJournalResponse.md
+  - docs/Models/Operations/GetAccountingOrderRequest.md
+  - docs/Models/Operations/GetAccountingOrderResponse.md
   - docs/Models/Operations/GetAccountingOrganizationRequest.md
   - docs/Models/Operations/GetAccountingOrganizationResponse.md
   - docs/Models/Operations/GetAccountingTaxrateRequest.md
@@ -239,6 +243,8 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingInvoicesResponse.md
   - docs/Models/Operations/ListAccountingJournalsRequest.md
   - docs/Models/Operations/ListAccountingJournalsResponse.md
+  - docs/Models/Operations/ListAccountingOrdersRequest.md
+  - docs/Models/Operations/ListAccountingOrdersResponse.md
   - docs/Models/Operations/ListAccountingOrganizationsRequest.md
   - docs/Models/Operations/ListAccountingOrganizationsResponse.md
   - docs/Models/Operations/ListAccountingTaxratesRequest.md
@@ -364,6 +370,8 @@ generatedFiles:
   - docs/Models/Operations/PatchAccountingInvoiceResponse.md
   - docs/Models/Operations/PatchAccountingJournalRequest.md
   - docs/Models/Operations/PatchAccountingJournalResponse.md
+  - docs/Models/Operations/PatchAccountingOrderRequest.md
+  - docs/Models/Operations/PatchAccountingOrderResponse.md
   - docs/Models/Operations/PatchAccountingTaxrateRequest.md
   - docs/Models/Operations/PatchAccountingTaxrateResponse.md
   - docs/Models/Operations/PatchAccountingTransactionRequest.md
@@ -461,6 +469,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveAccountingInvoiceResponse.md
   - docs/Models/Operations/RemoveAccountingJournalRequest.md
   - docs/Models/Operations/RemoveAccountingJournalResponse.md
+  - docs/Models/Operations/RemoveAccountingOrderRequest.md
+  - docs/Models/Operations/RemoveAccountingOrderResponse.md
   - docs/Models/Operations/RemoveAccountingTaxrateRequest.md
   - docs/Models/Operations/RemoveAccountingTaxrateResponse.md
   - docs/Models/Operations/RemoveAccountingTransactionRequest.md
@@ -554,6 +564,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateAccountingInvoiceResponse.md
   - docs/Models/Operations/UpdateAccountingJournalRequest.md
   - docs/Models/Operations/UpdateAccountingJournalResponse.md
+  - docs/Models/Operations/UpdateAccountingOrderRequest.md
+  - docs/Models/Operations/UpdateAccountingOrderResponse.md
   - docs/Models/Operations/UpdateAccountingTaxrateRequest.md
   - docs/Models/Operations/UpdateAccountingTaxrateResponse.md
   - docs/Models/Operations/UpdateAccountingTransactionRequest.md
@@ -650,9 +662,13 @@ generatedFiles:
   - docs/Models/Shared/AccountingEmailType.md
   - docs/Models/Shared/AccountingInvoice.md
   - docs/Models/Shared/AccountingInvoiceStatus.md
+  - docs/Models/Shared/AccountingInvoiceType.md
   - docs/Models/Shared/AccountingJournal.md
   - docs/Models/Shared/AccountingJournalLineitem.md
   - docs/Models/Shared/AccountingLineitem.md
+  - docs/Models/Shared/AccountingOrder.md
+  - docs/Models/Shared/AccountingOrderStatus.md
+  - docs/Models/Shared/AccountingOrderType.md
   - docs/Models/Shared/AccountingOrganization.md
   - docs/Models/Shared/AccountingTaxrate.md
   - docs/Models/Shared/AccountingTelephone.md
@@ -815,6 +831,8 @@ generatedFiles:
   - docs/Models/Shared/Priority.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
   - docs/Models/Shared/PropertyAccountingContactShippingAddress.md
+  - docs/Models/Shared/PropertyAccountingOrderBillingAddress.md
+  - docs/Models/Shared/PropertyAccountingOrderShippingAddress.md
   - docs/Models/Shared/PropertyAccountingOrganizationAddress.md
   - docs/Models/Shared/PropertyAtsActivityFrom.md
   - docs/Models/Shared/PropertyAtsActivityFromType.md
@@ -949,6 +967,7 @@ generatedFiles:
   - docs/sdks/messaging/README.md
   - docs/sdks/model/README.md
   - docs/sdks/note/README.md
+  - docs/sdks/order/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/page/README.md
   - docs/sdks/passthrough/README.md
@@ -1036,6 +1055,8 @@ generatedFiles:
   - src/Models/Operations/CreateAccountingInvoiceResponse.php
   - src/Models/Operations/CreateAccountingJournalRequest.php
   - src/Models/Operations/CreateAccountingJournalResponse.php
+  - src/Models/Operations/CreateAccountingOrderRequest.php
+  - src/Models/Operations/CreateAccountingOrderResponse.php
   - src/Models/Operations/CreateAccountingTaxrateRequest.php
   - src/Models/Operations/CreateAccountingTaxrateResponse.php
   - src/Models/Operations/CreateAccountingTransactionRequest.php
@@ -1131,6 +1152,8 @@ generatedFiles:
   - src/Models/Operations/GetAccountingInvoiceResponse.php
   - src/Models/Operations/GetAccountingJournalRequest.php
   - src/Models/Operations/GetAccountingJournalResponse.php
+  - src/Models/Operations/GetAccountingOrderRequest.php
+  - src/Models/Operations/GetAccountingOrderResponse.php
   - src/Models/Operations/GetAccountingOrganizationRequest.php
   - src/Models/Operations/GetAccountingOrganizationResponse.php
   - src/Models/Operations/GetAccountingTaxrateRequest.php
@@ -1240,6 +1263,8 @@ generatedFiles:
   - src/Models/Operations/ListAccountingInvoicesResponse.php
   - src/Models/Operations/ListAccountingJournalsRequest.php
   - src/Models/Operations/ListAccountingJournalsResponse.php
+  - src/Models/Operations/ListAccountingOrdersRequest.php
+  - src/Models/Operations/ListAccountingOrdersResponse.php
   - src/Models/Operations/ListAccountingOrganizationsRequest.php
   - src/Models/Operations/ListAccountingOrganizationsResponse.php
   - src/Models/Operations/ListAccountingTaxratesRequest.php
@@ -1365,6 +1390,8 @@ generatedFiles:
   - src/Models/Operations/PatchAccountingInvoiceResponse.php
   - src/Models/Operations/PatchAccountingJournalRequest.php
   - src/Models/Operations/PatchAccountingJournalResponse.php
+  - src/Models/Operations/PatchAccountingOrderRequest.php
+  - src/Models/Operations/PatchAccountingOrderResponse.php
   - src/Models/Operations/PatchAccountingTaxrateRequest.php
   - src/Models/Operations/PatchAccountingTaxrateResponse.php
   - src/Models/Operations/PatchAccountingTransactionRequest.php
@@ -1462,6 +1489,8 @@ generatedFiles:
   - src/Models/Operations/RemoveAccountingInvoiceResponse.php
   - src/Models/Operations/RemoveAccountingJournalRequest.php
   - src/Models/Operations/RemoveAccountingJournalResponse.php
+  - src/Models/Operations/RemoveAccountingOrderRequest.php
+  - src/Models/Operations/RemoveAccountingOrderResponse.php
   - src/Models/Operations/RemoveAccountingTaxrateRequest.php
   - src/Models/Operations/RemoveAccountingTaxrateResponse.php
   - src/Models/Operations/RemoveAccountingTransactionRequest.php
@@ -1555,6 +1584,8 @@ generatedFiles:
   - src/Models/Operations/UpdateAccountingInvoiceResponse.php
   - src/Models/Operations/UpdateAccountingJournalRequest.php
   - src/Models/Operations/UpdateAccountingJournalResponse.php
+  - src/Models/Operations/UpdateAccountingOrderRequest.php
+  - src/Models/Operations/UpdateAccountingOrderResponse.php
   - src/Models/Operations/UpdateAccountingTaxrateRequest.php
   - src/Models/Operations/UpdateAccountingTaxrateResponse.php
   - src/Models/Operations/UpdateAccountingTransactionRequest.php
@@ -1651,9 +1682,13 @@ generatedFiles:
   - src/Models/Shared/AccountingEmailType.php
   - src/Models/Shared/AccountingInvoice.php
   - src/Models/Shared/AccountingInvoiceStatus.php
+  - src/Models/Shared/AccountingInvoiceType.php
   - src/Models/Shared/AccountingJournal.php
   - src/Models/Shared/AccountingJournalLineitem.php
   - src/Models/Shared/AccountingLineitem.php
+  - src/Models/Shared/AccountingOrder.php
+  - src/Models/Shared/AccountingOrderStatus.php
+  - src/Models/Shared/AccountingOrderType.php
   - src/Models/Shared/AccountingOrganization.php
   - src/Models/Shared/AccountingTaxrate.php
   - src/Models/Shared/AccountingTelephone.php
@@ -1816,6 +1851,8 @@ generatedFiles:
   - src/Models/Shared/Priority.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
   - src/Models/Shared/PropertyAccountingContactShippingAddress.php
+  - src/Models/Shared/PropertyAccountingOrderBillingAddress.php
+  - src/Models/Shared/PropertyAccountingOrderShippingAddress.php
   - src/Models/Shared/PropertyAccountingOrganizationAddress.php
   - src/Models/Shared/PropertyAtsActivityFrom.php
   - src/Models/Shared/PropertyAtsActivityFromType.php
@@ -1904,6 +1941,7 @@ generatedFiles:
   - src/Models/Shared/WebhookType.php
   - src/Models/Shared/WeightUnit.php
   - src/Note.php
+  - src/Order.php
   - src/Organization.php
   - src/Page.php
   - src/Passthrough.php
@@ -4245,3 +4283,42 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+  createAccountingOrder:
+    speakeasy-default-create-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getAccountingOrder:
+    speakeasy-default-get-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  listAccountingOrders:
+    speakeasy-default-list-accounting-orders:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchAccountingOrder:
+    speakeasy-default-patch-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  removeAccountingOrder:
+    speakeasy-default-remove-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingOrder:
+    speakeasy-default-update-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}

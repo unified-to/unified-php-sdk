@@ -18,6 +18,7 @@ enum ObjectType: string
     case AccountingInvoice = 'accounting_invoice';
     case AccountingTaxrate = 'accounting_taxrate';
     case AccountingOrganization = 'accounting_organization';
+    case AccountingOrder = 'accounting_order';
     case PaymentPayment = 'payment_payment';
     case PaymentLink = 'payment_link';
     case PaymentPayout = 'payment_payout';
