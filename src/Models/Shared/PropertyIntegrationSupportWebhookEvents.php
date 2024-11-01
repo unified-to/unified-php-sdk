@@ -16,9 +16,9 @@ class PropertyIntegrationSupportWebhookEvents
      *
      * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsCreated> $created
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $created = null;
 
     /**
@@ -26,9 +26,9 @@ class PropertyIntegrationSupportWebhookEvents
      *
      * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsDeleted> $deleted
      */
-    #[\JMS\Serializer\Annotation\SerializedName('deleted')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('deleted')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $deleted = null;
 
     /**
@@ -36,9 +36,9 @@ class PropertyIntegrationSupportWebhookEvents
      *
      * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsUpdated> $updated
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $updated = null;
 
     /**

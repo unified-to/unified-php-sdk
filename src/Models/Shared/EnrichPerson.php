@@ -17,49 +17,49 @@ class EnrichPerson
      *
      * @var ?PropertyEnrichPersonAddress $address
      */
-    #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyEnrichPersonAddress $address = null;
 
     /**
      *
      * @var ?string $bio
      */
-    #[\JMS\Serializer\Annotation\SerializedName('bio')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('bio')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $bio = null;
 
     /**
      *
      * @var ?string $birthdate
      */
-    #[\JMS\Serializer\Annotation\SerializedName('birthdate')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('birthdate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $birthdate = null;
 
     /**
      *
      * @var ?string $company
      */
-    #[\JMS\Serializer\Annotation\SerializedName('company')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('company')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $company = null;
 
     /**
      *
      * @var ?string $companyDomain
      */
-    #[\JMS\Serializer\Annotation\SerializedName('company_domain')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('company_domain')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $companyDomain = null;
 
     /**
      *
      * @var ?\DateTime $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -67,74 +67,74 @@ class EnrichPerson
      *
      * @var ?array<EnrichEmail> $emails
      */
-    #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichEmail>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichEmail>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
 
     /**
      *
      * @var ?string $facebookUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('facebook_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('facebook_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $facebookUrl = null;
 
     /**
      *
      * @var ?Gender $gender
      */
-    #[\JMS\Serializer\Annotation\SerializedName('gender')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Gender|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Gender|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Gender $gender = null;
 
     /**
      *
      * @var ?string $githubUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('github_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('github_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $githubUrl = null;
 
     /**
      *
      * @var ?string $githubUsername
      */
-    #[\JMS\Serializer\Annotation\SerializedName('github_username')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('github_username')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $githubUsername = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var ?string $imageUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('image_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('image_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $imageUrl = null;
 
     /**
      *
      * @var ?string $linkedinUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('linkedin_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('linkedin_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $linkedinUrl = null;
 
     /**
      *
      * @var ?string $name
      */
-    #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -142,9 +142,9 @@ class EnrichPerson
      *
      * @var ?array<string, mixed> $raw
      */
-    #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -152,57 +152,57 @@ class EnrichPerson
      *
      * @var ?array<EnrichTelephone> $telephones
      */
-    #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $telephones = null;
 
     /**
      *
      * @var ?string $timezone
      */
-    #[\JMS\Serializer\Annotation\SerializedName('timezone')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('timezone')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $timezone = null;
 
     /**
      *
      * @var ?string $title
      */
-    #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $title = null;
 
     /**
      *
      * @var ?string $twitterHandle
      */
-    #[\JMS\Serializer\Annotation\SerializedName('twitter_handle')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('twitter_handle')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $twitterHandle = null;
 
     /**
      *
      * @var ?string $twitterUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('twitter_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('twitter_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $twitterUrl = null;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
      *
      * @var ?float $utcOffset
      */
-    #[\JMS\Serializer\Annotation\SerializedName('utc_offset')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('utc_offset')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $utcOffset = null;
 
     /**
@@ -210,9 +210,9 @@ class EnrichPerson
      *
      * @var ?array<EnrichPersonWorkHistory> $workHistories
      */
-    #[\JMS\Serializer\Annotation\SerializedName('work_histories')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('work_histories')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $workHistories = null;
 
     /**

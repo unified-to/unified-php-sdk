@@ -16,64 +16,64 @@ class PropertyEnrichCompanyAddress
      *
      * @var ?string $address1
      */
-    #[\JMS\Serializer\Annotation\SerializedName('address1')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('address1')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $address1 = null;
 
     /**
      *
      * @var ?string $address2
      */
-    #[\JMS\Serializer\Annotation\SerializedName('address2')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('address2')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $address2 = null;
 
     /**
      *
      * @var ?string $city
      */
-    #[\JMS\Serializer\Annotation\SerializedName('city')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('city')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $city = null;
 
     /**
      *
      * @var ?string $country
      */
-    #[\JMS\Serializer\Annotation\SerializedName('country')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('country')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $country = null;
 
     /**
      *
      * @var ?string $countryCode
      */
-    #[\JMS\Serializer\Annotation\SerializedName('country_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('country_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $countryCode = null;
 
     /**
      *
      * @var ?string $postalCode
      */
-    #[\JMS\Serializer\Annotation\SerializedName('postal_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('postal_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $postalCode = null;
 
     /**
      *
      * @var ?string $region
      */
-    #[\JMS\Serializer\Annotation\SerializedName('region')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('region')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $region = null;
 
     /**
      *
      * @var ?string $regionCode
      */
-    #[\JMS\Serializer\Annotation\SerializedName('region_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('region_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $regionCode = null;
 
     /**

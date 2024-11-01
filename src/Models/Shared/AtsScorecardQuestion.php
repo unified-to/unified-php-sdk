@@ -15,23 +15,23 @@ class AtsScorecardQuestion
      *
      * @var ?string $answer
      */
-    #[\JMS\Serializer\Annotation\SerializedName('answer')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('answer')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $answer = null;
 
     /**
      *
      * @var ?string $description
      */
-    #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
      *
      * @var string $text
      */
-    #[\JMS\Serializer\Annotation\SerializedName('text')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('text')]
     public string $text;
 
     /**

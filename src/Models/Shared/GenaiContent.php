@@ -15,16 +15,16 @@ class GenaiContent
      *
      * @var string $content
      */
-    #[\JMS\Serializer\Annotation\SerializedName('content')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
     public string $content;
 
     /**
      *
      * @var ?Role $role
      */
-    #[\JMS\Serializer\Annotation\SerializedName('role')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Role|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Role|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Role $role = null;
 
     /**

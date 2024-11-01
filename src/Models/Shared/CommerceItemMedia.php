@@ -15,24 +15,24 @@ class CommerceItemMedia
      *
      * @var ?string $alt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('alt')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('alt')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $alt = null;
 
     /**
      *
      * @var ?float $height
      */
-    #[\JMS\Serializer\Annotation\SerializedName('height')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('height')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $height = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -40,41 +40,41 @@ class CommerceItemMedia
      *
      * @var ?array<CommerceMetadata> $metadata
      */
-    #[\JMS\Serializer\Annotation\SerializedName('metadata')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $metadata = null;
 
     /**
      *
      * @var ?float $position
      */
-    #[\JMS\Serializer\Annotation\SerializedName('position')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('position')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $position = null;
 
     /**
      *
      * @var ?CommerceItemMediaType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMediaType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMediaType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CommerceItemMediaType $type = null;
 
     /**
      *
      * @var string $url
      */
-    #[\JMS\Serializer\Annotation\SerializedName('url')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
     public string $url;
 
     /**
      *
      * @var ?float $width
      */
-    #[\JMS\Serializer\Annotation\SerializedName('width')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('width')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $width = null;
 
     /**

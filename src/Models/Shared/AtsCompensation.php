@@ -15,42 +15,42 @@ class AtsCompensation
      *
      * @var ?string $currency
      */
-    #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
      *
      * @var ?Frequency $frequency
      */
-    #[\JMS\Serializer\Annotation\SerializedName('frequency')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Frequency|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Frequency|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Frequency $frequency = null;
 
     /**
      *
      * @var ?float $max
      */
-    #[\JMS\Serializer\Annotation\SerializedName('max')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('max')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $max = null;
 
     /**
      *
      * @var ?float $min
      */
-    #[\JMS\Serializer\Annotation\SerializedName('min')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('min')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $min = null;
 
     /**
      *
      * @var ?AtsCompensationType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCompensationType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCompensationType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AtsCompensationType $type = null;
 
     /**

@@ -15,48 +15,48 @@ class PropertyUserName
      *
      * @var ?string $familyName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('familyName')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('familyName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $familyName = null;
 
     /**
      *
      * @var ?string $formatted
      */
-    #[\JMS\Serializer\Annotation\SerializedName('formatted')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('formatted')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $formatted = null;
 
     /**
      *
      * @var ?string $givenName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('givenName')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('givenName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $givenName = null;
 
     /**
      *
      * @var ?string $honorificPrefix
      */
-    #[\JMS\Serializer\Annotation\SerializedName('honorificPrefix')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('honorificPrefix')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $honorificPrefix = null;
 
     /**
      *
      * @var ?string $honorificSuffix
      */
-    #[\JMS\Serializer\Annotation\SerializedName('honorificSuffix')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('honorificSuffix')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $honorificSuffix = null;
 
     /**
      *
      * @var ?string $middleName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('middleName')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('middleName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $middleName = null;
 
     /**

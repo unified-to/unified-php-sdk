@@ -1,9 +1,9 @@
-speakeasyVersion: 1.420.0
+speakeasyVersion: 1.423.5
 sources:
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:11ee6d4c0250803a8570b2f8803f1d9de9ce5b5a8b04ce279fd0d59bcbedb2c7
-        sourceBlobDigest: sha256:5653163aa656da8f2f3de59c8b1f89c1aa15acafd9f51c6783d97e1ffdc87091
+        sourceRevisionDigest: sha256:af7d7088a04d893bf4ad5a19bc6834da880b4d9078f72928593ff81396d50857
+        sourceBlobDigest: sha256:876035352a9702c5ff1c3929fbe343648d32fd8ec5c9979a356b243847ee4fb3
         tags:
             - latest
             - main
@@ -11,8 +11,10 @@ targets:
     unified-php:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:11ee6d4c0250803a8570b2f8803f1d9de9ce5b5a8b04ce279fd0d59bcbedb2c7
-        sourceBlobDigest: sha256:5653163aa656da8f2f3de59c8b1f89c1aa15acafd9f51c6783d97e1ffdc87091
+        sourceRevisionDigest: sha256:af7d7088a04d893bf4ad5a19bc6834da880b4d9078f72928593ff81396d50857
+        sourceBlobDigest: sha256:876035352a9702c5ff1c3929fbe343648d32fd8ec5c9979a356b243847ee4fb3
+        codeSamplesNamespace: my-source-code-samples
+        codeSamplesRevisionDigest: sha256:b0936e312bed579110eeecf04d3e2f1459993aef1562bf7e8fd283f4910f6bd9
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -31,3 +33,7 @@ workflow:
                 packagist:
                     username: $PACKAGIST_USERNAME
                     token: $PACKAGIST_TOKEN
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/unified/unified/my-source-code-samples
+                blocking: false

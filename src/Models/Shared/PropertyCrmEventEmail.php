@@ -17,17 +17,17 @@ class PropertyCrmEventEmail
      *
      * @var ?array<string> $attachmentFileIds
      */
-    #[\JMS\Serializer\Annotation\SerializedName('attachment_file_ids')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attachment_file_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $attachmentFileIds = null;
 
     /**
      *
      * @var ?string $body
      */
-    #[\JMS\Serializer\Annotation\SerializedName('body')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('body')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $body = null;
 
     /**
@@ -35,25 +35,25 @@ class PropertyCrmEventEmail
      *
      * @var ?array<string> $cc
      */
-    #[\JMS\Serializer\Annotation\SerializedName('cc')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cc')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $cc = null;
 
     /**
      *
      * @var ?string $from
      */
-    #[\JMS\Serializer\Annotation\SerializedName('from')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('from')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $from = null;
 
     /**
      *
      * @var ?string $subject
      */
-    #[\JMS\Serializer\Annotation\SerializedName('subject')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $subject = null;
 
     /**
@@ -61,9 +61,9 @@ class PropertyCrmEventEmail
      *
      * @var ?array<string> $to
      */
-    #[\JMS\Serializer\Annotation\SerializedName('to')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('to')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $to = null;
 
     /**

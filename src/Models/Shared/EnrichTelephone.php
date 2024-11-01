@@ -15,16 +15,16 @@ class EnrichTelephone
      *
      * @var string $telephone
      */
-    #[\JMS\Serializer\Annotation\SerializedName('telephone')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('telephone')]
     public string $telephone;
 
     /**
      *
      * @var ?EnrichTelephoneType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichTelephoneType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichTelephoneType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?EnrichTelephoneType $type = null;
 
     /**

@@ -15,16 +15,16 @@ class TicketingTelephone
      *
      * @var string $telephone
      */
-    #[\JMS\Serializer\Annotation\SerializedName('telephone')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('telephone')]
     public string $telephone;
 
     /**
      *
      * @var ?TicketingTelephoneType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingTelephoneType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingTelephoneType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?TicketingTelephoneType $type = null;
 
     /**

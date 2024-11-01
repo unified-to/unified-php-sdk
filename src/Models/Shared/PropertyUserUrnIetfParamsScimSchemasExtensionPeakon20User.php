@@ -15,33 +15,33 @@ class PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User
      *
      * @var ?\DateTime $dateOfBirth
      */
-    #[\JMS\Serializer\Annotation\SerializedName('Date of Birth')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('Date of Birth')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $dateOfBirth = null;
 
     /**
      *
      * @var ?PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender $gender
      */
-    #[\JMS\Serializer\Annotation\SerializedName('Gender')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('Gender')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender $gender = null;
 
     /**
      *
      * @var ?string $manager
      */
-    #[\JMS\Serializer\Annotation\SerializedName('Manager')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('Manager')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $manager = null;
 
     /**
      *
      * @var ?string $team
      */
-    #[\JMS\Serializer\Annotation\SerializedName('Team')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('Team')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $team = null;
 
     /**

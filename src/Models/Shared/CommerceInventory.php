@@ -15,47 +15,47 @@ class CommerceInventory
      *
      * @var float $available
      */
-    #[\JMS\Serializer\Annotation\SerializedName('available')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('available')]
     public float $available;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var ?string $itemId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('item_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('item_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $itemId = null;
 
     /**
      *
      * @var ?string $itemOptionId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('item_option_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('item_option_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $itemOptionId = null;
 
     /**
      *
      * @var ?string $itemVariantId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('item_variant_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('item_variant_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $itemVariantId = null;
 
     /**
      *
      * @var ?string $locationId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('location_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('location_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $locationId = null;
 
     /**
@@ -63,17 +63,17 @@ class CommerceInventory
      *
      * @var ?array<string, mixed> $raw
      */
-    #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

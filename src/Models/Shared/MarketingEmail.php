@@ -15,16 +15,16 @@ class MarketingEmail
      *
      * @var string $email
      */
-    #[\JMS\Serializer\Annotation\SerializedName('email')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('email')]
     public string $email;
 
     /**
      *
      * @var ?MarketingEmailType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingEmailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingEmailType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?MarketingEmailType $type = null;
 
     /**

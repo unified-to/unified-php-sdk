@@ -15,16 +15,16 @@ class AtsTelephone
      *
      * @var string $telephone
      */
-    #[\JMS\Serializer\Annotation\SerializedName('telephone')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('telephone')]
     public string $telephone;
 
     /**
      *
      * @var ?AtsTelephoneType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsTelephoneType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsTelephoneType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AtsTelephoneType $type = null;
 
     /**

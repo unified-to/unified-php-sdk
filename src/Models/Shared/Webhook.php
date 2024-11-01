@@ -16,47 +16,47 @@ class Webhook
      *
      * @var ?\DateTime $checkedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('checked_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('checked_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $checkedAt = null;
 
     /**
      *
      * @var string $connectionId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('connection_id')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('connection_id')]
     public string $connectionId;
 
     /**
      *
      * @var ?\DateTime $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
      *
      * @var ?string $environment
      */
-    #[\JMS\Serializer\Annotation\SerializedName('environment')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('environment')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $environment = null;
 
     /**
      *
      * @var Event $event
      */
-    #[\JMS\Serializer\Annotation\SerializedName('event')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Event')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('event')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Event')]
     public Event $event;
 
     /**
      *
      * @var ?string $fields
      */
-    #[\JMS\Serializer\Annotation\SerializedName('fields')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fields')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $fields = null;
 
     /**
@@ -64,48 +64,48 @@ class Webhook
      *
      * @var ?array<string, string> $filters
      */
-    #[\JMS\Serializer\Annotation\SerializedName('filters')]
-    #[\JMS\Serializer\Annotation\Type('array<string, string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('filters')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $filters = null;
 
     /**
      *
      * @var string $hookUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('hook_url')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('hook_url')]
     public string $hookUrl;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var ?string $integrationType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('integration_type')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_type')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $integrationType = null;
 
     /**
      *
      * @var ?float $interval
      */
-    #[\JMS\Serializer\Annotation\SerializedName('interval')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('interval')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $interval = null;
 
     /**
      *
      * @var ?bool $isHealthy
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_healthy')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_healthy')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isHealthy = null;
 
     /**
@@ -113,25 +113,25 @@ class Webhook
      *
      * @var ?array<string, mixed> $meta
      */
-    #[\JMS\Serializer\Annotation\SerializedName('meta')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $meta = null;
 
     /**
      *
      * @var ObjectType $objectType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('object_type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ObjectType')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('object_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ObjectType')]
     public ObjectType $objectType;
 
     /**
      *
      * @var ?float $pageMaxLimit
      */
-    #[\JMS\Serializer\Annotation\SerializedName('page_max_limit')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('page_max_limit')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $pageMaxLimit = null;
 
     /**
@@ -139,34 +139,34 @@ class Webhook
      *
      * @var ?array<string> $runs
      */
-    #[\JMS\Serializer\Annotation\SerializedName('runs')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('runs')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $runs = null;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
      *
      * @var ?WebhookType $webhookType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('webhook_type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WebhookType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('webhook_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WebhookType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?WebhookType $webhookType = null;
 
     /**
      *
      * @var ?string $workspaceId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('workspace_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $workspaceId = null;
 
     /**

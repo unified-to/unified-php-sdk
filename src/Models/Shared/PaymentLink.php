@@ -15,56 +15,56 @@ class PaymentLink
      *
      * @var ?float $amount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $amount = null;
 
     /**
      *
      * @var ?string $contactId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $contactId = null;
 
     /**
      *
      * @var ?\DateTime $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
      *
      * @var ?string $currency
      */
-    #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var ?bool $isActive
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
 
     /**
      *
      * @var ?bool $isChargeableNow
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_chargeable_now')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_chargeable_now')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isChargeableNow = null;
 
     /**
@@ -72,17 +72,17 @@ class PaymentLink
      *
      * @var ?array<PaymentLinkLineitem> $lineitems
      */
-    #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $lineitems = null;
 
     /**
      *
      * @var ?string $paymentId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('payment_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $paymentId = null;
 
     /**
@@ -90,25 +90,33 @@ class PaymentLink
      *
      * @var ?array<string, mixed> $raw
      */
-    #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
+
+    /**
+     *
+     * @var ?string $successUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('success_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $successUrl = null;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
      *
      * @var ?string $url
      */
-    #[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $url = null;
 
     /**
@@ -122,10 +130,11 @@ class PaymentLink
      * @param  ?array<PaymentLinkLineitem>  $lineitems
      * @param  ?string  $paymentId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $successUrl
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
      */
-    public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?string $paymentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?string $paymentId = null, ?array $raw = null, ?string $successUrl = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->amount = $amount;
         $this->contactId = $contactId;
@@ -137,6 +146,7 @@ class PaymentLink
         $this->lineitems = $lineitems;
         $this->paymentId = $paymentId;
         $this->raw = $raw;
+        $this->successUrl = $successUrl;
         $this->updatedAt = $updatedAt;
         $this->url = $url;
     }

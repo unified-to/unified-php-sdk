@@ -15,80 +15,80 @@ class AccountingInvoice
      *
      * @var ?float $balanceAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('balance_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('balance_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $balanceAmount = null;
 
     /**
      *
      * @var ?\DateTime $cancelledAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('cancelled_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cancelled_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $cancelledAt = null;
 
     /**
      *
      * @var ?string $contactId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('contact_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $contactId = null;
 
     /**
      *
      * @var ?\DateTime $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
      *
      * @var ?string $currency
      */
-    #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
      *
      * @var ?float $discountAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('discount_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('discount_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $discountAmount = null;
 
     /**
      *
      * @var ?\DateTime $dueAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('due_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('due_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $dueAt = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var ?\DateTime $invoiceAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('invoice_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('invoice_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $invoiceAt = null;
 
     /**
      *
      * @var ?string $invoiceNumber
      */
-    #[\JMS\Serializer\Annotation\SerializedName('invoice_number')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('invoice_number')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $invoiceNumber = null;
 
     /**
@@ -96,42 +96,42 @@ class AccountingInvoice
      *
      * @var ?array<AccountingLineitem> $lineitems
      */
-    #[\JMS\Serializer\Annotation\SerializedName('lineitems')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $lineitems = null;
 
     /**
      *
      * @var ?string $notes
      */
-    #[\JMS\Serializer\Annotation\SerializedName('notes')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $notes = null;
 
     /**
      *
      * @var ?float $paidAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('paid_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('paid_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $paidAmount = null;
 
     /**
      *
      * @var ?\DateTime $paidAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('paid_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('paid_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $paidAt = null;
 
     /**
      *
      * @var ?PaymentCollectionMethod $paymentCollectionMethod
      */
-    #[\JMS\Serializer\Annotation\SerializedName('payment_collection_method')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentCollectionMethod|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_collection_method')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentCollectionMethod|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PaymentCollectionMethod $paymentCollectionMethod = null;
 
     /**
@@ -139,83 +139,83 @@ class AccountingInvoice
      *
      * @var ?array<string, mixed> $raw
      */
-    #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
      *
      * @var ?float $refundAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('refund_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('refund_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $refundAmount = null;
 
     /**
      *
      * @var ?string $refundReason
      */
-    #[\JMS\Serializer\Annotation\SerializedName('refund_reason')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('refund_reason')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $refundReason = null;
 
     /**
      *
      * @var ?\DateTime $refundedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('refunded_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('refunded_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $refundedAt = null;
 
     /**
      *
      * @var ?AccountingInvoiceStatus $status
      */
-    #[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AccountingInvoiceStatus $status = null;
 
     /**
      *
      * @var ?float $taxAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $taxAmount = null;
 
     /**
      *
      * @var ?float $totalAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $totalAmount = null;
 
     /**
      *
      * @var ?AccountingInvoiceType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AccountingInvoiceType $type = null;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
      *
      * @var ?string $url
      */
-    #[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $url = null;
 
     /**

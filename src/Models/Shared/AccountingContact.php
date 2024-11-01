@@ -15,33 +15,33 @@ class AccountingContact
      *
      * @var ?PropertyAccountingContactBillingAddress $billingAddress
      */
-    #[\JMS\Serializer\Annotation\SerializedName('billing_address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAccountingContactBillingAddress $billingAddress = null;
 
     /**
      *
      * @var ?string $companyName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('company_name')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('company_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $companyName = null;
 
     /**
      *
      * @var ?\DateTime $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
      *
      * @var ?string $currency
      */
-    #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
@@ -49,57 +49,57 @@ class AccountingContact
      *
      * @var ?array<AccountingEmail> $emails
      */
-    #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingEmail>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingEmail>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var ?string $identification
      */
-    #[\JMS\Serializer\Annotation\SerializedName('identification')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('identification')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $identification = null;
 
     /**
      *
      * @var ?bool $isActive
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
 
     /**
      *
      * @var ?bool $isCustomer
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_customer')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_customer')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isCustomer = null;
 
     /**
      *
      * @var ?bool $isSupplier
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_supplier')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_supplier')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isSupplier = null;
 
     /**
      *
      * @var ?string $name
      */
-    #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -107,17 +107,17 @@ class AccountingContact
      *
      * @var ?array<AccountingContactPaymentMethod> $paymentMethods
      */
-    #[\JMS\Serializer\Annotation\SerializedName('payment_methods')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_methods')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $paymentMethods = null;
 
     /**
      *
      * @var ?string $portalUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('portal_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('portal_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $portalUrl = null;
 
     /**
@@ -125,35 +125,35 @@ class AccountingContact
      *
      * @var ?array<string, mixed> $raw
      */
-    #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
      *
      * @var ?PropertyAccountingContactShippingAddress $shippingAddress
      */
-    #[\JMS\Serializer\Annotation\SerializedName('shipping_address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactShippingAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('shipping_address')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactShippingAddress|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAccountingContactShippingAddress $shippingAddress = null;
 
     /**
      *
      * @var ?TaxExemption $taxExemption
      */
-    #[\JMS\Serializer\Annotation\SerializedName('tax_exemption')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaxExemption|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_exemption')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaxExemption|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?TaxExemption $taxExemption = null;
 
     /**
      *
      * @var ?string $taxNumber
      */
-    #[\JMS\Serializer\Annotation\SerializedName('tax_number')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_number')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $taxNumber = null;
 
     /**
@@ -161,17 +161,17 @@ class AccountingContact
      *
      * @var ?array<AccountingTelephone> $telephones
      */
-    #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTelephone>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTelephone>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $telephones = null;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

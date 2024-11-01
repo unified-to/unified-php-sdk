@@ -15,136 +15,136 @@ class PaymentLinkLineitem
      *
      * @var ?string $accountId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('account_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('account_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $accountId = null;
 
     /**
      *
      * @var ?\DateTime $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
      *
      * @var ?float $discountAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('discount_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('discount_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $discountAmount = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var ?string $itemDescription
      */
-    #[\JMS\Serializer\Annotation\SerializedName('item_description')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('item_description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $itemDescription = null;
 
     /**
      *
      * @var ?string $itemId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('item_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('item_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $itemId = null;
 
     /**
      *
      * @var ?string $itemName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('item_name')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('item_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $itemName = null;
 
     /**
      *
      * @var ?string $itemSku
      */
-    #[\JMS\Serializer\Annotation\SerializedName('item_sku')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('item_sku')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $itemSku = null;
 
     /**
      *
      * @var ?string $notes
      */
-    #[\JMS\Serializer\Annotation\SerializedName('notes')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $notes = null;
 
     /**
      *
      * @var ?float $refundAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('refund_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('refund_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $refundAmount = null;
 
     /**
      *
      * @var ?\DateTime $refundedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('refunded_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('refunded_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $refundedAt = null;
 
     /**
      *
      * @var ?float $taxAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('tax_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $taxAmount = null;
 
     /**
      *
      * @var ?string $taxrateId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('taxrate_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxrate_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $taxrateId = null;
 
     /**
      *
      * @var ?float $totalAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('total_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $totalAmount = null;
 
     /**
      *
      * @var ?float $unitAmount
      */
-    #[\JMS\Serializer\Annotation\SerializedName('unit_amount')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('unit_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $unitAmount = null;
 
     /**
      *
      * @var ?float $unitQuantity
      */
-    #[\JMS\Serializer\Annotation\SerializedName('unit_quantity')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('unit_quantity')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $unitQuantity = null;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**

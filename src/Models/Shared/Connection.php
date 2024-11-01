@@ -17,17 +17,17 @@ class Connection
      *
      * @var ?PropertyConnectionAuth $auth
      */
-    #[\JMS\Serializer\Annotation\SerializedName('auth')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyConnectionAuth|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('auth')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyConnectionAuth|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyConnectionAuth $auth = null;
 
     /**
      *
      * @var ?string $authAwsArn
      */
-    #[\JMS\Serializer\Annotation\SerializedName('auth_aws_arn')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('auth_aws_arn')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $authAwsArn = null;
 
     /**
@@ -35,16 +35,16 @@ class Connection
      *
      * @var array<PropertyConnectionCategories> $categories
      */
-    #[\JMS\Serializer\Annotation\SerializedName('categories')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories>')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories>')]
     public array $categories;
 
     /**
      *
      * @var ?\DateTime $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
@@ -52,64 +52,64 @@ class Connection
      *
      * @var ?array<Undefined> $cursorsCache
      */
-    #[\JMS\Serializer\Annotation\SerializedName('cursors_cache')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cursors_cache')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $cursorsCache = null;
 
     /**
      *
      * @var ?string $environment
      */
-    #[\JMS\Serializer\Annotation\SerializedName('environment')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('environment')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $environment = null;
 
     /**
      *
      * @var ?string $externalXref
      */
-    #[\JMS\Serializer\Annotation\SerializedName('external_xref')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('external_xref')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $externalXref = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var string $integrationType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('integration_type')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_type')]
     public string $integrationType;
 
     /**
      *
      * @var ?bool $isPaused
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_paused')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_paused')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isPaused = null;
 
     /**
      *
      * @var ?\DateTime $lastHealthyAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('last_healthy_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_healthy_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $lastHealthyAt = null;
 
     /**
      *
      * @var ?\DateTime $lastUnhealthyAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('last_unhealthy_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_unhealthy_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $lastUnhealthyAt = null;
 
     /**
@@ -117,24 +117,24 @@ class Connection
      *
      * @var array<PropertyConnectionPermissions> $permissions
      */
-    #[\JMS\Serializer\Annotation\SerializedName('permissions')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('permissions')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>')]
     public array $permissions;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
      *
      * @var ?string $workspaceId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('workspace_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('workspace_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $workspaceId = null;
 
     /**

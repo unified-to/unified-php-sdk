@@ -15,42 +15,42 @@ class Undefined
      *
      * @var ?string $dollarRef
      */
-    #[\JMS\Serializer\Annotation\SerializedName('$ref')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('$ref')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $dollarRef = null;
 
     /**
      *
      * @var ?string $display
      */
-    #[\JMS\Serializer\Annotation\SerializedName('display')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('display')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $display = null;
 
     /**
      *
      * @var ?Operation $operation
      */
-    #[\JMS\Serializer\Annotation\SerializedName('operation')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Operation|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('operation')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Operation|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Operation $operation = null;
 
     /**
      *
      * @var ?UndefinedType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UndefinedType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UndefinedType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?UndefinedType $type = null;
 
     /**
      *
      * @var ?string $value
      */
-    #[\JMS\Serializer\Annotation\SerializedName('value')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $value = null;
 
     /**

@@ -15,9 +15,9 @@ class IntegrationSupport
      *
      * @var ?FromWebhook $fromWebhook
      */
-    #[\JMS\Serializer\Annotation\SerializedName('from_webhook')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\FromWebhook|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('from_webhook')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\FromWebhook|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?FromWebhook $fromWebhook = null;
 
     /**
@@ -25,297 +25,297 @@ class IntegrationSupport
      *
      * @var ?array<string, mixed> $inboundFields
      */
-    #[\JMS\Serializer\Annotation\SerializedName('inbound_fields')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('inbound_fields')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $inboundFields = null;
 
     /**
      *
      * @var ?ListAccountId $listAccountId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_account_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListAccountId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_account_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListAccountId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListAccountId $listAccountId = null;
 
     /**
      *
      * @var ?ListApplicationId $listApplicationId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_application_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListApplicationId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_application_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListApplicationId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListApplicationId $listApplicationId = null;
 
     /**
      *
      * @var ?ListCandidateId $listCandidateId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_candidate_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCandidateId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_candidate_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCandidateId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListCandidateId $listCandidateId = null;
 
     /**
      *
      * @var ?ListChannelId $listChannelId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_channel_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListChannelId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_channel_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListChannelId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListChannelId $listChannelId = null;
 
     /**
      *
      * @var ?ListCollectionId $listCollectionId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_collection_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCollectionId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_collection_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCollectionId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListCollectionId $listCollectionId = null;
 
     /**
      *
      * @var ?ListCompanyId $listCompanyId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_company_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCompanyId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_company_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCompanyId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListCompanyId $listCompanyId = null;
 
     /**
      *
      * @var ?ListContactId $listContactId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_contact_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListContactId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_contact_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListContactId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListContactId $listContactId = null;
 
     /**
      *
      * @var ?ListCustomerId $listCustomerId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_customer_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCustomerId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_customer_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCustomerId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListCustomerId $listCustomerId = null;
 
     /**
      *
      * @var ?ListDealId $listDealId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_deal_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListDealId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_deal_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListDealId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListDealId $listDealId = null;
 
     /**
      *
      * @var ?ListInterviewId $listInterviewId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_interview_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInterviewId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_interview_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInterviewId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListInterviewId $listInterviewId = null;
 
     /**
      *
      * @var ?ListInvoiceId $listInvoiceId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_invoice_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInvoiceId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_invoice_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInvoiceId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListInvoiceId $listInvoiceId = null;
 
     /**
      *
      * @var ?ListItemId $listItemId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_item_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_item_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListItemId $listItemId = null;
 
     /**
      *
      * @var ?ListItemVariantId $listItemVariantId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_item_variant_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemVariantId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_item_variant_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemVariantId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListItemVariantId $listItemVariantId = null;
 
     /**
      *
      * @var ?ListJobId $listJobId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_job_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListJobId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_job_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListJobId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListJobId $listJobId = null;
 
     /**
      *
      * @var ?ListLimit $listLimit
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_limit')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLimit|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_limit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLimit|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListLimit $listLimit = null;
 
     /**
      *
      * @var ?ListLinkId $listLinkId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_link_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLinkId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_link_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLinkId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListLinkId $listLinkId = null;
 
     /**
      *
      * @var ?ListListId $listListId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_list_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListListId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_list_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListListId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListListId $listListId = null;
 
     /**
      *
      * @var ?ListLocationId $listLocationId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_location_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLocationId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_location_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLocationId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListLocationId $listLocationId = null;
 
     /**
      *
      * @var ?ListOffset $listOffset
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_offset')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOffset|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_offset')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOffset|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListOffset $listOffset = null;
 
     /**
      *
      * @var ?ListOrder $listOrder
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_order')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOrder|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_order')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOrder|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListOrder $listOrder = null;
 
     /**
      *
      * @var ?ListParentId $listParentId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_parent_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListParentId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_parent_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListParentId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListParentId $listParentId = null;
 
     /**
      *
      * @var ?ListProjectId $listProjectId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_project_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListProjectId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_project_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListProjectId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListProjectId $listProjectId = null;
 
     /**
      *
      * @var ?ListQuery $listQuery
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_query')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListQuery|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_query')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListQuery|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListQuery $listQuery = null;
 
     /**
      *
      * @var ?ListRawFields $listRawFields
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_raw_fields')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListRawFields|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_raw_fields')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListRawFields|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListRawFields $listRawFields = null;
 
     /**
      *
      * @var ?ListSortByCreatedAt $listSortByCreatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_created_at')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByCreatedAt|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_sort_by_created_at')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByCreatedAt|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListSortByCreatedAt $listSortByCreatedAt = null;
 
     /**
      *
      * @var ?ListSortByName $listSortByName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_name')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByName|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_sort_by_name')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByName|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListSortByName $listSortByName = null;
 
     /**
      *
      * @var ?ListSortByUpdatedAt $listSortByUpdatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_sort_by_updated_at')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByUpdatedAt|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_sort_by_updated_at')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByUpdatedAt|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListSortByUpdatedAt $listSortByUpdatedAt = null;
 
     /**
      *
      * @var ?ListSpaceId $listSpaceId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_space_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSpaceId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_space_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSpaceId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListSpaceId $listSpaceId = null;
 
     /**
      *
      * @var ?ListTicketId $listTicketId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_ticket_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListTicketId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_ticket_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListTicketId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListTicketId $listTicketId = null;
 
     /**
      *
      * @var ?ListType $listType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListType $listType = null;
 
     /**
      *
      * @var ?ListUpdatedGte $listUpdatedGte
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_updated_gte')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUpdatedGte|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_updated_gte')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUpdatedGte|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListUpdatedGte $listUpdatedGte = null;
 
     /**
      *
      * @var ?ListUserId $listUserId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('list_user_id')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUserId|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_user_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUserId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListUserId $listUserId = null;
 
     /**
@@ -323,9 +323,9 @@ class IntegrationSupport
      *
      * @var ?array<string, bool> $methods
      */
-    #[\JMS\Serializer\Annotation\SerializedName('methods')]
-    #[\JMS\Serializer\Annotation\Type('array<string, bool>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('methods')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, bool>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $methods = null;
 
     /**
@@ -333,9 +333,9 @@ class IntegrationSupport
      *
      * @var ?array<string, mixed> $outboundFields
      */
-    #[\JMS\Serializer\Annotation\SerializedName('outbound_fields')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('outbound_fields')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $outboundFields = null;
 
     /**
@@ -343,63 +343,63 @@ class IntegrationSupport
      *
      * @var ?array<string> $rawObjects
      */
-    #[\JMS\Serializer\Annotation\SerializedName('raw_objects')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw_objects')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $rawObjects = null;
 
     /**
      *
      * @var ?SearchDomain $searchDomain
      */
-    #[\JMS\Serializer\Annotation\SerializedName('search_domain')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchDomain|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('search_domain')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchDomain|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SearchDomain $searchDomain = null;
 
     /**
      *
      * @var ?SearchEmail $searchEmail
      */
-    #[\JMS\Serializer\Annotation\SerializedName('search_email')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchEmail|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('search_email')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchEmail|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SearchEmail $searchEmail = null;
 
     /**
      *
      * @var ?SearchLinkedinurl $searchLinkedinurl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('search_linkedinurl')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchLinkedinurl|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('search_linkedinurl')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchLinkedinurl|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SearchLinkedinurl $searchLinkedinurl = null;
 
     /**
      *
      * @var ?SearchName $searchName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('search_name')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchName|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('search_name')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchName|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SearchName $searchName = null;
 
     /**
      *
      * @var ?SearchTwitter $searchTwitter
      */
-    #[\JMS\Serializer\Annotation\SerializedName('search_twitter')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchTwitter|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('search_twitter')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchTwitter|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SearchTwitter $searchTwitter = null;
 
     /**
      *
      * @var ?PropertyIntegrationSupportWebhookEvents $webhookEvents
      */
-    #[\JMS\Serializer\Annotation\SerializedName('webhook_events')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('webhook_events')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null;
 
     /**

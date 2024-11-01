@@ -15,41 +15,41 @@ class PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManag
      *
      * @var ?string $dollarRef
      */
-    #[\JMS\Serializer\Annotation\SerializedName('$ref')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('$ref')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $dollarRef = null;
 
     /**
      *
      * @var ?string $displayName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('displayName')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('displayName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $displayName = null;
 
     /**
      *
      * @var ?string $managerId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('managerId')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('managerId')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $managerId = null;
 
     /**
      *
      * @var ?PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType $type = null;
 
     /**
      *
      * @var ?string $value
      */
-    #[\JMS\Serializer\Annotation\SerializedName('value')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $value = null;
 
     /**

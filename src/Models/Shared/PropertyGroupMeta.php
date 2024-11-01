@@ -15,41 +15,41 @@ class PropertyGroupMeta
      *
      * @var ?string $created
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $created = null;
 
     /**
      *
      * @var ?string $lastModified
      */
-    #[\JMS\Serializer\Annotation\SerializedName('lastModified')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('lastModified')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $lastModified = null;
 
     /**
      *
      * @var ?string $location
      */
-    #[\JMS\Serializer\Annotation\SerializedName('location')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('location')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $location = null;
 
     /**
      *
      * @var ?ResourceType $resourceType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('resourceType')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ResourceType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('resourceType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ResourceType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ResourceType $resourceType = null;
 
     /**
      *
      * @var ?string $version
      */
-    #[\JMS\Serializer\Annotation\SerializedName('version')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('version')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $version = null;
 
     /**

@@ -15,3 +15,7 @@ targets:
             packagist:
                 username: $PACKAGIST_USERNAME
                 token: $PACKAGIST_TOKEN
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/unified/unified/my-source-code-samples
+            blocking: false

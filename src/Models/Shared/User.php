@@ -15,8 +15,8 @@ class User
      *
      * @var ?bool $active
      */
-    #[\JMS\Serializer\Annotation\SerializedName('active')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('active')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $active = null;
 
     /**
@@ -24,17 +24,17 @@ class User
      *
      * @var ?array<Undefined> $addresses
      */
-    #[\JMS\Serializer\Annotation\SerializedName('addresses')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('addresses')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $addresses = null;
 
     /**
      *
      * @var ?string $displayName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('displayName')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('displayName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $displayName = null;
 
     /**
@@ -42,9 +42,9 @@ class User
      *
      * @var ?array<Undefined> $emails
      */
-    #[\JMS\Serializer\Annotation\SerializedName('emails')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
 
     /**
@@ -52,17 +52,17 @@ class User
      *
      * @var ?array<Undefined> $entitlements
      */
-    #[\JMS\Serializer\Annotation\SerializedName('entitlements')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('entitlements')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $entitlements = null;
 
     /**
      *
      * @var ?string $externalId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('externalId')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('externalId')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $externalId = null;
 
     /**
@@ -70,17 +70,17 @@ class User
      *
      * @var ?array<Undefined> $groups
      */
-    #[\JMS\Serializer\Annotation\SerializedName('groups')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('groups')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $groups = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -88,51 +88,51 @@ class User
      *
      * @var ?array<Undefined> $ims
      */
-    #[\JMS\Serializer\Annotation\SerializedName('ims')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('ims')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $ims = null;
 
     /**
      *
      * @var ?string $locale
      */
-    #[\JMS\Serializer\Annotation\SerializedName('locale')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $locale = null;
 
     /**
      *
      * @var ?PropertyUserMeta $meta
      */
-    #[\JMS\Serializer\Annotation\SerializedName('meta')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserMeta|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserMeta|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUserMeta $meta = null;
 
     /**
      *
      * @var ?PropertyUserName $name
      */
-    #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserName|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserName|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUserName $name = null;
 
     /**
      *
      * @var ?string $nickName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('nickName')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('nickName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $nickName = null;
 
     /**
      *
      * @var ?string $password
      */
-    #[\JMS\Serializer\Annotation\SerializedName('password')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('password')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $password = null;
 
     /**
@@ -140,9 +140,9 @@ class User
      *
      * @var ?array<Undefined> $phoneNumbers
      */
-    #[\JMS\Serializer\Annotation\SerializedName('phoneNumbers')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('phoneNumbers')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $phoneNumbers = null;
 
     /**
@@ -150,25 +150,25 @@ class User
      *
      * @var ?array<Undefined> $photos
      */
-    #[\JMS\Serializer\Annotation\SerializedName('photos')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('photos')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $photos = null;
 
     /**
      *
      * @var ?string $preferredLanguage
      */
-    #[\JMS\Serializer\Annotation\SerializedName('preferredLanguage')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('preferredLanguage')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $preferredLanguage = null;
 
     /**
      *
      * @var ?string $profileUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('profileUrl')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('profileUrl')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $profileUrl = null;
 
     /**
@@ -176,9 +176,9 @@ class User
      *
      * @var ?array<Undefined> $roles
      */
-    #[\JMS\Serializer\Annotation\SerializedName('roles')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('roles')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $roles = null;
 
     /**
@@ -186,68 +186,68 @@ class User
      *
      * @var ?array<PropertyUserSchemas> $schemas
      */
-    #[\JMS\Serializer\Annotation\SerializedName('schemas')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyUserSchemas>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('schemas')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyUserSchemas>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $schemas = null;
 
     /**
      *
      * @var ?string $timezone
      */
-    #[\JMS\Serializer\Annotation\SerializedName('timezone')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('timezone')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $timezone = null;
 
     /**
      *
      * @var ?string $title
      */
-    #[\JMS\Serializer\Annotation\SerializedName('title')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $title = null;
 
     /**
      *
      * @var ?PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User $urnIetfParamsScimSchemasExtensionEnterprise20User
      */
-    #[\JMS\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User $urnIetfParamsScimSchemasExtensionEnterprise20User = null;
 
     /**
      *
      * @var ?PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User $urnIetfParamsScimSchemasExtensionLatticeAttributes10User
      */
-    #[\JMS\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User $urnIetfParamsScimSchemasExtensionLatticeAttributes10User = null;
 
     /**
      *
      * @var ?PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User $urnIetfParamsScimSchemasExtensionPeakon20User
      */
-    #[\JMS\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:peakon:2.0:User')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:peakon:2.0:User')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User $urnIetfParamsScimSchemasExtensionPeakon20User = null;
 
     /**
      *
      * @var ?string $userName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('userName')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('userName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $userName = null;
 
     /**
      *
      * @var ?string $userType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('userType')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('userType')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $userType = null;
 
     /**
@@ -255,9 +255,9 @@ class User
      *
      * @var ?array<Undefined> $x509Certificates
      */
-    #[\JMS\Serializer\Annotation\SerializedName('x509Certificates')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('x509Certificates')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $x509Certificates = null;
 
     /**

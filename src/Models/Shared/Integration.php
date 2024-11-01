@@ -16,8 +16,8 @@ class Integration
      *
      * @var ?float $activeHealthyConnections
      */
-    #[\JMS\Serializer\Annotation\SerializedName('active_healthy_connections')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('active_healthy_connections')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $activeHealthyConnections = null;
 
     /**
@@ -25,25 +25,25 @@ class Integration
      *
      * @var ?array<string, mixed> $api
      */
-    #[\JMS\Serializer\Annotation\SerializedName('api')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('api')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $api = null;
 
     /**
      *
      * @var ?string $apiDocsUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('api_docs_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('api_docs_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $apiDocsUrl = null;
 
     /**
      *
      * @var ?bool $beta
      */
-    #[\JMS\Serializer\Annotation\SerializedName('beta')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('beta')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $beta = null;
 
     /**
@@ -51,95 +51,95 @@ class Integration
      *
      * @var array<PropertyIntegrationCategories> $categories
      */
-    #[\JMS\Serializer\Annotation\SerializedName('categories')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories>')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories>')]
     public array $categories;
 
     /**
      *
      * @var ?string $color
      */
-    #[\JMS\Serializer\Annotation\SerializedName('color')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('color')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $color = null;
 
     /**
      *
      * @var ?string $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $createdAt = null;
 
     /**
      *
      * @var ?string $description
      */
-    #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
      *
      * @var ?string $faIcon
      */
-    #[\JMS\Serializer\Annotation\SerializedName('fa_icon')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fa_icon')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $faIcon = null;
 
     /**
      *
      * @var ?bool $featured
      */
-    #[\JMS\Serializer\Annotation\SerializedName('featured')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('featured')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $featured = null;
 
     /**
      *
      * @var ?bool $inProgress
      */
-    #[\JMS\Serializer\Annotation\SerializedName('in_progress')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('in_progress')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $inProgress = null;
 
     /**
      *
      * @var ?bool $isActive
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_active')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
 
     /**
      *
      * @var ?string $logoUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('logo_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('logo_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $logoUrl = null;
 
     /**
      *
      * @var string $name
      */
-    #[\JMS\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     public string $name;
 
     /**
      *
      * @var ?float $popularity
      */
-    #[\JMS\Serializer\Annotation\SerializedName('popularity')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('popularity')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $popularity = null;
 
     /**
      *
      * @var ?string $rateLimitDescription
      */
-    #[\JMS\Serializer\Annotation\SerializedName('rate_limit_description')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('rate_limit_description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $rateLimitDescription = null;
 
     /**
@@ -147,25 +147,25 @@ class Integration
      *
      * @var ?array<string, IntegrationSupport> $support
      */
-    #[\JMS\Serializer\Annotation\SerializedName('support')]
-    #[\JMS\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('support')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $support = null;
 
     /**
      *
      * @var ?\DateTime $testedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('tested_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tested_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $testedAt = null;
 
     /**
      *
      * @var ?string $textColor
      */
-    #[\JMS\Serializer\Annotation\SerializedName('text_color')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('text_color')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $textColor = null;
 
     /**
@@ -173,9 +173,9 @@ class Integration
      *
      * @var ?array<string> $tokenInstructions
      */
-    #[\JMS\Serializer\Annotation\SerializedName('token_instructions')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('token_instructions')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tokenInstructions = null;
 
     /**
@@ -183,32 +183,32 @@ class Integration
      *
      * @var ?array<string> $tokenNames
      */
-    #[\JMS\Serializer\Annotation\SerializedName('token_names')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('token_names')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tokenNames = null;
 
     /**
      *
      * @var string $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     public string $type;
 
     /**
      *
      * @var ?string $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $updatedAt = null;
 
     /**
      *
      * @var ?string $webUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('web_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('web_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $webUrl = null;
 
     /**

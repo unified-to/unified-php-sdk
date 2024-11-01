@@ -15,16 +15,16 @@ class AtsJobQuestion
      *
      * @var ?string $description
      */
-    #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -32,40 +32,40 @@ class AtsJobQuestion
      *
      * @var ?array<string> $options
      */
-    #[\JMS\Serializer\Annotation\SerializedName('options')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('options')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $options = null;
 
     /**
      *
      * @var ?string $prompt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('prompt')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('prompt')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $prompt = null;
 
     /**
      *
      * @var string $question
      */
-    #[\JMS\Serializer\Annotation\SerializedName('question')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('question')]
     public string $question;
 
     /**
      *
      * @var ?bool $required
      */
-    #[\JMS\Serializer\Annotation\SerializedName('required')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('required')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $required = null;
 
     /**
      *
      * @var AtsJobQuestionType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobQuestionType')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobQuestionType')]
     public AtsJobQuestionType $type;
 
     /**

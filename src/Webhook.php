@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
-use JMS\Serializer\DeserializationContext;
+use Speakeasy\Serializer\DeserializationContext;
 use Unified\Unified_to\Models\Operations;
 
 class Webhook
@@ -17,7 +17,7 @@ class Webhook
     /**
      * @param  SDKConfiguration  $sdkConfig
      */
-    public function __construct(SDKConfiguration $sdkConfig)
+    public function __construct(public SDKConfiguration $sdkConfig)
     {
         $this->sdkConfiguration = $sdkConfig;
     }

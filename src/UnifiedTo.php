@@ -180,7 +180,7 @@ class UnifiedTo
      * @param  SDKConfiguration  $sdkConfiguration
      */
     public function __construct(
-        private SDKConfiguration $sdkConfiguration,
+        public SDKConfiguration $sdkConfiguration,
     ) {
         $this->accounting = new Accounting($this->sdkConfiguration);
         $this->account = new Account($this->sdkConfiguration);

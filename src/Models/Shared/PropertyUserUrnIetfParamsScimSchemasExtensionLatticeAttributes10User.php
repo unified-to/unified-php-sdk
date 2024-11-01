@@ -15,83 +15,83 @@ class PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
      *
      * @var ?string $jobLevel
      */
-    #[\JMS\Serializer\Annotation\SerializedName('Job Level')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('Job Level')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $jobLevel = null;
 
     /**
      *
      * @var ?string $peopleManagerReviews
      */
-    #[\JMS\Serializer\Annotation\SerializedName('People Manager (Reviews)')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('People Manager (Reviews)')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $peopleManagerReviews = null;
 
     /**
      *
      * @var ?string $remoteWorkLocation
      */
-    #[\JMS\Serializer\Annotation\SerializedName('Remote Work - Location')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('Remote Work - Location')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $remoteWorkLocation = null;
 
     /**
      *
      * @var ?string $salaryInformation
      */
-    #[\JMS\Serializer\Annotation\SerializedName('Salary Information')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('Salary Information')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $salaryInformation = null;
 
     /**
      *
      * @var ?string $subDepartments
      */
-    #[\JMS\Serializer\Annotation\SerializedName('Sub Departments ')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('Sub Departments ')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $subDepartments = null;
 
     /**
      *
      * @var ?\DateTime $birthDate
      */
-    #[\JMS\Serializer\Annotation\SerializedName('birthDate')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('birthDate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $birthDate = null;
 
     /**
      *
      * @var ?Ethnicity $ethnicity
      */
-    #[\JMS\Serializer\Annotation\SerializedName('ethnicity')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Ethnicity|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('ethnicity')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Ethnicity|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Ethnicity $ethnicity = null;
 
     /**
      *
      * @var ?PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender $gender
      */
-    #[\JMS\Serializer\Annotation\SerializedName('gender')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender $gender = null;
 
     /**
      *
      * @var ?SexualOrientation $sexualOrientation
      */
-    #[\JMS\Serializer\Annotation\SerializedName('sexualOrientation')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SexualOrientation|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sexualOrientation')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SexualOrientation|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SexualOrientation $sexualOrientation = null;
 
     /**
      *
      * @var ?\DateTime $startDate
      */
-    #[\JMS\Serializer\Annotation\SerializedName('startDate')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('startDate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $startDate = null;
 
     /**

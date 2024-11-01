@@ -15,8 +15,8 @@ class GenaiPrompt
      *
      * @var ?float $maxTokens
      */
-    #[\JMS\Serializer\Annotation\SerializedName('max_tokens')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('max_tokens')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $maxTokens = null;
 
     /**
@@ -24,17 +24,17 @@ class GenaiPrompt
      *
      * @var ?array<GenaiContent> $messages
      */
-    #[\JMS\Serializer\Annotation\SerializedName('messages')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiContent>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('messages')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiContent>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $messages = null;
 
     /**
      *
      * @var ?string $modelId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('model_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('model_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $modelId = null;
 
     /**
@@ -42,9 +42,9 @@ class GenaiPrompt
      *
      * @var ?array<string, mixed> $raw
      */
-    #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
@@ -52,17 +52,17 @@ class GenaiPrompt
      *
      * @var ?array<string> $responses
      */
-    #[\JMS\Serializer\Annotation\SerializedName('responses')]
-    #[\JMS\Serializer\Annotation\Type('array<string>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('responses')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $responses = null;
 
     /**
      *
      * @var ?float $temperature
      */
-    #[\JMS\Serializer\Annotation\SerializedName('temperature')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('temperature')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $temperature = null;
 
     /**

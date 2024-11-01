@@ -15,32 +15,32 @@ class Group
      *
      * @var ?string $displayName
      */
-    #[\JMS\Serializer\Annotation\SerializedName('displayName')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('displayName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $displayName = null;
 
     /**
      *
      * @var ?string $externalId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('externalId')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('externalId')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $externalId = null;
 
     /**
      *
      * @var ?string $groupType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('groupType')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('groupType')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $groupType = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
@@ -48,18 +48,18 @@ class Group
      *
      * @var ?array<Undefined> $members
      */
-    #[\JMS\Serializer\Annotation\SerializedName('members')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('members')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $members = null;
 
     /**
      *
      * @var ?PropertyGroupMeta $meta
      */
-    #[\JMS\Serializer\Annotation\SerializedName('meta')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyGroupMeta|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyGroupMeta|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyGroupMeta $meta = null;
 
     /**
@@ -67,9 +67,9 @@ class Group
      *
      * @var ?array<PropertyGroupSchemas> $schemas
      */
-    #[\JMS\Serializer\Annotation\SerializedName('schemas')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyGroupSchemas>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('schemas')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyGroupSchemas>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $schemas = null;
 
     /**

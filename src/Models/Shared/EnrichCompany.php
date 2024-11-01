@@ -17,129 +17,129 @@ class EnrichCompany
      *
      * @var ?PropertyEnrichCompanyAddress $address
      */
-    #[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyAddress|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyAddress|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyEnrichCompanyAddress $address = null;
 
     /**
      *
      * @var ?float $alexaRank
      */
-    #[\JMS\Serializer\Annotation\SerializedName('alexa_rank')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('alexa_rank')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $alexaRank = null;
 
     /**
      *
      * @var ?\DateTime $createdAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('created_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
 
     /**
      *
      * @var ?string $crunchbaseUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('crunchbase_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('crunchbase_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $crunchbaseUrl = null;
 
     /**
      *
      * @var ?string $description
      */
-    #[\JMS\Serializer\Annotation\SerializedName('description')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
 
     /**
      *
      * @var ?string $domain
      */
-    #[\JMS\Serializer\Annotation\SerializedName('domain')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('domain')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $domain = null;
 
     /**
      *
      * @var ?string $employees
      */
-    #[\JMS\Serializer\Annotation\SerializedName('employees')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employees')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $employees = null;
 
     /**
      *
      * @var ?string $exchange
      */
-    #[\JMS\Serializer\Annotation\SerializedName('exchange')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $exchange = null;
 
     /**
      *
      * @var ?string $facebookUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('facebook_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('facebook_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $facebookUrl = null;
 
     /**
      *
      * @var ?string $id
      */
-    #[\JMS\Serializer\Annotation\SerializedName('id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
 
     /**
      *
      * @var ?string $industry
      */
-    #[\JMS\Serializer\Annotation\SerializedName('industry')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('industry')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $industry = null;
 
     /**
      *
      * @var ?string $instagramUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('instagram_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('instagram_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $instagramUrl = null;
 
     /**
      *
      * @var ?string $linkedinUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('linkedin_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('linkedin_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $linkedinUrl = null;
 
     /**
      *
      * @var ?string $logoUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('logo_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('logo_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $logoUrl = null;
 
     /**
      *
      * @var ?float $naicsCode
      */
-    #[\JMS\Serializer\Annotation\SerializedName('naics_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('naics_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $naicsCode = null;
 
     /**
      *
      * @var ?string $name
      */
-    #[\JMS\Serializer\Annotation\SerializedName('name')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
 
     /**
@@ -147,33 +147,33 @@ class EnrichCompany
      *
      * @var ?array<string, mixed> $raw
      */
-    #[\JMS\Serializer\Annotation\SerializedName('raw')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
 
     /**
      *
      * @var ?string $revenue
      */
-    #[\JMS\Serializer\Annotation\SerializedName('revenue')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('revenue')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $revenue = null;
 
     /**
      *
      * @var ?float $sicCode
      */
-    #[\JMS\Serializer\Annotation\SerializedName('sic_code')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sic_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $sicCode = null;
 
     /**
      *
      * @var ?string $stock
      */
-    #[\JMS\Serializer\Annotation\SerializedName('stock')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('stock')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $stock = null;
 
     /**
@@ -181,57 +181,57 @@ class EnrichCompany
      *
      * @var ?array<EnrichTelephone> $telephones
      */
-    #[\JMS\Serializer\Annotation\SerializedName('telephones')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $telephones = null;
 
     /**
      *
      * @var ?string $twitterHandle
      */
-    #[\JMS\Serializer\Annotation\SerializedName('twitter_handle')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('twitter_handle')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $twitterHandle = null;
 
     /**
      *
      * @var ?string $twitterUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('twitter_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('twitter_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $twitterUrl = null;
 
     /**
      *
      * @var ?\DateTime $updatedAt
      */
-    #[\JMS\Serializer\Annotation\SerializedName('updated_at')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
 
     /**
      *
      * @var ?float $yearFounded
      */
-    #[\JMS\Serializer\Annotation\SerializedName('year_founded')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('year_founded')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $yearFounded = null;
 
     /**
      *
      * @var ?string $yelpUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('yelp_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('yelp_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $yelpUrl = null;
 
     /**
      *
      * @var ?string $youtubeUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('youtube_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('youtube_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $youtubeUrl = null;
 
     /**

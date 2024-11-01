@@ -16,15 +16,15 @@ class AtsApplicationAnswer
      *
      * @var array<string> $answers
      */
-    #[\JMS\Serializer\Annotation\SerializedName('answers')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('answers')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>')]
     public array $answers;
 
     /**
      *
      * @var string $questionId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('question_id')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('question_id')]
     public string $questionId;
 
     /**

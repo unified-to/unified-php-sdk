@@ -16,108 +16,108 @@ class PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User
      *
      * @var ?array<Undefined> $additionalManagers
      */
-    #[\JMS\Serializer\Annotation\SerializedName('additionalManagers')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('additionalManagers')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $additionalManagers = null;
 
     /**
      *
      * @var ?\DateTime $birthday
      */
-    #[\JMS\Serializer\Annotation\SerializedName('birthday')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('birthday')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $birthday = null;
 
     /**
      *
      * @var ?string $costCenter
      */
-    #[\JMS\Serializer\Annotation\SerializedName('costCenter')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('costCenter')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $costCenter = null;
 
     /**
      *
      * @var ?string $department
      */
-    #[\JMS\Serializer\Annotation\SerializedName('department')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('department')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $department = null;
 
     /**
      *
      * @var ?string $division
      */
-    #[\JMS\Serializer\Annotation\SerializedName('division')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('division')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $division = null;
 
     /**
      *
      * @var ?string $employeeNumber
      */
-    #[\JMS\Serializer\Annotation\SerializedName('employeeNumber')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employeeNumber')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $employeeNumber = null;
 
     /**
      *
      * @var ?\DateTime $endDate
      */
-    #[\JMS\Serializer\Annotation\SerializedName('endDate')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('endDate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $endDate = null;
 
     /**
      *
      * @var ?PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender $gender
      */
-    #[\JMS\Serializer\Annotation\SerializedName('gender')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender $gender = null;
 
     /**
      *
      * @var ?Level $level
      */
-    #[\JMS\Serializer\Annotation\SerializedName('level')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Level|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('level')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Level|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Level $level = null;
 
     /**
      *
      * @var ?string $location
      */
-    #[\JMS\Serializer\Annotation\SerializedName('location')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('location')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $location = null;
 
     /**
      *
      * @var ?PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager $manager
      */
-    #[\JMS\Serializer\Annotation\SerializedName('manager')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('manager')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager $manager = null;
 
     /**
      *
      * @var ?string $organization
      */
-    #[\JMS\Serializer\Annotation\SerializedName('organization')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $organization = null;
 
     /**
      *
      * @var ?\DateTime $startDate
      */
-    #[\JMS\Serializer\Annotation\SerializedName('startDate')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('startDate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $startDate = null;
 
     /**

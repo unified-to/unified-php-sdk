@@ -15,40 +15,40 @@ class MessagingAttachment
      *
      * @var ?string $contentType
      */
-    #[\JMS\Serializer\Annotation\SerializedName('content_type')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content_type')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $contentType = null;
 
     /**
      *
      * @var ?string $downloadUrl
      */
-    #[\JMS\Serializer\Annotation\SerializedName('download_url')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('download_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $downloadUrl = null;
 
     /**
      *
      * @var ?string $filename
      */
-    #[\JMS\Serializer\Annotation\SerializedName('filename')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('filename')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $filename = null;
 
     /**
      *
      * @var ?string $messageId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('message_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('message_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $messageId = null;
 
     /**
      *
      * @var ?float $size
      */
-    #[\JMS\Serializer\Annotation\SerializedName('size')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('size')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $size = null;
 
     /**

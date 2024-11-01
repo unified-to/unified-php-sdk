@@ -15,24 +15,24 @@ class EnrichEmail
      *
      * @var string $email
      */
-    #[\JMS\Serializer\Annotation\SerializedName('email')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('email')]
     public string $email;
 
     /**
      *
      * @var ?bool $isVerified
      */
-    #[\JMS\Serializer\Annotation\SerializedName('is_verified')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_verified')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isVerified = null;
 
     /**
      *
      * @var ?EnrichEmailType $type
      */
-    #[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichEmailType|null')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichEmailType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?EnrichEmailType $type = null;
 
     /**

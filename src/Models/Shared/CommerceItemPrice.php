@@ -15,23 +15,23 @@ class CommerceItemPrice
      *
      * @var ?float $compareAtPrice
      */
-    #[\JMS\Serializer\Annotation\SerializedName('compare_at_price')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('compare_at_price')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $compareAtPrice = null;
 
     /**
      *
      * @var ?string $currency
      */
-    #[\JMS\Serializer\Annotation\SerializedName('currency')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
 
     /**
      *
      * @var float $price
      */
-    #[\JMS\Serializer\Annotation\SerializedName('price')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('price')]
     public float $price;
 
     /**

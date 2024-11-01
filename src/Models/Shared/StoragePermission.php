@@ -15,8 +15,8 @@ class StoragePermission
      *
      * @var ?string $groupId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('group_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('group_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $groupId = null;
 
     /**
@@ -24,16 +24,16 @@ class StoragePermission
      *
      * @var array<PropertyStoragePermissionRoles> $roles
      */
-    #[\JMS\Serializer\Annotation\SerializedName('roles')]
-    #[\JMS\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles>')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('roles')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles>')]
     public array $roles;
 
     /**
      *
      * @var ?string $userId
      */
-    #[\JMS\Serializer\Annotation\SerializedName('user_id')]
-    #[\JMS\Serializer\Annotation\SkipWhenNull]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $userId = null;
 
     /**
