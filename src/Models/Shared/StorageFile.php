@@ -137,6 +137,14 @@ class StorageFile
     public ?string $userId = null;
 
     /**
+     *
+     * @var ?string $version
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('version')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $version = null;
+
+    /**
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $data
      * @param  ?string  $description
@@ -152,8 +160,9 @@ class StorageFile
      * @param  ?StorageFileType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @param  ?string  $version
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $version = null)
     {
         $this->createdAt = $createdAt;
         $this->data = $data;
@@ -170,5 +179,6 @@ class StorageFile
         $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->version = $version;
     }
 }
