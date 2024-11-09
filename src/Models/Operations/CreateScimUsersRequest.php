@@ -14,10 +14,10 @@ class CreateScimUsersRequest
 {
     /**
      *
-     * @var ?Shared\User $user
+     * @var ?Shared\ScimUser $scimUser
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\User $user = null;
+    public ?Shared\ScimUser $scimUser = null;
 
     /**
      * ID of the connection
@@ -64,17 +64,17 @@ class CreateScimUsersRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?Shared\User  $user
+     * @param  ?Shared\ScimUser  $scimUser
      * @param  ?float  $count
      * @param  ?string  $filter
      * @param  ?string  $sortBy
      * @param  ?string  $sortOrder
      * @param  ?float  $startIndex
      */
-    public function __construct(string $connectionId, ?Shared\User $user = null, ?float $count = null, ?string $filter = null, ?string $sortBy = null, ?string $sortOrder = null, ?float $startIndex = null)
+    public function __construct(string $connectionId, ?Shared\ScimUser $scimUser = null, ?float $count = null, ?string $filter = null, ?string $sortBy = null, ?string $sortOrder = null, ?float $startIndex = null)
     {
         $this->connectionId = $connectionId;
-        $this->user = $user;
+        $this->scimUser = $scimUser;
         $this->count = $count;
         $this->filter = $filter;
         $this->sortBy = $sortBy;

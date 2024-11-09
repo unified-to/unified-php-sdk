@@ -19,6 +19,13 @@ class ListScimUsersResponse
     public string $contentType;
 
     /**
+     * Successful
+     *
+     * @var ?array<Shared\ScimUser> $scimUsers
+     */
+    public ?array $scimUsers = null;
+
+    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -33,23 +40,16 @@ class ListScimUsersResponse
     public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\User> $users
-     */
-    public ?array $users = null;
-
-    /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\User>  $users
+     * @param  ?array<Shared\ScimUser>  $scimUsers
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $users = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $scimUsers = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->users = $users;
+        $this->scimUsers = $scimUsers;
     }
 }

@@ -13,6 +13,5 @@ enum SexualOrientation: string
 {
     case Queer = 'Queer';
     case Heterosexual = 'Heterosexual';
-    case StraightMixed = 'Straight';
-    case StraightLower = 'straight';
+    case Straight = 'Straight';
 }

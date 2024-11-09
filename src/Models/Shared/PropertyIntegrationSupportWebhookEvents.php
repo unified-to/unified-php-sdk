@@ -14,37 +14,37 @@ class PropertyIntegrationSupportWebhookEvents
     /**
      * $created
      *
-     * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsCreated> $created
+     * @var ?array<PropertyIntegrationSupportWebhookEventsCreated> $created
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsCreated>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsCreated>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $created = null;
 
     /**
      * $deleted
      *
-     * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsDeleted> $deleted
+     * @var ?array<PropertyIntegrationSupportWebhookEventsDeleted> $deleted
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('deleted')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsDeleted>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsDeleted>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $deleted = null;
 
     /**
      * $updated
      *
-     * @var ?array<PropertyPropertyIntegrationSupportWebhookEventsUpdated> $updated
+     * @var ?array<PropertyIntegrationSupportWebhookEventsUpdated> $updated
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyPropertyIntegrationSupportWebhookEventsUpdated>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsUpdated>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $updated = null;
 
     /**
-     * @param  ?array<PropertyPropertyIntegrationSupportWebhookEventsCreated>  $created
-     * @param  ?array<PropertyPropertyIntegrationSupportWebhookEventsDeleted>  $deleted
-     * @param  ?array<PropertyPropertyIntegrationSupportWebhookEventsUpdated>  $updated
+     * @param  ?array<PropertyIntegrationSupportWebhookEventsCreated>  $created
+     * @param  ?array<PropertyIntegrationSupportWebhookEventsDeleted>  $deleted
+     * @param  ?array<PropertyIntegrationSupportWebhookEventsUpdated>  $updated
      */
     public function __construct(?array $created = null, ?array $deleted = null, ?array $updated = null)
     {

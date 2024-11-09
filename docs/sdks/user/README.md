@@ -38,7 +38,7 @@ $response = $sdk->user->createScimUsers(
     request: $request
 );
 
-if ($response->user !== null) {
+if ($response->scimUser !== null) {
     // handle response
 }
 ```
@@ -86,7 +86,7 @@ $response = $sdk->user->getScimUsers(
     request: $request
 );
 
-if ($response->user !== null) {
+if ($response->scimUser !== null) {
     // handle response
 }
 ```
@@ -133,7 +133,7 @@ $response = $sdk->user->listScimUsers(
     request: $request
 );
 
-if ($response->users !== null) {
+if ($response->scimUsers !== null) {
     // handle response
 }
 ```
@@ -181,7 +181,7 @@ $response = $sdk->user->patchScimUsers(
     request: $request
 );
 
-if ($response->user !== null) {
+if ($response->scimUser !== null) {
     // handle response
 }
 ```
@@ -277,7 +277,7 @@ $response = $sdk->user->updateScimUsers(
     request: $request
 );
 
-if ($response->user !== null) {
+if ($response->scimUser !== null) {
     // handle response
 }
 ```

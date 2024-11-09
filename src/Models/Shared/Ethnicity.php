@@ -14,12 +14,11 @@ enum Ethnicity: string
     case Caucasian = 'Caucasian';
     case EastAsian = 'East Asian';
     case MiddleEastern = 'Middle Eastern';
-    case WhiteMixed = 'White';
     case Black = 'Black';
     case BiracialSouthAsianAndCaucasian = 'Biracial (South Asian & Caucasian)';
     case Filipino = 'Filipino';
     case SouthAsian = 'South Asian';
     case Indian = 'Indian';
-    case WhiteLower = 'white';
+    case White = 'White';
     case Asian = 'Asian';
 }

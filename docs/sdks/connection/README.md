@@ -32,11 +32,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 $request = new Shared\Connection(
     categories: [
-        Shared\PropertyConnectionCategories::Task,
+        Shared\PropertyConnectionCategories::Lms,
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::AtsScorecardRead,
+        Shared\PropertyConnectionPermissions::CrmEventRead,
     ],
 );
 

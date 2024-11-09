@@ -120,6 +120,14 @@ class MessagingMessage
 
     /**
      *
+     * @var ?string $reference
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('reference')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $reference = null;
+
+    /**
+     *
      * @var ?string $subject
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
@@ -155,11 +163,12 @@ class MessagingMessage
      * @param  ?string  $messageHtml
      * @param  ?string  $parentMessageId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $reference
      * @param  ?string  $subject
      * @param  ?string  $updatedAt
      * @param  ?string  $webUrl
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?string $createdAt = null, ?array $destinationMembers = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $subject = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?string $createdAt = null, ?array $destinationMembers = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $reference = null, ?string $subject = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;
@@ -173,6 +182,7 @@ class MessagingMessage
         $this->messageHtml = $messageHtml;
         $this->parentMessageId = $parentMessageId;
         $this->raw = $raw;
+        $this->reference = $reference;
         $this->subject = $subject;
         $this->updatedAt = $updatedAt;
         $this->webUrl = $webUrl;
