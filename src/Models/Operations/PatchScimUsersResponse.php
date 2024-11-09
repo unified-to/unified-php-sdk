@@ -19,6 +19,13 @@ class PatchScimUsersResponse
     public string $contentType;
 
     /**
+     * Successful
+     *
+     * @var ?Shared\ScimUser $scimUser
+     */
+    public ?Shared\ScimUser $scimUser = null;
+
+    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -33,23 +40,16 @@ class PatchScimUsersResponse
     public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\User $user
-     */
-    public ?Shared\User $user = null;
-
-    /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\User  $user
+     * @param  ?Shared\ScimUser  $scimUser
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\User $user = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ScimUser $scimUser = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->user = $user;
+        $this->scimUser = $scimUser;
     }
 }

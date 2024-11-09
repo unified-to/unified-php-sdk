@@ -69,4 +69,13 @@ enum ObjectType: string
     case TaskTask = 'task_task';
     case ScimUsers = 'scim_users';
     case ScimGroups = 'scim_groups';
+    case LmsCourse = 'lms_course';
+    case LmsClass = 'lms_class';
+    case LmsStudent = 'lms_student';
+    case LmsInstructor = 'lms_instructor';
+    case RepoOrganization = 'repo_organization';
+    case RepoRepository = 'repo_repository';
+    case RepoBranch = 'repo_branch';
+    case RepoCommit = 'repo_commit';
+    case RepoPullrequest = 'repo_pullrequest';
 }

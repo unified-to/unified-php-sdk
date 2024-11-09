@@ -7,6 +7,7 @@
 
 * [createScimGroups](#createscimgroups) - Create group
 * [createScimUsers](#createscimusers) - Create user
+* [getScimGroups](#getscimgroups) - Get group
 * [getScimUsers](#getscimusers) - Get user
 * [listScimGroups](#listscimgroups) - List groups
 * [listScimUsers](#listscimusers) - List users
@@ -43,7 +44,7 @@ $response = $sdk->scim->createScimGroups(
     request: $request
 );
 
-if ($response->group !== null) {
+if ($response->scimGroup !== null) {
     // handle response
 }
 ```
@@ -90,7 +91,7 @@ $response = $sdk->scim->createScimUsers(
     request: $request
 );
 
-if ($response->user !== null) {
+if ($response->scimUser !== null) {
     // handle response
 }
 ```
@@ -104,6 +105,54 @@ if ($response->user !== null) {
 ### Response
 
 **[?Operations\CreateScimUsersResponse](../../Models/Operations/CreateScimUsersResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getScimGroups
+
+Get group
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\GetScimGroupsRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->scim->getScimGroups(
+    request: $request
+);
+
+if ($response->scimGroup !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetScimGroupsRequest](../../Models/Operations/GetScimGroupsRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\GetScimGroupsResponse](../../Models/Operations/GetScimGroupsResponse.md)**
 
 ### Errors
 
@@ -138,7 +187,7 @@ $response = $sdk->scim->getScimUsers(
     request: $request
 );
 
-if ($response->user !== null) {
+if ($response->scimUser !== null) {
     // handle response
 }
 ```
@@ -185,7 +234,7 @@ $response = $sdk->scim->listScimGroups(
     request: $request
 );
 
-if ($response->groups !== null) {
+if ($response->scimGroups !== null) {
     // handle response
 }
 ```
@@ -232,7 +281,7 @@ $response = $sdk->scim->listScimUsers(
     request: $request
 );
 
-if ($response->users !== null) {
+if ($response->scimUsers !== null) {
     // handle response
 }
 ```
@@ -280,7 +329,7 @@ $response = $sdk->scim->patchScimGroups(
     request: $request
 );
 
-if ($response->group !== null) {
+if ($response->scimGroup !== null) {
     // handle response
 }
 ```
@@ -328,7 +377,7 @@ $response = $sdk->scim->patchScimUsers(
     request: $request
 );
 
-if ($response->user !== null) {
+if ($response->scimUser !== null) {
     // handle response
 }
 ```
@@ -472,7 +521,7 @@ $response = $sdk->scim->updateScimGroups(
     request: $request
 );
 
-if ($response->group !== null) {
+if ($response->scimGroup !== null) {
     // handle response
 }
 ```
@@ -520,7 +569,7 @@ $response = $sdk->scim->updateScimUsers(
     request: $request
 );
 
-if ($response->user !== null) {
+if ($response->scimUser !== null) {
     // handle response
 }
 ```

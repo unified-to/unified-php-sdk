@@ -34,7 +34,7 @@ class User
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/scim/{connection_id}/users', Operations\CreateScimUsersRequest::class, $request);
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, 'user', 'json');
+        $body = Utils\Utils::serializeRequestBody($request, 'scimUser', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -51,12 +51,12 @@ class User
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\User', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\ScimUser', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreateScimUsersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    user: $obj);
+                    scimUser: $obj);
 
                 return $response;
             } else {
@@ -93,12 +93,12 @@ class User
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\User', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\ScimUser', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\GetScimUsersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    user: $obj);
+                    scimUser: $obj);
 
                 return $response;
             } else {
@@ -136,12 +136,12 @@ class User
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\User>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\ScimUser>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListScimUsersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    users: $obj);
+                    scimUsers: $obj);
 
                 return $response;
             } else {
@@ -166,7 +166,7 @@ class User
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/scim/{connection_id}/users/{id}', Operations\PatchScimUsersRequest::class, $request);
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, 'user', 'json');
+        $body = Utils\Utils::serializeRequestBody($request, 'scimUser', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -182,12 +182,12 @@ class User
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\User', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\ScimUser', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchScimUsersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    user: $obj);
+                    scimUser: $obj);
 
                 return $response;
             } else {
@@ -244,7 +244,7 @@ class User
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/scim/{connection_id}/users/{id}', Operations\UpdateScimUsersRequest::class, $request);
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, 'user', 'json');
+        $body = Utils\Utils::serializeRequestBody($request, 'scimUser', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
@@ -260,12 +260,12 @@ class User
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\User', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\ScimUser', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdateScimUsersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    user: $obj);
+                    scimUser: $obj);
 
                 return $response;
             } else {

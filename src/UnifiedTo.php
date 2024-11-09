@@ -104,6 +104,16 @@ class UnifiedTo
 
     public Space $space;
 
+    public Lms $lms;
+
+    public ClassT $class;
+
+    public Course $course;
+
+    public Instructor $instructor;
+
+    public Student $student;
+
     public Martech $martech;
 
     public ListT $list;
@@ -125,6 +135,16 @@ class UnifiedTo
     public Payout $payout;
 
     public Refund $refund;
+
+    public Repo $repo;
+
+    public Branch $branch;
+
+    public Commit $commit;
+
+    public Pullrequest $pullrequest;
+
+    public Repository $repository;
 
     public Scim $scim;
 
@@ -224,6 +244,11 @@ class UnifiedTo
         $this->kms = new Kms($this->sdkConfiguration);
         $this->page = new Page($this->sdkConfiguration);
         $this->space = new Space($this->sdkConfiguration);
+        $this->lms = new Lms($this->sdkConfiguration);
+        $this->class = new ClassT($this->sdkConfiguration);
+        $this->course = new Course($this->sdkConfiguration);
+        $this->instructor = new Instructor($this->sdkConfiguration);
+        $this->student = new Student($this->sdkConfiguration);
         $this->martech = new Martech($this->sdkConfiguration);
         $this->list = new ListT($this->sdkConfiguration);
         $this->member = new Member($this->sdkConfiguration);
@@ -235,6 +260,11 @@ class UnifiedTo
         $this->link = new Link($this->sdkConfiguration);
         $this->payout = new Payout($this->sdkConfiguration);
         $this->refund = new Refund($this->sdkConfiguration);
+        $this->repo = new Repo($this->sdkConfiguration);
+        $this->branch = new Branch($this->sdkConfiguration);
+        $this->commit = new Commit($this->sdkConfiguration);
+        $this->pullrequest = new Pullrequest($this->sdkConfiguration);
+        $this->repository = new Repository($this->sdkConfiguration);
         $this->scim = new Scim($this->sdkConfiguration);
         $this->user = new User($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);

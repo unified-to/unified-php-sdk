@@ -115,4 +115,22 @@ enum Scopes: string
     case ScimUsersWrite = 'scim_users_write';
     case ScimGroupsRead = 'scim_groups_read';
     case ScimGroupsWrite = 'scim_groups_write';
+    case LmsCourseRead = 'lms_course_read';
+    case LmsCourseWrite = 'lms_course_write';
+    case LmsClassRead = 'lms_class_read';
+    case LmsClassWrite = 'lms_class_write';
+    case LmsStudentRead = 'lms_student_read';
+    case LmsStudentWrite = 'lms_student_write';
+    case LmsInstructorRead = 'lms_instructor_read';
+    case LmsInstructorWrite = 'lms_instructor_write';
+    case RepoOrganizationRead = 'repo_organization_read';
+    case RepoOrganizationWrite = 'repo_organization_write';
+    case RepoRepositoryRead = 'repo_repository_read';
+    case RepoRepositoryWrite = 'repo_repository_write';
+    case RepoBranchRead = 'repo_branch_read';
+    case RepoBranchWrite = 'repo_branch_write';
+    case RepoCommitRead = 'repo_commit_read';
+    case RepoCommitWrite = 'repo_commit_write';
+    case RepoPullrequestRead = 'repo_pullrequest_read';
+    case RepoPullrequestWrite = 'repo_pullrequest_write';
 }

@@ -14,10 +14,10 @@ class PatchScimUsersRequest
 {
     /**
      *
-     * @var ?Shared\User $user
+     * @var ?Shared\ScimUser $scimUser
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\User $user = null;
+    public ?Shared\ScimUser $scimUser = null;
 
     /**
      * ID of the connection
@@ -38,12 +38,12 @@ class PatchScimUsersRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\User  $user
+     * @param  ?Shared\ScimUser  $scimUser
      */
-    public function __construct(string $connectionId, string $id, ?Shared\User $user = null)
+    public function __construct(string $connectionId, string $id, ?Shared\ScimUser $scimUser = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->user = $user;
+        $this->scimUser = $scimUser;
     }
 }

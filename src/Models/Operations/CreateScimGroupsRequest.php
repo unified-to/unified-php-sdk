@@ -14,10 +14,10 @@ class CreateScimGroupsRequest
 {
     /**
      *
-     * @var ?Shared\Group $group
+     * @var ?Shared\ScimGroup $scimGroup
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\Group $group = null;
+    public ?Shared\ScimGroup $scimGroup = null;
 
     /**
      * ID of the connection
@@ -29,11 +29,11 @@ class CreateScimGroupsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?Shared\Group  $group
+     * @param  ?Shared\ScimGroup  $scimGroup
      */
-    public function __construct(string $connectionId, ?Shared\Group $group = null)
+    public function __construct(string $connectionId, ?Shared\ScimGroup $scimGroup = null)
     {
         $this->connectionId = $connectionId;
-        $this->group = $group;
+        $this->scimGroup = $scimGroup;
     }
 }

@@ -21,9 +21,9 @@ class ListScimGroupsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\Group> $groups
+     * @var ?array<Shared\ScimGroup> $scimGroups
      */
-    public ?array $groups = null;
+    public ?array $scimGroups = null;
 
     /**
      * HTTP response status code for this operation
@@ -43,13 +43,13 @@ class ListScimGroupsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\Group>  $groups
+     * @param  ?array<Shared\ScimGroup>  $scimGroups
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $groups = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $scimGroups = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->groups = $groups;
+        $this->scimGroups = $scimGroups;
     }
 }

@@ -29,4 +29,6 @@ enum ListUnifiedIntegrationsQueryParamCategories: string
     case Kms = 'kms';
     case Task = 'task';
     case Scim = 'scim';
+    case Lms = 'lms';
+    case Repo = 'repo';
 }

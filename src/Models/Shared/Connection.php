@@ -48,16 +48,6 @@ class Connection
     public ?\DateTime $createdAt = null;
 
     /**
-     * $cursorsCache
-     *
-     * @var ?array<Undefined> $cursorsCache
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('cursors_cache')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\Undefined>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $cursorsCache = null;
-
-    /**
      *
      * @var ?string $environment
      */
@@ -144,7 +134,6 @@ class Connection
      * @param  ?PropertyConnectionAuth  $auth
      * @param  ?string  $authAwsArn
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<Undefined>  $cursorsCache
      * @param  ?string  $environment
      * @param  ?string  $externalXref
      * @param  ?string  $id
@@ -154,7 +143,7 @@ class Connection
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $workspaceId
      */
-    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?array $cursorsCache = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->categories = $categories;
         $this->integrationType = $integrationType;
@@ -162,7 +151,6 @@ class Connection
         $this->auth = $auth;
         $this->authAwsArn = $authAwsArn;
         $this->createdAt = $createdAt;
-        $this->cursorsCache = $cursorsCache;
         $this->environment = $environment;
         $this->externalXref = $externalXref;
         $this->id = $id;
