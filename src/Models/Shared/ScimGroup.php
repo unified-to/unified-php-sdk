@@ -36,10 +36,11 @@ class ScimGroup
 
     /**
      *
-     * @var string $id
+     * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
-    public string $id;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
 
     /**
      * An array of members
@@ -72,19 +73,19 @@ class ScimGroup
 
     /**
      * @param  string  $displayName
-     * @param  string  $id
      * @param  ?string  $externalId
      * @param  ?string  $groupType
+     * @param  ?string  $id
      * @param  ?array<ScimGroupMember>  $members
      * @param  ?PropertyScimGroupMeta  $meta
      * @param  ?array<PropertyScimGroupSchemas>  $schemas
      */
-    public function __construct(string $displayName, string $id, ?string $externalId = null, ?string $groupType = null, ?array $members = null, ?PropertyScimGroupMeta $meta = null, ?array $schemas = null)
+    public function __construct(string $displayName, ?string $externalId = null, ?string $groupType = null, ?string $id = null, ?array $members = null, ?PropertyScimGroupMeta $meta = null, ?array $schemas = null)
     {
         $this->displayName = $displayName;
-        $this->id = $id;
         $this->externalId = $externalId;
         $this->groupType = $groupType;
+        $this->id = $id;
         $this->members = $members;
         $this->meta = $meta;
         $this->schemas = $schemas;
