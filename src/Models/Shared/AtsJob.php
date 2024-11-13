@@ -56,7 +56,7 @@ class AtsJob
     public ?\DateTime $createdAt = null;
 
     /**
-     * $departments
+     * The names of the departments/divisions that this job belongs to
      *
      * @var ?array<string> $departments
      */

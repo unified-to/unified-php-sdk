@@ -12,26 +12,6 @@ namespace Unified\Unified_to\Models\Operations;
 class PatchPassthroughJsonResponse
 {
     /**
-     * Successful
-     *
-     * @var mixed $twoXXApplicationJsonAny
-     */
-    public mixed $twoXXApplicationJsonAny = null;
-
-    /**
-     * Successful
-     *
-     * @var ?string $twoXXTextPlainRes
-     */
-    public ?string $twoXXTextPlainRes = null;
-
-    /**
-     *
-     * @var ?string $body
-     */
-    public ?string $body = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -60,22 +40,61 @@ class PatchPassthroughJsonResponse
     public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
+     * Successful
+     *
+     * @var ?string $defaultWildcardWildcardBytes
+     */
+    public ?string $defaultWildcardWildcardBytes = null;
+
+    /**
+     * Successful
+     *
+     * @var mixed $defaultApplicationJsonAny
+     */
+    public mixed $defaultApplicationJsonAny = null;
+
+    /**
+     * Successful
+     *
+     * @var ?string $defaultApplicationXmlRes
+     */
+    public ?string $defaultApplicationXmlRes = null;
+
+    /**
+     * Successful
+     *
+     * @var ?string $defaultTextCsvRes
+     */
+    public ?string $defaultTextCsvRes = null;
+
+    /**
+     * Successful
+     *
+     * @var ?string $defaultTextPlainRes
+     */
+    public ?string $defaultTextPlainRes = null;
+
+    /**
      * @param  string  $contentType
      * @param  array<string, array<string>>  $headers
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  mixed  $twoXXApplicationJsonAny
-     * @param  ?string  $twoXXTextPlainRes
-     * @param  ?string  $body
+     * @param  ?string  $defaultWildcardWildcardBytes
+     * @param  mixed  $defaultApplicationJsonAny
+     * @param  ?string  $defaultApplicationXmlRes
+     * @param  ?string  $defaultTextCsvRes
+     * @param  ?string  $defaultTextPlainRes
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, mixed $twoXXApplicationJsonAny = null, ?string $twoXXTextPlainRes = null, ?string $body = null, ?array $headers = [])
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?string $defaultWildcardWildcardBytes = null, mixed $defaultApplicationJsonAny = null, ?string $defaultApplicationXmlRes = null, ?string $defaultTextCsvRes = null, ?string $defaultTextPlainRes = null, ?array $headers = [])
     {
         $this->contentType = $contentType;
         $this->headers = $headers;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->twoXXApplicationJsonAny = $twoXXApplicationJsonAny;
-        $this->twoXXTextPlainRes = $twoXXTextPlainRes;
-        $this->body = $body;
+        $this->defaultWildcardWildcardBytes = $defaultWildcardWildcardBytes;
+        $this->defaultApplicationJsonAny = $defaultApplicationJsonAny;
+        $this->defaultApplicationXmlRes = $defaultApplicationXmlRes;
+        $this->defaultTextCsvRes = $defaultTextCsvRes;
+        $this->defaultTextPlainRes = $defaultTextPlainRes;
     }
 }

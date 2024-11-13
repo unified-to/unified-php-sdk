@@ -38,7 +38,7 @@ class Passthrough
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
@@ -53,7 +53,9 @@ class Passthrough
                 contentType: $contentType,
                 rawResponse: $httpResponse
             );
-        } elseif ($statusCode >= 200 && $statusCode < 300) {
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
             if (Utils\Utils::matchContentType($contentType, '*/*')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -61,7 +63,8 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    body: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -69,9 +72,28 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXApplicationJsonAny: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationXmlRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -79,14 +101,11 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXTextPlainRes: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
-        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        } else {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -106,7 +125,7 @@ class Passthrough
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
 
@@ -121,7 +140,9 @@ class Passthrough
                 contentType: $contentType,
                 rawResponse: $httpResponse
             );
-        } elseif ($statusCode >= 200 && $statusCode < 300) {
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
             if (Utils\Utils::matchContentType($contentType, '*/*')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -129,7 +150,8 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    body: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -137,9 +159,28 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXApplicationJsonAny: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationXmlRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -147,14 +188,11 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXTextPlainRes: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
-        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        } else {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -170,7 +208,7 @@ class Passthrough
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\ListPassthroughsRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
 
@@ -185,7 +223,9 @@ class Passthrough
                 contentType: $contentType,
                 rawResponse: $httpResponse
             );
-        } elseif ($statusCode >= 200 && $statusCode < 300) {
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
             if (Utils\Utils::matchContentType($contentType, '*/*')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -193,7 +233,8 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    body: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -201,9 +242,28 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXApplicationJsonAny: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\ListPassthroughsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationXmlRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\ListPassthroughsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -211,14 +271,11 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXTextPlainRes: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
-        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        } else {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -238,7 +295,7 @@ class Passthrough
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
@@ -253,7 +310,9 @@ class Passthrough
                 contentType: $contentType,
                 rawResponse: $httpResponse
             );
-        } elseif ($statusCode >= 200 && $statusCode < 300) {
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
             if (Utils\Utils::matchContentType($contentType, '*/*')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -261,7 +320,8 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    body: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -269,9 +329,28 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXApplicationJsonAny: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationXmlRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -279,14 +358,11 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXTextPlainRes: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
-        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        } else {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -306,7 +382,7 @@ class Passthrough
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
 
@@ -321,7 +397,9 @@ class Passthrough
                 contentType: $contentType,
                 rawResponse: $httpResponse
             );
-        } elseif ($statusCode >= 200 && $statusCode < 300) {
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
             if (Utils\Utils::matchContentType($contentType, '*/*')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -329,7 +407,8 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    body: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -337,9 +416,28 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXApplicationJsonAny: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationXmlRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -347,14 +445,11 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXTextPlainRes: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
-        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        } else {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -370,7 +465,7 @@ class Passthrough
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\RemovePassthroughRequest::class, $request);
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
 
@@ -385,7 +480,9 @@ class Passthrough
                 contentType: $contentType,
                 rawResponse: $httpResponse
             );
-        } elseif ($statusCode >= 200 && $statusCode < 300) {
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
             if (Utils\Utils::matchContentType($contentType, '*/*')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -393,7 +490,8 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    body: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -401,9 +499,28 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXApplicationJsonAny: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\RemovePassthroughResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationXmlRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\RemovePassthroughResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -411,14 +528,11 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXTextPlainRes: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
-        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        } else {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -438,7 +552,7 @@ class Passthrough
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
@@ -453,7 +567,9 @@ class Passthrough
                 contentType: $contentType,
                 rawResponse: $httpResponse
             );
-        } elseif ($statusCode >= 200 && $statusCode < 300) {
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
             if (Utils\Utils::matchContentType($contentType, '*/*')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -461,7 +577,8 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    body: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -469,9 +586,28 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXApplicationJsonAny: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationXmlRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -479,14 +615,11 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXTextPlainRes: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
-        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        } else {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -506,7 +639,7 @@ class Passthrough
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0';
+        $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
 
@@ -521,7 +654,9 @@ class Passthrough
                 contentType: $contentType,
                 rawResponse: $httpResponse
             );
-        } elseif ($statusCode >= 200 && $statusCode < 300) {
+        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
             if (Utils\Utils::matchContentType($contentType, '*/*')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -529,7 +664,8 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    body: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -537,9 +673,28 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXApplicationJsonAny: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationJsonAny: $obj);
 
                 return $response;
+            } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultApplicationXmlRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
                 $obj = $httpResponse->getBody()->getContents();
 
@@ -547,14 +702,11 @@ class Passthrough
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    twoXXTextPlainRes: $obj);
+                    headers: $httpResponse->getHeaders(),
+                    defaultTextPlainRes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
-        } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        } else {
-            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
