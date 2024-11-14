@@ -56,16 +56,7 @@ class Passthrough
         } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            if (Utils\Utils::matchContentType($contentType, '*/*')) {
-                $obj = $httpResponse->getBody()->getContents();
-
-                return new Operations\CreatePassthroughJsonResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    headers: $httpResponse->getHeaders(),
-                    defaultWildcardWildcardBytes: $obj);
-            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreatePassthroughJsonResponse(
@@ -103,6 +94,15 @@ class Passthrough
                     rawResponse: $httpResponse,
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -143,16 +143,7 @@ class Passthrough
         } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            if (Utils\Utils::matchContentType($contentType, '*/*')) {
-                $obj = $httpResponse->getBody()->getContents();
-
-                return new Operations\CreatePassthroughRawResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    headers: $httpResponse->getHeaders(),
-                    defaultWildcardWildcardBytes: $obj);
-            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreatePassthroughRawResponse(
@@ -190,6 +181,15 @@ class Passthrough
                     rawResponse: $httpResponse,
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\CreatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -226,16 +226,7 @@ class Passthrough
         } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            if (Utils\Utils::matchContentType($contentType, '*/*')) {
-                $obj = $httpResponse->getBody()->getContents();
-
-                return new Operations\ListPassthroughsResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    headers: $httpResponse->getHeaders(),
-                    defaultWildcardWildcardBytes: $obj);
-            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListPassthroughsResponse(
@@ -273,6 +264,15 @@ class Passthrough
                     rawResponse: $httpResponse,
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\ListPassthroughsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -313,16 +313,7 @@ class Passthrough
         } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            if (Utils\Utils::matchContentType($contentType, '*/*')) {
-                $obj = $httpResponse->getBody()->getContents();
-
-                return new Operations\PatchPassthroughJsonResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    headers: $httpResponse->getHeaders(),
-                    defaultWildcardWildcardBytes: $obj);
-            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchPassthroughJsonResponse(
@@ -360,6 +351,15 @@ class Passthrough
                     rawResponse: $httpResponse,
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -400,16 +400,7 @@ class Passthrough
         } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            if (Utils\Utils::matchContentType($contentType, '*/*')) {
-                $obj = $httpResponse->getBody()->getContents();
-
-                return new Operations\PatchPassthroughRawResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    headers: $httpResponse->getHeaders(),
-                    defaultWildcardWildcardBytes: $obj);
-            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchPassthroughRawResponse(
@@ -447,6 +438,15 @@ class Passthrough
                     rawResponse: $httpResponse,
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\PatchPassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -483,16 +483,7 @@ class Passthrough
         } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            if (Utils\Utils::matchContentType($contentType, '*/*')) {
-                $obj = $httpResponse->getBody()->getContents();
-
-                return new Operations\RemovePassthroughResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    headers: $httpResponse->getHeaders(),
-                    defaultWildcardWildcardBytes: $obj);
-            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\RemovePassthroughResponse(
@@ -530,6 +521,15 @@ class Passthrough
                     rawResponse: $httpResponse,
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\RemovePassthroughResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -570,16 +570,7 @@ class Passthrough
         } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            if (Utils\Utils::matchContentType($contentType, '*/*')) {
-                $obj = $httpResponse->getBody()->getContents();
-
-                return new Operations\UpdatePassthroughJsonResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    headers: $httpResponse->getHeaders(),
-                    defaultWildcardWildcardBytes: $obj);
-            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdatePassthroughJsonResponse(
@@ -617,6 +608,15 @@ class Passthrough
                     rawResponse: $httpResponse,
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughJsonResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -657,16 +657,7 @@ class Passthrough
         } elseif ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            if (Utils\Utils::matchContentType($contentType, '*/*')) {
-                $obj = $httpResponse->getBody()->getContents();
-
-                return new Operations\UpdatePassthroughRawResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    headers: $httpResponse->getHeaders(),
-                    defaultWildcardWildcardBytes: $obj);
-            } elseif (Utils\Utils::matchContentType($contentType, 'application/json')) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdatePassthroughRawResponse(
@@ -704,6 +695,15 @@ class Passthrough
                     rawResponse: $httpResponse,
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
+            } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $obj = $httpResponse->getBody()->getContents();
+
+                return new Operations\UpdatePassthroughRawResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    headers: $httpResponse->getHeaders(),
+                    defaultWildcardWildcardBytes: $obj);
             } else {
                 throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }

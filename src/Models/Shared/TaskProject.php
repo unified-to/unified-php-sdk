@@ -39,6 +39,14 @@ class TaskProject
 
     /**
      *
+     * @var ?bool $hasTasks
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_tasks')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasTasks = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -93,6 +101,7 @@ class TaskProject
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?array<string>  $groupIds
+     * @param  ?bool  $hasTasks
      * @param  ?string  $id
      * @param  ?string  $name
      * @param  ?string  $parentId
@@ -100,11 +109,12 @@ class TaskProject
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?array $groupIds = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?array $groupIds = null, ?bool $hasTasks = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->groupIds = $groupIds;
+        $this->hasTasks = $hasTasks;
         $this->id = $id;
         $this->name = $name;
         $this->parentId = $parentId;
