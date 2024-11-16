@@ -96,11 +96,11 @@ class MessagingChannel
 
     /**
      *
-     * @var ?string $updatedAt
+     * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $updatedAt = null;
+    public ?\DateTime $updatedAt = null;
 
     /**
      *
@@ -121,10 +121,10 @@ class MessagingChannel
      * @param  ?array<MessagingMember>  $members
      * @param  ?string  $parentChannelId
      * @param  ?array<string, mixed>  $raw
-     * @param  ?string  $updatedAt
+     * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $parentChannelId = null, ?array $raw = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $parentChannelId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->name = $name;
         $this->createdAt = $createdAt;

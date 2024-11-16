@@ -40,11 +40,11 @@ class MessagingMessage
 
     /**
      *
-     * @var ?string $createdAt
+     * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $createdAt = null;
+    public ?\DateTime $createdAt = null;
 
     /**
      * $destinationMembers
@@ -136,11 +136,11 @@ class MessagingMessage
 
     /**
      *
-     * @var ?string $updatedAt
+     * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $updatedAt = null;
+    public ?\DateTime $updatedAt = null;
 
     /**
      *
@@ -154,7 +154,7 @@ class MessagingMessage
      * @param  ?array<MessagingAttachment>  $attachments
      * @param  ?PropertyMessagingMessageAuthorMember  $authorMember
      * @param  ?string  $channelId
-     * @param  ?string  $createdAt
+     * @param  ?\DateTime  $createdAt
      * @param  ?array<MessagingMember>  $destinationMembers
      * @param  ?array<MessagingMember>  $hiddenMembers
      * @param  ?string  $id
@@ -165,10 +165,10 @@ class MessagingMessage
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?string  $subject
-     * @param  ?string  $updatedAt
+     * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?string $createdAt = null, ?array $destinationMembers = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $reference = null, ?string $subject = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $reference = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;
