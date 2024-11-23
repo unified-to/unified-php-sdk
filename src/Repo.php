@@ -21,6 +21,26 @@ class Repo
     {
         $this->sdkConfiguration = $sdkConfig;
     }
+    /**
+     * @param  string  $baseUrl
+     * @param  array<string, string>  $urlVariables
+     *
+     * @return string
+     */
+    public function getUrl(string $baseUrl, array $urlVariables): string
+    {
+        $serverDetails = $this->sdkConfiguration->getServerDetails();
+
+        if ($baseUrl == null) {
+            $baseUrl = $serverDetails->baseUrl;
+        }
+
+        if ($urlVariables == null) {
+            $urlVariables = $serverDetails->options;
+        }
+
+        return Utils\Utils::templateUrl($baseUrl, $urlVariables);
+    }
 
     /**
      * Create a branch
@@ -33,12 +53,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch', Operations\CreateRepoBranchRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoBranch', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\CreateRepoBranchRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoBranchRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
@@ -51,7 +75,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreateRepoBranchResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -80,12 +105,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\CreateRepoCommitRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\CreateRepoCommitRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoCommitRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
@@ -98,7 +127,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreateRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -127,12 +157,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\CreateRepoOrganizationRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\CreateRepoOrganizationRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoOrganizationRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
@@ -145,7 +179,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreateRepoOrganizationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -174,12 +209,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest', Operations\CreateRepoPullrequestRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoPullrequest', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\CreateRepoPullrequestRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoPullrequestRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
@@ -192,7 +231,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreateRepoPullrequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -221,12 +261,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository', Operations\CreateRepoRepositoryRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoRepository', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\CreateRepoRepositoryRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoRepositoryRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
@@ -239,7 +283,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreateRepoRepositoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -268,8 +313,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\GetRepoBranchRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetRepoBranchRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoBranchRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -282,7 +331,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\GetRepoBranchResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -311,8 +361,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\GetRepoCommitRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetRepoCommitRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoCommitRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -325,7 +379,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\GetRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -354,8 +409,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\GetRepoOrganizationRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetRepoOrganizationRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoOrganizationRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -368,7 +427,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\GetRepoOrganizationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -397,8 +457,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\GetRepoPullrequestRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetRepoPullrequestRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoPullrequestRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -411,7 +475,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\GetRepoPullrequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -440,8 +505,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\GetRepoRepositoryRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\GetRepoRepositoryRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoRepositoryRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -454,7 +523,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\GetRepoRepositoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -483,8 +553,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch', Operations\ListRepoBranchesRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListRepoBranchesRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoBranchesRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -497,7 +571,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\RepoBranch>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoBranch>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListRepoBranchesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -526,8 +601,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\ListRepoCommitsRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListRepoCommitsRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoCommitsRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -540,7 +619,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\RepoCommit>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoCommit>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListRepoCommitsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -569,8 +649,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\ListRepoOrganizationsRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListRepoOrganizationsRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoOrganizationsRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -583,7 +667,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\RepoOrganization>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoOrganization>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListRepoOrganizationsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -612,8 +697,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest', Operations\ListRepoPullrequestsRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListRepoPullrequestsRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoPullrequestsRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -626,7 +715,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\RepoPullrequest>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoPullrequest>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListRepoPullrequestsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -655,8 +745,12 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository', Operations\ListRepoRepositoriesRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\ListRepoRepositoriesRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoRepositoriesRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
@@ -669,7 +763,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), 'array<\Unified\Unified_to\Models\Shared\RepoRepository>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoRepository>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListRepoRepositoriesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -698,12 +793,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\PatchRepoBranchRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoBranch', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\PatchRepoBranchRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoBranchRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
@@ -716,7 +815,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchRepoBranchResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -745,12 +845,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\PatchRepoCommitRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\PatchRepoCommitRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoCommitRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
@@ -763,7 +867,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -792,12 +897,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\PatchRepoOrganizationRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\PatchRepoOrganizationRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoOrganizationRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
@@ -810,7 +919,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchRepoOrganizationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -839,12 +949,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\PatchRepoPullrequestRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoPullrequest', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\PatchRepoPullrequestRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoPullrequestRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
@@ -857,7 +971,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchRepoPullrequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -886,12 +1001,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\PatchRepoRepositoryRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoRepository', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\PatchRepoRepositoryRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoRepositoryRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
@@ -904,7 +1023,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchRepoRepositoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -933,6 +1053,7 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\RemoveRepoBranchRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
@@ -971,6 +1092,7 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\RemoveRepoCommitRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
@@ -1009,6 +1131,7 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\RemoveRepoOrganizationRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
@@ -1047,6 +1170,7 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\RemoveRepoPullrequestRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
@@ -1085,6 +1209,7 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\RemoveRepoRepositoryRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
@@ -1123,12 +1248,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\UpdateRepoBranchRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoBranch', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\UpdateRepoBranchRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoBranchRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
@@ -1141,7 +1270,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdateRepoBranchResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -1170,12 +1300,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\UpdateRepoCommitRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\UpdateRepoCommitRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoCommitRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
@@ -1188,7 +1322,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdateRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -1217,12 +1352,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\UpdateRepoOrganizationRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\UpdateRepoOrganizationRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoOrganizationRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
@@ -1235,7 +1374,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdateRepoOrganizationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -1264,12 +1404,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\UpdateRepoPullrequestRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoPullrequest', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\UpdateRepoPullrequestRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoPullrequestRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
@@ -1282,7 +1426,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdateRepoPullrequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -1311,12 +1456,16 @@ class Repo
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\UpdateRepoRepositoryRequest::class, $request);
+        $urlOverride = null;
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoRepository', 'json');
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(Operations\UpdateRepoRepositoryRequest::class, $request));
+
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoRepositoryRequest::class, $request, $urlOverride);
+
+        $options = array_merge_recursive($options, $qp);
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
@@ -1329,7 +1478,8 @@ class Repo
         if ($statusCode == 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $obj = $serializer->deserialize((string) $httpResponse->getBody(), '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdateRepoRepositoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,

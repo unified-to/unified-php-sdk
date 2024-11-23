@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: dbb26a77c5273b6a4bfbeec2d8a7c22d
+  docChecksum: a69d016e113a8d9eb83404e95207c9eb
   docVersion: "1.0"
-  speakeasyVersion: 1.440.1
-  generationVersion: 2.460.1
-  releaseVersion: 1.1.6
-  configChecksum: e3de5fdc6ef8a02124e66619321362c2
+  speakeasyVersion: 1.444.1
+  generationVersion: 2.461.4
+  releaseVersion: 1.1.7
+  configChecksum: a22c740eb2057a0e8a1571f0969bada0
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -63,6 +63,8 @@ generatedFiles:
   - docs/Models/Operations/CreateCommerceItemResponse.md
   - docs/Models/Operations/CreateCommerceLocationRequest.md
   - docs/Models/Operations/CreateCommerceLocationResponse.md
+  - docs/Models/Operations/CreateCommerceMetadataRequest.md
+  - docs/Models/Operations/CreateCommerceMetadataResponse.md
   - docs/Models/Operations/CreateCrmCompanyRequest.md
   - docs/Models/Operations/CreateCrmCompanyResponse.md
   - docs/Models/Operations/CreateCrmContactRequest.md
@@ -182,6 +184,8 @@ generatedFiles:
   - docs/Models/Operations/GetCommerceItemResponse.md
   - docs/Models/Operations/GetCommerceLocationRequest.md
   - docs/Models/Operations/GetCommerceLocationResponse.md
+  - docs/Models/Operations/GetCommerceMetadataRequest.md
+  - docs/Models/Operations/GetCommerceMetadataResponse.md
   - docs/Models/Operations/GetCrmCompanyRequest.md
   - docs/Models/Operations/GetCrmCompanyResponse.md
   - docs/Models/Operations/GetCrmContactRequest.md
@@ -315,6 +319,8 @@ generatedFiles:
   - docs/Models/Operations/ListCommerceItemsResponse.md
   - docs/Models/Operations/ListCommerceLocationsRequest.md
   - docs/Models/Operations/ListCommerceLocationsResponse.md
+  - docs/Models/Operations/ListCommerceMetadatasRequest.md
+  - docs/Models/Operations/ListCommerceMetadatasResponse.md
   - docs/Models/Operations/ListCrmCompaniesRequest.md
   - docs/Models/Operations/ListCrmCompaniesResponse.md
   - docs/Models/Operations/ListCrmContactsRequest.md
@@ -454,6 +460,8 @@ generatedFiles:
   - docs/Models/Operations/PatchCommerceItemResponse.md
   - docs/Models/Operations/PatchCommerceLocationRequest.md
   - docs/Models/Operations/PatchCommerceLocationResponse.md
+  - docs/Models/Operations/PatchCommerceMetadataRequest.md
+  - docs/Models/Operations/PatchCommerceMetadataResponse.md
   - docs/Models/Operations/PatchCrmCompanyRequest.md
   - docs/Models/Operations/PatchCrmCompanyResponse.md
   - docs/Models/Operations/PatchCrmContactRequest.md
@@ -571,6 +579,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveCommerceItemResponse.md
   - docs/Models/Operations/RemoveCommerceLocationRequest.md
   - docs/Models/Operations/RemoveCommerceLocationResponse.md
+  - docs/Models/Operations/RemoveCommerceMetadataRequest.md
+  - docs/Models/Operations/RemoveCommerceMetadataResponse.md
   - docs/Models/Operations/RemoveCrmCompanyRequest.md
   - docs/Models/Operations/RemoveCrmCompanyResponse.md
   - docs/Models/Operations/RemoveCrmContactRequest.md
@@ -684,6 +694,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateCommerceItemResponse.md
   - docs/Models/Operations/UpdateCommerceLocationRequest.md
   - docs/Models/Operations/UpdateCommerceLocationResponse.md
+  - docs/Models/Operations/UpdateCommerceMetadataRequest.md
+  - docs/Models/Operations/UpdateCommerceMetadataResponse.md
   - docs/Models/Operations/UpdateCrmCompanyRequest.md
   - docs/Models/Operations/UpdateCrmCompanyResponse.md
   - docs/Models/Operations/UpdateCrmContactRequest.md
@@ -821,6 +833,7 @@ generatedFiles:
   - docs/Models/Shared/CommerceItem.md
   - docs/Models/Shared/CommerceItemMedia.md
   - docs/Models/Shared/CommerceItemMediaType.md
+  - docs/Models/Shared/CommerceItemMetadata.md
   - docs/Models/Shared/CommerceItemOption.md
   - docs/Models/Shared/CommerceItemPrice.md
   - docs/Models/Shared/CommerceItemVariant.md
@@ -937,6 +950,8 @@ generatedFiles:
   - docs/Models/Shared/MessagingChannel.md
   - docs/Models/Shared/MessagingMember.md
   - docs/Models/Shared/MessagingMessage.md
+  - docs/Models/Shared/NativeWebhookParentId.md
+  - docs/Models/Shared/NativeWebhookProjectId.md
   - docs/Models/Shared/ObjectType.md
   - docs/Models/Shared/Operation.md
   - docs/Models/Shared/Origin.md
@@ -1062,6 +1077,16 @@ generatedFiles:
   - docs/Models/Shared/UcEmailType.md
   - docs/Models/Shared/UcTelephone.md
   - docs/Models/Shared/UcTelephoneType.md
+  - docs/Models/Shared/VirtualWebhookChannelId.md
+  - docs/Models/Shared/VirtualWebhookCompanyId.md
+  - docs/Models/Shared/VirtualWebhookContactId.md
+  - docs/Models/Shared/VirtualWebhookDealId.md
+  - docs/Models/Shared/VirtualWebhookLimit.md
+  - docs/Models/Shared/VirtualWebhookParentId.md
+  - docs/Models/Shared/VirtualWebhookTicketId.md
+  - docs/Models/Shared/VirtualWebhookType.md
+  - docs/Models/Shared/VirtualWebhookUpdatedGte.md
+  - docs/Models/Shared/VirtualWebhookUserId.md
   - docs/Models/Shared/Webhook.md
   - docs/Models/Shared/WebhookType.md
   - docs/Models/Shared/WeightUnit.md
@@ -1116,6 +1141,7 @@ generatedFiles:
   - docs/sdks/member/README.md
   - docs/sdks/message/README.md
   - docs/sdks/messaging/README.md
+  - docs/sdks/metadata/README.md
   - docs/sdks/model/README.md
   - docs/sdks/note/README.md
   - docs/sdks/order/README.md
@@ -1204,6 +1230,7 @@ generatedFiles:
   - src/Member.php
   - src/Message.php
   - src/Messaging.php
+  - src/Metadata.php
   - src/Model.php
   - src/Models/Errors/SDKException.php
   - src/Models/Operations/Categories.php
@@ -1244,6 +1271,8 @@ generatedFiles:
   - src/Models/Operations/CreateCommerceItemResponse.php
   - src/Models/Operations/CreateCommerceLocationRequest.php
   - src/Models/Operations/CreateCommerceLocationResponse.php
+  - src/Models/Operations/CreateCommerceMetadataRequest.php
+  - src/Models/Operations/CreateCommerceMetadataResponse.php
   - src/Models/Operations/CreateCrmCompanyRequest.php
   - src/Models/Operations/CreateCrmCompanyResponse.php
   - src/Models/Operations/CreateCrmContactRequest.php
@@ -1363,6 +1392,8 @@ generatedFiles:
   - src/Models/Operations/GetCommerceItemResponse.php
   - src/Models/Operations/GetCommerceLocationRequest.php
   - src/Models/Operations/GetCommerceLocationResponse.php
+  - src/Models/Operations/GetCommerceMetadataRequest.php
+  - src/Models/Operations/GetCommerceMetadataResponse.php
   - src/Models/Operations/GetCrmCompanyRequest.php
   - src/Models/Operations/GetCrmCompanyResponse.php
   - src/Models/Operations/GetCrmContactRequest.php
@@ -1496,6 +1527,8 @@ generatedFiles:
   - src/Models/Operations/ListCommerceItemsResponse.php
   - src/Models/Operations/ListCommerceLocationsRequest.php
   - src/Models/Operations/ListCommerceLocationsResponse.php
+  - src/Models/Operations/ListCommerceMetadatasRequest.php
+  - src/Models/Operations/ListCommerceMetadatasResponse.php
   - src/Models/Operations/ListCrmCompaniesRequest.php
   - src/Models/Operations/ListCrmCompaniesResponse.php
   - src/Models/Operations/ListCrmContactsRequest.php
@@ -1635,6 +1668,8 @@ generatedFiles:
   - src/Models/Operations/PatchCommerceItemResponse.php
   - src/Models/Operations/PatchCommerceLocationRequest.php
   - src/Models/Operations/PatchCommerceLocationResponse.php
+  - src/Models/Operations/PatchCommerceMetadataRequest.php
+  - src/Models/Operations/PatchCommerceMetadataResponse.php
   - src/Models/Operations/PatchCrmCompanyRequest.php
   - src/Models/Operations/PatchCrmCompanyResponse.php
   - src/Models/Operations/PatchCrmContactRequest.php
@@ -1752,6 +1787,8 @@ generatedFiles:
   - src/Models/Operations/RemoveCommerceItemResponse.php
   - src/Models/Operations/RemoveCommerceLocationRequest.php
   - src/Models/Operations/RemoveCommerceLocationResponse.php
+  - src/Models/Operations/RemoveCommerceMetadataRequest.php
+  - src/Models/Operations/RemoveCommerceMetadataResponse.php
   - src/Models/Operations/RemoveCrmCompanyRequest.php
   - src/Models/Operations/RemoveCrmCompanyResponse.php
   - src/Models/Operations/RemoveCrmContactRequest.php
@@ -1865,6 +1902,8 @@ generatedFiles:
   - src/Models/Operations/UpdateCommerceItemResponse.php
   - src/Models/Operations/UpdateCommerceLocationRequest.php
   - src/Models/Operations/UpdateCommerceLocationResponse.php
+  - src/Models/Operations/UpdateCommerceMetadataRequest.php
+  - src/Models/Operations/UpdateCommerceMetadataResponse.php
   - src/Models/Operations/UpdateCrmCompanyRequest.php
   - src/Models/Operations/UpdateCrmCompanyResponse.php
   - src/Models/Operations/UpdateCrmContactRequest.php
@@ -2002,6 +2041,7 @@ generatedFiles:
   - src/Models/Shared/CommerceItem.php
   - src/Models/Shared/CommerceItemMedia.php
   - src/Models/Shared/CommerceItemMediaType.php
+  - src/Models/Shared/CommerceItemMetadata.php
   - src/Models/Shared/CommerceItemOption.php
   - src/Models/Shared/CommerceItemPrice.php
   - src/Models/Shared/CommerceItemVariant.php
@@ -2118,6 +2158,8 @@ generatedFiles:
   - src/Models/Shared/MessagingChannel.php
   - src/Models/Shared/MessagingMember.php
   - src/Models/Shared/MessagingMessage.php
+  - src/Models/Shared/NativeWebhookParentId.php
+  - src/Models/Shared/NativeWebhookProjectId.php
   - src/Models/Shared/ObjectType.php
   - src/Models/Shared/Operation.php
   - src/Models/Shared/Origin.php
@@ -2243,6 +2285,16 @@ generatedFiles:
   - src/Models/Shared/UcEmailType.php
   - src/Models/Shared/UcTelephone.php
   - src/Models/Shared/UcTelephoneType.php
+  - src/Models/Shared/VirtualWebhookChannelId.php
+  - src/Models/Shared/VirtualWebhookCompanyId.php
+  - src/Models/Shared/VirtualWebhookContactId.php
+  - src/Models/Shared/VirtualWebhookDealId.php
+  - src/Models/Shared/VirtualWebhookLimit.php
+  - src/Models/Shared/VirtualWebhookParentId.php
+  - src/Models/Shared/VirtualWebhookTicketId.php
+  - src/Models/Shared/VirtualWebhookType.php
+  - src/Models/Shared/VirtualWebhookUpdatedGte.php
+  - src/Models/Shared/VirtualWebhookUserId.php
   - src/Models/Shared/Webhook.php
   - src/Models/Shared/WebhookType.php
   - src/Models/Shared/WeightUnit.php
@@ -2302,6 +2354,7 @@ generatedFiles:
   - src/Utils/Security.php
   - src/Utils/SecurityClient.php
   - src/Utils/SecurityMetadata.php
+  - src/Utils/ServerDetails.php
   - src/Utils/SpeakeasyMetadata.php
   - src/Utils/UnionHandler.php
   - src/Utils/Utils.php
@@ -5142,3 +5195,45 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createCommerceMetadata:
+    speakeasy-default-create-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getCommerceMetadata:
+    speakeasy-default-get-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  listCommerceMetadatas:
+    speakeasy-default-list-commerce-metadatas:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchCommerceMetadata:
+    speakeasy-default-patch-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  removeCommerceMetadata:
+    speakeasy-default-remove-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceMetadata:
+    speakeasy-default-update-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}

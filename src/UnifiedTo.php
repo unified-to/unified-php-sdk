@@ -68,6 +68,8 @@ class UnifiedTo
 
     public Location $location;
 
+    public Metadata $metadata;
+
     public Crm $crm;
 
     public Deal $deal;
@@ -226,6 +228,7 @@ class UnifiedTo
         $this->inventory = new Inventory($this->sdkConfiguration);
         $this->item = new Item($this->sdkConfiguration);
         $this->location = new Location($this->sdkConfiguration);
+        $this->metadata = new Metadata($this->sdkConfiguration);
         $this->crm = new Crm($this->sdkConfiguration);
         $this->deal = new Deal($this->sdkConfiguration);
         $this->event = new Event($this->sdkConfiguration);

@@ -36,7 +36,7 @@ $request = new Shared\Connection(
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::CrmEventRead,
+        Shared\PropertyConnectionPermissions::CrmDealWrite,
     ],
 );
 

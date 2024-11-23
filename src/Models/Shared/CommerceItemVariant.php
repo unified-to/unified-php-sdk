@@ -96,10 +96,10 @@ class CommerceItemVariant
     /**
      * $metadata
      *
-     * @var ?array<CommerceMetadata> $metadata
+     * @var ?array<CommerceItemMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMetadata>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $metadata = null;
 
@@ -226,7 +226,7 @@ class CommerceItemVariant
      * @param  ?bool  $isVisible
      * @param  ?float  $length
      * @param  ?array<CommerceItemMedia>  $media
-     * @param  ?array<CommerceMetadata>  $metadata
+     * @param  ?array<CommerceItemMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<CommerceItemOption>  $options
      * @param  ?array<CommerceItemPrice>  $prices
