@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `jwt`              | *?string*          | :heavy_minus_sign: | N/A                |
+| `jwt`              | *string*           | :heavy_check_mark: | N/A                |

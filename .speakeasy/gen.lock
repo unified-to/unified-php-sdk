@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: a69d016e113a8d9eb83404e95207c9eb
+  docChecksum: 3707cd341db19ec6652e51126ae52977
   docVersion: "1.0"
-  speakeasyVersion: 1.445.2
-  generationVersion: 2.461.4
-  releaseVersion: 1.1.8
-  configChecksum: 6641f097ccfa66040f419d180ae6a135
+  speakeasyVersion: 1.451.5
+  generationVersion: 2.471.2
+  releaseVersion: 1.1.9
+  configChecksum: 5662294617638500222a8785cf923018
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.7.2
+    core: 3.7.3
     globalSecurity: 2.81.7
     globalSecurityFlattening: 0.1.1
     globalServerURLs: 2.82.1
@@ -894,6 +894,7 @@ generatedFiles:
   - docs/Models/Shared/Issue.md
   - docs/Models/Shared/IssueStatus.md
   - docs/Models/Shared/KmsPage.md
+  - docs/Models/Shared/KmsPageMetadata.md
   - docs/Models/Shared/KmsPageType.md
   - docs/Models/Shared/KmsSpace.md
   - docs/Models/Shared/ListAccountId.md
@@ -1209,6 +1210,19 @@ generatedFiles:
   - src/File.php
   - src/Genai.php
   - src/Group.php
+  - src/Hooks/AfterErrorContext.php
+  - src/Hooks/AfterErrorHook.php
+  - src/Hooks/AfterSuccessContext.php
+  - src/Hooks/AfterSuccessHook.php
+  - src/Hooks/BeforeRequestContext.php
+  - src/Hooks/BeforeRequestHook.php
+  - src/Hooks/ErrorResponseContext.php
+  - src/Hooks/FailEarlyException.php
+  - src/Hooks/HookContext.php
+  - src/Hooks/Hooks.php
+  - src/Hooks/SDKHooks.php
+  - src/Hooks/SDKInitHook.php
+  - src/Hooks/SDKRequestContext.php
   - src/Hris.php
   - src/Instructor.php
   - src/Integration.php
@@ -2102,6 +2116,7 @@ generatedFiles:
   - src/Models/Shared/Issue.php
   - src/Models/Shared/IssueStatus.php
   - src/Models/Shared/KmsPage.php
+  - src/Models/Shared/KmsPageMetadata.php
   - src/Models/Shared/KmsPageType.php
   - src/Models/Shared/KmsSpace.php
   - src/Models/Shared/ListAccountId.php
@@ -5237,3 +5252,4 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+generatedTests: {}

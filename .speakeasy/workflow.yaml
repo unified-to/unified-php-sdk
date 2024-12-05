@@ -17,5 +17,5 @@ targets:
                 token: $PACKAGIST_TOKEN
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/unified/unified/my-source-code-samples
+                location: registry.speakeasyapi.dev/unified/unified/my-source-php-code-samples
             blocking: false

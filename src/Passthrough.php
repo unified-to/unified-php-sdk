@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to;
 
 use Speakeasy\Serializer\DeserializationContext;
+use Unified\Unified_to\Hooks\HookContext;
 use Unified\Unified_to\Models\Operations;
 
 class Passthrough
@@ -62,13 +63,30 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-
-
-        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $hookContext = new HookContext('createPassthrough_json', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $options = Utils\Utils::convertHeadersToOptions($httpRequest, $options);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         if (in_array($statusCode, [204, 205, 304])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
             return new Operations\CreatePassthroughJsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
@@ -78,6 +96,8 @@ class Passthrough
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -90,6 +110,8 @@ class Passthrough
 
                 return $response;
             } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\CreatePassthroughJsonResponse(
@@ -99,6 +121,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultApplicationXmlRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\CreatePassthroughJsonResponse(
@@ -108,6 +132,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\CreatePassthroughJsonResponse(
@@ -117,6 +143,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\CreatePassthroughJsonResponse(
@@ -151,13 +179,30 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-
-
-        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $hookContext = new HookContext('createPassthrough_raw', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $options = Utils\Utils::convertHeadersToOptions($httpRequest, $options);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         if (in_array($statusCode, [204, 205, 304])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
             return new Operations\CreatePassthroughRawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
@@ -167,6 +212,8 @@ class Passthrough
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -179,6 +226,8 @@ class Passthrough
 
                 return $response;
             } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\CreatePassthroughRawResponse(
@@ -188,6 +237,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultApplicationXmlRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\CreatePassthroughRawResponse(
@@ -197,6 +248,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\CreatePassthroughRawResponse(
@@ -206,6 +259,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\CreatePassthroughRawResponse(
@@ -236,13 +291,30 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-
-
-        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $hookContext = new HookContext('listPassthroughs', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $options = Utils\Utils::convertHeadersToOptions($httpRequest, $options);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         if (in_array($statusCode, [204, 205, 304])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
             return new Operations\ListPassthroughsResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
@@ -252,6 +324,8 @@ class Passthrough
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -264,6 +338,8 @@ class Passthrough
 
                 return $response;
             } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\ListPassthroughsResponse(
@@ -273,6 +349,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultApplicationXmlRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\ListPassthroughsResponse(
@@ -282,6 +360,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\ListPassthroughsResponse(
@@ -291,6 +371,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\ListPassthroughsResponse(
@@ -325,13 +407,30 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-
-
-        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $hookContext = new HookContext('patchPassthrough_json', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $options = Utils\Utils::convertHeadersToOptions($httpRequest, $options);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         if (in_array($statusCode, [204, 205, 304])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
             return new Operations\PatchPassthroughJsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
@@ -341,6 +440,8 @@ class Passthrough
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -353,6 +454,8 @@ class Passthrough
 
                 return $response;
             } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\PatchPassthroughJsonResponse(
@@ -362,6 +465,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultApplicationXmlRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\PatchPassthroughJsonResponse(
@@ -371,6 +476,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\PatchPassthroughJsonResponse(
@@ -380,6 +487,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\PatchPassthroughJsonResponse(
@@ -414,13 +523,30 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-
-
-        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $hookContext = new HookContext('patchPassthrough_raw', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $options = Utils\Utils::convertHeadersToOptions($httpRequest, $options);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         if (in_array($statusCode, [204, 205, 304])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
             return new Operations\PatchPassthroughRawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
@@ -430,6 +556,8 @@ class Passthrough
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -442,6 +570,8 @@ class Passthrough
 
                 return $response;
             } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\PatchPassthroughRawResponse(
@@ -451,6 +581,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultApplicationXmlRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\PatchPassthroughRawResponse(
@@ -460,6 +592,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\PatchPassthroughRawResponse(
@@ -469,6 +603,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\PatchPassthroughRawResponse(
@@ -499,13 +635,30 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-
-
-        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $hookContext = new HookContext('removePassthrough', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $options = Utils\Utils::convertHeadersToOptions($httpRequest, $options);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         if (in_array($statusCode, [204, 205, 304])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
             return new Operations\RemovePassthroughResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
@@ -515,6 +668,8 @@ class Passthrough
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -527,6 +682,8 @@ class Passthrough
 
                 return $response;
             } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\RemovePassthroughResponse(
@@ -536,6 +693,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultApplicationXmlRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\RemovePassthroughResponse(
@@ -545,6 +704,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\RemovePassthroughResponse(
@@ -554,6 +715,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\RemovePassthroughResponse(
@@ -588,13 +751,30 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-
-
-        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $hookContext = new HookContext('updatePassthrough_json', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $options = Utils\Utils::convertHeadersToOptions($httpRequest, $options);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         if (in_array($statusCode, [204, 205, 304])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
             return new Operations\UpdatePassthroughJsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
@@ -604,6 +784,8 @@ class Passthrough
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -616,6 +798,8 @@ class Passthrough
 
                 return $response;
             } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\UpdatePassthroughJsonResponse(
@@ -625,6 +809,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultApplicationXmlRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\UpdatePassthroughJsonResponse(
@@ -634,6 +820,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\UpdatePassthroughJsonResponse(
@@ -643,6 +831,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\UpdatePassthroughJsonResponse(
@@ -677,13 +867,30 @@ class Passthrough
         $options['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-
-
-        $httpResponse = $this->sdkConfiguration->securityClient->send($httpRequest, $options);
+        $hookContext = new HookContext('updatePassthrough_raw', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $options = Utils\Utils::convertHeadersToOptions($httpRequest, $options);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
+        if ($statusCode >= 400 && $statusCode < 500 || $statusCode >= 500 && $statusCode < 600) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            if ($res !== null) {
+                $httpResponse = $res;
+            }
+        }
         if (in_array($statusCode, [204, 205, 304])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
             return new Operations\UpdatePassthroughRawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
@@ -693,6 +900,8 @@ class Passthrough
             throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
@@ -705,6 +914,8 @@ class Passthrough
 
                 return $response;
             } elseif (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\UpdatePassthroughRawResponse(
@@ -714,6 +925,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultApplicationXmlRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/csv')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\UpdatePassthroughRawResponse(
@@ -723,6 +936,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextCsvRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, 'text/plain')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\UpdatePassthroughRawResponse(
@@ -732,6 +947,8 @@ class Passthrough
                     headers: $httpResponse->getHeaders(),
                     defaultTextPlainRes: $obj);
             } elseif (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
                 $obj = $httpResponse->getBody()->getContents();
 
                 return new Operations\UpdatePassthroughRawResponse(

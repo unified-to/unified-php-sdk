@@ -13,15 +13,15 @@ class Security
 {
     /**
      *
-     * @var ?string $jwt
+     * @var string $jwt
      */
     #[SpeakeasyMetadata('security:scheme=true,type=apiKey,subtype=header,name=authorization')]
-    public ?string $jwt = null;
+    public string $jwt;
 
     /**
-     * @param  ?string  $jwt
+     * @param  string  $jwt
      */
-    public function __construct(?string $jwt = null)
+    public function __construct(string $jwt)
     {
         $this->jwt = $jwt;
     }

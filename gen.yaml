@@ -14,7 +14,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 1.1.8
+  version: 1.1.9
   clientServerStatusCodesAsErrors: true
   defaultErrorName: SDKException
   flattenGlobalSecurity: true

@@ -288,5 +288,7 @@ class UnifiedTo
         $this->login = new Login($this->sdkConfiguration);
         $this->issue = new Issue($this->sdkConfiguration);
         $this->webhook = new Webhook($this->sdkConfiguration);
+        $this->sdkConfiguration->client = $this->sdkConfiguration->initHooks($this->sdkConfiguration->client);
+
     }
 }

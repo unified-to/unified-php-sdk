@@ -28,6 +28,14 @@ class KmsPage
 
     /**
      *
+     * @var ?bool $hasChildren
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_children')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasChildren = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -41,6 +49,16 @@ class KmsPage
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
+
+    /**
+     * $metadata
+     *
+     * @var ?array<KmsPageMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\KmsPageMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
 
     /**
      *
@@ -104,22 +122,26 @@ class KmsPage
      * @param  string  $title
      * @param  KmsPageType  $type
      * @param  ?\DateTime  $createdAt
+     * @param  ?bool  $hasChildren
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<KmsPageMetadata>  $metadata
      * @param  ?string  $parentPageId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(string $downloadUrl, string $spaceId, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isActive = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $downloadUrl, string $spaceId, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->downloadUrl = $downloadUrl;
         $this->spaceId = $spaceId;
         $this->title = $title;
         $this->type = $type;
         $this->createdAt = $createdAt;
+        $this->hasChildren = $hasChildren;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->parentPageId = $parentPageId;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

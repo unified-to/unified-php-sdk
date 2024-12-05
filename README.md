@@ -1145,7 +1145,7 @@ use Unified\Unified_to\Models\Operations;
 $security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()
-    ->setServerURL("https://api.unified.to")
+    ->setServerURL('https://api.unified.to')
     ->setSecurity($security)->build();
 
 $request = new Operations\CreateAccountingAccountRequest(
@@ -1170,12 +1170,13 @@ Unified.to API: One API to Rule Them All
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
+<!-- $toc-max-depth=2 -->
+  * [SDK Installation](#sdk-installation)
+  * [SDK Example Usage](#sdk-example-usage)
+  * [Available Resources and Operations](#available-resources-and-operations)
+  * [Error Handling](#error-handling)
+  * [Server Selection](#server-selection)
 
-* [SDK Installation](#sdk-installation)
-* [SDK Example Usage](#sdk-example-usage)
-* [Available Resources and Operations](#available-resources-and-operations)
-* [Error Handling](#error-handling)
-* [Server Selection](#server-selection)
 <!-- End Table of Contents [toc] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
