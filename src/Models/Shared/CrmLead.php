@@ -87,6 +87,16 @@ class CrmLead
     public ?bool $isActive = null;
 
     /**
+     * $linkUrls
+     *
+     * @var ?array<string> $linkUrls
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('link_urls')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $linkUrls = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -156,6 +166,7 @@ class CrmLead
      * @param  ?array<CrmEmail>  $emails
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<string>  $linkUrls
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $source
@@ -164,7 +175,7 @@ class CrmLead
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -175,6 +186,7 @@ class CrmLead
         $this->emails = $emails;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->linkUrls = $linkUrls;
         $this->name = $name;
         $this->raw = $raw;
         $this->source = $source;

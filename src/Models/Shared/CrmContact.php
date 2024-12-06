@@ -76,6 +76,16 @@ class CrmContact
     public ?string $id = null;
 
     /**
+     * $linkUrls
+     *
+     * @var ?array<string> $linkUrls
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('link_urls')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $linkUrls = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -135,6 +145,7 @@ class CrmContact
      * @param  ?array<string>  $dealIds
      * @param  ?array<CrmEmail>  $emails
      * @param  ?string  $id
+     * @param  ?array<string>  $linkUrls
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<CrmTelephone>  $telephones
@@ -142,7 +153,7 @@ class CrmContact
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->company = $company;
@@ -151,6 +162,7 @@ class CrmContact
         $this->dealIds = $dealIds;
         $this->emails = $emails;
         $this->id = $id;
+        $this->linkUrls = $linkUrls;
         $this->name = $name;
         $this->raw = $raw;
         $this->telephones = $telephones;
