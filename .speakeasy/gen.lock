@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: fdbcce3cd82999739c54ae5c1af3eaae
+  docChecksum: 42f573170bad12dc387a71808ef7cd22
   docVersion: "1.0"
-  speakeasyVersion: 1.453.0
-  generationVersion: 2.472.1
-  releaseVersion: 1.1.10
-  configChecksum: a73b87cf4b665c3fa3e548ab406b14a6
+  speakeasyVersion: 1.453.1
+  generationVersion: 2.474.4
+  releaseVersion: 1.1.11
+  configChecksum: 97b75613beab8778514021de3d9202eb
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -26,7 +26,6 @@ generatedFiles:
   - USAGE.md
   - composer.json
   - docs/Models/Operations/Categories.md
-  - docs/Models/Operations/ConnectionId.md
   - docs/Models/Operations/CreateAccountingAccountRequest.md
   - docs/Models/Operations/CreateAccountingAccountResponse.md
   - docs/Models/Operations/CreateAccountingContactRequest.md
@@ -276,7 +275,6 @@ generatedFiles:
   - docs/Models/Operations/GetUnifiedIntegrationLoginResponse.md
   - docs/Models/Operations/GetUnifiedWebhookRequest.md
   - docs/Models/Operations/GetUnifiedWebhookResponse.md
-  - docs/Models/Operations/IntegrationType.md
   - docs/Models/Operations/ListAccountingAccountsRequest.md
   - docs/Models/Operations/ListAccountingAccountsResponse.md
   - docs/Models/Operations/ListAccountingContactsRequest.md
@@ -924,6 +922,7 @@ generatedFiles:
   - docs/Models/Shared/ListProjectId.md
   - docs/Models/Shared/ListQuery.md
   - docs/Models/Shared/ListRawFields.md
+  - docs/Models/Shared/ListRootId.md
   - docs/Models/Shared/ListSortByCreatedAt.md
   - docs/Models/Shared/ListSortByName.md
   - docs/Models/Shared/ListSortByUpdatedAt.md
@@ -1248,7 +1247,6 @@ generatedFiles:
   - src/Model.php
   - src/Models/Errors/SDKException.php
   - src/Models/Operations/Categories.php
-  - src/Models/Operations/ConnectionId.php
   - src/Models/Operations/CreateAccountingAccountRequest.php
   - src/Models/Operations/CreateAccountingAccountResponse.php
   - src/Models/Operations/CreateAccountingContactRequest.php
@@ -1498,7 +1496,6 @@ generatedFiles:
   - src/Models/Operations/GetUnifiedIntegrationLoginResponse.php
   - src/Models/Operations/GetUnifiedWebhookRequest.php
   - src/Models/Operations/GetUnifiedWebhookResponse.php
-  - src/Models/Operations/IntegrationType.php
   - src/Models/Operations/ListAccountingAccountsRequest.php
   - src/Models/Operations/ListAccountingAccountsResponse.php
   - src/Models/Operations/ListAccountingContactsRequest.php
@@ -2146,6 +2143,7 @@ generatedFiles:
   - src/Models/Shared/ListProjectId.php
   - src/Models/Shared/ListQuery.php
   - src/Models/Shared/ListRawFields.php
+  - src/Models/Shared/ListRootId.php
   - src/Models/Shared/ListSortByCreatedAt.php
   - src/Models/Shared/ListSortByName.php
   - src/Models/Shared/ListSortByUpdatedAt.php

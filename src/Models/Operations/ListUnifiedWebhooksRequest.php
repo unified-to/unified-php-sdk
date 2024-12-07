@@ -12,12 +12,12 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListUnifiedWebhooksRequest
 {
     /**
-     * A connection represents a specific authentication of an integration.
+     * Filter the results to just this integration
      *
-     * @var ?ConnectionId $connectionId
+     * @var ?string $connectionId
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=connection_id')]
-    public ?ConnectionId $connectionId = null;
+    public ?string $connectionId = null;
 
     /**
      * Return only results whose created date is equal or less to this value
@@ -35,12 +35,12 @@ class ListUnifiedWebhooksRequest
     public ?string $env = null;
 
     /**
-     * Informational object for supported integrations.
+     * Filter the results to just this integration
      *
-     * @var ?IntegrationType $integrationType
+     * @var ?string $integrationType
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=integration_type')]
-    public ?IntegrationType $integrationType = null;
+    public ?string $integrationType = null;
 
     /**
      *
@@ -87,10 +87,10 @@ class ListUnifiedWebhooksRequest
     public ?\DateTime $updatedGte = null;
 
     /**
-     * @param  ?ConnectionId  $connectionId
+     * @param  ?string  $connectionId
      * @param  ?\DateTime  $createdLte
      * @param  ?string  $env
-     * @param  ?IntegrationType  $integrationType
+     * @param  ?string  $integrationType
      * @param  ?float  $limit
      * @param  ?string  $object
      * @param  ?float  $offset
@@ -98,7 +98,7 @@ class ListUnifiedWebhooksRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(?ConnectionId $connectionId = null, ?\DateTime $createdLte = null, ?string $env = null, ?IntegrationType $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(?string $connectionId = null, ?\DateTime $createdLte = null, ?string $env = null, ?string $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->createdLte = $createdLte;

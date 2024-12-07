@@ -72,6 +72,13 @@ class ListMessagingMessagesRequest
 
     /**
      *
+     * @var ?string $rootId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=root_id')]
+    public ?string $rootId = null;
+
+    /**
+     *
      * @var ?string $sort
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
@@ -94,10 +101,11 @@ class ListMessagingMessagesRequest
      * @param  ?string  $order
      * @param  ?string  $parentId
      * @param  ?string  $query
+     * @param  ?string  $rootId
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      */
-    public function __construct(string $connectionId, ?string $channelId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $channelId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $rootId = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->channelId = $channelId;
@@ -107,6 +115,7 @@ class ListMessagingMessagesRequest
         $this->order = $order;
         $this->parentId = $parentId;
         $this->query = $query;
+        $this->rootId = $rootId;
         $this->sort = $sort;
         $this->updatedGte = $updatedGte;
     }

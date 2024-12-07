@@ -12,7 +12,7 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListUnifiedApicallsRequest
 {
     /**
-     * Filter the results to just this integration's API calls
+     * Filter the results to just this integration
      *
      * @var ?string $connectionId
      */
@@ -43,7 +43,7 @@ class ListUnifiedApicallsRequest
     public ?string $externalXref = null;
 
     /**
-     * Filter the results for connections with this integration
+     * Filter the results to just this integration
      *
      * @var ?string $integrationType
      */

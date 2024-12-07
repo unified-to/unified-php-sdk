@@ -128,6 +128,14 @@ class MessagingMessage
 
     /**
      *
+     * @var ?string $rootMessageId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('root_message_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $rootMessageId = null;
+
+    /**
+     *
      * @var ?string $subject
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
@@ -164,11 +172,12 @@ class MessagingMessage
      * @param  ?string  $parentMessageId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
+     * @param  ?string  $rootMessageId
      * @param  ?string  $subject
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $reference = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;
@@ -183,6 +192,7 @@ class MessagingMessage
         $this->parentMessageId = $parentMessageId;
         $this->raw = $raw;
         $this->reference = $reference;
+        $this->rootMessageId = $rootMessageId;
         $this->subject = $subject;
         $this->updatedAt = $updatedAt;
         $this->webUrl = $webUrl;
