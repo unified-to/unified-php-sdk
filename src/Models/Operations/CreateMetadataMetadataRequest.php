@@ -10,14 +10,14 @@ namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class PatchCommerceMetadataRequest
+class CreateMetadataMetadataRequest
 {
     /**
      *
-     * @var ?Shared\CommerceMetadata $commerceMetadata
+     * @var ?Shared\MetadataMetadata $metadataMetadata
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CommerceMetadata $commerceMetadata = null;
+    public ?Shared\MetadataMetadata $metadataMetadata = null;
 
     /**
      * ID of the connection
@@ -36,24 +36,14 @@ class PatchCommerceMetadataRequest
     public ?array $fields = null;
 
     /**
-     * ID of the Metadata
-     *
-     * @var string $id
-     */
-    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
-    public string $id;
-
-    /**
      * @param  string  $connectionId
-     * @param  string  $id
-     * @param  ?Shared\CommerceMetadata  $commerceMetadata
+     * @param  ?Shared\MetadataMetadata  $metadataMetadata
      * @param  ?array<string>  $fields
      */
-    public function __construct(string $connectionId, string $id, ?Shared\CommerceMetadata $commerceMetadata = null, ?array $fields = null)
+    public function __construct(string $connectionId, ?Shared\MetadataMetadata $metadataMetadata = null, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
-        $this->id = $id;
-        $this->commerceMetadata = $commerceMetadata;
+        $this->metadataMetadata = $metadataMetadata;
         $this->fields = $fields;
     }
 }

@@ -31,4 +31,5 @@ enum Categories: string
     case Scim = 'scim';
     case Lms = 'lms';
     case Repo = 'repo';
+    case Metadata = 'metadata';
 }

@@ -9,21 +9,21 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Models\Shared;
-class ListCommerceMetadatasResponse
+class ListMetadataMetadatasResponse
 {
-    /**
-     * Successful
-     *
-     * @var ?array<Shared\CommerceMetadata> $commerceMetadatas
-     */
-    public ?array $commerceMetadatas = null;
-
     /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
      */
     public string $contentType;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\MetadataMetadata> $metadataMetadatas
+     */
+    public ?array $metadataMetadatas = null;
 
     /**
      * HTTP response status code for this operation
@@ -43,13 +43,13 @@ class ListCommerceMetadatasResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CommerceMetadata>  $commerceMetadatas
+     * @param  ?array<Shared\MetadataMetadata>  $metadataMetadatas
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $commerceMetadatas = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $metadataMetadatas = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->commerceMetadatas = $commerceMetadatas;
+        $this->metadataMetadatas = $metadataMetadatas;
     }
 }

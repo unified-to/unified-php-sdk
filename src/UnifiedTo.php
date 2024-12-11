@@ -68,8 +68,6 @@ class UnifiedTo
 
     public Location $location;
 
-    public Metadata $metadata;
-
     public Crm $crm;
 
     public Deal $deal;
@@ -127,6 +125,8 @@ class UnifiedTo
     public Channel $channel;
 
     public Message $message;
+
+    public Metadata $metadata;
 
     public Passthrough $passthrough;
 
@@ -228,7 +228,6 @@ class UnifiedTo
         $this->inventory = new Inventory($this->sdkConfiguration);
         $this->item = new Item($this->sdkConfiguration);
         $this->location = new Location($this->sdkConfiguration);
-        $this->metadata = new Metadata($this->sdkConfiguration);
         $this->crm = new Crm($this->sdkConfiguration);
         $this->deal = new Deal($this->sdkConfiguration);
         $this->event = new Event($this->sdkConfiguration);
@@ -258,6 +257,7 @@ class UnifiedTo
         $this->messaging = new Messaging($this->sdkConfiguration);
         $this->channel = new Channel($this->sdkConfiguration);
         $this->message = new Message($this->sdkConfiguration);
+        $this->metadata = new Metadata($this->sdkConfiguration);
         $this->passthrough = new Passthrough($this->sdkConfiguration);
         $this->payment = new Payment($this->sdkConfiguration);
         $this->link = new Link($this->sdkConfiguration);

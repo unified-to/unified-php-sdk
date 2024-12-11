@@ -9,32 +9,26 @@
 * [createCommerceInventory](#createcommerceinventory) - Create an inventory
 * [createCommerceItem](#createcommerceitem) - Create an item
 * [createCommerceLocation](#createcommercelocation) - Create a location
-* [createCommerceMetadata](#createcommercemetadata) - Create a metadata
 * [getCommerceCollection](#getcommercecollection) - Retrieve a collection
 * [getCommerceInventory](#getcommerceinventory) - Retrieve an inventory
 * [getCommerceItem](#getcommerceitem) - Retrieve an item
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
-* [getCommerceMetadata](#getcommercemetadata) - Retrieve a metadata
 * [listCommerceCollections](#listcommercecollections) - List all collections
 * [listCommerceInventories](#listcommerceinventories) - List all inventories
 * [listCommerceItems](#listcommerceitems) - List all items
 * [listCommerceLocations](#listcommercelocations) - List all locations
-* [listCommerceMetadatas](#listcommercemetadatas) - List all metadatas
 * [patchCommerceCollection](#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](#patchcommerceitem) - Update an item
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
-* [patchCommerceMetadata](#patchcommercemetadata) - Update a metadata
 * [removeCommerceCollection](#removecommercecollection) - Remove a collection
 * [removeCommerceInventory](#removecommerceinventory) - Remove an inventory
 * [removeCommerceItem](#removecommerceitem) - Remove an item
 * [removeCommerceLocation](#removecommercelocation) - Remove a location
-* [removeCommerceMetadata](#removecommercemetadata) - Remove a metadata
 * [updateCommerceCollection](#updatecommercecollection) - Update a collection
 * [updateCommerceInventory](#updatecommerceinventory) - Update an inventory
 * [updateCommerceItem](#updatecommerceitem) - Update an item
 * [updateCommerceLocation](#updatecommercelocation) - Update a location
-* [updateCommerceMetadata](#updatecommercemetadata) - Update a metadata
 
 ## createCommerceCollection
 
@@ -217,53 +211,6 @@ if ($response->commerceLocation !== null) {
 ### Response
 
 **[?Operations\CreateCommerceLocationResponse](../../Models/Operations/CreateCommerceLocationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createCommerceMetadata
-
-Create a metadata
-
-### Example Usage
-
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$security = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-$request = new Operations\CreateCommerceMetadataRequest(
-    connectionId: '<id>',
-);
-
-$response = $sdk->commerce->createCommerceMetadata(
-    request: $request
-);
-
-if ($response->commerceMetadata !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateCommerceMetadataRequest](../../Models/Operations/CreateCommerceMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\CreateCommerceMetadataResponse](../../Models/Operations/CreateCommerceMetadataResponse.md)**
 
 ### Errors
 
@@ -463,54 +410,6 @@ if ($response->commerceLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceMetadata
-
-Retrieve a metadata
-
-### Example Usage
-
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$security = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-$request = new Operations\GetCommerceMetadataRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->getCommerceMetadata(
-    request: $request
-);
-
-if ($response->commerceMetadata !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetCommerceMetadataRequest](../../Models/Operations/GetCommerceMetadataRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\GetCommerceMetadataResponse](../../Models/Operations/GetCommerceMetadataResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
 ## listCommerceCollections
 
 List all collections
@@ -692,53 +591,6 @@ if ($response->commerceLocations !== null) {
 ### Response
 
 **[?Operations\ListCommerceLocationsResponse](../../Models/Operations/ListCommerceLocationsResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## listCommerceMetadatas
-
-List all metadatas
-
-### Example Usage
-
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$security = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-$request = new Operations\ListCommerceMetadatasRequest(
-    connectionId: '<id>',
-);
-
-$response = $sdk->commerce->listCommerceMetadatas(
-    request: $request
-);
-
-if ($response->commerceMetadatas !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListCommerceMetadatasRequest](../../Models/Operations/ListCommerceMetadatasRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\ListCommerceMetadatasResponse](../../Models/Operations/ListCommerceMetadatasResponse.md)**
 
 ### Errors
 
@@ -938,54 +790,6 @@ if ($response->commerceLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceMetadata
-
-Update a metadata
-
-### Example Usage
-
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$security = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-$request = new Operations\PatchCommerceMetadataRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->patchCommerceMetadata(
-    request: $request
-);
-
-if ($response->commerceMetadata !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchCommerceMetadataRequest](../../Models/Operations/PatchCommerceMetadataRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\PatchCommerceMetadataResponse](../../Models/Operations/PatchCommerceMetadataResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
 ## removeCommerceCollection
 
 Remove a collection
@@ -1178,54 +982,6 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCommerceMetadata
-
-Remove a metadata
-
-### Example Usage
-
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$security = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-$request = new Operations\RemoveCommerceMetadataRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceMetadata(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveCommerceMetadataRequest](../../Models/Operations/RemoveCommerceMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\RemoveCommerceMetadataResponse](../../Models/Operations/RemoveCommerceMetadataResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
 ## updateCommerceCollection
 
 Update a collection
@@ -1411,54 +1167,6 @@ if ($response->commerceLocation !== null) {
 ### Response
 
 **[?Operations\UpdateCommerceLocationResponse](../../Models/Operations/UpdateCommerceLocationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceMetadata
-
-Update a metadata
-
-### Example Usage
-
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$security = '<YOUR_API_KEY_HERE>';
-
-$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
-
-$request = new Operations\UpdateCommerceMetadataRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceMetadata(
-    request: $request
-);
-
-if ($response->commerceMetadata !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateCommerceMetadataRequest](../../Models/Operations/UpdateCommerceMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\UpdateCommerceMetadataResponse](../../Models/Operations/UpdateCommerceMetadataResponse.md)**
 
 ### Errors
 

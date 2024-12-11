@@ -41,8 +41,6 @@ enum Scopes: string
     case CommerceInventoryWrite = 'commerce_inventory_write';
     case CommerceLocationRead = 'commerce_location_read';
     case CommerceLocationWrite = 'commerce_location_write';
-    case CommerceMetadataRead = 'commerce_metadata_read';
-    case CommerceMetadataWrite = 'commerce_metadata_write';
     case AtsActivityRead = 'ats_activity_read';
     case AtsActivityWrite = 'ats_activity_write';
     case AtsApplicationRead = 'ats_application_read';
@@ -135,4 +133,6 @@ enum Scopes: string
     case RepoCommitWrite = 'repo_commit_write';
     case RepoPullrequestRead = 'repo_pullrequest_read';
     case RepoPullrequestWrite = 'repo_pullrequest_write';
+    case MetadataMetadataRead = 'metadata_metadata_read';
+    case MetadataMetadataWrite = 'metadata_metadata_write';
 }

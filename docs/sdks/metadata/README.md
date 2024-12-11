@@ -5,14 +5,14 @@
 
 ### Available Operations
 
-* [createCommerceMetadata](#createcommercemetadata) - Create a metadata
-* [getCommerceMetadata](#getcommercemetadata) - Retrieve a metadata
-* [listCommerceMetadatas](#listcommercemetadatas) - List all metadatas
-* [patchCommerceMetadata](#patchcommercemetadata) - Update a metadata
-* [removeCommerceMetadata](#removecommercemetadata) - Remove a metadata
-* [updateCommerceMetadata](#updatecommercemetadata) - Update a metadata
+* [createMetadataMetadata](#createmetadatametadata) - Create a metadata
+* [getMetadataMetadata](#getmetadatametadata) - Retrieve a metadata
+* [listMetadataMetadatas](#listmetadatametadatas) - List all metadatas
+* [patchMetadataMetadata](#patchmetadatametadata) - Update a metadata
+* [removeMetadataMetadata](#removemetadatametadata) - Remove a metadata
+* [updateMetadataMetadata](#updatemetadatametadata) - Update a metadata
 
-## createCommerceMetadata
+## createMetadataMetadata
 
 Create a metadata
 
@@ -30,15 +30,15 @@ $security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-$request = new Operations\CreateCommerceMetadataRequest(
+$request = new Operations\CreateMetadataMetadataRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->metadata->createCommerceMetadata(
+$response = $sdk->metadata->createMetadataMetadata(
     request: $request
 );
 
-if ($response->commerceMetadata !== null) {
+if ($response->metadataMetadata !== null) {
     // handle response
 }
 ```
@@ -47,11 +47,11 @@ if ($response->commerceMetadata !== null) {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateCommerceMetadataRequest](../../Models/Operations/CreateCommerceMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [Operations\CreateMetadataMetadataRequest](../../Models/Operations/CreateMetadataMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\CreateCommerceMetadataResponse](../../Models/Operations/CreateCommerceMetadataResponse.md)**
+**[?Operations\CreateMetadataMetadataResponse](../../Models/Operations/CreateMetadataMetadataResponse.md)**
 
 ### Errors
 
@@ -59,7 +59,7 @@ if ($response->commerceMetadata !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceMetadata
+## getMetadataMetadata
 
 Retrieve a metadata
 
@@ -77,16 +77,16 @@ $security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-$request = new Operations\GetCommerceMetadataRequest(
+$request = new Operations\GetMetadataMetadataRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->metadata->getCommerceMetadata(
+$response = $sdk->metadata->getMetadataMetadata(
     request: $request
 );
 
-if ($response->commerceMetadata !== null) {
+if ($response->metadataMetadata !== null) {
     // handle response
 }
 ```
@@ -95,11 +95,11 @@ if ($response->commerceMetadata !== null) {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetCommerceMetadataRequest](../../Models/Operations/GetCommerceMetadataRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [Operations\GetMetadataMetadataRequest](../../Models/Operations/GetMetadataMetadataRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetCommerceMetadataResponse](../../Models/Operations/GetCommerceMetadataResponse.md)**
+**[?Operations\GetMetadataMetadataResponse](../../Models/Operations/GetMetadataMetadataResponse.md)**
 
 ### Errors
 
@@ -107,7 +107,7 @@ if ($response->commerceMetadata !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceMetadatas
+## listMetadataMetadatas
 
 List all metadatas
 
@@ -125,15 +125,15 @@ $security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-$request = new Operations\ListCommerceMetadatasRequest(
+$request = new Operations\ListMetadataMetadatasRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->metadata->listCommerceMetadatas(
+$response = $sdk->metadata->listMetadataMetadatas(
     request: $request
 );
 
-if ($response->commerceMetadatas !== null) {
+if ($response->metadataMetadatas !== null) {
     // handle response
 }
 ```
@@ -142,11 +142,11 @@ if ($response->commerceMetadatas !== null) {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListCommerceMetadatasRequest](../../Models/Operations/ListCommerceMetadatasRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\ListMetadataMetadatasRequest](../../Models/Operations/ListMetadataMetadatasRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListCommerceMetadatasResponse](../../Models/Operations/ListCommerceMetadatasResponse.md)**
+**[?Operations\ListMetadataMetadatasResponse](../../Models/Operations/ListMetadataMetadatasResponse.md)**
 
 ### Errors
 
@@ -154,7 +154,7 @@ if ($response->commerceMetadatas !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceMetadata
+## patchMetadataMetadata
 
 Update a metadata
 
@@ -172,16 +172,16 @@ $security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-$request = new Operations\PatchCommerceMetadataRequest(
+$request = new Operations\PatchMetadataMetadataRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->metadata->patchCommerceMetadata(
+$response = $sdk->metadata->patchMetadataMetadata(
     request: $request
 );
 
-if ($response->commerceMetadata !== null) {
+if ($response->metadataMetadata !== null) {
     // handle response
 }
 ```
@@ -190,11 +190,11 @@ if ($response->commerceMetadata !== null) {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchCommerceMetadataRequest](../../Models/Operations/PatchCommerceMetadataRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\PatchMetadataMetadataRequest](../../Models/Operations/PatchMetadataMetadataRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchCommerceMetadataResponse](../../Models/Operations/PatchCommerceMetadataResponse.md)**
+**[?Operations\PatchMetadataMetadataResponse](../../Models/Operations/PatchMetadataMetadataResponse.md)**
 
 ### Errors
 
@@ -202,7 +202,7 @@ if ($response->commerceMetadata !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCommerceMetadata
+## removeMetadataMetadata
 
 Remove a metadata
 
@@ -220,12 +220,12 @@ $security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-$request = new Operations\RemoveCommerceMetadataRequest(
+$request = new Operations\RemoveMetadataMetadataRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->metadata->removeCommerceMetadata(
+$response = $sdk->metadata->removeMetadataMetadata(
     request: $request
 );
 
@@ -238,11 +238,11 @@ if ($response->statusCode === 200) {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveCommerceMetadataRequest](../../Models/Operations/RemoveCommerceMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [Operations\RemoveMetadataMetadataRequest](../../Models/Operations/RemoveMetadataMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\RemoveCommerceMetadataResponse](../../Models/Operations/RemoveCommerceMetadataResponse.md)**
+**[?Operations\RemoveMetadataMetadataResponse](../../Models/Operations/RemoveMetadataMetadataResponse.md)**
 
 ### Errors
 
@@ -250,7 +250,7 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCommerceMetadata
+## updateMetadataMetadata
 
 Update a metadata
 
@@ -268,16 +268,16 @@ $security = '<YOUR_API_KEY_HERE>';
 
 $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
-$request = new Operations\UpdateCommerceMetadataRequest(
+$request = new Operations\UpdateMetadataMetadataRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->metadata->updateCommerceMetadata(
+$response = $sdk->metadata->updateMetadataMetadata(
     request: $request
 );
 
-if ($response->commerceMetadata !== null) {
+if ($response->metadataMetadata !== null) {
     // handle response
 }
 ```
@@ -286,11 +286,11 @@ if ($response->commerceMetadata !== null) {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateCommerceMetadataRequest](../../Models/Operations/UpdateCommerceMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [Operations\UpdateMetadataMetadataRequest](../../Models/Operations/UpdateMetadataMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\UpdateCommerceMetadataResponse](../../Models/Operations/UpdateCommerceMetadataResponse.md)**
+**[?Operations\UpdateMetadataMetadataResponse](../../Models/Operations/UpdateMetadataMetadataResponse.md)**
 
 ### Errors
 

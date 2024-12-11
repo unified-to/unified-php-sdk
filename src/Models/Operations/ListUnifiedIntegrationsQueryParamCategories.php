@@ -31,4 +31,5 @@ enum ListUnifiedIntegrationsQueryParamCategories: string
     case Scim = 'scim';
     case Lms = 'lms';
     case Repo = 'repo';
+    case Metadata = 'metadata';
 }

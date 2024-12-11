@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
-
-class RemoveCommerceMetadataResponse
+use Unified\Unified_to\Models\Shared;
+class CreateMetadataMetadataResponse
 {
     /**
      * HTTP response content type for this operation
@@ -19,11 +19,11 @@ class RemoveCommerceMetadataResponse
     public string $contentType;
 
     /**
-     * $headers
+     * Successful
      *
-     * @var array<string, array<string>> $headers
+     * @var ?Shared\MetadataMetadata $metadataMetadata
      */
-    public array $headers;
+    public ?Shared\MetadataMetadata $metadataMetadata = null;
 
     /**
      * HTTP response status code for this operation
@@ -41,15 +41,15 @@ class RemoveCommerceMetadataResponse
 
     /**
      * @param  string  $contentType
-     * @param  array<string, array<string>>  $headers
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
+     * @param  ?Shared\MetadataMetadata  $metadataMetadata
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $headers = [])
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\MetadataMetadata $metadataMetadata = null)
     {
         $this->contentType = $contentType;
-        $this->headers = $headers;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
+        $this->metadataMetadata = $metadataMetadata;
     }
 }

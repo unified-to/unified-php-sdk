@@ -46,11 +46,11 @@ $sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
 
 $request = new Shared\Connection(
     categories: [
-        Shared\PropertyConnectionCategories::Lms,
+        Shared\PropertyConnectionCategories::Repo,
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::CrmDealWrite,
+        Shared\PropertyConnectionPermissions::CrmEventWrite,
     ],
 );
 

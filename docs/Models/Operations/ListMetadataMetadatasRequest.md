@@ -1,4 +1,4 @@
-# ListCommerceMetadatasRequest
+# ListMetadataMetadatasRequest
 
 
 ## Fields
@@ -12,4 +12,5 @@
 | `order`                                                                  | *?string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
 | `query`                                                                  | *?string*                                                                | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
 | `sort`                                                                   | *?string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `type`                                                                   | *?string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
 | `updatedGte`                                                             | [\DateTime](https://www.php.net/manual/en/class.datetime.php)            | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |

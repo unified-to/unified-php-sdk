@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class RemoveCommerceMetadataRequest
+class GetMetadataMetadataRequest
 {
     /**
      * ID of the connection
@@ -18,6 +18,14 @@ class RemoveCommerceMetadataRequest
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
 
     /**
      * ID of the Metadata
@@ -30,10 +38,12 @@ class RemoveCommerceMetadataRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
+     * @param  ?array<string>  $fields
      */
-    public function __construct(string $connectionId, string $id)
+    public function __construct(string $connectionId, string $id, ?array $fields = null)
     {
         $this->connectionId = $connectionId;
         $this->id = $id;
+        $this->fields = $fields;
     }
 }

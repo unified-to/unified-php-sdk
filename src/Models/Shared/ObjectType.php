@@ -27,7 +27,6 @@ enum ObjectType: string
     case CommerceCollection = 'commerce_collection';
     case CommerceInventory = 'commerce_inventory';
     case CommerceLocation = 'commerce_location';
-    case CommerceMetadata = 'commerce_metadata';
     case AtsActivity = 'ats_activity';
     case AtsApplication = 'ats_application';
     case AtsApplicationstatus = 'ats_applicationstatus';
@@ -79,4 +78,5 @@ enum ObjectType: string
     case RepoBranch = 'repo_branch';
     case RepoCommit = 'repo_commit';
     case RepoPullrequest = 'repo_pullrequest';
+    case MetadataMetadata = 'metadata_metadata';
 }
