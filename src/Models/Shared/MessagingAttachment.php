@@ -13,6 +13,14 @@ class MessagingAttachment
 {
     /**
      *
+     * @var ?string $contentIdentifier
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content_identifier')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $contentIdentifier = null;
+
+    /**
+     *
      * @var ?string $contentType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('content_type')]
@@ -52,14 +60,16 @@ class MessagingAttachment
     public ?float $size = null;
 
     /**
+     * @param  ?string  $contentIdentifier
      * @param  ?string  $contentType
      * @param  ?string  $downloadUrl
      * @param  ?string  $filename
      * @param  ?string  $messageId
      * @param  ?float  $size
      */
-    public function __construct(?string $contentType = null, ?string $downloadUrl = null, ?string $filename = null, ?string $messageId = null, ?float $size = null)
+    public function __construct(?string $contentIdentifier = null, ?string $contentType = null, ?string $downloadUrl = null, ?string $filename = null, ?string $messageId = null, ?float $size = null)
     {
+        $this->contentIdentifier = $contentIdentifier;
         $this->contentType = $contentType;
         $this->downloadUrl = $downloadUrl;
         $this->filename = $filename;

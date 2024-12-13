@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 41f6fed774011bab102d612247a8bfd9
+  docChecksum: aa3c8602e58a30faa2d1085e078be4b2
   docVersion: "1.0"
-  speakeasyVersion: 1.453.10
-  generationVersion: 2.474.15
-  releaseVersion: 1.1.12
-  configChecksum: a2a057d926663f34b152123b80b768e8
+  speakeasyVersion: 1.454.2
+  generationVersion: 2.477.4
+  releaseVersion: 1.1.13
+  configChecksum: 61fad122d868b7d517ca9636cd3d1cf8
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1215,6 +1215,7 @@ generatedFiles:
   - src/Hooks/AfterSuccessHook.php
   - src/Hooks/BeforeRequestContext.php
   - src/Hooks/BeforeRequestHook.php
+  - src/Hooks/Credentials.php
   - src/Hooks/ErrorResponseContext.php
   - src/Hooks/FailEarlyException.php
   - src/Hooks/HookContext.php
@@ -1222,6 +1223,8 @@ generatedFiles:
   - src/Hooks/SDKHooks.php
   - src/Hooks/SDKInitHook.php
   - src/Hooks/SDKRequestContext.php
+  - src/Hooks/Session.php
+  - src/Hooks/TokenResponse.php
   - src/Hris.php
   - src/Instructor.php
   - src/Integration.php

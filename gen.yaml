@@ -14,7 +14,12 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 1.1.12
+  version: 1.1.13
+  additionalDependencies:
+    autoload: {}
+    autoload-dev: {}
+    require: {}
+    require-dev: {}
   clientServerStatusCodesAsErrors: true
   defaultErrorName: SDKException
   flattenGlobalSecurity: true
