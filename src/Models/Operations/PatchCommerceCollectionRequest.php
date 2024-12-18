@@ -13,14 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchCommerceCollectionRequest
 {
     /**
-     * A collection of items/products/services
-     *
-     * @var ?Shared\CommerceCollection $commerceCollection
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CommerceCollection $commerceCollection = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,20 +21,28 @@ class PatchCommerceCollectionRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
-     *
-     * @var ?array<string> $fields
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-
-    /**
      * ID of the Collection
      *
      * @var string $id
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     * A collection of items/products/services
+     *
+     * @var ?Shared\CommerceCollection $commerceCollection
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CommerceCollection $commerceCollection = null;
+
+    /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
 
     /**
      * @param  string  $connectionId

@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class CreateAccountingContactResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\AccountingContact $accountingContact
-     */
-    public ?Shared\AccountingContact $accountingContact = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class CreateAccountingContactResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\AccountingContact $accountingContact
+     */
+    public ?Shared\AccountingContact $accountingContact = null;
 
     /**
      * @param  string  $contentType

@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class UpdateAccountingTaxrateResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\AccountingTaxrate $accountingTaxrate
-     */
-    public ?Shared\AccountingTaxrate $accountingTaxrate = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class UpdateAccountingTaxrateResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\AccountingTaxrate $accountingTaxrate
+     */
+    public ?Shared\AccountingTaxrate $accountingTaxrate = null;
 
     /**
      * @param  string  $contentType

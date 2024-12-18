@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmCompanyRequest
 {
     /**
-     * A company represents an organization that optionally is associated with a deal and/or contacts
-     *
-     * @var ?Shared\CrmCompany $crmCompany
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmCompany $crmCompany = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     * A company represents an organization that optionally is associated with a deal and/or contacts
+     *
+     * @var ?Shared\CrmCompany $crmCompany
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CrmCompany $crmCompany = null;
 
     /**
      * Comma-delimited fields to return

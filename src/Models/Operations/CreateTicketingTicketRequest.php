@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateTicketingTicketRequest
 {
     /**
-     *
-     * @var ?Shared\TicketingTicket $ticketingTicket
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\TicketingTicket $ticketingTicket = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\TicketingTicket $ticketingTicket
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\TicketingTicket $ticketingTicket = null;
 
     /**
      * Comma-delimited fields to return

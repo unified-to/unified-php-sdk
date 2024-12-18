@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateRepoPullrequestRequest
 {
     /**
-     *
-     * @var ?Shared\RepoPullrequest $repoPullrequest
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoPullrequest $repoPullrequest = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\RepoPullrequest $repoPullrequest
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\RepoPullrequest $repoPullrequest = null;
 
     /**
      * Comma-delimited fields to return

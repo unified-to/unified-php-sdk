@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class GetAtsScorecardResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\AtsScorecard $atsScorecard
-     */
-    public ?Shared\AtsScorecard $atsScorecard = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class GetAtsScorecardResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\AtsScorecard $atsScorecard
+     */
+    public ?Shared\AtsScorecard $atsScorecard = null;
 
     /**
      * @param  string  $contentType

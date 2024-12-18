@@ -12,6 +12,22 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisPayslip
 {
     /**
+     * $raw
+     *
+     * @var array<string, mixed> $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>')]
+    public array $raw;
+
+    /**
+     *
+     * @var string $userId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    public string $userId;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -87,15 +103,6 @@ class HrisPayslip
     public ?PaymentType $paymentType = null;
 
     /**
-     * $raw
-     *
-     * @var array<string, mixed> $raw
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>')]
-    public array $raw;
-
-    /**
      *
      * @var ?\DateTime $startAt
      */
@@ -110,13 +117,6 @@ class HrisPayslip
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
-
-    /**
-     *
-     * @var string $userId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
-    public string $userId;
 
     /**
      * @param  array<string, mixed>  $raw

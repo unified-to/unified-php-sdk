@@ -12,6 +12,13 @@ namespace Unified\Unified_to\Models\Shared;
 class CommerceItemMetadata
 {
     /**
+     *
+     * @var string $key
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('key')]
+    public string $key;
+
+    /**
      * $extraData
      *
      * @var ?array<string, mixed> $extraData
@@ -28,13 +35,6 @@ class CommerceItemMetadata
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
-
-    /**
-     *
-     * @var string $key
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('key')]
-    public string $key;
 
     /**
      *

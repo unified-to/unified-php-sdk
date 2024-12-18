@@ -19,13 +19,6 @@ class CreateHrisGroupResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\HrisGroup $hrisGroup
-     */
-    public ?Shared\HrisGroup $hrisGroup = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class CreateHrisGroupResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\HrisGroup $hrisGroup
+     */
+    public ?Shared\HrisGroup $hrisGroup = null;
 
     /**
      * @param  string  $contentType

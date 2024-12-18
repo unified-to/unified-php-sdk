@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class CreateCommerceInventoryResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\CommerceInventory $commerceInventory
-     */
-    public ?Shared\CommerceInventory $commerceInventory = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class CreateCommerceInventoryResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\CommerceInventory $commerceInventory
+     */
+    public ?Shared\CommerceInventory $commerceInventory = null;
 
     /**
      * @param  string  $contentType

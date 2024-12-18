@@ -13,6 +13,13 @@ class MessagingChannel
 {
     /**
      *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -68,13 +75,6 @@ class MessagingChannel
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $members = null;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
 
     /**
      *

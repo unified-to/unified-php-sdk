@@ -37,14 +37,6 @@ class AccountingContact
     public ?\DateTime $createdAt = null;
 
     /**
-     *
-     * @var ?string $currency
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $currency = null;
-
-    /**
      * $emails
      *
      * @var ?array<AccountingEmail> $emails
@@ -175,6 +167,14 @@ class AccountingContact
     public ?\DateTime $updatedAt = null;
 
     /**
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
      * @param  ?PropertyAccountingContactBillingAddress  $billingAddress
      * @param  ?string  $companyName
      * @param  ?\DateTime  $createdAt
@@ -200,7 +200,6 @@ class AccountingContact
         $this->billingAddress = $billingAddress;
         $this->companyName = $companyName;
         $this->createdAt = $createdAt;
-        $this->currency = $currency;
         $this->emails = $emails;
         $this->id = $id;
         $this->identification = $identification;
@@ -216,5 +215,6 @@ class AccountingContact
         $this->taxNumber = $taxNumber;
         $this->telephones = $telephones;
         $this->updatedAt = $updatedAt;
+        $this->currency = $currency;
     }
 }

@@ -19,13 +19,6 @@ class UpdateRepoBranchResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\RepoBranch $repoBranch
-     */
-    public ?Shared\RepoBranch $repoBranch = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class UpdateRepoBranchResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\RepoBranch $repoBranch
+     */
+    public ?Shared\RepoBranch $repoBranch = null;
 
     /**
      * @param  string  $contentType

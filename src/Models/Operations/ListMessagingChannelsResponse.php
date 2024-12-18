@@ -19,13 +19,6 @@ class ListMessagingChannelsResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\MessagingChannel> $messagingChannels
-     */
-    public ?array $messagingChannels = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListMessagingChannelsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\MessagingChannel> $messagingChannels
+     */
+    public ?array $messagingChannels = null;
 
     /**
      * @param  string  $contentType

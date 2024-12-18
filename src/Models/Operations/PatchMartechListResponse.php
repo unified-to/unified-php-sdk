@@ -19,13 +19,6 @@ class PatchMartechListResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\MarketingList $marketingList
-     */
-    public ?Shared\MarketingList $marketingList = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchMartechListResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\MarketingList $marketingList
+     */
+    public ?Shared\MarketingList $marketingList = null;
 
     /**
      * @param  string  $contentType

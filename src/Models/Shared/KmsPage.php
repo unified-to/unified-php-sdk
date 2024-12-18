@@ -13,18 +13,40 @@ class KmsPage
 {
     /**
      *
+     * @var string $downloadUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('download_url')]
+    public string $downloadUrl;
+
+    /**
+     *
+     * @var string $spaceId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('space_id')]
+    public string $spaceId;
+
+    /**
+     *
+     * @var string $title
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    public string $title;
+
+    /**
+     *
+     * @var KmsPageType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageType')]
+    public KmsPageType $type;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
-
-    /**
-     *
-     * @var string $downloadUrl
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('download_url')]
-    public string $downloadUrl;
 
     /**
      *
@@ -77,28 +99,6 @@ class KmsPage
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
-
-    /**
-     *
-     * @var string $spaceId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('space_id')]
-    public string $spaceId;
-
-    /**
-     *
-     * @var string $title
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
-    public string $title;
-
-    /**
-     *
-     * @var KmsPageType $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageType')]
-    public KmsPageType $type;
 
     /**
      *

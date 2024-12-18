@@ -19,13 +19,6 @@ class PatchScimUsersResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\ScimUser $scimUser
-     */
-    public ?Shared\ScimUser $scimUser = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchScimUsersResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\ScimUser $scimUser
+     */
+    public ?Shared\ScimUser $scimUser = null;
 
     /**
      * @param  string  $contentType

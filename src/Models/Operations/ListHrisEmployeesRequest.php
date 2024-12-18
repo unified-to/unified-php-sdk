@@ -12,19 +12,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListHrisEmployeesRequest
 {
     /**
-     *
-     * @var ?string $companyId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
-    public ?string $companyId = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?string $companyId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
+    public ?string $companyId = null;
 
     /**
      * Comma-delimited fields to return

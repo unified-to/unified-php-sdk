@@ -13,13 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchRepoPullrequestRequest
 {
     /**
-     *
-     * @var ?Shared\RepoPullrequest $repoPullrequest
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoPullrequest $repoPullrequest = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -28,20 +21,27 @@ class PatchRepoPullrequestRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
-     *
-     * @var ?array<string> $fields
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-
-    /**
      * ID of the Pullrequest
      *
      * @var string $id
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     *
+     * @var ?Shared\RepoPullrequest $repoPullrequest
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\RepoPullrequest $repoPullrequest = null;
+
+    /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
 
     /**
      * @param  string  $connectionId

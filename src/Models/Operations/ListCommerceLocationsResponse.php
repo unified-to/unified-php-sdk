@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class ListCommerceLocationsResponse
 {
     /**
-     * Successful
-     *
-     * @var ?array<Shared\CommerceLocation> $commerceLocations
-     */
-    public ?array $commerceLocations = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class ListCommerceLocationsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\CommerceLocation> $commerceLocations
+     */
+    public ?array $commerceLocations = null;
 
     /**
      * @param  string  $contentType

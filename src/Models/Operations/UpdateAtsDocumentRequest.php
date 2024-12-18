@@ -13,13 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAtsDocumentRequest
 {
     /**
-     *
-     * @var ?Shared\AtsDocument $atsDocument
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AtsDocument $atsDocument = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -28,20 +21,27 @@ class UpdateAtsDocumentRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
-     *
-     * @var ?array<string> $fields
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-
-    /**
      * ID of the Document
      *
      * @var string $id
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     *
+     * @var ?Shared\AtsDocument $atsDocument
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\AtsDocument $atsDocument = null;
+
+    /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
 
     /**
      * @param  string  $connectionId

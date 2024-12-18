@@ -19,13 +19,6 @@ class PatchPaymentLinkResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\PaymentLink $paymentLink
-     */
-    public ?Shared\PaymentLink $paymentLink = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchPaymentLinkResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\PaymentLink $paymentLink
+     */
+    public ?Shared\PaymentLink $paymentLink = null;
 
     /**
      * @param  string  $contentType

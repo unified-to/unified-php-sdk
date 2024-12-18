@@ -12,19 +12,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListAtsApplicationsRequest
 {
     /**
-     *
-     * @var ?string $candidateId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=candidate_id')]
-    public ?string $candidateId = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?string $candidateId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=candidate_id')]
+    public ?string $candidateId = null;
 
     /**
      * Comma-delimited fields to return

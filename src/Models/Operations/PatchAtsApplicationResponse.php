@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class PatchAtsApplicationResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\AtsApplication $atsApplication
-     */
-    public ?Shared\AtsApplication $atsApplication = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class PatchAtsApplicationResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\AtsApplication $atsApplication
+     */
+    public ?Shared\AtsApplication $atsApplication = null;
 
     /**
      * @param  string  $contentType

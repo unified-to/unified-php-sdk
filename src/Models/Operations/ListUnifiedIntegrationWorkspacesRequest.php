@@ -12,6 +12,14 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListUnifiedIntegrationWorkspacesRequest
 {
     /**
+     * The ID of the workspace
+     *
+     * @var string $workspaceId
+     */
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=workspace_id')]
+    public string $workspaceId;
+
+    /**
      * Filter the results for only the workspace's active integrations
      *
      * @var ?bool $active
@@ -61,14 +69,6 @@ class ListUnifiedIntegrationWorkspacesRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
     public ?string $updatedGte = null;
-
-    /**
-     * The ID of the workspace
-     *
-     * @var string $workspaceId
-     */
-    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=workspace_id')]
-    public string $workspaceId;
 
     /**
      * @param  string  $workspaceId

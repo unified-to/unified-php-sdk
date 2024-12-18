@@ -13,6 +13,13 @@ class KmsSpace
 {
     /**
      *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -45,26 +52,11 @@ class KmsSpace
 
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?string $parentPageId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_page_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $parentPageId = null;
-
-    /**
-     *
-     * @var ?string $parentSpaceId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_space_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $parentSpaceId = null;
 
     /**
      * $raw
@@ -93,6 +85,14 @@ class KmsSpace
     public ?string $userId = null;
 
     /**
+     *
+     * @var ?string $parentSpaceId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_space_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentSpaceId = null;
+
+    /**
      * @param  string  $name
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
@@ -112,9 +112,9 @@ class KmsSpace
         $this->id = $id;
         $this->isActive = $isActive;
         $this->parentPageId = $parentPageId;
-        $this->parentSpaceId = $parentSpaceId;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->parentSpaceId = $parentSpaceId;
     }
 }

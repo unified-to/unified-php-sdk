@@ -13,6 +13,13 @@ class RepoRepository
 {
     /**
      *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -42,13 +49,6 @@ class RepoRepository
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_private')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isPrivate = null;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
 
     /**
      *

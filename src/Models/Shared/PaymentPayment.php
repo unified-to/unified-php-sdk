@@ -37,14 +37,6 @@ class PaymentPayment
 
     /**
      *
-     * @var ?string $currency
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $currency = null;
-
-    /**
-     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -110,6 +102,14 @@ class PaymentPayment
     public ?\DateTime $updatedAt = null;
 
     /**
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
      * @param  ?string  $accountId
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
@@ -128,7 +128,6 @@ class PaymentPayment
         $this->accountId = $accountId;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
-        $this->currency = $currency;
         $this->id = $id;
         $this->invoiceId = $invoiceId;
         $this->notes = $notes;
@@ -137,5 +136,6 @@ class PaymentPayment
         $this->reference = $reference;
         $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
+        $this->currency = $currency;
     }
 }

@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class PatchAccountingTransactionResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\AccountingTransaction $accountingTransaction
-     */
-    public ?Shared\AccountingTransaction $accountingTransaction = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class PatchAccountingTransactionResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\AccountingTransaction $accountingTransaction
+     */
+    public ?Shared\AccountingTransaction $accountingTransaction = null;
 
     /**
      * @param  string  $contentType

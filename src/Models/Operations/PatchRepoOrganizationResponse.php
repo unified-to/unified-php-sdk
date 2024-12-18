@@ -19,13 +19,6 @@ class PatchRepoOrganizationResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\RepoOrganization $repoOrganization
-     */
-    public ?Shared\RepoOrganization $repoOrganization = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchRepoOrganizationResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\RepoOrganization $repoOrganization
+     */
+    public ?Shared\RepoOrganization $repoOrganization = null;
 
     /**
      * @param  string  $contentType

@@ -13,6 +13,20 @@ class RepoBranch
 {
     /**
      *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
+     * @var string $repoId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('repo_id')]
+    public string $repoId;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -28,13 +42,6 @@ class RepoBranch
     public ?string $id = null;
 
     /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -43,13 +50,6 @@ class RepoBranch
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
-
-    /**
-     *
-     * @var string $repoId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('repo_id')]
-    public string $repoId;
 
     /**
      *

@@ -12,19 +12,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListMessagingMessagesRequest
 {
     /**
-     *
-     * @var ?string $channelId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=channel_id')]
-    public ?string $channelId = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?string $channelId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=channel_id')]
+    public ?string $channelId = null;
 
     /**
      * Comma-delimited fields to return

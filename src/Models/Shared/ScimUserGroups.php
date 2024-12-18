@@ -13,6 +13,13 @@ class ScimUserGroups
 {
     /**
      *
+     * @var string $value
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
+    public string $value;
+
+    /**
+     *
      * @var ?string $dollarRef
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('$ref')]
@@ -35,13 +42,6 @@ class ScimUserGroups
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimUserGroupsType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ScimUserGroupsType $type = null;
-
-    /**
-     *
-     * @var string $value
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    public string $value;
 
     /**
      * @param  string  $value

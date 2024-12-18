@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateUcContactRequest
 {
     /**
-     * A contact represents a person that optionally is associated with a call
-     *
-     * @var ?Shared\UcContact $ucContact
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\UcContact $ucContact = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     * A contact represents a person that optionally is associated with a call
+     *
+     * @var ?Shared\UcContact $ucContact
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\UcContact $ucContact = null;
 
     /**
      * Comma-delimited fields to return

@@ -13,6 +13,49 @@ class ApiCall
 {
     /**
      *
+     * @var string $integrationType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_type')]
+    public string $integrationType;
+
+    /**
+     *
+     * @var string $method
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('method')]
+    public string $method;
+
+    /**
+     *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
+     * @var string $path
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('path')]
+    public string $path;
+
+    /**
+     *
+     * @var string $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    public string $status;
+
+    /**
+     *
+     * @var ApiCallType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ApiCallType')]
+    public ApiCallType $type;
+
+    /**
+     *
      * @var ?string $connectionId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('connection_id')]
@@ -26,14 +69,6 @@ class ApiCall
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
-
-    /**
-     *
-     * @var ?string $environment
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('environment')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $environment = null;
 
     /**
      *
@@ -61,13 +96,6 @@ class ApiCall
 
     /**
      *
-     * @var string $integrationType
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_type')]
-    public string $integrationType;
-
-    /**
-     *
      * @var ?string $ipAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ip_address')]
@@ -84,47 +112,11 @@ class ApiCall
 
     /**
      *
-     * @var string $method
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('method')]
-    public string $method;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
-     * @var string $path
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('path')]
-    public string $path;
-
-    /**
-     *
      * @var ?float $size
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('size')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $size = null;
-
-    /**
-     *
-     * @var string $status
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    public string $status;
-
-    /**
-     *
-     * @var ApiCallType $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ApiCallType')]
-    public ApiCallType $type;
 
     /**
      *
@@ -141,6 +133,14 @@ class ApiCall
     #[\Speakeasy\Serializer\Annotation\SerializedName('workspace_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $workspaceId = null;
+
+    /**
+     *
+     * @var ?string $environment
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('environment')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $environment = null;
 
     /**
      * @param  string  $integrationType
@@ -171,7 +171,6 @@ class ApiCall
         $this->type = $type;
         $this->connectionId = $connectionId;
         $this->createdAt = $createdAt;
-        $this->environment = $environment;
         $this->error = $error;
         $this->externalXref = $externalXref;
         $this->id = $id;
@@ -180,5 +179,6 @@ class ApiCall
         $this->size = $size;
         $this->webhookId = $webhookId;
         $this->workspaceId = $workspaceId;
+        $this->environment = $environment;
     }
 }

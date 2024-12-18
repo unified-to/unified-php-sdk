@@ -13,6 +13,20 @@ class RepoCommit
 {
     /**
      *
+     * @var string $repoId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('repo_id')]
+    public string $repoId;
+
+    /**
+     *
+     * @var string $userId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    public string $userId;
+
+    /**
+     *
      * @var ?string $branchId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('branch_id')]
@@ -55,25 +69,11 @@ class RepoCommit
 
     /**
      *
-     * @var string $repoId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('repo_id')]
-    public string $repoId;
-
-    /**
-     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
-
-    /**
-     *
-     * @var string $userId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
-    public string $userId;
 
     /**
      * @param  string  $repoId

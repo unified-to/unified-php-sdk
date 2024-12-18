@@ -13,13 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchScimUsersRequest
 {
     /**
-     *
-     * @var ?Shared\ScimUser $scimUser
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\ScimUser $scimUser = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -34,6 +27,13 @@ class PatchScimUsersRequest
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     *
+     * @var ?Shared\ScimUser $scimUser
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\ScimUser $scimUser = null;
 
     /**
      * @param  string  $connectionId

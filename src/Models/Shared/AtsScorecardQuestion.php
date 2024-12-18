@@ -13,6 +13,13 @@ class AtsScorecardQuestion
 {
     /**
      *
+     * @var string $text
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('text')]
+    public string $text;
+
+    /**
+     *
      * @var ?string $answer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('answer')]
@@ -26,13 +33,6 @@ class AtsScorecardQuestion
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
-
-    /**
-     *
-     * @var string $text
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('text')]
-    public string $text;
 
     /**
      * @param  string  $text

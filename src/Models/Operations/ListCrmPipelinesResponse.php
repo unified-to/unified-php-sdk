@@ -19,13 +19,6 @@ class ListCrmPipelinesResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\CrmPipeline> $crmPipelines
-     */
-    public ?array $crmPipelines = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListCrmPipelinesResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\CrmPipeline> $crmPipelines
+     */
+    public ?array $crmPipelines = null;
 
     /**
      * @param  string  $contentType

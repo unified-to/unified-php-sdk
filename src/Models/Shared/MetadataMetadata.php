@@ -13,6 +13,20 @@ class MetadataMetadata
 {
     /**
      *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
+     * @var string $objectType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('object_type')]
+    public string $objectType;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -26,20 +40,6 @@ class MetadataMetadata
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
-     * @var string $objectType
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('object_type')]
-    public string $objectType;
 
     /**
      * $objects

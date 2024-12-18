@@ -13,6 +13,13 @@ class CommerceItemMedia
 {
     /**
      *
+     * @var string $url
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
+    public string $url;
+
+    /**
+     *
      * @var ?string $alt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('alt')]
@@ -61,13 +68,6 @@ class CommerceItemMedia
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMediaType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CommerceItemMediaType $type = null;
-
-    /**
-     *
-     * @var string $url
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
-    public string $url;
 
     /**
      *

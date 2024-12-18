@@ -19,13 +19,6 @@ class ListPaymentLinksResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\PaymentLink> $paymentLinks
-     */
-    public ?array $paymentLinks = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListPaymentLinksResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\PaymentLink> $paymentLinks
+     */
+    public ?array $paymentLinks = null;
 
     /**
      * @param  string  $contentType

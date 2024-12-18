@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMessagingMessageRequest
 {
     /**
-     *
-     * @var ?Shared\MessagingMessage $messagingMessage
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MessagingMessage $messagingMessage = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\MessagingMessage $messagingMessage
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\MessagingMessage $messagingMessage = null;
 
     /**
      * Comma-delimited fields to return

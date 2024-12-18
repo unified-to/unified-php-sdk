@@ -13,6 +13,13 @@ class CommerceLocation
 {
     /**
      *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
      * @var ?PropertyCommerceLocationAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
@@ -51,13 +58,6 @@ class CommerceLocation
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
 
     /**
      * $raw

@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class UpdateCommerceCollectionResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\CommerceCollection $commerceCollection
-     */
-    public ?Shared\CommerceCollection $commerceCollection = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class UpdateCommerceCollectionResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\CommerceCollection $commerceCollection
+     */
+    public ?Shared\CommerceCollection $commerceCollection = null;
 
     /**
      * @param  string  $contentType

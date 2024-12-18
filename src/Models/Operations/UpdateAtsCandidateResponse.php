@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class UpdateAtsCandidateResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\AtsCandidate $atsCandidate
-     */
-    public ?Shared\AtsCandidate $atsCandidate = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class UpdateAtsCandidateResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\AtsCandidate $atsCandidate
+     */
+    public ?Shared\AtsCandidate $atsCandidate = null;
 
     /**
      * @param  string  $contentType

@@ -12,6 +12,22 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class GetUnifiedIntegrationAuthRequest
 {
     /**
+     * Type of the supported integration
+     *
+     * @var string $integrationType
+     */
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=integration_type')]
+    public string $integrationType;
+
+    /**
+     * The ID of the workspace
+     *
+     * @var string $workspaceId
+     */
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=workspace_id')]
+    public string $workspaceId;
+
+    /**
      *
      * @var ?string $env
      */
@@ -33,14 +49,6 @@ class GetUnifiedIntegrationAuthRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=failure_redirect')]
     public ?string $failureRedirect = null;
-
-    /**
-     * Type of the supported integration
-     *
-     * @var string $integrationType
-     */
-    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=integration_type')]
-    public string $integrationType;
 
     /**
      * Language: en, fr, es, it, pt, zh, hi
@@ -87,14 +95,6 @@ class GetUnifiedIntegrationAuthRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=success_redirect')]
     public ?string $successRedirect = null;
-
-    /**
-     * The ID of the workspace
-     *
-     * @var string $workspaceId
-     */
-    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=workspace_id')]
-    public string $workspaceId;
 
     /**
      * @param  string  $integrationType

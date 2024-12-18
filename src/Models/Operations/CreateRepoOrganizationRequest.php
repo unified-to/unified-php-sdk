@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateRepoOrganizationRequest
 {
     /**
-     *
-     * @var ?Shared\RepoOrganization $repoOrganization
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoOrganization $repoOrganization = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\RepoOrganization $repoOrganization
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\RepoOrganization $repoOrganization = null;
 
     /**
      * Comma-delimited fields to return

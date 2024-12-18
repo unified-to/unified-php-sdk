@@ -13,13 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAccountingTaxrateRequest
 {
     /**
-     *
-     * @var ?Shared\AccountingTaxrate $accountingTaxrate
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingTaxrate $accountingTaxrate = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -28,20 +21,27 @@ class UpdateAccountingTaxrateRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
-     *
-     * @var ?array<string> $fields
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-
-    /**
      * ID of the Taxrate
      *
      * @var string $id
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     *
+     * @var ?Shared\AccountingTaxrate $accountingTaxrate
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\AccountingTaxrate $accountingTaxrate = null;
+
+    /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
 
     /**
      * @param  string  $connectionId

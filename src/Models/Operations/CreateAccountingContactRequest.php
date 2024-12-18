@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAccountingContactRequest
 {
     /**
-     *
-     * @var ?Shared\AccountingContact $accountingContact
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingContact $accountingContact = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\AccountingContact $accountingContact
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\AccountingContact $accountingContact = null;
 
     /**
      * Comma-delimited fields to return

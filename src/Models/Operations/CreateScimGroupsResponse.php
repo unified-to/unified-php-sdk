@@ -19,13 +19,6 @@ class CreateScimGroupsResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\ScimGroup $scimGroup
-     */
-    public ?Shared\ScimGroup $scimGroup = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class CreateScimGroupsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\ScimGroup $scimGroup
+     */
+    public ?Shared\ScimGroup $scimGroup = null;
 
     /**
      * @param  string  $contentType

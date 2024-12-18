@@ -13,6 +13,20 @@ class HrisTimeoff
 {
     /**
      *
+     * @var \DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    public \DateTime $startAt;
+
+    /**
+     *
+     * @var string $userId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    public string $userId;
+
+    /**
+     *
      * @var ?\DateTime $approvedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('approved_at')]
@@ -71,13 +85,6 @@ class HrisTimeoff
 
     /**
      *
-     * @var \DateTime $startAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
-    public \DateTime $startAt;
-
-    /**
-     *
      * @var ?HrisTimeoffStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
@@ -101,13 +108,6 @@ class HrisTimeoff
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $updatedAt = null;
-
-    /**
-     *
-     * @var string $userId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
-    public string $userId;
 
     /**
      * @param  \DateTime  $startAt

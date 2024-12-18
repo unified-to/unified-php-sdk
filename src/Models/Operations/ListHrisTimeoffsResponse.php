@@ -19,13 +19,6 @@ class ListHrisTimeoffsResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\HrisTimeoff> $hrisTimeoffs
-     */
-    public ?array $hrisTimeoffs = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListHrisTimeoffsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\HrisTimeoff> $hrisTimeoffs
+     */
+    public ?array $hrisTimeoffs = null;
 
     /**
      * @param  string  $contentType

@@ -13,6 +13,20 @@ class PaymentRefund
 {
     /**
      *
+     * @var string $paymentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_id')]
+    public string $paymentId;
+
+    /**
+     *
+     * @var float $totalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
+    public float $totalAmount;
+
+    /**
+     *
      * @var ?string $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -44,13 +58,6 @@ class PaymentRefund
     public ?string $notes = null;
 
     /**
-     *
-     * @var string $paymentId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_id')]
-    public string $paymentId;
-
-    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -76,13 +83,6 @@ class PaymentRefund
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentRefundStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PaymentRefundStatus $status = null;
-
-    /**
-     *
-     * @var float $totalAmount
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
-    public float $totalAmount;
 
     /**
      *

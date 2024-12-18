@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateKmsSpaceRequest
 {
     /**
-     *
-     * @var ?Shared\KmsSpace $kmsSpace
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\KmsSpace $kmsSpace = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\KmsSpace $kmsSpace
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\KmsSpace $kmsSpace = null;
 
     /**
      * Comma-delimited fields to return

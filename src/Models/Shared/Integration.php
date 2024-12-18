@@ -13,6 +13,29 @@ namespace Unified\Unified_to\Models\Shared;
 class Integration
 {
     /**
+     * The categories of support solutions that this integration has
+     *
+     * @var array<PropertyIntegrationCategories> $categories
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories>')]
+    public array $categories;
+
+    /**
+     *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
+     * @var string $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    public string $type;
+
+    /**
      *
      * @var ?float $activeHealthyConnections
      */
@@ -45,15 +68,6 @@ class Integration
     #[\Speakeasy\Serializer\Annotation\SerializedName('beta')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $beta = null;
-
-    /**
-     * The categories of support solutions that this integration has
-     *
-     * @var array<PropertyIntegrationCategories> $categories
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories>')]
-    public array $categories;
 
     /**
      *
@@ -121,13 +135,6 @@ class Integration
 
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?float $popularity
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('popularity')]
@@ -187,13 +194,6 @@ class Integration
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tokenNames = null;
-
-    /**
-     *
-     * @var string $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    public string $type;
 
     /**
      *

@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAtsJobRequest
 {
     /**
-     *
-     * @var ?Shared\AtsJob $atsJob
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AtsJob $atsJob = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\AtsJob $atsJob
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\AtsJob $atsJob = null;
 
     /**
      * Comma-delimited fields to return

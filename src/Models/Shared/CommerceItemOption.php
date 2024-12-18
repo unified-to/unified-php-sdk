@@ -13,26 +13,10 @@ class CommerceItemOption
 {
     /**
      *
-     * @var ?string $id
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $id = null;
-
-    /**
-     *
      * @var string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     public string $name;
-
-    /**
-     *
-     * @var ?float $position
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('position')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?float $position = null;
 
     /**
      * $values
@@ -42,6 +26,22 @@ class CommerceItemOption
     #[\Speakeasy\Serializer\Annotation\SerializedName('values')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string>')]
     public array $values;
+
+    /**
+     *
+     * @var ?string $id
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
+
+    /**
+     *
+     * @var ?float $position
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('position')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $position = null;
 
     /**
      * @param  string  $name

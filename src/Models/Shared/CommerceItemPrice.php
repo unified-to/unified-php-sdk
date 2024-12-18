@@ -13,6 +13,13 @@ class CommerceItemPrice
 {
     /**
      *
+     * @var float $price
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('price')]
+    public float $price;
+
+    /**
+     *
      * @var ?float $compareAtPrice
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('compare_at_price')]
@@ -26,13 +33,6 @@ class CommerceItemPrice
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
-
-    /**
-     *
-     * @var float $price
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('price')]
-    public float $price;
 
     /**
      * @param  float  $price

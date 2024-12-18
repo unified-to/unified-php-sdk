@@ -19,13 +19,6 @@ class ListCrmContactsResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\CrmContact> $crmContacts
-     */
-    public ?array $crmContacts = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListCrmContactsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\CrmContact> $crmContacts
+     */
+    public ?array $crmContacts = null;
 
     /**
      * @param  string  $contentType

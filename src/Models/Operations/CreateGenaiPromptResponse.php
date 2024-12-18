@@ -19,13 +19,6 @@ class CreateGenaiPromptResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\GenaiPrompt $genaiPrompt
-     */
-    public ?Shared\GenaiPrompt $genaiPrompt = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class CreateGenaiPromptResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\GenaiPrompt $genaiPrompt
+     */
+    public ?Shared\GenaiPrompt $genaiPrompt = null;
 
     /**
      * @param  string  $contentType

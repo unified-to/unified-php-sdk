@@ -13,6 +13,21 @@ class AtsJobQuestion
 {
     /**
      *
+     * @var string $question
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('question')]
+    public string $question;
+
+    /**
+     *
+     * @var AtsJobQuestionType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobQuestionType')]
+    public AtsJobQuestionType $type;
+
+    /**
+     *
      * @var ?string $description
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
@@ -47,26 +62,11 @@ class AtsJobQuestion
 
     /**
      *
-     * @var string $question
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('question')]
-    public string $question;
-
-    /**
-     *
      * @var ?bool $required
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('required')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $required = null;
-
-    /**
-     *
-     * @var AtsJobQuestionType $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobQuestionType')]
-    public AtsJobQuestionType $type;
 
     /**
      * @param  string  $question

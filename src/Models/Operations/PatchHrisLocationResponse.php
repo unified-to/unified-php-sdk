@@ -19,13 +19,6 @@ class PatchHrisLocationResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\HrisLocation $hrisLocation
-     */
-    public ?Shared\HrisLocation $hrisLocation = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchHrisLocationResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\HrisLocation $hrisLocation
+     */
+    public ?Shared\HrisLocation $hrisLocation = null;
 
     /**
      * @param  string  $contentType

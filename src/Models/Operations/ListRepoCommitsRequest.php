@@ -12,19 +12,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListRepoCommitsRequest
 {
     /**
-     *
-     * @var ?string $branchId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=branch_id')]
-    public ?string $branchId = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?string $branchId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=branch_id')]
+    public ?string $branchId = null;
 
     /**
      * Comma-delimited fields to return

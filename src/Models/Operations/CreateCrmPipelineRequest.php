@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmPipelineRequest
 {
     /**
-     *
-     * @var ?Shared\CrmPipeline $crmPipeline
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmPipeline $crmPipeline = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\CrmPipeline $crmPipeline
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CrmPipeline $crmPipeline = null;
 
     /**
      * Comma-delimited fields to return

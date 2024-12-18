@@ -14,34 +14,10 @@ class Webhook
 {
     /**
      *
-     * @var ?\DateTime $checkedAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('checked_at')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?\DateTime $checkedAt = null;
-
-    /**
-     *
      * @var string $connectionId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?\DateTime $createdAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?\DateTime $createdAt = null;
-
-    /**
-     *
-     * @var ?string $environment
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('environment')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $environment = null;
 
     /**
      *
@@ -50,6 +26,37 @@ class Webhook
     #[\Speakeasy\Serializer\Annotation\SerializedName('event')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Event')]
     public Event $event;
+
+    /**
+     *
+     * @var string $hookUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('hook_url')]
+    public string $hookUrl;
+
+    /**
+     *
+     * @var ObjectType $objectType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('object_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ObjectType')]
+    public ObjectType $objectType;
+
+    /**
+     *
+     * @var ?\DateTime $checkedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('checked_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $checkedAt = null;
+
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $createdAt = null;
 
     /**
      *
@@ -68,13 +75,6 @@ class Webhook
     #[\Speakeasy\Serializer\Annotation\Type('array<string, string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $filters = null;
-
-    /**
-     *
-     * @var string $hookUrl
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('hook_url')]
-    public string $hookUrl;
 
     /**
      *
@@ -120,14 +120,6 @@ class Webhook
 
     /**
      *
-     * @var ObjectType $objectType
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('object_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ObjectType')]
-    public ObjectType $objectType;
-
-    /**
-     *
      * @var ?float $pageMaxLimit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('page_max_limit')]
@@ -170,6 +162,14 @@ class Webhook
     public ?string $workspaceId = null;
 
     /**
+     *
+     * @var ?string $environment
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('environment')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $environment = null;
+
+    /**
      * @param  string  $connectionId
      * @param  Event  $event
      * @param  string  $hookUrl
@@ -198,7 +198,6 @@ class Webhook
         $this->objectType = $objectType;
         $this->checkedAt = $checkedAt;
         $this->createdAt = $createdAt;
-        $this->environment = $environment;
         $this->fields = $fields;
         $this->filters = $filters;
         $this->id = $id;
@@ -211,5 +210,6 @@ class Webhook
         $this->updatedAt = $updatedAt;
         $this->webhookType = $webhookType;
         $this->workspaceId = $workspaceId;
+        $this->environment = $environment;
     }
 }

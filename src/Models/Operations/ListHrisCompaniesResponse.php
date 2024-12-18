@@ -19,13 +19,6 @@ class ListHrisCompaniesResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\HrisCompany> $hrisCompanies
-     */
-    public ?array $hrisCompanies = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListHrisCompaniesResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\HrisCompany> $hrisCompanies
+     */
+    public ?array $hrisCompanies = null;
 
     /**
      * @param  string  $contentType

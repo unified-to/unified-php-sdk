@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmLeadRequest
 {
     /**
-     *
-     * @var ?Shared\CrmLead $crmLead
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmLead $crmLead = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\CrmLead $crmLead
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CrmLead $crmLead = null;
 
     /**
      * Comma-delimited fields to return

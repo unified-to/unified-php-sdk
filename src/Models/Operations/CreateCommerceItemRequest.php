@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCommerceItemRequest
 {
     /**
-     *
-     * @var ?Shared\CommerceItem $commerceItem
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CommerceItem $commerceItem = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\CommerceItem $commerceItem
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CommerceItem $commerceItem = null;
 
     /**
      * Comma-delimited fields to return

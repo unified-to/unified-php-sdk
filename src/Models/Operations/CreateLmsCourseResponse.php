@@ -19,13 +19,6 @@ class CreateLmsCourseResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\LmsCourse $lmsCourse
-     */
-    public ?Shared\LmsCourse $lmsCourse = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class CreateLmsCourseResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\LmsCourse $lmsCourse
+     */
+    public ?Shared\LmsCourse $lmsCourse = null;
 
     /**
      * @param  string  $contentType

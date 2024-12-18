@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMartechListRequest
 {
     /**
-     * Mailing List
-     *
-     * @var ?Shared\MarketingList $marketingList
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MarketingList $marketingList = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     * Mailing List
+     *
+     * @var ?Shared\MarketingList $marketingList
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\MarketingList $marketingList = null;
 
     /**
      * Comma-delimited fields to return

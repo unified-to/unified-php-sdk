@@ -13,6 +13,13 @@ class EnrichPersonWorkHistory
 {
     /**
      *
+     * @var string $title
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    public string $title;
+
+    /**
+     *
      * @var ?string $companyDomain
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('company_domain')]
@@ -58,13 +65,6 @@ class EnrichPersonWorkHistory
     #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $startAt = null;
-
-    /**
-     *
-     * @var string $title
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
-    public string $title;
 
     /**
      * @param  string  $title

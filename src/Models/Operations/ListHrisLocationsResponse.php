@@ -19,13 +19,6 @@ class ListHrisLocationsResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\HrisLocation> $hrisLocations
-     */
-    public ?array $hrisLocations = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListHrisLocationsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\HrisLocation> $hrisLocations
+     */
+    public ?array $hrisLocations = null;
 
     /**
      * @param  string  $contentType

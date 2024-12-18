@@ -19,13 +19,6 @@ class ListKmsSpacesResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\KmsSpace> $kmsSpaces
-     */
-    public ?array $kmsSpaces = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListKmsSpacesResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\KmsSpace> $kmsSpaces
+     */
+    public ?array $kmsSpaces = null;
 
     /**
      * @param  string  $contentType

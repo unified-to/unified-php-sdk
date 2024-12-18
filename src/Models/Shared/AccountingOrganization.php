@@ -13,6 +13,13 @@ class AccountingOrganization
 {
     /**
      *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
      * @var ?PropertyAccountingOrganizationAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
@@ -59,13 +66,6 @@ class AccountingOrganization
     #[\Speakeasy\Serializer\Annotation\SerializedName('legal_name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $legalName = null;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
 
     /**
      *

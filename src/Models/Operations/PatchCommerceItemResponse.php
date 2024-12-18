@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class PatchCommerceItemResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\CommerceItem $commerceItem
-     */
-    public ?Shared\CommerceItem $commerceItem = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class PatchCommerceItemResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\CommerceItem $commerceItem
+     */
+    public ?Shared\CommerceItem $commerceItem = null;
 
     /**
      * @param  string  $contentType

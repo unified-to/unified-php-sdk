@@ -12,14 +12,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchPassthroughRawRequest
 {
     /**
-     * integration-specific payload
-     *
-     * @var ?string $requestBody
-     */
-    #[SpeakeasyMetadata('request:mediaType=text/plain')]
-    public ?string $requestBody = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -33,6 +25,14 @@ class PatchPassthroughRawRequest
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=path')]
     public string $path;
+
+    /**
+     * integration-specific payload
+     *
+     * @var ?string $requestBody
+     */
+    #[SpeakeasyMetadata('request:mediaType=text/plain')]
+    public ?string $requestBody = null;
 
     /**
      * @param  string  $connectionId

@@ -22,6 +22,16 @@ class CrmCompany
     public ?PropertyCrmCompanyAddress $address = null;
 
     /**
+     * An array of contact IDs associated with this company
+     *
+     * @var ?array<string> $contactIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $contactIds = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -173,6 +183,7 @@ class CrmCompany
 
     /**
      * @param  ?PropertyCrmCompanyAddress  $address
+     * @param  ?array<string>  $contactIds
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $dealIds
      * @param  ?string  $description
@@ -191,9 +202,10 @@ class CrmCompany
      * @param  ?string  $userId
      * @param  ?array<string>  $websites
      */
-    public function __construct(?PropertyCrmCompanyAddress $address = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
+    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
     {
         $this->address = $address;
+        $this->contactIds = $contactIds;
         $this->createdAt = $createdAt;
         $this->dealIds = $dealIds;
         $this->description = $description;

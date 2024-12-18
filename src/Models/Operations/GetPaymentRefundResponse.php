@@ -19,13 +19,6 @@ class GetPaymentRefundResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\PaymentRefund $paymentRefund
-     */
-    public ?Shared\PaymentRefund $paymentRefund = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class GetPaymentRefundResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\PaymentRefund $paymentRefund
+     */
+    public ?Shared\PaymentRefund $paymentRefund = null;
 
     /**
      * @param  string  $contentType

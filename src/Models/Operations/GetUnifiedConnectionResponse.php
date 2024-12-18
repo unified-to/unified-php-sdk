@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class GetUnifiedConnectionResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\Connection $connection
-     */
-    public ?Shared\Connection $connection = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class GetUnifiedConnectionResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\Connection $connection
+     */
+    public ?Shared\Connection $connection = null;
 
     /**
      * @param  string  $contentType

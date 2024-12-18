@@ -19,13 +19,6 @@ class ListRepoOrganizationsResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\RepoOrganization> $repoOrganizations
-     */
-    public ?array $repoOrganizations = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListRepoOrganizationsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\RepoOrganization> $repoOrganizations
+     */
+    public ?array $repoOrganizations = null;
 
     /**
      * @param  string  $contentType

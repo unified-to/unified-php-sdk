@@ -12,14 +12,6 @@ namespace Unified\Unified_to\Models\Shared;
 class StoragePermission
 {
     /**
-     *
-     * @var ?string $groupId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('group_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $groupId = null;
-
-    /**
      * $roles
      *
      * @var array<PropertyStoragePermissionRoles> $roles
@@ -27,6 +19,14 @@ class StoragePermission
     #[\Speakeasy\Serializer\Annotation\SerializedName('roles')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles>')]
     public array $roles;
+
+    /**
+     *
+     * @var ?string $groupId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('group_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $groupId = null;
 
     /**
      *

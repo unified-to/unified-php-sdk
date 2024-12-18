@@ -12,19 +12,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class ListLmsStudentsRequest
 {
     /**
-     *
-     * @var ?string $classId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=class_id')]
-    public ?string $classId = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?string $classId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=class_id')]
+    public ?string $classId = null;
 
     /**
      *

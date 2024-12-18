@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreatePaymentPaymentRequest
 {
     /**
-     *
-     * @var ?Shared\PaymentPayment $paymentPayment
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\PaymentPayment $paymentPayment = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\PaymentPayment $paymentPayment
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\PaymentPayment $paymentPayment = null;
 
     /**
      * Comma-delimited fields to return

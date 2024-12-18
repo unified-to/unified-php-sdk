@@ -13,6 +13,14 @@ class ScimEmail
 {
     /**
      *
+     * @var ScimEmailType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimEmailType')]
+    public ScimEmailType $type;
+
+    /**
+     *
      * @var ?string $display
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('display')]
@@ -26,14 +34,6 @@ class ScimEmail
     #[\Speakeasy\Serializer\Annotation\SerializedName('primary')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $primary = null;
-
-    /**
-     *
-     * @var ScimEmailType $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimEmailType')]
-    public ScimEmailType $type;
 
     /**
      *

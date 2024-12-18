@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMartechMemberRequest
 {
     /**
-     * A member represents a person
-     *
-     * @var ?Shared\MarketingMember $marketingMember
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MarketingMember $marketingMember = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     * A member represents a person
+     *
+     * @var ?Shared\MarketingMember $marketingMember
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\MarketingMember $marketingMember = null;
 
     /**
      * Comma-delimited fields to return

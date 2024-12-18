@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateStorageFileRequest
 {
     /**
-     *
-     * @var ?Shared\StorageFile $storageFile
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\StorageFile $storageFile = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\StorageFile $storageFile
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\StorageFile $storageFile = null;
 
     /**
      * Comma-delimited fields to return

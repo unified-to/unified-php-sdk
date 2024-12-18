@@ -19,13 +19,6 @@ class PatchRepoRepositoryResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\RepoRepository $repoRepository
-     */
-    public ?Shared\RepoRepository $repoRepository = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchRepoRepositoryResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\RepoRepository $repoRepository
+     */
+    public ?Shared\RepoRepository $repoRepository = null;
 
     /**
      * @param  string  $contentType

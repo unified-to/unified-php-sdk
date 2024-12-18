@@ -13,6 +13,13 @@ class ScimRole
 {
     /**
      *
+     * @var string $value
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
+    public string $value;
+
+    /**
+     *
      * @var ?string $display
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('display')]
@@ -34,13 +41,6 @@ class ScimRole
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $type = null;
-
-    /**
-     *
-     * @var string $value
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    public string $value;
 
     /**
      * @param  string  $value

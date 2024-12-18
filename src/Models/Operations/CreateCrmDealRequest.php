@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmDealRequest
 {
     /**
-     * A deal represents an opportunity with companies and/or contacts
-     *
-     * @var ?Shared\CrmDeal $crmDeal
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmDeal $crmDeal = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     * A deal represents an opportunity with companies and/or contacts
+     *
+     * @var ?Shared\CrmDeal $crmDeal
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CrmDeal $crmDeal = null;
 
     /**
      * Comma-delimited fields to return

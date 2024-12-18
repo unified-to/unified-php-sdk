@@ -19,13 +19,6 @@ class UpdateMetadataMetadataResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\MetadataMetadata $metadataMetadata
-     */
-    public ?Shared\MetadataMetadata $metadataMetadata = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class UpdateMetadataMetadataResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\MetadataMetadata $metadataMetadata
+     */
+    public ?Shared\MetadataMetadata $metadataMetadata = null;
 
     /**
      * @param  string  $contentType

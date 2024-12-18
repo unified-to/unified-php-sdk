@@ -13,6 +13,14 @@ class AccountingContactPaymentMethod
 {
     /**
      *
+     * @var AccountingContactPaymentMethodType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType')]
+    public AccountingContactPaymentMethodType $type;
+
+    /**
+     *
      * @var ?bool $default
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('default')]
@@ -34,14 +42,6 @@ class AccountingContactPaymentMethod
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
-
-    /**
-     *
-     * @var AccountingContactPaymentMethodType $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType')]
-    public AccountingContactPaymentMethodType $type;
 
     /**
      * @param  AccountingContactPaymentMethodType  $type

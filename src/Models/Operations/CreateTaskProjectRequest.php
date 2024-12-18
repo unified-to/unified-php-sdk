@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateTaskProjectRequest
 {
     /**
-     *
-     * @var ?Shared\TaskProject $taskProject
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\TaskProject $taskProject = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\TaskProject $taskProject
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\TaskProject $taskProject = null;
 
     /**
      * Comma-delimited fields to return

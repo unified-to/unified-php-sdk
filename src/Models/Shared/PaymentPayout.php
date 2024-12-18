@@ -13,6 +13,13 @@ class PaymentPayout
 {
     /**
      *
+     * @var float $totalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
+    public float $totalAmount;
+
+    /**
+     *
      * @var ?string $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -61,13 +68,6 @@ class PaymentPayout
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentPayoutStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PaymentPayoutStatus $status = null;
-
-    /**
-     *
-     * @var float $totalAmount
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
-    public float $totalAmount;
 
     /**
      *

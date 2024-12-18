@@ -19,13 +19,6 @@ class GetKmsPageResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\KmsPage $kmsPage
-     */
-    public ?Shared\KmsPage $kmsPage = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class GetKmsPageResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\KmsPage $kmsPage
+     */
+    public ?Shared\KmsPage $kmsPage = null;
 
     /**
      * @param  string  $contentType

@@ -13,6 +13,35 @@ class Issue
 {
     /**
      *
+     * @var IssueStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\IssueStatus')]
+    public IssueStatus $status;
+
+    /**
+     *
+     * @var string $ticketRef
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('ticket_ref')]
+    public string $ticketRef;
+
+    /**
+     *
+     * @var string $title
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    public string $title;
+
+    /**
+     *
+     * @var string $workspaceId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('workspace_id')]
+    public string $workspaceId;
+
+    /**
+     *
      * @var ?string $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -52,28 +81,6 @@ class Issue
     public ?float $size = null;
 
     /**
-     *
-     * @var IssueStatus $status
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\IssueStatus')]
-    public IssueStatus $status;
-
-    /**
-     *
-     * @var string $ticketRef
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('ticket_ref')]
-    public string $ticketRef;
-
-    /**
-     *
-     * @var string $title
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
-    public string $title;
-
-    /**
      * $type
      *
      * @var ?array<string> $type
@@ -98,13 +105,6 @@ class Issue
     #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $url = null;
-
-    /**
-     *
-     * @var string $workspaceId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('workspace_id')]
-    public string $workspaceId;
 
     /**
      * @param  IssueStatus  $status

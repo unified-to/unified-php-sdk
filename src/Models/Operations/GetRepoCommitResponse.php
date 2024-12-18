@@ -19,13 +19,6 @@ class GetRepoCommitResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\RepoCommit $repoCommit
-     */
-    public ?Shared\RepoCommit $repoCommit = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class GetRepoCommitResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\RepoCommit $repoCommit
+     */
+    public ?Shared\RepoCommit $repoCommit = null;
 
     /**
      * @param  string  $contentType

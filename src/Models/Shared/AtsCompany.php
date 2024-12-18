@@ -13,6 +13,13 @@ class AtsCompany
 {
     /**
      *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
+     *
      * @var ?PropertyAtsCompanyAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
@@ -35,13 +42,6 @@ class AtsCompany
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
 
     /**
      *

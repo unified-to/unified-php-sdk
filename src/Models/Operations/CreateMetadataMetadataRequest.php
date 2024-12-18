@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMetadataMetadataRequest
 {
     /**
-     *
-     * @var ?Shared\MetadataMetadata $metadataMetadata
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MetadataMetadata $metadataMetadata = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\MetadataMetadata $metadataMetadata
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\MetadataMetadata $metadataMetadata = null;
 
     /**
      * Comma-delimited fields to return

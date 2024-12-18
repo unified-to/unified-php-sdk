@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class ListAccountingOrdersResponse
 {
     /**
-     * Successful
-     *
-     * @var ?array<Shared\AccountingOrder> $accountingOrders
-     */
-    public ?array $accountingOrders = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class ListAccountingOrdersResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\AccountingOrder> $accountingOrders
+     */
+    public ?array $accountingOrders = null;
 
     /**
      * @param  string  $contentType

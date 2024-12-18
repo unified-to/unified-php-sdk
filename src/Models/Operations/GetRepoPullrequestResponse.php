@@ -19,13 +19,6 @@ class GetRepoPullrequestResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\RepoPullrequest $repoPullrequest
-     */
-    public ?Shared\RepoPullrequest $repoPullrequest = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class GetRepoPullrequestResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\RepoPullrequest $repoPullrequest
+     */
+    public ?Shared\RepoPullrequest $repoPullrequest = null;
 
     /**
      * @param  string  $contentType

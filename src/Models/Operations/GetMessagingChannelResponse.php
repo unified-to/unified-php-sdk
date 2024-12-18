@@ -19,13 +19,6 @@ class GetMessagingChannelResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\MessagingChannel $messagingChannel
-     */
-    public ?Shared\MessagingChannel $messagingChannel = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class GetMessagingChannelResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\MessagingChannel $messagingChannel
+     */
+    public ?Shared\MessagingChannel $messagingChannel = null;
 
     /**
      * @param  string  $contentType

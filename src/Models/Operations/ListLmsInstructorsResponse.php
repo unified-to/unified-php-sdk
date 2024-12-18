@@ -19,13 +19,6 @@ class ListLmsInstructorsResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?array<Shared\LmsInstructor> $lmsInstructors
-     */
-    public ?array $lmsInstructors = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListLmsInstructorsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\LmsInstructor> $lmsInstructors
+     */
+    public ?array $lmsInstructors = null;
 
     /**
      * @param  string  $contentType

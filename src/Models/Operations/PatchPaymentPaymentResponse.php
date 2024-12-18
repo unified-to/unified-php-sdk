@@ -19,13 +19,6 @@ class PatchPaymentPaymentResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\PaymentPayment $paymentPayment
-     */
-    public ?Shared\PaymentPayment $paymentPayment = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchPaymentPaymentResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\PaymentPayment $paymentPayment
+     */
+    public ?Shared\PaymentPayment $paymentPayment = null;
 
     /**
      * @param  string  $contentType

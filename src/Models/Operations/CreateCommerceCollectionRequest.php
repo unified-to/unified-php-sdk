@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCommerceCollectionRequest
 {
     /**
-     * A collection of items/products/services
-     *
-     * @var ?Shared\CommerceCollection $commerceCollection
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CommerceCollection $commerceCollection = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     * A collection of items/products/services
+     *
+     * @var ?Shared\CommerceCollection $commerceCollection
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CommerceCollection $commerceCollection = null;
 
     /**
      * Comma-delimited fields to return

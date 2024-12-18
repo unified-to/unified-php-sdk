@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class PatchAccountingJournalResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\AccountingJournal $accountingJournal
-     */
-    public ?Shared\AccountingJournal $accountingJournal = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class PatchAccountingJournalResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\AccountingJournal $accountingJournal
+     */
+    public ?Shared\AccountingJournal $accountingJournal = null;
 
     /**
      * @param  string  $contentType

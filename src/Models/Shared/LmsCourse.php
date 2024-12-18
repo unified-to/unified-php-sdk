@@ -12,6 +12,13 @@ namespace Unified\Unified_to\Models\Shared;
 class LmsCourse
 {
     /**
+     *
+     * @var string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    public string $name;
+
+    /**
      * $categories
      *
      * @var ?array<string> $categories
@@ -98,13 +105,6 @@ class LmsCourse
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMedia>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $media = null;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
 
     /**
      *

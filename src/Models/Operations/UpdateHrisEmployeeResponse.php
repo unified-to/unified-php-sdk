@@ -19,13 +19,6 @@ class UpdateHrisEmployeeResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\HrisEmployee $hrisEmployee
-     */
-    public ?Shared\HrisEmployee $hrisEmployee = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class UpdateHrisEmployeeResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\HrisEmployee $hrisEmployee
+     */
+    public ?Shared\HrisEmployee $hrisEmployee = null;
 
     /**
      * @param  string  $contentType

@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateLmsStudentRequest
 {
     /**
-     *
-     * @var ?Shared\LmsStudent $lmsStudent
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\LmsStudent $lmsStudent = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\LmsStudent $lmsStudent
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\LmsStudent $lmsStudent = null;
 
     /**
      * Comma-delimited fields to return

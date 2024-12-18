@@ -19,13 +19,6 @@ class PatchMessagingMessageResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\MessagingMessage $messagingMessage
-     */
-    public ?Shared\MessagingMessage $messagingMessage = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchMessagingMessageResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\MessagingMessage $messagingMessage
+     */
+    public ?Shared\MessagingMessage $messagingMessage = null;
 
     /**
      * @param  string  $contentType

@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class ListAtsCompaniesResponse
 {
     /**
-     * Successful
-     *
-     * @var ?array<Shared\AtsCompany> $atsCompanies
-     */
-    public ?array $atsCompanies = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class ListAtsCompaniesResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\AtsCompany> $atsCompanies
+     */
+    public ?array $atsCompanies = null;
 
     /**
      * @param  string  $contentType

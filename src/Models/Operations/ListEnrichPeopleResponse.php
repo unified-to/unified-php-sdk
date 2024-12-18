@@ -19,13 +19,6 @@ class ListEnrichPeopleResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\EnrichPerson $enrichPerson
-     */
-    public ?Shared\EnrichPerson $enrichPerson = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class ListEnrichPeopleResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\EnrichPerson $enrichPerson
+     */
+    public ?Shared\EnrichPerson $enrichPerson = null;
 
     /**
      * @param  string  $contentType

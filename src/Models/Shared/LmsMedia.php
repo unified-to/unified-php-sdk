@@ -13,6 +13,13 @@ class LmsMedia
 {
     /**
      *
+     * @var string $url
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
+    public string $url;
+
+    /**
+     *
      * @var ?string $description
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
@@ -43,13 +50,6 @@ class LmsMedia
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\LmsMediaType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?LmsMediaType $type = null;
-
-    /**
-     *
-     * @var string $url
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
-    public string $url;
 
     /**
      * @param  string  $url

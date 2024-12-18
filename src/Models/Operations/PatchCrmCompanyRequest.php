@@ -13,14 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchCrmCompanyRequest
 {
     /**
-     * A company represents an organization that optionally is associated with a deal and/or contacts
-     *
-     * @var ?Shared\CrmCompany $crmCompany
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmCompany $crmCompany = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,20 +21,28 @@ class PatchCrmCompanyRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
-     *
-     * @var ?array<string> $fields
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-
-    /**
      * ID of the Company
      *
      * @var string $id
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     * A company represents an organization that optionally is associated with a deal and/or contacts
+     *
+     * @var ?Shared\CrmCompany $crmCompany
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CrmCompany $crmCompany = null;
+
+    /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
 
     /**
      * @param  string  $connectionId

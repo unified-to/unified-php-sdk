@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchUnifiedConnectionRequest
 {
     /**
-     * A connection represents a specific authentication of an integration.
-     *
-     * @var ?Shared\Connection $connection
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\Connection $connection = null;
-
-    /**
      * ID of the Connection
      *
      * @var string $id
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     * A connection represents a specific authentication of an integration.
+     *
+     * @var ?Shared\Connection $connection
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\Connection $connection = null;
 
     /**
      * @param  string  $id

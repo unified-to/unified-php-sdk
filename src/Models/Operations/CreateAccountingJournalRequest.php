@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAccountingJournalRequest
 {
     /**
-     *
-     * @var ?Shared\AccountingJournal $accountingJournal
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingJournal $accountingJournal = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\AccountingJournal $accountingJournal
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\AccountingJournal $accountingJournal = null;
 
     /**
      * Comma-delimited fields to return

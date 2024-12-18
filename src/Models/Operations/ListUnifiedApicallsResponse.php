@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class ListUnifiedApicallsResponse
 {
     /**
-     * Successful
-     *
-     * @var ?array<Shared\ApiCall> $apiCalls
-     */
-    public ?array $apiCalls = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class ListUnifiedApicallsResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?array<Shared\ApiCall> $apiCalls
+     */
+    public ?array $apiCalls = null;
 
     /**
      * @param  string  $contentType

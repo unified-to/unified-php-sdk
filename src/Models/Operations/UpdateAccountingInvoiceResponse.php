@@ -12,13 +12,6 @@ use Unified\Unified_to\Models\Shared;
 class UpdateAccountingInvoiceResponse
 {
     /**
-     * Successful
-     *
-     * @var ?Shared\AccountingInvoice $accountingInvoice
-     */
-    public ?Shared\AccountingInvoice $accountingInvoice = null;
-
-    /**
      * HTTP response content type for this operation
      *
      * @var string $contentType
@@ -38,6 +31,13 @@ class UpdateAccountingInvoiceResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\AccountingInvoice $accountingInvoice
+     */
+    public ?Shared\AccountingInvoice $accountingInvoice = null;
 
     /**
      * @param  string  $contentType

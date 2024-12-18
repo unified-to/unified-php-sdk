@@ -13,14 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchCrmEventRequest
 {
     /**
-     * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-     *
-     * @var ?Shared\CrmEvent $crmEvent
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmEvent $crmEvent = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,20 +21,28 @@ class PatchCrmEventRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
-     *
-     * @var ?array<string> $fields
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
-    public ?array $fields = null;
-
-    /**
      * ID of the Event
      *
      * @var string $id
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
+     *
+     * @var ?Shared\CrmEvent $crmEvent
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\CrmEvent $crmEvent = null;
+
+    /**
+     * Comma-delimited fields to return
+     *
+     * @var ?array<string> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
 
     /**
      * @param  string  $connectionId

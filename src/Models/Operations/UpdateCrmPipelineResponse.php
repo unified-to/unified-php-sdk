@@ -19,13 +19,6 @@ class UpdateCrmPipelineResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\CrmPipeline $crmPipeline
-     */
-    public ?Shared\CrmPipeline $crmPipeline = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class UpdateCrmPipelineResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\CrmPipeline $crmPipeline
+     */
+    public ?Shared\CrmPipeline $crmPipeline = null;
 
     /**
      * @param  string  $contentType

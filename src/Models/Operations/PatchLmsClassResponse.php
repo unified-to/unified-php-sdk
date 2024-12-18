@@ -19,13 +19,6 @@ class PatchLmsClassResponse
     public string $contentType;
 
     /**
-     * Successful
-     *
-     * @var ?Shared\LmsClass $lmsClass
-     */
-    public ?Shared\LmsClass $lmsClass = null;
-
-    /**
      * HTTP response status code for this operation
      *
      * @var int $statusCode
@@ -38,6 +31,13 @@ class PatchLmsClassResponse
      * @var \Psr\Http\Message\ResponseInterface $rawResponse
      */
     public \Psr\Http\Message\ResponseInterface $rawResponse;
+
+    /**
+     * Successful
+     *
+     * @var ?Shared\LmsClass $lmsClass
+     */
+    public ?Shared\LmsClass $lmsClass = null;
 
     /**
      * @param  string  $contentType

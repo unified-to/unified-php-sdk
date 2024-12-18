@@ -13,6 +13,31 @@ namespace Unified\Unified_to\Models\Shared;
 class Connection
 {
     /**
+     * The Integration categories that this connection supports
+     *
+     * @var array<PropertyConnectionCategories> $categories
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories>')]
+    public array $categories;
+
+    /**
+     *
+     * @var string $integrationType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_type')]
+    public string $integrationType;
+
+    /**
+     * $permissions
+     *
+     * @var array<PropertyConnectionPermissions> $permissions
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('permissions')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>')]
+    public array $permissions;
+
+    /**
      * An authentication object that represents a specific authorized user's connection to an integration.
      *
      * @var ?PropertyConnectionAuth $auth
@@ -31,29 +56,12 @@ class Connection
     public ?string $authAwsArn = null;
 
     /**
-     * The Integration categories that this connection supports
-     *
-     * @var array<PropertyConnectionCategories> $categories
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories>')]
-    public array $categories;
-
-    /**
      *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
-
-    /**
-     *
-     * @var ?string $environment
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('environment')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $environment = null;
 
     /**
      *
@@ -70,13 +78,6 @@ class Connection
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
-
-    /**
-     *
-     * @var string $integrationType
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_type')]
-    public string $integrationType;
 
     /**
      *
@@ -103,15 +104,6 @@ class Connection
     public ?\DateTime $lastUnhealthyAt = null;
 
     /**
-     * $permissions
-     *
-     * @var array<PropertyConnectionPermissions> $permissions
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('permissions')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>')]
-    public array $permissions;
-
-    /**
      *
      * @var ?\DateTime $updatedAt
      */
@@ -126,6 +118,14 @@ class Connection
     #[\Speakeasy\Serializer\Annotation\SerializedName('workspace_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $workspaceId = null;
+
+    /**
+     *
+     * @var ?string $environment
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('environment')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $environment = null;
 
     /**
      * @param  array<PropertyConnectionCategories>  $categories
@@ -151,7 +151,6 @@ class Connection
         $this->auth = $auth;
         $this->authAwsArn = $authAwsArn;
         $this->createdAt = $createdAt;
-        $this->environment = $environment;
         $this->externalXref = $externalXref;
         $this->id = $id;
         $this->isPaused = $isPaused;
@@ -159,5 +158,6 @@ class Connection
         $this->lastUnhealthyAt = $lastUnhealthyAt;
         $this->updatedAt = $updatedAt;
         $this->workspaceId = $workspaceId;
+        $this->environment = $environment;
     }
 }

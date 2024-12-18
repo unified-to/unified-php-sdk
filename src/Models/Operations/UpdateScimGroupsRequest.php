@@ -13,13 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateScimGroupsRequest
 {
     /**
-     *
-     * @var ?Shared\ScimGroup $scimGroup
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\ScimGroup $scimGroup = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -34,6 +27,13 @@ class UpdateScimGroupsRequest
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
     public string $id;
+
+    /**
+     *
+     * @var ?Shared\ScimGroup $scimGroup
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\ScimGroup $scimGroup = null;
 
     /**
      * @param  string  $connectionId

@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateHrisLocationRequest
 {
     /**
-     *
-     * @var ?Shared\HrisLocation $hrisLocation
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\HrisLocation $hrisLocation = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
+
+    /**
+     *
+     * @var ?Shared\HrisLocation $hrisLocation
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?Shared\HrisLocation $hrisLocation = null;
 
     /**
      * Comma-delimited fields to return

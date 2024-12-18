@@ -12,14 +12,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdatePassthroughJsonRequest
 {
     /**
-     * integration-specific payload
-     *
-     * @var mixed $requestBody
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public mixed $requestBody = null;
-
-    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -33,6 +25,14 @@ class UpdatePassthroughJsonRequest
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=path')]
     public string $path;
+
+    /**
+     * integration-specific payload
+     *
+     * @var mixed $requestBody
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public mixed $requestBody = null;
 
     /**
      * @param  string  $connectionId
