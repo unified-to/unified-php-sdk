@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to;
 
+use Unified\Unified_to\Utils\Retry;
+
 /**
  * UnifiedToBuilder is used to configure and build an instance of the SDK.
  */
@@ -84,6 +86,13 @@ class UnifiedToBuilder
     public function setServerIndex(int $serverIdx): UnifiedToBuilder
     {
         $this->sdkConfig->serverIndex = $serverIdx;
+
+        return $this;
+    }
+
+    public function setRetryConfig(Retry\RetryConfig $config): UnifiedToBuilder
+    {
+        $this->sdkConfig->retryConfig = $config;
 
         return $this;
     }

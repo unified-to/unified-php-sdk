@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 6d4e6cea4aabe5c8f94c93da9c13a943
+  docChecksum: 11363cbfd40306b24119fb60c9ea2fc5
   docVersion: "1.0"
-  speakeasyVersion: 1.456.0
-  generationVersion: 2.481.0
-  releaseVersion: 1.1.15
-  configChecksum: beb4e45f7069032bef8aa62074221860
+  speakeasyVersion: 1.460.2
+  generationVersion: 2.484.0
+  releaseVersion: 1.1.16
+  configChecksum: 3401c383a5d2461a3526ca8ce7643e37
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -2367,12 +2367,20 @@ generatedFiles:
   - src/Utils/JSON.php
   - src/Utils/MixedJSONHandler.php
   - src/Utils/MultipartMetadata.php
+  - src/Utils/Options.php
   - src/Utils/ParamsMetadata.php
   - src/Utils/PathParameters.php
   - src/Utils/PhpDocTypeParser.php
   - src/Utils/QueryParameters.php
   - src/Utils/RequestBodies.php
   - src/Utils/RequestMetadata.php
+  - src/Utils/Retry/PermanentError.php
+  - src/Utils/Retry/RetryConfig.php
+  - src/Utils/Retry/RetryConfigBackoff.php
+  - src/Utils/Retry/RetryConfigNone.php
+  - src/Utils/Retry/RetryStrategy.php
+  - src/Utils/Retry/RetryUtils.php
+  - src/Utils/Retry/TemporaryError.php
   - src/Utils/Security.php
   - src/Utils/SecurityClient.php
   - src/Utils/SecurityMetadata.php

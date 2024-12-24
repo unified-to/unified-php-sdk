@@ -7,7 +7,7 @@
 declare(strict_types=1);
 
 namespace Unified\Unified_to;
-
+use Unified\Unified_to\Utils\Retry\RetryConfig;
 
 class SDKConfiguration
 {
@@ -26,11 +26,13 @@ class SDKConfiguration
 
     public string $openapiDocVersion = '1.0';
 
-    public string $sdkVersion = '1.1.15';
+    public string $sdkVersion = '1.1.16';
 
-    public string $genVersion = '2.481.0';
+    public string $genVersion = '2.484.0';
 
-    public string $userAgent = 'speakeasy-sdk/php 1.1.15 2.481.0 1.0 unified/unified-to';
+    public string $userAgent = 'speakeasy-sdk/php 1.1.16 2.484.0 1.0 unified/unified-to';
+
+    public ?RetryConfig $retryConfig = null;
 
     public function __construct()
     {

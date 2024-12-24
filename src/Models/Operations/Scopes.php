@@ -92,6 +92,8 @@ enum Scopes: string
     case HrisLocationRead = 'hris_location_read';
     case HrisLocationWrite = 'hris_location_write';
     case UcCallRead = 'uc_call_read';
+    case UcContactRead = 'uc_contact_read';
+    case UcContactWrite = 'uc_contact_write';
     case StorageFileRead = 'storage_file_read';
     case StorageFileWrite = 'storage_file_write';
     case Webhook = 'webhook';
