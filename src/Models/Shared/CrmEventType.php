@@ -16,4 +16,7 @@ enum CrmEventType: string
     case Task = 'TASK';
     case Meeting = 'MEETING';
     case Call = 'CALL';
+    case MarketingEmail = 'MARKETING_EMAIL';
+    case Form = 'FORM';
+    case PageView = 'PAGE_VIEW';
 }

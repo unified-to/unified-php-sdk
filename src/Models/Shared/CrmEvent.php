@@ -72,6 +72,15 @@ class CrmEvent
 
     /**
      *
+     * @var ?PropertyCrmEventForm $form
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('form')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventForm|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyCrmEventForm $form = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -87,6 +96,15 @@ class CrmEvent
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $leadIds = null;
+
+    /**
+     *
+     * @var ?PropertyCrmEventMarketingEmail $marketingEmail
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('marketing_email')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventMarketingEmail|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyCrmEventMarketingEmail $marketingEmail = null;
 
     /**
      * The meeting object, when type = meeting
@@ -107,6 +125,15 @@ class CrmEvent
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventNote|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyCrmEventNote $note = null;
+
+    /**
+     *
+     * @var ?PropertyCrmEventPageView $pageView
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('page_view')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventPageView|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyCrmEventPageView $pageView = null;
 
     /**
      * The raw data returned by the integration for this event.
@@ -160,17 +187,20 @@ class CrmEvent
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $dealIds
      * @param  ?PropertyCrmEventEmail  $email
+     * @param  ?PropertyCrmEventForm  $form
      * @param  ?string  $id
      * @param  ?array<string>  $leadIds
+     * @param  ?PropertyCrmEventMarketingEmail  $marketingEmail
      * @param  ?PropertyCrmEventMeeting  $meeting
      * @param  ?PropertyCrmEventNote  $note
+     * @param  ?PropertyCrmEventPageView  $pageView
      * @param  ?array<string, mixed>  $raw
      * @param  ?PropertyCrmEventTask  $task
      * @param  ?CrmEventType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(?PropertyCrmEventCall $call = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?PropertyCrmEventEmail $email = null, ?string $id = null, ?array $leadIds = null, ?PropertyCrmEventMeeting $meeting = null, ?PropertyCrmEventNote $note = null, ?array $raw = null, ?PropertyCrmEventTask $task = null, ?CrmEventType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmEventCall $call = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?PropertyCrmEventEmail $email = null, ?PropertyCrmEventForm $form = null, ?string $id = null, ?array $leadIds = null, ?PropertyCrmEventMarketingEmail $marketingEmail = null, ?PropertyCrmEventMeeting $meeting = null, ?PropertyCrmEventNote $note = null, ?PropertyCrmEventPageView $pageView = null, ?array $raw = null, ?PropertyCrmEventTask $task = null, ?CrmEventType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->call = $call;
         $this->companyIds = $companyIds;
@@ -178,10 +208,13 @@ class CrmEvent
         $this->createdAt = $createdAt;
         $this->dealIds = $dealIds;
         $this->email = $email;
+        $this->form = $form;
         $this->id = $id;
         $this->leadIds = $leadIds;
+        $this->marketingEmail = $marketingEmail;
         $this->meeting = $meeting;
         $this->note = $note;
+        $this->pageView = $pageView;
         $this->raw = $raw;
         $this->task = $task;
         $this->type = $type;

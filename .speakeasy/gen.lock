@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 11363cbfd40306b24119fb60c9ea2fc5
+  docChecksum: 05ab7803e5b317202af3aacb4835f336
   docVersion: "1.0"
-  speakeasyVersion: 1.460.2
+  speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 1.1.16
-  configChecksum: 3401c383a5d2461a3526ca8ce7643e37
+  releaseVersion: 1.1.17
+  configChecksum: 665910cb504efa35351e8a5c03085f16
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -843,6 +843,9 @@ generatedFiles:
   - docs/Models/Shared/CrmEmail.md
   - docs/Models/Shared/CrmEmailType.md
   - docs/Models/Shared/CrmEvent.md
+  - docs/Models/Shared/CrmEventFormField.md
+  - docs/Models/Shared/CrmEventFormFieldType.md
+  - docs/Models/Shared/CrmEventFormOption.md
   - docs/Models/Shared/CrmEventType.md
   - docs/Models/Shared/CrmLead.md
   - docs/Models/Shared/CrmPipeline.md
@@ -984,8 +987,11 @@ generatedFiles:
   - docs/Models/Shared/PropertyCrmContactAddress.md
   - docs/Models/Shared/PropertyCrmEventCall.md
   - docs/Models/Shared/PropertyCrmEventEmail.md
+  - docs/Models/Shared/PropertyCrmEventForm.md
+  - docs/Models/Shared/PropertyCrmEventMarketingEmail.md
   - docs/Models/Shared/PropertyCrmEventMeeting.md
   - docs/Models/Shared/PropertyCrmEventNote.md
+  - docs/Models/Shared/PropertyCrmEventPageView.md
   - docs/Models/Shared/PropertyCrmEventTask.md
   - docs/Models/Shared/PropertyCrmEventTaskStatus.md
   - docs/Models/Shared/PropertyCrmLeadAddress.md
@@ -2070,6 +2076,9 @@ generatedFiles:
   - src/Models/Shared/CrmEmail.php
   - src/Models/Shared/CrmEmailType.php
   - src/Models/Shared/CrmEvent.php
+  - src/Models/Shared/CrmEventFormField.php
+  - src/Models/Shared/CrmEventFormFieldType.php
+  - src/Models/Shared/CrmEventFormOption.php
   - src/Models/Shared/CrmEventType.php
   - src/Models/Shared/CrmLead.php
   - src/Models/Shared/CrmPipeline.php
@@ -2211,8 +2220,11 @@ generatedFiles:
   - src/Models/Shared/PropertyCrmContactAddress.php
   - src/Models/Shared/PropertyCrmEventCall.php
   - src/Models/Shared/PropertyCrmEventEmail.php
+  - src/Models/Shared/PropertyCrmEventForm.php
+  - src/Models/Shared/PropertyCrmEventMarketingEmail.php
   - src/Models/Shared/PropertyCrmEventMeeting.php
   - src/Models/Shared/PropertyCrmEventNote.php
+  - src/Models/Shared/PropertyCrmEventPageView.php
   - src/Models/Shared/PropertyCrmEventTask.php
   - src/Models/Shared/PropertyCrmEventTaskStatus.php
   - src/Models/Shared/PropertyCrmLeadAddress.php

@@ -9,8 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** PropertyCrmEventEmail - The email object, when type = email */
-class PropertyCrmEventEmail
+class PropertyCrmEventMarketingEmail
 {
     /**
      * $attachmentFileIds
@@ -31,7 +30,7 @@ class PropertyCrmEventEmail
     public ?string $body = null;
 
     /**
-     * The event email's cc name & email (name )
+     * The event email's cc name & email (name <test@test.com>)
      *
      * @var ?array<string> $cc
      */
@@ -50,6 +49,14 @@ class PropertyCrmEventEmail
 
     /**
      *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     *
      * @var ?string $subject
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
@@ -57,7 +64,7 @@ class PropertyCrmEventEmail
     public ?string $subject = null;
 
     /**
-     * The event email's "to" name & email (name )
+     * The event email's "to" name & email (name <test@test.com>)
      *
      * @var ?array<string> $to
      */
@@ -71,15 +78,17 @@ class PropertyCrmEventEmail
      * @param  ?string  $body
      * @param  ?array<string>  $cc
      * @param  ?string  $from
+     * @param  ?string  $name
      * @param  ?string  $subject
      * @param  ?array<string>  $to
      */
-    public function __construct(?array $attachmentFileIds = null, ?string $body = null, ?array $cc = null, ?string $from = null, ?string $subject = null, ?array $to = null)
+    public function __construct(?array $attachmentFileIds = null, ?string $body = null, ?array $cc = null, ?string $from = null, ?string $name = null, ?string $subject = null, ?array $to = null)
     {
         $this->attachmentFileIds = $attachmentFileIds;
         $this->body = $body;
         $this->cc = $cc;
         $this->from = $from;
+        $this->name = $name;
         $this->subject = $subject;
         $this->to = $to;
     }
