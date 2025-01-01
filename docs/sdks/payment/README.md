@@ -7,20 +7,26 @@
 
 * [createPaymentLink](#createpaymentlink) - Create a link
 * [createPaymentPayment](#createpaymentpayment) - Create a payment
+* [createPaymentSubscription](#createpaymentsubscription) - Create a subscription
 * [getPaymentLink](#getpaymentlink) - Retrieve a link
 * [getPaymentPayment](#getpaymentpayment) - Retrieve a payment
 * [getPaymentPayout](#getpaymentpayout) - Retrieve a payout
 * [getPaymentRefund](#getpaymentrefund) - Retrieve a refund
+* [getPaymentSubscription](#getpaymentsubscription) - Retrieve a subscription
 * [listPaymentLinks](#listpaymentlinks) - List all links
 * [listPaymentPayments](#listpaymentpayments) - List all payments
 * [listPaymentPayouts](#listpaymentpayouts) - List all payouts
 * [listPaymentRefunds](#listpaymentrefunds) - List all refunds
+* [listPaymentSubscriptions](#listpaymentsubscriptions) - List all subscriptions
 * [patchPaymentLink](#patchpaymentlink) - Update a link
 * [patchPaymentPayment](#patchpaymentpayment) - Update a payment
+* [patchPaymentSubscription](#patchpaymentsubscription) - Update a subscription
 * [removePaymentLink](#removepaymentlink) - Remove a link
 * [removePaymentPayment](#removepaymentpayment) - Remove a payment
+* [removePaymentSubscription](#removepaymentsubscription) - Remove a subscription
 * [updatePaymentLink](#updatepaymentlink) - Update a link
 * [updatePaymentPayment](#updatepaymentpayment) - Update a payment
+* [updatePaymentSubscription](#updatepaymentsubscription) - Update a subscription
 
 ## createPaymentLink
 
@@ -109,6 +115,53 @@ if ($response->paymentPayment !== null) {
 ### Response
 
 **[?Operations\CreatePaymentPaymentResponse](../../Models/Operations/CreatePaymentPaymentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createPaymentSubscription
+
+Create a subscription
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\CreatePaymentSubscriptionRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->payment->createPaymentSubscription(
+    request: $request
+);
+
+if ($response->paymentSubscription !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreatePaymentSubscriptionRequest](../../Models/Operations/CreatePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\CreatePaymentSubscriptionResponse](../../Models/Operations/CreatePaymentSubscriptionResponse.md)**
 
 ### Errors
 
@@ -308,6 +361,54 @@ if ($response->paymentRefund !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getPaymentSubscription
+
+Retrieve a subscription
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\GetPaymentSubscriptionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->payment->getPaymentSubscription(
+    request: $request
+);
+
+if ($response->paymentSubscription !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetPaymentSubscriptionRequest](../../Models/Operations/GetPaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\GetPaymentSubscriptionResponse](../../Models/Operations/GetPaymentSubscriptionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listPaymentLinks
 
 List all links
@@ -496,6 +597,53 @@ if ($response->paymentRefunds !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listPaymentSubscriptions
+
+List all subscriptions
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\ListPaymentSubscriptionsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->payment->listPaymentSubscriptions(
+    request: $request
+);
+
+if ($response->paymentSubscriptions !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListPaymentSubscriptionsRequest](../../Models/Operations/ListPaymentSubscriptionsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\ListPaymentSubscriptionsResponse](../../Models/Operations/ListPaymentSubscriptionsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchPaymentLink
 
 Update a link
@@ -585,6 +733,54 @@ if ($response->paymentPayment !== null) {
 ### Response
 
 **[?Operations\PatchPaymentPaymentResponse](../../Models/Operations/PatchPaymentPaymentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchPaymentSubscription
+
+Update a subscription
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\PatchPaymentSubscriptionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->payment->patchPaymentSubscription(
+    request: $request
+);
+
+if ($response->paymentSubscription !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\PatchPaymentSubscriptionRequest](../../Models/Operations/PatchPaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\PatchPaymentSubscriptionResponse](../../Models/Operations/PatchPaymentSubscriptionResponse.md)**
 
 ### Errors
 
@@ -688,6 +884,54 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removePaymentSubscription
+
+Remove a subscription
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\RemovePaymentSubscriptionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->payment->removePaymentSubscription(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemovePaymentSubscriptionRequest](../../Models/Operations/RemovePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\RemovePaymentSubscriptionResponse](../../Models/Operations/RemovePaymentSubscriptionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## updatePaymentLink
 
 Update a link
@@ -777,6 +1021,54 @@ if ($response->paymentPayment !== null) {
 ### Response
 
 **[?Operations\UpdatePaymentPaymentResponse](../../Models/Operations/UpdatePaymentPaymentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updatePaymentSubscription
+
+Update a subscription
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$security = '<YOUR_API_KEY_HERE>';
+
+$sdk = Unified_to\UnifiedTo::builder()->setSecurity($security)->build();
+
+$request = new Operations\UpdatePaymentSubscriptionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->payment->updatePaymentSubscription(
+    request: $request
+);
+
+if ($response->paymentSubscription !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\UpdatePaymentSubscriptionRequest](../../Models/Operations/UpdatePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\UpdatePaymentSubscriptionResponse](../../Models/Operations/UpdatePaymentSubscriptionResponse.md)**
 
 ### Errors
 

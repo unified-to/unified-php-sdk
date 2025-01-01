@@ -33,6 +33,8 @@ enum Scopes: string
     case PaymentRefundRead = 'payment_refund_read';
     case PaymentLinkRead = 'payment_link_read';
     case PaymentLinkWrite = 'payment_link_write';
+    case PaymentSubscriptionRead = 'payment_subscription_read';
+    case PaymentSubscriptionWrite = 'payment_subscription_write';
     case CommerceItemRead = 'commerce_item_read';
     case CommerceItemWrite = 'commerce_item_write';
     case CommerceCollectionRead = 'commerce_collection_read';

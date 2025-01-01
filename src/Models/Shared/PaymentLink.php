@@ -70,10 +70,10 @@ class PaymentLink
     /**
      * $lineitems
      *
-     * @var ?array<PaymentLinkLineitem> $lineitems
+     * @var ?array<PaymentLineitem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentLinkLineitem>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentLineitem>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $lineitems = null;
 
@@ -127,7 +127,7 @@ class PaymentLink
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?bool  $isChargeableNow
-     * @param  ?array<PaymentLinkLineitem>  $lineitems
+     * @param  ?array<PaymentLineitem>  $lineitems
      * @param  ?string  $paymentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $successUrl

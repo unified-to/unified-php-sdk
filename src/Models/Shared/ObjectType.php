@@ -23,6 +23,7 @@ enum ObjectType: string
     case PaymentLink = 'payment_link';
     case PaymentPayout = 'payment_payout';
     case PaymentRefund = 'payment_refund';
+    case PaymentSubscription = 'payment_subscription';
     case CommerceItem = 'commerce_item';
     case CommerceCollection = 'commerce_collection';
     case CommerceInventory = 'commerce_inventory';

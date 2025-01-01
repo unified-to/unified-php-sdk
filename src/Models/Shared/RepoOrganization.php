@@ -13,13 +13,6 @@ class RepoOrganization
 {
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?string $avatarUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('avatar_url')]
@@ -28,11 +21,11 @@ class RepoOrganization
 
     /**
      *
-     * @var ?string $createdAt
+     * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $createdAt = null;
+    public ?\DateTime $createdAt = null;
 
     /**
      *
@@ -51,6 +44,14 @@ class RepoOrganization
     public ?string $id = null;
 
     /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -62,11 +63,11 @@ class RepoOrganization
 
     /**
      *
-     * @var ?string $updatedAt
+     * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $updatedAt = null;
+    public ?\DateTime $updatedAt = null;
 
     /**
      *
@@ -77,22 +78,22 @@ class RepoOrganization
     public ?string $webUrl = null;
 
     /**
-     * @param  string  $name
      * @param  ?string  $avatarUrl
-     * @param  ?string  $createdAt
+     * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id
+     * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?string  $updatedAt
+     * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      */
-    public function __construct(string $name, ?string $avatarUrl = null, ?string $createdAt = null, ?string $description = null, ?string $id = null, ?array $raw = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?string $avatarUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
-        $this->name = $name;
         $this->avatarUrl = $avatarUrl;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
+        $this->name = $name;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;
         $this->webUrl = $webUrl;

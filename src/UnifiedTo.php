@@ -138,6 +138,8 @@ class UnifiedTo
 
     public Refund $refund;
 
+    public Subscription $subscription;
+
     public Repo $repo;
 
     public Branch $branch;
@@ -263,6 +265,7 @@ class UnifiedTo
         $this->link = new Link($this->sdkConfiguration);
         $this->payout = new Payout($this->sdkConfiguration);
         $this->refund = new Refund($this->sdkConfiguration);
+        $this->subscription = new Subscription($this->sdkConfiguration);
         $this->repo = new Repo($this->sdkConfiguration);
         $this->branch = new Branch($this->sdkConfiguration);
         $this->commit = new Commit($this->sdkConfiguration);

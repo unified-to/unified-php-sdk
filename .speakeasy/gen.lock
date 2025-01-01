@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 05ab7803e5b317202af3aacb4835f336
+  docChecksum: d3ff121f2a7d483c6c660192f0d72464
   docVersion: "1.0"
   speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 1.1.17
-  configChecksum: 665910cb504efa35351e8a5c03085f16
+  releaseVersion: 1.1.18
+  configChecksum: 44a832110ccbc62b1377cd1029aa43ab
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -112,6 +112,8 @@ generatedFiles:
   - docs/Models/Operations/CreatePaymentLinkResponse.md
   - docs/Models/Operations/CreatePaymentPaymentRequest.md
   - docs/Models/Operations/CreatePaymentPaymentResponse.md
+  - docs/Models/Operations/CreatePaymentSubscriptionRequest.md
+  - docs/Models/Operations/CreatePaymentSubscriptionResponse.md
   - docs/Models/Operations/CreateRepoBranchRequest.md
   - docs/Models/Operations/CreateRepoBranchResponse.md
   - docs/Models/Operations/CreateRepoCommitRequest.md
@@ -237,6 +239,8 @@ generatedFiles:
   - docs/Models/Operations/GetPaymentPayoutResponse.md
   - docs/Models/Operations/GetPaymentRefundRequest.md
   - docs/Models/Operations/GetPaymentRefundResponse.md
+  - docs/Models/Operations/GetPaymentSubscriptionRequest.md
+  - docs/Models/Operations/GetPaymentSubscriptionResponse.md
   - docs/Models/Operations/GetRepoBranchRequest.md
   - docs/Models/Operations/GetRepoBranchResponse.md
   - docs/Models/Operations/GetRepoCommitRequest.md
@@ -379,6 +383,8 @@ generatedFiles:
   - docs/Models/Operations/ListPaymentPayoutsResponse.md
   - docs/Models/Operations/ListPaymentRefundsRequest.md
   - docs/Models/Operations/ListPaymentRefundsResponse.md
+  - docs/Models/Operations/ListPaymentSubscriptionsRequest.md
+  - docs/Models/Operations/ListPaymentSubscriptionsResponse.md
   - docs/Models/Operations/ListRepoBranchesRequest.md
   - docs/Models/Operations/ListRepoBranchesResponse.md
   - docs/Models/Operations/ListRepoCommitsRequest.md
@@ -506,6 +512,8 @@ generatedFiles:
   - docs/Models/Operations/PatchPaymentLinkResponse.md
   - docs/Models/Operations/PatchPaymentPaymentRequest.md
   - docs/Models/Operations/PatchPaymentPaymentResponse.md
+  - docs/Models/Operations/PatchPaymentSubscriptionRequest.md
+  - docs/Models/Operations/PatchPaymentSubscriptionResponse.md
   - docs/Models/Operations/PatchRepoBranchRequest.md
   - docs/Models/Operations/PatchRepoBranchResponse.md
   - docs/Models/Operations/PatchRepoCommitRequest.md
@@ -623,6 +631,8 @@ generatedFiles:
   - docs/Models/Operations/RemovePaymentLinkResponse.md
   - docs/Models/Operations/RemovePaymentPaymentRequest.md
   - docs/Models/Operations/RemovePaymentPaymentResponse.md
+  - docs/Models/Operations/RemovePaymentSubscriptionRequest.md
+  - docs/Models/Operations/RemovePaymentSubscriptionResponse.md
   - docs/Models/Operations/RemoveRepoBranchRequest.md
   - docs/Models/Operations/RemoveRepoBranchResponse.md
   - docs/Models/Operations/RemoveRepoCommitRequest.md
@@ -740,6 +750,8 @@ generatedFiles:
   - docs/Models/Operations/UpdatePaymentLinkResponse.md
   - docs/Models/Operations/UpdatePaymentPaymentRequest.md
   - docs/Models/Operations/UpdatePaymentPaymentResponse.md
+  - docs/Models/Operations/UpdatePaymentSubscriptionRequest.md
+  - docs/Models/Operations/UpdatePaymentSubscriptionResponse.md
   - docs/Models/Operations/UpdateRepoBranchRequest.md
   - docs/Models/Operations/UpdateRepoBranchResponse.md
   - docs/Models/Operations/UpdateRepoCommitRequest.md
@@ -891,6 +903,7 @@ generatedFiles:
   - docs/Models/Shared/HrisTimeoffType.md
   - docs/Models/Shared/Integration.md
   - docs/Models/Shared/IntegrationSupport.md
+  - docs/Models/Shared/IntervalUnit.md
   - docs/Models/Shared/Issue.md
   - docs/Models/Shared/IssueStatus.md
   - docs/Models/Shared/KmsPage.md
@@ -961,13 +974,15 @@ generatedFiles:
   - docs/Models/Shared/Operation.md
   - docs/Models/Shared/Origin.md
   - docs/Models/Shared/PaymentCollectionMethod.md
+  - docs/Models/Shared/PaymentLineitem.md
   - docs/Models/Shared/PaymentLink.md
-  - docs/Models/Shared/PaymentLinkLineitem.md
   - docs/Models/Shared/PaymentPayment.md
   - docs/Models/Shared/PaymentPayout.md
   - docs/Models/Shared/PaymentPayoutStatus.md
   - docs/Models/Shared/PaymentRefund.md
   - docs/Models/Shared/PaymentRefundStatus.md
+  - docs/Models/Shared/PaymentSubscription.md
+  - docs/Models/Shared/PaymentSubscriptionStatus.md
   - docs/Models/Shared/PaymentType.md
   - docs/Models/Shared/Priority.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
@@ -1173,6 +1188,7 @@ generatedFiles:
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/student/README.md
+  - docs/sdks/subscription/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/ticket/README.md
@@ -1345,6 +1361,8 @@ generatedFiles:
   - src/Models/Operations/CreatePaymentLinkResponse.php
   - src/Models/Operations/CreatePaymentPaymentRequest.php
   - src/Models/Operations/CreatePaymentPaymentResponse.php
+  - src/Models/Operations/CreatePaymentSubscriptionRequest.php
+  - src/Models/Operations/CreatePaymentSubscriptionResponse.php
   - src/Models/Operations/CreateRepoBranchRequest.php
   - src/Models/Operations/CreateRepoBranchResponse.php
   - src/Models/Operations/CreateRepoCommitRequest.php
@@ -1470,6 +1488,8 @@ generatedFiles:
   - src/Models/Operations/GetPaymentPayoutResponse.php
   - src/Models/Operations/GetPaymentRefundRequest.php
   - src/Models/Operations/GetPaymentRefundResponse.php
+  - src/Models/Operations/GetPaymentSubscriptionRequest.php
+  - src/Models/Operations/GetPaymentSubscriptionResponse.php
   - src/Models/Operations/GetRepoBranchRequest.php
   - src/Models/Operations/GetRepoBranchResponse.php
   - src/Models/Operations/GetRepoCommitRequest.php
@@ -1612,6 +1632,8 @@ generatedFiles:
   - src/Models/Operations/ListPaymentPayoutsResponse.php
   - src/Models/Operations/ListPaymentRefundsRequest.php
   - src/Models/Operations/ListPaymentRefundsResponse.php
+  - src/Models/Operations/ListPaymentSubscriptionsRequest.php
+  - src/Models/Operations/ListPaymentSubscriptionsResponse.php
   - src/Models/Operations/ListRepoBranchesRequest.php
   - src/Models/Operations/ListRepoBranchesResponse.php
   - src/Models/Operations/ListRepoCommitsRequest.php
@@ -1739,6 +1761,8 @@ generatedFiles:
   - src/Models/Operations/PatchPaymentLinkResponse.php
   - src/Models/Operations/PatchPaymentPaymentRequest.php
   - src/Models/Operations/PatchPaymentPaymentResponse.php
+  - src/Models/Operations/PatchPaymentSubscriptionRequest.php
+  - src/Models/Operations/PatchPaymentSubscriptionResponse.php
   - src/Models/Operations/PatchRepoBranchRequest.php
   - src/Models/Operations/PatchRepoBranchResponse.php
   - src/Models/Operations/PatchRepoCommitRequest.php
@@ -1856,6 +1880,8 @@ generatedFiles:
   - src/Models/Operations/RemovePaymentLinkResponse.php
   - src/Models/Operations/RemovePaymentPaymentRequest.php
   - src/Models/Operations/RemovePaymentPaymentResponse.php
+  - src/Models/Operations/RemovePaymentSubscriptionRequest.php
+  - src/Models/Operations/RemovePaymentSubscriptionResponse.php
   - src/Models/Operations/RemoveRepoBranchRequest.php
   - src/Models/Operations/RemoveRepoBranchResponse.php
   - src/Models/Operations/RemoveRepoCommitRequest.php
@@ -1973,6 +1999,8 @@ generatedFiles:
   - src/Models/Operations/UpdatePaymentLinkResponse.php
   - src/Models/Operations/UpdatePaymentPaymentRequest.php
   - src/Models/Operations/UpdatePaymentPaymentResponse.php
+  - src/Models/Operations/UpdatePaymentSubscriptionRequest.php
+  - src/Models/Operations/UpdatePaymentSubscriptionResponse.php
   - src/Models/Operations/UpdateRepoBranchRequest.php
   - src/Models/Operations/UpdateRepoBranchResponse.php
   - src/Models/Operations/UpdateRepoCommitRequest.php
@@ -2124,6 +2152,7 @@ generatedFiles:
   - src/Models/Shared/HrisTimeoffType.php
   - src/Models/Shared/Integration.php
   - src/Models/Shared/IntegrationSupport.php
+  - src/Models/Shared/IntervalUnit.php
   - src/Models/Shared/Issue.php
   - src/Models/Shared/IssueStatus.php
   - src/Models/Shared/KmsPage.php
@@ -2194,13 +2223,15 @@ generatedFiles:
   - src/Models/Shared/Operation.php
   - src/Models/Shared/Origin.php
   - src/Models/Shared/PaymentCollectionMethod.php
+  - src/Models/Shared/PaymentLineitem.php
   - src/Models/Shared/PaymentLink.php
-  - src/Models/Shared/PaymentLinkLineitem.php
   - src/Models/Shared/PaymentPayment.php
   - src/Models/Shared/PaymentPayout.php
   - src/Models/Shared/PaymentPayoutStatus.php
   - src/Models/Shared/PaymentRefund.php
   - src/Models/Shared/PaymentRefundStatus.php
+  - src/Models/Shared/PaymentSubscription.php
+  - src/Models/Shared/PaymentSubscriptionStatus.php
   - src/Models/Shared/PaymentType.php
   - src/Models/Shared/Priority.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
@@ -2354,6 +2385,7 @@ generatedFiles:
   - src/Space.php
   - src/Storage.php
   - src/Student.php
+  - src/Subscription.php
   - src/Task.php
   - src/Taxrate.php
   - src/Ticket.php
@@ -5837,4 +5869,58 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>", "object_type": "<value>"}
+  createPaymentSubscription:
+    speakeasy-default-create-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getPaymentSubscription:
+    speakeasy-default-get-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listPaymentSubscriptions:
+    speakeasy-default-list-payment-subscriptions:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchPaymentSubscription:
+    speakeasy-default-patch-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  removePaymentSubscription:
+    speakeasy-default-remove-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updatePaymentSubscription:
+    speakeasy-default-update-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
 generatedTests: {}

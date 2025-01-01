@@ -63,11 +63,11 @@ class TicketingNote
 
     /**
      *
-     * @var ?string $updatedAt
+     * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $updatedAt = null;
+    public ?\DateTime $updatedAt = null;
 
     /**
      *
@@ -84,10 +84,10 @@ class TicketingNote
      * @param  ?string  $id
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $ticketId
-     * @param  ?string  $updatedAt
+     * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?array $raw = null, ?string $ticketId = null, ?string $updatedAt = null, ?string $userId = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?array $raw = null, ?string $ticketId = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->createdAt = $createdAt;
         $this->customerId = $customerId;

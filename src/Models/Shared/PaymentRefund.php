@@ -27,11 +27,11 @@ class PaymentRefund
 
     /**
      *
-     * @var ?string $createdAt
+     * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $createdAt = null;
+    public ?\DateTime $createdAt = null;
 
     /**
      *
@@ -86,25 +86,25 @@ class PaymentRefund
 
     /**
      *
-     * @var ?string $updatedAt
+     * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $updatedAt = null;
+    public ?\DateTime $updatedAt = null;
 
     /**
      * @param  string  $paymentId
      * @param  float  $totalAmount
-     * @param  ?string  $createdAt
+     * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?PaymentRefundStatus  $status
-     * @param  ?string  $updatedAt
+     * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(string $paymentId, float $totalAmount, ?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?string $reference = null, ?PaymentRefundStatus $status = null, ?string $updatedAt = null)
+    public function __construct(string $paymentId, float $totalAmount, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?string $reference = null, ?PaymentRefundStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->paymentId = $paymentId;
         $this->totalAmount = $totalAmount;

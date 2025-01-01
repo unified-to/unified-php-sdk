@@ -13,11 +13,11 @@ class AccountingJournal
 {
     /**
      *
-     * @var ?string $createdAt
+     * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $createdAt = null;
+    public ?\DateTime $createdAt = null;
 
     /**
      *
@@ -89,14 +89,14 @@ class AccountingJournal
 
     /**
      *
-     * @var ?string $updatedAt
+     * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $updatedAt = null;
+    public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?string  $createdAt
+     * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
      * @param  ?string  $id
@@ -105,9 +105,9 @@ class AccountingJournal
      * @param  ?string  $reference
      * @param  ?float  $taxAmount
      * @param  ?string  $taxrateId
-     * @param  ?string  $updatedAt
+     * @param  ?\DateTime  $updatedAt
      */
-    public function __construct(?string $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?array $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?string $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?array $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
