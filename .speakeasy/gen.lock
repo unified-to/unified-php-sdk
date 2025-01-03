@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: d3ff121f2a7d483c6c660192f0d72464
+  docChecksum: 20714033389bb63e345a793caa0911b9
   docVersion: "1.0"
-  speakeasyVersion: 1.460.3
+  speakeasyVersion: 1.460.5
   generationVersion: 2.484.0
-  releaseVersion: 1.1.18
-  configChecksum: 44a832110ccbc62b1377cd1029aa43ab
+  releaseVersion: 1.1.19
+  configChecksum: e1dd4ffc30e774befbd5e669d6d18fd5
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -130,6 +130,8 @@ generatedFiles:
   - docs/Models/Operations/CreateScimUsersResponse.md
   - docs/Models/Operations/CreateStorageFileRequest.md
   - docs/Models/Operations/CreateStorageFileResponse.md
+  - docs/Models/Operations/CreateTaskCommentRequest.md
+  - docs/Models/Operations/CreateTaskCommentResponse.md
   - docs/Models/Operations/CreateTaskProjectRequest.md
   - docs/Models/Operations/CreateTaskProjectResponse.md
   - docs/Models/Operations/CreateTaskTaskRequest.md
@@ -257,6 +259,8 @@ generatedFiles:
   - docs/Models/Operations/GetScimUsersResponse.md
   - docs/Models/Operations/GetStorageFileRequest.md
   - docs/Models/Operations/GetStorageFileResponse.md
+  - docs/Models/Operations/GetTaskCommentRequest.md
+  - docs/Models/Operations/GetTaskCommentResponse.md
   - docs/Models/Operations/GetTaskProjectRequest.md
   - docs/Models/Operations/GetTaskProjectResponse.md
   - docs/Models/Operations/GetTaskTaskRequest.md
@@ -401,6 +405,8 @@ generatedFiles:
   - docs/Models/Operations/ListScimUsersResponse.md
   - docs/Models/Operations/ListStorageFilesRequest.md
   - docs/Models/Operations/ListStorageFilesResponse.md
+  - docs/Models/Operations/ListTaskCommentsRequest.md
+  - docs/Models/Operations/ListTaskCommentsResponse.md
   - docs/Models/Operations/ListTaskProjectsRequest.md
   - docs/Models/Operations/ListTaskProjectsResponse.md
   - docs/Models/Operations/ListTaskTasksRequest.md
@@ -530,6 +536,8 @@ generatedFiles:
   - docs/Models/Operations/PatchScimUsersResponse.md
   - docs/Models/Operations/PatchStorageFileRequest.md
   - docs/Models/Operations/PatchStorageFileResponse.md
+  - docs/Models/Operations/PatchTaskCommentRequest.md
+  - docs/Models/Operations/PatchTaskCommentResponse.md
   - docs/Models/Operations/PatchTaskProjectRequest.md
   - docs/Models/Operations/PatchTaskProjectResponse.md
   - docs/Models/Operations/PatchTaskTaskRequest.md
@@ -649,6 +657,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveScimUsersResponse.md
   - docs/Models/Operations/RemoveStorageFileRequest.md
   - docs/Models/Operations/RemoveStorageFileResponse.md
+  - docs/Models/Operations/RemoveTaskCommentRequest.md
+  - docs/Models/Operations/RemoveTaskCommentResponse.md
   - docs/Models/Operations/RemoveTaskProjectRequest.md
   - docs/Models/Operations/RemoveTaskProjectResponse.md
   - docs/Models/Operations/RemoveTaskTaskRequest.md
@@ -768,6 +778,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateScimUsersResponse.md
   - docs/Models/Operations/UpdateStorageFileRequest.md
   - docs/Models/Operations/UpdateStorageFileResponse.md
+  - docs/Models/Operations/UpdateTaskCommentRequest.md
+  - docs/Models/Operations/UpdateTaskCommentResponse.md
   - docs/Models/Operations/UpdateTaskProjectRequest.md
   - docs/Models/Operations/UpdateTaskProjectResponse.md
   - docs/Models/Operations/UpdateTaskTaskRequest.md
@@ -1081,6 +1093,7 @@ generatedFiles:
   - docs/Models/Shared/StorageFile.md
   - docs/Models/Shared/StorageFileType.md
   - docs/Models/Shared/StoragePermission.md
+  - docs/Models/Shared/TaskComment.md
   - docs/Models/Shared/TaskProject.md
   - docs/Models/Shared/TaskTask.md
   - docs/Models/Shared/TaskTaskStatus.md
@@ -1128,6 +1141,7 @@ generatedFiles:
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
+  - docs/sdks/comment/README.md
   - docs/sdks/commerce/README.md
   - docs/sdks/commit/README.md
   - docs/sdks/company/README.md
@@ -1218,6 +1232,7 @@ generatedFiles:
   - src/Channel.php
   - src/ClassT.php
   - src/Collection.php
+  - src/Comment.php
   - src/Commerce.php
   - src/Commit.php
   - src/Company.php
@@ -1379,6 +1394,8 @@ generatedFiles:
   - src/Models/Operations/CreateScimUsersResponse.php
   - src/Models/Operations/CreateStorageFileRequest.php
   - src/Models/Operations/CreateStorageFileResponse.php
+  - src/Models/Operations/CreateTaskCommentRequest.php
+  - src/Models/Operations/CreateTaskCommentResponse.php
   - src/Models/Operations/CreateTaskProjectRequest.php
   - src/Models/Operations/CreateTaskProjectResponse.php
   - src/Models/Operations/CreateTaskTaskRequest.php
@@ -1506,6 +1523,8 @@ generatedFiles:
   - src/Models/Operations/GetScimUsersResponse.php
   - src/Models/Operations/GetStorageFileRequest.php
   - src/Models/Operations/GetStorageFileResponse.php
+  - src/Models/Operations/GetTaskCommentRequest.php
+  - src/Models/Operations/GetTaskCommentResponse.php
   - src/Models/Operations/GetTaskProjectRequest.php
   - src/Models/Operations/GetTaskProjectResponse.php
   - src/Models/Operations/GetTaskTaskRequest.php
@@ -1650,6 +1669,8 @@ generatedFiles:
   - src/Models/Operations/ListScimUsersResponse.php
   - src/Models/Operations/ListStorageFilesRequest.php
   - src/Models/Operations/ListStorageFilesResponse.php
+  - src/Models/Operations/ListTaskCommentsRequest.php
+  - src/Models/Operations/ListTaskCommentsResponse.php
   - src/Models/Operations/ListTaskProjectsRequest.php
   - src/Models/Operations/ListTaskProjectsResponse.php
   - src/Models/Operations/ListTaskTasksRequest.php
@@ -1779,6 +1800,8 @@ generatedFiles:
   - src/Models/Operations/PatchScimUsersResponse.php
   - src/Models/Operations/PatchStorageFileRequest.php
   - src/Models/Operations/PatchStorageFileResponse.php
+  - src/Models/Operations/PatchTaskCommentRequest.php
+  - src/Models/Operations/PatchTaskCommentResponse.php
   - src/Models/Operations/PatchTaskProjectRequest.php
   - src/Models/Operations/PatchTaskProjectResponse.php
   - src/Models/Operations/PatchTaskTaskRequest.php
@@ -1898,6 +1921,8 @@ generatedFiles:
   - src/Models/Operations/RemoveScimUsersResponse.php
   - src/Models/Operations/RemoveStorageFileRequest.php
   - src/Models/Operations/RemoveStorageFileResponse.php
+  - src/Models/Operations/RemoveTaskCommentRequest.php
+  - src/Models/Operations/RemoveTaskCommentResponse.php
   - src/Models/Operations/RemoveTaskProjectRequest.php
   - src/Models/Operations/RemoveTaskProjectResponse.php
   - src/Models/Operations/RemoveTaskTaskRequest.php
@@ -2017,6 +2042,8 @@ generatedFiles:
   - src/Models/Operations/UpdateScimUsersResponse.php
   - src/Models/Operations/UpdateStorageFileRequest.php
   - src/Models/Operations/UpdateStorageFileResponse.php
+  - src/Models/Operations/UpdateTaskCommentRequest.php
+  - src/Models/Operations/UpdateTaskCommentResponse.php
   - src/Models/Operations/UpdateTaskProjectRequest.php
   - src/Models/Operations/UpdateTaskProjectResponse.php
   - src/Models/Operations/UpdateTaskTaskRequest.php
@@ -2330,6 +2357,7 @@ generatedFiles:
   - src/Models/Shared/StorageFile.php
   - src/Models/Shared/StorageFileType.php
   - src/Models/Shared/StoragePermission.php
+  - src/Models/Shared/TaskComment.php
   - src/Models/Shared/TaskProject.php
   - src/Models/Shared/TaskTask.php
   - src/Models/Shared/TaskTaskStatus.php
@@ -5923,4 +5951,58 @@ examples:
       responses:
         "200":
           application/json: {}
+  createTaskComment:
+    speakeasy-default-create-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  getTaskComment:
+    speakeasy-default-get-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  listTaskComments:
+    speakeasy-default-list-task-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchTaskComment:
+    speakeasy-default-patch-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  removeTaskComment:
+    speakeasy-default-remove-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTaskComment:
+    speakeasy-default-update-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
 generatedTests: {}

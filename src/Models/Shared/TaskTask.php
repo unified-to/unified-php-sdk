@@ -22,6 +22,16 @@ class TaskTask
     public ?array $assignedUserIds = null;
 
     /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     *
+     * @var ?array<string> $attachmentIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attachment_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $attachmentIds = null;
+
+    /**
      *
      * @var ?\DateTime $completedAt
      */
@@ -168,6 +178,7 @@ class TaskTask
 
     /**
      * @param  ?array<string>  $assignedUserIds
+     * @param  ?array<string>  $attachmentIds
      * @param  ?\DateTime  $completedAt
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creatorUserId
@@ -186,9 +197,10 @@ class TaskTask
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
      */
-    public function __construct(?array $assignedUserIds = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?\DateTime $dueAt = null, ?array $followerUserIds = null, ?array $groupIds = null, ?string $id = null, ?string $name = null, ?string $notes = null, ?string $parentId = null, ?string $priority = null, ?string $projectId = null, ?array $raw = null, ?TaskTaskStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $assignedUserIds = null, ?array $attachmentIds = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?\DateTime $dueAt = null, ?array $followerUserIds = null, ?array $groupIds = null, ?string $id = null, ?string $name = null, ?string $notes = null, ?string $parentId = null, ?string $priority = null, ?string $projectId = null, ?array $raw = null, ?TaskTaskStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->assignedUserIds = $assignedUserIds;
+        $this->attachmentIds = $attachmentIds;
         $this->completedAt = $completedAt;
         $this->createdAt = $createdAt;
         $this->creatorUserId = $creatorUserId;

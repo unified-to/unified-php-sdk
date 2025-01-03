@@ -160,6 +160,8 @@ class UnifiedTo
 
     public Task $task;
 
+    public Comment $comment;
+
     public Project $project;
 
     public Ticketing $ticketing;
@@ -276,6 +278,7 @@ class UnifiedTo
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);
+        $this->comment = new Comment($this->sdkConfiguration);
         $this->project = new Project($this->sdkConfiguration);
         $this->ticketing = new Ticketing($this->sdkConfiguration);
         $this->customer = new Customer($this->sdkConfiguration);
