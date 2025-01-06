@@ -20,13 +20,6 @@ class KmsPage
 
     /**
      *
-     * @var string $spaceId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('space_id')]
-    public string $spaceId;
-
-    /**
-     *
      * @var string $title
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
@@ -102,6 +95,14 @@ class KmsPage
 
     /**
      *
+     * @var ?string $spaceId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('space_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $spaceId = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -118,7 +119,6 @@ class KmsPage
 
     /**
      * @param  string  $downloadUrl
-     * @param  string  $spaceId
      * @param  string  $title
      * @param  KmsPageType  $type
      * @param  ?\DateTime  $createdAt
@@ -128,13 +128,13 @@ class KmsPage
      * @param  ?array<KmsPageMetadata>  $metadata
      * @param  ?string  $parentPageId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $spaceId
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      */
-    public function __construct(string $downloadUrl, string $spaceId, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $downloadUrl, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->downloadUrl = $downloadUrl;
-        $this->spaceId = $spaceId;
         $this->title = $title;
         $this->type = $type;
         $this->createdAt = $createdAt;
@@ -144,6 +144,7 @@ class KmsPage
         $this->metadata = $metadata;
         $this->parentPageId = $parentPageId;
         $this->raw = $raw;
+        $this->spaceId = $spaceId;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
     }
