@@ -15,10 +15,10 @@ class PathParameters
     /**
      * @param  string  $type
      * @param  mixed  $pathParams
-     * @param  array<string,array<string,array<string,string>>>  $globals
+     * @param  array<string,array<string,array<string,string>>>|null  $globals
      * @return array<string,string>
      */
-    public function parsePathParams(string $type, mixed $pathParams, array $globals): array
+    public function parsePathParams(string $type, mixed $pathParams, ?array $globals): array
     {
         $parsed = [];
 

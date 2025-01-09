@@ -30,6 +30,22 @@ class StoragePermission
 
     /**
      *
+     * @var ?bool $isHidden
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_hidden')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isHidden = null;
+
+    /**
+     *
+     * @var ?bool $isPublic
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_public')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isPublic = null;
+
+    /**
+     *
      * @var ?string $userId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
@@ -39,12 +55,16 @@ class StoragePermission
     /**
      * @param  array<PropertyStoragePermissionRoles>  $roles
      * @param  ?string  $groupId
+     * @param  ?bool  $isHidden
+     * @param  ?bool  $isPublic
      * @param  ?string  $userId
      */
-    public function __construct(array $roles, ?string $groupId = null, ?string $userId = null)
+    public function __construct(array $roles, ?string $groupId = null, ?bool $isHidden = null, ?bool $isPublic = null, ?string $userId = null)
     {
         $this->roles = $roles;
         $this->groupId = $groupId;
+        $this->isHidden = $isHidden;
+        $this->isPublic = $isPublic;
         $this->userId = $userId;
     }
 }

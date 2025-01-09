@@ -118,6 +118,14 @@ class KmsPage
     public ?string $userId = null;
 
     /**
+     *
+     * @var ?string $webUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('web_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $webUrl = null;
+
+    /**
      * @param  string  $downloadUrl
      * @param  string  $title
      * @param  KmsPageType  $type
@@ -131,8 +139,9 @@ class KmsPage
      * @param  ?string  $spaceId
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @param  ?string  $webUrl
      */
-    public function __construct(string $downloadUrl, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $downloadUrl, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {
         $this->downloadUrl = $downloadUrl;
         $this->title = $title;
@@ -147,5 +156,6 @@ class KmsPage
         $this->spaceId = $spaceId;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->webUrl = $webUrl;
     }
 }
