@@ -66,14 +66,23 @@ class GenaiPrompt
     public ?float $temperature = null;
 
     /**
+     *
+     * @var ?float $tokensUsed
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tokens_used')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $tokensUsed = null;
+
+    /**
      * @param  ?float  $maxTokens
      * @param  ?array<GenaiContent>  $messages
      * @param  ?string  $modelId
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $responses
      * @param  ?float  $temperature
+     * @param  ?float  $tokensUsed
      */
-    public function __construct(?float $maxTokens = null, ?array $messages = null, ?string $modelId = null, ?array $raw = null, ?array $responses = null, ?float $temperature = null)
+    public function __construct(?float $maxTokens = null, ?array $messages = null, ?string $modelId = null, ?array $raw = null, ?array $responses = null, ?float $temperature = null, ?float $tokensUsed = null)
     {
         $this->maxTokens = $maxTokens;
         $this->messages = $messages;
@@ -81,5 +90,6 @@ class GenaiPrompt
         $this->raw = $raw;
         $this->responses = $responses;
         $this->temperature = $temperature;
+        $this->tokensUsed = $tokensUsed;
     }
 }

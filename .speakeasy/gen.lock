@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3613acd1631dbba37d5cd8b1d0150cb1
+  docChecksum: d4d729a2453d8e64af714d75ba2fa32b
   docVersion: "1.0"
-  speakeasyVersion: 1.465.1
-  generationVersion: 2.488.4
-  releaseVersion: 1.1.21
-  configChecksum: 82109c70d2896670ec1b0dde1d016651
+  speakeasyVersion: 1.468.2
+  generationVersion: 2.493.4
+  releaseVersion: 1.1.22
+  configChecksum: ce3412a25efcc2b28475fe12be0b6964
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -22,7 +22,6 @@ features:
     responseFormat: 0.1.0
 generatedFiles:
   - .gitattributes
-  - CONTRIBUTING.md
   - USAGE.md
   - composer.json
   - docs/Models/Operations/Categories.md
@@ -957,6 +956,7 @@ generatedFiles:
   - docs/Models/Shared/ListSortByUpdatedAt.md
   - docs/Models/Shared/ListSpaceId.md
   - docs/Models/Shared/ListStudentId.md
+  - docs/Models/Shared/ListTaskId.md
   - docs/Models/Shared/ListTicketId.md
   - docs/Models/Shared/ListType.md
   - docs/Models/Shared/ListUpdatedGte.md
@@ -2221,6 +2221,7 @@ generatedFiles:
   - src/Models/Shared/ListSortByUpdatedAt.php
   - src/Models/Shared/ListSpaceId.php
   - src/Models/Shared/ListStudentId.php
+  - src/Models/Shared/ListTaskId.php
   - src/Models/Shared/ListTicketId.php
   - src/Models/Shared/ListType.php
   - src/Models/Shared/ListUpdatedGte.php

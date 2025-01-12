@@ -71,6 +71,11 @@ class PathParameters
             case 'object':
                 $vals = [];
 
+                $cls = get_class($value);
+                if ($cls === 'Brick\\Math\\BigDecimal' || $cls === 'Brick\\Math\\BigInteger') {
+                    $pathParams[$metadata->name] = valToString($value, []);
+                    break;
+                }
                 foreach ($value as $field => $fieldValue) { /** @phpstan-ignore-line */
                     if ($fieldValue === null) {
                         continue;
