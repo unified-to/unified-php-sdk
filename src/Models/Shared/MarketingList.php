@@ -14,11 +14,27 @@ class MarketingList
 {
     /**
      *
-     * @var ?string $createdAt
+     * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $createdAt = null;
+    public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?string $description
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $description = null;
+
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
 
     /**
      *
@@ -27,6 +43,14 @@ class MarketingList
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?bool $isActive
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isActive = null;
 
     /**
      *
@@ -48,6 +72,14 @@ class MarketingList
 
     /**
      *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -55,18 +87,36 @@ class MarketingList
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?string  $createdAt
+     *
+     * @var ?string $userId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $userId = null;
+
+    /**
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $description
+     * @param  ?\DateTime  $endAt
      * @param  ?string  $id
+     * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
      */
-    public function __construct(?string $createdAt = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->createdAt = $createdAt;
+        $this->description = $description;
+        $this->endAt = $endAt;
         $this->id = $id;
+        $this->isActive = $isActive;
         $this->name = $name;
         $this->raw = $raw;
+        $this->startAt = $startAt;
         $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }
