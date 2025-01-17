@@ -51,6 +51,14 @@ class ListUnifiedApicallsRequest
     public ?string $integrationType = null;
 
     /**
+     * Filter the results for only billable API Calls
+     *
+     * @var ?bool $isBillable
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=is_billable')]
+    public ?bool $isBillable = null;
+
+    /**
      *
      * @var ?float $limit
      */
@@ -79,6 +87,14 @@ class ListUnifiedApicallsRequest
     public ?string $sort = null;
 
     /**
+     * Filter the results to just this type
+     *
+     * @var ?string $type
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?\DateTime $updatedGte
@@ -87,28 +103,42 @@ class ListUnifiedApicallsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * Filter the results to just this webhook
+     *
+     * @var ?string $webhookId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=webhook_id')]
+    public ?string $webhookId = null;
+
+    /**
      * @param  ?string  $connectionId
      * @param  ?string  $env
      * @param  ?bool  $error
      * @param  ?string  $externalXref
      * @param  ?string  $integrationType
+     * @param  ?bool  $isBillable
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $sort
+     * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $webhookId
      */
-    public function __construct(?string $connectionId = null, ?string $env = null, ?bool $error = null, ?string $externalXref = null, ?string $integrationType = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(?string $connectionId = null, ?string $env = null, ?bool $error = null, ?string $externalXref = null, ?string $integrationType = null, ?bool $isBillable = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $webhookId = null)
     {
         $this->connectionId = $connectionId;
         $this->env = $env;
         $this->error = $error;
         $this->externalXref = $externalXref;
         $this->integrationType = $integrationType;
+        $this->isBillable = $isBillable;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
         $this->sort = $sort;
+        $this->type = $type;
         $this->updatedGte = $updatedGte;
+        $this->webhookId = $webhookId;
     }
 }
