@@ -27,21 +27,19 @@ class KmsPageMetadata
     public ?string $type = null;
 
     /**
-     * $value
      *
-     * @var ?array<string, mixed> $value
+     * @var ?string $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $value = null;
+    public ?string $value = null;
 
     /**
      * @param  string  $name
      * @param  ?string  $type
-     * @param  ?array<string, mixed>  $value
+     * @param  ?string  $value
      */
-    public function __construct(string $name, ?string $type = null, ?array $value = null)
+    public function __construct(string $name, ?string $type = null, ?string $value = null)
     {
         $this->name = $name;
         $this->type = $type;
