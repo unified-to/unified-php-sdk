@@ -70,6 +70,16 @@ class RepoOrganization
     public ?\DateTime $updatedAt = null;
 
     /**
+     * id values of the users/employees associated with this organization
+     *
+     * @var ?array<string> $userIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $userIds = null;
+
+    /**
      *
      * @var ?string $webUrl
      */
@@ -85,9 +95,10 @@ class RepoOrganization
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
+     * @param  ?array<string>  $userIds
      * @param  ?string  $webUrl
      */
-    public function __construct(?string $avatarUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?string $avatarUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?string $webUrl = null)
     {
         $this->avatarUrl = $avatarUrl;
         $this->createdAt = $createdAt;
@@ -96,6 +107,7 @@ class RepoOrganization
         $this->name = $name;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;
+        $this->userIds = $userIds;
         $this->webUrl = $webUrl;
     }
 }

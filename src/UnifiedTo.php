@@ -100,6 +100,8 @@ class UnifiedTo
 
     public Kms $kms;
 
+    public Comment $comment;
+
     public Page $page;
 
     public Space $space;
@@ -159,8 +161,6 @@ class UnifiedTo
     public File $file;
 
     public Task $task;
-
-    public Comment $comment;
 
     public Project $project;
 
@@ -248,6 +248,7 @@ class UnifiedTo
         $this->payslip = new Payslip($this->sdkConfiguration);
         $this->timeoff = new Timeoff($this->sdkConfiguration);
         $this->kms = new Kms($this->sdkConfiguration);
+        $this->comment = new Comment($this->sdkConfiguration);
         $this->page = new Page($this->sdkConfiguration);
         $this->space = new Space($this->sdkConfiguration);
         $this->lms = new Lms($this->sdkConfiguration);
@@ -278,7 +279,6 @@ class UnifiedTo
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);
-        $this->comment = new Comment($this->sdkConfiguration);
         $this->project = new Project($this->sdkConfiguration);
         $this->ticketing = new Ticketing($this->sdkConfiguration);
         $this->customer = new Customer($this->sdkConfiguration);

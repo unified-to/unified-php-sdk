@@ -277,11 +277,17 @@ if ($response->accountingAccount !== null) {
 
 ### [comment](docs/sdks/comment/README.md)
 
+* [createKmsComment](docs/sdks/comment/README.md#createkmscomment) - Create a comment
 * [createTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
+* [getKmsComment](docs/sdks/comment/README.md#getkmscomment) - Retrieve a comment
 * [getTaskComment](docs/sdks/comment/README.md#gettaskcomment) - Retrieve a comment
+* [listKmsComments](docs/sdks/comment/README.md#listkmscomments) - List all comments
 * [listTaskComments](docs/sdks/comment/README.md#listtaskcomments) - List all comments
+* [patchKmsComment](docs/sdks/comment/README.md#patchkmscomment) - Update a comment
 * [patchTaskComment](docs/sdks/comment/README.md#patchtaskcomment) - Update a comment
+* [removeKmsComment](docs/sdks/comment/README.md#removekmscomment) - Remove a comment
 * [removeTaskComment](docs/sdks/comment/README.md#removetaskcomment) - Remove a comment
+* [updateKmsComment](docs/sdks/comment/README.md#updatekmscomment) - Update a comment
 * [updateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
 
 ### [commerce](docs/sdks/commerce/README.md)
@@ -601,16 +607,22 @@ if ($response->accountingAccount !== null) {
 
 ### [kms](docs/sdks/kms/README.md)
 
+* [createKmsComment](docs/sdks/kms/README.md#createkmscomment) - Create a comment
 * [createKmsPage](docs/sdks/kms/README.md#createkmspage) - Create a page
 * [createKmsSpace](docs/sdks/kms/README.md#createkmsspace) - Create a space
+* [getKmsComment](docs/sdks/kms/README.md#getkmscomment) - Retrieve a comment
 * [getKmsPage](docs/sdks/kms/README.md#getkmspage) - Retrieve a page
 * [getKmsSpace](docs/sdks/kms/README.md#getkmsspace) - Retrieve a space
+* [listKmsComments](docs/sdks/kms/README.md#listkmscomments) - List all comments
 * [listKmsPages](docs/sdks/kms/README.md#listkmspages) - List all pages
 * [listKmsSpaces](docs/sdks/kms/README.md#listkmsspaces) - List all spaces
+* [patchKmsComment](docs/sdks/kms/README.md#patchkmscomment) - Update a comment
 * [patchKmsPage](docs/sdks/kms/README.md#patchkmspage) - Update a page
 * [patchKmsSpace](docs/sdks/kms/README.md#patchkmsspace) - Update a space
+* [removeKmsComment](docs/sdks/kms/README.md#removekmscomment) - Remove a comment
 * [removeKmsPage](docs/sdks/kms/README.md#removekmspage) - Remove a page
 * [removeKmsSpace](docs/sdks/kms/README.md#removekmsspace) - Remove a space
+* [updateKmsComment](docs/sdks/kms/README.md#updatekmscomment) - Update a comment
 * [updateKmsPage](docs/sdks/kms/README.md#updatekmspage) - Update a page
 * [updateKmsSpace](docs/sdks/kms/README.md#updatekmsspace) - Update a space
 

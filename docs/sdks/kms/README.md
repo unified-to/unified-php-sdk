@@ -5,18 +5,73 @@
 
 ### Available Operations
 
+* [createKmsComment](#createkmscomment) - Create a comment
 * [createKmsPage](#createkmspage) - Create a page
 * [createKmsSpace](#createkmsspace) - Create a space
+* [getKmsComment](#getkmscomment) - Retrieve a comment
 * [getKmsPage](#getkmspage) - Retrieve a page
 * [getKmsSpace](#getkmsspace) - Retrieve a space
+* [listKmsComments](#listkmscomments) - List all comments
 * [listKmsPages](#listkmspages) - List all pages
 * [listKmsSpaces](#listkmsspaces) - List all spaces
+* [patchKmsComment](#patchkmscomment) - Update a comment
 * [patchKmsPage](#patchkmspage) - Update a page
 * [patchKmsSpace](#patchkmsspace) - Update a space
+* [removeKmsComment](#removekmscomment) - Remove a comment
 * [removeKmsPage](#removekmspage) - Remove a page
 * [removeKmsSpace](#removekmsspace) - Remove a space
+* [updateKmsComment](#updatekmscomment) - Update a comment
 * [updateKmsPage](#updatekmspage) - Update a page
 * [updateKmsSpace](#updatekmsspace) - Update a space
+
+## createKmsComment
+
+Create a comment
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateKmsCommentRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->kms->createKmsComment(
+    request: $request
+);
+
+if ($response->kmsComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\CreateKmsCommentRequest](../../Models/Operations/CreateKmsCommentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\CreateKmsCommentResponse](../../Models/Operations/CreateKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createKmsPage
 
@@ -109,6 +164,56 @@ if ($response->kmsSpace !== null) {
 ### Response
 
 **[?Operations\CreateKmsSpaceResponse](../../Models/Operations/CreateKmsSpaceResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getKmsComment
+
+Retrieve a comment
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetKmsCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->getKmsComment(
+    request: $request
+);
+
+if ($response->kmsComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetKmsCommentRequest](../../Models/Operations/GetKmsCommentRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\GetKmsCommentResponse](../../Models/Operations/GetKmsCommentResponse.md)**
 
 ### Errors
 
@@ -216,6 +321,55 @@ if ($response->kmsSpace !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listKmsComments
+
+List all comments
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListKmsCommentsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->kms->listKmsComments(
+    request: $request
+);
+
+if ($response->kmsComments !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListKmsCommentsRequest](../../Models/Operations/ListKmsCommentsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\ListKmsCommentsResponse](../../Models/Operations/ListKmsCommentsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listKmsPages
 
 List all pages
@@ -307,6 +461,56 @@ if ($response->kmsSpaces !== null) {
 ### Response
 
 **[?Operations\ListKmsSpacesResponse](../../Models/Operations/ListKmsSpacesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchKmsComment
+
+Update a comment
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchKmsCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->patchKmsComment(
+    request: $request
+);
+
+if ($response->kmsComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\PatchKmsCommentRequest](../../Models/Operations/PatchKmsCommentRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\PatchKmsCommentResponse](../../Models/Operations/PatchKmsCommentResponse.md)**
 
 ### Errors
 
@@ -414,6 +618,56 @@ if ($response->kmsSpace !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeKmsComment
+
+Remove a comment
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveKmsCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->removeKmsComment(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\RemoveKmsCommentRequest](../../Models/Operations/RemoveKmsCommentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\RemoveKmsCommentResponse](../../Models/Operations/RemoveKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeKmsPage
 
 Remove a page
@@ -507,6 +761,56 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveKmsSpaceResponse](../../Models/Operations/RemoveKmsSpaceResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateKmsComment
+
+Update a comment
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateKmsCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->updateKmsComment(
+    request: $request
+);
+
+if ($response->kmsComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\UpdateKmsCommentRequest](../../Models/Operations/UpdateKmsCommentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\UpdateKmsCommentResponse](../../Models/Operations/UpdateKmsCommentResponse.md)**
 
 ### Errors
 
