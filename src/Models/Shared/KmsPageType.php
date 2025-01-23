@@ -14,4 +14,5 @@ enum KmsPageType: string
     case Html = 'HTML';
     case Markdown = 'MARKDOWN';
     case Text = 'TEXT';
+    case Other = 'OTHER';
 }

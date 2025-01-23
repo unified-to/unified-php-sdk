@@ -13,13 +13,6 @@ class KmsPage
 {
     /**
      *
-     * @var string $downloadUrl
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('download_url')]
-    public string $downloadUrl;
-
-    /**
-     *
      * @var string $title
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
@@ -40,6 +33,14 @@ class KmsPage
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?string $downloadUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('download_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $downloadUrl = null;
 
     /**
      *
@@ -126,10 +127,10 @@ class KmsPage
     public ?string $webUrl = null;
 
     /**
-     * @param  string  $downloadUrl
      * @param  string  $title
      * @param  KmsPageType  $type
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $downloadUrl
      * @param  ?bool  $hasChildren
      * @param  ?string  $id
      * @param  ?bool  $isActive
@@ -141,12 +142,12 @@ class KmsPage
      * @param  ?string  $userId
      * @param  ?string  $webUrl
      */
-    public function __construct(string $downloadUrl, string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
+    public function __construct(string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?string $downloadUrl = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {
-        $this->downloadUrl = $downloadUrl;
         $this->title = $title;
         $this->type = $type;
         $this->createdAt = $createdAt;
+        $this->downloadUrl = $downloadUrl;
         $this->hasChildren = $hasChildren;
         $this->id = $id;
         $this->isActive = $isActive;
