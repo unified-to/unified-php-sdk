@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 201637bb4fc843138eba316a282cdc6d
+  docChecksum: 0348382e89126471fa3b06fe46a31486
   docVersion: "1.0"
-  speakeasyVersion: 1.470.1
-  generationVersion: 2.493.34
-  releaseVersion: 1.1.28
-  configChecksum: f46cf9f3d13d9aed17384b5357abeefe
+  speakeasyVersion: 1.474.0
+  generationVersion: 2.495.0
+  releaseVersion: 1.1.29
+  configChecksum: bd155723ddb2fe4d7d0e4cd068229150
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.7.9
+    core: 3.7.10
     globalSecurity: 2.81.7
     globalSecurityFlattening: 0.1.1
     globalServerURLs: 2.82.1
@@ -966,7 +966,6 @@ generatedFiles:
   - docs/Models/Shared/ListQuery.md
   - docs/Models/Shared/ListRawFields.md
   - docs/Models/Shared/ListRepoId.md
-  - docs/Models/Shared/ListRootId.md
   - docs/Models/Shared/ListSortByCreatedAt.md
   - docs/Models/Shared/ListSortByName.md
   - docs/Models/Shared/ListSortByUpdatedAt.md
@@ -2247,7 +2246,6 @@ generatedFiles:
   - src/Models/Shared/ListQuery.php
   - src/Models/Shared/ListRawFields.php
   - src/Models/Shared/ListRepoId.php
-  - src/Models/Shared/ListRootId.php
   - src/Models/Shared/ListSortByCreatedAt.php
   - src/Models/Shared/ListSortByName.php
   - src/Models/Shared/ListSortByUpdatedAt.php
