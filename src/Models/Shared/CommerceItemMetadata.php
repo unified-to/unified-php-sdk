@@ -19,14 +19,13 @@ class CommerceItemMetadata
     public string $key;
 
     /**
-     * $extraData
      *
-     * @var ?array<string, mixed> $extraData
+     * @var ?ExtraData $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ExtraData|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $extraData = null;
+    public ?ExtraData $extraData = null;
 
     /**
      *
@@ -53,24 +52,23 @@ class CommerceItemMetadata
     public ?string $type = null;
 
     /**
-     * $value
      *
-     * @var ?array<string, mixed> $value
+     * @var ?Value $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Value|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $value = null;
+    public ?Value $value = null;
 
     /**
      * @param  string  $key
-     * @param  ?array<string, mixed>  $extraData
+     * @param  ?ExtraData  $extraData
      * @param  ?string  $id
      * @param  ?string  $namespace
      * @param  ?string  $type
-     * @param  ?array<string, mixed>  $value
+     * @param  ?Value  $value
      */
-    public function __construct(string $key, ?array $extraData = null, ?string $id = null, ?string $namespace = null, ?string $type = null, ?array $value = null)
+    public function __construct(string $key, ?ExtraData $extraData = null, ?string $id = null, ?string $namespace = null, ?string $type = null, ?Value $value = null)
     {
         $this->key = $key;
         $this->extraData = $extraData;

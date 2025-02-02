@@ -114,14 +114,13 @@ class CommerceItem
     public ?string $publicName = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?CommerceItemRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?CommerceItemRaw $raw = null;
 
     /**
      *
@@ -188,7 +187,7 @@ class CommerceItem
      * @param  ?string  $name
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?CommerceItemRaw  $raw
      * @param  ?string  $slug
      * @param  ?array<string>  $tags
      * @param  ?string  $type
@@ -196,7 +195,7 @@ class CommerceItem
      * @param  ?array<CommerceItemVariant>  $variants
      * @param  ?string  $vendorName
      */
-    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
+    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?CommerceItemRaw $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
     {
         $this->accountId = $accountId;
         $this->collectionIds = $collectionIds;

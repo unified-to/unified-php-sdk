@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0348382e89126471fa3b06fe46a31486
+  docChecksum: 00e71c38f182c4bad7a19b0c7bb3e211
   docVersion: "1.0"
-  speakeasyVersion: 1.474.0
-  generationVersion: 2.495.0
-  releaseVersion: 1.1.29
-  configChecksum: bd155723ddb2fe4d7d0e4cd068229150
+  speakeasyVersion: 1.481.1
+  generationVersion: 2.500.5
+  releaseVersion: 1.1.30
+  configChecksum: 5a5e6176b1b8f364b727e088ae581347
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.7.10
+    core: 3.7.13
     globalSecurity: 2.81.7
     globalSecurityFlattening: 0.1.1
     globalServerURLs: 2.82.1
@@ -863,14 +863,17 @@ generatedFiles:
   - docs/Models/Shared/CommerceCollection.md
   - docs/Models/Shared/CommerceCollectionType.md
   - docs/Models/Shared/CommerceInventory.md
+  - docs/Models/Shared/CommerceInventoryRaw.md
   - docs/Models/Shared/CommerceItem.md
   - docs/Models/Shared/CommerceItemMedia.md
   - docs/Models/Shared/CommerceItemMediaType.md
   - docs/Models/Shared/CommerceItemMetadata.md
   - docs/Models/Shared/CommerceItemOption.md
   - docs/Models/Shared/CommerceItemPrice.md
+  - docs/Models/Shared/CommerceItemRaw.md
   - docs/Models/Shared/CommerceItemVariant.md
   - docs/Models/Shared/CommerceLocation.md
+  - docs/Models/Shared/CommerceLocationRaw.md
   - docs/Models/Shared/Connection.md
   - docs/Models/Shared/ContentType.md
   - docs/Models/Shared/CrmCompany.md
@@ -899,6 +902,7 @@ generatedFiles:
   - docs/Models/Shared/EnrichTelephoneType.md
   - docs/Models/Shared/Ethnicity.md
   - docs/Models/Shared/Event.md
+  - docs/Models/Shared/ExtraData.md
   - docs/Models/Shared/Frequency.md
   - docs/Models/Shared/FromWebhook.md
   - docs/Models/Shared/GenaiContent.md
@@ -1067,6 +1071,7 @@ generatedFiles:
   - docs/Models/Shared/PropertyStoragePermissionRoles.md
   - docs/Models/Shared/PropertyUcCallTelephone.md
   - docs/Models/Shared/PropertyUcCallTelephoneType.md
+  - docs/Models/Shared/Raw.md
   - docs/Models/Shared/Recommendation.md
   - docs/Models/Shared/RepoBranch.md
   - docs/Models/Shared/RepoCommit.md
@@ -1128,6 +1133,7 @@ generatedFiles:
   - docs/Models/Shared/UcEmailType.md
   - docs/Models/Shared/UcTelephone.md
   - docs/Models/Shared/UcTelephoneType.md
+  - docs/Models/Shared/Value.md
   - docs/Models/Shared/VirtualWebhookChannelId.md
   - docs/Models/Shared/VirtualWebhookCompanyId.md
   - docs/Models/Shared/VirtualWebhookContactId.md
@@ -2143,14 +2149,17 @@ generatedFiles:
   - src/Models/Shared/CommerceCollection.php
   - src/Models/Shared/CommerceCollectionType.php
   - src/Models/Shared/CommerceInventory.php
+  - src/Models/Shared/CommerceInventoryRaw.php
   - src/Models/Shared/CommerceItem.php
   - src/Models/Shared/CommerceItemMedia.php
   - src/Models/Shared/CommerceItemMediaType.php
   - src/Models/Shared/CommerceItemMetadata.php
   - src/Models/Shared/CommerceItemOption.php
   - src/Models/Shared/CommerceItemPrice.php
+  - src/Models/Shared/CommerceItemRaw.php
   - src/Models/Shared/CommerceItemVariant.php
   - src/Models/Shared/CommerceLocation.php
+  - src/Models/Shared/CommerceLocationRaw.php
   - src/Models/Shared/Connection.php
   - src/Models/Shared/ContentType.php
   - src/Models/Shared/CrmCompany.php
@@ -2179,6 +2188,7 @@ generatedFiles:
   - src/Models/Shared/EnrichTelephoneType.php
   - src/Models/Shared/Ethnicity.php
   - src/Models/Shared/Event.php
+  - src/Models/Shared/ExtraData.php
   - src/Models/Shared/Frequency.php
   - src/Models/Shared/FromWebhook.php
   - src/Models/Shared/GenaiContent.php
@@ -2347,6 +2357,7 @@ generatedFiles:
   - src/Models/Shared/PropertyStoragePermissionRoles.php
   - src/Models/Shared/PropertyUcCallTelephone.php
   - src/Models/Shared/PropertyUcCallTelephoneType.php
+  - src/Models/Shared/Raw.php
   - src/Models/Shared/Recommendation.php
   - src/Models/Shared/RepoBranch.php
   - src/Models/Shared/RepoCommit.php
@@ -2408,6 +2419,7 @@ generatedFiles:
   - src/Models/Shared/UcEmailType.php
   - src/Models/Shared/UcTelephone.php
   - src/Models/Shared/UcTelephoneType.php
+  - src/Models/Shared/Value.php
   - src/Models/Shared/VirtualWebhookChannelId.php
   - src/Models/Shared/VirtualWebhookCompanyId.php
   - src/Models/Shared/VirtualWebhookContactId.php
