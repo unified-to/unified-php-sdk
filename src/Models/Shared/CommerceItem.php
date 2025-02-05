@@ -194,6 +194,7 @@ class CommerceItem
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<CommerceItemVariant>  $variants
      * @param  ?string  $vendorName
+     * @phpstan-pure
      */
     public function __construct(?string $accountId = null, ?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?CommerceItemRaw $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
     {

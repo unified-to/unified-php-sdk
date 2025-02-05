@@ -48,6 +48,7 @@ class PatchAtsScorecardRequest
      * @param  string  $id
      * @param  ?Shared\AtsScorecard  $atsScorecard
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AtsScorecard $atsScorecard = null, ?array $fields = null)
     {

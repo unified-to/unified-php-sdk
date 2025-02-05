@@ -30,6 +30,7 @@ class CrmEventFormOption
     /**
      * @param  ?string  $label
      * @param  ?string  $value
+     * @phpstan-pure
      */
     public function __construct(?string $label = null, ?string $value = null)
     {

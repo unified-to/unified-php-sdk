@@ -124,6 +124,7 @@ class ListUnifiedApicallsRequest
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $webhookId
+     * @phpstan-pure
      */
     public function __construct(?string $connectionId = null, ?string $env = null, ?bool $error = null, ?string $externalXref = null, ?string $integrationType = null, ?bool $isBillable = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $webhookId = null)
     {

@@ -48,6 +48,7 @@ class PatchStorageFileRequest
      * @param  string  $id
      * @param  ?Shared\StorageFile  $storageFile
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\StorageFile $storageFile = null, ?array $fields = null)
     {

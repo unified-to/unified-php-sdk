@@ -44,6 +44,7 @@ class ListAccountingContactsResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?array<Shared\AccountingContact>  $accountingContacts
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $accountingContacts = null)
     {

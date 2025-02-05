@@ -84,6 +84,7 @@ class RepoCommit
      * @param  ?string  $message
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(string $repoId, string $userId, ?string $branchId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $message = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {

@@ -49,6 +49,7 @@ class UpdateUcContactRequest
      * @param  string  $id
      * @param  ?Shared\UcContact  $ucContact
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\UcContact $ucContact = null, ?array $fields = null)
     {

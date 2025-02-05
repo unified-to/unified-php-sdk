@@ -195,6 +195,7 @@ class AtsActivity
      * @param  ?AtsActivityType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
+     * @phpstan-pure
      */
     public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {

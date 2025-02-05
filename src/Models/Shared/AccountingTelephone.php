@@ -31,6 +31,7 @@ class AccountingTelephone
     /**
      * @param  ?string  $telephone
      * @param  ?AccountingTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(?string $telephone = null, ?AccountingTelephoneType $type = null)
     {

@@ -44,6 +44,7 @@ class ListRepoPullrequestsResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?array<Shared\RepoPullrequest>  $repoPullrequests
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $repoPullrequests = null)
     {

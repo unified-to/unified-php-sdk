@@ -49,6 +49,7 @@ class PropertyCrmEventMeeting
      * @param  ?\DateTime  $endAt
      * @param  ?\DateTime  $startAt
      * @param  ?string  $title
+     * @phpstan-pure
      */
     public function __construct(?string $description = null, ?\DateTime $endAt = null, ?\DateTime $startAt = null, ?string $title = null)
     {

@@ -48,6 +48,7 @@ class PatchAccountingTaxrateRequest
      * @param  string  $id
      * @param  ?Shared\AccountingTaxrate  $accountingTaxrate
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AccountingTaxrate $accountingTaxrate = null, ?array $fields = null)
     {

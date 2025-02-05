@@ -262,6 +262,7 @@ class EnrichCompany
      * @param  ?float  $yearFounded
      * @param  ?string  $yelpUrl
      * @param  ?string  $youtubeUrl
+     * @phpstan-pure
      */
     public function __construct(?PropertyEnrichCompanyAddress $address = null, ?float $alexaRank = null, ?\DateTime $createdAt = null, ?string $crunchbaseUrl = null, ?string $description = null, ?string $domain = null, ?string $employees = null, ?string $exchange = null, ?string $facebookUrl = null, ?string $id = null, ?string $industry = null, ?string $instagramUrl = null, ?string $linkedinUrl = null, ?string $logoUrl = null, ?float $naicsCode = null, ?string $name = null, ?array $raw = null, ?string $revenue = null, ?float $sicCode = null, ?string $stock = null, ?array $telephones = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $yearFounded = null, ?string $yelpUrl = null, ?string $youtubeUrl = null)
     {

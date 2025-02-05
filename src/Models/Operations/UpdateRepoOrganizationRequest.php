@@ -48,6 +48,7 @@ class UpdateRepoOrganizationRequest
      * @param  string  $id
      * @param  ?Shared\RepoOrganization  $repoOrganization
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\RepoOrganization $repoOrganization = null, ?array $fields = null)
     {

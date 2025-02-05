@@ -76,6 +76,7 @@ class ScimAddress
      * @param  ?string  $region
      * @param  ?string  $streetAddress
      * @param  ?ScimAddressType  $type
+     * @phpstan-pure
      */
     public function __construct(?string $country = null, ?string $formatted = null, ?string $locality = null, ?string $postalCode = null, ?string $region = null, ?string $streetAddress = null, ?ScimAddressType $type = null)
     {

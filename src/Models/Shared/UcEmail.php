@@ -30,6 +30,7 @@ class UcEmail
     /**
      * @param  string  $email
      * @param  ?UcEmailType  $type
+     * @phpstan-pure
      */
     public function __construct(string $email, ?UcEmailType $type = null)
     {

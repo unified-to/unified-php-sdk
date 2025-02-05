@@ -48,6 +48,7 @@ class UpdateAccountingJournalRequest
      * @param  string  $id
      * @param  ?Shared\AccountingJournal  $accountingJournal
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AccountingJournal $accountingJournal = null, ?array $fields = null)
     {

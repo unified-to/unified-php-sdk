@@ -81,6 +81,7 @@ class PropertyCrmEventMarketingEmail
      * @param  ?string  $name
      * @param  ?string  $subject
      * @param  ?array<string>  $to
+     * @phpstan-pure
      */
     public function __construct(?array $attachmentFileIds = null, ?string $body = null, ?array $cc = null, ?string $from = null, ?string $name = null, ?string $subject = null, ?array $to = null)
     {

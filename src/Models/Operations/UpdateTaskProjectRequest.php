@@ -48,6 +48,7 @@ class UpdateTaskProjectRequest
      * @param  string  $id
      * @param  ?Shared\TaskProject  $taskProject
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\TaskProject $taskProject = null, ?array $fields = null)
     {

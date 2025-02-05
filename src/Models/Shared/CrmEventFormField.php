@@ -51,6 +51,7 @@ class CrmEventFormField
      * @param  ?array<CrmEventFormOption>  $options
      * @param  ?bool  $required
      * @param  ?CrmEventFormFieldType  $type
+     * @phpstan-pure
      */
     public function __construct(?string $name = null, ?array $options = null, ?bool $required = null, ?CrmEventFormFieldType $type = null)
     {

@@ -44,6 +44,7 @@ class ListPaymentLinksResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?array<Shared\PaymentLink>  $paymentLinks
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $paymentLinks = null)
     {

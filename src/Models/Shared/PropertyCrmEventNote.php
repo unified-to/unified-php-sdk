@@ -31,6 +31,7 @@ class PropertyCrmEventNote
     /**
      * @param  ?string  $description
      * @param  ?string  $title
+     * @phpstan-pure
      */
     public function __construct(?string $description = null, ?string $title = null)
     {

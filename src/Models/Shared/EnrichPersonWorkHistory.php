@@ -74,6 +74,7 @@ class EnrichPersonWorkHistory
      * @param  ?\DateTime  $endAt
      * @param  ?string  $location
      * @param  ?\DateTime  $startAt
+     * @phpstan-pure
      */
     public function __construct(string $title, ?string $companyDomain = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $endAt = null, ?string $location = null, ?\DateTime $startAt = null)
     {

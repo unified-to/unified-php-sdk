@@ -78,6 +78,7 @@ class HrisCompany
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?PropertyHrisCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $legalName = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {

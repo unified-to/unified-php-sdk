@@ -39,6 +39,7 @@ class CreateAtsScorecardRequest
      * @param  string  $connectionId
      * @param  ?Shared\AtsScorecard  $atsScorecard
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\AtsScorecard $atsScorecard = null, ?array $fields = null)
     {

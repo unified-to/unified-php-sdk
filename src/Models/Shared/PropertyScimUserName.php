@@ -66,6 +66,7 @@ class PropertyScimUserName
      * @param  ?string  $honorificPrefix
      * @param  ?string  $honorificSuffix
      * @param  ?string  $middleName
+     * @phpstan-pure
      */
     public function __construct(?string $familyName = null, ?string $formatted = null, ?string $givenName = null, ?string $honorificPrefix = null, ?string $honorificSuffix = null, ?string $middleName = null)
     {

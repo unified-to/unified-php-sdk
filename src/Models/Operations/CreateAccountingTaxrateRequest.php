@@ -39,6 +39,7 @@ class CreateAccountingTaxrateRequest
      * @param  string  $connectionId
      * @param  ?Shared\AccountingTaxrate  $accountingTaxrate
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\AccountingTaxrate $accountingTaxrate = null, ?array $fields = null)
     {

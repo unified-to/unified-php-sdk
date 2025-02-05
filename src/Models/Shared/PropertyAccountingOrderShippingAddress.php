@@ -84,6 +84,7 @@ class PropertyAccountingOrderShippingAddress
      * @param  ?string  $postalCode
      * @param  ?string  $region
      * @param  ?string  $regionCode
+     * @phpstan-pure
      */
     public function __construct(?string $address1 = null, ?string $address2 = null, ?string $city = null, ?string $country = null, ?string $countryCode = null, ?string $postalCode = null, ?string $region = null, ?string $regionCode = null)
     {

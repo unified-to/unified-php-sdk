@@ -44,6 +44,7 @@ class UpdatePaymentPaymentResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?Shared\PaymentPayment  $paymentPayment
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\PaymentPayment $paymentPayment = null)
     {

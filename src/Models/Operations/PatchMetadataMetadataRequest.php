@@ -48,6 +48,7 @@ class PatchMetadataMetadataRequest
      * @param  string  $id
      * @param  ?Shared\MetadataMetadata  $metadataMetadata
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\MetadataMetadata $metadataMetadata = null, ?array $fields = null)
     {

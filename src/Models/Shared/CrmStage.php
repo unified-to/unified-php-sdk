@@ -75,6 +75,7 @@ class CrmStage
      * @param  ?string  $id
      * @param  ?string  $name
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?bool $active = null, ?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?string $name = null, ?\DateTime $updatedAt = null)
     {

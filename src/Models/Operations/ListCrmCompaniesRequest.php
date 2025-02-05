@@ -104,6 +104,7 @@ class ListCrmCompaniesRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {

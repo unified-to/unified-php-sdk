@@ -48,6 +48,7 @@ class PatchAccountingInvoiceRequest
      * @param  string  $id
      * @param  ?Shared\AccountingInvoice  $accountingInvoice
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AccountingInvoice $accountingInvoice = null, ?array $fields = null)
     {

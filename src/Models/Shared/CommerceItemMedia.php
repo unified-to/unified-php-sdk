@@ -86,6 +86,7 @@ class CommerceItemMedia
      * @param  ?float  $position
      * @param  ?CommerceItemMediaType  $type
      * @param  ?float  $width
+     * @phpstan-pure
      */
     public function __construct(string $url, ?string $alt = null, ?float $height = null, ?string $id = null, ?array $metadata = null, ?float $position = null, ?CommerceItemMediaType $type = null, ?float $width = null)
     {

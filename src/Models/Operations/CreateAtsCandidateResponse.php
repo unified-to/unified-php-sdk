@@ -44,6 +44,7 @@ class CreateAtsCandidateResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?Shared\AtsCandidate  $atsCandidate
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AtsCandidate $atsCandidate = null)
     {

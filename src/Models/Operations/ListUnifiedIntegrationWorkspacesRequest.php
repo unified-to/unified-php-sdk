@@ -79,6 +79,7 @@ class ListUnifiedIntegrationWorkspacesRequest
      * @param  ?float  $offset
      * @param  ?bool  $summary
      * @param  ?string  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(string $workspaceId, ?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?float $offset = null, ?bool $summary = null, ?string $updatedGte = null)
     {

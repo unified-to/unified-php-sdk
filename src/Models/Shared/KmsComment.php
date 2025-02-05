@@ -105,6 +105,7 @@ class KmsComment
      * @param  ?KmsCommentType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(string $content, ?ContentType $contentType = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $pageId = null, ?string $parentId = null, ?array $raw = null, ?KmsCommentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {

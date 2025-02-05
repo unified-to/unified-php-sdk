@@ -44,6 +44,7 @@ class UpdateMetadataMetadataResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?Shared\MetadataMetadata  $metadataMetadata
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\MetadataMetadata $metadataMetadata = null)
     {

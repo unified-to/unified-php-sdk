@@ -30,6 +30,7 @@ class GenaiContent
     /**
      * @param  string  $content
      * @param  ?Role  $role
+     * @phpstan-pure
      */
     public function __construct(string $content, ?Role $role = null)
     {

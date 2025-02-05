@@ -31,6 +31,7 @@ class PropertyUcCallTelephone
     /**
      * @param  string  $telephone
      * @param  ?PropertyUcCallTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(string $telephone, ?PropertyUcCallTelephoneType $type = null)
     {

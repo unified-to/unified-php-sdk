@@ -38,6 +38,7 @@ class AtsScorecardQuestion
      * @param  string  $text
      * @param  ?string  $answer
      * @param  ?string  $description
+     * @phpstan-pure
      */
     public function __construct(string $text, ?string $answer = null, ?string $description = null)
     {

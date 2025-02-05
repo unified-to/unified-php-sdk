@@ -49,6 +49,7 @@ class PatchCrmContactRequest
      * @param  string  $id
      * @param  ?Shared\CrmContact  $crmContact
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\CrmContact $crmContact = null, ?array $fields = null)
     {

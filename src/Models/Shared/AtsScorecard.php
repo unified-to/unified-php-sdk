@@ -125,6 +125,7 @@ class AtsScorecard
      * @param  ?array<string, mixed>  $raw
      * @param  ?Recommendation  $recommendation
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?string $applicationId = null, ?string $candidateId = null, ?string $comment = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $interviewId = null, ?string $interviewerId = null, ?string $jobId = null, ?array $questions = null, ?array $raw = null, ?Recommendation $recommendation = null, ?\DateTime $updatedAt = null)
     {

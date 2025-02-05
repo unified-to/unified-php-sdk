@@ -39,6 +39,7 @@ class CreateRepoPullrequestRequest
      * @param  string  $connectionId
      * @param  ?Shared\RepoPullrequest  $repoPullrequest
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\RepoPullrequest $repoPullrequest = null, ?array $fields = null)
     {

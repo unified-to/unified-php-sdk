@@ -44,6 +44,7 @@ class ListTicketingTicketsResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?array<Shared\TicketingTicket>  $ticketingTickets
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $ticketingTickets = null)
     {

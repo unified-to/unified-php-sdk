@@ -30,6 +30,7 @@ class UcTelephone
     /**
      * @param  string  $telephone
      * @param  ?UcTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(string $telephone, ?UcTelephoneType $type = null)
     {

@@ -44,6 +44,7 @@ class ListEnrichPeopleResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?Shared\EnrichPerson  $enrichPerson
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\EnrichPerson $enrichPerson = null)
     {

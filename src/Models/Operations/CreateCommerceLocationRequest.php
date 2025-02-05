@@ -39,6 +39,7 @@ class CreateCommerceLocationRequest
      * @param  string  $connectionId
      * @param  ?Shared\CommerceLocation  $commerceLocation
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\CommerceLocation $commerceLocation = null, ?array $fields = null)
     {

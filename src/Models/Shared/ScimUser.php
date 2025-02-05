@@ -290,6 +290,7 @@ class ScimUser
      * @param  ?string  $userName
      * @param  ?string  $userType
      * @param  ?array<ScimRole>  $x509Certificates
+     * @phpstan-pure
      */
     public function __construct(?bool $active = null, ?array $addresses = null, ?string $displayName = null, ?array $emails = null, ?array $entitlements = null, ?string $externalId = null, ?array $groups = null, ?string $id = null, ?array $ims = null, ?string $locale = null, ?PropertyScimUserMeta $meta = null, ?PropertyScimUserName $name = null, ?string $nickName = null, ?string $password = null, ?array $phoneNumbers = null, ?array $photos = null, ?string $preferredLanguage = null, ?string $profileUrl = null, ?array $roles = null, ?array $schemas = null, ?string $timezone = null, ?string $title = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User $urnIetfParamsScimSchemasExtensionEnterprise20User = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User $urnIetfParamsScimSchemasExtensionLatticeAttributes10User = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User $urnIetfParamsScimSchemasExtensionPeakon20User = null, ?string $userName = null, ?string $userType = null, ?array $x509Certificates = null)
     {

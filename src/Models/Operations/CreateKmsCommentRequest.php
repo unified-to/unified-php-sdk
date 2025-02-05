@@ -39,6 +39,7 @@ class CreateKmsCommentRequest
      * @param  string  $connectionId
      * @param  ?Shared\KmsComment  $kmsComment
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\KmsComment $kmsComment = null, ?array $fields = null)
     {

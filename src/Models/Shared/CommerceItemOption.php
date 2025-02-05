@@ -48,6 +48,7 @@ class CommerceItemOption
      * @param  array<string>  $values
      * @param  ?string  $id
      * @param  ?float  $position
+     * @phpstan-pure
      */
     public function __construct(string $name, array $values, ?string $id = null, ?float $position = null)
     {

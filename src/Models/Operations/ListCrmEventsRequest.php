@@ -120,6 +120,7 @@ class ListCrmEventsRequest
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {

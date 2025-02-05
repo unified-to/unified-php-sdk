@@ -44,7 +44,7 @@ class UnifiedToBuilder
         $security = new Models\Shared\Security(
             jwt: $jwt
         );
-        $this->sdkConfig->security = $security;
+        $this->sdkConfig->securitySource = fn () => $security;
 
         return $this;
     }
@@ -58,7 +58,7 @@ class UnifiedToBuilder
      */
     public function setSecuritySource(\Closure $securitySource): UnifiedToBuilder
     {
-        $this->sdkConfig->securitySource = $securitySource;
+        $this->sdkConfig->securitySource = fn () => new Models\Shared\Security(jwt: $securitySource());
 
         return $this;
     }

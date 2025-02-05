@@ -127,6 +127,7 @@ class HrisGroup
      * @param  ?HrisGroupType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
+     * @phpstan-pure
      */
     public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $managerIds = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?HrisGroupType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {

@@ -39,6 +39,7 @@ class CreateAtsJobRequest
      * @param  string  $connectionId
      * @param  ?Shared\AtsJob  $atsJob
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\AtsJob $atsJob = null, ?array $fields = null)
     {

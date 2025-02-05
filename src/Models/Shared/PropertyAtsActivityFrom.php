@@ -39,6 +39,7 @@ class PropertyAtsActivityFrom
      * @param  string  $email
      * @param  ?string  $name
      * @param  ?PropertyAtsActivityFromType  $type
+     * @phpstan-pure
      */
     public function __construct(string $email, ?string $name = null, ?PropertyAtsActivityFromType $type = null)
     {

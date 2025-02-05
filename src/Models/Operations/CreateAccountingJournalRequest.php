@@ -39,6 +39,7 @@ class CreateAccountingJournalRequest
      * @param  string  $connectionId
      * @param  ?Shared\AccountingJournal  $accountingJournal
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\AccountingJournal $accountingJournal = null, ?array $fields = null)
     {

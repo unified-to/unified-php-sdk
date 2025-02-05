@@ -48,6 +48,7 @@ class PatchAccountingTransactionRequest
      * @param  string  $id
      * @param  ?Shared\AccountingTransaction  $accountingTransaction
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AccountingTransaction $accountingTransaction = null, ?array $fields = null)
     {

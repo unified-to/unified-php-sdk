@@ -48,6 +48,7 @@ class UpdateMessagingMessageRequest
      * @param  string  $id
      * @param  ?Shared\MessagingMessage  $messagingMessage
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\MessagingMessage $messagingMessage = null, ?array $fields = null)
     {

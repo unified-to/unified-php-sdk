@@ -48,6 +48,7 @@ class UpdateAccountingOrderRequest
      * @param  string  $id
      * @param  ?Shared\AccountingOrder  $accountingOrder
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AccountingOrder $accountingOrder = null, ?array $fields = null)
     {

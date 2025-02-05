@@ -134,6 +134,7 @@ class AtsInterview
      * @param  ?AtsInterviewStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
+     * @phpstan-pure
      */
     public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $externalEventXref = null, ?string $id = null, ?string $jobId = null, ?string $location = null, ?array $raw = null, ?\DateTime $startAt = null, ?AtsInterviewStatus $status = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {

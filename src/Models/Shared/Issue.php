@@ -119,6 +119,7 @@ class Issue
      * @param  ?array<string>  $type
      * @param  ?string  $updatedAt
      * @param  ?string  $url
+     * @phpstan-pure
      */
     public function __construct(IssueStatus $status, string $ticketRef, string $title, string $workspaceId, ?string $createdAt = null, ?string $id = null, ?float $importance = null, ?float $resolutionTime = null, ?float $size = null, ?array $type = null, ?string $updatedAt = null, ?string $url = null)
     {

@@ -79,6 +79,7 @@ class ListUnifiedIntegrationsRequest
      * @param  ?bool  $summary
      * @param  ?string  $type
      * @param  ?string  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?float $offset = null, ?bool $summary = null, ?string $type = null, ?string $updatedGte = null)
     {

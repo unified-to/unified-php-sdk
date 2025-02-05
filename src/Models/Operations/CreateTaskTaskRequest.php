@@ -39,6 +39,7 @@ class CreateTaskTaskRequest
      * @param  string  $connectionId
      * @param  ?Shared\TaskTask  $taskTask
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\TaskTask $taskTask = null, ?array $fields = null)
     {

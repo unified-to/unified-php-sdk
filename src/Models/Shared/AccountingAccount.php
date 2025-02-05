@@ -170,6 +170,7 @@ class AccountingAccount
      * @param  ?string  $subsection
      * @param  ?Type  $type
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentAccountId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {

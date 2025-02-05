@@ -119,6 +119,7 @@ class LmsClass
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $studentIds
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(string $courseId, string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?array $instructorIds = null, ?array $languages = null, ?array $media = null, ?array $raw = null, ?array $studentIds = null, ?\DateTime $updatedAt = null)
     {

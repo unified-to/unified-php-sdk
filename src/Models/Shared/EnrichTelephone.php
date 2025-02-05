@@ -30,6 +30,7 @@ class EnrichTelephone
     /**
      * @param  string  $telephone
      * @param  ?EnrichTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(string $telephone, ?EnrichTelephoneType $type = null)
     {

@@ -179,6 +179,7 @@ class CrmDeal
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $wonReason
+     * @phpstan-pure
      */
     public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
     {

@@ -40,6 +40,7 @@ class CreateCrmDealRequest
      * @param  string  $connectionId
      * @param  ?Shared\CrmDeal  $crmDeal
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\CrmDeal $crmDeal = null, ?array $fields = null)
     {

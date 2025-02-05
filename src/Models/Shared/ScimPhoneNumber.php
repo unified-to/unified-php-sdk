@@ -49,6 +49,7 @@ class ScimPhoneNumber
      * @param  ?bool  $primary
      * @param  ?ScimPhoneNumberType  $type
      * @param  ?string  $value
+     * @phpstan-pure
      */
     public function __construct(?string $display = null, ?bool $primary = null, ?ScimPhoneNumberType $type = null, ?string $value = null)
     {

@@ -39,6 +39,7 @@ class CreateGenaiPromptRequest
      * @param  string  $connectionId
      * @param  ?Shared\GenaiPrompt  $genaiPrompt
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\GenaiPrompt $genaiPrompt = null, ?array $fields = null)
     {

@@ -45,6 +45,7 @@ class PropertyIntegrationSupportWebhookEvents
      * @param  ?array<PropertyIntegrationSupportWebhookEventsCreated>  $created
      * @param  ?array<PropertyIntegrationSupportWebhookEventsDeleted>  $deleted
      * @param  ?array<PropertyIntegrationSupportWebhookEventsUpdated>  $updated
+     * @phpstan-pure
      */
     public function __construct(?array $created = null, ?array $deleted = null, ?array $updated = null)
     {

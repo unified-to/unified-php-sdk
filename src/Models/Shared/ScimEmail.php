@@ -48,6 +48,7 @@ class ScimEmail
      * @param  ?string  $display
      * @param  ?bool  $primary
      * @param  ?string  $value
+     * @phpstan-pure
      */
     public function __construct(ScimEmailType $type, ?string $display = null, ?bool $primary = null, ?string $value = null)
     {

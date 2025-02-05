@@ -240,6 +240,7 @@ class CommerceItemVariant
      * @param  ?float  $weight
      * @param  ?WeightUnit  $weightUnit
      * @param  ?float  $width
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $availableAt = null, ?string $description = null, ?float $height = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?float $length = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $options = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?bool $requiresShipping = null, ?SizeUnit $sizeUnit = null, ?string $sku = null, ?array $tags = null, ?float $totalStock = null, ?float $weight = null, ?WeightUnit $weightUnit = null, ?float $width = null)
     {

@@ -58,6 +58,7 @@ class StoragePermission
      * @param  ?bool  $isHidden
      * @param  ?bool  $isPublic
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(array $roles, ?string $groupId = null, ?bool $isHidden = null, ?bool $isPublic = null, ?string $userId = null)
     {

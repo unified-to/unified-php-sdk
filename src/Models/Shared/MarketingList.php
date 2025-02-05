@@ -105,6 +105,7 @@ class MarketingList
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {

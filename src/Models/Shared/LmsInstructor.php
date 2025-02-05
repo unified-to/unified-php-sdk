@@ -99,6 +99,7 @@ class LmsInstructor
      * @param  ?array<LmsTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $imageUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {

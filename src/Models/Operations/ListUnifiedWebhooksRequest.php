@@ -97,6 +97,7 @@ class ListUnifiedWebhooksRequest
      * @param  ?string  $order
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(?string $connectionId = null, ?\DateTime $createdLte = null, ?string $env = null, ?string $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {

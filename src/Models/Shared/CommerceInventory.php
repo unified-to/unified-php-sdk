@@ -84,6 +84,7 @@ class CommerceInventory
      * @param  ?string  $locationId
      * @param  ?CommerceInventoryRaw  $raw
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(float $available, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?CommerceInventoryRaw $raw = null, ?\DateTime $updatedAt = null)
     {

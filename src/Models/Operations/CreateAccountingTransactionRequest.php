@@ -39,6 +39,7 @@ class CreateAccountingTransactionRequest
      * @param  string  $connectionId
      * @param  ?Shared\AccountingTransaction  $accountingTransaction
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\AccountingTransaction $accountingTransaction = null, ?array $fields = null)
     {

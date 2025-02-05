@@ -122,6 +122,7 @@ class HrisTimeoff
      * @param  ?HrisTimeoffStatus  $status
      * @param  ?HrisTimeoffType  $type
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(\DateTime $startAt, string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $raw = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
     {

@@ -48,6 +48,7 @@ class PatchTicketingCustomerRequest
      * @param  string  $id
      * @param  ?Shared\TicketingCustomer  $ticketingCustomer
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\TicketingCustomer $ticketingCustomer = null, ?array $fields = null)
     {

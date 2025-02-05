@@ -48,6 +48,7 @@ class PatchKmsSpaceRequest
      * @param  string  $id
      * @param  ?Shared\KmsSpace  $kmsSpace
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\KmsSpace $kmsSpace = null, ?array $fields = null)
     {

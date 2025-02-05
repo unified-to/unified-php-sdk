@@ -48,6 +48,7 @@ class PatchTaskTaskRequest
      * @param  string  $id
      * @param  ?Shared\TaskTask  $taskTask
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\TaskTask $taskTask = null, ?array $fields = null)
     {

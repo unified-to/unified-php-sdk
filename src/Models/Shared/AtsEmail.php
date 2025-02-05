@@ -39,6 +39,7 @@ class AtsEmail
      * @param  string  $email
      * @param  ?string  $name
      * @param  ?AtsEmailType  $type
+     * @phpstan-pure
      */
     public function __construct(string $email, ?string $name = null, ?AtsEmailType $type = null)
     {

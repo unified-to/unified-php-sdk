@@ -48,6 +48,7 @@ class PatchKmsPageRequest
      * @param  string  $id
      * @param  ?Shared\KmsPage  $kmsPage
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\KmsPage $kmsPage = null, ?array $fields = null)
     {

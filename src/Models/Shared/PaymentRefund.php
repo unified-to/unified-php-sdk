@@ -103,6 +103,7 @@ class PaymentRefund
      * @param  ?string  $reference
      * @param  ?PaymentRefundStatus  $status
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(string $paymentId, float $totalAmount, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?string $reference = null, ?PaymentRefundStatus $status = null, ?\DateTime $updatedAt = null)
     {

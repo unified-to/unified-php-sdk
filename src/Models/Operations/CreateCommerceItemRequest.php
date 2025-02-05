@@ -39,6 +39,7 @@ class CreateCommerceItemRequest
      * @param  string  $connectionId
      * @param  ?Shared\CommerceItem  $commerceItem
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\CommerceItem $commerceItem = null, ?array $fields = null)
     {

@@ -31,6 +31,7 @@ class CreateUnifiedWebhookRequest
     /**
      * @param  ?Shared\Webhook  $webhook
      * @param  ?bool  $includeAll
+     * @phpstan-pure
      */
     public function __construct(?Shared\Webhook $webhook = null, ?bool $includeAll = null)
     {

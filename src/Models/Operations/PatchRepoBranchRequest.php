@@ -48,6 +48,7 @@ class PatchRepoBranchRequest
      * @param  string  $id
      * @param  ?Shared\RepoBranch  $repoBranch
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\RepoBranch $repoBranch = null, ?array $fields = null)
     {

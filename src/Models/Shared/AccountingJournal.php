@@ -106,6 +106,7 @@ class AccountingJournal
      * @param  ?float  $taxAmount
      * @param  ?string  $taxrateId
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?array $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
     {

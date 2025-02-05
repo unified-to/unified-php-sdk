@@ -39,6 +39,7 @@ class MessagingMember
      * @param  ?string  $email
      * @param  ?string  $name
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(?string $email = null, ?string $name = null, ?string $userId = null)
     {

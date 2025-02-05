@@ -39,6 +39,7 @@ class CreateAtsCandidateRequest
      * @param  string  $connectionId
      * @param  ?Shared\AtsCandidate  $atsCandidate
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\AtsCandidate $atsCandidate = null, ?array $fields = null)
     {

@@ -48,6 +48,7 @@ class UpdateCrmLeadRequest
      * @param  string  $id
      * @param  ?Shared\CrmLead  $crmLead
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\CrmLead $crmLead = null, ?array $fields = null)
     {

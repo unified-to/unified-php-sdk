@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 00e71c38f182c4bad7a19b0c7bb3e211
+  docChecksum: 075b9cea2675db23b5f8cea829ebb57f
   docVersion: "1.0"
-  speakeasyVersion: 1.481.1
-  generationVersion: 2.500.5
-  releaseVersion: 1.1.30
-  configChecksum: 5a5e6176b1b8f364b727e088ae581347
+  speakeasyVersion: 1.484.1
+  generationVersion: 2.503.2
+  releaseVersion: 1.1.31
+  configChecksum: 5d35b00ce414fa7e5eea3144d10d42ba
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -16,7 +16,7 @@ features:
     constsAndDefaults: 0.2.0
     core: 3.7.13
     globalSecurity: 2.81.7
-    globalSecurityFlattening: 0.1.1
+    globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.82.1
     methodArguments: 0.1.0
     responseFormat: 0.1.0
@@ -970,6 +970,7 @@ generatedFiles:
   - docs/Models/Shared/ListQuery.md
   - docs/Models/Shared/ListRawFields.md
   - docs/Models/Shared/ListRepoId.md
+  - docs/Models/Shared/ListRootId.md
   - docs/Models/Shared/ListSortByCreatedAt.md
   - docs/Models/Shared/ListSortByName.md
   - docs/Models/Shared/ListSortByUpdatedAt.md
@@ -998,6 +999,7 @@ generatedFiles:
   - docs/Models/Shared/MessagingChannel.md
   - docs/Models/Shared/MessagingMember.md
   - docs/Models/Shared/MessagingMessage.md
+  - docs/Models/Shared/Meta.md
   - docs/Models/Shared/MetadataMetadata.md
   - docs/Models/Shared/NativeWebhookParentId.md
   - docs/Models/Shared/NativeWebhookProjectId.md
@@ -1027,6 +1029,7 @@ generatedFiles:
   - docs/Models/Shared/PropertyAtsCompanyAddress.md
   - docs/Models/Shared/PropertyCommerceLocationAddress.md
   - docs/Models/Shared/PropertyConnectionAuth.md
+  - docs/Models/Shared/PropertyConnectionAuthMeta.md
   - docs/Models/Shared/PropertyConnectionCategories.md
   - docs/Models/Shared/PropertyConnectionPermissions.md
   - docs/Models/Shared/PropertyCrmCompanyAddress.md
@@ -2256,6 +2259,7 @@ generatedFiles:
   - src/Models/Shared/ListQuery.php
   - src/Models/Shared/ListRawFields.php
   - src/Models/Shared/ListRepoId.php
+  - src/Models/Shared/ListRootId.php
   - src/Models/Shared/ListSortByCreatedAt.php
   - src/Models/Shared/ListSortByName.php
   - src/Models/Shared/ListSortByUpdatedAt.php
@@ -2284,6 +2288,7 @@ generatedFiles:
   - src/Models/Shared/MessagingChannel.php
   - src/Models/Shared/MessagingMember.php
   - src/Models/Shared/MessagingMessage.php
+  - src/Models/Shared/Meta.php
   - src/Models/Shared/MetadataMetadata.php
   - src/Models/Shared/NativeWebhookParentId.php
   - src/Models/Shared/NativeWebhookProjectId.php
@@ -2313,6 +2318,7 @@ generatedFiles:
   - src/Models/Shared/PropertyAtsCompanyAddress.php
   - src/Models/Shared/PropertyCommerceLocationAddress.php
   - src/Models/Shared/PropertyConnectionAuth.php
+  - src/Models/Shared/PropertyConnectionAuthMeta.php
   - src/Models/Shared/PropertyConnectionCategories.php
   - src/Models/Shared/PropertyConnectionPermissions.php
   - src/Models/Shared/PropertyCrmCompanyAddress.php
@@ -5868,7 +5874,7 @@ examples:
     speakeasy-default-create-unified-connection:
       responses:
         "200":
-          application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
+          application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
   createUnifiedWebhook:
     speakeasy-default-create-unified-webhook:
       responses:
@@ -5889,7 +5895,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["storage"], "environment": "Production", "integration_type": "<value>", "permissions": ["kms_page_read"]}
+          application/json: {"categories": ["storage"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["kms_page_read"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
@@ -5917,7 +5923,7 @@ examples:
     speakeasy-default-list-unified-connections:
       responses:
         "200":
-          application/json: [{"categories": [], "environment": "Production", "integration_type": "<value>", "permissions": ["kms_comment_write", "kms_space_read"]}, {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["crm_deal_write", "ats_interview_read", "repo_pullrequest_read"]}]
+          application/json: [{"categories": [], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["kms_comment_write", "kms_space_read"]}, {"categories": ["auth"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["crm_deal_write", "ats_interview_read", "repo_pullrequest_read"]}]
   listUnifiedIntegrationWorkspaces:
     speakeasy-default-list-unified-integration-workspaces:
       parameters:
@@ -5949,7 +5955,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["metadata", "crm"], "environment": "Production", "integration_type": "<value>", "permissions": []}
+          application/json: {"categories": ["metadata", "crm"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
   patchUnifiedWebhook:
     speakeasy-default-patch-unified-webhook:
       parameters:
@@ -5980,7 +5986,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["metadata", "accounting", "metadata"], "environment": "Production", "integration_type": "<value>", "permissions": []}
+          application/json: {"categories": ["metadata", "accounting", "metadata"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
   updateUnifiedWebhook:
     speakeasy-default-update-unified-webhook:
       parameters:

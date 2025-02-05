@@ -23,6 +23,13 @@ class Connection
 
     /**
      *
+     * @var string $integrationName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_name')]
+    public string $integrationName;
+
+    /**
+     *
      * @var string $integrationType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('integration_type')]
@@ -129,6 +136,7 @@ class Connection
 
     /**
      * @param  array<PropertyConnectionCategories>  $categories
+     * @param  string  $integrationName
      * @param  string  $integrationType
      * @param  array<PropertyConnectionPermissions>  $permissions
      * @param  ?PropertyConnectionAuth  $auth
@@ -142,10 +150,12 @@ class Connection
      * @param  ?\DateTime  $lastUnhealthyAt
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $workspaceId
+     * @phpstan-pure
      */
-    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(array $categories, string $integrationName, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->categories = $categories;
+        $this->integrationName = $integrationName;
         $this->integrationType = $integrationType;
         $this->permissions = $permissions;
         $this->auth = $auth;

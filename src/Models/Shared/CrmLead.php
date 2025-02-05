@@ -174,6 +174,7 @@ class CrmLead
      * @param  ?array<CrmTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {

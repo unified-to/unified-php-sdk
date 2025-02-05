@@ -73,6 +73,7 @@ class GetUnifiedIntegrationLoginRequest
      * @param  ?bool  $redirect
      * @param  ?string  $state
      * @param  ?string  $successRedirect
+     * @phpstan-pure
      */
     public function __construct(string $integrationType, string $workspaceId, ?string $env = null, ?string $failureRedirect = null, ?bool $redirect = null, ?string $state = null, ?string $successRedirect = null)
     {

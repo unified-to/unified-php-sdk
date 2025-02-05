@@ -39,6 +39,7 @@ class PatchScimUsersRequest
      * @param  string  $connectionId
      * @param  string  $id
      * @param  ?Shared\ScimUser  $scimUser
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\ScimUser $scimUser = null)
     {

@@ -39,6 +39,7 @@ class CreateAtsDocumentRequest
      * @param  string  $connectionId
      * @param  ?Shared\AtsDocument  $atsDocument
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\AtsDocument $atsDocument = null, ?array $fields = null)
     {

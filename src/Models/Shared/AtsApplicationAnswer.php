@@ -30,6 +30,7 @@ class AtsApplicationAnswer
     /**
      * @param  array<string>  $answers
      * @param  string  $questionId
+     * @phpstan-pure
      */
     public function __construct(array $answers, string $questionId)
     {

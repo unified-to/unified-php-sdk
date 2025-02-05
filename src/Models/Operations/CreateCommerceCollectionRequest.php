@@ -40,6 +40,7 @@ class CreateCommerceCollectionRequest
      * @param  string  $connectionId
      * @param  ?Shared\CommerceCollection  $commerceCollection
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\CommerceCollection $commerceCollection = null, ?array $fields = null)
     {

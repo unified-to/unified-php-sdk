@@ -79,6 +79,7 @@ class ScimGroup
      * @param  ?array<ScimGroupMember>  $members
      * @param  ?PropertyScimGroupMeta  $meta
      * @param  ?array<PropertyScimGroupSchemas>  $schemas
+     * @phpstan-pure
      */
     public function __construct(string $displayName, ?string $externalId = null, ?string $groupType = null, ?string $id = null, ?array $members = null, ?PropertyScimGroupMeta $meta = null, ?array $schemas = null)
     {

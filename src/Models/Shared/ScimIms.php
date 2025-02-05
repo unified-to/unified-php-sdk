@@ -49,6 +49,7 @@ class ScimIms
      * @param  ?bool  $primary
      * @param  ?ScimImsType  $type
      * @param  ?string  $value
+     * @phpstan-pure
      */
     public function __construct(?string $display = null, ?bool $primary = null, ?ScimImsType $type = null, ?string $value = null)
     {

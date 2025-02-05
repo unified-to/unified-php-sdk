@@ -86,6 +86,7 @@ class TicketingNote
      * @param  ?string  $ticketId
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?array $raw = null, ?string $ticketId = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {

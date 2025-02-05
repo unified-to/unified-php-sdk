@@ -39,6 +39,7 @@ class CreateRepoRepositoryRequest
      * @param  string  $connectionId
      * @param  ?Shared\RepoRepository  $repoRepository
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\RepoRepository $repoRepository = null, ?array $fields = null)
     {

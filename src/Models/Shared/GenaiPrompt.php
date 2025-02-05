@@ -81,6 +81,7 @@ class GenaiPrompt
      * @param  ?array<string>  $responses
      * @param  ?float  $temperature
      * @param  ?float  $tokensUsed
+     * @phpstan-pure
      */
     public function __construct(?float $maxTokens = null, ?array $messages = null, ?string $modelId = null, ?array $raw = null, ?array $responses = null, ?float $temperature = null, ?float $tokensUsed = null)
     {

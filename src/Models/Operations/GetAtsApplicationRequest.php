@@ -39,6 +39,7 @@ class GetAtsApplicationRequest
      * @param  string  $connectionId
      * @param  string  $id
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?array $fields = null)
     {

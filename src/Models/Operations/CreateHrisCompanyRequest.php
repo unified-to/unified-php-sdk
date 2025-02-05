@@ -39,6 +39,7 @@ class CreateHrisCompanyRequest
      * @param  string  $connectionId
      * @param  ?Shared\HrisCompany  $hrisCompany
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\HrisCompany $hrisCompany = null, ?array $fields = null)
     {

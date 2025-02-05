@@ -97,6 +97,7 @@ class UcCall
      * @param  ?PropertyUcCallTelephone  $telephone
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(?string $contactId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {

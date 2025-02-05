@@ -39,6 +39,7 @@ class CreateHrisLocationRequest
      * @param  string  $connectionId
      * @param  ?Shared\HrisLocation  $hrisLocation
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\HrisLocation $hrisLocation = null, ?array $fields = null)
     {

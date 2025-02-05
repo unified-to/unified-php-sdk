@@ -104,6 +104,7 @@ class ListKmsCommentsRequest
      * @param  ?string  $sort
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $pageId = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null)
     {

@@ -93,6 +93,7 @@ class MarketingMember
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?array $listIds = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {

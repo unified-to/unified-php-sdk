@@ -39,6 +39,7 @@ class CreateRepoCommitRequest
      * @param  string  $connectionId
      * @param  ?Shared\RepoCommit  $repoCommit
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\RepoCommit $repoCommit = null, ?array $fields = null)
     {

@@ -30,6 +30,7 @@ class MarketingEmail
     /**
      * @param  string  $email
      * @param  ?MarketingEmailType  $type
+     * @phpstan-pure
      */
     public function __construct(string $email, ?MarketingEmailType $type = null)
     {

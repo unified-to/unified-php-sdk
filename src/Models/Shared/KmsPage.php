@@ -141,6 +141,7 @@ class KmsPage
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $webUrl
+     * @phpstan-pure
      */
     public function __construct(string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?string $downloadUrl = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {

@@ -48,6 +48,7 @@ class PatchLmsStudentRequest
      * @param  string  $id
      * @param  ?Shared\LmsStudent  $lmsStudent
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\LmsStudent $lmsStudent = null, ?array $fields = null)
     {

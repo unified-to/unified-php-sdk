@@ -60,6 +60,7 @@ class AtsStatus
      * @param  ?string  $originalStatus
      * @param  ?array<string, mixed>  $raw
      * @param  ?AtsStatusStatus  $status
+     * @phpstan-pure
      */
     public function __construct(?string $description = null, ?string $id = null, ?string $originalStatus = null, ?array $raw = null, ?AtsStatusStatus $status = null)
     {

@@ -85,6 +85,7 @@ class CommerceLocation
      * @param  ?bool  $isActive
      * @param  ?CommerceLocationRaw  $raw
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(string $name, ?PropertyCommerceLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?CommerceLocationRaw $raw = null, ?\DateTime $updatedAt = null)
     {

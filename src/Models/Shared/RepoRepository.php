@@ -103,6 +103,7 @@ class RepoRepository
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
+     * @phpstan-pure
      */
     public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrivate = null, ?string $orgId = null, ?string $owner = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {

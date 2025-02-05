@@ -48,6 +48,7 @@ class PatchCommerceLocationRequest
      * @param  string  $id
      * @param  ?Shared\CommerceLocation  $commerceLocation
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\CommerceLocation $commerceLocation = null, ?array $fields = null)
     {

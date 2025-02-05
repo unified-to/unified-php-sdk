@@ -92,6 +92,7 @@ class TicketingCustomer
      * @param  ?array<string>  $tags
      * @param  ?array<TicketingTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
     {

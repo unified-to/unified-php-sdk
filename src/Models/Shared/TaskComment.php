@@ -84,6 +84,7 @@ class TaskComment
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $userName
+     * @phpstan-pure
      */
     public function __construct(string $taskId, string $text, ?\DateTime $createdAt = null, ?string $id = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null)
     {

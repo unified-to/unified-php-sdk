@@ -39,6 +39,7 @@ class CreateRepoBranchRequest
      * @param  string  $connectionId
      * @param  ?Shared\RepoBranch  $repoBranch
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\RepoBranch $repoBranch = null, ?array $fields = null)
     {

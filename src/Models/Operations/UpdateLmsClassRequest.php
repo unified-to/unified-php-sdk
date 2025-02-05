@@ -48,6 +48,7 @@ class UpdateLmsClassRequest
      * @param  string  $id
      * @param  ?Shared\LmsClass  $lmsClass
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\LmsClass $lmsClass = null, ?array $fields = null)
     {

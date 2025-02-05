@@ -66,6 +66,7 @@ class ListEnrichPeopleRequest
      * @param  ?string  $linkedinUrl
      * @param  ?string  $name
      * @param  ?string  $twitter
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?string $companyName = null, ?string $email = null, ?string $linkedinUrl = null, ?string $name = null, ?string $twitter = null)
     {

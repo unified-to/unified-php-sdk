@@ -39,6 +39,7 @@ class CreateRepoOrganizationRequest
      * @param  string  $connectionId
      * @param  ?Shared\RepoOrganization  $repoOrganization
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\RepoOrganization $repoOrganization = null, ?array $fields = null)
     {

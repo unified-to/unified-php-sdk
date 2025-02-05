@@ -48,6 +48,7 @@ class PatchAtsActivityRequest
      * @param  string  $id
      * @param  ?Shared\AtsActivity  $atsActivity
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AtsActivity $atsActivity = null, ?array $fields = null)
     {

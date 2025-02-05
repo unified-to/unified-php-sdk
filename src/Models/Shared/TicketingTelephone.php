@@ -30,6 +30,7 @@ class TicketingTelephone
     /**
      * @param  string  $telephone
      * @param  ?TicketingTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(string $telephone, ?TicketingTelephoneType $type = null)
     {

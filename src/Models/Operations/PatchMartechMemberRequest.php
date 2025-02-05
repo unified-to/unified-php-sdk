@@ -49,6 +49,7 @@ class PatchMartechMemberRequest
      * @param  string  $id
      * @param  ?Shared\MarketingMember  $marketingMember
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\MarketingMember $marketingMember = null, ?array $fields = null)
     {

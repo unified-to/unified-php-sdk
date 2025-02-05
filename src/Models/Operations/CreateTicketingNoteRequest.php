@@ -39,6 +39,7 @@ class CreateTicketingNoteRequest
      * @param  string  $connectionId
      * @param  ?Shared\TicketingNote  $ticketingNote
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\TicketingNote $ticketingNote = null, ?array $fields = null)
     {

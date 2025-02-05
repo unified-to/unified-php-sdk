@@ -123,6 +123,7 @@ class MessagingChannel
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
+     * @phpstan-pure
      */
     public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $parentChannelId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {

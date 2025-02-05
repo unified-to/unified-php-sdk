@@ -198,6 +198,7 @@ class PaymentSubscription
      * @param  ?\DateTime  $startAt
      * @param  ?PaymentSubscriptionStatus  $status
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $canceledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $currentPeriodEndAt = null, ?\DateTime $currentPeriodStartAt = null, ?float $dayOfMonth = null, ?float $dayOfWeek = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?float $interval = null, ?IntervalUnit $intervalUnit = null, ?string $invoiceId = null, ?array $lineitems = null, ?float $month = null, ?array $raw = null, ?\DateTime $startAt = null, ?PaymentSubscriptionStatus $status = null, ?\DateTime $updatedAt = null)
     {

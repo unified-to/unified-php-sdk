@@ -96,6 +96,7 @@ class ListKmsPagesRequest
      * @param  ?string  $sort
      * @param  ?string  $spaceId
      * @param  ?\DateTime  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?string $spaceId = null, ?\DateTime $updatedGte = null)
     {

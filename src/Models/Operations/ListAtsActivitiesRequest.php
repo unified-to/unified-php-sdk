@@ -128,6 +128,7 @@ class ListAtsActivitiesRequest
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?string $documentId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {

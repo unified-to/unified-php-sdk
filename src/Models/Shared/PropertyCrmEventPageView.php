@@ -39,6 +39,7 @@ class PropertyCrmEventPageView
      * @param  ?float  $average
      * @param  ?float  $count
      * @param  ?string  $url
+     * @phpstan-pure
      */
     public function __construct(?float $average = null, ?float $count = null, ?string $url = null)
     {

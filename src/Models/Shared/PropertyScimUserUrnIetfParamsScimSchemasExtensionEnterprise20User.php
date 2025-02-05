@@ -135,6 +135,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
      * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager  $manager
      * @param  ?string  $organization
      * @param  ?\DateTime  $startDate
+     * @phpstan-pure
      */
     public function __construct(?array $additionalManagers = null, ?\DateTime $birthday = null, ?string $costCenter = null, ?string $department = null, ?string $division = null, ?string $employeeNumber = null, ?\DateTime $endDate = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender $gender = null, ?string $level = null, ?string $location = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager $manager = null, ?string $organization = null, ?\DateTime $startDate = null)
     {

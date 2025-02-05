@@ -47,6 +47,7 @@ class ScimEntitlement
      * @param  ?string  $display
      * @param  ?bool  $primary
      * @param  ?string  $type
+     * @phpstan-pure
      */
     public function __construct(string $value, ?string $display = null, ?bool $primary = null, ?string $type = null)
     {

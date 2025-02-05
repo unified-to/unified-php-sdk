@@ -30,6 +30,7 @@ class HrisTelephone
     /**
      * @param  string  $telephone
      * @param  ?HrisTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(string $telephone, ?HrisTelephoneType $type = null)
     {

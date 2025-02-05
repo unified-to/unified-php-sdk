@@ -31,6 +31,7 @@ class UpdateUnifiedWebhookRequest
     /**
      * @param  string  $id
      * @param  ?Shared\Webhook  $webhook
+     * @phpstan-pure
      */
     public function __construct(string $id, ?Shared\Webhook $webhook = null)
     {

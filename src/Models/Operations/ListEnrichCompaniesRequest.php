@@ -39,6 +39,7 @@ class ListEnrichCompaniesRequest
      * @param  string  $connectionId
      * @param  ?string  $domain
      * @param  ?string  $name
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?string $domain = null, ?string $name = null)
     {

@@ -96,6 +96,7 @@ class ListCommerceInventoriesRequest
      * @param  ?string  $query
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?array $fields = null, ?string $itemVariantId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {

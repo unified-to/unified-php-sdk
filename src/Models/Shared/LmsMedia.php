@@ -57,6 +57,7 @@ class LmsMedia
      * @param  ?string  $name
      * @param  ?string  $thumbnailUrl
      * @param  ?LmsMediaType  $type
+     * @phpstan-pure
      */
     public function __construct(string $url, ?string $description = null, ?string $name = null, ?string $thumbnailUrl = null, ?LmsMediaType $type = null)
     {

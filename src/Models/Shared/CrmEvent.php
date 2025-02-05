@@ -199,6 +199,7 @@ class CrmEvent
      * @param  ?CrmEventType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(?PropertyCrmEventCall $call = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?PropertyCrmEventEmail $email = null, ?PropertyCrmEventForm $form = null, ?string $id = null, ?array $leadIds = null, ?PropertyCrmEventMarketingEmail $marketingEmail = null, ?PropertyCrmEventMeeting $meeting = null, ?PropertyCrmEventNote $note = null, ?PropertyCrmEventPageView $pageView = null, ?array $raw = null, ?PropertyCrmEventTask $task = null, ?CrmEventType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {

@@ -39,6 +39,7 @@ class CreatePaymentLinkRequest
      * @param  string  $connectionId
      * @param  ?Shared\PaymentLink  $paymentLink
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\PaymentLink $paymentLink = null, ?array $fields = null)
     {

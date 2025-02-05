@@ -40,6 +40,7 @@ class CreateMartechMemberRequest
      * @param  string  $connectionId
      * @param  ?Shared\MarketingMember  $marketingMember
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\MarketingMember $marketingMember = null, ?array $fields = null)
     {

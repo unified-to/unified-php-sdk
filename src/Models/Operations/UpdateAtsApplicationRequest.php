@@ -48,6 +48,7 @@ class UpdateAtsApplicationRequest
      * @param  string  $id
      * @param  ?Shared\AtsApplication  $atsApplication
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AtsApplication $atsApplication = null, ?array $fields = null)
     {

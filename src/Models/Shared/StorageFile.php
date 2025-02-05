@@ -170,6 +170,7 @@ class StorageFile
      * @param  ?string  $userId
      * @param  ?string  $version
      * @param  ?string  $webUrl
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $version = null, ?string $webUrl = null)
     {

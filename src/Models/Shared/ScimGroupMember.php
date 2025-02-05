@@ -58,6 +58,7 @@ class ScimGroupMember
      * @param  ?string  $display
      * @param  ?Operation  $operation
      * @param  ?ScimGroupMemberType  $type
+     * @phpstan-pure
      */
     public function __construct(string $value, ?string $dollarRef = null, ?string $display = null, ?Operation $operation = null, ?ScimGroupMemberType $type = null)
     {

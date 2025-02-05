@@ -210,6 +210,7 @@ class AtsJob
      * @param  ?bool  $remote
      * @param  ?AtsJobStatus  $status
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
     {

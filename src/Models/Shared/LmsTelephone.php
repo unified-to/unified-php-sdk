@@ -30,6 +30,7 @@ class LmsTelephone
     /**
      * @param  string  $telephone
      * @param  ?LmsTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(string $telephone, ?LmsTelephoneType $type = null)
     {

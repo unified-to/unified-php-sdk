@@ -40,6 +40,7 @@ class CreateUcContactRequest
      * @param  string  $connectionId
      * @param  ?Shared\UcContact  $ucContact
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\UcContact $ucContact = null, ?array $fields = null)
     {

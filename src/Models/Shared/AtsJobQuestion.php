@@ -76,6 +76,7 @@ class AtsJobQuestion
      * @param  ?array<string>  $options
      * @param  ?string  $prompt
      * @param  ?bool  $required
+     * @phpstan-pure
      */
     public function __construct(string $question, AtsJobQuestionType $type, ?string $description = null, ?string $id = null, ?array $options = null, ?string $prompt = null, ?bool $required = null)
     {

@@ -66,6 +66,7 @@ class RepoBranch
      * @param  ?string  $id
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(string $name, string $repoId, ?\DateTime $createdAt = null, ?string $id = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {

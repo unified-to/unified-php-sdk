@@ -31,6 +31,7 @@ class PatchUnifiedConnectionRequest
     /**
      * @param  string  $id
      * @param  ?Shared\Connection  $connection
+     * @phpstan-pure
      */
     public function __construct(string $id, ?Shared\Connection $connection = null)
     {

@@ -48,6 +48,7 @@ class PatchCommerceInventoryRequest
      * @param  string  $id
      * @param  ?Shared\CommerceInventory  $commerceInventory
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\CommerceInventory $commerceInventory = null, ?array $fields = null)
     {

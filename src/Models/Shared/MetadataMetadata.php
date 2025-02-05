@@ -86,6 +86,7 @@ class MetadataMetadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?string $id = null, ?array $objects = null, ?array $raw = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {

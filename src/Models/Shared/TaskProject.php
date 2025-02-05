@@ -108,6 +108,7 @@ class TaskProject
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?array $groupIds = null, ?bool $hasTasks = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {

@@ -48,6 +48,7 @@ class PatchPaymentLinkRequest
      * @param  string  $id
      * @param  ?Shared\PaymentLink  $paymentLink
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\PaymentLink $paymentLink = null, ?array $fields = null)
     {

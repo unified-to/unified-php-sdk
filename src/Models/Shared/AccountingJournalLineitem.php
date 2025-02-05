@@ -84,6 +84,7 @@ class AccountingJournalLineitem
      * @param  ?string  $paymentId
      * @param  ?float  $taxAmount
      * @param  ?float  $totalAmount
+     * @phpstan-pure
      */
     public function __construct(?string $accountId = null, ?string $contactId = null, ?string $description = null, ?string $id = null, ?string $invoiceId = null, ?string $paymentId = null, ?float $taxAmount = null, ?float $totalAmount = null)
     {

@@ -49,6 +49,7 @@ class UpdateMartechListRequest
      * @param  string  $id
      * @param  ?Shared\MarketingList  $marketingList
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\MarketingList $marketingList = null, ?array $fields = null)
     {

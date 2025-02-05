@@ -30,6 +30,7 @@ class AtsTelephone
     /**
      * @param  string  $telephone
      * @param  ?AtsTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(string $telephone, ?AtsTelephoneType $type = null)
     {

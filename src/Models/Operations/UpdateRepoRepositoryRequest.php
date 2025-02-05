@@ -48,6 +48,7 @@ class UpdateRepoRepositoryRequest
      * @param  string  $id
      * @param  ?Shared\RepoRepository  $repoRepository
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\RepoRepository $repoRepository = null, ?array $fields = null)
     {

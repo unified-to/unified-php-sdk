@@ -50,6 +50,7 @@ $request = new Shared\Connection(
     categories: [
         Shared\PropertyConnectionCategories::Repo,
     ],
+    integrationName: '<value>',
     integrationType: '<value>',
     permissions: [
         Shared\PropertyConnectionPermissions::CrmLeadRead,

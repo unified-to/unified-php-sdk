@@ -44,6 +44,7 @@ class ListKmsSpacesResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?array<Shared\KmsSpace>  $kmsSpaces
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $kmsSpaces = null)
     {

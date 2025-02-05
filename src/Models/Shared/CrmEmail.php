@@ -31,6 +31,7 @@ class CrmEmail
     /**
      * @param  ?string  $email
      * @param  ?CrmEmailType  $type
+     * @phpstan-pure
      */
     public function __construct(?string $email = null, ?CrmEmailType $type = null)
     {

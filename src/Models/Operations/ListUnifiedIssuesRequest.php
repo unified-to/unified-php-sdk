@@ -53,6 +53,7 @@ class ListUnifiedIssuesRequest
      * @param  ?string  $order
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {

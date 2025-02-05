@@ -49,6 +49,7 @@ class UpdateCrmCompanyRequest
      * @param  string  $id
      * @param  ?Shared\CrmCompany  $crmCompany
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\CrmCompany $crmCompany = null, ?array $fields = null)
     {

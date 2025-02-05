@@ -131,6 +131,7 @@ class AccountingOrganization
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $website
+     * @phpstan-pure
      */
     public function __construct(string $name, ?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?string $legalName = null, ?string $organizationCode = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $website = null)
     {

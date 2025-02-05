@@ -50,6 +50,7 @@ class PropertyCrmEventForm
      * @param  ?array<CrmEventFormField>  $fields
      * @param  ?string  $name
      * @param  ?string  $redirectUrl
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $archivedAt = null, ?array $fields = null, ?string $name = null, ?string $redirectUrl = null)
     {

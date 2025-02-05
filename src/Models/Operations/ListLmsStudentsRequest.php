@@ -112,6 +112,7 @@ class ListLmsStudentsRequest
      * @param  ?string  $sessionId
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?string $classId = null, ?string $courseId = null, ?array $fields = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sessionId = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {

@@ -48,6 +48,7 @@ class PatchAtsInterviewRequest
      * @param  string  $id
      * @param  ?Shared\AtsInterview  $atsInterview
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AtsInterview $atsInterview = null, ?array $fields = null)
     {

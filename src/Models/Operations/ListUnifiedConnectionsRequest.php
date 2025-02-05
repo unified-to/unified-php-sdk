@@ -79,6 +79,7 @@ class ListUnifiedConnectionsRequest
      * @param  ?string  $order
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(?array $categories = null, ?string $env = null, ?string $externalXref = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {

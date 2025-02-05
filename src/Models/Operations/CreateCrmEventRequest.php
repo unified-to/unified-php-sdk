@@ -40,6 +40,7 @@ class CreateCrmEventRequest
      * @param  string  $connectionId
      * @param  ?Shared\CrmEvent  $crmEvent
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\CrmEvent $crmEvent = null, ?array $fields = null)
     {

@@ -49,6 +49,7 @@ class PatchCrmDealRequest
      * @param  string  $id
      * @param  ?Shared\CrmDeal  $crmDeal
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\CrmDeal $crmDeal = null, ?array $fields = null)
     {

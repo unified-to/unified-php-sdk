@@ -40,6 +40,7 @@ class PropertyCrmEventCall
      * @param  ?string  $description
      * @param  ?float  $duration
      * @param  ?\DateTime  $startAt
+     * @phpstan-pure
      */
     public function __construct(?string $description = null, ?float $duration = null, ?\DateTime $startAt = null)
     {

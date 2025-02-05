@@ -48,6 +48,7 @@ class PatchAtsCandidateRequest
      * @param  string  $id
      * @param  ?Shared\AtsCandidate  $atsCandidate
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AtsCandidate $atsCandidate = null, ?array $fields = null)
     {

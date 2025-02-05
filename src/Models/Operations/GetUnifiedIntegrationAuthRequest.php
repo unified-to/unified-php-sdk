@@ -108,6 +108,7 @@ class GetUnifiedIntegrationAuthRequest
      * @param  ?string  $state
      * @param  ?string  $subdomain
      * @param  ?string  $successRedirect
+     * @phpstan-pure
      */
     public function __construct(string $integrationType, string $workspaceId, ?string $env = null, ?string $externalXref = null, ?string $failureRedirect = null, ?string $lang = null, ?bool $redirect = null, ?array $scopes = null, ?string $state = null, ?string $subdomain = null, ?string $successRedirect = null)
     {

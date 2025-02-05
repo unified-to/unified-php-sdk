@@ -39,6 +39,7 @@ class CreateKmsPageRequest
      * @param  string  $connectionId
      * @param  ?Shared\KmsPage  $kmsPage
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\KmsPage $kmsPage = null, ?array $fields = null)
     {

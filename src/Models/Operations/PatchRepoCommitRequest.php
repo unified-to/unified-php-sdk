@@ -48,6 +48,7 @@ class PatchRepoCommitRequest
      * @param  string  $id
      * @param  ?Shared\RepoCommit  $repoCommit
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\RepoCommit $repoCommit = null, ?array $fields = null)
     {

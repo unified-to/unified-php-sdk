@@ -58,6 +58,7 @@ class PropertyScimUserMeta
      * @param  ?string  $location
      * @param  ?PropertyScimUserMetaResourceType  $resourceType
      * @param  ?string  $version
+     * @phpstan-pure
      */
     public function __construct(?string $created = null, ?string $lastModified = null, ?string $location = null, ?PropertyScimUserMetaResourceType $resourceType = null, ?string $version = null)
     {

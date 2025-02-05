@@ -84,6 +84,7 @@ class PatchPassthroughRawResponse
      * @param  ?string  $defaultApplicationXmlRes
      * @param  ?string  $defaultTextCsvRes
      * @param  ?string  $defaultTextPlainRes
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?string $defaultWildcardWildcardBytes = null, mixed $defaultApplicationJsonAny = null, ?string $defaultApplicationXmlRes = null, ?string $defaultTextCsvRes = null, ?string $defaultTextPlainRes = null, ?array $headers = [])
     {

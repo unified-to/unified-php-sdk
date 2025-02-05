@@ -86,6 +86,7 @@ class AccountingTaxrate
      * @param  ?float  $rate
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?float $rate = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {

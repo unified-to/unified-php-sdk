@@ -86,6 +86,7 @@ class PaymentPayout
      * @param  ?array<string, mixed>  $raw
      * @param  ?PaymentPayoutStatus  $status
      * @param  ?string  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(float $totalAmount, ?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?string $updatedAt = null)
     {

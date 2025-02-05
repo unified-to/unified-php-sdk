@@ -44,6 +44,7 @@ class ListHrisTimeoffsResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?array<Shared\HrisTimeoff>  $hrisTimeoffs
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $hrisTimeoffs = null)
     {

@@ -123,6 +123,7 @@ class AtsDocument
      * @param  ?AtsDocumentType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?string $documentData = null, ?string $documentUrl = null, ?string $filename = null, ?string $id = null, ?string $jobId = null, ?array $raw = null, ?AtsDocumentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {

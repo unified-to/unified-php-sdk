@@ -49,6 +49,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User
      * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender  $gender
      * @param  ?string  $manager
      * @param  ?string  $team
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $dateOfBirth = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender $gender = null, ?string $manager = null, ?string $team = null)
     {

@@ -48,6 +48,7 @@ class PatchAtsJobRequest
      * @param  string  $id
      * @param  ?Shared\AtsJob  $atsJob
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AtsJob $atsJob = null, ?array $fields = null)
     {

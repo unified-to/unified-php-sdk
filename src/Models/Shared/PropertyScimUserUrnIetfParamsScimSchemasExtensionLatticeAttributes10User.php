@@ -105,6 +105,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
      * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender  $gender
      * @param  ?SexualOrientation  $sexualOrientation
      * @param  ?\DateTime  $startDate
+     * @phpstan-pure
      */
     public function __construct(?string $jobLevel = null, ?string $peopleManagerReviews = null, ?string $remoteWorkLocation = null, ?string $salaryInformation = null, ?string $subDepartments = null, ?\DateTime $birthDate = null, ?Ethnicity $ethnicity = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender $gender = null, ?SexualOrientation $sexualOrientation = null, ?\DateTime $startDate = null)
     {

@@ -133,6 +133,7 @@ class PaymentLink
      * @param  ?string  $successUrl
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
+     * @phpstan-pure
      */
     public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?string $paymentId = null, ?array $raw = null, ?string $successUrl = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {

@@ -70,6 +70,7 @@ class CreateScimUsersRequest
      * @param  ?string  $sortBy
      * @param  ?string  $sortOrder
      * @param  ?float  $startIndex
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\ScimUser $scimUser = null, ?float $count = null, ?string $filter = null, ?string $sortBy = null, ?string $sortOrder = null, ?float $startIndex = null)
     {

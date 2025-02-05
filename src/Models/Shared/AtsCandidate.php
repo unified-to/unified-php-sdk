@@ -206,6 +206,7 @@ class AtsCandidate
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $webUrl
+     * @phpstan-pure
      */
     public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $externalIdentifier = null, ?string $id = null, ?string $imageUrl = null, ?array $linkUrls = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {

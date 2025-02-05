@@ -48,6 +48,7 @@ class PatchTaskCommentRequest
      * @param  string  $id
      * @param  ?Shared\TaskComment  $taskComment
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\TaskComment $taskComment = null, ?array $fields = null)
     {

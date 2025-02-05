@@ -39,6 +39,7 @@ class CreatePaymentPaymentRequest
      * @param  string  $connectionId
      * @param  ?Shared\PaymentPayment  $paymentPayment
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\PaymentPayment $paymentPayment = null, ?array $fields = null)
     {

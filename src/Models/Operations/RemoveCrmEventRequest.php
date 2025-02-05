@@ -30,6 +30,7 @@ class RemoveCrmEventRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id)
     {

@@ -97,6 +97,7 @@ class CrmPipeline
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<CrmStage>  $stages
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?array $stages = null, ?\DateTime $updatedAt = null)
     {

@@ -97,6 +97,7 @@ class RepoOrganization
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @param  ?string  $webUrl
+     * @phpstan-pure
      */
     public function __construct(?string $avatarUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?string $webUrl = null)
     {

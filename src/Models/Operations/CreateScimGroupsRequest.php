@@ -30,6 +30,7 @@ class CreateScimGroupsRequest
     /**
      * @param  string  $connectionId
      * @param  ?Shared\ScimGroup  $scimGroup
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\ScimGroup $scimGroup = null)
     {

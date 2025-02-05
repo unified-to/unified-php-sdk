@@ -48,6 +48,7 @@ class UpdateAccountingContactRequest
      * @param  string  $id
      * @param  ?Shared\AccountingContact  $accountingContact
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\AccountingContact $accountingContact = null, ?array $fields = null)
     {

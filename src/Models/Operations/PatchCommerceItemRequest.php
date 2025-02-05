@@ -48,6 +48,7 @@ class PatchCommerceItemRequest
      * @param  string  $id
      * @param  ?Shared\CommerceItem  $commerceItem
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\CommerceItem $commerceItem = null, ?array $fields = null)
     {

@@ -236,6 +236,7 @@ class Integration
      * @param  ?array<string>  $tokenNames
      * @param  ?string  $updatedAt
      * @param  ?string  $webUrl
+     * @phpstan-pure
      */
     public function __construct(array $categories, string $name, string $type, ?float $activeHealthyConnections = null, ?array $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?string $logoUrl = null, ?float $popularity = null, ?string $rateLimitDescription = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
     {

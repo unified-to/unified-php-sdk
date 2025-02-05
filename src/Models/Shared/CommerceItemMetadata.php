@@ -67,6 +67,7 @@ class CommerceItemMetadata
      * @param  ?string  $namespace
      * @param  ?string  $type
      * @param  ?Value  $value
+     * @phpstan-pure
      */
     public function __construct(string $key, ?ExtraData $extraData = null, ?string $id = null, ?string $namespace = null, ?string $type = null, ?Value $value = null)
     {

@@ -30,6 +30,7 @@ class HrisEmail
     /**
      * @param  string  $email
      * @param  ?HrisEmailType  $type
+     * @phpstan-pure
      */
     public function __construct(string $email, ?HrisEmailType $type = null)
     {

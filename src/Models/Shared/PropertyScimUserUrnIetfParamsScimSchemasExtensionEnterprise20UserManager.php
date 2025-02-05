@@ -59,6 +59,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
      * @param  ?string  $managerId
      * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType  $type
      * @param  ?string  $value
+     * @phpstan-pure
      */
     public function __construct(?string $dollarRef = null, ?string $displayName = null, ?string $managerId = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType $type = null, ?string $value = null)
     {

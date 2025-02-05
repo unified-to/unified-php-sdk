@@ -49,6 +49,7 @@ class ScimPhoto
      * @param  ?bool  $primary
      * @param  ?ScimPhotoType  $type
      * @param  ?string  $value
+     * @phpstan-pure
      */
     public function __construct(?string $display = null, ?bool $primary = null, ?ScimPhotoType $type = null, ?string $value = null)
     {

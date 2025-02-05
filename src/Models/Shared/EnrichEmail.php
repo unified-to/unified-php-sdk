@@ -39,6 +39,7 @@ class EnrichEmail
      * @param  string  $email
      * @param  ?bool  $isVerified
      * @param  ?EnrichEmailType  $type
+     * @phpstan-pure
      */
     public function __construct(string $email, ?bool $isVerified = null, ?EnrichEmailType $type = null)
     {

@@ -30,6 +30,7 @@ class TicketingEmail
     /**
      * @param  string  $email
      * @param  ?TicketingEmailType  $type
+     * @phpstan-pure
      */
     public function __construct(string $email, ?TicketingEmailType $type = null)
     {

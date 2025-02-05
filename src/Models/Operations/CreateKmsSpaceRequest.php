@@ -39,6 +39,7 @@ class CreateKmsSpaceRequest
      * @param  string  $connectionId
      * @param  ?Shared\KmsSpace  $kmsSpace
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\KmsSpace $kmsSpace = null, ?array $fields = null)
     {

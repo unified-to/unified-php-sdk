@@ -48,6 +48,7 @@ class AccountingContactPaymentMethod
      * @param  ?bool  $default
      * @param  ?string  $id
      * @param  ?string  $name
+     * @phpstan-pure
      */
     public function __construct(AccountingContactPaymentMethodType $type, ?bool $default = null, ?string $id = null, ?string $name = null)
     {

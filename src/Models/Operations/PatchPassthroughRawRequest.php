@@ -38,6 +38,7 @@ class PatchPassthroughRawRequest
      * @param  string  $connectionId
      * @param  string  $path
      * @param  ?string  $requestBody
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $path, ?string $requestBody = null)
     {

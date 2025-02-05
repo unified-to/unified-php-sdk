@@ -39,6 +39,7 @@ class CreateMetadataMetadataRequest
      * @param  string  $connectionId
      * @param  ?Shared\MetadataMetadata  $metadataMetadata
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\MetadataMetadata $metadataMetadata = null, ?array $fields = null)
     {

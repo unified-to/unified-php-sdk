@@ -29,6 +29,7 @@ class RemovePassthroughRequest
     /**
      * @param  string  $connectionId
      * @param  string  $path
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $path)
     {

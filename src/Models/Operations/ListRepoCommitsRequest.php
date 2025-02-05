@@ -96,6 +96,7 @@ class ListRepoCommitsRequest
      * @param  ?string  $repoId
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?string $branchId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $repoId = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {

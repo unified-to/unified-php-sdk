@@ -38,6 +38,7 @@ class CommerceItemPrice
      * @param  float  $price
      * @param  ?float  $compareAtPrice
      * @param  ?string  $currency
+     * @phpstan-pure
      */
     public function __construct(float $price, ?float $compareAtPrice = null, ?string $currency = null)
     {

@@ -100,6 +100,7 @@ class LmsStudent
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<LmsTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?PropertyLmsStudentAddress $address = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $imageUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
     {

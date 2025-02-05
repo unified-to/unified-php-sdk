@@ -39,6 +39,7 @@ class CreateCommerceInventoryRequest
      * @param  string  $connectionId
      * @param  ?Shared\CommerceInventory  $commerceInventory
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\CommerceInventory $commerceInventory = null, ?array $fields = null)
     {

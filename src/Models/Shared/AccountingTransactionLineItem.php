@@ -84,6 +84,7 @@ class AccountingTransactionLineItem
      * @param  ?float  $totalAmount
      * @param  ?float  $unitAmount
      * @param  ?float  $unitQuantity
+     * @phpstan-pure
      */
     public function __construct(?string $accountId = null, ?string $description = null, ?string $id = null, ?string $name = null, ?string $objectType = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null)
     {

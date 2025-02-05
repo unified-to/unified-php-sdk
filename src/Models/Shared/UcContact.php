@@ -100,6 +100,7 @@ class UcContact
      * @param  ?array<UcTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {

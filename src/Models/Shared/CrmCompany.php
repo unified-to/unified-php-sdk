@@ -201,6 +201,7 @@ class CrmCompany
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?array<string>  $websites
+     * @phpstan-pure
      */
     public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
     {

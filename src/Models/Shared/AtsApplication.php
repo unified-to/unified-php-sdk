@@ -154,6 +154,7 @@ class AtsApplication
      * @param  ?string  $source
      * @param  ?AtsApplicationStatus  $status
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $offers = null, ?string $originalStatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null)
     {

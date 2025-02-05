@@ -50,6 +50,7 @@ class HrisCompensation
      * @param  ?string  $currency
      * @param  ?HrisCompensationFrequency  $frequency
      * @param  ?HrisCompensationType  $type
+     * @phpstan-pure
      */
     public function __construct(?float $amount = null, ?string $currency = null, ?HrisCompensationFrequency $frequency = null, ?HrisCompensationType $type = null)
     {

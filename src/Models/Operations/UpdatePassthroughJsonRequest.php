@@ -38,6 +38,7 @@ class UpdatePassthroughJsonRequest
      * @param  string  $connectionId
      * @param  string  $path
      * @param  mixed  $requestBody
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $path, mixed $requestBody = null)
     {

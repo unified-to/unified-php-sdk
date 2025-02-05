@@ -122,6 +122,7 @@ class PaymentPayment
      * @param  ?string  $reference
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?string $accountId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $invoiceId = null, ?string $notes = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {

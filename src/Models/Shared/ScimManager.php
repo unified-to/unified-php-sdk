@@ -59,6 +59,7 @@ class ScimManager
      * @param  ?string  $managerId
      * @param  ?ScimManagerType  $type
      * @param  ?string  $value
+     * @phpstan-pure
      */
     public function __construct(?string $dollarRef = null, ?string $displayName = null, ?string $managerId = null, ?ScimManagerType $type = null, ?string $value = null)
     {

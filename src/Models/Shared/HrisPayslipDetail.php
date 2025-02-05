@@ -66,6 +66,7 @@ class HrisPayslipDetail
      * @param  ?float  $employeeAmount
      * @param  ?string  $name
      * @param  ?HrisPayslipDetailType  $type
+     * @phpstan-pure
      */
     public function __construct(float $amount, ?float $companyAmount = null, ?string $description = null, ?float $employeeAmount = null, ?string $name = null, ?HrisPayslipDetailType $type = null)
     {

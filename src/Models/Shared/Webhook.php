@@ -109,14 +109,13 @@ class Webhook
     public ?bool $isHealthy = null;
 
     /**
-     * $meta
      *
-     * @var ?array<string, mixed> $meta
+     * @var ?Meta $meta
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Meta|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $meta = null;
+    public ?Meta $meta = null;
 
     /**
      *
@@ -183,14 +182,15 @@ class Webhook
      * @param  ?string  $integrationType
      * @param  ?float  $interval
      * @param  ?bool  $isHealthy
-     * @param  ?array<string, mixed>  $meta
+     * @param  ?Meta  $meta
      * @param  ?float  $pageMaxLimit
      * @param  ?array<string>  $runs
      * @param  ?\DateTime  $updatedAt
      * @param  ?WebhookType  $webhookType
      * @param  ?string  $workspaceId
+     * @phpstan-pure
      */
-    public function __construct(string $connectionId, Event $event, string $hookUrl, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $fields = null, ?array $filters = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?array $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $connectionId, Event $event, string $hookUrl, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $fields = null, ?array $filters = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?Meta $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->connectionId = $connectionId;
         $this->event = $event;

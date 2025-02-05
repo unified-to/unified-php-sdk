@@ -59,6 +59,7 @@ class AtsCompensation
      * @param  ?float  $max
      * @param  ?float  $min
      * @param  ?AtsCompensationType  $type
+     * @phpstan-pure
      */
     public function __construct(?string $currency = null, ?Frequency $frequency = null, ?float $max = null, ?float $min = null, ?AtsCompensationType $type = null)
     {

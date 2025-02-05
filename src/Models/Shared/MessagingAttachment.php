@@ -66,6 +66,7 @@ class MessagingAttachment
      * @param  ?string  $filename
      * @param  ?string  $messageId
      * @param  ?float  $size
+     * @phpstan-pure
      */
     public function __construct(?string $contentIdentifier = null, ?string $contentType = null, ?string $downloadUrl = null, ?string $filename = null, ?string $messageId = null, ?float $size = null)
     {

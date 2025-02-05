@@ -111,6 +111,7 @@ class RepoPullrequest
      * @param  ?RepoPullrequestStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
+     * @phpstan-pure
      */
     public function __construct(?\DateTime $closedAt = null, ?array $commitIds = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $labels = null, ?array $raw = null, ?string $repoId = null, ?RepoPullrequestStatus $status = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {

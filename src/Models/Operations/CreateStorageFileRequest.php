@@ -39,6 +39,7 @@ class CreateStorageFileRequest
      * @param  string  $connectionId
      * @param  ?Shared\StorageFile  $storageFile
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\StorageFile $storageFile = null, ?array $fields = null)
     {

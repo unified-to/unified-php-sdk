@@ -77,6 +77,7 @@ class GenaiModel
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $webUrl
+     * @phpstan-pure
      */
     public function __construct(?string $description = null, ?bool $hasTemperature = null, ?string $id = null, ?float $maxTokens = null, ?string $name = null, ?array $raw = null, ?string $webUrl = null)
     {

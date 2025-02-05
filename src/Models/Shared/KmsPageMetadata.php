@@ -38,6 +38,7 @@ class KmsPageMetadata
      * @param  string  $name
      * @param  ?string  $type
      * @param  ?string  $value
+     * @phpstan-pure
      */
     public function __construct(string $name, ?string $type = null, ?string $value = null)
     {

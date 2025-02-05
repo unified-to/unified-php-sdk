@@ -44,6 +44,7 @@ class GetHrisPayslipResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?Shared\HrisPayslip  $hrisPayslip
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisPayslip $hrisPayslip = null)
     {

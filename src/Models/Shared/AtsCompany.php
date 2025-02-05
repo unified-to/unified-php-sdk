@@ -106,6 +106,7 @@ class AtsCompany
      * @param  ?array<string>  $recruiterIds
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $websiteUrl
+     * @phpstan-pure
      */
     public function __construct(string $name, ?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
     {

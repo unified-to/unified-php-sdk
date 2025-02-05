@@ -39,6 +39,7 @@ class CreateCrmPipelineRequest
      * @param  string  $connectionId
      * @param  ?Shared\CrmPipeline  $crmPipeline
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\CrmPipeline $crmPipeline = null, ?array $fields = null)
     {

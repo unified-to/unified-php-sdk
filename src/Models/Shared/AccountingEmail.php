@@ -31,6 +31,7 @@ class AccountingEmail
     /**
      * @param  ?string  $email
      * @param  ?AccountingEmailType  $type
+     * @phpstan-pure
      */
     public function __construct(?string $email = null, ?AccountingEmailType $type = null)
     {

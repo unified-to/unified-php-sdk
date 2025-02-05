@@ -20,6 +20,7 @@ class Security
 
     /**
      * @param  string  $jwt
+     * @phpstan-pure
      */
     public function __construct(string $jwt)
     {

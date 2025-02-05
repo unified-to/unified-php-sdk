@@ -165,6 +165,7 @@ class AccountingLineitem
      * @param  ?float  $unitAmount
      * @param  ?float  $unitQuantity
      * @param  ?\DateTime  $updatedAt
+     * @phpstan-pure
      */
     public function __construct(?string $accountId = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?string $id = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?string $notes = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
     {

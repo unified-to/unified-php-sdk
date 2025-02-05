@@ -60,6 +60,7 @@ class PropertyCrmEventTask
      * @param  ?string  $name
      * @param  ?Priority  $priority
      * @param  ?PropertyCrmEventTaskStatus  $status
+     * @phpstan-pure
      */
     public function __construct(?string $description = null, ?\DateTime $dueAt = null, ?string $name = null, ?Priority $priority = null, ?PropertyCrmEventTaskStatus $status = null)
     {

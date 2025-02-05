@@ -39,6 +39,7 @@ class CreateTicketingTicketRequest
      * @param  string  $connectionId
      * @param  ?Shared\TicketingTicket  $ticketingTicket
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\TicketingTicket $ticketingTicket = null, ?array $fields = null)
     {

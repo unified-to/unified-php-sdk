@@ -40,6 +40,7 @@ class CreateCrmCompanyRequest
      * @param  string  $connectionId
      * @param  ?Shared\CrmCompany  $crmCompany
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\CrmCompany $crmCompany = null, ?array $fields = null)
     {

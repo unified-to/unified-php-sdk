@@ -30,6 +30,7 @@ class CrmTelephone
     /**
      * @param  string  $telephone
      * @param  ?CrmTelephoneType  $type
+     * @phpstan-pure
      */
     public function __construct(string $telephone, ?CrmTelephoneType $type = null)
     {

@@ -160,6 +160,7 @@ class ApiCall
      * @param  ?float  $size
      * @param  ?string  $webhookId
      * @param  ?string  $workspaceId
+     * @phpstan-pure
      */
     public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?bool $isBillable = null, ?float $size = null, ?string $webhookId = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {

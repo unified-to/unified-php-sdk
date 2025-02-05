@@ -39,6 +39,7 @@ class CreateAtsActivityRequest
      * @param  string  $connectionId
      * @param  ?Shared\AtsActivity  $atsActivity
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, ?Shared\AtsActivity $atsActivity = null, ?array $fields = null)
     {

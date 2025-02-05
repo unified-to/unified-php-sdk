@@ -48,6 +48,7 @@ class PatchLmsInstructorRequest
      * @param  string  $id
      * @param  ?Shared\LmsInstructor  $lmsInstructor
      * @param  ?array<string>  $fields
+     * @phpstan-pure
      */
     public function __construct(string $connectionId, string $id, ?Shared\LmsInstructor $lmsInstructor = null, ?array $fields = null)
     {

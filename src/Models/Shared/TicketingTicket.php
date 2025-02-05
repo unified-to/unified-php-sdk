@@ -161,6 +161,7 @@ class TicketingTicket
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
      * @param  ?string  $userId
+     * @phpstan-pure
      */
     public function __construct(?string $category = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
     {

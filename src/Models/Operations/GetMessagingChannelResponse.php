@@ -44,6 +44,7 @@ class GetMessagingChannelResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  ?Shared\MessagingChannel  $messagingChannel
+     * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\MessagingChannel $messagingChannel = null)
     {
