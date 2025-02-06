@@ -52,22 +52,32 @@ class MetadataMetadata
     public ?array $objects = null;
 
     /**
-     * $raw
+     * $options
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?array<string> $options
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('options')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?array $options = null;
 
     /**
      *
-     * @var ?string $type
+     * @var ?MetadataMetadataRaw $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MetadataMetadataRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?MetadataMetadataRaw $raw = null;
+
+    /**
+     *
+     * @var ?MetadataMetadataType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MetadataMetadataType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $type = null;
+    public ?MetadataMetadataType $type = null;
 
     /**
      *
@@ -83,18 +93,20 @@ class MetadataMetadata
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?array<string, string>  $objects
-     * @param  ?array<string, mixed>  $raw
-     * @param  ?string  $type
+     * @param  ?array<string>  $options
+     * @param  ?MetadataMetadataRaw  $raw
+     * @param  ?MetadataMetadataType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?string $id = null, ?array $objects = null, ?array $raw = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?MetadataMetadataRaw $raw = null, ?MetadataMetadataType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->objectType = $objectType;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->objects = $objects;
+        $this->options = $options;
         $this->raw = $raw;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

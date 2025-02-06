@@ -23,13 +23,6 @@ class Connection
 
     /**
      *
-     * @var string $integrationName
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_name')]
-    public string $integrationName;
-
-    /**
-     *
      * @var string $integrationType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('integration_type')]
@@ -88,6 +81,14 @@ class Connection
 
     /**
      *
+     * @var ?string $integrationName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('integration_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $integrationName = null;
+
+    /**
+     *
      * @var ?bool $isPaused
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_paused')]
@@ -136,7 +137,6 @@ class Connection
 
     /**
      * @param  array<PropertyConnectionCategories>  $categories
-     * @param  string  $integrationName
      * @param  string  $integrationType
      * @param  array<PropertyConnectionPermissions>  $permissions
      * @param  ?PropertyConnectionAuth  $auth
@@ -145,6 +145,7 @@ class Connection
      * @param  ?string  $environment
      * @param  ?string  $externalXref
      * @param  ?string  $id
+     * @param  ?string  $integrationName
      * @param  ?bool  $isPaused
      * @param  ?\DateTime  $lastHealthyAt
      * @param  ?\DateTime  $lastUnhealthyAt
@@ -152,10 +153,9 @@ class Connection
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(array $categories, string $integrationName, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?string $integrationName = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->categories = $categories;
-        $this->integrationName = $integrationName;
         $this->integrationType = $integrationType;
         $this->permissions = $permissions;
         $this->auth = $auth;
@@ -163,6 +163,7 @@ class Connection
         $this->createdAt = $createdAt;
         $this->externalXref = $externalXref;
         $this->id = $id;
+        $this->integrationName = $integrationName;
         $this->isPaused = $isPaused;
         $this->lastHealthyAt = $lastHealthyAt;
         $this->lastUnhealthyAt = $lastUnhealthyAt;

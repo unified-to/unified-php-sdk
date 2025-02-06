@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 075b9cea2675db23b5f8cea829ebb57f
+  docChecksum: d11952529f2b721f734977d81996920c
   docVersion: "1.0"
   speakeasyVersion: 1.484.1
   generationVersion: 2.503.2
-  releaseVersion: 1.1.31
-  configChecksum: 5d35b00ce414fa7e5eea3144d10d42ba
+  releaseVersion: 1.1.32
+  configChecksum: 4a47287f7600e7f9544fc5e87042b610
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1001,6 +1001,8 @@ generatedFiles:
   - docs/Models/Shared/MessagingMessage.md
   - docs/Models/Shared/Meta.md
   - docs/Models/Shared/MetadataMetadata.md
+  - docs/Models/Shared/MetadataMetadataRaw.md
+  - docs/Models/Shared/MetadataMetadataType.md
   - docs/Models/Shared/NativeWebhookParentId.md
   - docs/Models/Shared/NativeWebhookProjectId.md
   - docs/Models/Shared/ObjectType.md
@@ -2290,6 +2292,8 @@ generatedFiles:
   - src/Models/Shared/MessagingMessage.php
   - src/Models/Shared/Meta.php
   - src/Models/Shared/MetadataMetadata.php
+  - src/Models/Shared/MetadataMetadataRaw.php
+  - src/Models/Shared/MetadataMetadataType.php
   - src/Models/Shared/NativeWebhookParentId.php
   - src/Models/Shared/NativeWebhookProjectId.php
   - src/Models/Shared/ObjectType.php
