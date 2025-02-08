@@ -36,14 +36,13 @@ class AtsStatus
     public ?string $originalStatus = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?AtsStatusRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsStatusRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?AtsStatusRaw $raw = null;
 
     /**
      *
@@ -58,11 +57,11 @@ class AtsStatus
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?string  $originalStatus
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?AtsStatusRaw  $raw
      * @param  ?AtsStatusStatus  $status
      * @phpstan-pure
      */
-    public function __construct(?string $description = null, ?string $id = null, ?string $originalStatus = null, ?array $raw = null, ?AtsStatusStatus $status = null)
+    public function __construct(?string $description = null, ?string $id = null, ?string $originalStatus = null, ?AtsStatusRaw $raw = null, ?AtsStatusStatus $status = null)
     {
         $this->description = $description;
         $this->id = $id;

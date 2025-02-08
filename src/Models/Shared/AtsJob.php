@@ -125,6 +125,16 @@ class AtsJob
     public ?float $numberOfOpenings = null;
 
     /**
+     * Public job postings
+     *
+     * @var ?array<AtsJobPosting> $postings
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('postings')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsJobPosting>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $postings = null;
+
+    /**
      * URLs for pages containing public listings for the job
      *
      * @var ?array<string> $publicJobUrls
@@ -145,14 +155,13 @@ class AtsJob
     public ?array $questions = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?AtsJobRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?AtsJobRaw $raw = null;
 
     /**
      * $recruiterIds
@@ -203,16 +212,17 @@ class AtsJob
      * @param  ?string  $languageLocale
      * @param  ?string  $name
      * @param  ?float  $numberOfOpenings
+     * @param  ?array<AtsJobPosting>  $postings
      * @param  ?array<string>  $publicJobUrls
      * @param  ?array<AtsJobQuestion>  $questions
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?AtsJobRaw  $raw
      * @param  ?array<string>  $recruiterIds
      * @param  ?bool  $remote
      * @param  ?AtsJobStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?AtsJobRaw $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->addresses = $addresses;
         $this->closedAt = $closedAt;
@@ -227,6 +237,7 @@ class AtsJob
         $this->languageLocale = $languageLocale;
         $this->name = $name;
         $this->numberOfOpenings = $numberOfOpenings;
+        $this->postings = $postings;
         $this->publicJobUrls = $publicJobUrls;
         $this->questions = $questions;
         $this->raw = $raw;

@@ -88,14 +88,13 @@ class AtsApplication
     public ?string $originalStatus = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?AtsApplicationRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsApplicationRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?AtsApplicationRaw $raw = null;
 
     /**
      *
@@ -148,7 +147,7 @@ class AtsApplication
      * @param  ?string  $jobId
      * @param  ?array<AtsOffer>  $offers
      * @param  ?string  $originalStatus
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?AtsApplicationRaw  $raw
      * @param  ?\DateTime  $rejectedAt
      * @param  ?string  $rejectedReason
      * @param  ?string  $source
@@ -156,7 +155,7 @@ class AtsApplication
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $offers = null, ?string $originalStatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $offers = null, ?string $originalStatus = null, ?AtsApplicationRaw $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->answers = $answers;
         $this->appliedAt = $appliedAt;

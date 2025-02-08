@@ -86,14 +86,13 @@ class AtsScorecard
     public ?array $questions = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?AtsScorecardRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsScorecardRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?AtsScorecardRaw $raw = null;
 
     /**
      *
@@ -122,12 +121,12 @@ class AtsScorecard
      * @param  ?string  $interviewerId
      * @param  ?string  $jobId
      * @param  ?array<AtsScorecardQuestion>  $questions
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?AtsScorecardRaw  $raw
      * @param  ?Recommendation  $recommendation
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?string $comment = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $interviewId = null, ?string $interviewerId = null, ?string $jobId = null, ?array $questions = null, ?array $raw = null, ?Recommendation $recommendation = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?string $comment = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $interviewId = null, ?string $interviewerId = null, ?string $jobId = null, ?array $questions = null, ?AtsScorecardRaw $raw = null, ?Recommendation $recommendation = null, ?\DateTime $updatedAt = null)
     {
         $this->applicationId = $applicationId;
         $this->candidateId = $candidateId;

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: d11952529f2b721f734977d81996920c
+  docChecksum: 079a662c33e65673ca2fb2b1cc54edc4
   docVersion: "1.0"
-  speakeasyVersion: 1.484.1
-  generationVersion: 2.503.2
-  releaseVersion: 1.1.32
-  configChecksum: 4a47287f7600e7f9544fc5e87042b610
+  speakeasyVersion: 1.487.1
+  generationVersion: 2.506.0
+  releaseVersion: 1.1.33
+  configChecksum: 2b1fa172c4aa77a0e11af2f2b4560057
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -838,29 +838,39 @@ generatedFiles:
   - docs/Models/Shared/AtsAddress.md
   - docs/Models/Shared/AtsApplication.md
   - docs/Models/Shared/AtsApplicationAnswer.md
+  - docs/Models/Shared/AtsApplicationRaw.md
   - docs/Models/Shared/AtsApplicationStatus.md
   - docs/Models/Shared/AtsCandidate.md
+  - docs/Models/Shared/AtsCandidateRaw.md
   - docs/Models/Shared/AtsCompany.md
+  - docs/Models/Shared/AtsCompanyRaw.md
   - docs/Models/Shared/AtsCompensation.md
   - docs/Models/Shared/AtsCompensationType.md
   - docs/Models/Shared/AtsDocument.md
+  - docs/Models/Shared/AtsDocumentRaw.md
   - docs/Models/Shared/AtsDocumentType.md
   - docs/Models/Shared/AtsEmail.md
   - docs/Models/Shared/AtsEmailType.md
   - docs/Models/Shared/AtsInterview.md
+  - docs/Models/Shared/AtsInterviewRaw.md
   - docs/Models/Shared/AtsInterviewStatus.md
   - docs/Models/Shared/AtsJob.md
+  - docs/Models/Shared/AtsJobPosting.md
   - docs/Models/Shared/AtsJobQuestion.md
   - docs/Models/Shared/AtsJobQuestionType.md
+  - docs/Models/Shared/AtsJobRaw.md
   - docs/Models/Shared/AtsJobStatus.md
   - docs/Models/Shared/AtsOffer.md
   - docs/Models/Shared/AtsScorecard.md
   - docs/Models/Shared/AtsScorecardQuestion.md
+  - docs/Models/Shared/AtsScorecardRaw.md
   - docs/Models/Shared/AtsStatus.md
+  - docs/Models/Shared/AtsStatusRaw.md
   - docs/Models/Shared/AtsStatusStatus.md
   - docs/Models/Shared/AtsTelephone.md
   - docs/Models/Shared/AtsTelephoneType.md
   - docs/Models/Shared/CommerceCollection.md
+  - docs/Models/Shared/CommerceCollectionRaw.md
   - docs/Models/Shared/CommerceCollectionType.md
   - docs/Models/Shared/CommerceInventory.md
   - docs/Models/Shared/CommerceInventoryRaw.md
@@ -1029,6 +1039,7 @@ generatedFiles:
   - docs/Models/Shared/PropertyAtsActivityFromType.md
   - docs/Models/Shared/PropertyAtsCandidateAddress.md
   - docs/Models/Shared/PropertyAtsCompanyAddress.md
+  - docs/Models/Shared/PropertyAtsJobPostingAddress.md
   - docs/Models/Shared/PropertyCommerceLocationAddress.md
   - docs/Models/Shared/PropertyConnectionAuth.md
   - docs/Models/Shared/PropertyConnectionAuthMeta.md
@@ -2129,29 +2140,39 @@ generatedFiles:
   - src/Models/Shared/AtsAddress.php
   - src/Models/Shared/AtsApplication.php
   - src/Models/Shared/AtsApplicationAnswer.php
+  - src/Models/Shared/AtsApplicationRaw.php
   - src/Models/Shared/AtsApplicationStatus.php
   - src/Models/Shared/AtsCandidate.php
+  - src/Models/Shared/AtsCandidateRaw.php
   - src/Models/Shared/AtsCompany.php
+  - src/Models/Shared/AtsCompanyRaw.php
   - src/Models/Shared/AtsCompensation.php
   - src/Models/Shared/AtsCompensationType.php
   - src/Models/Shared/AtsDocument.php
+  - src/Models/Shared/AtsDocumentRaw.php
   - src/Models/Shared/AtsDocumentType.php
   - src/Models/Shared/AtsEmail.php
   - src/Models/Shared/AtsEmailType.php
   - src/Models/Shared/AtsInterview.php
+  - src/Models/Shared/AtsInterviewRaw.php
   - src/Models/Shared/AtsInterviewStatus.php
   - src/Models/Shared/AtsJob.php
+  - src/Models/Shared/AtsJobPosting.php
   - src/Models/Shared/AtsJobQuestion.php
   - src/Models/Shared/AtsJobQuestionType.php
+  - src/Models/Shared/AtsJobRaw.php
   - src/Models/Shared/AtsJobStatus.php
   - src/Models/Shared/AtsOffer.php
   - src/Models/Shared/AtsScorecard.php
   - src/Models/Shared/AtsScorecardQuestion.php
+  - src/Models/Shared/AtsScorecardRaw.php
   - src/Models/Shared/AtsStatus.php
+  - src/Models/Shared/AtsStatusRaw.php
   - src/Models/Shared/AtsStatusStatus.php
   - src/Models/Shared/AtsTelephone.php
   - src/Models/Shared/AtsTelephoneType.php
   - src/Models/Shared/CommerceCollection.php
+  - src/Models/Shared/CommerceCollectionRaw.php
   - src/Models/Shared/CommerceCollectionType.php
   - src/Models/Shared/CommerceInventory.php
   - src/Models/Shared/CommerceInventoryRaw.php
@@ -2320,6 +2341,7 @@ generatedFiles:
   - src/Models/Shared/PropertyAtsActivityFromType.php
   - src/Models/Shared/PropertyAtsCandidateAddress.php
   - src/Models/Shared/PropertyAtsCompanyAddress.php
+  - src/Models/Shared/PropertyAtsJobPostingAddress.php
   - src/Models/Shared/PropertyCommerceLocationAddress.php
   - src/Models/Shared/PropertyConnectionAuth.php
   - src/Models/Shared/PropertyConnectionAuthMeta.php
