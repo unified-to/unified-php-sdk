@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 079a662c33e65673ca2fb2b1cc54edc4
+  docChecksum: b8229482579a72269cca223071c1d36c
   docVersion: "1.0"
   speakeasyVersion: 1.487.1
   generationVersion: 2.506.0
-  releaseVersion: 1.1.33
-  configChecksum: 2b1fa172c4aa77a0e11af2f2b4560057
+  releaseVersion: 1.1.34
+  configChecksum: 8a7baca33fffe8fa6a3924b288845d32
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -813,27 +813,35 @@ generatedFiles:
   - docs/Models/Shared/AccountingContact.md
   - docs/Models/Shared/AccountingContactPaymentMethod.md
   - docs/Models/Shared/AccountingContactPaymentMethodType.md
+  - docs/Models/Shared/AccountingContactRaw.md
   - docs/Models/Shared/AccountingEmail.md
   - docs/Models/Shared/AccountingEmailType.md
   - docs/Models/Shared/AccountingInvoice.md
+  - docs/Models/Shared/AccountingInvoiceRaw.md
   - docs/Models/Shared/AccountingInvoiceStatus.md
   - docs/Models/Shared/AccountingInvoiceType.md
   - docs/Models/Shared/AccountingJournal.md
   - docs/Models/Shared/AccountingJournalLineitem.md
+  - docs/Models/Shared/AccountingJournalRaw.md
   - docs/Models/Shared/AccountingLineitem.md
   - docs/Models/Shared/AccountingOrder.md
+  - docs/Models/Shared/AccountingOrderRaw.md
   - docs/Models/Shared/AccountingOrderStatus.md
   - docs/Models/Shared/AccountingOrderType.md
   - docs/Models/Shared/AccountingOrganization.md
+  - docs/Models/Shared/AccountingOrganizationRaw.md
   - docs/Models/Shared/AccountingTaxrate.md
+  - docs/Models/Shared/AccountingTaxrateRaw.md
   - docs/Models/Shared/AccountingTelephone.md
   - docs/Models/Shared/AccountingTelephoneType.md
   - docs/Models/Shared/AccountingTransaction.md
   - docs/Models/Shared/AccountingTransactionContact.md
   - docs/Models/Shared/AccountingTransactionLineItem.md
+  - docs/Models/Shared/AccountingTransactionRaw.md
   - docs/Models/Shared/ApiCall.md
   - docs/Models/Shared/ApiCallType.md
   - docs/Models/Shared/AtsActivity.md
+  - docs/Models/Shared/AtsActivityRaw.md
   - docs/Models/Shared/AtsActivityType.md
   - docs/Models/Shared/AtsAddress.md
   - docs/Models/Shared/AtsApplication.md
@@ -861,6 +869,8 @@ generatedFiles:
   - docs/Models/Shared/AtsJobRaw.md
   - docs/Models/Shared/AtsJobStatus.md
   - docs/Models/Shared/AtsOffer.md
+  - docs/Models/Shared/AtsOfferRaw.md
+  - docs/Models/Shared/AtsOfferStatus.md
   - docs/Models/Shared/AtsScorecard.md
   - docs/Models/Shared/AtsScorecardQuestion.md
   - docs/Models/Shared/AtsScorecardRaw.md
@@ -887,17 +897,23 @@ generatedFiles:
   - docs/Models/Shared/Connection.md
   - docs/Models/Shared/ContentType.md
   - docs/Models/Shared/CrmCompany.md
+  - docs/Models/Shared/CrmCompanyRaw.md
   - docs/Models/Shared/CrmContact.md
+  - docs/Models/Shared/CrmContactRaw.md
   - docs/Models/Shared/CrmDeal.md
+  - docs/Models/Shared/CrmDealRaw.md
   - docs/Models/Shared/CrmEmail.md
   - docs/Models/Shared/CrmEmailType.md
   - docs/Models/Shared/CrmEvent.md
   - docs/Models/Shared/CrmEventFormField.md
   - docs/Models/Shared/CrmEventFormFieldType.md
   - docs/Models/Shared/CrmEventFormOption.md
+  - docs/Models/Shared/CrmEventRaw.md
   - docs/Models/Shared/CrmEventType.md
   - docs/Models/Shared/CrmLead.md
+  - docs/Models/Shared/CrmLeadRaw.md
   - docs/Models/Shared/CrmPipeline.md
+  - docs/Models/Shared/CrmPipelineRaw.md
   - docs/Models/Shared/CrmStage.md
   - docs/Models/Shared/CrmTelephone.md
   - docs/Models/Shared/CrmTelephoneType.md
@@ -920,6 +936,7 @@ generatedFiles:
   - docs/Models/Shared/GenaiPrompt.md
   - docs/Models/Shared/Gender.md
   - docs/Models/Shared/HrisCompany.md
+  - docs/Models/Shared/HrisCompanyRaw.md
   - docs/Models/Shared/HrisCompensation.md
   - docs/Models/Shared/HrisCompensationFrequency.md
   - docs/Models/Shared/HrisCompensationType.md
@@ -928,15 +945,20 @@ generatedFiles:
   - docs/Models/Shared/HrisEmployee.md
   - docs/Models/Shared/HrisEmployeeEmploymentType.md
   - docs/Models/Shared/HrisEmployeeGender.md
+  - docs/Models/Shared/HrisEmployeeRaw.md
   - docs/Models/Shared/HrisGroup.md
+  - docs/Models/Shared/HrisGroupRaw.md
   - docs/Models/Shared/HrisGroupType.md
   - docs/Models/Shared/HrisLocation.md
+  - docs/Models/Shared/HrisLocationRaw.md
   - docs/Models/Shared/HrisPayslip.md
   - docs/Models/Shared/HrisPayslipDetail.md
   - docs/Models/Shared/HrisPayslipDetailType.md
+  - docs/Models/Shared/HrisPayslipRaw.md
   - docs/Models/Shared/HrisTelephone.md
   - docs/Models/Shared/HrisTelephoneType.md
   - docs/Models/Shared/HrisTimeoff.md
+  - docs/Models/Shared/HrisTimeoffRaw.md
   - docs/Models/Shared/HrisTimeoffStatus.md
   - docs/Models/Shared/HrisTimeoffType.md
   - docs/Models/Shared/Integration.md
@@ -2115,27 +2137,35 @@ generatedFiles:
   - src/Models/Shared/AccountingContact.php
   - src/Models/Shared/AccountingContactPaymentMethod.php
   - src/Models/Shared/AccountingContactPaymentMethodType.php
+  - src/Models/Shared/AccountingContactRaw.php
   - src/Models/Shared/AccountingEmail.php
   - src/Models/Shared/AccountingEmailType.php
   - src/Models/Shared/AccountingInvoice.php
+  - src/Models/Shared/AccountingInvoiceRaw.php
   - src/Models/Shared/AccountingInvoiceStatus.php
   - src/Models/Shared/AccountingInvoiceType.php
   - src/Models/Shared/AccountingJournal.php
   - src/Models/Shared/AccountingJournalLineitem.php
+  - src/Models/Shared/AccountingJournalRaw.php
   - src/Models/Shared/AccountingLineitem.php
   - src/Models/Shared/AccountingOrder.php
+  - src/Models/Shared/AccountingOrderRaw.php
   - src/Models/Shared/AccountingOrderStatus.php
   - src/Models/Shared/AccountingOrderType.php
   - src/Models/Shared/AccountingOrganization.php
+  - src/Models/Shared/AccountingOrganizationRaw.php
   - src/Models/Shared/AccountingTaxrate.php
+  - src/Models/Shared/AccountingTaxrateRaw.php
   - src/Models/Shared/AccountingTelephone.php
   - src/Models/Shared/AccountingTelephoneType.php
   - src/Models/Shared/AccountingTransaction.php
   - src/Models/Shared/AccountingTransactionContact.php
   - src/Models/Shared/AccountingTransactionLineItem.php
+  - src/Models/Shared/AccountingTransactionRaw.php
   - src/Models/Shared/ApiCall.php
   - src/Models/Shared/ApiCallType.php
   - src/Models/Shared/AtsActivity.php
+  - src/Models/Shared/AtsActivityRaw.php
   - src/Models/Shared/AtsActivityType.php
   - src/Models/Shared/AtsAddress.php
   - src/Models/Shared/AtsApplication.php
@@ -2163,6 +2193,8 @@ generatedFiles:
   - src/Models/Shared/AtsJobRaw.php
   - src/Models/Shared/AtsJobStatus.php
   - src/Models/Shared/AtsOffer.php
+  - src/Models/Shared/AtsOfferRaw.php
+  - src/Models/Shared/AtsOfferStatus.php
   - src/Models/Shared/AtsScorecard.php
   - src/Models/Shared/AtsScorecardQuestion.php
   - src/Models/Shared/AtsScorecardRaw.php
@@ -2189,17 +2221,23 @@ generatedFiles:
   - src/Models/Shared/Connection.php
   - src/Models/Shared/ContentType.php
   - src/Models/Shared/CrmCompany.php
+  - src/Models/Shared/CrmCompanyRaw.php
   - src/Models/Shared/CrmContact.php
+  - src/Models/Shared/CrmContactRaw.php
   - src/Models/Shared/CrmDeal.php
+  - src/Models/Shared/CrmDealRaw.php
   - src/Models/Shared/CrmEmail.php
   - src/Models/Shared/CrmEmailType.php
   - src/Models/Shared/CrmEvent.php
   - src/Models/Shared/CrmEventFormField.php
   - src/Models/Shared/CrmEventFormFieldType.php
   - src/Models/Shared/CrmEventFormOption.php
+  - src/Models/Shared/CrmEventRaw.php
   - src/Models/Shared/CrmEventType.php
   - src/Models/Shared/CrmLead.php
+  - src/Models/Shared/CrmLeadRaw.php
   - src/Models/Shared/CrmPipeline.php
+  - src/Models/Shared/CrmPipelineRaw.php
   - src/Models/Shared/CrmStage.php
   - src/Models/Shared/CrmTelephone.php
   - src/Models/Shared/CrmTelephoneType.php
@@ -2222,6 +2260,7 @@ generatedFiles:
   - src/Models/Shared/GenaiPrompt.php
   - src/Models/Shared/Gender.php
   - src/Models/Shared/HrisCompany.php
+  - src/Models/Shared/HrisCompanyRaw.php
   - src/Models/Shared/HrisCompensation.php
   - src/Models/Shared/HrisCompensationFrequency.php
   - src/Models/Shared/HrisCompensationType.php
@@ -2230,15 +2269,20 @@ generatedFiles:
   - src/Models/Shared/HrisEmployee.php
   - src/Models/Shared/HrisEmployeeEmploymentType.php
   - src/Models/Shared/HrisEmployeeGender.php
+  - src/Models/Shared/HrisEmployeeRaw.php
   - src/Models/Shared/HrisGroup.php
+  - src/Models/Shared/HrisGroupRaw.php
   - src/Models/Shared/HrisGroupType.php
   - src/Models/Shared/HrisLocation.php
+  - src/Models/Shared/HrisLocationRaw.php
   - src/Models/Shared/HrisPayslip.php
   - src/Models/Shared/HrisPayslipDetail.php
   - src/Models/Shared/HrisPayslipDetailType.php
+  - src/Models/Shared/HrisPayslipRaw.php
   - src/Models/Shared/HrisTelephone.php
   - src/Models/Shared/HrisTelephoneType.php
   - src/Models/Shared/HrisTimeoff.php
+  - src/Models/Shared/HrisTimeoffRaw.php
   - src/Models/Shared/HrisTimeoffStatus.php
   - src/Models/Shared/HrisTimeoffType.php
   - src/Models/Shared/Integration.php
@@ -4216,7 +4260,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"raw": {"key": "<value>"}, "user_id": "<id>"}]
+          application/json: [{"raw": {}, "user_id": "<id>"}]
   listHrisTimeoffs:
     speakeasy-default-list-hris-timeoffs:
       parameters:

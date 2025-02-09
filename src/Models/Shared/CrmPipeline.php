@@ -60,14 +60,13 @@ class CrmPipeline
     public ?string $name = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?CrmPipelineRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmPipelineRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?CrmPipelineRaw $raw = null;
 
     /**
      * $stages
@@ -94,12 +93,12 @@ class CrmPipeline
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $name
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?CrmPipelineRaw  $raw
      * @param  ?array<CrmStage>  $stages
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?array $stages = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?CrmPipelineRaw $raw = null, ?array $stages = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->dealProbability = $dealProbability;

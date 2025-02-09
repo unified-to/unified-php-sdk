@@ -60,14 +60,13 @@ class AccountingTaxrate
     public ?float $rate = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?AccountingTaxrateRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingTaxrateRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?AccountingTaxrateRaw $raw = null;
 
     /**
      *
@@ -84,11 +83,11 @@ class AccountingTaxrate
      * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?float  $rate
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?AccountingTaxrateRaw  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?float $rate = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?float $rate = null, ?AccountingTaxrateRaw $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;

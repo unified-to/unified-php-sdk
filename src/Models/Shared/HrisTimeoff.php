@@ -20,13 +20,6 @@ class HrisTimeoff
 
     /**
      *
-     * @var string $userId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
-    public string $userId;
-
-    /**
-     *
      * @var ?\DateTime $approvedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('approved_at')]
@@ -48,6 +41,14 @@ class HrisTimeoff
     #[\Speakeasy\Serializer\Annotation\SerializedName('comments')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $comments = null;
+
+    /**
+     *
+     * @var ?string $companyId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('company_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $companyId = null;
 
     /**
      *
@@ -74,14 +75,13 @@ class HrisTimeoff
     public ?string $id = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?HrisTimeoffRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?HrisTimeoffRaw $raw = null;
 
     /**
      *
@@ -110,27 +110,36 @@ class HrisTimeoff
     public ?\DateTime $updatedAt = null;
 
     /**
+     *
+     * @var ?string $userId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $userId = null;
+
+    /**
      * @param  \DateTime  $startAt
-     * @param  string  $userId
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
      * @param  ?string  $comments
+     * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?HrisTimeoffRaw  $raw
      * @param  ?HrisTimeoffStatus  $status
      * @param  ?HrisTimeoffType  $type
      * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(\DateTime $startAt, string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $raw = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(\DateTime $startAt, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?HrisTimeoffRaw $raw = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->startAt = $startAt;
-        $this->userId = $userId;
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
         $this->comments = $comments;
+        $this->companyId = $companyId;
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
         $this->id = $id;
@@ -138,5 +147,6 @@ class HrisTimeoff
         $this->status = $status;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

@@ -18,6 +18,7 @@ enum CrmEventFormFieldType: string
     case MultipleChoice = 'MULTIPLE_CHOICE';
     case File = 'FILE';
     case Textarea = 'TEXTAREA';
+    case SingleSelect = 'SINGLE_SELECT';
     case MultipleSelect = 'MULTIPLE_SELECT';
     case Email = 'EMAIL';
     case Phone = 'PHONE';

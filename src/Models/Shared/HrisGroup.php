@@ -78,14 +78,13 @@ class HrisGroup
     public ?string $parentId = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?HrisGroupRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisGroupRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?HrisGroupRaw $raw = null;
 
     /**
      *
@@ -123,13 +122,13 @@ class HrisGroup
      * @param  ?array<string>  $managerIds
      * @param  ?string  $name
      * @param  ?string  $parentId
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?HrisGroupRaw  $raw
      * @param  ?HrisGroupType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $managerIds = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?HrisGroupType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $managerIds = null, ?string $name = null, ?string $parentId = null, ?HrisGroupRaw $raw = null, ?HrisGroupType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;

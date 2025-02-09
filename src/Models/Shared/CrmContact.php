@@ -76,7 +76,7 @@ class CrmContact
     public ?string $id = null;
 
     /**
-     * $linkUrls
+     * Additional URLs associated with the contact e.g., LinkedIn, website, etc
      *
      * @var ?array<string> $linkUrls
      */
@@ -94,14 +94,13 @@ class CrmContact
     public ?string $name = null;
 
     /**
-     * The raw data returned by the integration for this contact
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?CrmContactRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmContactRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?CrmContactRaw $raw = null;
 
     /**
      * An array of telephones for this contact
@@ -147,14 +146,14 @@ class CrmContact
      * @param  ?string  $id
      * @param  ?array<string>  $linkUrls
      * @param  ?string  $name
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?CrmContactRaw  $raw
      * @param  ?array<CrmTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?array $linkUrls = null, ?string $name = null, ?CrmContactRaw $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->company = $company;

@@ -101,14 +101,13 @@ class HrisLocation
     public ?string $parentId = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?HrisLocationRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisLocationRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?HrisLocationRaw $raw = null;
 
     /**
      * $telephones
@@ -148,13 +147,13 @@ class HrisLocation
      * @param  ?string  $languageLocale
      * @param  ?string  $name
      * @param  ?string  $parentId
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?HrisLocationRaw  $raw
      * @param  ?array<HrisTelephone>  $telephones
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $externalIdentifier = null, ?string $id = null, ?bool $isActive = null, ?bool $isHq = null, ?string $languageLocale = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $externalIdentifier = null, ?string $id = null, ?bool $isActive = null, ?bool $isHq = null, ?string $languageLocale = null, ?string $name = null, ?string $parentId = null, ?HrisLocationRaw $raw = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;

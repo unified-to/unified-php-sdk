@@ -100,7 +100,7 @@ class CrmCompany
     public ?bool $isActive = null;
 
     /**
-     * $linkUrls
+     * Additional URLs associated with the contact e.g., LinkedIn, website, etc
      *
      * @var ?array<string> $linkUrls
      */
@@ -118,14 +118,13 @@ class CrmCompany
     public ?string $name = null;
 
     /**
-     * The raw data returned by the integration for this company
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?CrmCompanyRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmCompanyRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?CrmCompanyRaw $raw = null;
 
     /**
      * $tags
@@ -194,7 +193,7 @@ class CrmCompany
      * @param  ?bool  $isActive
      * @param  ?array<string>  $linkUrls
      * @param  ?string  $name
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?CrmCompanyRaw  $raw
      * @param  ?array<string>  $tags
      * @param  ?array<CrmTelephone>  $telephones
      * @param  ?string  $timezone
@@ -203,7 +202,7 @@ class CrmCompany
      * @param  ?array<string>  $websites
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
+    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?CrmCompanyRaw $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
     {
         $this->address = $address;
         $this->contactIds = $contactIds;

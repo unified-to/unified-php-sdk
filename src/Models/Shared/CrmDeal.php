@@ -29,6 +29,26 @@ class CrmDeal
     public ?\DateTime $closedAt = null;
 
     /**
+     * $companyIds
+     *
+     * @var ?array<string> $companyIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('company_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $companyIds = null;
+
+    /**
+     * $contactIds
+     *
+     * @var ?array<string> $contactIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $contactIds = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -93,14 +113,13 @@ class CrmDeal
     public ?float $probability = null;
 
     /**
-     * The raw data returned by the integration for this deal
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?CrmDealRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmDealRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?CrmDealRaw $raw = null;
 
     /**
      *
@@ -163,6 +182,8 @@ class CrmDeal
     /**
      * @param  ?float  $amount
      * @param  ?\DateTime  $closedAt
+     * @param  ?array<string>  $companyIds
+     * @param  ?array<string>  $contactIds
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
@@ -171,7 +192,7 @@ class CrmDeal
      * @param  ?string  $pipeline
      * @param  ?string  $pipelineId
      * @param  ?float  $probability
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?CrmDealRaw  $raw
      * @param  ?string  $source
      * @param  ?string  $stage
      * @param  ?string  $stageId
@@ -181,10 +202,12 @@ class CrmDeal
      * @param  ?string  $wonReason
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
+    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?CrmDealRaw $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
     {
         $this->amount = $amount;
         $this->closedAt = $closedAt;
+        $this->companyIds = $companyIds;
+        $this->contactIds = $contactIds;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;

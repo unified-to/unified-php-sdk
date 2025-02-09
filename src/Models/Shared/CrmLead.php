@@ -105,14 +105,13 @@ class CrmLead
     public ?string $name = null;
 
     /**
-     * $raw
      *
-     * @var ?array<string, mixed> $raw
+     * @var ?CrmLeadRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmLeadRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
+    public ?CrmLeadRaw $raw = null;
 
     /**
      *
@@ -168,7 +167,7 @@ class CrmLead
      * @param  ?bool  $isActive
      * @param  ?array<string>  $linkUrls
      * @param  ?string  $name
-     * @param  ?array<string, mixed>  $raw
+     * @param  ?CrmLeadRaw  $raw
      * @param  ?string  $source
      * @param  ?string  $status
      * @param  ?array<CrmTelephone>  $telephones
@@ -176,7 +175,7 @@ class CrmLead
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?CrmLeadRaw $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
