@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b8229482579a72269cca223071c1d36c
+  docChecksum: 9242e0b56a832180eec64ef3e27e0be0
   docVersion: "1.0"
-  speakeasyVersion: 1.487.1
+  speakeasyVersion: 1.488.0
   generationVersion: 2.506.0
-  releaseVersion: 1.1.34
-  configChecksum: 8a7baca33fffe8fa6a3924b288845d32
+  releaseVersion: 1.1.35
+  configChecksum: f58fe3f7d0a1a2ea65fa371202eabbd4
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -917,6 +917,7 @@ generatedFiles:
   - docs/Models/Shared/CrmStage.md
   - docs/Models/Shared/CrmTelephone.md
   - docs/Models/Shared/CrmTelephoneType.md
+  - docs/Models/Shared/DbType.md
   - docs/Models/Shared/EmploymentStatus.md
   - docs/Models/Shared/EmploymentType.md
   - docs/Models/Shared/EnrichCompany.md
@@ -2241,6 +2242,7 @@ generatedFiles:
   - src/Models/Shared/CrmStage.php
   - src/Models/Shared/CrmTelephone.php
   - src/Models/Shared/CrmTelephoneType.php
+  - src/Models/Shared/DbType.php
   - src/Models/Shared/EmploymentStatus.php
   - src/Models/Shared/EmploymentType.php
   - src/Models/Shared/EnrichCompany.php

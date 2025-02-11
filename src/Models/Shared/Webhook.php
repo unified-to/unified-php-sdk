@@ -29,13 +29,6 @@ class Webhook
 
     /**
      *
-     * @var string $hookUrl
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('hook_url')]
-    public string $hookUrl;
-
-    /**
-     *
      * @var ObjectType $objectType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('object_type')]
@@ -60,6 +53,31 @@ class Webhook
 
     /**
      *
+     * @var ?string $dbNamePrefix
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('db_name_prefix')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $dbNamePrefix = null;
+
+    /**
+     *
+     * @var ?DbType $dbType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('db_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\DbType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?DbType $dbType = null;
+
+    /**
+     *
+     * @var ?string $dbUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('db_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $dbUrl = null;
+
+    /**
+     *
      * @var ?string $fields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('fields')]
@@ -75,6 +93,14 @@ class Webhook
     #[\Speakeasy\Serializer\Annotation\Type('array<string, string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $filters = null;
+
+    /**
+     *
+     * @var ?string $hookUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('hook_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $hookUrl = null;
 
     /**
      *
@@ -171,13 +197,16 @@ class Webhook
     /**
      * @param  string  $connectionId
      * @param  Event  $event
-     * @param  string  $hookUrl
      * @param  ObjectType  $objectType
      * @param  ?\DateTime  $checkedAt
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $dbNamePrefix
+     * @param  ?DbType  $dbType
+     * @param  ?string  $dbUrl
      * @param  ?string  $environment
      * @param  ?string  $fields
      * @param  ?array<string, string>  $filters
+     * @param  ?string  $hookUrl
      * @param  ?string  $id
      * @param  ?string  $integrationType
      * @param  ?float  $interval
@@ -190,16 +219,19 @@ class Webhook
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, Event $event, string $hookUrl, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $fields = null, ?array $filters = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?Meta $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $connectionId, Event $event, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?Meta $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->connectionId = $connectionId;
         $this->event = $event;
-        $this->hookUrl = $hookUrl;
         $this->objectType = $objectType;
         $this->checkedAt = $checkedAt;
         $this->createdAt = $createdAt;
+        $this->dbNamePrefix = $dbNamePrefix;
+        $this->dbType = $dbType;
+        $this->dbUrl = $dbUrl;
         $this->fields = $fields;
         $this->filters = $filters;
+        $this->hookUrl = $hookUrl;
         $this->id = $id;
         $this->integrationType = $integrationType;
         $this->interval = $interval;
