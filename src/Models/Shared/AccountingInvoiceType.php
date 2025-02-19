@@ -13,4 +13,5 @@ enum AccountingInvoiceType: string
 {
     case Bill = 'BILL';
     case Invoice = 'INVOICE';
+    case Creditmemo = 'CREDITMEMO';
 }

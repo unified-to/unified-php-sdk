@@ -71,6 +71,13 @@ class ListAccountingInvoicesRequest
     public ?string $sort = null;
 
     /**
+     *
+     * @var ?string $type
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?\DateTime $updatedGte
@@ -87,10 +94,11 @@ class ListAccountingInvoicesRequest
      * @param  ?string  $order
      * @param  ?string  $query
      * @param  ?string  $sort
+     * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->contactId = $contactId;
@@ -100,6 +108,7 @@ class ListAccountingInvoicesRequest
         $this->order = $order;
         $this->query = $query;
         $this->sort = $sort;
+        $this->type = $type;
         $this->updatedGte = $updatedGte;
     }
 }
