@@ -136,6 +136,14 @@ class Webhook
 
     /**
      *
+     * @var ?bool $isPaused
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_paused')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isPaused = null;
+
+    /**
+     *
      * @var ?Meta $meta
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
@@ -211,6 +219,7 @@ class Webhook
      * @param  ?string  $integrationType
      * @param  ?float  $interval
      * @param  ?bool  $isHealthy
+     * @param  ?bool  $isPaused
      * @param  ?Meta  $meta
      * @param  ?float  $pageMaxLimit
      * @param  ?array<string>  $runs
@@ -219,7 +228,7 @@ class Webhook
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, Event $event, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?Meta $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $connectionId, Event $event, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?bool $isPaused = null, ?Meta $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->connectionId = $connectionId;
         $this->event = $event;
@@ -236,6 +245,7 @@ class Webhook
         $this->integrationType = $integrationType;
         $this->interval = $interval;
         $this->isHealthy = $isHealthy;
+        $this->isPaused = $isPaused;
         $this->meta = $meta;
         $this->pageMaxLimit = $pageMaxLimit;
         $this->runs = $runs;

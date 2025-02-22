@@ -43,6 +43,13 @@ class ListAtsDocumentsRequest
 
     /**
      *
+     * @var ?string $jobId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
+    public ?string $jobId = null;
+
+    /**
+     *
      * @var ?float $limit
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
@@ -90,6 +97,7 @@ class ListAtsDocumentsRequest
      * @param  ?string  $applicationId
      * @param  ?string  $candidateId
      * @param  ?array<string>  $fields
+     * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -98,12 +106,13 @@ class ListAtsDocumentsRequest
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->applicationId = $applicationId;
         $this->candidateId = $candidateId;
         $this->fields = $fields;
+        $this->jobId = $jobId;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;

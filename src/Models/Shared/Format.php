@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-enum MetadataMetadataType: string
+enum Format: string
 {
     case Text = 'TEXT';
     case Number = 'NUMBER';

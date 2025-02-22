@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3da93e71a8a8edbd419c4dd261a040f9
+  docChecksum: c0d6af0ca0a33fa3f44a1fca666d6fae
   docVersion: "1.0"
-  speakeasyVersion: 1.494.0
-  generationVersion: 2.515.0
-  releaseVersion: 1.1.36
-  configChecksum: ebbc4ed787279608434f8e3a8a3aaca2
+  speakeasyVersion: 1.501.0
+  generationVersion: 2.522.1
+  releaseVersion: 1.1.37
+  configChecksum: b872c5854ad31223edd5b1efe91cdbf9
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.7.13
+    core: 3.7.14
     globalSecurity: 2.81.8
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.82.1
@@ -859,6 +859,8 @@ generatedFiles:
   - docs/Models/Shared/AtsDocumentType.md
   - docs/Models/Shared/AtsEmail.md
   - docs/Models/Shared/AtsEmailType.md
+  - docs/Models/Shared/AtsGroup.md
+  - docs/Models/Shared/AtsGroupType.md
   - docs/Models/Shared/AtsInterview.md
   - docs/Models/Shared/AtsInterviewRaw.md
   - docs/Models/Shared/AtsInterviewStatus.md
@@ -930,6 +932,7 @@ generatedFiles:
   - docs/Models/Shared/Ethnicity.md
   - docs/Models/Shared/Event.md
   - docs/Models/Shared/ExtraData.md
+  - docs/Models/Shared/Format.md
   - docs/Models/Shared/Frequency.md
   - docs/Models/Shared/FromWebhook.md
   - docs/Models/Shared/GenaiContent.md
@@ -1035,7 +1038,6 @@ generatedFiles:
   - docs/Models/Shared/Meta.md
   - docs/Models/Shared/MetadataMetadata.md
   - docs/Models/Shared/MetadataMetadataRaw.md
-  - docs/Models/Shared/MetadataMetadataType.md
   - docs/Models/Shared/NativeWebhookParentId.md
   - docs/Models/Shared/NativeWebhookProjectId.md
   - docs/Models/Shared/ObjectType.md
@@ -2184,6 +2186,8 @@ generatedFiles:
   - src/Models/Shared/AtsDocumentType.php
   - src/Models/Shared/AtsEmail.php
   - src/Models/Shared/AtsEmailType.php
+  - src/Models/Shared/AtsGroup.php
+  - src/Models/Shared/AtsGroupType.php
   - src/Models/Shared/AtsInterview.php
   - src/Models/Shared/AtsInterviewRaw.php
   - src/Models/Shared/AtsInterviewStatus.php
@@ -2255,6 +2259,7 @@ generatedFiles:
   - src/Models/Shared/Ethnicity.php
   - src/Models/Shared/Event.php
   - src/Models/Shared/ExtraData.php
+  - src/Models/Shared/Format.php
   - src/Models/Shared/Frequency.php
   - src/Models/Shared/FromWebhook.php
   - src/Models/Shared/GenaiContent.php
@@ -2360,7 +2365,6 @@ generatedFiles:
   - src/Models/Shared/Meta.php
   - src/Models/Shared/MetadataMetadata.php
   - src/Models/Shared/MetadataMetadataRaw.php
-  - src/Models/Shared/MetadataMetadataType.php
   - src/Models/Shared/NativeWebhookParentId.php
   - src/Models/Shared/NativeWebhookProjectId.php
   - src/Models/Shared/ObjectType.php

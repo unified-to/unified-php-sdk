@@ -35,6 +35,15 @@ class MetadataMetadata
 
     /**
      *
+     * @var ?Format $format
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Format|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?Format $format = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -63,21 +72,20 @@ class MetadataMetadata
 
     /**
      *
+     * @var ?string $originalFormat
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('original_format')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $originalFormat = null;
+
+    /**
+     *
      * @var ?MetadataMetadataRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MetadataMetadataRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?MetadataMetadataRaw $raw = null;
-
-    /**
-     *
-     * @var ?MetadataMetadataType $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MetadataMetadataType|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?MetadataMetadataType $type = null;
 
     /**
      *
@@ -91,24 +99,26 @@ class MetadataMetadata
      * @param  string  $name
      * @param  string  $objectType
      * @param  ?\DateTime  $createdAt
+     * @param  ?Format  $format
      * @param  ?string  $id
      * @param  ?array<string, string>  $objects
      * @param  ?array<string>  $options
+     * @param  ?string  $originalFormat
      * @param  ?MetadataMetadataRaw  $raw
-     * @param  ?MetadataMetadataType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?MetadataMetadataRaw $raw = null, ?MetadataMetadataType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?Format $format = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?MetadataMetadataRaw $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->objectType = $objectType;
         $this->createdAt = $createdAt;
+        $this->format = $format;
         $this->id = $id;
         $this->objects = $objects;
         $this->options = $options;
+        $this->originalFormat = $originalFormat;
         $this->raw = $raw;
-        $this->type = $type;
         $this->updatedAt = $updatedAt;
     }
 }
